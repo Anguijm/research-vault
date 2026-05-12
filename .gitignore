@@ -1,0 +1,36 @@
+# ── Secrets and credentials ─────────────────────────────────────────────
+# Never commit these. _scripts/.env contains API keys for SAM.gov,
+# Anthropic, Gemini, OpenAI, etc.
+_scripts/.env
+_scripts/.env.*
+!_scripts/.env.example
+
+# ── Python ──────────────────────────────────────────────────────────────
+_scripts/.venv/
+**/__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ── Runtime state files (regenerated each run) ──────────────────────────
+_scripts/.find-sources.lock
+_meta/sam-quota.json
+_meta/usaspending-quota.json
+
+# ── Obsidian per-machine state ──────────────────────────────────────────
+# Keep settings, exclude transient pane layout (causes conflicts on sync)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+
+# ── OS noise ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# ── Temporary files ─────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.orig

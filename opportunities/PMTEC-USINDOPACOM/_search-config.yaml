@@ -1,0 +1,31 @@
+ai_searches:
+  - "PMTEC USINDOPACOM training experimentation"
+  - "Pacific Deterrence Initiative training ranges"
+  - "USINDOPACOM J7 industry engagement"
+
+# SAM.gov queries. Either:
+#   - a full sam.gov search URL the operator pasted from their browser
+#   - a `params:` block specifying API parameters directly
+sam_searches:
+  - url: "https://sam.gov/search/?q=PMTEC&is_active=true"
+  - params:
+      q: "USINDOPACOM J7 training"
+  - params:
+      q: "Indo-Pacific multi-domain training"
+      ncode: ["541330", "541512", "541715"]
+
+rss_feeds: []   # Phase 4b — deferred
+
+# USAspending.gov contract-award searches. Either a bare keyword string,
+# or a dict with: keywords, recipient, state, piid, start, end.
+usa_spending_searches:
+  - keywords: ["INDOPACOM Alpha"]
+    recipient: "Deloitte"
+    state: "HI"
+  - keywords: ["USINDOPACOM"]
+    recipient: "CACI"
+  - piid: "47QFCA25F0010"   # Deloitte INDOPACOM Alpha — track obligations growth
+    start: "2025-01-01"     # override default 7-day window so the 2025-03 award is visible
+
+date_window_days: 7
+max_candidates_per_run: 20
