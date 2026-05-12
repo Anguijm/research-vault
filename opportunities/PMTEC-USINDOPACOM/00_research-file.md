@@ -26,7 +26,7 @@ USINDOPACOM J7's Pacific Multi-Domain Training and Experimentation Capability (P
 
 - [x] **Confirm FY26 PDI PMTEC line-item dollar amount** — *2026-05-12: the PDI book does NOT carry a single consolidated PMTEC line-item dollar; PMTEC funding is distributed across Army ($851M category), Navy ($588M, includes PMTEC studies + live-fire target support + JFDD), and Air Force ($752M, includes named "PMTEC Operations" sub-category with `0207429F Combat Training Ranges` at $147.2M visible). See §3.2 FACT #3. Re-cast as a distributed-funding fact rather than a single number.*
 - [ ] Verify Brig. Gen. Goodman is still J7 Director (roles rotate — re-verify before any external use)
-- [ ] ARKA integration milestone timeline for Q3 2026 — check CACI IR/earnings calls
+- [x] **ARKA integration milestone timeline** — *2026-05-12: per CACI Q3 FY26 earnings call (April 23, 2026) and 10-Q (period ended 2026-03-31), ARKA closed March 9, 2026 for $2,642.7M (net of cash acquired); ARKA expected to contribute ~$150M revenue to FY26 (covering ~3.5 months of fiscal year). Updated FY26 revenue guidance: $9.5–$9.6B. Integration commentary in transcript [s.2026-05-12-caci-q3-fy2026-earnings-call-t].*
 - [ ] Johns Hopkins APL partnership scope — announced March 2026, details TBD
 - [ ] Confirm USSPACEFOR-INDOPAC Commercial ISR solicitation currency before bidding
 - [x] **Deloitte INDOPACOM Alpha verification** — *2026-05-11: PIID `47QFCA25F0010` on OASIS confirmed via USAspending; obligated $58.9M, current end 2026-07-31. $467M ceiling and 2030 end date still single-sourced to HigherGov. See §6.1 and `01_sources/2026-05-11_usaspending-gov_indopacom-alpha-deloitte.md`.*
@@ -135,9 +135,9 @@ USINDOPACOM J7 (Joint Training & Exercises) owns PMTEC. Funding flows through PD
 
 **FACT:** `[✓ INGESTED]` Trojan EATS (Army DEVCOM, OASIS) — $382M, 5-yr; SIGINT/EW open-architecture systems [s.caci-ir-trojan-2024] [s.2026-05-12-u-s-army-selects-caci-for-382-].
 
-**FACT:** `[⚑ PARTIAL]` ARKA acquisition closed March 2026 ($2.6B) — adds satellite sensors + agentic AI for SIGINT/EW [s.caci-ir-arka-2026] [s.2026-05-12-caci-completes-acquisition-of-].
+**FACT:** `[⚑ PARTIAL]` ARKA acquisition closed March 2026 ($2.6B) — adds satellite sensors + agentic AI for SIGINT/EW [s.caci-ir-arka-2026] [s.2026-05-12-caci-completes-acquisition-of-] [s.2026-05-12-caci-q3-fy2026-earnings-call-t] [s.2026-05-12-caci-8-k-arka-agreement] [s.2026-05-12-caci-international-form-10-q-q].
 
-**Assessment:** `[⚠ PENDING-INGEST]` Azure Summit Technology acquisition (Sep 2024, $1.28B) adds RF/EW depth [s.caci-ir-azure-summit-2024] [s.2026-05-12-caci-azure-summit-technology-a]. *Single-sourced — verify via CACI IR.*
+**Assessment:** `[⚠ PENDING-INGEST]` Azure Summit Technology acquisition (Sep 2024, $1.28B) adds RF/EW depth [s.caci-ir-azure-summit-2024] [s.2026-05-12-caci-azure-summit-technology-a] [s.2026-05-12-caci-8-k-azure-summit-agreement]. *Single-sourced — verify via CACI IR.*
 
 ### 6.2 Capability map vs PMTEC's eight gaps
 
@@ -230,6 +230,11 @@ must be marked single-sourced. Backlog: ingest these as primary sources.
 - [s.2026-05-12-caci-completes-acquisition-of-] https://www.nasdaq.com/press-release/caci-completes-acquisition-arka-group-2026-03-09  →  `01_sources/2026-05-12_nasdaq-com_caci-completes-acquisition-of-arka-group-2-6b-close-2026-03.md`
 - [s.2026-05-12-caci-azure-summit-technology-a] https://s21.q4cdn.com/708811725/files/doc_presentations/2024/09/CACI-Azure-Summit-Technology-Acquisition-Slides_FINALv2-1.pdf  →  `01_sources/2026-05-12_s21-q4cdn-com_caci-azure-summit-technology-acquisition-investor-presentati.md`
 - [s.2026-05-12-caci-to-modernize-air-force-ba] https://washingtonexec.com/2025/09/caci-to-modernize-air-force-base-networks-in-pacific-under-180m-task-order/  →  `01_sources/2026-05-12_washingtonexec-com_caci-to-modernize-air-force-base-networks-in-pacific-under-1.md`
+- [s.2026-05-12-caci-international-form-10-k-f] https://www.sec.gov/Archives/edgar/data/16058/000162828025038739/caci-20250630.htm  →  `01_sources/2026-05-12_sec-gov_caci-international-form-10-k-fiscal-year-ended-june-30-2025.md`
+- [s.2026-05-12-caci-international-form-10-q-q] https://www.sec.gov/Archives/edgar/data/16058/000162828026026802/caci-20260331.htm  →  `01_sources/2026-05-12_sec-gov_caci-international-form-10-q-quarterly-report-for-q3-fy2026.md`
+- [s.2026-05-12-caci-8-k-arka-agreement] https://www.sec.gov/Archives/edgar/data/16058/000162828025059047/caci-20251219.htm  →  `01_sources/2026-05-12_sec-gov_caci-8-k-definitive-agreement-to-acquire-arka-group-dec-22-2.md`
+- [s.2026-05-12-caci-8-k-azure-summit-agreement] https://www.sec.gov/Archives/edgar/data/16058/000001605824000148/caci-20240910.htm  →  `01_sources/2026-05-12_sec-gov_caci-8-k-definitive-agreement-to-acquire-azure-summit-techno.md`
+- [s.2026-05-12-caci-q3-fy2026-earnings-call-t] https://www.fool.com/earnings/call-transcripts/2026/04/23/caci-caci-q3-2026-earnings-call-transcript/  →  `01_sources/2026-05-12_fool-com_caci-q3-fy2026-earnings-call-transcript-april-23-2026-motley.md`
 
 ## 9. Verification flags
 
