@@ -38,8 +38,11 @@ load_dotenv(SCRIPT_DIR / ".env")
 
 DEFAULT_MODEL = "claude-sonnet-4-6"
 
-# Per-source content truncation (LLM input budget guard)
-_MAX_SOURCE_CHARS = 24000
+# Per-source content truncation (LLM input budget guard).
+# Sonnet handles ~200K tokens of context; ~120K chars leaves headroom for the
+# prompt + a long source. Bumped from 24K (which truncated the FY26 PDI book
+# before its PMTEC tables on p.19 were visible).
+_MAX_SOURCE_CHARS = 120000
 
 
 # ── Research-file parsing ───────────────────────────────────────────────
@@ -190,7 +193,7 @@ def verify_against_source(claim: str, source_url: str, source_content: str, mode
     )
     msg = client.messages.create(
         model=model,
-        max_tokens=600,
+        max_tokens=1500,
         messages=[{"role": "user", "content": prompt}],
     )
     text = next((b.text for b in msg.content if hasattr(b, "text")), "")
