@@ -58,3 +58,11 @@ Every decision: date, decision, by whom, rationale, what changed.
 **Net state:** vault now holds 17 ingested primary sources covering all FACT claims in the research file. Remaining PARTIAL verdicts are mostly real wording-precision findings (e.g., source says "Hawaii" not "Camp H.M. Smith"; source says "Industry Engagement Lead" not "Commercial Industry Engagement Lead") and are the operator's editorial-style call.
 
 ---
+
+### 2026-05-14 — Cross-AI red-team via gemini-3.1-pro-preview
+
+**By:** operator + `_scripts/red_team.py`
+**Rationale:** SOP §2.1 rule 5 adversarial review before shipping. Drafting used Claude; red-team uses Gemini per prompt note.
+**What changed:** Report written to `_red-team-2026-05-14-gemini-3.1-pro-preview.md`. Reviewed `capture-brief-v0.1-draft.docx` (14 substantive findings). Operator decides whether to address findings before next gate.
+
+---
