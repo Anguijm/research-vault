@@ -119,6 +119,41 @@ def _load_red_team_prompt() -> str:
     return m.group(1).strip()
 
 
+_OUTPUT_SCHEMA_INSTRUCTIONS = """
+Run all three passes (Customer / Competitor / Skeptical Exec) per the SOP prompt
+above. Be specific and adversarial. Then collapse your findings into the JSON
+schema below — one entry per distinct issue. If the same problem surfaces in
+two passes, write ONE entry and list both passes in the "passes" array.
+
+Calibrate severity:
+  - critical  → factual error, brief literally cannot ship until fixed
+  - high      → exec or customer would reject the brief on this alone
+  - medium    → significantly weakens the position; competitor will exploit
+  - low       → editorial or polish; doesn't change the recommendation
+
+Return ONLY valid JSON matching this schema (no prose before or after, no
+markdown fencing):
+
+{
+  "summary": "2-3 sentence TL;DR — what's the headline issue with this brief?",
+  "verdict": "ship-ready | iterate | rebuild",
+  "findings": [
+    {
+      "id": 1,
+      "severity": "critical | high | medium | low",
+      "sections": ["§7.1", "§4.1"],
+      "passes": ["customer", "competitor", "exec"],
+      "title": "≤80 char headline of the issue",
+      "issue": "1-2 sentence problem statement",
+      "why_it_matters": "1 sentence on the impact / who would notice",
+      "fix": "1-2 sentence concrete recommended action",
+      "evidence_quote": "Optional exact quote from the brief (≤200 chars), empty string if none"
+    }
+  ]
+}
+"""
+
+
 def _assemble_prompt(brief_text: str, source_quotes: str, include_quotes: bool) -> str:
     prompt_body = _load_red_team_prompt()
     parts = [
@@ -136,11 +171,11 @@ def _assemble_prompt(brief_text: str, source_quotes: str, include_quotes: bool) 
         "",
         "---",
         "",
-        "Begin your three-pass red-team now. For each pass, prefix critiques "
-        "with the brief section number when possible (e.g., '§5.1', '§7'). "
-        "Be specific and adversarial. If a claim in the brief looks supportable "
-        "from the FACT-level supporting quotes above, do not flag it — focus your "
-        "ammunition on places where the brief reaches beyond what the source actually says.",
+        "If a claim in the brief looks supportable from the FACT-level "
+        "supporting quotes above, do not flag it — focus your ammunition on "
+        "places where the brief reaches beyond what the source actually says.",
+        "",
+        _OUTPUT_SCHEMA_INSTRUCTIONS.strip(),
     ])
     return "\n".join(parts)
 
@@ -156,18 +191,175 @@ def _call_gemini(prompt: str, model: str) -> str:
         contents=prompt,
         config=types.GenerateContentConfig(
             max_output_tokens=MAX_OUTPUT_TOKENS,
-            temperature=0.4,   # some creativity for adversarial framing
+            temperature=0.4,
+            response_mime_type="application/json",   # demand structured output
         ),
     )
-    return response.text or "(empty response from Gemini)"
+    return response.text or ""
+
+
+# ── JSON parsing + scannable markdown rendering ─────────────────────────
+
+import json
+
+_SEVERITY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+_SEVERITY_BADGE = {
+    "critical": "🔥 CRITICAL",
+    "high":     "🔴 HIGH",
+    "medium":   "🟡 MEDIUM",
+    "low":      "🟢 LOW",
+}
+_PASS_LABEL = {
+    "customer":   "J7 staffer",
+    "competitor": "Competitor",
+    "exec":       "Skeptical exec",
+}
+
+
+def _parse_response(text: str) -> dict | None:
+    """Parse Gemini's JSON response. Returns None if unparseable."""
+    if not text:
+        return None
+    s = text.strip()
+    # Strip code fences if present (some models still add them)
+    m = re.match(r'^```(?:json)?\s*(\{.*\})\s*```\s*$', s, re.DOTALL)
+    if m:
+        s = m.group(1)
+    try:
+        data = json.loads(s)
+    except json.JSONDecodeError:
+        # Last-ditch: find the outermost braces
+        start, end = s.find("{"), s.rfind("}")
+        if start != -1 and end > start:
+            try:
+                data = json.loads(s[start:end + 1])
+            except json.JSONDecodeError:
+                return None
+        else:
+            return None
+    if not isinstance(data, dict) or "findings" not in data:
+        return None
+    return data
+
+
+def _render_markdown(data: dict, model: str, brief_path: Path, opp_id: str) -> str:
+    findings = sorted(
+        data.get("findings", []),
+        key=lambda f: (_SEVERITY_ORDER.get(str(f.get("severity", "low")).lower(), 99),
+                       int(f.get("id", 999))),
+    )
+    counts = {s: sum(1 for f in findings if str(f.get("severity", "")).lower() == s)
+              for s in _SEVERITY_ORDER}
+    total = len(findings)
+
+    summary = data.get("summary", "(no summary returned)")
+    verdict = data.get("verdict", "iterate").lower()
+    verdict_badge = {
+        "ship-ready": "✅ SHIP-READY",
+        "iterate":    "🔁 ITERATE",
+        "rebuild":    "🛑 REBUILD",
+    }.get(verdict, f"❓ {verdict.upper()}")
+
+    lines = [
+        f"# Red-Team Review — {opp_id}",
+        "",
+        f"**Subject:** `{brief_path.name}`  ·  **Reviewer:** `{model}`  ·  "
+        f"**Generated:** {datetime.now().isoformat(timespec='seconds')}",
+        "",
+        "## At a glance",
+        "",
+        f"| Verdict | Total | 🔥 Critical | 🔴 High | 🟡 Medium | 🟢 Low |",
+        f"|---|---|---|---|---|---|",
+        f"| **{verdict_badge}** | {total} | {counts['critical']} | "
+        f"{counts['high']} | {counts['medium']} | {counts['low']} |",
+        "",
+        f"**SOP threshold:** more than 2 findings → brief not yet ready "
+        f"(see `_meta/prompts/cross-ai-red-team.md`).",
+        "",
+        "## TL;DR",
+        "",
+        f"> {summary}",
+        "",
+        "---",
+        "",
+    ]
+
+    # Group by severity
+    by_sev: dict[str, list[dict]] = {s: [] for s in _SEVERITY_ORDER}
+    for f in findings:
+        sev = str(f.get("severity", "low")).lower()
+        if sev not in by_sev:
+            sev = "low"
+        by_sev[sev].append(f)
+
+    for sev in _SEVERITY_ORDER:
+        items = by_sev[sev]
+        if not items:
+            continue
+        lines.append(f"## {_SEVERITY_BADGE[sev]}  ({len(items)})")
+        lines.append("")
+        for f in items:
+            secs = " · ".join(f.get("sections", []) or ["?"])
+            passes = " · ".join(_PASS_LABEL.get(p, p) for p in f.get("passes", []) or [])
+            lines.append(f"### #{f.get('id','?')}  ·  {secs}  ·  {f.get('title','(no title)')}")
+            lines.append("")
+            lines.append(f"*Flagged by: {passes}*" if passes else "*Flagged by: (unspecified)*")
+            lines.append("")
+            issue = (f.get("issue") or "").strip()
+            why = (f.get("why_it_matters") or "").strip()
+            fix = (f.get("fix") or "").strip()
+            quote = (f.get("evidence_quote") or "").strip()
+            lines.append(f"**Issue.** {issue}")
+            lines.append("")
+            if why:
+                lines.append(f"**Why it matters.** {why}")
+                lines.append("")
+            if fix:
+                lines.append(f"**Fix.** {fix}")
+                lines.append("")
+            if quote:
+                lines.append(f"> _“{quote}”_ — from the brief")
+                lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def _render_fallback(raw: str, model: str, brief_path: Path, opp_id: str) -> str:
+    """If JSON parsing failed, dump the raw response with a warning header."""
+    return (
+        f"# Red-Team Review — {opp_id}\n\n"
+        f"**Subject:** `{brief_path.name}`  ·  **Reviewer:** `{model}`  ·  "
+        f"**Generated:** {datetime.now().isoformat(timespec='seconds')}\n\n"
+        f"> ⚠ The model did not return valid JSON. Raw output below.\n\n"
+        f"---\n\n{raw}\n"
+    )
 
 
 # ── Report writing ──────────────────────────────────────────────────────
 
-def _write_report(opp_dir: Path, model: str, brief_path: Path, response: str) -> Path:
+def _extract_brief_version(brief_path: Path) -> str:
+    """Pull 'v0.3' (or similar) out of a brief filename like 'capture-brief-v0.3-draft.docx'."""
+    m = re.search(r'(v\d+\.\d+(?:[a-z]+)?)', brief_path.stem, re.IGNORECASE)
+    return m.group(1).lower() if m else "vX"
+
+
+def _write_report(opp_dir: Path, model: str, brief_path: Path, response: str) -> tuple[Path, dict | None]:
+    """Write both the rendered markdown report AND the raw JSON.
+
+    Returns (markdown_path, parsed_data_or_None).
+    """
     date = datetime.now().strftime("%Y-%m-%d")
     safe_model = model.replace("/", "_").replace(":", "_")
-    out = opp_dir / f"_red-team-{date}-{safe_model}.md"
+    version = _extract_brief_version(brief_path)
+    md_path = opp_dir / f"_red-team-{date}-{safe_model}-{version}.md"
+    json_path = opp_dir / f"_red-team-{date}-{safe_model}-{version}.json"
+
+    # Persist raw JSON regardless of parse success
+    json_path.write_text(response, encoding="utf-8")
+
+    data = _parse_response(response)
     frontmatter = (
         f"---\n"
         f"type: red_team_report\n"
@@ -176,19 +368,15 @@ def _write_report(opp_dir: Path, model: str, brief_path: Path, response: str) ->
         f"model: {model}\n"
         f"date: {date}\n"
         f"prompt_source: _meta/prompts/cross-ai-red-team.md\n"
+        f"raw_json: {json_path.name}\n"
         f"---\n\n"
     )
-    body = (
-        f"# Cross-AI Red Team — {opp_dir.name}\n\n"
-        f"*Reviewer: `{model}`  ·  Subject: `{brief_path.name}`  ·  Generated: {datetime.now().isoformat(timespec='seconds')}*\n\n"
-        f"Run via `_scripts/red_team.py` using the prompt at "
-        f"`_meta/prompts/cross-ai-red-team.md`. Three passes per SOP §2.1 rule 5: "
-        f"Customer / Competitor / Skeptical Exec.\n\n"
-        f"---\n\n"
-        f"{response.strip()}\n"
-    )
-    out.write_text(frontmatter + body, encoding="utf-8")
-    return out
+    if data is None:
+        body = _render_fallback(response, model, brief_path, opp_dir.name)
+    else:
+        body = _render_markdown(data, model, brief_path, opp_dir.name)
+    md_path.write_text(frontmatter + body, encoding="utf-8")
+    return md_path, data
 
 
 def _append_decision_log(opp_dir: Path, model: str, brief_path: Path,
@@ -212,10 +400,12 @@ def _append_decision_log(opp_dir: Path, model: str, brief_path: Path,
         f.write(entry)
 
 
-def _count_findings(response: str) -> int | None:
-    """Heuristic — count numbered/bulleted items in the response. Returns None if unsure."""
-    bullets = len(re.findall(r'^\s*[\d]+\.\s|\n\s*[-*]\s', response))
-    return bullets if bullets > 0 else None
+def _count_findings(data: dict | None) -> int | None:
+    """Count findings from parsed JSON. Returns None if parse failed."""
+    if data is None:
+        return None
+    findings = data.get("findings", []) or []
+    return len(findings)
 
 
 # ── Main ────────────────────────────────────────────────────────────────
@@ -261,15 +451,23 @@ def main() -> None:
     response = _call_gemini(prompt, args.model)
     print(f"  ↩ {len(response):,} chars of red-team output\n")
 
-    report = _write_report(opp_dir, args.model, brief_path, response)
+    report, data = _write_report(opp_dir, args.model, brief_path, response)
     rel = report.relative_to(VAULT_ROOT)
 
-    findings = _count_findings(response)
+    findings = _count_findings(data)
     _append_decision_log(opp_dir, args.model, brief_path, report, findings)
 
     print(f"✓ Report written: {rel}")
-    if findings is not None:
-        print(f"  Approximate finding count: {findings}")
+    if data is None:
+        print("  ⚠ JSON parsing failed — see raw output dumped in the report")
+    elif findings is not None:
+        counts = {s: sum(1 for f in data.get("findings", [])
+                         if str(f.get("severity", "")).lower() == s)
+                  for s in ("critical", "high", "medium", "low")}
+        print(f"  Findings: {findings} total  ·  "
+              f"🔥{counts['critical']}  🔴{counts['high']}  "
+              f"🟡{counts['medium']}  🟢{counts['low']}")
+        print(f"  Verdict: {data.get('verdict', '(none)')}")
     print(f"  Decision log updated: {(opp_dir / '05_decision-log.md').relative_to(VAULT_ROOT)}")
 
 

@@ -82,3 +82,11 @@ Every decision: date, decision, by whom, rationale, what changed.
 **What changed:** Report written to `_red-team-2026-05-14-gemini-3.1-pro-preview.md`. Reviewed `capture-brief-v0.3-draft.docx` (12 substantive findings). Operator decides whether to address findings before next gate.
 
 ---
+
+### 2026-05-14 — Cross-AI red-team via gemini-3.1-pro-preview
+
+**By:** operator + `_scripts/red_team.py`
+**Rationale:** SOP §2.1 rule 5 adversarial review before shipping. Drafting used Claude; red-team uses Gemini per prompt note.
+**What changed:** Report written to `_red-team-2026-05-14-gemini-3.1-pro-preview.md`. Reviewed `capture-brief-v0.3-draft.docx` (5 substantive findings). Operator decides whether to address findings before next gate.
+
+---
