@@ -11,14 +11,14 @@ Re-verify all entries every 90 days. Defense roles rotate. **Next review due: 20
 
 | Name | Role | Org | Email/Contact | Source URL | Verified |
 |---|---|---|---|---|---|
-| Brig. Gen. Richard Goodman | Director, USINDOPACOM J7 | USINDOPACOM | — | pacom.mil | 2026-05-10 |
-| Dr. Andre Stridiron | PMTEC Program Manager | USINDOPACOM J7 | — | dvidshub.net/news/561976/ | 2026-05-10 |
-| Dave Bednarcik | PMTEC Range & Targets PM | USINDOPACOM J7 | — | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
-| Mary Ann Swendsen | PMTEC Experimentation Integrator | USINDOPACOM J7 | — | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
-| Andy Emslie | PMTEC Space Integrator | USINDOPACOM J7 | — | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
+| Brig. Gen. Richard Goodman | Director, USINDOPACOM J7 | USINDOPACOM | richard.a.goodman10.mil@us.navy.mil | pacom.mil | 2026-05-10 |
+| Dr. Andre Stridiron | PMTEC Program Manager | USINDOPACOM J7 | andre.j.stridiron.civ@us.navy.mil | dvidshub.net/news/561976/ | 2026-05-10 |
+| Dave Bednarcik | PMTEC Range & Targets PM | USINDOPACOM J7 | david.v.bednarcik.civ@us.navy.mil | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
+| Mary Ann Swendsen | PMTEC Experimentation Integrator | USINDOPACOM J7 | maryann.c.swendsen.civ@us.navy.mil | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
+| Andy Emslie | PMTEC Space Integrator | USINDOPACOM J7 | andrew.n.emslie.ctr@us.navy.mil | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
 | Daniel Hannah | Director, SDA Pacific | Space Development Agency | — | dvidshub.net/news/561976/ | 2026-05-10 |
-| Len Matsunaka | RJTI Chief Engineer | USINDOPACOM J7 | — | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
-| Todd Hall | RJTI IPT Lead | USINDOPACOM J7 | — | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
+| Len Matsunaka | RJTI Chief Engineer | USINDOPACOM J7 | len.k.matsunaka.civ@us.navy.mil | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
+| Todd Hall | RJTI IPT Lead | USINDOPACOM J7 | todd.b.hall2.ctr@us.navy.mil | pacom.mil/About-USINDOPACOM/PMTEC/ | 2026-05-10 |
 | Maj. Tuan Nguyen | J83 Joint Validation Division | USINDOPACOM J83 | — | pacom.mil/Contact/Industry-Engagements/ | 2026-05-10 |
 | Brent Parker | PMTEC Industry Engagement Lead (Ctr) | USINDOPACOM J7 | brent.m.parker2.ctr@us.navy.mil | pacom.mil/About-USINDOPACOM/PMTEC/Article/4467480/ | 2026-05-10 |
 | Larry Jordan | DIU Ecosystem Engagement Lead | Defense Innovation Unit | — | diu.mil/work-with-us | 2026-05-10 |
