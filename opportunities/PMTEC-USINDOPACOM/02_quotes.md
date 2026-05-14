@@ -13,9 +13,9 @@ Pull from here into briefs as needed. Do not edit quotes inline.
 
 ## Dr. Andre Stridiron, PMTEC Program Manager
 
-> "[Verbatim quote from primary source — pending operator click-verification from DVIDS/pacom.mil]"
+> "We want the highest levels of fidelity that mirror and match our adversaries' capabilities. We want them to feel challenged. We want them to sometimes fail so that they can learn and grow. We call that CJADO—Combined Joint All-Domain Operations—in our exercises. Nowadays, we’re doing combined joint all-domain effects, which require all the services to come together and war-fight together to a greater extent than in the past. And we're doing this not only with our U.S. joint multi-domain force, but we're also doing this with our allies and partners."
 
-— [Venue], [Date]. Source: https://dvidshub.net/news/561976/ (Driving Readiness: INDOPACOM J7 Outlines All-Domain Training Strategy at POST 2026). Verified [YYYY-MM-DD]. Tier: 1.
+— [Venue], [Date]. Source: https://dvidshub.net/news/561976/ (Driving Readiness: INDOPACOM J7 Outlines All-Domain Training Strategy at POST 2026). Verified [2026-05-14]. Tier: 1.
 
 **Attribution note:** Dr. Stridiron is quoted in DVIDS coverage of POST 2026 (Apr 2026) and PMTEC industry day materials. He refers to PMTEC's strategic intent as the "Pacific Impact Zone" — a persistent, theater-wide, multi-domain training ecosystem. Pull verbatim text by opening dvidshub.net/news/561976/ and extracting exact wording before use in any brief.
 
