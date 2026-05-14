@@ -157,7 +157,7 @@ What each named competitor is publicly saying / doing. Each line is anchored to 
 
 **FACT:** `[✓ INGESTED]` Trojan EATS (Army DEVCOM, OASIS) — $382M, 5-yr; SIGINT/EW open-architecture systems [s.caci-ir-trojan-2024] [s.2026-05-12-u-s-army-selects-caci-for-382-].
 
-**FACT:** `[⚑ PARTIAL]` ARKA acquisition closed March 2026 ($2.6B) — adds satellite sensors + agentic AI for SIGINT/EW [s.caci-ir-arka-2026] [s.2026-05-12-caci-completes-acquisition-of-] [s.2026-05-12-caci-q3-fy2026-earnings-call-t] [s.2026-05-12-caci-8-k-arka-agreement] [s.2026-05-12-caci-international-form-10-q-q].
+**FACT:** `[⚑ PARTIAL]` ARKA Group acquisition closed **9 March 2026** for **$2,642.7M net of cash acquired** (CACI 10-Q for quarter ended 2026-03-31). ARKA brings **electro-optical/infrared (EO/IR) and hyperspectral imaging** capabilities plus autonomous threat-classification software (CACI press release describes it as "Agentic AI-based") for space-based geospatial intelligence. ~**1,100 ARKA employees joined CACI**; acquired from Blackstone Tactical Opportunities; expected to contribute ~$150M revenue to remainder of CACI FY26 [s.caci-ir-arka-2026] [s.2026-05-12-caci-completes-acquisition-of-] [s.2026-05-12-caci-q3-fy2026-earnings-call-t] [s.2026-05-12-caci-8-k-arka-agreement] [s.2026-05-12-caci-international-form-10-q-q]. *Scope correction (2026-05-14 v0.3 red-team finding #3): ARKA's proven product scope is space-based EO/IR + hyperspectral imaging. The earlier framing "satellite sensors + agentic AI for SIGINT/EW" extended past ARKA's actual scope — ARKA does not market a SIGINT offering. CACI's legacy SIGINT (Spectral, Trojan) is a separate capability stack; do not conflate the two in customer-facing claims.*
 
 **Assessment:** `[⚠ PENDING-INGEST]` Azure Summit Technology acquisition (Sep 2024, $1.28B) adds RF/EW depth [s.caci-ir-azure-summit-2024] [s.2026-05-12-caci-azure-summit-technology-a] [s.2026-05-12-caci-8-k-azure-summit-agreement]. *Single-sourced — verify via CACI IR.*
 
@@ -169,9 +169,9 @@ What each named competitor is publicly saying / doing. Each line is anchored to 
 | Data analytics & assessment | Strong | Deep BD/AI/ML practice, AWS MSP status |
 | Non-kinetic effects sim (cyber/EW/IO) | Very strong | Spectral, Trojan, Pit Viper, AWAIR — can build AND simulate the threat |
 | Multi-level secure coalition info-sharing | Strong (sub) | INDOPACOM IT footprint, Zero Trust; SOSi is IMN prime |
-| AI & digital twin | Growing | Materially strengthened by ARKA agentic AI |
-| Realistic training targets (C-UAS) | Indirect | SkyTracker/CORIAN/X-MADIS — pivot to UAS red-team stimulator |
-| Space integration / SDA PWSA | Newly strong | Post-ARKA: satellite sensors + agentic AI |
+| AI & digital twin | Growing | ARKA autonomous threat-classification models (marketed as "Agentic AI-based" by CACI) generate digital-twin scenario inputs over EO/IR/hyperspectral data |
+| Realistic training targets (C-UAS) | Defensive only | SkyTracker/CORIAN/X-MADIS are detection + RF jammers — appropriate role is Blue-Cell validation. CACI recommends government issue a SEPARATE OPFOR award to a swarm-target vendor (no OCI) |
+| Space integration / SDA PWSA | Newly strong | Post-ARKA: EO/IR + hyperspectral satellite sensors (NOT SIGINT — separate CACI stack) + autonomous threat-classification software |
 | RJTI / cloud mission rehearsal | Moderate | Cloud/IT modernization muscle, no flagship rehearsal product |
 
 <!-- /sensitivity -->
@@ -182,26 +182,27 @@ What each named competitor is publicly saying / doing. Each line is anchored to 
 
 <!-- sensitivity:internal -->
 
-**Recommendation (draft):** PURSUE — hybrid prime/sub posture
+**Recommendation (v0.3 draft, post-red-team):** PURSUE — hybrid prime/sub posture
 
-**Prime plays:**
-1. **Non-kinetic effects simulation** — "live red-team-as-a-service" using Spectral/Trojan to inject realistic adversary EW/SIGINT/IO into PMTEC exercises (Cobra Gold, Valiant Shield, Balikatan). Engages Swendsen (AI strategy) and Bednarcik (range/targets) gaps directly.
-2. **Space integration / SDA PWSA pull-through** — leverage ARKA agentic AI + sensors for autonomous threat detection and missile-warning training stimulation. Co-engage Emslie and Hannah.
-3. **C-UAS-as-adversary** — repackage SkyTracker/CORIAN/X-MADIS as adversary UAS swarm stimulator for training ranges. White paper to Bednarcik.
+**Prime plays (per v0.3 brief):**
+1. **Non-kinetic effects simulation** — develop training-grade variants ("Spectral-Lite", "Trojan-Lite") that inject synthesized adversary EW/SIGINT/IO signatures into PMTEC exercises. *Plan acknowledges that classification, frequency allocation, and PEO IWS deconfliction are GOVERNMENT feasibility decisions in the first 60-90 days, not CACI deliverables — Play 1 capture activation is GATED on TAM-sizing exercise + customer-procurement-model conversation with Brent Parker.*
+2. **Space integration / SDA PWSA pull-through** — ARKA's commercial **EO/IR + hyperspectral** sensor datasets and autonomous threat-classification software are commercially available now from ARKA's pre-acquisition customer base. Pursue **DIU Hybrid Space Architecture demo meeting within 30 days**. *Strip SIGINT from any ARKA-specific claim — see §6.1 scope correction.*
+3. **C-UAS Blue-Cell Validation** — bid SkyTracker/CORIAN/X-MADIS strictly in defensive role with quantified Blue-Cell detection + engagement metrics fed to Bednarcik. **Recommend the government issue a separate, INDEPENDENT OPFOR swarm-target award** to a different vendor (Shield AI, DroneShield, AeroVironment, or via Replicator pathway). CACI takes itself out of the conflict-of-interest of grading against a teammate.
 
 **Sub/teaming plays:**
-- Deloitte INDOPACOM Alpha — push for J7/PMTEC-flavored task work
-- HII LVC content — bring cyber/EW threat threads into NCTE-style content
-- SOSi IMN/MPE — CACI brings ICAM/Zero Trust modules and cyber red-teaming
-- Johns Hopkins APL — position CACI data and SIGINT/EW as input layer to APL models
-- Lockheed JFN — open architecture, CACI EW/SIGINT plugs in cleanly
+- **Deloitte INDOPACOM Alpha** — push for J7/PMTEC-flavored task work as ordered. *Internal CACI delivery PM call required to verify ceiling/headroom (don't quote HigherGov when CACI has the actual data — see §9.6 decision G.*
+- **HII LVC content** — bring cyber/EW threat threads into HII's NCTE framework as a sub (CACI value-add is additive, not substitutive)
+- **SOSi IMN/MPE** — CACI brings ICAM/Zero Trust modules and cyber red-teaming
+- **Johns Hopkins University** (specific JHU unit and partnership scope to be confirmed via direct outreach to Stridiron's office in first 30 days). If APL, the play is data-sharing NDA + positioning CACI SIGINT/EW telemetry as input to APL models, NOT a teaming MOU (APL is a UARC).
+- **Lockheed JFN** — open architecture in principle, but L3Harris's DiSCO is the natively-integrated EW partner (demonstrated VS24, two years of integration reps). CACI's realistic JFN play is post-ARKA space-to-JFN feeds, NOT EW-thread displacement.
 
 **Top risks:**
-- ARKA integration not yet proven; premature ARKA-led pitching could backfire (gate: Q3 2026 milestone)
-- Coopetition firewall required between EW/SIGINT pulls (vs L3Harris, Northrop, Raytheon) and broader teaming conversations
-- PMTEC's stated push toward DIU/non-traditionals may disadvantage CACI as a Tier 1 prime — mitigation: route via DIU OnRamp Hub: Hawaii
+- **ARKA integration risk** — $2.6B acquisition closed 9 March 2026; competitor angle: "CACI is figuring out org chart while we have legacy theater space presence." Mitigation: pitch ARKA's commercial pre-acquisition capabilities (no integration claims for first 6-12 months); ARKA transition lead must sign off on pitch materials before external use.
+- **Coopetition firewall** required between EW/SIGINT pulls (vs L3Harris, Northrop, Raytheon) and broader teaming conversations.
+- **PMTEC's push toward DIU/non-traditionals** may disadvantage CACI as a Tier 1 prime. Mitigation: route Play 2 via DIU OnRamp Hub: Hawaii (Larry Jordan warm intro).
+- **Spectral-Lite feasibility** depends on government IC declassification decisions; the realistic alternative is leading with synthesized signatures (open-source threat libraries) for Phase 1, declassification-led Phase 2 only if government scopes it.
 
-**Reasoning:** Three of the eight named gaps map directly to CACI's existing weapon systems. Post-ARKA, a fourth (space) becomes viable. The incumbent map shows HII and SOSi entrenched on LVC and coalition network respectively — CACI's best return is leading on the non-kinetic/EW/space plays, where no dominant incumbent is visible, and subbing elsewhere.
+**Reasoning:** Three of the eight named PMTEC priorities map to CACI capabilities, with Play 2 (space) materially strengthened by ARKA EO/IR/hyperspectral. Incumbent map shows HII and SOSi entrenched on LVC and coalition network — CACI's best return is leading on space (post-ARKA) + defensive C-UAS + non-kinetic sim, and subbing elsewhere with HONEST positioning vs. entrenched competitors (L3Harris on EW, etc.).
 
 **Speculation:** PMTEC's FY27 funding may exceed FY26; PDI has had consistent YoY growth. Needs corroboration against next PB release.
 
@@ -313,7 +314,7 @@ Updated 2026-05-12 after second-pass FACT-to-source review with 6 new ingested p
 ### 9.5 Speculative / unconfirmed
 
 - FY27 PDI funding speculation in §7 — corroborate against next PB release.
-- Johns Hopkins APL partnership scope (mentioned in §3.1 #5) — announced March 2026, details not yet public.
+- **Johns Hopkins University partnership specifics** (mentioned in §3.1 #5) — Stridiron announced the partnership; specific JHU unit (APL? Whiting School? SAIS?) and scope are not in any ingested source. *Resolution path: Decision A.2 in `_decisions-pending-2026-05-14.md` — direct outreach to Stridiron's office in first 30 days. Do NOT continue to assume APL until confirmed.*
 
 ### 9.6 Next-step ingest priorities
 

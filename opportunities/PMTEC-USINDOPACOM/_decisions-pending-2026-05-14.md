@@ -104,6 +104,26 @@ Recommend **D.2**; cleanest defensible position.
 
 ---
 
+## Decision F — Strip ARKA SIGINT scope claims *(NEW — from v0.3 clean red-team #3)*
+
+**The factual issue:** v0.3 brief in places said *"autonomous threat-classification models running over EO/IR/hyperspectral and SIGINT data."* ARKA's actually-proven product scope per the CACI press release and 10-Q is **EO/IR + hyperspectral imaging only** — ARKA does not market a SIGINT offering. The SIGINT inference was our own bridge between ARKA's autonomous-AI capability and CACI's separate legacy SIGINT products (Spectral, Trojan).
+
+**Path forward (recommended F.1):** Strip every "ARKA … SIGINT" combination from external materials. Keep SIGINT discussion strictly in CACI-legacy contexts (Spectral, Trojan). When pitching ARKA, stay in the EO/IR + hyperspectral + autonomous threat-classification lane. The research file §6.1 ARKA FACT has been updated with the scope correction; the capture brief §6.2 / §7.1 / §8 ARKA references will need a v0.4 pass with this same constraint.
+
+**Already applied to:** `00_research-file.md` §6.1 ARKA FACT + §6.2 capability map cells (2026-05-14). **Still needs v0.4:** capture brief §6.2 table cell + §7.1 Play 2 description + §8 ARKA risk paragraph (these were written assuming the SIGINT bridge).
+
+---
+
+## Decision G — Internal CACI delivery PM call *(NEW — from v0.3 clean red-team #5)*
+
+**The credibility issue:** The brief quotes HigherGov for the $467M ceiling and $58.9M obligation on Deloitte INDOPACOM Alpha — but CACI is **the sub on that contract**. There's a CACI delivery PM at Camp H.M. Smith with the actual numbers: real ceiling, remaining headroom, task-order dynamics, embed-staff utilization. Quoting external OSINT for a contract CACI is on signals the capture team isn't talking to the delivery team.
+
+**Path forward (recommended G.1):** Add to the operator's first-30-days call list: contact the CACI INDOPACOM Alpha delivery PM (the embedded staff lead at Camp H.M. Smith). Capture: real ceiling, remaining headroom, task-order trajectory, J7-flavored task work pulled to date, relationship temperature with Deloitte program leadership.
+
+**Update path:** v0.4 §6.1 Deloitte FACT replaces "industry-reported" framing with internal-PM-confirmed numbers; v0.4 §7.2 Sub plays adds an explicit "leverage delivery-PM relationship as the J7 listening post" angle.
+
+---
+
 ## Decision E — Play 3 OPFOR framing *(quality, not blocking)*
 
 v0.3 takes the honest path (independent OPFOR award, no OCI) but creates
@@ -154,16 +174,24 @@ Tool auto-picks the latest `capture-brief-v*.docx`.
 
 ## Operator action checklist (in order)
 
-- [ ] Call Brent Parker (Decision A.1) — answers 4 questions
-- [ ] Call / email Stridiron's office (Decision A.2) — confirms JHU unit
-- [ ] Decide B path (B.1 narrow scope recommended)
-- [ ] Decide C path (C.1 synthetic-signatures recommended)
-- [ ] Decide D path (D.2 space-to-JFN feed recommended)
-- [ ] Decide E path (E.3 silent on OPFOR recommended)
-- [ ] Roll v0.4 with the answers + decisions
-- [ ] Run `red_team.py` — expect ≤ 5 findings if A + B done, ≤ 8 if only A done
+**Phone calls (first 30 days):**
+- [ ] **Call Brent Parker** (Decision A.1) — 4 questions on PMTEC procurement model
+- [ ] **Call / email Stridiron's office** (Decision A.2) — confirms JHU unit
+- [ ] **Call CACI INDOPACOM Alpha delivery PM** at Camp H.M. Smith (Decision G) — real ceiling + headroom + J7-task-work trajectory
+
+**Decisions to make:**
+- [ ] B path — financial framing (B.1 narrow scope recommended)
+- [ ] C path — Spectral-Lite concept (C.1 synthetic-signatures recommended)
+- [ ] D path — JFN strategy (D.2 space-to-JFN feed recommended)
+- [ ] E path — Play 3 OPFOR framing (E.3 silent on OPFOR recommended)
+- [ ] F path — ARKA SIGINT scope (F.1 strip recommended — already applied to research file; v0.4 brief still needs it)
+- [ ] G path — internal-PM data integration (G.1 recommended — gated on the call landing)
+
+**Brief work:**
+- [ ] Roll v0.4 capture brief with the answers + decisions A-G applied
+- [ ] Roll v0.4 exec brief to match
+- [ ] Run `red_team.py --opportunity PMTEC-USINDOPACOM` — expect ≤ 3 findings if A + B + F + G done
 - [ ] Update `index.md` `gate` field if v0.4 supports Gate 2 (Pursue) decision
-- [ ] Refresh exec brief to match v0.4 capture brief
 - [ ] Re-build the share zip for the BD-team meeting
 
 ---
