@@ -21,7 +21,7 @@ opened: 2026-05-08
 last_updated: 2026-05-14
 last_verification_pass: 2026-05-12
 last_red_team_pass: 2026-05-14
-brief_version: v0.3-draft
+brief_version: v0.3.1-draft
 next_action: Operator decisions A-E in _decisions-pending-2026-05-14.md (call Brent Parker + Stridiron office)
 next_action_due: 2026-05-21
 focus_month: 2026-05-01
@@ -45,10 +45,11 @@ USINDOPACOM J7's Pacific Multi-Domain Training and Experimentation Capability (P
 
 ## Current state (2026-05-14)
 
-- **Capture brief:** v0.3 draft (post 3 Gemini red-team passes — 12 findings remaining)
+- **Capture brief:** v0.3.1 draft (3 Gemini red-team passes + drafting-hygiene patch; 5 findings remaining per structured-JSON format)
+- **Executive brief:** v0.3.1 draft (drafting-hygiene patched)
 - **Verification:** 21 FACTs, 0 UNVERIFIABLE, 0 DOES_NOT_SUPPORT
 - **Ingested sources:** 34 primary + secondary
-- **Blocking next move:** [[_decisions-pending-2026-05-14|operator decisions A–E]] — phone calls to Brent Parker + Stridiron's office, then financial-framing call
+- **Blocking next move:** [[_decisions-pending-2026-05-14|operator decisions A–G]] — phone calls to Brent Parker + Stridiron's office + CACI INDOPACOM Alpha delivery PM, then financial-framing decision
 
 ## Links
 
@@ -58,9 +59,9 @@ USINDOPACOM J7's Pacific Multi-Domain Training and Experimentation Capability (P
 - [[02_quotes|Quotes]]
 - [[03_pocs|POC directory]]
 - [[05_decision-log|Decision log]]
-- `04_artifacts/capture-brief-v0.3-draft.docx` — latest capture brief
-- `04_artifacts/executive-brief-v0.3-draft.docx` — latest exec brief
-- `_red-team-2026-05-14-gemini-3.1-pro-preview-v0.3-clean.md` — latest red-team (scannable format)
+- `04_artifacts/capture-brief-v0.3.1-draft.docx` — latest capture brief (drafting-hygiene patched)
+- `04_artifacts/executive-brief-v0.3.1-draft.docx` — latest exec brief (drafting-hygiene patched)
+- `_red-team-2026-05-14-gemini-3.1-pro-preview-v0.3.1.md` — latest red-team (scannable format)
 - `_verification-2026-05-12.md` — latest verifier report
 - `01_sources/` — 34 ingested primary sources
 - `04_artifacts/` — Word deliverables
