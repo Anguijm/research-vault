@@ -340,8 +340,9 @@ def _render_fallback(raw: str, model: str, brief_path: Path, opp_id: str) -> str
 # ── Report writing ──────────────────────────────────────────────────────
 
 def _extract_brief_version(brief_path: Path) -> str:
-    """Pull 'v0.3' (or similar) out of a brief filename like 'capture-brief-v0.3-draft.docx'."""
-    m = re.search(r'(v\d+\.\d+(?:[a-z]+)?)', brief_path.stem, re.IGNORECASE)
+    """Pull 'v0.3.1' or 'v0.3' or similar out of a brief filename
+    like 'capture-brief-v0.3.1-draft.docx'. Greedy on the dotted-version part."""
+    m = re.search(r'(v\d+(?:\.\d+)+(?:[a-z]+)?)', brief_path.stem, re.IGNORECASE)
     return m.group(1).lower() if m else "vX"
 
 

@@ -1,0 +1,86 @@
+{
+  "summary": "The brief identifies strong tactical alignment with PMTEC gaps but fails the exec and customer tests due to internal contradictions, incomplete homework, and arrogant posturing. It contradicts itself on ARKA's SIGINT capabilities, asks the government to solve CACI's product feasibility issues, and requests $3M in immediate B&P funding based on unverified, low-confidence TAMs.",
+  "verdict": "iterate",
+  "findings": [
+    {
+      "id": 1,
+      "severity": "critical",
+      "sections": [
+        "§6.1",
+        "§6.2"
+      ],
+      "passes": [
+        "competitor",
+        "exec"
+      ],
+      "title": "Contradiction on ARKA SIGINT capabilities",
+      "issue": "Section 6.1 explicitly states ARKA does not market SIGINT, but the table in Section 6.2 claims ARKA's AI models run over SIGINT data.",
+      "why_it_matters": "Competitors will ghost CACI for selling vaporware, and an exec will reject the brief for internal contradictions regarding a newly acquired $2.6B asset.",
+      "fix": "Remove references to ARKA's AI running over SIGINT data in §6.2, or explicitly clarify that CACI must build this integration post-acquisition.",
+      "evidence_quote": "autonomous threat-classification models running over EO/IR/hyperspectral and SIGINT data"
+    },
+    {
+      "id": 2,
+      "severity": "high",
+      "sections": [
+        "§7.1"
+      ],
+      "passes": [
+        "customer",
+        "competitor"
+      ],
+      "title": "Asking the customer to solve product feasibility",
+      "issue": "The 'Spectral-Lite' play requires the government (J6/J7) to figure out classification, frequency allocation, and deconfliction before CACI even builds the solution.",
+      "why_it_matters": "A J7 customer will reject this as 'the contractor asking us to do their homework,' and competitors with existing unclassified training EW systems will win easily.",
+      "fix": "Shift the burden to CACI. Propose a funded study or use internal IRAD to determine classification and spectrum feasibility before asking the customer to commit.",
+      "evidence_quote": "the government, not CACI, must define what UNCLASSIFIED reduced-fidelity dataset is releasable"
+    },
+    {
+      "id": 3,
+      "severity": "high",
+      "sections": [
+        "§9",
+        "§10.3"
+      ],
+      "passes": [
+        "exec"
+      ],
+      "title": "Premature B&P funding request with low ROI confidence",
+      "issue": "Asking for immediate authorization of $1.5M-$3M in B&P for Plays 2 and 3 when the TAM is highly speculative and the lower-bound expected revenue is only $15M.",
+      "why_it_matters": "An exec will not authorize $3M in capture funds for a 'LOW confidence' TAM where the worst-case revenue barely clears a 5x multiple.",
+      "fix": "Gate all capture activation funding behind the 30-day TAM-sizing exercise, rather than asking for immediate authorization for Plays 2 and 3.",
+      "evidence_quote": "Authorize capture team activation for Plays 2... and 3... IMMEDIATELY."
+    },
+    {
+      "id": 4,
+      "severity": "medium",
+      "sections": [
+        "§7.2"
+      ],
+      "passes": [
+        "exec",
+        "competitor"
+      ],
+      "title": "Incomplete intelligence on JHU partnership",
+      "issue": "The brief proposes a partner play with JHU but admits it doesn't even know which JHU unit is involved, guessing it might be APL.",
+      "why_it_matters": "Shows a lack of basic capture homework. A 4-minute exec read will flag this as unpreparedness and say 'come back when you know who we are partnering with.'",
+      "fix": "Remove the JHU partner play from the decision brief until the 30-day outreach confirms the unit and actual partnership scope.",
+      "evidence_quote": "specific JHU unit unconfirmed in ingested sources"
+    },
+    {
+      "id": 5,
+      "severity": "medium",
+      "sections": [
+        "§7.1"
+      ],
+      "passes": [
+        "customer"
+      ],
+      "title": "Dictating acquisition strategy to the customer",
+      "issue": "Recommending the government issue a separate, independent OPFOR award just to accommodate CACI's OCI and product limitations on C-UAS.",
+      "why_it_matters": "J7 will view this as arrogant and self-serving, pushing back on a vendor trying to complicate their procurement to fit a specific bid strategy.",
+      "fix": "Frame the independent OPFOR as a best-practice for objective validation (Red vs Blue separation) rather than an EXPLICIT demand to accommodate CACI.",
+      "evidence_quote": "EXPLICITLY recommend the government issue a SEPARATE, INDEPENDENT OPFOR swarm-target award"
+    }
+  ]
+}
