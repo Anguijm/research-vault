@@ -53,12 +53,14 @@ USINDOPACOM J7's Pacific Multi-Domain Training and Experimentation Capability (P
 ## Links
 
 - [[_decisions-pending-2026-05-14|⚠ DECISIONS PENDING — call sheet + path forward]]
+- [[_play-2-arka-space-2026-05-14|Play 2 card — ARKA space integration]]
 - [[00_research-file|Research file]]
 - [[02_quotes|Quotes]]
 - [[03_pocs|POC directory]]
 - [[05_decision-log|Decision log]]
-- `04_artifacts/capture-brief-v0.3-draft.docx` — latest draft
-- `_red-team-2026-05-14-gemini-3.1-pro-preview-v0.{1,2,3}.md` — three red-team reports
+- `04_artifacts/capture-brief-v0.3-draft.docx` — latest capture brief
+- `04_artifacts/executive-brief-v0.3-draft.docx` — latest exec brief
+- `_red-team-2026-05-14-gemini-3.1-pro-preview-v0.3-clean.md` — latest red-team (scannable format)
 - `_verification-2026-05-12.md` — latest verifier report
 - `01_sources/` — 34 ingested primary sources
 - `04_artifacts/` — Word deliverables
