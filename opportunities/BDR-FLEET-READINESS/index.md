@@ -4,7 +4,7 @@ aliases:
   - BDR-FLEET-READINESS
 id: BDR-FLEET-READINESS
 title: Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning
-customer: "TBD — candidates: NSWC Carderock Division / NAVSEA / multi-customer research track (see scaffold-summary decision item)"
+customer: multi-customer research track  # confirmed 2026-05-21; candidate downstream customers when track resolves: NSWC Carderock Division (modeling source), NAVSEA (parent), OPNAV / N9 (fleet readiness demand-side), PAE-IO / Amentum (industrial supply-side)
 gate: identify           # identify | pursue | bid | won | lost | dropped
 status: triaged          # triaged | research | drafting | review | shipped | stalled
 recommendation:
@@ -31,9 +31,9 @@ last_find_count_usa:
 
 # Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning — Index
 
-**Customer:** TBD (see scaffold-summary decision item)
+**Customer:** Multi-customer research track (per scaffold decision B, 2026-05-21)
 **Gate:** Identify
-**Status:** Triaged — scaffolded only; awaiting operator confirmation before research begins
+**Status:** Triaged — scaffold confirmed; awaiting operator "begin research" trigger before source ingestion starts
 
 ## Working summary
 
@@ -47,3 +47,7 @@ Research track exploring whether NSWC Carderock Division's battle damage and rep
 - [[05_decision-log|Decision log]]
 - `01_sources/` — source captures (none yet — research not started)
 - `04_artifacts/` — Word deliverables (none yet)
+
+## Related research tracks
+
+- [[../PMTEC-USINDOPACOM/index|PMTEC-USINDOPACOM]] — multidomain training opportunity at USINDOPACOM J7. Thematic adjacency: PMTEC priority gap #6 ("Realistic training targets") and the LVC / non-kinetic-effects-sim space. If the BDR working hypothesis survives disconfirming checks, this track may converge with PMTEC Play 1 (non-kinetic effects simulation) or Play 3 (C-UAS Blue-Cell validation) on a joint Navy-side recommendation. Tracks remain SEPARATE for now; no shared content. Cross-link confirmed by operator on 2026-05-21.

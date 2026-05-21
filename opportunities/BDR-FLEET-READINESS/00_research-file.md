@@ -1,6 +1,6 @@
 # Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning — Research File
 
-**Customer:** TBD (see `index.md` and scaffold summary — candidates include NSWC Carderock Division as modeling source, NAVSEA as parent command, or treated as a multi-customer research track)
+**Customer:** Multi-customer research track (confirmed by operator 2026-05-21; candidate downstream customers if/when the track resolves to a named opportunity: NSWC Carderock Division as modeling source, NAVSEA as parent command, OPNAV / N9 as fleet-readiness demand-side, PAE-IO / Amentum as industrial supply-side)
 **Opportunity ID:** BDR-FLEET-READINESS
 **Gate:** Identify
 **Started:** 2026-05-21
