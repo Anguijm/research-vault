@@ -13,6 +13,7 @@ capability_tags:
   - BDR
   - M&S
   - LVC
+  - training-design
   - survivability
   - industrial-base
   - fleet-readiness

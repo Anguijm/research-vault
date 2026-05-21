@@ -16,9 +16,14 @@
 
 ## 1. Working summary (analyst view)
 
-This is a research track, not yet a capture opportunity. The scope is to determine, against open-source intelligence (OSI) only, whether NSWC Carderock Division's battle damage and repair (BDR) modeling and ship survivability modeling can and should be integrated into multidomain service training as a training injection — and what that modeling, if releasable at OSI fidelity, implies about (a) the realism of current fleet training assumptions regarding wartime battle damage and (b) the demand assumptions in PAE Industrial Operations (PAE-IO) repair-capacity planning.
+This is a research track, not yet a capture opportunity. The scope is to determine, against open-source intelligence (OSI) only:
 
-The scope is stated NEUTRALLY at this stage. The hypothesis in §7 is one possible outcome of the research, not a finding. The research plan in §10 includes evidence that would DISCONFIRM the hypothesis.
+1. Whether NSWC Carderock Division's battle damage and repair (BDR) modeling and ship survivability modeling can and should be integrated into multidomain service training.
+2. What that modeling, if releasable at OSI fidelity, implies about (a) the realism of current fleet training assumptions regarding wartime battle damage and (b) the demand assumptions in PAE Industrial Operations (PAE-IO) repair-capacity planning.
+3. **What a robust training program built on that modeling would look like** — progressing from tabletop scenarios (OSI-fidelity content, classroom format) through guided site visits (NSWC Carderock or partner facilities) to pilot repair operations (hands-on training using simulated or instrumented damage scenarios).
+4. **How CACI would build the NSWC Carderock relationships needed to execute** — assumed at scaffold time that CACI does not currently have direct working relationships with the Carderock BDR / survivability program leads. The research track therefore includes a parallel work stream on engagement-surface mapping and warm-intro paths.
+
+The scope is stated NEUTRALLY at this stage. The hypothesis in §7 is one possible outcome of the research, not a finding. The research plan in §10 includes evidence that would DISCONFIRM the hypothesis. The engagement strategy in §11 (new this scope expansion) is sequenced so that relationship-development can proceed in parallel with hypothesis-testing rather than blocking on it.
 
 ## 2. Open questions
 
@@ -33,6 +38,25 @@ Listed with explicit disconfirming-evidence items per the scaffolding instructio
 - [ ] **[DISCONFIRMING]** Are there already named programs, partnerships, or joint LVC efforts that integrate Carderock survivability/BDR modeling into multidomain training? If yes, the "integration is needed" framing of the hypothesis is wrong; the integration may already be done, in which case the research track pivots to "how is it currently done, and is it working."
 - [ ] What is the actual classification gradient of naval BDR / ship survivability modeling, and what subset is OSI-releasable? (Pre-research scoping; may require direct outreach to NAVSEA Public Affairs.)
 - [ ] Is this research track better framed as a CACI capability investment, a teaming-opportunity scan, or a customer-education paper for NAVSEA / NWDC / OPNAV?
+
+### Training-design questions (added 2026-05-21 scope expansion)
+
+- [ ] What does a robust training-progression model look like for BDR — tabletop scenarios → guided site visits → pilot repair operations? What are the right learning objectives at each phase, and which audiences (junior officers, damage-control teams, repair-yard supervisors, multi-domain joint planners) get which content?
+- [ ] What existing Navy / Joint training programs already use a tabletop-to-pilot progression model that could be a template or partner (e.g., Naval War College wargames, NSWCD damage-control schools, MARFOR readiness exercises)?
+- [ ] Where would tabletop content draw from at OSI fidelity, given the §9.1 classification gradient? (Open-source threat libraries; sanitized vignettes from public NAVSEA / Carderock material; historical case studies — USS Cole, USS Stark, USS Fitzgerald, HMS Sheffield, Moskva — these are factually OSI and the lessons-learned are public.)
+- [ ] What facilities support guided site visits at the next fidelity step? (NSWC Carderock proper; NSWC Philadelphia; intermediate maintenance activities; the four public naval shipyards; selected private repair facilities operated by HII Newport News, BAE Norfolk, GD NASSCO, Vigor / Titan Acquisitions.)
+- [ ] What does "pilot repair operations" look like at the top of the training progression — simulator-based, real-equipment-on-instrumented-test-bed, or live operations on training hulls? Which model is feasible at unclassified level?
+- [ ] **[DISCONFIRMING]** Is there an existing Navy training program that already does the full tabletop→site-visit→pilot progression for BDR? If yes, the gap is execution / scaling, not design — the recommendation shape changes.
+
+### NSWC relationship-development questions (added 2026-05-21 scope expansion)
+
+- [ ] Who are the named technical and engagement leads at NSWC Carderock Division for BDR / ship survivability modeling? (Public sources: NSWCD command directory, NAVSEA org chart, recent Carderock-authored conference papers, SBIR / STTR topic-author bylines.)
+- [ ] What is Carderock's standing industry-engagement posture — industry days, SBIR / STTR cadence, BAA topics, Federal Lab Consortium tech-transfer queue? (Inventory all public engagement-on-ramps before pursuing custom outreach.)
+- [ ] What warm-intro paths does CACI have to NSWC Carderock today? (Audit: CACI prior Carderock contracts via USAspending, CACI personnel with NSWCD work history, CACI Navy lab relationships at adjacent NSWC sites — Dahlgren, Crane, Indian Head — that might bridge.)
+- [ ] What adjacent CACI relationships might broker introductions: NAVSEA leadership, ONR program officers, NWDC, Naval War College, Naval Academy faculty, SNAME, ASNE?
+- [ ] **[DISCONFIRMING]** Does CACI already have an active, productive Carderock relationship that the operator was unaware of? (Internal CACI BD database check.)
+- [ ] What is the realistic timeline for relationship-development given Carderock's typical engagement cadence — months, not weeks; multi-touch sequence; formal industry-day plus follow-on technical engagements?
+- [ ] What is the right CACI entry-vehicle — SBIR proposal, BAA white paper, sub-tier role on an existing Carderock vehicle, or direct NDA-only technical exchange?
 
 ## 3. Demand signal — what the customer (when defined) is saying
 
@@ -84,17 +108,19 @@ Listed with explicit disconfirming-evidence items per the scaffolding instructio
 
 **Assessment (hypothesis to be tested, not a finding):**
 
-Current fleet training assumptions and PAE-IO industrial planning materially understate wartime battle-damage rates, damage types, and repair-capacity demand. NSWC Carderock Division's BDR and ship survivability modeling — to the fidelity it can be released at OSI level — can quantify that gap and serve as a training-injection source to close it.
+Current fleet training assumptions and PAE-IO industrial planning materially understate wartime battle-damage rates, damage types, and repair-capacity demand. NSWC Carderock Division's BDR and ship survivability modeling — to the fidelity it can be released at OSI level — can quantify that gap and serve as a training-injection source to close it. A robust training program built on that modeling would progress from **tabletop scenarios** (OSI-fidelity content, classroom format) through **guided site visits** (NSWC Carderock or partner facilities) to **pilot repair operations** (hands-on training using simulated or instrumented damage scenarios). The progression itself is operationally meaningful because each step can independently step up classification access, allowing the program to start at OSI and graduate to classified content only where and when warranted.
 
-**Stance:** This is a hypothesis to be tested against primary sources. It is NOT yet a finding. The research plan in §10 includes the specific disconfirming evidence (also enumerated in §2 with `[DISCONFIRMING]` prefixes) that would falsify each leg of this hypothesis. The hypothesis should be revisited and either upgraded to a FACT-supported recommendation or revised/abandoned after the first round of OSI source ingestion.
+**Stance:** This is a hypothesis to be tested against primary sources. It is NOT yet a finding. The research plan in §10 includes the specific disconfirming evidence (also enumerated in §2 with `[DISCONFIRMING]` prefixes) that would falsify each leg of this hypothesis. The hypothesis should be revisited and either upgraded to a FACT-supported recommendation or revised/abandoned after the first round of OSI source ingestion. **Execution of any recommendation also depends on a relationship-development work stream with NSWC Carderock that does not yet exist — see §11.**
 
-**Three falsifiable legs of the hypothesis:**
+**Five falsifiable legs of the hypothesis:**
 
 1. *Training-assumption gap.* Navy / joint fleet training documents currently assume attrition and battle-damage rates significantly below what wartime modeling would predict. → Falsified if DON Strategic Readiness Plans or fleet exercise scenarios already assume warfighting-scale damage.
 2. *Industrial-planning gap.* PAE-IO's public-facing planning posture assumes peacetime / steady-state repair demand rather than warfighting surge. → Falsified if PAE-IO testimony, contract task-order language, or industrial-base assessments already assume realistic attrition.
 3. *Modeling-fidelity availability.* Carderock's BDR/survivability modeling has an OSI-releasable subset of useful operational fidelity. → Falsified if the OSI-releasable version is doctrinal/coarse only, and the operationally-useful modeling is behind a classification gradient inaccessible to this research.
+4. *Training-progression viability.* A tabletop→site-visit→pilot-operations progression is a feasible and not-already-implemented program model. → Falsified if (a) an existing Navy program already does this end-to-end, in which case the play is execution / scaling rather than design, OR (b) the progression cannot legally / operationally clear the classification stair-step from OSI tabletops up to instrumented repair pilots.
+5. *Relationship feasibility.* CACI can realistically build the NSWC Carderock relationships needed to execute, on a timeline shorter than the demand window. → Falsified if Carderock's engagement posture is locked up by incumbent technical partners (e.g., HII Mission Technologies' Alion-inheritance, SAIC, Leidos) such that CACI's entry timeline exceeds the customer-demand timeline.
 
-**Recommendation (draft):** TBD — pending source ingestion and disconfirming-evidence check.
+**Recommendation (draft):** TBD — pending source ingestion, disconfirming-evidence check, and engagement-surface inventory.
 
 <!-- /sensitivity -->
 
@@ -185,10 +211,81 @@ A third possible counter — that PAE-IO's "understatement" may be deliberate bu
 
 ### 10.3 Sequencing
 
-1. **Week 1:** Scope source-finding. Add `_search-config.yaml` for this opportunity with target NAVSEA / Carderock / SASC / GAO / CRS queries. Pull the two disconfirming-evidence sources first (DON Strategic Readiness Plan, FY26 Navy budget) to test the hypothesis early.
-2. **Week 2:** If hypothesis survives Week 1 disconfirmation, broaden to Carderock public materials and PAE-IO industrial footprint.
-3. **Week 3:** Synthesize into a research-file update with FACT-labeled findings, revised hypothesis or recommendation, and a Gate 1 brief decision (continue / pivot / drop).
+1. **Week 1:** Scope source-finding. Add `_search-config.yaml` for this opportunity with target NAVSEA / Carderock / SASC / GAO / CRS queries. Pull the two disconfirming-evidence sources first (DON Strategic Readiness Plan, FY26 Navy budget) to test the hypothesis early. **In parallel:** begin §11.1 engagement-surface inventory (no outreach yet, just public-source mapping of POCs and on-ramps).
+2. **Week 2:** If hypothesis survives Week 1 disconfirmation, broaden to Carderock public materials and PAE-IO industrial footprint. Begin §11.2 training-progression design at concept level (tabletop curriculum outline; site-visit logistics scoping; pilot-operations feasibility frame).
+3. **Week 3:** Synthesize into a research-file update with FACT-labeled findings, revised hypothesis or recommendation, and a Gate 1 brief decision (continue / pivot / drop). Cross-reference §11.1 engagement inventory and §11.2 training-design concept against the recommendation.
 
 ---
 
-*Scaffold created 2026-05-21. No research performed yet. Source ingestion and verifier runs are blocked until operator confirms: (a) folder ID, (b) customer field, (c) PMTEC cross-link decision. See decision log.*
+## 11. Engagement & relationship strategy
+
+<!-- sensitivity:internal -->
+
+This section addresses the scope-expansion items added 2026-05-21: (a) design of robust training from tabletop scenarios to pilot repair operations, and (b) developing NSWC Carderock relationships, which are assumed not to exist at scaffold time.
+
+The engagement work stream proceeds **in parallel with** the primary-source research in §10 — not blocking on it — because relationship cadence at Navy labs is months-to-years, and starting the inventory and on-ramp scoping early is low-cost and unaffected by whether the §7 hypothesis ultimately survives disconfirming checks.
+
+### 11.1 Engagement-surface inventory (Week 1, parallel to §10)
+
+**Goal:** map all public-source on-ramps to NSWC Carderock Division and adjacent Navy labs / sponsors. NO outreach yet — this is desk research only.
+
+**Targets:**
+- Carderock command directory and public technical-engagement office contacts (`navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/`).
+- Recent NSWCD-authored conference papers (ASNE Day, SNAME annual meeting, NDIA Combat Systems Conference) — extract author bylines + affiliations for the BDR / survivability-modeling line of work.
+- SBIR / STTR topic authorship — Carderock topics on `sbir.gov` over the last 3 years, particularly those touching BDR, survivability, structural modeling, M&S.
+- Federal Lab Consortium tech-transfer queue for any Carderock entries.
+- Naval lab industry days, NAVSEA Industry Engagement Day, ASNE Day, SNAME annual — schedule mapping for next 12 months.
+- NAVSEA HQ engagement portals — Industry Engagement Day, NSPS / Naval Sustainment System leadership.
+
+**Adjacent intro paths to audit:**
+- Existing CACI / Carderock contract history via USAspending (PIID search for CACI and ARKA legacy contracts at the NSWCD UEI).
+- CACI personnel with NSWCD work history — internal LinkedIn / HR check (operator-side; not in this research track).
+- CACI relationships at adjacent NSWC sites: Dahlgren, Crane, Indian Head, Port Hueneme, Panama City. Lateral relationships at these sites often produce warm intros to Carderock.
+- ONR program officers in the relevant portfolios (Sea Warfare and Weapons, Force Health Protection, Code 33/35).
+- Naval War College, Naval Postgraduate School, US Naval Academy faculty who have collaborated with Carderock on BDR or survivability research.
+- Professional society relationships: SNAME (Society of Naval Architects and Marine Engineers), ASNE (American Society of Naval Engineers), MORS (Military Operations Research Society).
+
+**Output:** a `03_pocs.md` POC table populated with named individuals + public-source URLs + which on-ramp they sit on. **No outreach until the table is complete and the operator green-lights specific contacts.**
+
+### 11.2 Training-progression design (Week 2-3, contingent on §7 hypothesis survival)
+
+**Goal:** design the tabletop → site-visit → pilot training progression at concept level so that the Gate 1 brief in Week 3 can include a concrete program shape, not just an assertion that a program is needed.
+
+**Tabletop phase (OSI-fidelity, classroom format):**
+- Learning objectives: damage-control sequencing, repair triage, supply-chain stress points, multi-domain damage scenarios (kinetic + cyber + EW + space-disrupted comms).
+- Content sources at OSI fidelity: historical case studies (USS Stark, USS Cole, USS Fitzgerald, HMS Sheffield, Moskva), open-source threat libraries, public NAVSEA / Carderock methodology papers, sanitized vignettes.
+- Audience: junior officers, damage-control teams, repair-yard supervisors, multi-domain joint planners. Different audiences get different content depths.
+- Format: scenario card decks, instructor-led workshops, multi-week curriculum.
+
+**Site-visit phase (guided facility immersion):**
+- Candidate facilities: NSWC Carderock proper (full-scale tank facility, structural-test facilities); NSWC Philadelphia (machinery); intermediate maintenance activities; the four public naval shipyards (Norfolk, Portsmouth, Puget Sound, Pearl Harbor); private repair facilities operated by HII Newport News, BAE Norfolk, GD NASSCO, Vigor / Titan Acquisitions.
+- Classification step-up: tabletops are OSI; site visits begin at controlled-unclassified (CUI) for facility tour content; instrumented test-bed walk-throughs may require security agreement.
+- Logistics: travel planning, badge sponsorship, escort coverage, content scope-of-discussion limits — all real operational items, not just program design.
+
+**Pilot repair operations (hands-on, top of progression):**
+- Feasibility models: (i) simulator-only (e.g., a digital twin of damage propagation, no live equipment); (ii) instrumented test-bed (a real damaged subsystem on a controlled rig, training cohort performs assessment and repair planning); (iii) live operations on a training hull (extreme model — would require Navy training-hull access, possibly via the Naval Sea Cadet Corps fleet or ex-service vessel partnerships, all of which need separate scoping).
+- Highest unclassified fidelity is probably (ii) instrumented test-bed at NSWC Carderock or a partner site.
+
+### 11.3 Engagement timeline assumption
+
+- **Months 1-2:** §11.1 engagement-surface inventory complete; first concrete targets identified for outreach.
+- **Months 3-4:** First-touch outreach via the lowest-friction on-ramp (typically an SBIR / STTR proposal response or industry-day attendance). Goal at this stage is a recurring conversation, not a contract.
+- **Months 6-9:** Conversation-to-pilot conversion. A small SBIR Phase I or NDA-only technical exchange would be a realistic Month-9 milestone.
+- **Months 12-18:** Pilot training-design engagement, possibly under an SBIR Phase II, BAA, or sole-source justification if Carderock has determined CACI / ARKA is uniquely positioned.
+
+Treat all month numbers as Speculation per SOP §2.1 rule 4 until corroborated by Carderock's actual public engagement cadence.
+
+### 11.4 Risks specific to the engagement work stream
+
+| Risk | Mitigation |
+|---|---|
+| Carderock's engagement bandwidth is locked up by incumbent technical partners | Lead with a differentiated capability hook (ARKA EO/IR + Agentic-AI-based threat classification has no direct Carderock-side equivalent — could create a real "this is new, talk to us" entry) |
+| Outreach treated as marketing rather than substantive technical engagement | First-touch must be substantive — an SBIR proposal, BAA white paper, or published technical question, not a generic capability brief |
+| Multi-touch sequence is required, and operator cadence may not sustain it | Acknowledge upfront — engagement plan is months not weeks; mid-cycle slippage is normal and not a kill signal |
+| CACI may not have the right Navy-lab cultural credentials | Audit early via §11.1 adjacent-relationship mapping; if no warm path exists, a longer first-touch via SBIR Phase I is the right entry |
+
+<!-- /sensitivity -->
+
+---
+
+*Scaffold created 2026-05-21. Scope expanded 2026-05-21 to include training-progression design (§11.2) and NSWC relationship-development (§11.1). No research performed yet. Source ingestion and verifier runs are blocked until operator says "begin research." See decision log.*
