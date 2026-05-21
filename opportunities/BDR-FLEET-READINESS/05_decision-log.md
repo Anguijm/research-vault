@@ -125,3 +125,28 @@ Every decision: date, decision, by whom, rationale, what changed.
 - After ingest, re-verify §7 leg-1 (training-assumption gap) against the SWARMEX article specifically — that's the highest-leverage disconfirming check from this pass.
 
 ---
+
+### 2026-05-22 — Research paused for readability fix and workflow review
+
+The operator paused all active research on this track. The pause is not a kill signal; it is a deliberate break to fix two things before the inbox triage continues.
+
+**By:** operator, who told me the chat responses and the research files themselves were "laden with symbols and acronyms and references to parts that a human reader has long since forgotten." The operator asked for (a) a structural readability fix that applies to every file and every chat response going forward, and (b) a workflow review based on a Medium article by Yanli Liu titled *Code Is Not Cheap: How to Multiply Your AI's Output With Software Fundamentals*.
+
+**What is paused:**
+- The `auto_find` flag in `index.md` is set back to `false` so the cron will not pull new candidates while the pause is active.
+- The 67 candidates already in `_inbox.md` from the 2026-05-21 first pass remain queued but untriaged. They are not lost; they will be the first thing the operator triages on resume.
+- No further `find_sources.py`, `ingest.py`, `verify_facts.py`, or `red_team.py` runs against this track until the pause lifts.
+
+**What is happening during the pause:**
+1. A new "Writing for the human reader" section was added to the project `CLAUDE.md` so the readability rule is binding on every future session.
+2. A `feedback_readability.md` memory was saved in the Claude Code auto-memory so the rule survives across sessions even if the `CLAUDE.md` rule is later reorganized.
+3. A readability pass is being applied to this research file and this decision log so the operator can read them on first encounter without holding the section structure in their head.
+4. The Yanli Liu article is being read so that any process-level lessons can be folded into the vault workflow (scripts, prompts, SOP) before more research is generated under the old workflow.
+
+**What resumes the research:**
+- Operator flips `auto_find` back to `true` in `index.md`, OR
+- Operator runs `approve_inbox.py BDR-FLEET-READINESS` to start triaging the queued candidates.
+
+Either action signals that the pause is lifted.
+
+---
