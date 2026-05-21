@@ -26,10 +26,10 @@ next_action: Run first find_sources pass (Week 1 disconfirming-evidence queries)
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
 auto_find: true    # operator authorized 2026-05-21 — see 05_decision-log.md
-last_find_run:
-last_find_count_ai:
-last_find_count_sam:
-last_find_count_usa:
+last_find_run: 2026-05-21T23:14:37
+last_find_count_ai: 42
+last_find_count_sam: 25
+last_find_count_usa: 0
 ---
 
 # Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning — Index

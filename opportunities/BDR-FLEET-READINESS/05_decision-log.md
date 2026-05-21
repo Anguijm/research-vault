@@ -82,3 +82,46 @@ Every decision: date, decision, by whom, rationale, what changed.
 - Confirm whether the four new §7-leg-6 disconfirming queries (now slotted as Week 1 queries 6-9 in the AI list) should run in the same first pass as the original disconfirming queries 1-5, or be deferred to a second pass.
 
 ---
+
+### 2026-05-21 — First `find_sources.py` pass executed (all 22 AI / 8 SAM / 9 USAspending queries)
+
+**By:** operator (instruction: "1 all / 2 sure....? / 3 yes?") + Claude Code (Opus 4.7) executing the script
+**Rationale:** Operator authorized running ALL queries on the first pass (per the three open items in the previous log entry). `_scripts/find_sources.py --opportunity BDR-FLEET-READINESS` invoked via the project venv.
+**Result:** 67 new candidates queued in `_inbox.md` — **42 AI + 25 SAM + 0 USAspending**.
+
+**AI score distribution (42 ranked candidates, OpenAI scoring 1-10):**
+- 9/10 — 1 candidate
+- 8/10 — 13 candidates
+- 7/10 — 14 candidates
+- 6/10 — 5 candidates
+- 5/10 — 9 candidates
+
+**Top hit (9/10):**
+- SRF-JRMC SWARMEX — Ship Repair Facility Japan Regional Maintenance Center, first wartime ship-repair-and-maintenance exercise (NAVSEA Public Affairs primary source, `navsea.navy.mil`). This is load-bearing for §7-leg-1 (training-assumption gap) AND §11.3-Phase-2 (real-world exercises) — partial falsifier candidate for the hypothesis that "the Navy doesn't already exercise wartime repair," depending on scope. **Read first.**
+
+**Notable 8/10 cluster:**
+- GAO-26-109068 "Navy and Coast Guard Shipbuilding" (testimony + PDF + product page — 3 URL variants for the same product; dedup opportunity).
+- Navy Shipbuilding Plan 2025-2026 transcript (`defense.gov`) — Amphibious Force Readiness Board chaired by VCNO.
+- ESG-2 dynamic exercise (DVIDS, May 2026) — TTX with realistic injects + C2 stress testing; relevant to §11.3 real-world exercises.
+- MHI $111M NAVSEA ship-repair contract (GovConWire) — Navy ship-repair vehicle exemplar.
+
+**Query coverage signals (zero-hit BDA queries are themselves data):**
+- The four §7-leg-6 disconfirming queries (BDA pipeline / SBIR Phase II-III BDA / I/ITSEC vendor / Bohemia / NPS thesis) returned **almost nothing** at high score. Only 1 hit on the COMPTUEX/RIMPAC/LSE BDA-inject query and 2 hits on MAK ONE. **Interpretation (Assessment, not finding):** AI-search did not surface a saturated DoD-funded BDA serious-game / sim-product market for these specific phrasings. That is WEAK evidence the BDA-pipeline space (§11.3) is NOT pre-saturated — but it is NOT strong: re-query with different phrasings is needed before the leg-6-(a) falsifier is closed.
+
+**SAM coverage:** All 25 SAM hits came from the single "NSWC Carderock" keyword query. The next 7 SAM queries returned dedup-zero or empty. That's expected (Carderock SBIR/STTR topic feed is the dominant SAM signal).
+
+**USAspending status — API outage, NOT a config bug:**
+- The first query (`ship repair` + recipient `PAE Applied Technologies` + 2023-01-01 start) returned 0 candidates normally.
+- All subsequent 8 queries returned **HTTP 500** from USAspending.gov. This is a server-side issue (the API was healthy when we verified the Deloitte INDOPACOM Alpha PIID earlier in PMTEC work). **Action: retry USAspending pass once the API is healthy.**
+
+**Source-quality observation (for inbox triage):**
+- Strong primary tier: NAVSEA (5), GAO (4), defense.gov (2), navy.mil (2), navysbir.com (2), DVIDS (1), CBO (1).
+- Tier-3 advocacy / think tank: CSIS (1), Stimson (1).
+- Tier-4 trade press: GovConWire (2), Euro-SD (2), DefenseTechAndAcquisition (1), 19fortyfive (1).
+- Watch for credibility-tier issues: `rmcglobal.com`, `list25.com`, `shipuniverse.com` showed up at 8/10 — these are private analysis sites and need click-verify per SOP rule 6 before any FACT use.
+
+**Next operator step:**
+- Tap inbox checkboxes in Obsidian to approve the 9/10 SWARMEX item and the 8/10 primary-tier items first (focus on the disconfirming threads: SWARMEX falsifier check, GAO-26-109068, Navy Shipbuilding Plan transcript), then run `python _scripts/approve_inbox.py BDR-FLEET-READINESS` to ingest.
+- After ingest, re-verify §7 leg-1 (training-assumption gap) against the SWARMEX article specifically — that's the highest-leverage disconfirming check from this pass.
+
+---
