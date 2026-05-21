@@ -1,0 +1,108 @@
+# BDR-FLEET-READINESS source-finding config.
+#
+# Sequencing per 00_research-file.md §10.3:
+#   Week 1 — pull the two disconfirming-evidence threads FIRST
+#            (DON Strategic Readiness Plan + FY26 Navy budget exhibits + recent
+#             SASC/HASC CNO/NAVSEA testimony) to test §7 hypothesis early.
+#   Week 2 — broaden to Carderock public materials + PAE-IO / Amentum footprint.
+#   Week 3 — synthesize into research-file update + Gate 1 decision.
+#
+# Ordering of ai_searches reflects §10.3 Week 1 disconfirming-evidence priority.
+# Operator should treat the first three queries as load-bearing; the rest are
+# broadening queries that should NOT run until Week 1 disconfirmation completes.
+
+ai_searches:
+  # ---- Week 1: disconfirming-evidence threads (highest priority, §10.2 counter #1) ----
+  - "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity"
+  - "FY2026 Navy budget justification ship depot maintenance O&M operations and maintenance"
+  - "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog"
+
+  # ---- Week 1: disconfirming-evidence threads (§10.2 counter #2 — Carderock OSI fidelity) ----
+  - "NSWC Carderock battle damage repair survivability methodology unclassified publication"
+  - "NAVSEA Carderock ship survivability modeling public technical paper SNAME Naval Engineers Journal"
+
+  # ---- Week 1: disconfirming-evidence threads (§7-leg-6 — BDA pipeline viability) ----
+  # These can falsify the BDA-pipeline scope (§11.3) early; load-bearing for the new
+  # 2026-05-21 scope-expansion-#2 dimension.
+  - "Navy BDA battle damage assessment training pipeline NWDC Naval Warfare Development Command"
+  - "SBIR Phase II Phase III battle damage assessment serious game simulation Navy"
+  - "COMPTUEX RIMPAC Large Scale Exercise LSE battle damage assessment inject training"
+  - "I/ITSEC Navy serious game damage control battle damage assessment vendor"
+
+  # ---- Week 2: GAO / CRS oversight materials ----
+  - "GAO Navy ship maintenance depot capacity report 2024 2025 2026"
+  - "GAO Navy industrial base private shipyard capacity report"
+  - "GAO Navy live virtual constructive LVC training architecture report"
+  - "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair"
+  - "CRS report industrial base shipbuilding repair attrition wargaming"
+
+  # ---- Week 2: PAE-IO / Amentum industrial footprint ----
+  - "PAE Industrial Operations Amentum Navy ship repair contract public testimony"
+  - "Amentum investor materials industrial operations ship repair revenue segment"
+
+  # ---- Week 2/3: engagement-surface inventory feeders (§11.1) ----
+  - "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability"
+  - "NAVSEA industry day shipyard depot repair 2025 2026"
+  - "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue"
+
+  # ---- Week 2/3: BDA-platform vendor landscape (§11.3 candidate platforms) ----
+  - "Bohemia Interactive Simulations VBS4 Navy DoD battle damage training contract"
+  - "MAK ONE VR-Forces Navy training simulation damage modeling"
+  - "Naval Postgraduate School thesis battle damage assessment serious game simulation"
+
+# SAM.gov queries — Carderock-adjacent SBIR/STTR + Navy ship repair vehicles.
+# Carderock itself rarely buys big; SBIR/STTR topics and NAVSEA depot-repair
+# vehicles are the most useful BD signals.
+sam_searches:
+  - params:
+      q: "NSWC Carderock"
+  - params:
+      q: "battle damage repair Navy"
+  - params:
+      q: "ship survivability modeling"
+  - params:
+      q: "NAVSEA ship depot maintenance"
+      ncode: ["336611", "541330", "541715"]   # ship building & repair / engineering svcs / R&D
+  - params:
+      q: "live virtual constructive Navy training"
+      ncode: ["541330", "541512", "611430"]
+
+  # ---- BDA serious-game / sim platform vehicles (§11.3) ----
+  - params:
+      q: "battle damage assessment training simulation"
+      ncode: ["541330", "541512", "611430"]
+  - params:
+      q: "serious game Navy damage control"
+      ncode: ["541330", "541512", "611430"]
+  - params:
+      q: "AR VR augmented virtual reality Navy damage control training"
+
+# USAspending.gov — PAE-IO / Amentum + Carderock R&D obligations history.
+# Wider start window than default 7-day so the contract base is visible.
+usa_spending_searches:
+  - keywords: ["ship repair"]
+    recipient: "PAE Applied Technologies"
+    start: "2023-01-01"
+  - keywords: ["ship repair"]
+    recipient: "Amentum"
+    start: "2023-01-01"
+  - keywords: ["industrial operations"]
+    recipient: "PAE"
+    start: "2023-01-01"
+  - keywords: ["Carderock"]
+    start: "2023-01-01"
+  - keywords: ["battle damage repair"]
+    start: "2023-01-01"
+  - keywords: ["battle damage assessment", "training"]
+    start: "2023-01-01"
+  - keywords: ["serious game", "Navy"]
+    start: "2023-01-01"
+  - recipient: "Bohemia Interactive Simulations"
+    start: "2023-01-01"
+  - recipient: "MAK Technologies"
+    start: "2023-01-01"
+
+rss_feeds: []   # Phase 4b — deferred
+
+date_window_days: 30
+max_candidates_per_run: 25

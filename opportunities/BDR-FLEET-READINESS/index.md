@@ -11,8 +11,10 @@ recommendation:
   - tbd                  # pursue-prime | pursue-sub | pass | tbd
 capability_tags:
   - BDR
+  - BDA                   # added in scope expansion #2 (2026-05-21)
   - M&S
   - LVC
+  - serious-games         # added in scope expansion #2 (2026-05-21)
   - training-design
   - survivability
   - industrial-base
@@ -20,10 +22,10 @@ capability_tags:
 sensitivity: internal
 opened: 2026-05-21
 last_updated: 2026-05-21
-next_action: Operator confirms folder ID, customer field, and PMTEC cross-link decision before source ingestion begins.
+next_action: Run first find_sources pass (Week 1 disconfirming-evidence queries) and triage inbox.
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
-auto_find: false   # do NOT run automated source-finding until operator confirms scaffolding
+auto_find: true    # operator authorized 2026-05-21 — see 05_decision-log.md
 last_find_run:
 last_find_count_ai:
 last_find_count_sam:

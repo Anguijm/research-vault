@@ -47,3 +47,38 @@ Every decision: date, decision, by whom, rationale, what changed.
 **No research performed.** `auto_find:` remains `false`. The next pending decision is unchanged: operator says "begin research" to start §10 source ingestion + §11.1 desk-research engagement inventory.
 
 ---
+
+### 2026-05-21 — Begin research authorized; search-config drafted
+
+**By:** operator (instruction: "Begin research") + Claude Code (Opus 4.7) executing config
+**Rationale:** Operator gave explicit "begin research" trigger. Per the previous decision-log entry, this flips `auto_find:` to `true`, configures `_search-config.yaml`, and starts §10.3 Week 1 disconfirming-evidence checks.
+**What changed:**
+- `index.md` — `auto_find:` flipped `false` → `true`.
+- `index.md` — `next_action` updated to "Run first find_sources pass (Week 1 disconfirming-evidence queries) and triage inbox."
+- `_search-config.yaml` (new) — ordered to match §10.3 sequencing. First five `ai_searches` are the two §10.2 disconfirming-evidence threads (DON Strategic Readiness Plan + FY26 Navy budget + SASC/HASC fleet-readiness testimony for counter #1; Carderock public methodology materials for counter #2). Subsequent queries broaden to GAO / CRS oversight, PAE-IO / Amentum footprint, and §11.1 engagement-surface inventory feeders. `sam_searches` cover Carderock SBIR/STTR + NAVSEA depot-repair vehicles + LVC training. `usa_spending_searches` cover PAE / Amentum / Carderock obligations history with a 2023-01-01 start so the contract base is visible.
+
+**Open before `find_sources.py` first run:**
+- Operator review of the search-config (especially the AI-query ordering: are the disconfirming threads in the right priority).
+- Confirm whether to run all queries on first pass or limit to Week 1 disconfirming threads only (queries 1-5) to avoid burning API quota on broadening queries before disconfirmation completes.
+
+---
+
+### 2026-05-21 — Scope expansion #2: BDA team preparedness pipeline (gamified-sim → real-world)
+
+**By:** operator (instruction: "Add battle damage assessment team preparedness exercises and simulation. Again think gamified software or hardware. Followed by real world exercises") + Claude Code (Opus 4.7) executing edits
+**Rationale:** Operator added a second scope dimension distinct from the repair-operations training in §11.2: a battle-damage-ASSESSMENT (BDA) team preparedness pipeline using a gamified-software/hardware sim layer for high-frequency reps, transitioning to real-world exercises (embedded BDA-team injects in fleet exercises and Carderock-instrumented test events). BDA is structurally separate from repair: different audience (damage-control / fleet-BDA cells / joint multidomain BDA staff), different cadence (high-frequency reps between live events), different fidelity ramp (sim → live, with the gamified layer providing the rep volume).
+**What changed:**
+- `index.md` — `capability_tags` +`BDA` and +`serious-games` (now 9 tags).
+- `00_research-file.md` §1 — added scope point #5 (BDA team preparedness pipeline; gamified-then-real-world; logical-precedence rationale).
+- `00_research-file.md` §2 — new "BDA team preparedness questions" block with two `[DISCONFIRMING]` items (existing DoD-funded BDA serious-game maturity; BDA training already embedded in fleet exercises at depth that closes the gap).
+- `00_research-file.md` §7 — hypothesis expanded from five to six falsifiable legs; new leg-6 = "BDA-preparedness pipeline viability" with three falsifier conditions (existing product saturation; existing fleet-exercise embed depth; OSI-fidelity sim realism).
+- `00_research-file.md` §11.2 — retitled "Training-progression design — repair operations" and added pointer to new §11.3 for the BDA-team pipeline.
+- `00_research-file.md` §11.3 (new) — "BDA team preparedness — gamified-then-real-world progression" with Phase 1 (sim layer: software platforms, hardware-in-the-loop, gamification mechanics, audience scoping), Phase 2 (real-world: embedded injects in COMPTUEX / RIMPAC / LSE / ANTX / Trident Warrior plus Carderock-instrumented controlled events plus joint red-team / blue-team evolutions), progression-order rationale (sim-first because high-frequency reps are the engine of skill retention), differentiator-hook check (ARKA EO/IR signature libraries), and disconfirming checks cross-listed in §2.
+- `00_research-file.md` §11.3 timeline → renumbered to §11.4; §11.4 risks → renumbered to §11.5. Two new rows added to the §11.5 risk table: incumbent saturation in the BDA-serious-game space; sim-vs-live progression-order risk if Navy training authorities invert the order.
+- `_search-config.yaml` — inserted four new Week 1 disconfirming-evidence AI queries for §7-leg-6 (NWDC BDA training pipeline; SBIR Phase II/III BDA serious games; COMPTUEX/RIMPAC/LSE BDA injects; I/ITSEC vendor coverage). Added three more AI queries in the Week 2/3 broadening band for the BDA-platform vendor landscape (VBS4; MAK ONE; NPS thesis library). Added three SAM searches (BDA training simulation; serious game damage control; AR/VR damage control). Added four USAspending searches (BDA + training keywords; serious game + Navy; recipient = Bohemia Interactive Simulations; recipient = MAK Technologies).
+
+**Open before `find_sources.py` first run** (unchanged from prior entry, plus one new item):
+- Original two open items (scope-of-first-pass; query ordering) still stand.
+- Confirm whether the four new §7-leg-6 disconfirming queries (now slotted as Week 1 queries 6-9 in the AI list) should run in the same first pass as the original disconfirming queries 1-5, or be deferred to a second pass.
+
+---

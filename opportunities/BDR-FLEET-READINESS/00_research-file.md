@@ -22,6 +22,7 @@ This is a research track, not yet a capture opportunity. The scope is to determi
 2. What that modeling, if releasable at OSI fidelity, implies about (a) the realism of current fleet training assumptions regarding wartime battle damage and (b) the demand assumptions in PAE Industrial Operations (PAE-IO) repair-capacity planning.
 3. **What a robust training program built on that modeling would look like** — progressing from tabletop scenarios (OSI-fidelity content, classroom format) through guided site visits (NSWC Carderock or partner facilities) to pilot repair operations (hands-on training using simulated or instrumented damage scenarios).
 4. **How CACI would build the NSWC Carderock relationships needed to execute** — assumed at scaffold time that CACI does not currently have direct working relationships with the Carderock BDR / survivability program leads. The research track therefore includes a parallel work stream on engagement-surface mapping and warm-intro paths.
+5. **A separate battle-damage-assessment (BDA) team preparedness pipeline**, distinct from the repair-operations training in (3): a gamified-software/hardware simulation layer (serious games, instrumented sim rigs, AR/VR, hardware-in-the-loop) used to keep BDA teams sharp between events, transitioning to real-world exercises (embedded BDA-team injects into existing fleet exercises and Carderock-instrumented test events). Justification: BDA is an assessment skill (rapid classification of damage, mission-impact triage, repair-priority sequencing) that LOGICALLY PRECEDES the repair-team activation covered in (3) — different audience, different cadence, different fidelity ramp.
 
 The scope is stated NEUTRALLY at this stage. The hypothesis in §7 is one possible outcome of the research, not a finding. The research plan in §10 includes evidence that would DISCONFIRM the hypothesis. The engagement strategy in §11 (new this scope expansion) is sequenced so that relationship-development can proceed in parallel with hypothesis-testing rather than blocking on it.
 
@@ -47,6 +48,17 @@ Listed with explicit disconfirming-evidence items per the scaffolding instructio
 - [ ] What facilities support guided site visits at the next fidelity step? (NSWC Carderock proper; NSWC Philadelphia; intermediate maintenance activities; the four public naval shipyards; selected private repair facilities operated by HII Newport News, BAE Norfolk, GD NASSCO, Vigor / Titan Acquisitions.)
 - [ ] What does "pilot repair operations" look like at the top of the training progression — simulator-based, real-equipment-on-instrumented-test-bed, or live operations on training hulls? Which model is feasible at unclassified level?
 - [ ] **[DISCONFIRMING]** Is there an existing Navy training program that already does the full tabletop→site-visit→pilot progression for BDR? If yes, the gap is execution / scaling, not design — the recommendation shape changes.
+
+### BDA team preparedness questions (added 2026-05-21 scope expansion #2)
+
+- [ ] What is the Navy's current BDA training pipeline? Who owns it — Naval Warfare Development Command (NWDC), Surface Force Training and Readiness Manual (SFTRM) authorities at COMNAVSURFOR, AFLOATRAFOR, fleet-specific shops, or some combination?
+- [ ] **[DISCONFIRMING]** Is there already a mature DoD-funded BDA serious-game or instrumented-sim product? Search SBIR Phase II/III awards (`sbir.gov`), NWDC product catalog, Naval Postgraduate School / Naval War College thesis library, MORS conference papers. If a usable product exists, the play shifts from "build a BDA-sim platform" to "integrate / extend an existing one."
+- [ ] **[DISCONFIRMING]** Is BDA-team training already deeply embedded in fleet exercises (COMPTUEX, RIMPAC, Large-Scale Exercise / LSE, ANTX, Trident Warrior)? If yes, the real-world-exercise leg of this scope is execution-only, not opportunity-creation.
+- [ ] What commercial / GOTS serious-game and sim engines are candidate platforms (Bohemia Interactive Simulations VBS4, Improbable, NVIDIA Omniverse digital twins, MAK ONE, Unity / Unreal toolchains used in DoD training, hardware-in-the-loop benches at Carderock or partner labs)? Cost / classification / IP posture of each?
+- [ ] What AR / VR or hardware-in-the-loop sim products exist for damage-control / BDA today? (Trade-show coverage at I/ITSEC; SBIR award database; vendor public press.)
+- [ ] Can ARKA EO/IR / hyperspectral sensor signature libraries (or other CACI legacy ISR data products) plausibly feed a BDA training-game scenario engine with realistic threat-effect signatures? If so, that is a near-unique differentiator vs. the SAIC / Leidos / HII Mission Technologies incumbents.
+- [ ] Where does a gamified-sim-then-real-world progression live administratively — under a training contract (e.g., AFLOATRAFOR), an R&D vehicle (Carderock RDT&E), an SBIR sequence, or a NAVWARDEVCOM doctrine product? Each implies a different acquisition pathway and a different prime / sub posture.
+- [ ] What is the audience scoping for BDA teams: ship-level damage-control teams, fleet-level BDA cells, joint multidomain BDA staff at Combatant Commands, or all three at different depths?
 
 ### NSWC relationship-development questions (added 2026-05-21 scope expansion)
 
@@ -112,13 +124,14 @@ Current fleet training assumptions and PAE-IO industrial planning materially und
 
 **Stance:** This is a hypothesis to be tested against primary sources. It is NOT yet a finding. The research plan in §10 includes the specific disconfirming evidence (also enumerated in §2 with `[DISCONFIRMING]` prefixes) that would falsify each leg of this hypothesis. The hypothesis should be revisited and either upgraded to a FACT-supported recommendation or revised/abandoned after the first round of OSI source ingestion. **Execution of any recommendation also depends on a relationship-development work stream with NSWC Carderock that does not yet exist — see §11.**
 
-**Five falsifiable legs of the hypothesis:**
+**Six falsifiable legs of the hypothesis:**
 
 1. *Training-assumption gap.* Navy / joint fleet training documents currently assume attrition and battle-damage rates significantly below what wartime modeling would predict. → Falsified if DON Strategic Readiness Plans or fleet exercise scenarios already assume warfighting-scale damage.
 2. *Industrial-planning gap.* PAE-IO's public-facing planning posture assumes peacetime / steady-state repair demand rather than warfighting surge. → Falsified if PAE-IO testimony, contract task-order language, or industrial-base assessments already assume realistic attrition.
 3. *Modeling-fidelity availability.* Carderock's BDR/survivability modeling has an OSI-releasable subset of useful operational fidelity. → Falsified if the OSI-releasable version is doctrinal/coarse only, and the operationally-useful modeling is behind a classification gradient inaccessible to this research.
 4. *Training-progression viability.* A tabletop→site-visit→pilot-operations progression is a feasible and not-already-implemented program model. → Falsified if (a) an existing Navy program already does this end-to-end, in which case the play is execution / scaling rather than design, OR (b) the progression cannot legally / operationally clear the classification stair-step from OSI tabletops up to instrumented repair pilots.
 5. *Relationship feasibility.* CACI can realistically build the NSWC Carderock relationships needed to execute, on a timeline shorter than the demand window. → Falsified if Carderock's engagement posture is locked up by incumbent technical partners (e.g., HII Mission Technologies' Alion-inheritance, SAIC, Leidos) such that CACI's entry timeline exceeds the customer-demand timeline.
+6. *BDA-preparedness pipeline viability.* A gamified-sim-then-real-world progression is a feasible and not-already-saturated training-program model for BDA teams. → Falsified if (a) a DoD-funded serious-game / instrumented-sim product for BDA already exists at sufficient maturity (search SBIR Phase II/III awards, NWDC products, Naval Warfare Development Command training catalog), OR (b) BDA training is already embedded in fleet exercises (COMPTUEX, RIMPAC, LSE) at a depth that leaves no gap, OR (c) the gamified-sim layer cannot achieve operationally-meaningful realism at OSI fidelity (parallel to leg-3 classification-gradient constraint, applied to BDA-sim content).
 
 **Recommendation (draft):** TBD — pending source ingestion, disconfirming-evidence check, and engagement-surface inventory.
 
@@ -247,9 +260,11 @@ The engagement work stream proceeds **in parallel with** the primary-source rese
 
 **Output:** a `03_pocs.md` POC table populated with named individuals + public-source URLs + which on-ramp they sit on. **No outreach until the table is complete and the operator green-lights specific contacts.**
 
-### 11.2 Training-progression design (Week 2-3, contingent on §7 hypothesis survival)
+### 11.2 Training-progression design — repair operations (Week 2-3, contingent on §7 hypothesis survival)
 
 **Goal:** design the tabletop → site-visit → pilot training progression at concept level so that the Gate 1 brief in Week 3 can include a concrete program shape, not just an assertion that a program is needed.
+
+This subsection covers the **repair-team** training pipeline. The **BDA-team** training pipeline is structurally distinct and is covered separately in §11.3.
 
 **Tabletop phase (OSI-fidelity, classroom format):**
 - Learning objectives: damage-control sequencing, repair triage, supply-chain stress points, multi-domain damage scenarios (kinetic + cyber + EW + space-disrupted comms).
@@ -266,7 +281,56 @@ The engagement work stream proceeds **in parallel with** the primary-source rese
 - Feasibility models: (i) simulator-only (e.g., a digital twin of damage propagation, no live equipment); (ii) instrumented test-bed (a real damaged subsystem on a controlled rig, training cohort performs assessment and repair planning); (iii) live operations on a training hull (extreme model — would require Navy training-hull access, possibly via the Naval Sea Cadet Corps fleet or ex-service vessel partnerships, all of which need separate scoping).
 - Highest unclassified fidelity is probably (ii) instrumented test-bed at NSWC Carderock or a partner site.
 
-### 11.3 Engagement timeline assumption
+### 11.3 BDA team preparedness — gamified-then-real-world progression (Week 2-3, parallel to §11.2)
+
+**Goal:** design a separate BDA-team training pipeline, structurally distinct from the repair-team progression in §11.2. BDA is the upstream assessment skill (rapid damage classification, mission-impact triage, repair-priority sequencing) that drives WHEN and WHAT the §11.2 repair pipeline activates. The progression model here is **gamified-software/hardware sim → real-world exercises**, in that order, because BDA reps need high frequency / low friction / instant-replay characteristics that only a gamified layer can supply between live events.
+
+**Phase 1 — Gamified-software / gamified-hardware sim layer (high-frequency reps between live exercises):**
+
+- *Software candidate platforms (OSI-research targets, not endorsements):*
+  - Bohemia Interactive Simulations VBS4 (used widely in DoD training; supports custom damage / effects scripting).
+  - MAK ONE / VR-Forces (used in joint LVC; damage models and federated simulation via DIS / HLA).
+  - Unreal / Unity toolchains as used by recent SBIR / serious-game vendors (cost of bespoke build vs. COTS engine).
+  - NVIDIA Omniverse digital-twin pipelines for hull / system damage modeling (operationally-relevant fidelity question — separate from photorealism).
+  - Commercial educational tabletop digital wargame engines as a frame-of-reference, not as a deployment target.
+- *Hardware-in-the-loop / instrumented-sim candidates:*
+  - Carderock's existing structural shock-and-vibration rigs in a controlled training-mode.
+  - AR / VR headset stacks with damage-overlay content keyed to ship-class digital twins.
+  - Tabletop instrumented BDA "reps" — physical mock-up boards with embedded sensors generating live-feed damage signatures the trainee must classify.
+- *Gamification mechanics (pedagogical, not cosmetic):*
+  - Scenario branching keyed to the trainee's first-call damage classification — wrong classification triggers cascading downstream consequences that surface in subsequent reps.
+  - Scoring + after-action replay against ground-truth damage state.
+  - Cohort leaderboards across ships, squadrons, or training cohorts to drive practice volume.
+  - Replay archives that feed into doctrine-update loops at NWDC / SFTRM authorities.
+- *Audience scoping:*
+  - Ship-level damage-control teams (highest volume, lowest individual-rep duration).
+  - Fleet-level BDA cells at numbered-fleet staffs (longer scenarios, higher mission-impact-triage emphasis).
+  - Joint multidomain BDA staff at Combatant Command level (cross-domain scenarios — kinetic + cyber + EW + space-disrupted comms, parallel to §11.2 tabletop content).
+
+**Phase 2 — Real-world exercises (lower frequency, higher fidelity, embedded with the live fleet):**
+
+- *Embedded BDA injects in existing fleet exercises* — COMPTUEX, RIMPAC, Large-Scale Exercise (LSE), ANTX, Trident Warrior. Approach: a small BDA-cell add-on that runs in parallel with the parent exercise rather than replacing existing scenarios.
+- *Carderock-instrumented controlled events* — bridge between sim and live; high-fidelity ground-truth available for after-action.
+- *Joint red-team / blue-team BDA evolutions* — red team generates realistic damage signatures (kinetic + non-kinetic) from a known threat library; BDA cohort classifies in operationally-realistic time pressure.
+- *Cross-service exercises with USMC, Army, USAF BDA equivalents* if the multidomain framing in the §1 scope statement holds.
+
+**Why this progression order (sim first, real-world second):**
+
+- High-frequency reps are the engine of skill retention; only the gamified layer supplies them at a usable cadence.
+- Each live exercise costs orders of magnitude more than a sim rep, so live exercises should be reserved for scenarios that the sim layer cannot replicate.
+- The classification stair-step in §7-leg-3 applies here too: sim content can be designed for OSI / CUI release; live exercises step up to classified ground-truth when the participant cohort is cleared and the venue is approved.
+
+**Differentiator-hook check (cross-link to §11.4 risks):**
+
+- ARKA EO/IR / hyperspectral signature libraries — if releasable for training use — could feed the gamified-sim scenario engine with operationally-realistic threat-effect signatures that the SAIC / Leidos / HII Mission Technologies incumbents cannot easily source. This is a hypothesis to be tested against ARKA IP / release-authority constraints, not a finding.
+
+**Disconfirming checks specific to this subsection (cross-listed in §2 BDA questions):**
+
+- DoD-funded BDA serious-game already exists at sufficient maturity (SBIR Phase II/III, NWDC catalog, NPS / NWC thesis library).
+- BDA training already embedded in fleet exercises at depth that closes the gap.
+- OSI-fidelity sim content cannot achieve operationally-meaningful realism — same constraint that applies to §11.2 tabletops.
+
+### 11.4 Engagement timeline assumption
 
 - **Months 1-2:** §11.1 engagement-surface inventory complete; first concrete targets identified for outreach.
 - **Months 3-4:** First-touch outreach via the lowest-friction on-ramp (typically an SBIR / STTR proposal response or industry-day attendance). Goal at this stage is a recurring conversation, not a contract.
@@ -275,7 +339,7 @@ The engagement work stream proceeds **in parallel with** the primary-source rese
 
 Treat all month numbers as Speculation per SOP §2.1 rule 4 until corroborated by Carderock's actual public engagement cadence.
 
-### 11.4 Risks specific to the engagement work stream
+### 11.5 Risks specific to the engagement work stream
 
 | Risk | Mitigation |
 |---|---|
@@ -283,9 +347,11 @@ Treat all month numbers as Speculation per SOP §2.1 rule 4 until corroborated b
 | Outreach treated as marketing rather than substantive technical engagement | First-touch must be substantive — an SBIR proposal, BAA white paper, or published technical question, not a generic capability brief |
 | Multi-touch sequence is required, and operator cadence may not sustain it | Acknowledge upfront — engagement plan is months not weeks; mid-cycle slippage is normal and not a kill signal |
 | CACI may not have the right Navy-lab cultural credentials | Audit early via §11.1 adjacent-relationship mapping; if no warm path exists, a longer first-touch via SBIR Phase I is the right entry |
+| BDA serious-game space is already saturated by incumbents (SAIC, Leidos, BISim, MAK) | Lead with an ARKA-signature-library differentiator (§11.3) rather than a generic platform pitch; if no differentiator survives §2 disconfirming checks, the BDA pipeline scope should be dropped rather than pursued as a me-too entry |
+| Sim-vs-live progression order is mistaken — Navy training authorities may insist live-exercise-first | Treat the "sim-first" claim as a §7-leg-6 hypothesis to be tested; if Navy training doctrine inverts the order, redesign §11.3 around live-exercise lead with sim as remediation tooling |
 
 <!-- /sensitivity -->
 
 ---
 
-*Scaffold created 2026-05-21. Scope expanded 2026-05-21 to include training-progression design (§11.2) and NSWC relationship-development (§11.1). No research performed yet. Source ingestion and verifier runs are blocked until operator says "begin research." See decision log.*
+*Scaffold created 2026-05-21. Scope expanded 2026-05-21 to include (a) training-progression design (§11.2) and NSWC relationship-development (§11.1), and (b) BDA team preparedness pipeline — gamified-sim-then-real-world progression (§11.3, scope expansion #2). Operator authorized "begin research" 2026-05-21; `auto_find:true` set in index.md and `_search-config.yaml` drafted. First `find_sources.py` pass not yet executed — pending operator answer on scope-of-first-pass and BDA-query insertion. See decision log.*
