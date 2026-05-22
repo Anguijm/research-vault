@@ -22,10 +22,10 @@ capability_tags:
 sensitivity: internal
 opened: 2026-05-21
 last_updated: 2026-05-21
-next_action: PAUSED 2026-05-22 — research paused while readability rule and workflow improvements (Yanli Liu article synthesis) are applied. Resume by setting auto_find back to true and triaging the 67 inbox candidates from the 2026-05-21 first pass.
+next_action: Triage the 67 inbox candidates from the 2026-05-21 source-finder pass. Start with the 9/10 SWARMEX (Ship Wartime Repair and Maintenance Exercise) hit and the 8/10 GAO-26-109068 / Navy Shipbuilding Plan / ESG-2 dynamic exercise cluster.
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
-auto_find: false   # paused 2026-05-22 by operator — see 05_decision-log.md
+auto_find: true    # resumed 2026-05-22 after readability + workflow improvements landed
 last_find_run: 2026-05-21T23:14:37
 last_find_count_ai: 42
 last_find_count_sam: 25

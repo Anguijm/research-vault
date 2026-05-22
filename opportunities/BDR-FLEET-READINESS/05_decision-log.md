@@ -150,3 +150,24 @@ The operator paused all active research on this track. The pause is not a kill s
 Either action signals that the pause is lifted.
 
 ---
+
+### 2026-05-22 — Folder restructure (deep-module layout) + research resumed
+
+This entry covers two changes the operator authorized together.
+
+**The restructure.** The folder gained four sub-directories — `_decisions/`, `_plays/`, `_red-teams/`, and `_verifications/` — each with a one-paragraph `README.md` explaining what goes there and the filename convention. A per-opportunity glossary stub at `_glossary.md` was also added.
+
+The reason for the restructure is the principle-4 (deep modules, not shallow) lesson from the 2026-05-22 workflow review. Previously every red-team report, verifier report, pending-decisions document, and play card would land as an underscore-prefixed peer at the top level of an opportunity folder. The PMTEC folder accumulated nineteen items at the top level that way and was becoming hard to scan. BDR is being structured up-front so it does not accumulate the same flat-folder problem as it grows. PMTEC was deliberately left in its existing flat layout for now — the script changes that point at the new sub-directories will need to handle both layouts during the transition, but for BDR the sub-directories exist from day one.
+
+The frequently-touched files (`_inbox.md`, `_rejected.md`, `_search-config.yaml`, `_glossary.md`) stay at the top level because the operator interacts with them constantly. The canonical numbered files (`00_research-file.md`, `01_sources/`, `02_quotes.md`, `03_pocs.md`, `04_artifacts/`, `05_decision-log.md`) also stay at the top — unchanged.
+
+**The resume.** The pause that began 2026-05-22 is now lifted. `auto_find` in `index.md` is back to `true`. The `next_action` field is updated to point at inbox triage. The 67 candidates queued from the 2026-05-21 source-finder pass are still in `_inbox.md` and are the next thing to look at.
+
+The recommended triage order (carry-over from the 2026-05-21 entry above and unchanged): the 9/10 SWARMEX article first (Ship Repair Facility Japan Regional Maintenance Center wartime repair exercise — most consequential single hit, potential partial falsifier of section 7 leg 1), then the 8/10 cluster (GAO-26-109068 Navy and Coast Guard Shipbuilding report, Navy Shipbuilding Plan 2025-2026 transcript, ESG-2 dynamic exercise on DVIDS, MHI $111M NAVSEA ship-repair contract).
+
+Two things to watch as research proceeds:
+
+1. `verify_facts.py` and `red_team.py` are not yet updated to write into `_verifications/` and `_red-teams/`. They will need updating before the first verifier or red-team run for this track. The deferred update is intentional — the next steps for BDR are source ingestion and research-file updates, neither of which touches those scripts. The script updates can be made when the work actually demands them, per the SOP §8 principle of "build infrastructure when the work demands it."
+2. The USAspending API was returning HTTP 500 errors on 2026-05-21 and only the SAM keyword query against "NSWC Carderock" produced results on that pass. A second `find_sources.py` pass against this track should be queued for 7-14 days from now to pick up any USAspending data and any AI-search results that became available after the API recovery.
+
+---
