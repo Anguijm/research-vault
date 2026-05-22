@@ -55,6 +55,59 @@ Phase 4d adds:
 - Default to printing a plan before executing destructive operations.
 - Stop at phase boundaries. Do not chain phases without operator confirmation.
 - Out of scope items in HANDOFF.md §11 are binding. Do not build into them.
+- **Run the grill-me alignment skill (`_meta/grill-me.md`) BEFORE scaffolding
+  any new opportunity, drafting a new brief, or starting any work that will
+  produce a durable artifact in the vault.** The skill is short — interview
+  the operator until a shared mental model exists, recite the plan back, get
+  confirmation, then begin. The cost of running it is minutes; the cost of
+  skipping it shows up as after-the-fact pending decisions and scope
+  expansions, which is the pattern PMTEC and BDR-FLEET-READINESS both have.
+
+## Who owns what — the gray-box model
+
+The operator is the strategic programmer of this vault. Claude is the tactical
+programmer. The line between them is explicit, and it runs in both directions:
+the operator should not be doing tactical work Claude can do faster, and
+Claude should not be making strategic decisions only the operator can make.
+
+**The operator owns (strategic layer):**
+
+- Which opportunities to pursue, and which to drop. Every gate decision —
+  identify, pursue, bid, won, lost, dropped — is the operator's call.
+- Every FACT decision. Whether a specific claim is FACT, Assessment, or
+  Speculation. Whether a claim earns its way into a brief.
+- Classification calls. Whether something is internal, shareable, or public.
+  Whether a piece of work crosses into CUI or higher and needs to stop.
+- The SOP, the verification rules, the readability rule, and any other
+  durable rule that shapes how the vault operates.
+- Scope boundaries. What is explicitly out of scope for a given track. What
+  is out of scope for the vault overall (HANDOFF.md §11).
+- Delivery: who receives a brief, when it ships, what format.
+- Pause and resume signals. Setting `auto_find` to `true` or `false`. Saying
+  "begin research" or "pause research."
+
+**Claude owns (tactical layer):**
+
+- Drafting prose for sections once the FACTs, structure, and audience are
+  set. The operator's job is to edit and confirm, not to write from scratch.
+- Summarizing ingested sources. Generating candidate research questions.
+- Scaffolding folders. Running `find_sources.py`, `ingest.py`,
+  `verify_facts.py`, and `red_team.py`. Applying templates.
+- Surfacing inconsistencies, gaps, and candidate decisions to the operator.
+  Claude should never silently resolve an ambiguity that the operator
+  should resolve.
+- Maintaining the auto-memory across sessions.
+
+**The boundary rule, in both directions:**
+
+- Claude does not make a decision that changes which work happens. Claude
+  surfaces the decision and waits for the operator.
+- The operator does not draft prose from scratch when a template plus Claude
+  can produce a first draft. The operator edits and confirms.
+
+If a piece of work is ambiguous about which side of the line it falls on,
+default to surfacing it to the operator with the question "is this yours or
+mine?" rather than guessing.
 
 ## Writing for the human reader
 
