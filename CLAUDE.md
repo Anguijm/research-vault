@@ -31,6 +31,10 @@ of truth; Word artifacts are derivatives.
 - Original handoff: `_handoff/HANDOFF.md`
 - Opportunities: `opportunities/<OPPORTUNITY_ID>/`
 - Scripts: `_scripts/`
+- Glossary (vault-wide vocabulary): `_meta/glossary.md`
+- Grill-me alignment skill: `_meta/grill-me.md`
+- Small-ships brief workflow: `_meta/small-ships-workflow.md`
+- Brief-build driver: `_scripts/build_brief.py` + per-version configs in `_scripts/briefs/`
 
 ## Conventions
 
@@ -62,6 +66,23 @@ Phase 4d adds:
   confirmation, then begin. The cost of running it is minutes; the cost of
   skipping it shows up as after-the-fact pending decisions and scope
   expansions, which is the pattern PMTEC and BDR-FLEET-READINESS both have.
+- **Build new brief versions using `_scripts/build_brief.py` plus a per-version
+  YAML config in `_scripts/briefs/<OPPORTUNITY>/`.** Do not copy a previous
+  `build_pmtec_*.py` script as the starting point — those are kept in place
+  only so prior brief lineage stays reproducible. See
+  `_scripts/briefs/README.md` for the schema and migration notes.
+- **Draft briefs using the small-ships workflow** in `_meta/small-ships-workflow.md`:
+  for each section, list the FACT claims first, run `verify_facts.py` against
+  those claims, then draft the prose, then red-team the section. Do not draft
+  a full v0.1 and then red-team the whole brief — that is the big-batch pattern
+  that PMTEC v0.1→v0.3.1 demonstrated is expensive. The first opportunity to
+  use this workflow is the pilot; document the per-section timing and findings
+  count in the opportunity's decision log.
+- **Use the vault glossary at `_meta/glossary.md`** for any vault-wide vocabulary
+  question. If you find yourself defining a term in prose because the reader
+  might not know it, define it once in the glossary instead and link from prose
+  on first use in the file. Customer-specific or opportunity-specific terms
+  belong in a per-opportunity `_glossary.md`, not the vault-wide file.
 
 ## Who owns what — the gray-box model
 

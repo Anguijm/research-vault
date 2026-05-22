@@ -1,0 +1,71 @@
+# Schema example for _scripts/build_brief.py.
+#
+# Copy this file to _scripts/briefs/<OPPORTUNITY_ID>/<artifact>-<version>.yaml
+# and fill it in. Every key below is optional EXCEPT source and output.
+#
+# The driver applies operations in a fixed order:
+#   1. remove_paragraphs_starting_with
+#   2. text_replacements
+#   3. insert_sections
+#   4. version_bump
+#
+# This order matches the behavior of the pre-2026-05-22 build_pmtec_*.py
+# scripts and should not be changed without checking those scripts first.
+
+# REQUIRED. Path to the source .docx, relative to the vault root.
+source: opportunities/PMTEC-USINDOPACOM/04_artifacts/capture-brief-v0.3.1-draft.docx
+
+# REQUIRED. Path to the output .docx, relative to the vault root. Parent
+# directory will be created if it does not exist.
+output: opportunities/PMTEC-USINDOPACOM/04_artifacts/capture-brief-v0.4-draft.docx
+
+# OPTIONAL. Body paragraphs whose stripped text starts with any of these
+# prefixes will be removed. Common case: stripping "AI PROMPT —" template
+# artifacts the drafting model failed to delete.
+remove_paragraphs_starting_with:
+  - "AI PROMPT —"
+  - "AI PROMPT –"
+  - "AI PROMPT -"
+
+# OPTIONAL. List of (find, replace) substitutions applied per paragraph.
+# First match per paragraph wins; a single paragraph is modified at most
+# once per run. Walks both body paragraphs and table cells.
+text_replacements:
+  - find: "the exact text that appears in the source"
+    replace: "the exact text it should become"
+  - find: "another phrase to replace"
+    replace: "with this one"
+
+# OPTIONAL. List of section blocks to insert into the document. Each block
+# has an anchor paragraph (text the document already contains) and a list of
+# paragraphs to insert immediately before that anchor. If the anchor is not
+# found, the paragraphs are appended at end of document and a warning is
+# emitted in the run summary.
+#
+# Paragraph styles available:
+#   heading-1   Bold, 18pt
+#   heading-2   Bold, 14pt
+#   body        Plain
+#   bullet      Indented 0.25", prefixed with "• "
+#   italic      Italic plain
+insert_sections:
+  - before_paragraph_starting_with: "Appendix A"
+    paragraphs:
+      - style: heading-1
+        text: "10. New Section Heading"
+      - style: body
+        text: "Section body paragraph."
+      - style: heading-2
+        text: "10.1 First Subsection"
+      - style: bullet
+        text: "First bulleted item."
+      - style: bullet
+        text: "Second bulleted item."
+
+# OPTIONAL. Version stamp update applied to table cells only (the version
+# table at the end of each brief lives in a table). Body paragraphs are
+# left alone by this step — use text_replacements if you need to update
+# version language in body text.
+version_bump:
+  find: "v0.3.1 — draft (drafting-hygiene patch, 2026-05-14)"
+  replace: "v0.4 — draft (post-decisions-A-G, 2026-XX-XX)"
