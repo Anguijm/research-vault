@@ -56,6 +56,8 @@ There are five threads inside that question, and the research has to address all
 
 5. **A separate training pipeline for damage-assessment teams** — distinct from the repair-side training in thread 3. Damage assessment is the diagnostic skill upstream of repair: when a ship is hit, the assessment team has to classify the damage and decide what gets fixed first before the repair team can act. The proposal here is a high-frequency gamified-simulation layer (serious games, instrumented training rigs, augmented/virtual reality, hardware-in-the-loop benches) that keeps assessment teams sharp between live exercises, followed by real-world exercise injects in fleet training events. The reason it is a separate thread from thread 3 is that the audience, the cadence of practice, and the fidelity ramp are all different.
 
+This research track was initiated based on a working observation shared by a working-level Navy ship-repair contact. Their framing informs the research direction — specifically the view that wartime ship repair capability and the training around it are an underdeveloped area worth examining. Everything in this file must be supported by public sources alone; the contact is not named here and is not the source of any factual claim. See section 9.3 for the verification discipline this implies.
+
 This summary states the scope neutrally. The hypothesis in section 7 is one possible outcome of this research — not a finding. The research plan in section 10 deliberately includes evidence that would falsify the hypothesis, because pulling that evidence first is the most efficient way to either kill the track early or commit to it with confidence. The engagement strategy in section 11 is sequenced so that the relationship-development work proceeds in parallel with the hypothesis-testing work, since relationship cadence at Navy labs is months-to-years and starting early costs nothing if the hypothesis later fails.
 
 ## 2. Open questions
@@ -166,7 +168,7 @@ There is also a relationship constraint that any recommendation has to clear: CA
 
 The hypothesis breaks into six separate claims, each of which can be tested against public sources. If any one of them fails, the corresponding part of the hypothesis is dead and the recommendation shape has to change.
 
-1. **The training-assumption gap.** *Claim:* current Navy and joint fleet training scenarios assume ships take much less damage than realistic wartime modeling would predict. *What kills it:* Department of the Navy Strategic Readiness Plans or named fleet exercise scenarios already explicitly assume wartime-scale damage rates. If the Navy is already training to realistic damage, there is no gap to close on this side.
+1. **The training-assumption gap.** *Claim:* current Navy and joint fleet training scenarios assume ships take much less damage than realistic wartime modeling would predict. *What kills it:* Department of the Navy Strategic Readiness Plans or named fleet exercise scenarios already explicitly assume wartime-scale damage rates. If the Navy is already training to realistic damage, there is no gap to close on this side. *Note:* the working observation that initiated this research is consistent with this leg being true. That observation is informal and does not relax the requirement that public-source triangulation produce citable evidence before any recommendation. See section 9.3.
 
 2. **The industrial-planning gap.** *Claim:* PAE Industrial Operations' public-facing planning posture is built around peacetime steady-state repair demand, not a wartime surge. *What kills it:* PAE-IO testimony, contract task-order language, or industrial-base assessments already incorporate realistic wartime attrition assumptions. If the industrial side is already planning for surge, there is no gap to close on this side.
 
@@ -219,6 +221,18 @@ What this means for the research:
 - All FACTs must carry an `[s.YYYY-MM-DD-slug]` citation tag pointing to an ingested source.
 - Two-source rule applies to non-trivial claims (money, timelines, named people, attribution) per SOP §2.1 rule 2.
 - Re-verify POCs every 90 days per SOP §2.1 rule 3.
+
+### 9.3 The research origin is non-public; the contact is not citable — load-bearing constraint
+
+This research track was initiated based on a working observation from a working-level Navy ship-repair contact. That contact is not named in this file, will not be named in any brief derived from this file, and is not the source of any FACT, Assessment, or Speculation entry. Their framing informs what to look for; it does not enter the FACT chain.
+
+The discipline that follows from this constraint:
+
+- Every claim in this research file and in any derived brief must be supported by public sources alone, per the FACT-Assessment-Speculation labeling in the SOP. The contact's framing is treated as analyst-side intuition that scopes the research, not as evidence within the research.
+- No identifying detail about the contact — their organization, their role, the team they sit on, the specific exercise program they are involved with — goes into any artifact at any sensitivity tier. If a reference is needed at all, the standard generic phrasing is "a working-level Navy ship-repair contact."
+- The contact's organization is reachable via standard public-facing engagement paths. The play is to use those public paths (industry days, formal SBIR or STTR responses, NAVSEA-hosted touchpoints) and not to leverage the contact's working-level channel directly. See section 11 for the engagement implications.
+- If a future deliverable benefits from a quote or framing that originates with the contact, that framing must first be matched against a public source — either a public statement by a named individual at the relevant Navy organization or an analytical assessment that the operator is comfortable labeling as such. The contact themselves stays out of the brief.
+- This constraint is parallel to the classification gradient in section 9.1. Both are sensitivity disciplines that limit what can be said in derived artifacts. Both are load-bearing on the integrity of the eventual recommendation.
 
 ---
 
@@ -285,6 +299,8 @@ A third possible counter — that PAE-IO's "understatement" may be deliberate bu
 This section addresses the scope-expansion items added 2026-05-21: (a) design of robust training from tabletop scenarios to pilot repair operations, and (b) developing NSWC Carderock relationships, which are assumed not to exist at scaffold time.
 
 The engagement work stream proceeds **in parallel with** the primary-source research in §10 — not blocking on it — because relationship cadence at Navy labs is months-to-years, and starting the inventory and on-ramp scoping early is low-cost and unaffected by whether the §7 hypothesis ultimately survives disconfirming checks.
+
+**Engagement-paths discipline (load-bearing).** The Ship Repair Facility Japan Regional Maintenance Center (SRF-JRMC) and adjacent Pacific Fleet ship-repair organizations are research subjects in this track because the public Ship Wartime Repair and Maintenance Exercise program (SWARMEX) described in NAVSEA Public Affairs releases is core to the working hypothesis (see sections 1, 7 leg 1, and 9.3). Engagement with SRF-JRMC and its peer organizations proceeds via standard public-facing paths only — published industry days, formal SBIR or STTR responses, NAVSEA-hosted touchpoints. The track explicitly does not leverage working-level channels at these organizations. The 11.1 inventory below applies to these Pacific Fleet repair organizations as much as it does to NSWC Carderock; the Carderock side starts from zero, and the Pacific Fleet side is to be approached as if it also starts from zero in any artifact that names a specific organization.
 
 ### 11.1 Engagement-surface inventory (Week 1, parallel to §10)
 

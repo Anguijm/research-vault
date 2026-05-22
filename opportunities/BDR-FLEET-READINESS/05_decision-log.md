@@ -151,6 +151,28 @@ Either action signals that the pause is lifted.
 
 ---
 
+### 2026-05-23 — Research origin and contact-protection discipline recorded
+
+The operator disclosed that this research track was initiated based on a working observation from a working-level Navy ship-repair contact. The operator and Claude agreed on two sensitivity questions:
+
+1. **How much insider context goes into the file:** a short anonymized note in section 1 plus a load-bearing verification-flag entry in section 9. Enough for any future reader to understand why the track exists, without exposing the individual.
+2. **What generic framing to use:** "a working-level Navy ship-repair contact." More generic than naming an organization or a team.
+
+**What changed:**
+- Section 1 — added a paragraph noting the research origin in generic terms and pointing at section 9.3 for the verification discipline.
+- Section 7 — added a one-sentence note to leg 1 (the training-assumption gap) acknowledging that the working observation is consistent with the leg being true, while preserving the public-source-triangulation requirement.
+- Section 9 — added a new subsection 9.3 ("The research origin is non-public; the contact is not citable") as a load-bearing constraint parallel to the classification gradient in 9.1. The subsection specifies the discipline: contact is not named in any artifact at any sensitivity tier; their framing scopes the research but does not enter the FACT chain; engagement with the contact's organization proceeds via standard public-facing paths only; any future quote or framing that originates with the contact must be matched against a public source before it can appear in a deliverable.
+- Section 11 — added an engagement-paths discipline note in the section intro: SRF-JRMC and adjacent Pacific Fleet repair organizations are research subjects engaged via public paths only, never via working-level channels. The 11.1 inventory applies to these organizations the same way it applies to NSWC Carderock — start from zero in any artifact that names a specific organization.
+
+**What is NOT in this file or in any derived artifact:**
+- The contact's name, organization, role, or team.
+- Any indication that an existing working-level channel exists at any specific Navy organization.
+- Anything that would narrow the field of plausible individuals.
+
+The operator's private knowledge about who the contact is and where they sit is OUT OF SCOPE for this vault. If the operator wants to track that channel for their own reference, they should do so outside the vault (a personal note, a private file explicitly marked never-share). The vault must remain shareable up to its sensitivity tier without compromising the contact.
+
+---
+
 ### 2026-05-22 — Folder restructure (deep-module layout) + research resumed
 
 This entry covers two changes the operator authorized together.
