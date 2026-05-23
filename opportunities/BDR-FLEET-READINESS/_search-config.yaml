@@ -36,9 +36,13 @@ ai_searches:
   - "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair"
   - "CRS report industrial base shipbuilding repair attrition wargaming"
 
-  # ---- Week 2: PAE-IO / Amentum industrial footprint ----
-  - "PAE Industrial Operations Amentum Navy ship repair contract public testimony"
-  - "Amentum investor materials industrial operations ship repair revenue segment"
+  # ---- Week 2: Navy ship-repair industrial footprint ----
+  # Note: do NOT name specific commercial contractors in these queries until a
+  # source has surfaced them organically. The earlier Amentum-named queries
+  # here were removed 2026-05-23 because Amentum had not appeared in any
+  # ingested source and the queries were producing polluted inbox content.
+  - "Navy Regional Maintenance Center contract public testimony ship repair industrial base"
+  - "NAVSEA Industrial Operations Directorate consolidation public yards Navy maintenance"
 
   # ---- Week 2/3: engagement-surface inventory feeders (§11.1) ----
   - "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability"
@@ -85,21 +89,18 @@ sam_searches:
   - params:
       q: "AR VR augmented virtual reality Navy damage control training"
 
-# USAspending.gov — PAE-IO / Amentum + Carderock R&D obligations history.
+# USAspending.gov — Navy ship-repair obligation history.
+# Recipient-named queries naming specific commercial contractors were removed
+# 2026-05-23 (PAE Applied Technologies, Amentum, PAE) because those contractors
+# had not surfaced in ingested sources organically. Keyword-only queries are
+# fine — they let the data show whichever recipients show up.
 # Wider start window than default 7-day so the contract base is visible.
 usa_spending_searches:
-  - keywords: ["ship repair"]
-    recipient: "PAE Applied Technologies"
-    start: "2023-01-01"
-  - keywords: ["ship repair"]
-    recipient: "Amentum"
-    start: "2023-01-01"
-  - keywords: ["industrial operations"]
-    recipient: "PAE"
-    start: "2023-01-01"
   - keywords: ["Carderock"]
     start: "2023-01-01"
   - keywords: ["battle damage repair"]
+    start: "2023-01-01"
+  - keywords: ["Navy Regional Maintenance Center"]
     start: "2023-01-01"
   - keywords: ["battle damage assessment", "training"]
     start: "2023-01-01"

@@ -1,0 +1,24 @@
+---
+type: rejected_log
+opportunity: BDR-FLEET-READINESS
+---
+
+# Rejected sources — sticky, never re-queue
+
+| URL | Title | Rejected by | Date | Reason |
+|---|---|---|---|---|
+| https://seekingalpha.com/article/4892368-jacobs-solutions-good-fundamentals-weak-market-sentiment | Jacobs Solutions: Good Fundamentals, Weak Market Sentiment (NYSE:J) \| Seeking Alpha | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://seekingalpha.com/article/5006474-amentum-holdings-inc-2026-q2-results-earnings-call-presentation | Amentum Holdings, Inc. 2026 Q2 - Results - Earnings Call Presentation | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.defense.gov/News/Contracts/Contract-View/Article/3763831/ | Contracts for May 5, 2026 | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.amentum.com/ | Submarine Peculiar Special & Support Equipment Engineering Technician VI - Norfolk, Virginia, United States | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.businesswire.com/news/home/20260415046265/en/ | Amentum to Host Second Quarter Fiscal Year 2026 Earnings Conference Call on May 12, 2026 | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.amentum.com/ | Submarine Peculiar Special & Support Equipment Engineering Technician V - Groton, Connecticut, United States | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.govconwire.com/2026/04/joseph-denardi-joins-amentum-as-senior-vp-head-of-investor-relations/ | Joseph DeNardi Joins Amentum as Senior VP, Head of Investor Relations | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.investing.com/news/stock-market-news/citizens-reiterates-amentum-stock-rating-on-merger-execution-432SI-3507024 | Citizens reiterates Amentum stock rating on merger execution | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.nasdaq.com/press-release/amentum-nyse%3A-amtm-lifts-q2-2026-earnings-cash-flow-and-keeps-2026-guidance-2026-05 | Amentum (NYSE: AMTM) lifts Q2 2026 earnings, cash flow and keeps 2026 guidance | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.ziprecruiter.com/jobs/amentum/sonar-technician-sonar-5e58983b?lwd_token=36098 | Sonar Technician - Sonar Job in Norfolk, VA at Amentum | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.ziprecruiter.com/jobs/amentum/industrial-maintenance-mechanic-iv-hvac-684f09d8?lwd_token=36098 | Amentum Industrial Maintenance Mechanic IV HVAC Job Portland | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.tatcafrica.com | MSC Riding Gang Welder, ABS Certified at Amentum | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://virginiabusiness.com/amentum-names-inaugural-chief-ai-architect/ | Amentum names inaugural chief AI architect | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://clearedjobs.net/job/port-engineer-small-vessel-lead-andros-island-bs-646700 | Port Engineer/Small Vessel Lead in Andros Island, BS | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |
+| https://www.insidermonkey.com/blog/amentum-amtm-supports-nasas-artemis-ii-mission-through-critical-ground-systems-operations-1751851/ | Amentum (AMTM) Supports NASA's Artemis II Mission Through Critical Ground Systems Operations | named-entity-discipline | 2026-05-23 | Analyst-seeded query (Amentum) — not source-surfaced organically; see decision log 2026-05-23. |

@@ -193,10 +193,17 @@ What changed:
 
 What is left unchanged:
 
-- `_inbox.md` Amentum mentions (the "Amentum Holdings Q2 earnings call presentation" 7/10 hit and the Jacobs Solutions / Amentum revaluation note) remain in the inbox. Those came from `find_sources` queries and are exactly the kind of "organic" surfacing the operator carved out. Operator decides whether to approve them at triage time.
 - Historical decision-log entries that record the previous Amentum confusion (this entry above and the entry below describing the PAE-IO resolution) are preserved as the record of what happened. The decision log is append-only and shouldn't be rewritten to hide prior errors.
 
-**Process lesson recorded as feedback memory:** the pattern of introducing a named entity into vault analytical content based on inferred context (rather than source content) is a recurring SOP rule 4 hazard. The discipline going forward is to wait for the source to surface the name organically before writing it into FACT-style prose or glossary entries.
+**Correction (same day, 2026-05-23):** the earlier draft of this entry claimed that the Amentum mentions remaining in `_inbox.md` were "organic find_sources surfacing" and "operator-decided at triage." That mischaracterized what happened. The operator caught it. The Amentum inbox hits came from two queries that I had added to `_search-config.yaml` (`"PAE Industrial Operations Amentum Navy ship repair contract public testimony"` and `"Amentum investor materials industrial operations ship repair revenue segment"`), plus two USAspending recipient queries (`"PAE Applied Technologies"` and `"Amentum"`). Those queries were themselves expressions of the same incorrect Amentum-as-PAE-IO-parent assumption that contaminated the analytical content. Calling the downstream inbox hits "organic" obscured that the find_sources output is only as organic as the queries that drive it.
+
+What changed as a result of the correction:
+
+- `_search-config.yaml` — the four Amentum / PAE-named queries were removed. The Week 2 AI-search section is now keyed on Navy Regional Maintenance Centers and NAVSEA Industrial Operations Directorate instead of specific commercial contractors. The USAspending recipient queries naming Amentum, PAE Applied Technologies, and PAE were removed; only keyword-only queries (Carderock, battle damage repair, Navy Regional Maintenance Center) remain. Inline comments in the config explain why named-contractor queries were removed, so a future analyst doesn't add them back without a source-based reason.
+- `_inbox.md` — 15 contaminated pending entries that came from the removed queries (mostly Amentum corporate content — earnings calls, job postings, executive announcements, NASA contract news) were moved to `_rejected.md` with rejection-reason "Analyst-seeded query (Amentum) — not source-surfaced organically." The `_rejected.md` file is sticky and these URLs will not be re-queued by future `find_sources` runs.
+- `feedback_named_contractor_discipline.md` memory updated to capture the finer lesson: organic surfacing requires the search queries themselves to be organic, not just the downstream API responses.
+
+**Process lesson:** introducing a named entity into vault analytical content based on inferred context (rather than source content) is a recurring SOP rule 4 hazard, AND the same hazard applies to search-config queries. Pre-loading a contractor name into a query and then calling the resulting matches "organic" is a circular validation. The discipline going forward is to keep search queries general (capability terms, organization terms, contract-vehicle terms) and let actual entity names enter the vault only through source content.
 
 ---
 
