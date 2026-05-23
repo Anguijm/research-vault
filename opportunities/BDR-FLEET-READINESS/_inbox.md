@@ -33,13 +33,6 @@ and interactively review the rest.
   - Reason: This is a primary source GAO report discussing persistent issues in Navy and Coast Guard shipbuilding, including challenges within the private sector industrial base and its capacity to meet construction goals.
   - Added: 2026-05-21T23:02:08
 
-- [x] **[MHI Wins $111M Navy Contract for Ship Repair Work](https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work)** `8/10` — www.govconwire.com
-  - URL: https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work
-  - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article provides direct information on a significant Navy contract for ship repair, aligning closely with the research context on Navy ship maintenance and repair funding.
-  - Reason: Details a NAVSEA-awarded $111.4M contract to Marine Hydraulics International for FY2025 ship maintenance and repair work on a San Antonio-class amphibious transport dock, directly relevant to Navy ship repair funding and execution.
-  - Added: 2026-05-21T23:02:08
-
 - [ ] **[Testimony on Challenges Facing the Navy's and Coast Guard's Shipbuilding Programs and the Shipbuilding Industrial Base](https://www.cbo.gov/publication/62310)** `8/10` — www.cbo.gov
   - URL: https://www.cbo.gov/publication/62310
   - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")

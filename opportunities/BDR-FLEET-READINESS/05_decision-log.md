@@ -175,6 +175,42 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-24 — Scope tightened to BDAR + BDAT (training, simulation, exercises); MHI scrubbed
+
+Operator narrowed the research scope to two pillars: Battle Damage Assessment and Repair (BDAR) and Battle Damage Assessment Team (BDAT), specifically in the training, simulation, and exercises space. The earlier broader "BDR" framing included industrial-base, shipbuilding-capacity, and ship-repair contracting threads that are now out of load-bearing scope.
+
+**What this changes in the research direction:**
+
+- The recommendation, when it comes, will be specifically about BDAR/BDAT training, simulation, and exercise products and services — not about ship-repair industrial-base policy.
+- The two load-bearing sections of the research are now §11.2 (BDAR repair-side training pipeline) and §11.3 (BDAT training pipeline). Both already existed under different titles and have been renamed.
+- The primary-source language that anchors the new scope is two specific claims that are already ingested: (a) the SRF-JRMC SWARMEX press release framing the program as "Forward Deployed Ship Repair Teams (FDSRT) in battle damage assessment and repair," and (b) CNO Caudle's 14 May 2026 HASC testimony framing the Norfolk and San Diego SIMA stand-up as "hands-on training in advanced ship repair" using AI/ML, advanced manufacturing, workflow monitoring, and robotic systems.
+
+**What is now out of scope:**
+
+- The broader ship-repair industrial base picture.
+- Shipbuilding capacity and the 64-ship shortfall between current battle force and the statutory 355-ship requirement.
+- Private ship-repair contractor competition for Navy maintenance dollars.
+- The U.S.-Japan shipbuilding industrial partnership thread (Stimson MSMRO Task Force).
+- Surge-repair capacity planning at scale.
+
+Material on these threads remains in §3, §4, and §5 of this file as background context. If subsequent research surfaces evidence that BDAR/BDAT training is being acquired through one of these broader vehicles, the relevant context material will get pulled forward into the recommendation.
+
+**What changed in the files:**
+
+- `_meta/glossary.md` — added BDAR and BDAT as formal terms; tightened BDR and BDA definitions to point at the new umbrella.
+- `_glossary.md` (per-opportunity) — added BDAR, BDAT, FDSRT, SWARMEX, SIMA, and SIOP as active entries with last-verified dates.
+- `00_research-file.md` acronym table — added BDAR, BDAT, FDSRT, SIMA, SIOP; clarified that BDR is superseded by BDAR as the primary scope frame.
+- `00_research-file.md` §1 working summary — rewritten to use BDAR/BDAT framing, narrowed from five threads to four (the prior "gap on either side of modeling" thread split into training-and-simulation-specific questions), and explicit out-of-scope statement.
+- `00_research-file.md` §11.2 — renamed to "BDAR repair-side training pipeline" (was "Repair-team training").
+- `00_research-file.md` §11.3 — renamed to "BDAT training pipeline" (was "Damage-assessment team training").
+- The folder ID `BDR-FLEET-READINESS` is unchanged. Folder names are stable identifiers; the prose inside uses the new BDAR/BDAT framing.
+
+**Deferred edits:** §7 hypothesis legs were written in the broader BDR framing and need refocusing on training/simulation/exercises specifically. §3 demand signal, §4 customer landscape, and §5 competitive landscape contain substantial material that is now context-level rather than recommendation-level — they don't need to be torn down but may benefit from a "see also" pointer to the new scope frame. §10 research plan should be re-prioritized to target BDAR/BDAT-specific sources first. These edits can wait until the operator picks them up.
+
+**MHI scrubbed.** The operator confirmed on 2026-05-24 that the GovConWire article on the MHI $111M ship-repair contract is not applicable to the BDAR/BDAT scope, even at the meta-context level it was being preserved in §8.2. MHI was removed from the per-opportunity allowlist; §8.2 was rewritten to describe the Cloudflare-protected ingest failure without naming MHI; the inbox entry was moved to `_rejected.md` with rejection reason "out-of-scope-bdar-bdat — Operator-rejected 2026-05-24."
+
+---
+
 ### 2026-05-23 — Section 4 (Customer landscape) and Section 5 (Competitive landscape) populated from ingested sources
 
 Both sections drafted under the named-contractor discipline and verified by both audits before sync.

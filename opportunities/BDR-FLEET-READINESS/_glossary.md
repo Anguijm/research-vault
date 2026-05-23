@@ -21,4 +21,14 @@ Example skeleton (delete once the first real entry is added):
 
 ## Active entries
 
-*(None yet — populate as research progresses.)*
+**BDAR** — Battle Damage Assessment and Repair. The formal U.S. military term for the unified cycle of assessing damage on a struck platform, classifying it, prioritizing the repair work, and executing the repair. Tightened on 2026-05-24 as the primary scope frame for this research track, replacing the narrower "BDR" abbreviation used in earlier vault content. The research focus is specifically on BDAR **training, simulation, and exercises** — not the broader ship-repair industrial base.
+
+**BDAT** — Battle Damage Assessment Team. The personnel cell that performs the assessment side of BDAR on a hit platform. BDAT training (covered in section 11.3 of this research file) is the upstream-skill counterpart to the repair-side training (covered in section 11.2). Both fall under the BDAR scope. *(Last verified: 2026-05-24.)*
+
+**FDSRT** — Forward Deployed Ship Repair Teams. Government repair teams attached to forward-deployed fleets, named in the SRF-JRMC press release as the personnel cohort that the SWARMEX exercise is designed to train in battle damage assessment and repair. *(Last verified: 2026-05-23.)*
+
+**SWARMEX** — Ship Wartime Repair and Maintenance Exercise. The NAVSEA / SRF-JRMC ongoing exercise series in the U.S. Seventh Fleet Area of Responsibility, designed to give Forward Deployed Ship Repair Teams experience in battle damage assessment and repair. First Japan iteration was on USS FITZGERALD (DDG 62). The exercise is the public-record anchor for this research track's BDAR/BDAT scope. *(Last verified: 2026-05-23.)*
+
+**SIMA** — Shore Intermediate Maintenance Activity. Per CNO Caudle's HASC testimony on 14 May 2026, the Navy is standing up new SIMAs in Norfolk and San Diego explicitly to "provide our Sailors with hands-on training in advanced ship repair" with modern capabilities including AI/ML, advanced manufacturing (3-D printing, CAD/CAM), workflow monitoring, and robotic systems. SIMA is the closest primary-source language to the BDAR training pipeline this research proposes. *(Last verified: 2026-05-23.)*
+
+**SIOP** — Shipyard Infrastructure Optimization Program. The Navy's generational investment program to reduce maintenance durations and improve facility conditions at the four public shipyards (Pearl Harbor, Puget Sound, Portsmouth, Norfolk). As of CNO Caudle's May 2026 testimony, SIOP had completed 54 projects totaling over $1.4B, with an additional 43 projects worth $6.3B under contract. *(Last verified: 2026-05-23.)*

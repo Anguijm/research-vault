@@ -17,8 +17,13 @@
 > | Term | What it means |
 > |---|---|
 > | OSI | Open-source intelligence — material anyone can read without a clearance. The only kind of source allowed in this vault. |
-> | BDR | Battle damage repair — the engineering work of fixing a ship that has been hit. |
-> | BDA | Battle damage assessment — the diagnostic work of figuring out what is broken on a hit ship and how bad it is. Upstream of BDR. |
+> | BDAR | Battle Damage Assessment and Repair — the formal U.S. military term for the unified cycle of assessing damage on a struck platform, classifying it, prioritizing repair, and executing it. **The primary scope frame for this research track** as tightened by the operator on 2026-05-24. |
+> | BDAT | Battle Damage Assessment Team — the personnel cell that performs the assessment side of BDAR on a hit platform. BDAT training (§11.3) is the upstream-skill counterpart to the repair-side training (§11.2). |
+> | BDR | Battle damage repair — the narrower term for the repair half of BDAR. Used in the folder ID and in earlier vault content; superseded by BDAR as the primary scope frame on 2026-05-24. |
+> | BDA | Battle damage assessment — the diagnostic work of figuring out what is broken on a hit platform. Subsumed under BDAR. |
+> | FDSRT | Forward Deployed Ship Repair Teams — government repair teams attached to forward-deployed fleets, named in the SRF-JRMC press release as the personnel cohort SWARMEX is designed to train in BDAR. |
+> | SIMA | Shore Intermediate Maintenance Activity. The Navy is standing up new SIMAs in Norfolk and San Diego per CNO Caudle's HASC testimony 14 May 2026, explicitly to provide hands-on training in advanced ship repair using AI/ML, advanced manufacturing, workflow monitoring, and robotic systems. Closest primary-source language to the BDAR training pipeline this research proposes. |
+> | SIOP | Shipyard Infrastructure Optimization Program — Navy's generational investment program in the four public shipyards. |
 > | NSWC Carderock | A division of the Naval Surface Warfare Center, located in Maryland, that does ship survivability and damage modeling. The single most important named organization in this research track. |
 > | NAVSEA | Naval Sea Systems Command — the Navy organization that owns NSWC Carderock, the public shipyards, and most ship-repair contracting. |
 > | OPNAV / N9 | The Chief of Naval Operations' staff. N9 is the Warfare Systems directorate, which owns much of the fleet-readiness demand picture. |
@@ -41,23 +46,25 @@
 
 ## 1. Working summary (analyst view)
 
-This is a research track, not yet a named capture opportunity. The question we are trying to answer, using only publicly-available material, is whether NSWC Carderock's ship-damage modeling work is the foundation of a real business opportunity for CACI — and if so, what shape that opportunity takes.
+This is a research track, not yet a named capture opportunity. The scope was tightened on 2026-05-24 to focus specifically on **Battle Damage Assessment and Repair (BDAR)** and **Battle Damage Assessment Team (BDAT) training, simulation, and exercises**. Earlier framing under the broader "BDR" umbrella included industrial-base, shipbuilding-capacity, and ship-repair contracting threads that have been narrowed out of scope; those threads remain in this file as background context but are no longer load-bearing for the research direction.
 
-There are five threads inside that question, and the research has to address all five before any recommendation makes sense:
+The question we are trying to answer, using only publicly-available material, is whether the Navy's evolving BDAR / BDAT training requirement — visible most clearly in NAVSEA's SWARMEX exercise series and in the CNO's May 2026 testimony about Shore Intermediate Maintenance Activities (SIMA) standing up in Norfolk and San Diego — represents a real business opportunity for CACI in the **training, simulation, and exercises** space.
 
-1. **Is Carderock's modeling actually useful for fleet training?** That is, can the Navy's ship-damage modeling work be folded into multidomain training events at a fidelity that operators would actually use?
+There are four threads inside that question, and the research has to address all four before any recommendation makes sense:
 
-2. **Is there a gap on either side of that modeling?** Specifically, do current fleet training scenarios understate how badly ships get hit in a real fight, and does the industrial-supply side — the public-yard and Navy Regional Maintenance Center system now consolidated under the Navy's PAE Industrial Operations structure (May 2026 Shipbuilding Plan), together with the private ship-repair contractor base — plan for steady-state repair when the actual demand under wartime conditions would be much higher?
+1. **Is there a real BDAR/BDAT training-and-simulation gap that the Navy is publicly signaling?** The most direct primary-source language so far is CNO Caudle's HASC testimony about the SIMA stand-up explicitly featuring "hands-on training in advanced ship repair" with AI/ML, advanced manufacturing, workflow monitoring, and robotic systems, plus the SRF-JRMC SWARMEX press release framing the program as Forward Deployed Ship Repair Teams (FDSRT) training in battle damage assessment and repair. The research's job is to triangulate whether these signals add up to a procurement opportunity in BDAR/BDAT training, or whether they describe internal-organic Navy work with no contractor entry-point.
 
-3. **What does the training program itself look like?** The working concept is a three-step progression — start with tabletop scenarios in a classroom, then guided site visits to actual repair facilities, then hands-on pilot operations on instrumented training rigs. Each step is a fidelity step-up and can also be a classification step-up.
+2. **What does a robust BDAR training program look like?** The working concept is a three-step progression — tabletop scenarios in a classroom, then guided site visits to actual repair facilities (including instrumented test-beds at NSWC Carderock or equivalent labs), then hands-on pilot operations. Each step is a fidelity step-up and can also be a classification step-up. This is the BDAR (repair-side) training pipeline — section 11.2 of this file.
 
-4. **How does CACI even get in the room?** We are assuming at scaffold time that CACI does not currently have a working relationship with the Carderock damage-modeling team. So a parallel work stream of the research is mapping out who to approach, what existing engagement on-ramps Carderock offers, and what intro paths CACI might have through adjacent Navy lab relationships.
+3. **What does a robust BDAT training program look like?** Distinct from the repair-team pipeline because the audience (assessment-team personnel), the cadence (high-frequency reps between live events), and the fidelity ramp are all different. The proposal here is a gamified-software/hardware simulation layer (serious games, instrumented training rigs, AR/VR, hardware-in-the-loop benches) that keeps BDAT cohorts sharp between live exercises, transitioning to real-world exercise injects in fleet training events like COMPTUEX, RIMPAC, and Large-Scale Exercise. This is the BDAT (assessment-side) training pipeline — section 11.3 of this file.
 
-5. **A separate training pipeline for damage-assessment teams** — distinct from the repair-side training in thread 3. Damage assessment is the diagnostic skill upstream of repair: when a ship is hit, the assessment team has to classify the damage and decide what gets fixed first before the repair team can act. The proposal here is a high-frequency gamified-simulation layer (serious games, instrumented training rigs, augmented/virtual reality, hardware-in-the-loop benches) that keeps assessment teams sharp between live exercises, followed by real-world exercise injects in fleet training events. The reason it is a separate thread from thread 3 is that the audience, the cadence of practice, and the fidelity ramp are all different.
+4. **How does CACI get in the room?** Assumed at scaffold time that CACI does not currently have a working relationship with the NSWC Carderock damage-modeling team or with the Navy organizations standing up the SIMAs. A parallel work stream of the research maps out who to approach, what existing engagement on-ramps Navy labs offer (industry days, SBIR/STTR cycles, NAVSEA-hosted touchpoints), and what intro paths might exist through adjacent Navy lab relationships. The engagement strategy is section 11.
 
-This research track was initiated based on a working observation shared by a working-level Navy ship-repair contact. Their framing informs the research direction — specifically the view that wartime ship repair capability and the training around it are an underdeveloped area worth examining. Everything in this file must be supported by public sources alone; the contact is not named here and is not the source of any factual claim. See section 9.3 for the verification discipline this implies.
+This research track was initiated based on a working observation shared by a working-level Navy ship-repair contact. Their framing informs the research direction — specifically the view that BDAR/BDAT training is an underdeveloped area worth examining. Everything in this file must be supported by public sources alone; the contact is not named here and is not the source of any factual claim. See section 9.3 for the verification discipline this implies.
 
-This summary states the scope neutrally. The hypothesis in section 7 is one possible outcome of this research — not a finding. The research plan in section 10 deliberately includes evidence that would falsify the hypothesis, because pulling that evidence first is the most efficient way to either kill the track early or commit to it with confidence. The engagement strategy in section 11 is sequenced so that the relationship-development work proceeds in parallel with the hypothesis-testing work, since relationship cadence at Navy labs is months-to-years and starting early costs nothing if the hypothesis later fails.
+**What is out of scope after the 2026-05-24 narrowing.** The broader ship-repair industrial base, the shipbuilding-capacity question, private ship-repair contractor competition, surge-repair capacity planning at scale, and the U.S.-Japan industrial partnership thread (Stimson MSMRO Task Force) are no longer load-bearing for the recommendation. They remain in sections 3, 4, and 5 of this file as context — useful for understanding the Navy environment the BDAR/BDAT opportunity sits inside — but the recommendation will be specifically about training, simulation, and exercise products and services, not about ship-repair industrial-base policy. If the research surfaces evidence that BDAR/BDAT training is being acquired through one of these broader vehicles, the relevant context-section material will get pulled forward into the recommendation.
+
+This summary states the scope neutrally. The hypothesis in section 7 is one possible outcome of this research — not a finding. The research plan in section 10 deliberately includes evidence that would falsify the hypothesis. The engagement strategy in section 11 is sequenced so that the relationship-development work proceeds in parallel with the hypothesis-testing work.
 
 ## 2. Open questions
 
@@ -236,7 +243,7 @@ The Stimson Center's U.S.-Japan MSMRO Task Force frames an alliance-level partne
 
 Three competitive layers are visible in the demand signal but not yet sourced at competitor level for this research.
 
-- **Private U.S. ship-repair contractors** competing for Navy maintenance work are visible at the dollar-flow level (the MHI $111M contract that GovConWire reported on; the §3.2 budget figures) but the specific contractor mix is not yet ingested. The next source-finder pass should target USAspending recipient data without pre-naming entities.
+- **Private U.S. ship-repair contractors** competing for Navy maintenance work are visible at the dollar-flow level (the §3.2 budget figures) but the specific contractor mix is not yet ingested. The next source-finder pass should target USAspending recipient data without pre-naming entities.
 - **Carderock-adjacent technical partners** — the §7 leg 5 hypothesis names three (SAIC, Leidos, HII Mission Technologies) but the specific contract footprint of each at Carderock is open research. NAVSEA contracting data should resolve this when ingested.
 - **Commercial simulation-platform vendors** for any future BDA training pipeline (§11.3) are explicitly an open research thread — section 11.3 of this file was rewritten on 2026-05-23 to remove all pre-named vendors and reads "specific platforms named only as sources surface them or as the operator scopes a vendor inquiry." Next steps for §11.3 are operator-initiated outreach (I/ITSEC, DoD SBIR Phase II catalogs, NWDC product listings) rather than further automated source searches against contractor names.
 
@@ -336,7 +343,7 @@ The first ingest pass left these in incomplete state. They are listed here so fu
 
 **Bot-detection 403 (manual download required):**
 
-- The GovConWire article on the MHI $111M Navy ship-repair contract at `https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work` returns HTTP 403 from Cloudflare for both `curl_cffi` browser-TLS impersonation and the Playwright headless-Chromium fallback. The script's bot-detection fallback layer is in place but does not defeat Cloudflare's most aggressive tier. Manual save from a logged-in browser session is the recovery path.
+- One GovConWire article surfaced by the source-finder returned HTTP 403 from Cloudflare for both `curl_cffi` browser-TLS impersonation and the Playwright headless-Chromium fallback. The script's bot-detection fallback layer is in place but does not defeat Cloudflare's most aggressive tier. The article was reviewed by the operator on 2026-05-24 and judged not applicable to the BDAR/BDAT scope; the inbox entry has been rejected. Manual save from a logged-in browser session remains the recovery path for any future Cloudflare-protected article that IS in scope.
 
 **Ingest succeeded but content was empty / wrong / 404-as-200:**
 
@@ -487,7 +494,7 @@ The engagement work stream proceeds **in parallel with** the primary-source rese
 
 **Output:** a `03_pocs.md` POC table populated with named individuals + public-source URLs + which on-ramp they sit on. **No outreach until the table is complete and the operator green-lights specific contacts.**
 
-### 11.2 Repair-team training — classroom, then facility visits, then hands-on
+### 11.2 BDAR repair-side training pipeline — classroom, then facility visits, then hands-on
 
 This section covers training for the people who actually do the repair work after a ship is hit. The next section, 11.3, covers the separate pipeline for the damage-assessment teams who tell the repair crews what to fix first.
 
@@ -516,7 +523,7 @@ Three feasibility models, in increasing order of realism and difficulty:
 
 The instrumented test-bed at NSWC Carderock or a partner site is the highest fidelity that is realistic to achieve at unclassified level.
 
-### 11.3 Damage-assessment team training — gamified simulation first, then real-world exercises
+### 11.3 BDAT training pipeline — gamified simulation first, then real-world exercises
 
 This section covers training for the people who **assess** damage, which is a different skill from doing the actual repair work covered in the previous section.
 
