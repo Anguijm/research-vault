@@ -4,7 +4,7 @@
 #   Week 1 — pull the two disconfirming-evidence threads FIRST
 #            (DON Strategic Readiness Plan + FY26 Navy budget exhibits + recent
 #             SASC/HASC CNO/NAVSEA testimony) to test §7 hypothesis early.
-#   Week 2 — broaden to Carderock public materials + PAE-IO / Amentum footprint.
+#   Week 2 — broaden to Carderock public materials + Navy ship-repair footprint.
 #   Week 3 — synthesize into research-file update + Gate 1 decision.
 #
 # Ordering of ai_searches reflects §10.3 Week 1 disconfirming-evidence priority.
@@ -50,9 +50,14 @@ ai_searches:
   - "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue"
 
   # ---- Week 2/3: BDA-platform vendor landscape (§11.3 candidate platforms) ----
-  - "Bohemia Interactive Simulations VBS4 Navy DoD battle damage training contract"
-  - "MAK ONE VR-Forces Navy training simulation damage modeling"
+  # Specific commercial simulation-platform vendor queries were removed
+  # 2026-05-23 because those platform names had not appeared in any ingested
+  # source and the queries were producing downstream matches that masqueraded
+  # as organic surfacing. Re-add a platform-specific query only when an
+  # ingested source has named that platform organically.
   - "Naval Postgraduate School thesis battle damage assessment serious game simulation"
+  - "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors"
+  - "Navy SBIR Phase II Phase III battle damage assessment training simulation platform contract"
 
   # ---- Targeted follow-ups added 2026-05-23 after first-pass triage ----
   # The first-pass search returned a 9/10 SWARMEX article (now 404) plus several
@@ -80,6 +85,8 @@ sam_searches:
       ncode: ["541330", "541512", "611430"]
 
   # ---- BDA serious-game / sim platform vehicles (§11.3) ----
+  # General capability queries only; specific-vendor recipient queries
+  # were removed 2026-05-23 for the same reason as the AI queries above.
   - params:
       q: "battle damage assessment training simulation"
       ncode: ["541330", "541512", "611430"]
@@ -91,9 +98,9 @@ sam_searches:
 
 # USAspending.gov — Navy ship-repair obligation history.
 # Recipient-named queries naming specific commercial contractors were removed
-# 2026-05-23 (PAE Applied Technologies, Amentum, PAE) because those contractors
-# had not surfaced in ingested sources organically. Keyword-only queries are
-# fine — they let the data show whichever recipients show up.
+# 2026-05-23 because those contractor names had not surfaced in ingested
+# sources organically. Keyword-only queries are fine — they let the data
+# show whichever recipients show up.
 # Wider start window than default 7-day so the contract base is visible.
 usa_spending_searches:
   - keywords: ["Carderock"]
@@ -105,10 +112,6 @@ usa_spending_searches:
   - keywords: ["battle damage assessment", "training"]
     start: "2023-01-01"
   - keywords: ["serious game", "Navy"]
-    start: "2023-01-01"
-  - recipient: "Bohemia Interactive Simulations"
-    start: "2023-01-01"
-  - recipient: "MAK Technologies"
     start: "2023-01-01"
 
 rss_feeds: []   # Phase 4b — deferred

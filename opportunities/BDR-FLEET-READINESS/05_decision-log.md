@@ -175,6 +175,29 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-23 — Full entity-pollution triage executed; both audits PASS
+
+Following the audit-tooling build and the prior Amentum cleanup, the operator approved a four-part triage of the remaining 23 contaminated entries flagged by `_scripts/audit_named_entities.py`.
+
+**Action 1 — Audit-code scope fix.** `audit_named_entities.py` was modified to exclude `05_decision-log.md` from the analytical-content scope. The decision log is append-only historical record, and naming an entity in the context of recounting past work (e.g., "the prior Amentum confusion") is appropriate use, not contamination. This cleared three flagged entries (Amentum, Deloitte, PAE Applied Technologies) that were over-flagged because they appeared in historical log entries.
+
+**Action 2 — Allowlist three canonical incumbents.** SAIC, Leidos, and HII Mission Technologies were added to the per-opportunity allowlist with the reason "Canonical naval-services incumbent. Operator-blessed for §7 hypothesis leg 5 — Carderock-adjacent technical partner whose existing relationships shape CACI's entry timeline. Specific claims about [entity] capability still need source backing." The hypothesis leg 5 falsifier condition (that these three incumbents could lock CACI out of Carderock) is load-bearing for the research and the entities are too canonical to require source pre-discovery.
+
+**Action 3 — Strip pre-named entities from §5, §11.2, §11.3, and the search config.** 16 entries removed by deliberate excision: the §5 competitive-landscape placeholder (BAE Systems, Booz Allen, Alion), the §11.2 candidate site-visit facility list (HII Newport News, BAE Norfolk, GD NASSCO, Vigor, Titan Acquisitions), and the §11.3 candidate simulation platform list (Bohemia Interactive Simulations, BISim, VBS4, MAK ONE, MAK Technologies, VR-Forces, NVIDIA Omniverse, Improbable). The §7 hypothesis leg 5 prose was edited to remove "Alion-inheritance" wording. Four contaminated search-config queries were removed: two AI queries naming BISim/VBS4 and MAK ONE/VR-Forces, and two USAspending recipient queries (Bohemia Interactive Simulations, MAK Technologies). All affected sections were rewritten to use generic capability or organization language with the note "specific contractor names added only as ingested sources surface them." The declined entities were recorded in a documented-removal section at the bottom of `_entity-allowlist.yaml` so a future analyst doesn't re-introduce them without a source.
+
+**Action 4 — Move 4 contaminated inbox entries to `_rejected.md`.** Inbox entries that came from the now-removed BISim/VBS4/MAK platform queries were moved to `_rejected.md` with reason "Analyst-seeded simulation-platform query (BISim/VBS4/MAK) — not source-surfaced organically; removed 2026-05-23." The rejected list is sticky and these URLs will not be re-queued by future `find_sources` runs.
+
+**Two further allowlist entries added for historical-context cases:** Amentum and MHI. Both appeared only in meta-context (a search-config comment documenting Amentum's removal, and §8.2 of the research file documenting a failed GovConWire ingest). Allowlisted with explicit reasons explaining that these are NOT active analytical claims; if the situations resolve (e.g., a primary source for the MHI contract is found), the allowlist entries should be re-evaluated.
+
+**Audit state after triage:**
+
+- `audit_named_entities.py --opportunity BDR-FLEET-READINESS` → **PASS** (0 contaminated, 5 allowlisted, 2 ok, 8 source-only).
+- `audit_search_config.py --opportunity BDR-FLEET-READINESS` → **PASS** (0 contaminated queries, 45 total queries, 12 allowlisted entities).
+
+The 8 source-only entities (Huntington Ingalls Industries, Newport News Shipbuilding, General Dynamics NASSCO, Ingalls Shipbuilding, Japan Maritime United, General Dynamics, Bollinger, JMU) are entities that appear in ingested sources but not yet in analytical content. These are eligible to be written into analytical prose with citation when relevant — the source-only bucket is informational, not contaminated.
+
+---
+
 ### 2026-05-23 — Named-contractor discipline: do not introduce names unless sources do
 
 Operator clarified that specific commercial contractor names should not appear in vault analytical content unless they surface organically in ingested sources. The vault was previously naming "Amentum" as the industrial-supply-side actor across the research file, glossary, points-of-contact directory, index.md frontmatter, and source-file notes — but a grep of the 13 ingested source files confirmed that Amentum appears in exactly zero of them. Every Amentum reference in the vault was analyst-introduced, not source-supported.

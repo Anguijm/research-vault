@@ -97,16 +97,20 @@ def _scan_files(files: list[Path], entity: str) -> list[tuple[Path, int, str]]:
 
 
 def _analytical_files_for_opportunity(opp_dir: Path) -> list[Path]:
-    """Files that count as analytical content for a given opportunity. NOT
-    inclusive of 01_sources/ (those are checked separately) and NOT inclusive
-    of _inbox.md or _rejected.md (those are operator-triage state, not
-    analyst-authored prose)."""
+    """Files that count as analytical content for a given opportunity.
+
+    Excluded by design:
+    - 01_sources/ — checked separately as the source corpus.
+    - _inbox.md / _rejected.md — operator-triage state, not analyst-authored prose.
+    - 05_decision-log.md — append-only historical record. Naming an entity
+      in the context of recounting past work (e.g., "the prior Amentum
+      confusion") is appropriate use and should not flag the audit.
+    """
     return [
         opp_dir / "00_research-file.md",
         opp_dir / "_glossary.md",
         opp_dir / "02_quotes.md",
         opp_dir / "03_pocs.md",
-        opp_dir / "05_decision-log.md",
         opp_dir / "index.md",
     ]
 

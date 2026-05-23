@@ -32,7 +32,6 @@
 > | LSE | Large-Scale Exercise — a Navy series introduced in 2021 that strings multiple exercises together to test distributed fleet operations. |
 > | SWARMEX | Ship Wartime Repair and Maintenance Exercise — a specific 2025 NAVSEA program first run by SRF-JRMC. The top-scoring hit from the 2026-05-21 source pass. |
 > | SRF-JRMC | Ship Repair Facility, Japan Regional Maintenance Center — the Navy organization in Japan that ran the first SWARMEX. |
-> | VBS4 / MAK ONE | Commercial military training simulation platforms used widely in DoD. Candidate platforms for a BDA serious-game pipeline. |
 > | DON | Department of the Navy — the civilian-led department that includes both the U.S. Navy and the U.S. Marine Corps. |
 > | GAO | Government Accountability Office — Congress's auditor, which publishes oversight reports we treat as primary sources. |
 > | CRS | Congressional Research Service — Congress's in-house research arm; its reports are public and citation-quality. |
@@ -79,7 +78,7 @@ Listed with explicit disconfirming-evidence items per the scaffolding instructio
 - [ ] What does a robust training-progression model look like for BDR — tabletop scenarios → guided site visits → pilot repair operations? What are the right learning objectives at each phase, and which audiences (junior officers, damage-control teams, repair-yard supervisors, multi-domain joint planners) get which content?
 - [ ] What existing Navy / Joint training programs already use a tabletop-to-pilot progression model that could be a template or partner (e.g., Naval War College wargames, NSWCD damage-control schools, MARFOR readiness exercises)?
 - [ ] Where would tabletop content draw from at OSI fidelity, given the §9.1 classification gradient? (Open-source threat libraries; sanitized vignettes from public NAVSEA / Carderock material; historical case studies — USS Cole, USS Stark, USS Fitzgerald, HMS Sheffield, Moskva — these are factually OSI and the lessons-learned are public.)
-- [ ] What facilities support guided site visits at the next fidelity step? (NSWC Carderock proper; NSWC Philadelphia; intermediate maintenance activities; the four public naval shipyards; selected private repair facilities operated by HII Newport News, BAE Norfolk, GD NASSCO, Vigor / Titan Acquisitions.)
+- [ ] What facilities support guided site visits at the next fidelity step? (NSWC Carderock proper; NSWC Philadelphia; intermediate maintenance activities; the four public naval shipyards; major private repair facilities — specific contractor names added only as sources surface them.)
 - [ ] What does "pilot repair operations" look like at the top of the training progression — simulator-based, real-equipment-on-instrumented-test-bed, or live operations on training hulls? Which model is feasible at unclassified level?
 - [ ] **[DISCONFIRMING]** Is there an existing Navy training program that already does the full tabletop→site-visit→pilot progression for BDR? If yes, the gap is execution / scaling, not design — the recommendation shape changes.
 
@@ -88,7 +87,7 @@ Listed with explicit disconfirming-evidence items per the scaffolding instructio
 - [ ] What is the Navy's current BDA training pipeline? Who owns it — Naval Warfare Development Command (NWDC), Surface Force Training and Readiness Manual (SFTRM) authorities at COMNAVSURFOR, AFLOATRAFOR, fleet-specific shops, or some combination?
 - [ ] **[DISCONFIRMING]** Is there already a mature DoD-funded BDA serious-game or instrumented-sim product? Search SBIR Phase II/III awards (`sbir.gov`), NWDC product catalog, Naval Postgraduate School / Naval War College thesis library, MORS conference papers. If a usable product exists, the play shifts from "build a BDA-sim platform" to "integrate / extend an existing one."
 - [ ] **[DISCONFIRMING]** Is BDA-team training already deeply embedded in fleet exercises (COMPTUEX, RIMPAC, Large-Scale Exercise / LSE, ANTX, Trident Warrior)? If yes, the real-world-exercise leg of this scope is execution-only, not opportunity-creation.
-- [ ] What commercial / GOTS serious-game and sim engines are candidate platforms (Bohemia Interactive Simulations VBS4, Improbable, NVIDIA Omniverse digital twins, MAK ONE, Unity / Unreal toolchains used in DoD training, hardware-in-the-loop benches at Carderock or partner labs)? Cost / classification / IP posture of each?
+- [ ] What commercial or government-off-the-shelf serious-game and simulation engines are candidate platforms for a Navy BDA training pipeline? Specific platforms to be named as sources surface them or as the operator scopes a vendor inquiry; cost, classification, and intellectual-property posture of each platform are open questions.
 - [ ] What AR / VR or hardware-in-the-loop sim products exist for damage-control / BDA today? (Trade-show coverage at I/ITSEC; SBIR award database; vendor public press.)
 - [ ] Can ARKA EO/IR / hyperspectral sensor signature libraries (or other CACI legacy ISR data products) plausibly feed a BDA training-game scenario engine with realistic threat-effect signatures? If so, that is a near-unique differentiator vs. the SAIC / Leidos / HII Mission Technologies incumbents.
 - [ ] Where does a gamified-sim-then-real-world progression live administratively — under a training contract (e.g., AFLOATRAFOR), an R&D vehicle (Carderock RDT&E), an SBIR sequence, or a NAVWARDEVCOM doctrine product? Each implies a different acquisition pathway and a different prime / sub posture.
@@ -156,7 +155,7 @@ This subsection is the thinnest of the three because the first source-finder pas
 
 <!-- sensitivity:internal -->
 
-*[Section reserved — populate after source ingestion. Likely competitive entities to scope: incumbents on naval survivability / BDR M&S work (e.g., HII Mission Technologies / former Alion which has historic Carderock-adjacent M&S history; SAIC; Booz Allen; Leidos), Navy Lab partnerships, and PAE-IO direct competitors in ship repair (BAE Systems Ship Repair, General Dynamics NASSCO, HII Newport News / Ingalls, Vigor / Titan Acquisitions).]*
+*[Section reserved — populate after source ingestion. Likely competitive entities to scope: incumbents on naval survivability and battle-damage-repair modeling-and-simulation work (HII Mission Technologies, SAIC, Leidos are operator-blessed for the §7 hypothesis leg 5 — other specific contractors named here only as ingested sources surface them); Navy Lab partnerships; and private ship-repair contractors named only as sources surface them.]*
 
 <!-- /sensitivity -->
 
@@ -204,7 +203,7 @@ The hypothesis breaks into six separate claims, each of which can be tested agai
 
 4. **Training-progression viability.** *Claim:* the tabletop → site-visit → hands-on progression is a feasible program design that does not already exist end-to-end. *What kills it:* (a) some existing Navy program already runs this exact progression, in which case the play is helping execute or scale that program rather than designing a new one, or (b) the legal and operational hurdles of moving cohorts from unclassified content up to classified instrumented test-bed work are prohibitive.
 
-5. **Relationship feasibility.** *Claim:* CACI can realistically build the Carderock relationships needed to execute, on a timeline shorter than the customer's actual demand window. *What kills it:* Carderock's engagement bandwidth is locked up by incumbent technical partners — HII Mission Technologies (which inherited the Alion damage-modeling work), SAIC, Leidos — to a degree that CACI's entry timeline runs past the demand window. If true, this is a partnering decision, not a prime-position decision.
+5. **Relationship feasibility.** *Claim:* CACI can realistically build the Carderock relationships needed to execute, on a timeline shorter than the customer's actual demand window. *What kills it:* Carderock's engagement bandwidth is locked up by incumbent technical partners — HII Mission Technologies (which inherited prior naval modeling-and-simulation work via acquisition), SAIC, and Leidos — to a degree that CACI's entry timeline runs past the demand window. If true, this is a partnering decision, not a prime-position decision.
 
 6. **The damage-assessment training pipeline is viable.** *Claim:* the proposed two-phase pipeline for damage-assessment teams (gamified simulation first, real-world exercises second) is a feasible program model that does not already exist. *What kills it:* any one of three things — (a) the Department of Defense has already funded a damage-assessment serious-game product mature enough that the play would be a me-too entry rather than a new pipeline, evidence for this lives in SBIR Phase II and Phase III award databases and the Naval Warfare Development Command product catalog; (b) damage-assessment training is already deeply embedded in fleet exercises like COMPTUEX, RIMPAC, and LSE at a depth that leaves no gap for a new pipeline to fill; or (c) the simulation layer cannot achieve operationally-meaningful realism at unclassified level, which is the same classification-gradient problem as leg 3 but applied specifically to simulation content rather than to source modeling.
 
@@ -412,7 +411,7 @@ The proposed pipeline is a three-step ladder, with each step a fidelity step-up 
 
 **Step 2 — guided site visits to actual repair facilities.** Once trainees have the classroom foundation, the next step is taking them to where the work actually happens.
 
-- Candidate facilities are NSWC Carderock itself (with its full-scale tank facility and structural-test rigs), NSWC Philadelphia (which handles ship machinery), the intermediate maintenance activities at fleet ports, the four public naval shipyards at Norfolk, Portsmouth, Puget Sound, and Pearl Harbor, and selected private repair yards run by HII Newport News, BAE Norfolk, General Dynamics NASSCO, and Vigor / Titan Acquisitions.
+- Candidate facilities are NSWC Carderock itself (with its full-scale tank facility and structural-test rigs), NSWC Philadelphia (which handles ship machinery), the intermediate maintenance activities at fleet ports, the four public naval shipyards at Norfolk, Portsmouth, Puget Sound, and Pearl Harbor, and selected private repair yards. Specific private contractor names are added only as ingested sources surface them.
 - Classification typically steps up at this step. Tabletops can stay fully unclassified, but facility tour content usually begins at controlled-unclassified-information level, and walking trainees through instrumented test-beds may require a security agreement.
 - Logistics matter as much as program design. Travel planning, badge sponsorship, escort coverage, and clear limits on what can be discussed — these are real operational tasks, not afterthoughts.
 
@@ -436,13 +435,7 @@ The proposed pipeline has two phases, in this order:
 
 **Phase 1 — high-frequency gamified practice between live exercises.** The point of this phase is volume. Damage-assessment skill decays without practice, and live exercises happen rarely. A gamified simulation layer — running on software platforms, on instrumented training rigs, or both — gives assessment teams enough repetitions to stay sharp.
 
-Candidate software platforms to investigate (these are research targets, not endorsements, and the source pass on 2026-05-21 turned up only thin coverage on most of them):
-
-- **VBS4** by Bohemia Interactive Simulations. Already used widely in DoD training and supports custom damage and effects scripting.
-- **MAK ONE / VR-Forces.** Used in joint live-virtual-constructive simulation. Has damage models and supports federated simulation through the DIS and HLA protocols.
-- **Unreal Engine and Unity toolchains.** Several recent SBIR-funded serious-game vendors build on these rather than on military-specific platforms. Cost-of-build versus commercial-off-the-shelf engine is one of the open trade-offs.
-- **NVIDIA Omniverse digital-twin pipelines.** For modeling hull and system damage at high fidelity. The relevant question is whether the fidelity is operationally meaningful, not whether it looks good on screen.
-- **Tabletop digital-wargame engines** from the commercial educational space. These are useful as a reference point for what gamification mechanics actually work, not as a deployment target.
+Candidate software platforms are open research — specific commercial military training platforms, simulation engines, and serious-game toolchains should be named only as ingested sources surface them or as the operator scopes a vendor inquiry. The 2026-05-21 and 2026-05-23 source-finder passes did not surface a clear set of platform options; this is an open research thread that requires either targeted operator-initiated outreach (industry days at I/ITSEC, DoD SBIR Phase II award catalogs, NWDC product listings) or further source ingestion. Categories of platforms worth investigating once sources surface them: commercial military training simulation engines, federated-simulation toolchains (DIS / HLA protocol families), digital-twin / scenario-engine pipelines, and tabletop digital-wargame engines used as gamification-mechanic references.
 
 Candidate hardware-in-the-loop or instrumented simulation paths:
 
@@ -498,7 +491,7 @@ Treat all month numbers as Speculation per SOP §2.1 rule 4 until corroborated b
 | Outreach treated as marketing rather than substantive technical engagement | First-touch must be substantive — an SBIR proposal, BAA white paper, or published technical question, not a generic capability brief |
 | Multi-touch sequence is required, and operator cadence may not sustain it | Acknowledge upfront — engagement plan is months not weeks; mid-cycle slippage is normal and not a kill signal |
 | CACI may not have the right Navy-lab cultural credentials | Audit early via §11.1 adjacent-relationship mapping; if no warm path exists, a longer first-touch via SBIR Phase I is the right entry |
-| BDA serious-game space is already saturated by incumbents (SAIC, Leidos, BISim, MAK) | Lead with an ARKA-signature-library differentiator (§11.3) rather than a generic platform pitch; if no differentiator survives §2 disconfirming checks, the BDA pipeline scope should be dropped rather than pursued as a me-too entry |
+| BDA serious-game space may already be saturated by canonical incumbents (SAIC, Leidos, and Carderock-adjacent simulation vendors named only as sources surface them) | Lead with an ARKA-signature-library differentiator (§11.3) rather than a generic platform pitch; if no differentiator survives §2 disconfirming checks, the BDA pipeline scope should be dropped rather than pursued as a me-too entry |
 | Sim-vs-live progression order is mistaken — Navy training authorities may insist live-exercise-first | Treat the "sim-first" claim as a §7-leg-6 hypothesis to be tested; if Navy training doctrine inverts the order, redesign §11.3 around live-exercise lead with sim as remediation tooling |
 
 <!-- /sensitivity -->

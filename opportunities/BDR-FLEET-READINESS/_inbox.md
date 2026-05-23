@@ -194,13 +194,6 @@ and interactively review the rest.
   - Reason: This primary document mentions 'SBIR and STTR Extension Act of 2022' and 'CBRN survivability needs' with 'FY 2025' and 'FY 2026' program plans, providing high-level context for SBIR/STTR and survivability research within the DoD.
   - Added: 2026-05-21T23:02:08
 
-- [ ] **[Program - AHFE 2026 International Conference](https://ahfe.org/program.html)** `5/10` — ahfe.org
-  - URL: https://ahfe.org/program.html
-  - Found by: gemini (query: "MAK ONE VR-Forces Navy training simulation damage modeling")
-  - Note: The conference program includes relevant content on VR training simulations, but it is not directly focused on Navy-specific applications or the detailed aspects of battle damage assessment.
-  - Reason: The conference program includes a session on 'Technology-enhanced learning for emergencies: Mapping the impact of simulator and VR training,' directly relevant to the use of VR in training simulations.
-  - Added: 2026-05-21T23:02:08
-
 
 ## SAM.gov candidates added 2026-05-21 23:14
 
@@ -739,20 +732,6 @@ and interactively review the rest.
   - Reason: Recent (within 30 days) article specifically about NSWC Carderock innovation and technology infrastructure — contextually adjacent to the lab's technology development and transfer pipeline.
   - Added: 2026-05-23T12:20:49
 
-- [ ] **[OneArc Delivers First Battle Simulation Capabilities Under U.S. Army FMS Contract](https://onearc.com/news/onearc-delivers-first-battle-simulation-capabilities-under-u-s-army-fms-contract/)** `7/10` — onearc.com
-  - URL: https://onearc.com/news/onearc-delivers-first-battle-simulation-capabilities-under-u-s-army-fms-contract/
-  - Found by: claude (query: "Bohemia Interactive Simulations VBS4 Navy DoD battle damage training contract")
-  - Note: The source discusses battle simulation capabilities relevant to Navy training, but it primarily focuses on an Army contract.
-  - Reason: This primary press release announces the delivery of VBS4-based integrated battle simulation lab capabilities under a ~$50M IDIQ contract (awarded Sep 2025) that explicitly covers the U.S. Army, Navy, and Air Force — the closest publicly available source linking BISim/VBS4, battle simulation, and the Navy within the past 30 days.
-  - Added: 2026-05-23T12:20:49
-
-- [ ] **[Drone Terrain Capture Now Feeds Directly Into Simulation](https://www.halldale.com/news)** `7/10` — www.halldale.com
-  - URL: https://www.halldale.com/news
-  - Found by: gemini (query: "Bohemia Interactive Simulations VBS4 Navy DoD battle damage training contract")
-  - Note: The article discusses the integration of simulation technology relevant to Navy training programs, aligning with the research context on battle damage assessment training.
-  - Reason: This article details how BAE Systems OneArc, which includes Bohemia Interactive Simulations, is integrating Skyline PhotoMesh to convert real-world environments into simulation-ready terrain for training and mission rehearsal, including for VBS4, for defense training programs.
-  - Added: 2026-05-23T12:20:49
-
 - [ ] **[Navy Shipbuilding Plan Signals Industrial Shift | Insights | Greenberg Traurig LLP](https://www.gtlaw.com/en/insights/2026/5/navy-shipbuilding-plan-signals-industrial-shift)** `7/10` — www.gtlaw.com
   - URL: https://www.gtlaw.com/en/insights/2026/5/navy-shipbuilding-plan-signals-industrial-shift
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
@@ -891,13 +870,6 @@ and interactively review the rest.
   - Found by: claude (query: "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue")
   - Note: The press release provides relevant context about technology transfer achievements related to Navy labs but does not specifically address NSWC Carderock or the specific research context.
   - Reason: Official FLC press release announcing 2025 FLC National Meeting award winners, covering Navy labs and DoD technology transfer achievements — the closest recent primary FLC document to the query context, though NSWC Carderock is not a named winner.
-  - Added: 2026-05-23T12:20:49
-
-- [ ] **[Frost & Sullivan Identifies Industrial Capacity as the Defining Constraint in European Defence Manufacturing](https://www.newswiretoday.com/news/182525/Frost-Sullivan-Identifies-Industrial-Capacity-as-the-Defining-Constraint-in-European-Defence-Manufacturing/)** `5/10` — www.newswiretoday.com
-  - URL: https://www.newswiretoday.com/news/182525/Frost-Sullivan-Identifies-Industrial-Capacity-as-the-Defining-Constraint-in-European-Defence-Manufacturing/
-  - Found by: gemini (query: "Bohemia Interactive Simulations VBS4 Navy DoD battle damage training contract")
-  - Note: The article provides useful background on simulation capabilities but is primarily focused on European defense manufacturing rather than the specific Navy context.
-  - Reason: This article, while primarily about European defense manufacturing, includes a news item stating that the Norwegian Armed Forces are upgrading their enterprise simulation capabilities with BAE Systems OneArc's VBS4, directly linking VBS4 to military training contracts.
   - Added: 2026-05-23T12:20:49
 
 - [ ] **[U.S. Navy goes All In on Submarines in Released Shipbuilding Plan - Naval News](https://www.navalnews.com/naval-news/2026/05/u-s-navy-goes-all-in-on-submarines-in-released-shipbuilding-plan/)** `5/10` — www.navalnews.com

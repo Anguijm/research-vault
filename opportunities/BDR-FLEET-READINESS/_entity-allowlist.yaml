@@ -25,23 +25,50 @@ allowlist:
   CORIAN: CACI counter-UAS product. Operator-blessed cross-opportunity reference.
   X-MADIS: CACI counter-UAS product. Operator-blessed cross-opportunity reference.
 
-# Remaining contaminated entities surfaced by the 2026-05-23 audit but NOT yet
-# added to the allowlist — left here as a working note so the operator can
-# review them when picking up the research. Move any operator-blessed item
-# from this commented section into the allowlist above.
+  # Canonical naval-services incumbents — operator-blessed 2026-05-23 as
+  # entities the BDR hypothesis must contend with regardless of whether a
+  # specific source has surfaced them. Used in §7 leg 5 as the named
+  # incumbent technical partners whose Carderock relationships could lock
+  # CACI out of the play.
+  SAIC: Canonical naval-services incumbent. Operator-blessed for §7 hypothesis leg 5 — Carderock-adjacent technical partner whose existing relationships shape CACI's entry timeline. Specific claims about SAIC capability still need source backing.
+  Leidos: Canonical naval-services incumbent. Operator-blessed for §7 hypothesis leg 5 — Carderock-adjacent technical partner whose existing relationships shape CACI's entry timeline. Specific claims about Leidos capability still need source backing.
+  HII Mission Technologies: Canonical naval competitor. Operator-blessed for §7 hypothesis leg 5 — inherited the Alion ship-damage modeling work and is the most directly competitive incumbent for Carderock-adjacent capability. Specific claims still need source backing.
+
+  # Historical / meta-context allowlist — these names appear only in contexts
+  # that document past events (a removed query, a failed ingest attempt),
+  # not as active analytical claims. The audit can't distinguish between
+  # "this is an analytical assertion" and "this is meta-context about the
+  # research pipeline," so we allowlist them here to document why they are OK.
+  Amentum: Appears only in a search-config comment that documents the 2026-05-23 removal of Amentum-named queries. Meta-context, not an active query or analytical claim. Removing the name from the comment would erase the lesson learned.
+  MHI: Appears only in §8.2 of the research file as meta-information about a failed GovConWire ingest attempt. The article itself was not ingested due to Cloudflare bot detection; if a primary source on the $111M NAVSEA contract is later found, MHI graduates from §8.2 to an analytical citation.
+
+# Entities surfaced by the 2026-05-23 audit but DECLINED for allowlisting and
+# being removed from analytical content per operator policy. Listed here as
+# a historical note so a future analyst doesn't reintroduce them without
+# sourcing them first.
 #
-#  - BISim                            (simulation platform vendor; industry standard)
-#  - VBS4                             (BISim product; industry standard)
-#  - MAK ONE / MAK Technologies       (simulation platform vendor; industry standard)
-#  - VR-Forces                        (MAK product; industry standard)
-#  - Bohemia Interactive Simulations  (full name of BISim)
-#  - SAIC                             (canonical defense services incumbent)
-#  - Leidos                           (canonical defense services incumbent)
-#  - HII Mission Technologies         (canonical naval competitor)
-#  - Vigor                            (Navy ship-repair contractor)
-#  - Titan Acquisitions               (Navy ship-repair contractor)
-#  - MHI / Marine Hydraulics International  (Navy ship-repair contractor)
-#  - General Dynamics NASSCO          (Navy shipbuilder)
-#  - BAE Norfolk                      (Navy ship-repair facility)
-#  - Bollinger                        (Navy shipbuilder)
-#  - Fincantieri Marinette Marine     (Navy shipbuilder)
+#  REMOVED FROM §11.3 (BDA simulation platform candidates — pre-named without sources):
+#    - BISim
+#    - VBS4
+#    - MAK ONE
+#    - MAK Technologies
+#    - VR-Forces
+#    - Bohemia Interactive Simulations
+#    - NVIDIA Omniverse
+#    - Improbable
+#
+#  REMOVED FROM §11.2 (candidate site-visit facilities — pre-named without sources):
+#    - HII Newport News
+#    - Vigor
+#    - Titan Acquisitions
+#    - BAE Norfolk
+#    - GD NASSCO
+#
+#  REMOVED FROM §5 (competitive landscape placeholder — pre-named without sources):
+#    - BAE Systems
+#    - Booz Allen
+#    - Alion
+#
+# If sources later surface any of the above organically, they can be added
+# back to analytical content with the citation attached. The watchlist in
+# _meta/named-entities-watchlist.yaml continues to track them.
