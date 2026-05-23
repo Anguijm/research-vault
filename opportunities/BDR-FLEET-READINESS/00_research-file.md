@@ -220,6 +220,8 @@ Citations in this file use the format `[s.YYYY-MM-DD-slug]` where the date is th
 
 Substantive content captured 2026-05-23 from the first source-finder pass:
 
+- [s.2026-05-23-swarmex-srf-jrmc] https://www.navsea.navy.mil/Home/RMC/SRF-JRMC/STORY/  →  `01_sources/2026-05-23_navsea-navy-mil_ship-wartime-repair-and-maintenance-exercise-swarm-ex-in-japan.md` (SRF-JRMC press release — first Japan SWARMEX on USS FITZGERALD; manually pasted by operator after original Article 3748283 URL returned 404)
+- [s.2026-05-23-navy-shipbuilding-plan-2026] https://media.defense.gov/2026/May/11/2003928909/-1/-1/1/NAVY%20SHIPBUILDING%20PLAN%20MAY%202026.PDF  →  `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.md` (Navy May 2026 Shipbuilding Plan — Acting SECNAV / CNO / CMC signatures; 60-page PDF binary also in `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.pdf`; manually downloaded by operator after both candidate URLs 404'd from the war.gov migration)
 - [s.2026-05-23-gao-26-109068-navy-and-coast-g] https://www.gao.gov/assets/gao-26-109068.pdf  →  `01_sources/2026-05-23_gao-gov_gao-26-109068-navy-and-coast-guard-shipbuilding-a-discipline.md` (GAO testimony, 22 Apr 2026 — Navy and Coast Guard Shipbuilding)
 - [s.2026-05-23-gao-26-108140-weapon-system-su] https://www.gao.gov/assets/gao-26-108140.pdf  →  `01_sources/2026-05-23_gao-gov_gao-26-108140-weapon-system-sustainment-dod-identified-criti.md` (GAO report, Apr 2026 — Weapon System Sustainment)
 - [s.2026-05-23-the-time-is-ripe-for-next-step] https://www.stimson.org/2026/the-time-is-ripe-for-next-steps-on-us-japan-military-shipbuilding-cooperation/  →  `01_sources/2026-05-23_stimson-org_the-time-is-ripe-for-next-steps-on-us-japan-military-shipbui.md` (Stimson Center, 23 Apr 2026 — US-Japan MSMRO Task Force)
@@ -238,9 +240,9 @@ The first ingest pass left these in incomplete state. They are listed here so fu
 
 **Genuine 404 at the server (URL is dead or relocated):**
 
-- The SRF-JRMC SWARMEX article previously at `https://www.navsea.navy.mil/Media/News/Article/3748283/srf-jrmc-successfully-completes-first-ship-wartime-repair-and-maintenance-exerc/` is returning 404 and has no Wayback Machine snapshot. The article is referenced in §1 as the public-record anchor for this research track and is the only ingest in our queue that was scored 9/10 by the source-ranker. Recovery options: search the NSWC SRF-JRMC story index at `navsea.navy.mil/Home/RMC/SRF-JRMC/STORY/`, or refetch from a Google-cached snapshot via browser.
-- The defense.gov PDF of the Navy Shipbuilding Plan May 2026 at `https://www.defense.gov/Portals/1/Documents/pubs/Navy-Shipbuilding-Plan-May-2026.pdf` redirects to a war.gov path that returns 404. The defense.gov transcript version of the same content was attempted but also returned a "page not found" body (HTML 200 with error message); see empty-ingest note below.
-- Three NSWC Carderock / NAVSEA Public Affairs article URLs returned 404 (article IDs 3748283 SWARMEX, 3774844 Vertical Launching System tool, 3750059 Carderock Orion Recovery). Three NAVSEA 404s on different article IDs may indicate a site-pattern change parallel to the defense.gov → war.gov migration.
+- ~~The SRF-JRMC SWARMEX article previously at `https://www.navsea.navy.mil/Media/News/Article/3748283/...`~~ — **RECOVERED 2026-05-23.** Operator manually located the article at the SRF-JRMC story index page and pasted the body text. Now ingested as `[s.2026-05-23-swarmex-srf-jrmc]` — see §8.1.
+- ~~The defense.gov PDF of the Navy Shipbuilding Plan May 2026~~ — **RECOVERED 2026-05-23.** Operator manually downloaded the 9.4 MB PDF and uploaded it. Now ingested as `[s.2026-05-23-navy-shipbuilding-plan-2026]` with the binary stored in `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.pdf` — see §8.1.
+- Two NSWC / NAVSEA Public Affairs article URLs are still returning 404 (article IDs 3774844 Vertical Launching System tool, 3750059 Carderock Orion Recovery). The SWARMEX 404 plus these two suggests a site-pattern change parallel to the defense.gov → war.gov migration. Recovery via the SRF-JRMC story index pattern is possible but lower-priority than the SWARMEX article was.
 
 **Bot-detection 403 (manual download required):**
 
@@ -291,6 +293,23 @@ The discipline that follows from this constraint:
 - The contact's organization is reachable via standard public-facing engagement paths. The play is to use those public paths (industry days, formal SBIR or STTR responses, NAVSEA-hosted touchpoints) and not to leverage the contact's working-level channel directly. See section 11 for the engagement implications.
 - If a future deliverable benefits from a quote or framing that originates with the contact, that framing must first be matched against a public source — either a public statement by a named individual at the relevant Navy organization or an analytical assessment that the operator is comfortable labeling as such. The contact themselves stays out of the brief.
 - This constraint is parallel to the classification gradient in section 9.1. Both are sensitivity disciplines that limit what can be said in derived artifacts. Both are load-bearing on the integrity of the eventual recommendation.
+
+### 9.4 "PAE Industrial Operations" terminology ambiguity — verification flag
+
+The Navy May 2026 Shipbuilding Plan (page 34) uses the term "PAE Industrial Operations" to describe a Navy-internal organizational structure that "combines control of the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, the four Navy Shipyards and all Navy Regional Maintenance Centers." This usage is distinct from — and may not be the same entity as — the privately-owned ship-repair business "PAE Industrial Operations" that was acquired by Amentum in 2024. Both entities use the identical name.
+
+The vault-wide glossary at `_meta/glossary.md` currently defines PAE-IO as the Amentum subsidiary. The Navy plan describes a structure that does not sound like a private contractor. Three possibilities:
+
+1. The Amentum subsidiary PAE-IO is contracted to operate the Navy Regional Maintenance Centers, NAVSEA Industrial Operations Directorate, and the four Navy Shipyards. In this reading, the Navy plan is saying "we will run our maintenance through this contracted operator."
+2. The Navy has stood up a parallel Navy-internal organization that happens to share the PAE-IO name with the Amentum subsidiary. Possible if the acronym now expands differently (e.g., "Public Affairs Engagement" or some other Navy term).
+3. The same name is being used for the same thing — meaning the Amentum subsidiary has been given operational control of the four public Navy shipyards and the NAVSEA Industrial Operations Directorate. This would be a substantial change in how Navy ship-repair work is organized.
+
+The discipline that follows:
+
+- The vault glossary entry for PAE-IO must NOT be edited until this ambiguity is resolved.
+- No claim in this research file or any derived deliverable should treat the two PAE-IO usages as interchangeable until a primary source confirms which interpretation is correct.
+- The next find_sources pass should include a targeted query for NAVSEA Industrial Operations Directorate organizational announcements and any PAE / Amentum public statements about Navy Regional Maintenance Center contracts. The right primary source to resolve this is either a NAVSEA organizational chart, an Amentum SEC filing, or a DoD press release announcing the consolidation.
+- Until resolved, both usages should be cited verbatim with the source attached and not paraphrased.
 
 ---
 

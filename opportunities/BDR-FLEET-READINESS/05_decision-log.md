@@ -175,6 +175,30 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-23 — Two load-bearing sources recovered via manual operator paste
+
+The operator manually recovered two sources that the automated ingest pipeline could not reach.
+
+**SRF-JRMC SWARMEX article.** Operator navigated to the SRF-JRMC story index page and copied the article body text into chat. The original `navsea.navy.mil/Media/News/Article/3748283/...` URL remains 404 from both browser and script access. Ingested as `[s.2026-05-23-swarmex-srf-jrmc]` at `01_sources/2026-05-23_navsea-navy-mil_ship-wartime-repair-and-maintenance-exercise-swarm-ex-in-japan.md`. The article confirms what the research has been hypothesizing about SWARMEX: Ship Wartime Repair and Maintenance Exercises are an ongoing series in the U.S. Seventh Fleet Area of Responsibility, designed to give Forward Deployed Ship Repair Teams experience in "battle damage assessment and repair" (verbatim) and to develop partnerships with local ship-repair industry for maintenance and repair resiliency. The first Japan exercise was held at the Japan Maritime United Maizuru Yard with maintenance executed on USS FITZGERALD (DDG 62), and JMSDF stepped in when mooring at JMU failed. The article also surfaces a new term — Forward Deployed Ship Repair Teams (FDSRT) — that should land in the per-opportunity glossary.
+
+**Navy May 2026 Shipbuilding Plan PDF.** Operator manually downloaded and uploaded the 9.4 MB PDF after both candidate URLs (`navy.mil/Portals/1/Documents/...` and `media.defense.gov/2026/May/11/...`) returned 404 from the war.gov migration. The binary is stored at `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.pdf` and the citation-companion markdown at `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.md`. The plan is signed by Acting SECNAV Hung Cao, the 34th CNO (Admiral Daryl Caudle), and the 39th CMC (Gen. Eric M. Smith). Multiple load-bearing passages for this research track: a Ship Repair and Maintenance section on page 34 that explicitly states "the Navy and Marine Corps must have the right to repair their own equipment," describes the planned shift to a maintenance continuum with AI / machine learning predictive maintenance and ship digital twins, and announces a "PAE Industrial Operations" organizational consolidation that controls the Navy Regional Maintenance Centers + NAVSEA's Industrial Operations Directorate + the four public Navy Shipyards.
+
+**PAE-IO terminology ambiguity flagged.** The Navy plan uses "PAE Industrial Operations" to describe a Navy organizational structure. The vault glossary currently defines PAE-IO as the Amentum-owned ship-repair subsidiary. These are either (a) the same entity with the Amentum subsidiary now operating the Navy shipyards, (b) a different entity with the same name, or (c) the Amentum subsidiary contracted to run the consolidated organization. A new subsection 9.4 of the research file records the ambiguity and the discipline that follows from it. The glossary entry for PAE-IO is NOT being edited until this is resolved by a primary source.
+
+**Connection to the Warren / Sheehy 'Military Right to Repair' inbox hit.** The 8/10-scored Warren / Sheehy Senate press release on military right-to-repair surfaced in the second find_sources pass. The Navy Shipbuilding Plan's page-34 statement that "the Navy and Marine Corps must have the right to repair their own equipment" is independent primary-source support for the same policy push. The Senate push and the Navy plan are aligned, not in tension. The right-to-repair thread is now a load-bearing claim supported by two independent primary sources from the executive and legislative branches.
+
+**Source ledger restructure.** §8.1 of the research file gained two new entries at the top of the list. §8.2 (failed ingests) was updated: SWARMEX and the Shipbuilding Plan PDF entries moved out of the failed list (strikethrough kept for reference) and noted as recovered. The two remaining NAVSEA 404s (Vertical Launching System tool, Carderock Orion Recovery) remain in §8.2 as lower-priority recoveries.
+
+**Out of scope this session:** the empty-ingest defense.gov shipbuilding plan transcript file in `01_sources/` (which was the same content but as a 404-rendered-as-200) is now redundant with the recovered PDF. It should be moved to `01_sources/_quarantine/` along with the other broken ingests. Cleanup deferred.
+
+---
+
+### 2026-05-23 — SAM ranker built and tested
+
+(See `f700634` commit.) `lib/ranker.rank_sam_candidates()` and the SAM-specific gpt-4o-mini prompt added; `find_sources._run_sam_search` now fetches each notice's description from the SAM API, packages a candidate dict with full metadata, ranks each via OpenAI, and drops anything below `sam_min_score` (default 5, configurable per opportunity). `inbox.append_sam_candidates` now renders the score tag. Validated against three synthesized cases (BDR training RFI 8/10, Long Beach disposal 3/10, janitorial services 1/10). The 50 SAM candidates currently in the inbox were NOT re-ranked retroactively; offered a one-shot rerank script as follow-up.
+
+---
+
 ### 2026-05-23 — Research origin and contact-protection discipline recorded
 
 The operator disclosed that this research track was initiated based on a working observation from a working-level Navy ship-repair contact. The operator and Claude agreed on two sensitivity questions:
