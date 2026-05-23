@@ -175,6 +175,18 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-24 — Section 7 hypothesis legs refocused on BDAR/BDAT scope; OCI primer captured
+
+Two changes following the BDAR/BDAT scope narrowing and the brainstorming session.
+
+**Section 7 hypothesis legs rewritten** to match the BDAR/BDAT-and-training-simulation-exercises scope. The prior six-leg framing was broader BDR / industrial-base; the refocused six legs are: (1) the BDAR/BDAT training-and-simulation demand gap; (2) the procurement-path reality — Navy is acquiring this through contractors not solely organically; (3) NSWC Carderock unclassified modeling fidelity; (4) BDAR repair-side training-progression viability; (5) relationship feasibility — CACI can be positioned at the right Navy organizations, framed at the general competitive level without operator-side knowledge entering the leg; (6) BDAT training-pipeline viability — gamified-sim plus real-world-exercise model is not already saturated. Each leg retains the falsifier structure and is testable against public sources. The "industrial-planning gap" leg from the prior framing is replaced by the new "procurement-path reality" leg, which is the BDAR/BDAT-specific analog.
+
+**OCI primer captured at `_meta/oci-primer.md`** as a vault-wide reference. The primer covers the three flavors of Organizational Conflict of Interest (unequal access to information, biased ground rules, impaired objectivity), the standard four-component mitigation pattern (documented organizational firewall, public-information-only proposal content, formal disclosure to the contracting officer, written letter authorizing the bid), how the vault's existing disciplines map to OCI hygiene, what to clear with contractor contracts and legal teams before any bid work, and where the OCI rule does NOT apply. The primer is referenced from section 7 leg 5 as the discipline that governs how operator-side knowledge about CACI's current contract footprint stays out of analytical content. CLAUDE.md was updated to point at the primer.
+
+The primer is intentionally vault-wide rather than BDR-specific because the OCI discipline applies to every opportunity in the vault. Future opportunity scaffolds can reference the primer without needing to re-explain the concept.
+
+---
+
 ### 2026-05-24 — Scope tightened to BDAR + BDAT (training, simulation, exercises); MHI scrubbed
 
 Operator narrowed the research scope to two pillars: Battle Damage Assessment and Repair (BDAR) and Battle Damage Assessment Team (BDAT), specifically in the training, simulation, and exercises space. The earlier broader "BDR" framing included industrial-base, shipbuilding-capacity, and ship-repair contracting threads that are now out of load-bearing scope.

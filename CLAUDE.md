@@ -38,6 +38,7 @@ of truth; Word artifacts are derivatives.
 - Brief-build driver: `_scripts/build_brief.py` + per-version configs in `_scripts/briefs/`
 - Named-entity audits: `_scripts/audit_named_entities.py` + `_scripts/audit_search_config.py`
 - Named-entity watchlist: `_meta/named-entities-watchlist.yaml`
+- OCI (Organizational Conflict of Interest) primer: `_meta/oci-primer.md`
 
 ## Conventions
 
