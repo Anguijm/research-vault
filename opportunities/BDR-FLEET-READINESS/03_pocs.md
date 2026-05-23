@@ -15,5 +15,5 @@ Re-verify all entries every 90 days. Defense roles rotate.
 
 ## Notes
 
-- POCs to scope after source ingestion: NSWC Carderock Division Technical Director and BDR-relevant department head(s); NAVSEA Commander's public-engagement office; SASC Seapower Subcommittee staff; CNO's readiness shop; PAE-IO (Amentum) program leadership for Navy ship-repair business.
+- POCs to scope after source ingestion: NSWC Carderock Division Technical Director and BDR-relevant department head(s); NAVSEA Commander's public-engagement office; SASC Seapower Subcommittee staff; CNO's readiness shop; the leadership of the Navy's PAE Industrial Operations consolidated structure (Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, the four public Navy Shipyards).
 - Per SOP §2.1 rule 3, every POC entry above must have a Source URL pointing to a primary source (.mil announcement, congressional record, SEC filing, company press release) and a last-verified date.

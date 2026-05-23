@@ -175,6 +175,31 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-23 — Named-contractor discipline: do not introduce names unless sources do
+
+Operator clarified that specific commercial contractor names should not appear in vault analytical content unless they surface organically in ingested sources. The vault was previously naming "Amentum" as the industrial-supply-side actor across the research file, glossary, points-of-contact directory, index.md frontmatter, and source-file notes — but a grep of the 13 ingested source files confirmed that Amentum appears in exactly zero of them. Every Amentum reference in the vault was analyst-introduced, not source-supported.
+
+What changed:
+
+- `_meta/glossary.md` — the Amentum entry was removed entirely. The PAE-IO entry was simplified to no longer reference Amentum in the negation ("not an Amentum subsidiary" framing dropped because that requires naming Amentum to say it isn't).
+- `00_research-file.md` header `Customer:` field — "PAE-IO / Amentum as industrial supply-side" rewritten to "the Navy's PAE Industrial Operations consolidated structure as the ship-repair-and-maintenance organization."
+- `00_research-file.md` acronym table — PAE-IO row corrected to describe the Navy consolidation.
+- `00_research-file.md` §1 thread 2 — "Amentum and other major Navy MRO contractors" replaced with "the private ship-repair contractor base."
+- `00_research-file.md` §9.4 — Amentum mentions removed; the discipline now reads as "specific commercial contractors should be named only when they surface organically in sources."
+- `00_research-file.md` §10.1 PAE-IO public footprint — research-target bullets rewritten to remove the assumption that PAE-IO has a private contractor's research footprint (USAspending contract history of "PAE-IO" doesn't fit a Navy reorg).
+- `index.md` `customer:` frontmatter — same correction as the research file header.
+- `03_pocs.md` POCs-to-scope note — "PAE-IO (Amentum) program leadership" replaced with "leadership of the Navy's PAE Industrial Operations consolidated structure."
+- `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.md` — the two analytical notes that referenced Amentum were rewritten.
+
+What is left unchanged:
+
+- `_inbox.md` Amentum mentions (the "Amentum Holdings Q2 earnings call presentation" 7/10 hit and the Jacobs Solutions / Amentum revaluation note) remain in the inbox. Those came from `find_sources` queries and are exactly the kind of "organic" surfacing the operator carved out. Operator decides whether to approve them at triage time.
+- Historical decision-log entries that record the previous Amentum confusion (this entry above and the entry below describing the PAE-IO resolution) are preserved as the record of what happened. The decision log is append-only and shouldn't be rewritten to hide prior errors.
+
+**Process lesson recorded as feedback memory:** the pattern of introducing a named entity into vault analytical content based on inferred context (rather than source content) is a recurring SOP rule 4 hazard. The discipline going forward is to wait for the source to surface the name organically before writing it into FACT-style prose or glossary entries.
+
+---
+
 ### 2026-05-23 — PAE-IO terminology resolved by operator
 
 The §9.4 verification flag added earlier today is closed. Operator confirmed that PAE Industrial Operations as used in the May 2026 Navy Shipbuilding Plan is a Navy reorganization, not a commercialization of the public shipyards or Regional Maintenance Centers, and is not the same thing as any Amentum-owned defense services subsidiary.

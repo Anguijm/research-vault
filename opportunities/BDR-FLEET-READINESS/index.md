@@ -4,7 +4,7 @@ aliases:
   - BDR-FLEET-READINESS
 id: BDR-FLEET-READINESS
 title: Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning
-customer: multi-customer research track  # confirmed 2026-05-21; candidate downstream customers when track resolves: NSWC Carderock Division (modeling source), NAVSEA (parent), OPNAV / N9 (fleet readiness demand-side), PAE-IO / Amentum (industrial supply-side)
+customer: multi-customer research track  # confirmed 2026-05-21; candidate downstream customers when track resolves: NSWC Carderock Division (modeling source), NAVSEA (parent), OPNAV / N9 (fleet readiness demand-side), Navy PAE Industrial Operations consolidated structure (ship-repair-and-maintenance organization, per May 2026 Shipbuilding Plan)
 gate: identify           # identify | pursue | bid | won | lost | dropped
 status: triaged          # triaged | research | drafting | review | shipped | stalled
 recommendation:

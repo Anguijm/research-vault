@@ -1,6 +1,6 @@
 # Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning — Research File
 
-**Customer:** Multi-customer research track (confirmed by operator 2026-05-21; candidate downstream customers if/when the track resolves to a named opportunity: NSWC Carderock Division as modeling source, NAVSEA as parent command, OPNAV / N9 as fleet-readiness demand-side, PAE-IO / Amentum as industrial supply-side)
+**Customer:** Multi-customer research track (confirmed by operator 2026-05-21; candidate downstream customers if/when the track resolves to a named opportunity: NSWC Carderock Division as modeling source, NAVSEA as parent command, OPNAV / N9 as fleet-readiness demand-side, the Navy's PAE Industrial Operations consolidated structure as the ship-repair-and-maintenance organization)
 **Opportunity ID:** BDR-FLEET-READINESS
 **Gate:** Identify
 **Started:** 2026-05-21
@@ -23,7 +23,7 @@
 > | NAVSEA | Naval Sea Systems Command — the Navy organization that owns NSWC Carderock, the public shipyards, and most ship-repair contracting. |
 > | OPNAV / N9 | The Chief of Naval Operations' staff. N9 is the Warfare Systems directorate, which owns much of the fleet-readiness demand picture. |
 > | NWDC | Naval Warfare Development Command — the Navy's doctrine and tactical-training authority. |
-> | PAE-IO | PAE Industrial Operations — the ship-repair business now owned by Amentum after a 2024 acquisition. The industrial-supply-side actor we are tracking. |
+> | PAE-IO | PAE Industrial Operations — a Navy-internal organizational consolidation described in the May 2026 Navy Shipbuilding Plan combining the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy Shipyards. Not a commercialization; not a private contractor. Acronym expansion not stated in the source. |
 > | LVC | Live, virtual, constructive — a category of military simulation training that mixes real units, simulator pilots, and computer-generated forces. |
 > | M&S | Modeling and simulation. |
 > | SBIR / STTR | Small Business Innovation Research and Small Business Technology Transfer — federal R&D contracting paths that often serve as a low-friction first engagement with Navy labs. |
@@ -48,7 +48,7 @@ There are five threads inside that question, and the research has to address all
 
 1. **Is Carderock's modeling actually useful for fleet training?** That is, can the Navy's ship-damage modeling work be folded into multidomain training events at a fidelity that operators would actually use?
 
-2. **Is there a gap on either side of that modeling?** Specifically, do current fleet training scenarios understate how badly ships get hit in a real fight, and does the industrial-supply side (Amentum and other major Navy maintenance-repair-overhaul contractors, plus the public-yard / Navy Regional Maintenance Center system now consolidated under the Navy's PAE Industrial Operations organizational structure described in the May 2026 Shipbuilding Plan) plan for steady-state repair when the actual demand under wartime conditions would be much higher?
+2. **Is there a gap on either side of that modeling?** Specifically, do current fleet training scenarios understate how badly ships get hit in a real fight, and does the industrial-supply side — the public-yard and Navy Regional Maintenance Center system now consolidated under the Navy's PAE Industrial Operations structure (May 2026 Shipbuilding Plan), together with the private ship-repair contractor base — plan for steady-state repair when the actual demand under wartime conditions would be much higher?
 
 3. **What does the training program itself look like?** The working concept is a three-step progression — start with tabletop scenarios in a classroom, then guided site visits to actual repair facilities, then hands-on pilot operations on instrumented training rigs. Each step is a fidelity step-up and can also be a classification step-up.
 
@@ -298,14 +298,13 @@ The discipline that follows from this constraint:
 
 The May 2026 Navy Shipbuilding Plan (page 34) uses the term "PAE Industrial Operations" to describe a Navy-internal organizational consolidation that combines the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy Shipyards into a single structure.
 
-**Operator confirmed 2026-05-23:** PAE Industrial Operations as used in the Navy Shipbuilding Plan is a Navy reorganization — NOT a commercialization of the public shipyards and Regional Maintenance Centers, and not the same thing as any Amentum-owned defense services subsidiary. The vault was previously conflating two unrelated things under the same acronym; the Amentum-side framing was incorrect and has been corrected in `_meta/glossary.md`.
+**Operator confirmed 2026-05-23:** PAE Industrial Operations as used in the Navy Shipbuilding Plan is a Navy reorganization, not a commercialization of the public shipyards and Regional Maintenance Centers, and not a private contractor.
 
 **Discipline going forward:**
 
-- PAE-IO in this research file and in any derived deliverable refers exclusively to the Navy organizational structure.
-- Amentum is a separate entity — a major Navy maintenance, repair, and overhaul contractor. Amentum is the industrial-supply-side actor whose planning assumptions the research has been tracking. Amentum is NOT the parent of PAE-IO; that framing was incorrect and should not appear in any future writing.
-- The acronym expansion of "PAE" in this Navy-internal context is not given in the primary source. If we find a NAVSEA or Office of the Secretary of the Navy organizational announcement that expands the acronym, it should be added to the glossary.
-- Anywhere in the file that currently reads "PAE-IO / Amentum" should be treated as a candidate for re-wording on next edit pass; both entities are mentioned because they both matter to the research, but they are separate.
+- PAE-IO in this research file and in any derived deliverable refers exclusively to the Navy organizational structure described above.
+- The acronym expansion of "PAE" in this Navy-internal context is not given in the primary source. If a NAVSEA or Office of the Secretary of the Navy organizational announcement that expands the acronym appears, it should be added to the glossary.
+- Specific commercial contractors in the Navy ship-repair-and-overhaul space should be named in the research file only when they surface organically in ingested sources, not pre-emptively assumed.
 
 ---
 
@@ -338,10 +337,11 @@ This plan is the scaffolded starting point — refine after initial scoping.
 6. **Adjacent / context (tier 4 trade press; use sparingly).**
    - USNI News, Defense News, Breaking Defense, Naval News for context and named-personality quotes (with click-verify per SOP rule 6).
 
-7. **PAE-IO public footprint.**
-   - PAE Industrial Operations contract history on USAspending and SAM.gov (via the existing vault tooling: `usaspending.py` and `sam_gov.py`).
-   - Amentum (parent of PAE post-acquisition) investor materials referencing the IO business.
-   - Public testimony and trade-press coverage of PAE-IO repair-capacity work.
+7. **PAE Industrial Operations consolidated structure — public footprint.**
+   - NAVSEA and Office of the Secretary of the Navy organizational announcements that name PAE-IO and define its scope.
+   - Navy Regional Maintenance Center and public Navy Shipyard contracting activity that flows through PAE-IO (via the existing vault tooling: `usaspending.py` and `sam_gov.py`).
+   - Public testimony and trade-press coverage of the consolidation and its effect on ship-repair capacity.
+   - Specific commercial ship-repair contractors named in the research file should appear only when they surface organically in ingested sources, not pre-emptively assumed.
 
 ### 10.2 Two strongest counter-arguments a skeptical reviewer would raise
 
