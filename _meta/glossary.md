@@ -208,9 +208,13 @@ The functional ones include:
 
 **M&S.** Modeling and simulation.
 
-**BDR.** Battle damage repair. The engineering work of fixing a ship (or aircraft, or vehicle) that has been hit. Distinct from BDA below.
+**BDR.** Battle damage repair. The narrower term for the engineering work of fixing a ship (or aircraft, or vehicle) that has been hit. Superseded by BDAR as the primary scope frame in the BDR-FLEET-READINESS research track on 2026-05-24, but the BDR short form remains in the folder ID and in earlier vault content.
 
-**BDA.** Battle damage assessment. The diagnostic work of figuring out what is broken on a hit platform and how bad it is. Upstream of BDR.
+**BDA.** Battle damage assessment. The diagnostic work of figuring out what is broken on a hit platform and how bad it is. Subsumed under BDAR.
+
+**BDAR.** Battle Damage Assessment and Repair. The formal U.S. military term for the unified cycle of assessing damage on a struck platform, classifying it, prioritizing the repair work, and executing it. The primary scope frame for the BDR-FLEET-READINESS research track as tightened by the operator on 2026-05-24 — specifically focused on training, simulation, and exercises in this space, not the broader ship-repair industrial base.
+
+**BDAT.** Battle Damage Assessment Team. The personnel cell that performs the assessment side of BDAR on a hit platform. BDAT training is one of the two pillars of the BDR-FLEET-READINESS research scope (the other is the repair-side training, also under BDAR).
 
 **COMPTUEX.** Composite Training Unit Exercise. A large Navy training event each carrier strike group runs before deploying.
 
