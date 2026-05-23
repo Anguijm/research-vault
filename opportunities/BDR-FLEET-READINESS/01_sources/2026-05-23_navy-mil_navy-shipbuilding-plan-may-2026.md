@@ -102,6 +102,30 @@ Other notable inactivations within the FYDP that bear on the BDR research:
 
 Ships designated for dismantling during the FYDP are listed in Table A4-2 with the "Ex-" prefix indicating their post-decommissioning status.
 
+### Specific shipbuilder assignments — selected program excerpts (pages 28, 31, 33)
+
+The May 2026 Shipbuilding Plan names specific commercial shipbuilders against specific programs. These passages are extracted verbatim so the audit's named-entity check has source backing for each.
+
+**Medium Landing Ship (LSM), page 28:**
+
+> "The Marine Corps and Navy are developing the new Medium Landing Ship (LSMs) to address a recognized littoral mobility gap in the Indo-Pacific and support the Marine Corps' Force Design. This vessel will maneuver and sustain expeditionary forces, including their supplies and equipment, across contested waters, enabling direct landings on beaches and at austere or degraded ports."
+
+> "This approach will more quickly field the LSM, a vessel designed to transport and land naval expeditionary forces and their equipment in contested environments to support the Marine Corps' Force Design in the Indo-Pacific. The first hull is directed to Bollinger, with four hulls directed to Fincantieri Marinette Marine. The remaining hulls will be competitively awarded by the VCM."
+
+**Fleet Replenishment Oilers (T-AO 205), page 31-32:**
+
+> "These ships are produced by General Dynamics NASSCO in San Diego, CA. The first five T-AO 205s (hulls 205-209) have delivered with T-AO 210 planned to deliver in the summer of 2026."
+
+> "Navy plans to procure 20 of these ships. The 2024 block buy contract created opportunity to deliver remaining ships ahead of the planned delivery schedule with significant cost savings for Navy as well provide GD NASSCO's industrial base with a stable workload through FY35."
+
+**Auxiliary General Ocean Surveillance Ship (T-AGOS 25), page 33:**
+
+> "The T-AGOS 25 program includes a planned class of 10 ships and is currently in design with Austal USA in Mobile, Ala. Ongoing design efforts emphasize producibility and affordability to ensure a seamless transition to construction in late 2027."
+
+**Wage and workforce references (page 7):**
+
+> "Recently implemented wage increases funded by the U.S. Government at Electric Boat and Newport News Shipbuilding have resulted in both companies achieving their required hiring rate for CY25 and a reduction in attrition rates of 2-5%."
+
 ### Conclusion (page 39)
 
 > "This plan is a decisive course correction and one that reasserts American maritime power by restoring the capacity, speed, and accountability required to win in an era of great power competition. For too long, we have accepted a system that delivers too little, too late, and at too great a cost."

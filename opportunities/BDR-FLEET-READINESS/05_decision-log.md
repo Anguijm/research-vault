@@ -175,6 +175,26 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-23 — Section 4 (Customer landscape) and Section 5 (Competitive landscape) populated from ingested sources
+
+Both sections drafted under the named-contractor discipline and verified by both audits before sync.
+
+**Section 4 (Customer landscape) — six subsections drawn from primary sources.**
+
+4.1 Senior leadership names Hung Cao (Acting SECNAV), Admiral Daryl Caudle (34th CNO), General Eric M. Smith (39th CMC), and Secretary of Navy John Phelan — all from the May 2026 Shipbuilding Plan and the Stimson Task Force recommendations. 4.2 covers the NAVSEA organizational structure consolidated under PAE Industrial Operations, with the four public Navy shipyards named per Caudle's testimony: Pearl Harbor Naval Shipyard (PHNS), Puget Sound Naval Shipyard (PSNS), Portsmouth Naval Shipyard (PNSY), and Norfolk Naval Shipyard (NNSY). 4.3 frames NSWC Carderock as the modeling-source customer with leadership still a research target. 4.4 covers OPNAV/N9 demand-side framing per Caudle's four-priority structure (Lethal & Effective Force; Total Force Readiness; Capable & Resilient Warfighter; Industrial & Logistics Capacity). 4.5 covers the Pacific Fleet engagement layer — SRF-JRMC, SWARMEX, JMSDF, JMU, and the Stimson Task Force co-leads (Andrew Oros, Steve Brock). 4.6 records the Maritime Action Plan governance (DoC lead, DoN advisory) and notes the defense.gov → war.gov migration's operational consequence for source ingestion. 4.7 closes with an Assessment of the three customer-landscape layers (strategic, execution, demand) and ties back to the §9.3 contact-protection discipline.
+
+**Section 5 (Competitive landscape) — five subsections.**
+
+5.1 lists the new-construction shipbuilders named in the May 2026 Shipbuilding Plan with their specific program assignments: Huntington Ingalls Industries (LPD-17 Flight II via Ingalls; wage increases at Newport News), General Dynamics NASSCO (T-AO 205 class, 20 ships planned), Electric Boat (workforce wage increases), Bollinger (first LSM hull), Fincantieri Marinette Marine (LSM hulls 2-5), Austal USA (T-AGOS 25 class, 10 ships). 5.2 documents the operator-allowlisted naval modeling-and-simulation incumbents from §7 leg 5 (SAIC, Leidos, HII Mission Technologies) with explicit Assessment flags that specific capability claims about any of them remain open research. 5.3 covers the international partnership thread — Japan Maritime United, JMSDF, the broader Japanese shipbuilding industry, the $550B July 2025 trade arrangement. 5.4 documents what the section explicitly does not yet know — private U.S. ship-repair contractor mix, Carderock-adjacent technical-partner contract footprints, commercial simulation-platform vendors for any future BDA pipeline. 5.5 closes with the Assessment that the competitive picture is unsharp at the ship-repair and modeling-and-simulation layers (which is where any BDR recommendation would compete) and identifies the next targeted source-ingestion moves.
+
+**Two small source-file updates supporting the §4 + §5 work.** The Navy May 2026 Shipbuilding Plan source-companion markdown gained three verbatim passages I had previously excluded — the LSM section (page 28, naming Bollinger and Fincantieri Marinette Marine), the T-AO 205 section (page 31-32, naming General Dynamics NASSCO with the 20-ship plan), and the T-AGOS 25 section (page 33, naming Austal USA). These were already in the PDF binary at `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.pdf` but had not been extracted into the searchable markdown summary; without the markdown extraction, the entity audit could not see the source backing.
+
+**Both audits PASS after the work:** `audit_named_entities.py` 0 contaminated / 7 allowlisted / source-only set updated; `audit_search_config.py` 0 contaminated. The new entries in the source-only bucket are Japan Maritime United (the full name; JMU short form is now in writing) and GD NASSCO (shorthand appears once in §5.5 wording — handled by using the full name "General Dynamics NASSCO" in the actual claim).
+
+**Section 6 (Our fit) is the natural next analytical move.** It requires more Assessment synthesis than §4 or §5 because it maps CACI / ARKA capabilities against the demand signals in §3 and the competitive picture in §5. Deferred to the next pass.
+
+---
+
 ### 2026-05-23 — Full entity-pollution triage executed; both audits PASS
 
 Following the audit-tooling build and the prior Amentum cleanup, the operator approved a four-part triage of the remaining 23 contaminated entries flagged by `_scripts/audit_named_entities.py`.

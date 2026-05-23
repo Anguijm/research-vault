@@ -149,13 +149,104 @@ This subsection is the thinnest of the three because the first source-finder pas
 
 ## 4. Customer landscape
 
-*[Section reserved — populate after the customer-field decision is made and after source ingestion. Will include NAVSEA / NSWC structure, named POCs, reporting lines. Cross-ref to `03_pocs.md` for details.]*
+This section maps the candidate downstream customers for this research track. Each claim below is sourced from an ingested primary source and carries a citation tag. Names of specific commercial contractors are deliberately scoped to what sources surface organically; the per-opportunity allowlist at `_entity-allowlist.yaml` documents any operator-blessed exceptions. Cross-reference to `03_pocs.md` for the points-of-contact table as it gets populated.
+
+### 4.1 Senior civilian and uniformed leadership at the top
+
+**Department of the Navy leadership as named in the May 2026 Shipbuilding Plan and the May 14, 2026 CNO testimony to the House Armed Services Committee.** Acting Secretary of the Navy Hung Cao signed the foreword of the Navy's May 2026 Shipbuilding Plan [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.** The 34th Chief of Naval Operations, Admiral Daryl L. Caudle, signed the same plan's CNO foreword and delivered the FY27 budget posture statement to the House Armed Services Committee on 14 May 2026 [s.2026-05-23-navy-shipbuilding-plan-2026][s.2026-05-14-caudle-testimony]. **FACT.** General Eric M. Smith, the 39th Commandant of the Marine Corps, signed the Marine Corps foreword [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+
+**U.S. Secretary of the Navy John Phelan** chose Japan as his first foreign trip destination and publicly supported a greater Japanese role in maintenance, repair, and overhaul for the U.S. Navy [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.** Phelan also expressed interest in working with Japan to co-develop and co-produce dual-use ships [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
+
+### 4.2 The NAVSEA organizational structure consolidated under PAE Industrial Operations
+
+**The Navy's May 2026 Shipbuilding Plan describes a Navy-internal organizational consolidation, called PAE Industrial Operations, that combines the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy Shipyards into a single structure** [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.** The plan describes the intent of this structure as tying "the contracting functions for maintenance work with the fleet components that must have responsibility for the ships themselves" [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT (direct quotation).**
+
+The four public Navy shipyards under this structure are named in CNO Caudle's testimony as Pearl Harbor Naval Shipyard (PHNS), Puget Sound Naval Shipyard (PSNS), Portsmouth Naval Shipyard (PNSY), and Norfolk Naval Shipyard (NNSY) [s.2026-05-14-caudle-testimony]. **FACT.**
+
+### 4.3 NSWC Carderock — modeling source
+
+NSWC Carderock Division is the most-named candidate downstream customer for this research track. The vault glossary at `_meta/glossary.md` defines Carderock as the NAVSEA Naval Surface Warfare Center division responsible for ship survivability and damage modeling. Specific Carderock leadership and POCs remain a research target — the §11.1 engagement-surface inventory has not yet been populated.
+
+### 4.4 OPNAV / N9 — fleet-readiness demand-side
+
+OPNAV (the Office of the Chief of Naval Operations) and specifically N9 (the Warfare Systems directorate) own the fleet-readiness demand picture. CNO Caudle's testimony frames the FY27 posture around four named priorities: "Lethal & Effective Force" (Force Structure), "Total Force Readiness" (Infrastructure, Maintenance, Operations, and Spares), "Capable & Resilient Warfighter," and "Industrial & Logistics Capacity" [s.2026-05-14-caudle-testimony]. **FACT.** The second priority directly governs the maintenance budgets and shipyard work that this research track is concerned with.
+
+### 4.5 The Pacific Fleet engagement layer — SRF-JRMC and adjacent organizations
+
+The Ship Repair Facility, Japan Regional Maintenance Center (SRF-JRMC) ran the first Japan Ship Wartime Repair and Maintenance Exercise (SWARMEX) on USS FITZGERALD (DDG 62) in cooperation with the Japan Maritime Self-Defense Force (JMSDF) and Japan Maritime United (JMU), per a NAVSEA Public Affairs release [s.2026-05-23-swarmex-srf-jrmc]. **FACT.** Per the research-discipline note in §9.3, SRF-JRMC and adjacent Pacific Fleet ship-repair organizations are research subjects engaged via standard public-facing paths only.
+
+The Stimson Center's U.S.-Japan Task Force on Military Shipbuilding, Maintenance, and Repair Operations (MSMRO) released recommendations on 25 March 2026 calling for increased Repair, Maintenance, and Industrial work in Japan and adjacent third-country locations including the Philippines, Australia, and Guam [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.** The Task Force was co-led by Andrew Oros (Stimson Senior Fellow, Director, Japan Program) and Steve Brock (former Senior Advisor to the Secretary of the Navy, April 2022 to January 2025) [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
+
+### 4.6 Maritime Action Plan governance and the Department of War rebranding
+
+The Trump administration's Maritime Action Plan designates the Department of Commerce as the lead on foreign investment in the shipbuilding sector and designates the Department of the Navy in a formal advisory role in that process [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.** Executive Order 14269 ("Restoring America's Maritime Dominance") and Executive Order 14372 ("Prioritizing the Warfighter in Defense Contracting") frame the broader policy direction [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+
+The defense.gov → war.gov server migration has been visible throughout this research — multiple Navy and Department of War PDFs and transcripts could not be ingested through their original defense.gov URLs because the war.gov redirects 404. This is documented in §8.2 of the source ledger. **Assessment:** the rebranding is operationally consequential because publication paths are not yet stable across the migration; future research should expect URL volatility for any DON document published through 2026.
+
+### 4.7 Assessment of the customer landscape
+
+The customer landscape is not a single organization but a layered set, and the layering matters for any future capture decision.
+
+At the top is the strategic-direction layer — the White House, the Maritime Action Plan, the Acting Secretary of the Navy, and the CNO. They set the priorities and the dollar scale. The May 2026 Shipbuilding Plan and the May 14 CNO testimony are the two most consequential primary-source documents in this layer.
+
+Underneath that is the execution layer — NAVSEA, the PAE Industrial Operations consolidated structure that ties together the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy shipyards. This is where ship repair and maintenance work actually happens. The CNO's stated priorities about workforce, SIOP investment, and the SIMA stand-up all live in this layer.
+
+Underneath that is the demand layer — the deployed and forward-deployed fleet that needs the repair capacity. This is where SRF-JRMC, the Seventh Fleet, and U.S. Pacific Fleet show up. The SWARMEX program is a Pacific Fleet demand signal materialized as an exercise.
+
+The research-discipline note in §9.3 governs how the SRF-JRMC layer is engaged. Engagement at the strategic and execution layers proceeds through standard public-facing paths (industry days, formal SBIR/STTR responses, NAVSEA-hosted touchpoints), and the §11.1 engagement-surface inventory is the work stream that maps those touchpoints. The research-discipline note also makes clear that engagement at the demand layer does not leverage the operator's working-level contact — that channel stays outside the vault per §9.3.
 
 ## 5. Competitive landscape
 
 <!-- sensitivity:internal -->
 
-*[Section reserved — populate after source ingestion. Likely competitive entities to scope: incumbents on naval survivability and battle-damage-repair modeling-and-simulation work (HII Mission Technologies, SAIC, Leidos are operator-blessed for the §7 hypothesis leg 5 — other specific contractors named here only as ingested sources surface them); Navy Lab partnerships; and private ship-repair contractors named only as sources surface them.]*
+This section catalogues the named competitive actors that appear in ingested sources, plus the operator-allowlisted naval modeling-and-simulation incumbents required by the §7 hypothesis. Per the named-contractor discipline at `_meta/feedback_named_contractor_discipline.md`, specific commercial entities appear here only when a source has surfaced them organically or the per-opportunity allowlist documents why they are allowed.
+
+### 5.1 Shipbuilders named in the May 2026 Navy Shipbuilding Plan
+
+The Shipbuilding Plan's appendices and program-specific sections name the following shipbuilders as the production base for the PB27 Five-Year Defense Program. None of these are direct competitors for the BDR research's modeling-and-simulation thread — they are the new-construction shipbuilding industrial base — but they are load-bearing for the §3 demand-signal picture about industrial capacity and surge planning.
+
+- **Huntington Ingalls Industries (HII)** is described in the plan as a shipbuilder employing wage increases at its Newport News Shipbuilding subsidiary funded by the U.S. Government [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.** HII Ingalls Shipbuilding is named as the builder of the LPD-17 Flight II class amphibious warships [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+- **General Dynamics NASSCO**, San Diego, California, is named as the builder of the T-AO 205 class Fleet Replenishment Oilers; the first five hulls (T-AO 205-209) have delivered and T-AO 210 is planned to deliver in summer 2026 [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.** The Navy plans to procure 20 ships in this class [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+- **Electric Boat** is referenced in the plan as a beneficiary of the U.S. Government-funded wage increases driving improved hiring rates and reduced attrition at the submarine builders [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+- **Bollinger** is named as the directed first-hull contractor for the Medium Landing Ship (LSM) class [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+- **Fincantieri Marinette Marine** is named as the directed contractor for the next four LSM hulls; the remaining LSM hulls will be competitively awarded [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+- **Austal USA** in Mobile, Alabama, is named as the contractor designing the T-AGOS 25 Class General Ocean Surveillance Ship, with construction planned to begin in late 2027 [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.** The T-AGOS 25 program includes a planned class of 10 ships [s.2026-05-23-navy-shipbuilding-plan-2026]. **FACT.**
+
+### 5.2 Naval modeling-and-simulation incumbents — operator-blessed per the hypothesis
+
+The §7 working hypothesis leg 5 names three canonical naval-services incumbents whose existing Carderock-adjacent relationships could constrain CACI's entry timeline into this research's eventual recommendation. The per-opportunity entity allowlist at `_entity-allowlist.yaml` blesses these three names for analytical use without requiring source backing per appearance; specific FACT claims about any of them still require source backing per the SOP.
+
+- **HII Mission Technologies** inherited prior naval modeling-and-simulation work via a 2021 corporate acquisition. *Assessment (cross-opportunity carry-over, not yet sourced for BDR):* HII Mission Technologies is the most directly competitive incumbent for Carderock-adjacent modeling capability and is the dominant unknown in §7 leg 5.
+- **SAIC** is a canonical naval-services incumbent named in the §7 hypothesis. *Assessment:* SAIC's specific role in Carderock-adjacent modeling work is not yet sourced; ingest is open research.
+- **Leidos** is a canonical naval-services incumbent named in the §7 hypothesis. *Assessment:* same as SAIC — specific role not yet sourced; ingest is open research.
+
+No primary source ingested into this opportunity's `01_sources/` directory names any of these three in a Carderock-adjacent modeling context yet. The naming above carries the operator's blessing from the allowlist; the supporting FACTs remain to be developed through further source ingestion.
+
+### 5.3 International partnership candidates — the Japan thread
+
+The Stimson Center's U.S.-Japan MSMRO Task Force frames an alliance-level partnership thread that is structurally different from the U.S.-only competitive picture above.
+
+- **Japan Maritime United (JMU)** is named in the SWARMEX press release as the host private shipbuilder for the first Japan SWARMEX exercise [s.2026-05-23-swarmex-srf-jrmc]. **FACT.** The exercise relocated from JMU's Maizuru Yard to the neighboring Japan Maritime Self-Defense Force (JMSDF) Maizuru facility due to mooring difficulties [s.2026-05-23-swarmex-srf-jrmc]. **FACT.**
+- **The Japanese shipbuilding industry as a whole** is described by the Stimson Task Force as having declined from nearly half the global commercial-shipbuilding market share in the 1980s to just over 10 percent today, with Japan now aiming to double its shipbuilding output by 2035 under an initiative launched by Prime Minister Sanae Takaichi [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
+- **The July 2025 U.S.-Japan trade arrangement** includes $550 billion in Japanese government investment in strategic U.S. industries, including shipbuilding [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
+
+**Assessment:** the Japan-side actors are not direct competitors for the BDR research's modeling-and-simulation thread, but they are the most consequential partnership angle that emerged from the source pass. If the §7 hypothesis survives disconfirming checks and the recommendation shape eventually includes any forward-repair component, the Japan thread is where the alliance-side participation would come from.
+
+### 5.4 What this section does not yet know
+
+Three competitive layers are visible in the demand signal but not yet sourced at competitor level for this research.
+
+- **Private U.S. ship-repair contractors** competing for Navy maintenance work are visible at the dollar-flow level (the MHI $111M contract that GovConWire reported on; the §3.2 budget figures) but the specific contractor mix is not yet ingested. The next source-finder pass should target USAspending recipient data without pre-naming entities.
+- **Carderock-adjacent technical partners** — the §7 leg 5 hypothesis names three (SAIC, Leidos, HII Mission Technologies) but the specific contract footprint of each at Carderock is open research. NAVSEA contracting data should resolve this when ingested.
+- **Commercial simulation-platform vendors** for any future BDA training pipeline (§11.3) are explicitly an open research thread — section 11.3 of this file was rewritten on 2026-05-23 to remove all pre-named vendors and reads "specific platforms named only as sources surface them or as the operator scopes a vendor inquiry." Next steps for §11.3 are operator-initiated outreach (I/ITSEC, DoD SBIR Phase II catalogs, NWDC product listings) rather than further automated source searches against contractor names.
+
+### 5.5 Assessment of the competitive landscape
+
+The competitive picture is not yet sharp. What is clear from the ingested sources is the new-construction shipbuilding industrial base — HII, General Dynamics NASSCO, Bollinger, Fincantieri Marinette Marine, Austal USA, and Electric Boat are all named in the Navy's own May 2026 Shipbuilding Plan with specific program assignments. What is NOT yet clear from the sources is the ship-repair and modeling-and-simulation competitive picture, which is the actual layer of competition for any BDR research recommendation.
+
+The §7 hypothesis names SAIC, Leidos, and HII Mission Technologies as the canonical incumbents to beat; the supporting FACTs to back specific capability claims about any of the three remain open research. The Japan-side partnership thread surfaced from the Stimson and SWARMEX sources is the most distinctive shape in the data and is more clearly a partnership angle than a competition angle.
+
+The right next move on this section is targeted ingestion of NAVSEA contracting data (via USAspending), NSWC Carderock recent SBIR/STTR awards, and any DoD-level industry days on naval simulation-and-modeling vehicles. Until those land, this section is a scaffold with the new-construction shipbuilders confirmed and the BDR-specific competitive picture intentionally unfilled.
 
 <!-- /sensitivity -->
 
