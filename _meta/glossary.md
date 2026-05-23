@@ -249,7 +249,7 @@ These are perspective-dependent and reflect the operator's current business-deve
 
 **ARKA.** A defense subsidiary CACI acquired in early 2026 for ~$2.6B net of cash, closed 9 March 2026. ARKA brings electro-optical, infrared, and hyperspectral sensor capability. Frequently mentioned as a differentiator hook for opportunities that need realistic threat signature libraries.
 
-**PAE-IO.** PAE Industrial Operations. A ship-repair business now owned by Amentum after a 2024 acquisition. The industrial-supply-side actor referenced in the BDR-FLEET-READINESS track.
+**PAE-IO.** PAE Industrial Operations — a Navy-internal organizational consolidation described in the May 2026 Navy Shipbuilding Plan (page 34) that combines the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy Shipyards into a single structure tying contracting functions for maintenance work to the fleet components responsible for the ships. NOT a commercialization of the public shipyards, NOT an Amentum subsidiary, and NOT a private contractor. The acronym expansion of "PAE" in this Navy-internal context is not stated in the primary source. (Operator confirmed 2026-05-23 after the vault was previously conflating this term with an unrelated Amentum framing.)
 
 **HII Mission Technologies.** Huntington Ingalls Industries' services arm. Inherited Alion's ship-damage modeling work via a 2021 acquisition (commonly confused with CACI, see SOP rule 6 note). A primary competitor in naval modeling and simulation.
 
