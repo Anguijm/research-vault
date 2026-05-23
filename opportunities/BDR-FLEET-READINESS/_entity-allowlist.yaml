@@ -35,11 +35,11 @@ allowlist:
   HII Mission Technologies: Canonical naval competitor. Operator-blessed for §7 hypothesis leg 5 — inherited the Alion ship-damage modeling work and is the most directly competitive incumbent for Carderock-adjacent capability. Specific claims still need source backing.
 
   # Historical / meta-context allowlist — these names appear only in contexts
-  # that document past events (a removed query, a failed ingest attempt),
-  # not as active analytical claims. The audit can't distinguish between
-  # "this is an analytical assertion" and "this is meta-context about the
-  # research pipeline," so we allowlist them here to document why they are OK.
-  Amentum: Appears only in a search-config comment that documents the 2026-05-23 removal of Amentum-named queries. Meta-context, not an active query or analytical claim. Removing the name from the comment would erase the lesson learned.
+  # that document past events (a failed ingest attempt), not as active
+  # analytical claims. The audit can't distinguish between "this is an
+  # analytical assertion" and "this is meta-context about the research
+  # pipeline," so we allowlist sparingly here to document why specific
+  # entries are OK.
   MHI: Appears only in §8.2 of the research file as meta-information about a failed GovConWire ingest attempt. The article itself was not ingested due to Cloudflare bot detection; if a primary source on the $111M NAVSEA contract is later found, MHI graduates from §8.2 to an analytical citation.
 
 # Entities surfaced by the 2026-05-23 audit but DECLINED for allowlisting and

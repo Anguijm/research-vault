@@ -38,9 +38,10 @@ ai_searches:
 
   # ---- Week 2: Navy ship-repair industrial footprint ----
   # Note: do NOT name specific commercial contractors in these queries until a
-  # source has surfaced them organically. The earlier Amentum-named queries
-  # here were removed 2026-05-23 because Amentum had not appeared in any
-  # ingested source and the queries were producing polluted inbox content.
+  # source has surfaced them organically. The earlier contractor-name-targeted
+  # queries here were removed 2026-05-23 because the named contractors had not
+  # appeared in any ingested source and the queries were producing polluted
+  # inbox content.
   - "Navy Regional Maintenance Center contract public testimony ship repair industrial base"
   - "NAVSEA Industrial Operations Directorate consolidation public yards Navy maintenance"
 
