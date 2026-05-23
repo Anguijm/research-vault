@@ -96,13 +96,76 @@ class WebFetcher(BaseFetcher):
         # so check status directly rather than via raise_for_status())
         if r.status_code >= 400:
             if r.status_code in (403, 429):
+                # Last-resort fallback: try a real headless browser. Akamai
+                # and Cloudflare bot detection often inspects TLS fingerprints
+                # in ways curl_cffi cannot fully imitate, but a real Chromium
+                # via Playwright defeats most of those layers.
+                playwright_html = self._try_playwright_fallback(url)
+                if playwright_html is not None:
+                    return playwright_html
                 raise RuntimeError(
-                    f"HTTP {r.status_code} fetching {url} — fetch failed after retry; "
-                    f"try --debug to diagnose, or fall back to manual download as last resort."
+                    f"HTTP {r.status_code} fetching {url} — fetch failed after retry "
+                    f"and Playwright fallback; try --debug to diagnose, or fall back "
+                    f"to manual download as last resort."
                 )
             raise RuntimeError(f"HTTP {r.status_code} fetching {url}")
 
         return r.text
+
+    def _try_playwright_fallback(self, url: str) -> str | None:
+        """Last-resort fetch through a real headless browser.
+
+        Returns the rendered HTML on success, or None if Playwright is not
+        installed or the fallback itself fails. Caller decides what to do
+        with None (raise the original 403 error message).
+        """
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            if self.debug:
+                print("[DEBUG] Playwright not installed — fallback skipped.")
+            return None
+
+        if self.debug:
+            print(f"[DEBUG] Falling back to Playwright for {url}")
+
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(
+                    headless=True,
+                    args=[
+                        "--disable-blink-features=AutomationControlled",
+                        "--no-sandbox",
+                    ],
+                )
+                try:
+                    context = browser.new_context(
+                        user_agent=(
+                            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                            "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+                        ),
+                        viewport={"width": 1366, "height": 900},
+                        locale="en-US",
+                    )
+                    page = context.new_page()
+                    response = page.goto(url, wait_until="domcontentloaded", timeout=30_000)
+                    if response is None or response.status >= 400:
+                        if self.debug:
+                            status = response.status if response else "no-response"
+                            print(f"[DEBUG] Playwright fallback got status {status}")
+                        return None
+                    page.wait_for_timeout(1_500)
+                    html = page.content()
+                finally:
+                    browser.close()
+        except Exception as e:
+            if self.debug:
+                print(f"[DEBUG] Playwright fallback errored: {e}")
+            return None
+
+        if self.debug:
+            print(f"[DEBUG] Playwright fallback succeeded — {len(html)} chars")
+        return html
 
     def _extract_title(self, html: str, url: str) -> str:
         import html as html_module

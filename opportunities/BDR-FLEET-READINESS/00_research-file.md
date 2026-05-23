@@ -104,21 +104,49 @@ Listed with explicit disconfirming-evidence items per the scaffolding instructio
 - [ ] What is the realistic timeline for relationship-development given Carderock's typical engagement cadence — months, not weeks; multi-touch sequence; formal industry-day plus follow-on technical engagements?
 - [ ] What is the right CACI entry-vehicle — SBIR proposal, BAA white paper, sub-tier role on an existing Carderock vehicle, or direct NDA-only technical exchange?
 
-## 3. Demand signal — what the customer (when defined) is saying
+## 3. Demand signal — what the customer is publicly saying about wartime ship repair
 
-*[Section reserved — populate after source ingestion. Will include public NAVSEA / NSWC Carderock priorities, OPNAV fleet-readiness public testimony, and any named gap statements parallel to PMTEC's "eight named priority gaps." Until then, this section is empty by design — do not back-fill speculative content here.]*
+This section captures the public-record signal from the first round of source ingestion (14 sources ingested 2026-05-23 from the find_sources pass run 2026-05-21). Each claim carries a FACT or Assessment label per the SOP at `_meta/sop.md` and a citation tag pointing to a source in `01_sources/`. The claims have not yet been verified against the cited sources by `verify_facts.py` — that is the next mechanical step in the small-ships workflow.
+
+The picture from the public record is consistent: shipbuilding and ship-repair capacity is in active senior-leadership focus across the executive branch and Congress, the funding being committed is large, and the policy-community framing of why this matters explicitly includes wartime repair under conflict conditions. This is supportive of the working hypothesis in section 7 — particularly leg 1 (the training-assumption gap) and leg 2 (the industrial-planning gap) — but does not yet close out the disconfirming-evidence questions in section 2.
 
 ### 3.1 Stated priorities
 
-*[To be populated after source ingestion. Each entry must carry an `[s.YYYY-MM-DD-slug]` citation tag.]*
+The senior-leadership and oversight signal that wartime ship repair capacity is a strategic constraint shows up across three independent threads.
 
-### 3.2 Funding
+**The policy community is treating forward repair capacity as a wartime-preparation question, not a peacetime-efficiency question.** The Stimson Center convened a bi-national U.S.-Japan Task Force on Military Shipbuilding, Maintenance, and Repair Operations (MSMRO) that engaged from January to March 2026 and released its recommendations on 25 March 2026 [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.** The Task Force's policy claim on why forward repair capacity matters is framed explicitly around battle damage and conflict timing: *"Such operations can extend the number of facilities available to vessels from both countries as well as diverse and secure locations to repair battle damage when needed, recognizing that such capabilities cannot effectively be established after the outbreak of conflict"* [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT (direct quotation).**
 
-*[To be populated. Likely sources: NAVSEA FY budget exhibits, Navy O&M lines for maintenance and modernization, congressional appropriations marks.]*
+**Senior administration engagement on the issue is visible and recent.** U.S. Secretary of the Navy John Phelan chose Japan as his first foreign trip destination, where he expressed support for Japan assuming a greater role in maintenance, repair, and overhaul for the U.S. Navy [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.** Congress has directed the Secretary of the Navy to urgently assess ship repair improvements in U.S. territories in the Western Pacific, and the policy-community framing notes that Guam specifically lacks dry dock capability for allied-vessel major maintenance [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
 
-### 3.3 Engagement mechanism
+**Independent oversight is pointing at the same structural problem.** The Government Accountability Office testified to the House Armed Services Subcommittee on Seapower and Projection Forces and the House Transportation and Infrastructure Subcommittee on Coast Guard and Maritime Transportation on 22 April 2026 that *"Navy and Coast Guard shipbuilding programs have consistently fallen short of expectations over the last 2 decades. Collectively, they are billions of dollars over cost and years behind schedule"* [s.2026-05-23-gao-26-109068-navy-and-coast-g]. **FACT (direct quotation).** Since 2016, GAO has made 92 recommendations to the Navy and 45 to the Coast Guard on shipbuilding programs; implementation has been mixed [s.2026-05-23-gao-26-109068-navy-and-coast-g]. **FACT.** As one specific illustration, the Navy announced a strategic shift away from the Constellation class frigate program in 2025, after previously exercising contract options valued at over $3 billion [s.2026-05-23-gao-26-109068-navy-and-coast-g]. **FACT.**
 
-*[To be populated. Likely sources: NAVSEA SBIR/STTR public solicitations, ONR BAAs, Carderock industry-engagement public materials.]*
+**Sustainment cost growth across the Department of Defense weapon-system portfolio is a documented, accelerating problem.** In a separate April 2026 report, GAO documented that the Department of Defense identified 14 systems with critical operating and support cost growth out of 36 weapon system sustainment reviews conducted for fiscal years 2023 and 2024, where "critical" means at least a 25 percent increase compared with the most recent independent cost estimate or at least 50 percent compared with the original baseline [s.2026-05-23-gao-26-108140-weapon-system-su]. **FACT.**
+
+**Assessment.** The four threads above are independent — administration policy direction, allied policy-community proposals, congressional direction to assess, and independent GAO oversight — and they converge on the same picture: that wartime ship repair capacity is being treated as a strategic problem in active executive and legislative attention. This convergence is what gives section 7 leg 1 (the training-assumption gap) and leg 2 (the industrial-planning gap) some prior weight. But none of these sources is a primary statement of "the Navy training pipeline understates wartime damage." That specific claim is what the rest of the research has to produce or fail to produce from public sources.
+
+### 3.2 Funding — money flowing toward the problem
+
+The dollar amounts being committed to shipbuilding and sustainment in the near term are large enough that the funding picture is not the constraint on this research track. The constraint is on knowing what specific buckets the money will land in and which procurement vehicles will carry the spend.
+
+**Department of Defense and Coast Guard shipbuilding funding at scale.** The President's Budget for fiscal year 2027, released in April 2026, requested over $65 billion in shipbuilding funding [s.2026-05-23-gao-26-109068-navy-and-coast-g]. **FACT.** The Coast Guard plans to invest over $40 billion to replace and expand its current fleet of ships [s.2026-05-23-gao-26-109068-navy-and-coast-g]. **FACT.**
+
+**Cross-government policy direction on the maritime industrial base.** The White House released America's Maritime Action Plan in February 2026, setting out common challenges and policy options for the maritime industrial base across government and commercial shipbuilding [s.2026-05-23-gao-26-109068-navy-and-coast-g]. **FACT.** The Maritime Action Plan designates the Department of Commerce as the lead on foreign investment in the shipbuilding sector and designates the Department of the Navy in a formal advisory role in that process [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
+
+**Allied investment as a force multiplier.** The July 2025 U.S.-Japan trade arrangement included $550 billion in Japanese government investment in strategic U.S. industries, including shipbuilding [s.2026-05-23-the-time-is-ripe-for-next-step]. **FACT.**
+
+**Adjacent federal funding stream.** The Maritime Administration administers the Port Infrastructure Development Program, a federal grant program for port infrastructure projects that includes language relevant to naval repair capacity [s.2026-05-23-port-infrastructure-developmen]. **FACT.**
+
+**Assessment.** The dollar scale is decisive. The capture question is not whether money will be spent on shipbuilding and sustainment — it will — but whether the specific procurement vehicles, contract structures, and prime-or-sub positions for CACI align with the training and modeling work that section 7 hypothesizes might be a real opportunity. That alignment question is what the §3.3 engagement-mechanism work has to surface.
+
+### 3.3 Engagement mechanism — how the customer is reaching the market
+
+This subsection is the thinnest of the three because the first source-finder pass under-surfaced engagement-mechanism material. The targeted second pass (queued 2026-05-23 with USNI / SRF-JRMC / Pacific-Fleet-forward-sustainment / war.gov queries) is intended to fill more of this in. For now, two concrete touchpoints are recorded; the full inventory remains a §11.1 task.
+
+**Open Navy SBIR / STTR cycle relevant to the sustainment thread.** The Navy's FY2026 SBIR/STTR cycle includes topic DON26TZ01, "Sensing to Measure and Validate Corrosion in Naval Systems" [s.2026-05-23-don26tz01-sttr-release-1-sensi]. **FACT.** This is adjacent rather than directly on the battle-damage-repair thread, but it is evidence that the corrosion / structural-health side of the sustainment problem is being researched through Navy SBIR/STTR pathways — a relevant signal for any future CACI engagement strategy that uses small-business R&D vehicles as a first-touch.
+
+**Federal port-infrastructure grant program.** The Maritime Administration's Port Infrastructure Development Program is administered as a competitive grant program with public funding cycles [s.2026-05-23-port-infrastructure-developmen]. **FACT.** Touchpoint relevance: lower-priority than the Navy-direct engagement work in §11.1, but a candidate path for partnered-with-port-authority engagement in territories where the Navy needs forward repair capacity (e.g., Guam).
+
+**Assessment.** A more complete engagement-mechanism inventory belongs in §11.1, which is still in early-stage desk research. Standard NAVSEA touchpoints (industry days, broad agency announcements, formal SBIR/STTR cycles) and NSWC-Carderock-specific public-engagement materials need to be ingested before §3.3 can be filled out properly. The second find_sources pass running 2026-05-23 is the next input to this work.
 
 ## 4. Customer landscape
 
@@ -186,17 +214,45 @@ The hypothesis breaks into six separate claims, each of which can be tested agai
 
 ## 8. Source ledger
 
-*[Empty — no sources ingested yet. As sources are added via `_scripts/ingest.py`, citations will be auto-appended here in `[s.YYYY-MM-DD-slug]` format.]*
+Citations in this file use the format `[s.YYYY-MM-DD-slug]` where the date is the capture date and the slug is derived from the source title. Each entry resolves to a file in `01_sources/`. Sources are added to §8.1 when ingested successfully with usable content; failed fetches and empty-ingest cases land in §8.2 for retry or manual download.
 
 ### 8.1 Ingested primary sources (in `01_sources/`)
 
-*[None yet.]*
+Substantive content captured 2026-05-23 from the first source-finder pass:
 
-### 8.2 Cited but not yet ingested — needs ingest before external use
+- [s.2026-05-23-gao-26-109068-navy-and-coast-g] https://www.gao.gov/assets/gao-26-109068.pdf  →  `01_sources/2026-05-23_gao-gov_gao-26-109068-navy-and-coast-guard-shipbuilding-a-discipline.md` (GAO testimony, 22 Apr 2026 — Navy and Coast Guard Shipbuilding)
+- [s.2026-05-23-gao-26-108140-weapon-system-su] https://www.gao.gov/assets/gao-26-108140.pdf  →  `01_sources/2026-05-23_gao-gov_gao-26-108140-weapon-system-sustainment-dod-identified-criti.md` (GAO report, Apr 2026 — Weapon System Sustainment)
+- [s.2026-05-23-the-time-is-ripe-for-next-step] https://www.stimson.org/2026/the-time-is-ripe-for-next-steps-on-us-japan-military-shipbuilding-cooperation/  →  `01_sources/2026-05-23_stimson-org_the-time-is-ripe-for-next-steps-on-us-japan-military-shipbui.md` (Stimson Center, 23 Apr 2026 — US-Japan MSMRO Task Force)
+- [s.2026-05-23-is-the-united-states-prepared-] https://www.csis.org/analysis/united-states-prepared-war-china  →  `01_sources/2026-05-23_csis-org_is-the-united-states-prepared-for-a-war-with-china.md` (CSIS analysis — Is the United States Prepared for War with China)
+- [s.2026-05-23-dvids-news-integrated-training] https://www.dvidshub.net/news/565496/integrated-training-expeditionary-strike-group-2-completes-dynamic-exercise  →  `01_sources/2026-05-23_dvidshub-net_dvids-news-integrated-training-expeditionary-strike-group-2.md` (DVIDS, May 2026 — Expeditionary Strike Group 2 dynamic exercise)
+- [s.2026-05-23-port-infrastructure-developmen] https://www.maritime.dot.gov/PIDPgrants  →  `01_sources/2026-05-23_maritime-dot-gov_port-infrastructure-development-program.md` (Maritime Administration — Port Infrastructure Development Program)
+- [s.2026-05-23-don26tz01-sttr-release-1-sensi] https://www.navysbir.com/n26_1s/DON26TZ01-NV012.htm  →  `01_sources/2026-05-23_navysbir-com_don26tz01-sttr-release-1-sensing-to-measure-and-validate-cor.md` (Navy SBIR/STTR topic DON26TZ01 — Sensing for Corrosion in Naval Systems)
+- [s.2026-05-23-advanced-materials-nta-org] https://nta.org/advanced-materials/  →  `01_sources/2026-05-23_nta-org_advanced-materials-nta-org.md` (NTA — Advanced Materials)
+- [s.2026-05-23-shortfalls-in-u-s-naval-shipbu] https://rmcglobal.com/shortfalls-in-u-s-naval-shipbuilding-capability/  →  `01_sources/2026-05-23_rmcglobal-com_shortfalls-in-u-s-naval-shipbuilding-capability-rmc.md` (RMC Global private analysis — Shortfalls in US Naval Shipbuilding Capability; tier 4, click-verify before any FACT use)
+- [s.2026-05-23-u-s-navy-logistics-pacific-rep] https://list25.com/us-navy-logistics-pacific-sustainment/  →  `01_sources/2026-05-23_list25-com_u-s-navy-logistics-pacific-repair-forward-sustainment.md` (list25 — US Navy Pacific Repair / Forward Sustainment; tier 4, click-verify before any FACT use)
+- [s.2026-05-23-10-commercial-angles-hidden-in] https://www.shipuniverse.com/naval/10-commercial-angles-hidden-inside-naval-maintenance-backlogs-and-depot-capacity-strain/  →  `01_sources/2026-05-23_shipuniverse-com_10-commercial-angles-hidden-inside-naval-maintenance-backlog.md` (ShipUniverse — 10 Commercial Angles in Naval Maintenance Backlogs; tier 4, click-verify before any FACT use)
 
-*[None yet.]*
+### 8.2 Cited but not yet ingested, or ingested empty — needs retry or manual download
 
----
+The first ingest pass left these in incomplete state. They are listed here so future research that wants to cite them does so with the awareness that the public source has not been captured in the vault.
+
+**Genuine 404 at the server (URL is dead or relocated):**
+
+- The SRF-JRMC SWARMEX article previously at `https://www.navsea.navy.mil/Media/News/Article/3748283/srf-jrmc-successfully-completes-first-ship-wartime-repair-and-maintenance-exerc/` is returning 404 and has no Wayback Machine snapshot. The article is referenced in §1 as the public-record anchor for this research track and is the only ingest in our queue that was scored 9/10 by the source-ranker. Recovery options: search the NSWC SRF-JRMC story index at `navsea.navy.mil/Home/RMC/SRF-JRMC/STORY/`, or refetch from a Google-cached snapshot via browser.
+- The defense.gov PDF of the Navy Shipbuilding Plan May 2026 at `https://www.defense.gov/Portals/1/Documents/pubs/Navy-Shipbuilding-Plan-May-2026.pdf` redirects to a war.gov path that returns 404. The defense.gov transcript version of the same content was attempted but also returned a "page not found" body (HTML 200 with error message); see empty-ingest note below.
+- Three NSWC Carderock / NAVSEA Public Affairs article URLs returned 404 (article IDs 3748283 SWARMEX, 3774844 Vertical Launching System tool, 3750059 Carderock Orion Recovery). Three NAVSEA 404s on different article IDs may indicate a site-pattern change parallel to the defense.gov → war.gov migration.
+
+**Bot-detection 403 (manual download required):**
+
+- The GovConWire article on the MHI $111M Navy ship-repair contract at `https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work` returns HTTP 403 from Cloudflare for both `curl_cffi` browser-TLS impersonation and the Playwright headless-Chromium fallback. The script's bot-detection fallback layer is in place but does not defeat Cloudflare's most aggressive tier. Manual save from a logged-in browser session is the recovery path.
+
+**Ingest succeeded but content was empty / wrong / 404-as-200:**
+
+- `01_sources/2026-05-23_defense-gov_us-navys-shipbuilding-plan-for-2025-2026.md` — the defense.gov transcript URL served a 200 HTML response whose body is the site's "page not found" message. Content is unusable as a citation; file is essentially a 404-rendered-as-200.
+- `01_sources/2026-05-23_marines-mil_content-not-found.md` — same problem; the filename literally captures the page's error string. The Marine Corps Order 4700.4A on Advanced Manufacturing Policy is the target source and needs a working URL.
+- `01_sources/2026-05-23_researchgate-net_a-fourier-spectral-immersed-boundary-method-with-exact-trans.md` — the source-ranker pointed at a ResearchGate URL whose page actually loads an unrelated paper on Fourier spectral methods rather than the virtual-reality naval-engagement paper the inbox entry referenced. The ResearchGate URL ID does not match the title of the inbox entry; the original inbox record may have had a mismatched URL.
+
+All three empty-ingest files should be moved to `01_sources/_quarantine/` and the correct sources re-found in the next source-finder pass.
 
 ## 9. Verification flags
 

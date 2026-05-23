@@ -19,39 +19,11 @@ and interactively review the rest.
   - Reason: This article details exercises in 'battle damage assessment and repair' and 'maintenance and repair resiliency', directly addressing the battle damage repair and survivability components of the query, within the broader NAVSEA context.
   - Added: 2026-05-21T23:02:08
 
-- [x] **[U.S. Navy's Shipbuilding Plan for 2025-2026](https://www.defense.gov/News/Transcripts/Transcript/Article/3770453/us-navys-shipbuilding-plan-for-2025-2026/)** `8/10` — www.defense.gov
-  - URL: https://www.defense.gov/News/Transcripts/Transcript/Article/3770453/us-navys-shipbuilding-plan-for-2025-2026/
-  - Found by: gemini (query: "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog")
-  - Note: The document provides relevant insights into the Navy's shipbuilding plan and maintenance strategies, aligning with the research context on fleet readiness and maintenance backlog.
-  - Reason: This document outlines the U.S. Navy's shipbuilding plan, explicitly addressing amphibious warship readiness, optimized maintenance, and force generation, with the establishment of an Amphibious Force Readiness Board chaired by the VCNO to assess progress.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Integrated training: Expeditionary Strike Group 2 completes dynamic exercise](https://www.dvidshub.net/news/565496/integrated-training-expeditionary-strike-group-2-completes-dynamic-exercise)** `8/10` — www.dvidshub.net
-  - URL: https://www.dvidshub.net/news/565496/integrated-training-expeditionary-strike-group-2-completes-dynamic-exercise
-  - Found by: claude (query: "COMPTUEX RIMPAC Large Scale Exercise LSE battle damage assessment inject training")
-  - Note: The article provides recent insights into a Navy training exercise relevant to battle damage assessment and operational readiness.
-  - Reason: Published within the past 30 days; covers a May 2026 Navy TTX scenario-based training event with realistic injects, command-and-control stress testing, and certification of amphibious naval forces, directly relevant to the broader exercise-inject and training-readiness theme of the query.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[10 Commercial Angles Hidden Inside Naval Maintenance Backlogs and Depot Capacity Strain](https://www.shipuniverse.com/naval/10-commercial-angles-hidden-inside-naval-maintenance-backlogs-and-depot-capacity-strain/)** `8/10` — www.shipuniverse.com
-  - URL: https://www.shipuniverse.com/naval/10-commercial-angles-hidden-inside-naval-maintenance-backlogs-and-depot-capacity-strain/
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: The article directly addresses naval maintenance backlogs and depot capacity strain, referencing relevant GAO reports, making it highly relevant to the research context.
-  - Reason: This article directly discusses naval maintenance backlogs, depot capacity strain, and references recent GAO work from 2024 and 2026 concerning fleet readiness and the FY 2026 Navy budget.
-  - Added: 2026-05-21T23:02:08
-
 - [ ] **[Navy And Coast Guard Shipbuilding: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/products/gao-26-109068)** `8/10` — www.gao.gov
   - URL: https://www.gao.gov/products/gao-26-109068
   - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
   - Note: This GAO report addresses shipbuilding and maintenance capacity, directly relevant to the Navy's strategic readiness and industrial base.
   - Reason: This is a GAO testimony addressing shipbuilding challenges and the need for a strategic approach to private sector industrial base investments, which is related to overall naval industrial and maintenance capacity.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[GAO-26-109068, NAVY AND COAST GUARD SHIPBUILDING: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/assets/gao-26-109068.pdf)** `8/10` — www.gao.gov
-  - URL: https://www.gao.gov/assets/gao-26-109068.pdf
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: This GAO report provides relevant insights into the Navy's shipbuilding industrial base and capacity, aligning well with the research context on ship maintenance and readiness.
-  - Reason: This is a primary GAO report discussing the Navy's management of the shipbuilding industrial base, including recommendations from February 2025 related to a ship industrial base strategy and capacity.
   - Added: 2026-05-21T23:02:08
 
 - [ ] **[NAVY AND COAST GUARD SHIPBUILDING: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/products/GAO-26-109068)** `8/10` — www.gao.gov
@@ -61,25 +33,11 @@ and interactively review the rest.
   - Reason: This is a primary source GAO report discussing persistent issues in Navy and Coast Guard shipbuilding, including challenges within the private sector industrial base and its capacity to meet construction goals.
   - Added: 2026-05-21T23:02:08
 
-- [ ] **[MHI Wins $111M Navy Contract for Ship Repair Work](https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work)** `8/10` — www.govconwire.com
+- [x] **[MHI Wins $111M Navy Contract for Ship Repair Work](https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work)** `8/10` — www.govconwire.com
   - URL: https://www.govconwire.com/articles/mhi-navy-contract-ship-repair-work
   - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
   - Note: The article provides direct information on a significant Navy contract for ship repair, aligning closely with the research context on Navy ship maintenance and repair funding.
   - Reason: Details a NAVSEA-awarded $111.4M contract to Marine Hydraulics International for FY2025 ship maintenance and repair work on a San Antonio-class amphibious transport dock, directly relevant to Navy ship repair funding and execution.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[Shortfalls in U.S. Naval Shipbuilding Capability](https://rmcglobal.com/shortfalls-in-u-s-naval-shipbuilding-capability/)** `8/10` — rmcglobal.com
-  - URL: https://rmcglobal.com/shortfalls-in-u-s-naval-shipbuilding-capability/
-  - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: This analysis directly addresses U.S. Navy ship repair and maintenance backlogs, making it highly relevant to the research context.
-  - Reason: Published within the 30-day window, this analysis directly addresses U.S. Navy ship repair and maintenance backlogs, shipyard capacity constraints versus China's PLAN, and the impact on INDOPACOM readiness and deterrence.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[U.S. Navy Logistics: Pacific Repair & Forward Sustainment](https://list25.com/us-navy-logistics-pacific-sustainment/)** `8/10` — list25.com
-  - URL: https://list25.com/us-navy-logistics-pacific-sustainment/
-  - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The candidate provides a recent overview of Navy logistics and sustainment strategies relevant to ship maintenance and readiness in the Pacific, aligning with the research context.
-  - Reason: Recently published overview (approximately 1 week ago as of search date) covering Navy forward ship repair depots, Indo-Pacific sustainment strategy, allied MRO partnerships, and the link between ship maintenance readiness and Pacific deterrence.
   - Added: 2026-05-21T23:02:08
 
 - [ ] **[Testimony on Challenges Facing the Navy's and Coast Guard's Shipbuilding Programs and the Shipbuilding Industrial Base](https://www.cbo.gov/publication/62310)** `8/10` — www.cbo.gov
@@ -94,13 +52,6 @@ and interactively review the rest.
   - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
   - Note: The document provides a direct overview of the Navy's shipbuilding plan, including aspects of ship repair and maintenance relevant to the research context.
   - Reason: This primary document outlines the Navy's shipbuilding plan, explicitly covering 'Ship Repair and Maintenance,' industrial base revitalization, and their contributions to deterrence.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[MCO 4700.4A Marine Corps Advanced Manufacturing Policy](https://www.marines.mil/News/Messages/Messages-Display/Article/3762419/mco-47004a-marine-corps-advanced-manufacturing-policy/)** `8/10` — www.marines.mil
-  - URL: https://www.marines.mil/News/Messages/Messages-Display/Article/3762419/mco-47004a-marine-corps-advanced-manufacturing-policy/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The document is a primary source from the Marine Corps that discusses advanced manufacturing policies relevant to battle damage repair and survivability, linking it to NSWC Carderock.
-  - Reason: This primary document directly links NSWC Carderock with efforts to 'rapidly repair battle-damaged equipment' and enhance 'lethality and survivability' through advanced manufacturing, relevant to battle damage repair and survivability.
   - Added: 2026-05-21T23:02:08
 
 - [x] **[Warfare Center Develops New Tool to Help Sailors Keep Vertical Launching System Latch Rods Moving](https://www.navsea.navy.mil/Media/News/Article/3774844/warfare-center-develops-new-tool-to-help-sailors-keep-vertical-launching-syste/)** `8/10` — www.navsea.navy.mil
@@ -122,13 +73,6 @@ and interactively review the rest.
   - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
   - Note: The source discusses a recent GAO report on Navy ship maintenance, which is relevant to the research context regarding fleet readiness and maintenance capacity.
   - Reason: This news aggregation mentions a recent GAO report indicating that only half of the U.S. Navy's amphibious ships are in satisfactory condition due to deferred maintenance and repair cancellations.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[GAO-26-108140, WEAPON SYSTEM SUSTAINMENT: DOD Identified Critical Cost Growth, and the Army Should Take Action to Yield Cost Sav](https://www.gao.gov/assets/gao-26-108140.pdf)** `7/10` — www.gao.gov
-  - URL: https://www.gao.gov/assets/gao-26-108140.pdf
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: The GAO report discusses Navy efforts to enhance repair capabilities, making it relevant to the broader context of ship maintenance and readiness.
-  - Reason: This GAO report focuses on weapon system sustainment and cost growth, mentioning Navy efforts to increase organic repair capability at Navy-operated facilities to reduce costs and turnaround times.
   - Added: 2026-05-21T23:02:08
 
 - [ ] **[Can the Navy's Shipbuilding Plan Deliver?](https://fleetlogic.substack.com/p/can-the-navys-shipbuilding-plan-deliver)** `7/10` — fleetlogic.substack.com
@@ -159,13 +103,6 @@ and interactively review the rest.
   - Reason: Reports the Navy awarded a $990M contract to 12 companies for construction services explicitly in support of the Pacific Deterrence Initiative program, covering repair and construction in NAVFAC Pacific's area of operations.
   - Added: 2026-05-21T23:02:08
 
-- [ ] **[The Time is Ripe for Next Steps on US-Japan Military Shipbuilding Cooperation](https://www.stimson.org/2026/the-time-is-ripe-for-next-steps-on-us-japan-military-shipbuilding-cooperation/)** `7/10` — www.stimson.org
-  - URL: https://www.stimson.org/2026/the-time-is-ripe-for-next-steps-on-us-japan-military-shipbuilding-cooperation/
-  - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article discusses U.S.-Japan military shipbuilding cooperation and its implications for ship repair improvements in the Western Pacific, making it relevant to the Navy's ship maintenance and readiness context.
-  - Reason: Published approximately 3 weeks ago, this policy analysis addresses Congressional direction for the Navy to urgently assess ship repair improvements in U.S. Western Pacific territories, Guam dry dock gaps, and Japan-U.S. forward maintenance cooperation for Indo-Pacific deterrence.
-  - Added: 2026-05-21T23:02:08
-
 - [ ] **[The Navy Needs Precise Mass and Here Is How to Get There](https://warontherocks.com/the-navy-needs-precise-mass-and-here-is-how-to-get-there/)** `7/10` — warontherocks.com
   - URL: https://warontherocks.com/the-navy-needs-precise-mass-and-here-is-how-to-get-there/
   - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
@@ -180,13 +117,6 @@ and interactively review the rest.
   - Reason: This article analyzes the FY2027 defense budget, detailing Navy investments and the Pacific Deterrence Initiative, and underscores the importance of naval power for deterring China.
   - Added: 2026-05-21T23:02:08
 
-- [x] **[Is the United States Prepared for a War with China?](https://www.csis.org/analysis/united-states-prepared-war-china)** `7/10` — www.csis.org
-  - URL: https://www.csis.org/analysis/united-states-prepared-war-china
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The analysis discusses U.S. military readiness and sustainment challenges relevant to the Navy's operational capacity in the Indo-Pacific, aligning with the research context.
-  - Reason: This analysis addresses the readiness of the U.S. industrial base, base defense, and sustainment challenges for ships and aircraft in the Indo-Pacific, directly impacting deterrence against China.
-  - Added: 2026-05-21T23:02:08
-
 - [ ] **[Secretary of the Navy Announces $448M Investment in Shipbuilding Operating System](https://www.navy.mil/Press-Office/News-Stories/Article/3748245/secretary-of-the-navy-announces-448m-investment-in-shipbuilding-operating-syst/)** `7/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3748245/secretary-of-the-navy-announces-448m-investment-in-shipbuilding-operating-syst/
   - Found by: gemini (query: "CRS report industrial base shipbuilding repair attrition wargaming")
@@ -199,20 +129,6 @@ and interactively review the rest.
   - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
   - Note: The article provides relevant insights into NSWC Carderock's expertise in survivability systems, which is related to the battle damage repair survivability aspect of the research.
   - Reason: This article from NSWC Carderock highlights the division's expertise in 'Vulnerability and Survivability Systems', which aligns with the survivability aspect of the query.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[Advanced Materials](https://nta.org/advanced-materials/)** `7/10` — nta.org
-  - URL: https://nta.org/advanced-materials/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The page lists relevant SBIR/STTR opportunities that could relate to battle damage repair and survivability technologies, making it a useful resource.
-  - Reason: This page lists various SBIR/STTR opportunities, including 'Advanced Manufacturing Innovation for Maritime Readiness Challenge' (due June 22, 2025), which could encompass battle damage repair and survivability technologies relevant to the 2024/2025 timeframe.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[Port Infrastructure Development Program | MARAD](https://www.maritime.dot.gov/PIDPgrants)** `6/10` — www.maritime.dot.gov
-  - URL: https://www.maritime.dot.gov/PIDPgrants
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: The source provides useful background on port infrastructure development that is related to shipbuilding and repair capacity, but it is not directly focused on Navy ship maintenance.
-  - Reason: This primary source from MARAD discusses funding and programs aimed at improving port and related freight infrastructure, which includes expanding shipbuilding and repair capacity, relevant to naval maintenance.
   - Added: 2026-05-21T23:02:08
 
 - [ ] **[Low Cost Munitions, Higher Quantity Ships](https://www.defensetechandacquisition.com/low-cost-munitions-higher-quantity-ships/)** `6/10` — www.defensetechandacquisition.com
@@ -236,25 +152,11 @@ and interactively review the rest.
   - Reason: This article discusses U.S. submarine production and industrial base issues, citing a CRS report on worsening delays, highly relevant to Navy ship maintenance and deterrence capacity.
   - Added: 2026-05-21T23:02:08
 
-- [x] **[Virtual and augmented reality in a simulated naval engagement: Preliminary comparisons of simulator sickness and human performance](https://www.researchgate.net/publication/380237785_A_Fourier_spectral_immersed_boundary_method_with_exact_translation_invariance_improved_boundary_resolution_and_a_divergence-free_velocity_field)** `6/10` — www.researchgate.net
-  - URL: https://www.researchgate.net/publication/380237785_A_Fourier_spectral_immersed_boundary_method_with_exact_translation_invariance_improved_boundary_resolution_and_a_divergence-free_velocity_field
-  - Found by: gemini (query: "MAK ONE VR-Forces Navy training simulation damage modeling")
-  - Note: The research discusses virtual and augmented reality in naval training, which is related to Navy training simulations but does not directly address the specific aspects of battle damage assessment or repair capacity.
-  - Reason: This research discusses virtual and augmented reality in simulated naval engagements, focusing on VR training for maritime trainees, which is pertinent to Navy training simulations and implicitly involves aspects of damage within a simulated environment.
-  - Added: 2026-05-21T23:02:08
-
 - [ ] **[Pressure Points – Training CIC Crews - European Security & Defence](https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/)** `5/10` — euro-sd.com
   - URL: https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/
   - Found by: gemini (query: "I/ITSEC Navy serious game damage control battle damage assessment vendor")
   - Note: The article provides useful background on training and damage control coordination but is primarily focused on the Royal Navy rather than the specific Navy context outlined in the research.
   - Reason: This article details Royal Navy efforts to reinvigorate training, including damage control coordination and synthetic training, mentioning specific vendors like QinetiQ and Rheinmetall, which aligns with Navy training, damage control, and vendor information.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[DON26TZ01 STTR Release 1 - Sensing to Measure and Validate Corrosion in Naval Systems](https://www.navysbir.com/n26_1s/DON26TZ01-NV012.htm)** `5/10` — www.navysbir.com
-  - URL: https://www.navysbir.com/n26_1s/DON26TZ01-NV012.htm
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: The source discusses corrosion maintenance costs relevant to Navy ship systems, but it is tangential to the specific focus on ship maintenance backlog and battle damage assessment.
-  - Reason: This primary source discusses Navy corrosion maintenance costs and refers to a 2023 GAO report on Navy ship usage, challenges, and increased costs, indicating ongoing sustainment issues.
   - Added: 2026-05-21T23:02:08
 
 - [ ] **[Force Structure](https://cimsec.org/force-structure-perspectives-capt-jeff-kline-ret-on-bringing-the-fleet-into-the-robotics-age/)** `5/10` — cimsec.org

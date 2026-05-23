@@ -50,6 +50,14 @@ ai_searches:
   - "MAK ONE VR-Forces Navy training simulation damage modeling"
   - "Naval Postgraduate School thesis battle damage assessment serious game simulation"
 
+  # ---- Targeted follow-ups added 2026-05-23 after first-pass triage ----
+  # The first-pass search returned a 9/10 SWARMEX article (now 404) plus several
+  # leads worth chasing more directly.
+  - "USNI News expanding US naval repair overseas Pacific shipyards China"
+  - "SRF-JRMC commanding officer relieved 2024 2025 ship repair Japan"
+  - "Pacific Fleet forward sustainment repair industrial base wartime"
+  - "Department of War Navy shipbuilding plan 2026 long-range FY27"
+
 # SAM.gov queries — Carderock-adjacent SBIR/STTR + Navy ship repair vehicles.
 # Carderock itself rarely buys big; SBIR/STTR topics and NAVSEA depot-repair
 # vehicles are the most useful BD signals.
