@@ -1,0 +1,114 @@
+# Named-entity watchlist for the audit scripts at _scripts/audit_named_entities.py
+# and _scripts/audit_search_config.py.
+#
+# Purpose: catch the contamination pattern where an analyst introduces a
+# specific commercial entity name into vault content (glossary, research file,
+# search config) based on inferred context rather than source content. The
+# audit scripts check every entity in this list against ingested sources in
+# the relevant opportunity and flag any entity that appears in analytical
+# content but not in any ingested source.
+#
+# How to use:
+#  - Add entities here that you want the audit to track.
+#  - Keep names exact and case-sensitive — the audit uses literal string
+#    matching, not fuzzy matching.
+#  - Add aliases under the same entity when an organization has multiple
+#    common spellings (e.g., "HII" and "Huntington Ingalls Industries").
+#  - This list does NOT need to be exhaustive. Add to it when an opportunity
+#    surfaces a contractor or program name worth watching. The list grows
+#    over time as the vault matures.
+#
+# What this list is NOT:
+#  - It is not a list of bad entities. Many entries here will legitimately
+#    appear in sources and analytical content.
+#  - It is not a list of approved entities. The audit reports raw counts;
+#    the operator decides what to do with the report.
+#  - It is not the universe of named entities — only ones the audit should
+#    track. Government organizations (NAVSEA, OPNAV, USINDOPACOM, etc.) are
+#    intentionally NOT on the list because they are vault-structure terms
+#    rather than contamination risks.
+
+# Defense industry primes
+primes:
+  - Lockheed Martin
+  - Boeing
+  - Northrop Grumman
+  - Raytheon
+  - RTX
+  - General Dynamics
+  - BAE Systems
+  - L3Harris
+  - Huntington Ingalls Industries
+  - HII
+  - HII Mission Technologies
+  - Newport News Shipbuilding
+  - Ingalls Shipbuilding
+  - Bath Iron Works
+  - General Atomics
+
+# Defense services / IT services contractors (highest pollution risk because
+# they show up in adjacent contexts very often)
+services:
+  - SAIC
+  - Leidos
+  - Booz Allen Hamilton
+  - Booz Allen
+  - CACI
+  - Accenture Federal Services
+  - ManTech
+  - Peraton
+  - Amentum
+  - KBR
+  - Deloitte
+  - ICF
+  - IBM Federal
+  - PAE
+  - PAE Applied Technologies
+  - Jacobs Solutions
+  - Jacobs Engineering
+
+# Ship repair and shipbuilding specifically
+ship_repair:
+  - GD NASSCO
+  - General Dynamics NASSCO
+  - Vigor
+  - Titan Acquisitions
+  - HII Newport News
+  - BAE Norfolk
+  - Marine Hydraulics International
+  - MHI
+  - Japan Marine United
+  - JMU
+  - Austal USA
+  - Fincantieri Marinette Marine
+  - Bollinger
+
+# Simulation, training, and serious-games platforms
+simulation_platforms:
+  - Bohemia Interactive Simulations
+  - BISim
+  - VBS4
+  - MAK Technologies
+  - MAK ONE
+  - VR-Forces
+  - Improbable
+  - NVIDIA Omniverse
+
+# Defense tech / autonomy
+defense_tech:
+  - Shield AI
+  - DroneShield
+  - AeroVironment
+  - Anduril
+  - Palantir
+  - OneArc
+
+# Subsidiaries and acquisitions worth tracking explicitly
+subsidiaries_acquisitions:
+  - ARKA
+  - Alion
+  - Spectral
+  - Trojan
+  - SkyTracker
+  - CORIAN
+  - X-MADIS

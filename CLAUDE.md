@@ -34,7 +34,10 @@ of truth; Word artifacts are derivatives.
 - Glossary (vault-wide vocabulary): `_meta/glossary.md`
 - Grill-me alignment skill: `_meta/grill-me.md`
 - Small-ships brief workflow: `_meta/small-ships-workflow.md`
+- Entity-provenance-check skill: `_meta/entity-provenance-check.md`
 - Brief-build driver: `_scripts/build_brief.py` + per-version configs in `_scripts/briefs/`
+- Named-entity audits: `_scripts/audit_named_entities.py` + `_scripts/audit_search_config.py`
+- Named-entity watchlist: `_meta/named-entities-watchlist.yaml`
 
 ## Conventions
 
@@ -83,6 +86,16 @@ Phase 4d adds:
   might not know it, define it once in the glossary instead and link from prose
   on first use in the file. Customer-specific or opportunity-specific terms
   belong in a per-opportunity `_glossary.md`, not the vault-wide file.
+- **Do NOT introduce a specific named entity** (commercial contractor, named
+  product, named person) into analytical content (research file, glossary,
+  search config, points-of-contact directory) unless an ingested source has
+  already surfaced that entity. This applies to search-config queries too:
+  do not pre-load a contractor name into a query and then call the resulting
+  matches "organic surfacing." Both audits (`_scripts/audit_named_entities.py`
+  and `_scripts/audit_search_config.py`) catch this contamination pattern and
+  should be run between scaffolding and the first `find_sources` pass, after
+  every major scope expansion, and before drafting any brief. See the
+  entity-provenance-check skill at `_meta/entity-provenance-check.md`.
 
 ## Who owns what — the gray-box model
 
