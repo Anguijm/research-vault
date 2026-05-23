@@ -22,12 +22,12 @@ capability_tags:
 sensitivity: internal
 opened: 2026-05-21
 last_updated: 2026-05-21
-next_action: Triage the 67 inbox candidates from the 2026-05-21 source-finder pass. Start with the 9/10 SWARMEX (Ship Wartime Repair and Maintenance Exercise) hit and the 8/10 GAO-26-109068 / Navy Shipbuilding Plan / ESG-2 dynamic exercise cluster.
+next_action: Triage the second-pass inbox (87 new candidates added 2026-05-23). Highest-value 9/10 cluster includes Admiral Caudle's HASC testimony on FY27 Navy budget (14 May 2026), the Navy Shipbuilding Plan May 2026 PDF at a working URL, and C3F RIMPAC 2026 final planning. See 05_decision-log.md 2026-05-23 entry for the recommended approve list.
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
 auto_find: true    # resumed 2026-05-22 after readability + workflow improvements landed
-last_find_run: 2026-05-21T23:14:37
-last_find_count_ai: 42
+last_find_run: 2026-05-23T12:33:10
+last_find_count_ai: 62
 last_find_count_sam: 25
 last_find_count_usa: 0
 ---
