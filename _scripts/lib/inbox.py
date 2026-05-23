@@ -148,13 +148,17 @@ def append_sam_candidates(opp_dir: Path, candidates: list[dict], dry_run: bool =
         flags = c.get("flags") or []
         prefix = "".join(f"[{f}] " for f in flags)
         url = c.get("url", "")
+        score = c.get("_score")
+        score_tag = f" `{score}/10`" if score is not None else ""
 
-        lines.append(f"- [ ] **[{prefix}{title}]({url})** — sam.gov\n")
+        lines.append(f"- [ ] **[{prefix}{title}]({url})**{score_tag} — sam.gov\n")
         lines.append(f"  - URL: {url}\n")
         lines.append(f"  - Notice ID: {c.get('notice_id', '')}\n")
         lines.append(f"  - Source type: sam_gov\n")
         query = c.get("query") or "(structured)"
         lines.append(f"  - Found by: sam.gov (query: \"{query}\")\n")
+        if c.get("_rank_note"):
+            lines.append(f"  - Note: {c['_rank_note']}\n")
         lines.append(f"  - Notice type: {c.get('notice_type', '')}\n")
         lines.append(f"  - Posted: {c.get('posted_date', '')}\n")
         lines.append(f"  - Response deadline: {c.get('response_deadline', '')}\n")

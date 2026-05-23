@@ -141,9 +141,10 @@ def _process_opportunity(
         if not sam_key:
             print(f"  SAM.gov skipped (no key).")
         else:
+            sam_min_score = int(cfg.get("sam_min_score", 5))
             sam_count, sam_deduped, sam_errors = _run_sam_search(
-                opp_dir, sam_searches, date_window, max_candidates,
-                sam_key, dry_run,
+                opp_dir, opp_id, sam_searches, date_window, max_candidates,
+                sam_key, openai_key, sam_min_score, dry_run,
             )
             deduped_count += sam_deduped
             errors += sam_errors
@@ -220,11 +221,14 @@ def _run_ai_search(
 
 
 def _run_sam_search(
-    opp_dir: Path, sam_searches: list,
+    opp_dir: Path, opp_id: str, sam_searches: list,
     date_window: int, max_candidates: int,
-    sam_key: str, dry_run: bool,
+    sam_key: str, openai_key: str, min_score: int, dry_run: bool,
 ) -> tuple[int, int, int]:
-    """Run SAM.gov search loop. Returns (new_count, deduped_count, error_count)."""
+    """Run SAM.gov search loop with AI relevance ranking and a score threshold.
+
+    Returns (new_count, deduped_count, error_count).
+    """
     known_urls = dedup.load_known_urls(opp_dir) | inbox.load_inbox_urls(opp_dir)
     known_ids = dedup.load_known_notice_ids(opp_dir) | inbox.load_inbox_notice_ids(opp_dir)
 
@@ -232,6 +236,7 @@ def _run_sam_search(
     errors = 0
     seen_ids: set[str] = set()
     new_candidates: list[dict] = []
+    query_labels: list[str] = []
 
     for entry in sam_searches:
         try:
@@ -242,6 +247,7 @@ def _run_sam_search(
             continue
 
         label = params.get("q") or "(structured query)"
+        query_labels.append(label)
         print(f"  [SAM] Searching: {label}")
         try:
             results = sam_gov.execute_query(params, sam_key, max_candidates)
@@ -270,7 +276,37 @@ def _run_sam_search(
         print(f"  [SAM] 0 candidates queued")
         return 0, deduped_count, errors
 
-    print(f"  [SAM] {len(new_candidates)} candidates queued")
+    # Fetch notice descriptions so the ranker has substantive content to score
+    # against. Each description is a separate SAM.gov API call; the per-day
+    # quota in _meta/sam-quota.json governs total volume.
+    print(f"  [SAM] Fetching descriptions for {len(new_candidates)} notice(s)...")
+    for c in new_candidates:
+        desc = sam_gov.fetch_description(c.get("description_url", ""), sam_key)
+        # Strip HTML tags for the ranker snippet
+        clean = re.sub(r'<[^>]+>', ' ', desc or '')
+        clean = re.sub(r'\s+', ' ', clean).strip()
+        c["_snippet"] = clean[:800]
+
+    if openai_key:
+        opp_context = f"{opp_id} — SAM.gov solicitations matched by queries: {', '.join(query_labels)}"
+        print(f"  [SAM] Ranking {len(new_candidates)} candidates with OpenAI...")
+        new_candidates = ranker.rank_sam_candidates(new_candidates, opp_context, openai_key)
+        scores_before = [c.get('_score', '?') for c in new_candidates]
+        print(f"  [SAM] Scores (before threshold): {scores_before}")
+        # Apply the score threshold
+        filtered = [c for c in new_candidates if c.get('_score', 0) >= min_score]
+        dropped = len(new_candidates) - len(filtered)
+        if dropped:
+            print(f"  [SAM] Dropped {dropped} candidate(s) below score {min_score}")
+        new_candidates = filtered
+    else:
+        print(f"  [SAM] No OPENAI_API_KEY — skipping ranking (all candidates kept).")
+
+    if not new_candidates:
+        print(f"  [SAM] 0 candidates queued after ranking")
+        return 0, deduped_count, errors
+
+    print(f"  [SAM] {len(new_candidates)} candidate(s) queued")
     new_count = inbox.append_sam_candidates(opp_dir, new_candidates, dry_run=dry_run)
     return new_count, deduped_count, errors
 

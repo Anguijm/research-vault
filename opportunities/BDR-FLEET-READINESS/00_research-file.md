@@ -253,6 +253,8 @@ The first ingest pass left these in incomplete state. They are listed here so fu
 - `01_sources/2026-05-23_researchgate-net_a-fourier-spectral-immersed-boundary-method-with-exact-trans.md` — the source-ranker pointed at a ResearchGate URL whose page actually loads an unrelated paper on Fourier spectral methods rather than the virtual-reality naval-engagement paper the inbox entry referenced. The ResearchGate URL ID does not match the title of the inbox entry; the original inbox record may have had a mismatched URL.
 
 All three empty-ingest files should be moved to `01_sources/_quarantine/` and the correct sources re-found in the next source-finder pass.
+- [s.2026-05-23-2026-05-14-caudle-testimony] https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf  →  `01_sources/2026-05-23_armedservices-house-gov_2026-05-14-caudle-testimony.md`
+- [s.2026-05-23-error-aspx] https://docs.house.gov/committee/Error/Error.aspx?Code=404  →  `01_sources/2026-05-23_docs-house-gov_error-aspx.md`
 
 ## 9. Verification flags
 

@@ -194,7 +194,7 @@ and interactively review the rest.
   - Reason: This article showcases NSWC Carderock's engagement in STEM and defense technology, indicating ongoing research and development efforts relevant to the query.
   - Added: 2026-05-21T23:02:08
 
-- [ ] **[Department of War Fiscal Year (FY) 2027 Budget Estimates - Justification Book for the Defense Threat Reduction Agency](https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf)** `5/10` — comptroller.defense.gov
+- [x] **[Department of War Fiscal Year (FY) 2027 Budget Estimates - Justification Book for the Defense Threat Reduction Agency](https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf)** `5/10` — comptroller.defense.gov
   - URL: https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf
   - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
   - Note: The document provides useful background on SBIR/STTR and survivability research but is not directly focused on Navy ship maintenance or battle damage repair.
@@ -627,21 +627,7 @@ and interactively review the rest.
   - Reason: Most recent primary .mil source on RIMPAC 2026 exercise planning, published within approximately 35 days of today, covering final pre-exercise coordination directly relevant to the RIMPAC component of the query.
   - Added: 2026-05-23T12:20:49
 
-- [ ] **[NOT FOR PUBLICATION UNTIL RELEASED BY THE HOUSE ARMED SERVICES COMMITTEE STATEMENT OF ADMIRAL DARYL L. CAUDLE CHIEF OF NAVAL](https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf)** `9/10` — armedservices.house.gov
-  - URL: https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf
-  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
-  - Note: This document is a primary source from the Chief of Naval Operations discussing the integration of LVC networks in Navy training, directly relevant to the research context.
-  - Reason: This primary document from the Chief of Naval Operations directly states that Navy's Maritime Operation Centers are integrated into LVC networks, enabling training, and discusses operational architecture facilities.
-  - Added: 2026-05-23T12:20:49
-
-- [ ] **[STATEMENT OF ADMIRAL DARYL L. CAUDLE CHIEF OF NAVAL OPERATIONS BEFORE THE HOUSE ARMED SERVICES COMMITTEE ON THE FY2027 NAVY BUDGET](https://docs.house.gov/committee/Error/Error.aspx?Code=404)** `9/10` — docs.house.gov
-  - URL: https://docs.house.gov/committee/Error/Error.aspx?Code=404
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: This statement from the Chief of Naval Operations directly addresses investments in ship maintenance and deterrence, aligning closely with the research context.
-  - Reason: This primary document from the Chief of Naval Operations outlines investments in surface ship maintenance, the Shipyard Infrastructure Optimization Plan (SIOP), and strengthening deterrence in the Indo-Pacific, directly addressing aspects of the query.
-  - Added: 2026-05-23T12:20:49
-
-- [ ] **[U.S. Navy's Shipbuilding Plan - May 2026](https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf)** `9/10` — www.navy.mil
+- [x] **[U.S. Navy's Shipbuilding Plan - May 2026](https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf)** `9/10` — www.navy.mil
   - URL: https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf
   - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
   - Note: This primary .mil source provides direct insights into the Navy's shipbuilding and maintenance strategy, aligning closely with the research context.

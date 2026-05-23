@@ -171,3 +171,108 @@ def _score_one(client, candidate: dict, opp_context: str) -> dict:
             except json.JSONDecodeError:
                 pass
     return {"score": 5, "tier": "medium", "note": ""}
+
+
+# ── SAM.gov candidate ranking ──────────────────────────────────────────────
+
+
+_SAM_PROMPT = """\
+You are a defense business development analyst. Score this SAM.gov notice for relevance to the research below.
+
+RESEARCH CONTEXT:
+{opp_context}
+
+CANDIDATE (SAM.gov notice):
+Title: {title}
+URL: {url}
+Notice type: {notice_type}
+Set-aside: {set_aside}
+NAICS code(s): {naics}
+Department / subtier / office: {department} / {subtier} / {office}
+Posted: {posted_date} | Response deadline: {response_deadline}
+Search query that matched: "{query}"
+Notice description preview: {snippet}
+
+Scoring guide for SAM.gov solicitations:
+ 9-10  Active RFI or RFP directly matching the research opportunity — actionable as a candidate bid
+ 7-8   Active solicitation in adjacent capability area from the right organization (e.g., NSWC site running a relevant SBIR/STTR topic; NAVSEA contracting a capability that maps to the research)
+ 5-6   Useful market intelligence — same command, NAICS, or capability cluster, peripheral but informative
+ 3-4   Weakly related — keyword match only, wrong agency, generic services contract
+ 1-2   Off-topic, expired or cancelled, contract closeout / disposal / janitorial / food / transportation
+
+Apply the lowest applicable bucket. Wrong agency plus weak capability fit equals 3-4 even when the keyword matches.
+
+Respond in JSON only — no extra text:
+{{"score": <integer 1-10>, "tier": "high|medium|low", "note": "<one-sentence reason>"}}"""
+
+
+def rank_sam_candidates(
+    candidates: list[dict],
+    opp_context: str,
+    api_key: str,
+) -> list[dict]:
+    """Score SAM.gov candidates with gpt-4o-mini. Returns sorted highest-first.
+
+    Adds '_score' (1-10), '_tier' (high|medium|low), '_rank_note' fields. Uses
+    a SAM-specific prompt tuned for solicitation taxonomy rather than the
+    web-article prompt in rank_candidates().
+    """
+    if not candidates:
+        return []
+
+    from openai import OpenAI
+    client = OpenAI(api_key=api_key)
+
+    scored = [dict(c) for c in candidates]
+
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        future_map = {ex.submit(_score_sam_one, client, c, opp_context): i
+                      for i, c in enumerate(scored)}
+        for future in as_completed(future_map):
+            idx = future_map[future]
+            try:
+                result = future.result()
+            except Exception:
+                result = {"score": 5, "tier": "medium", "note": ""}
+            scored[idx]["_score"] = result.get("score", 5)
+            scored[idx]["_tier"] = result.get("tier", "medium")
+            scored[idx]["_rank_note"] = result.get("note", "")
+
+    return sorted(scored, key=lambda c: c.get("_score", 0), reverse=True)
+
+
+def _score_sam_one(client, candidate: dict, opp_context: str) -> dict:
+    naics = candidate.get("naics") or []
+    naics_str = ", ".join(naics) if naics else "none"
+    prompt = _SAM_PROMPT.format(
+        opp_context=opp_context,
+        title=candidate.get("title", ""),
+        url=candidate.get("url", ""),
+        notice_type=candidate.get("notice_type", ""),
+        set_aside=candidate.get("set_aside", "None"),
+        naics=naics_str,
+        department=candidate.get("department", ""),
+        subtier=candidate.get("subtier", ""),
+        office=candidate.get("office", ""),
+        posted_date=candidate.get("posted_date", ""),
+        response_deadline=candidate.get("response_deadline", ""),
+        query=candidate.get("query", ""),
+        snippet=candidate.get("_snippet", "")[:600],
+    )
+    msg = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=120,
+        temperature=0,
+    )
+    text = msg.choices[0].message.content or ""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        m = re.search(r'\{[^}]+\}', text, re.DOTALL)
+        if m:
+            try:
+                return json.loads(m.group(0))
+            except json.JSONDecodeError:
+                pass
+    return {"score": 5, "tier": "medium", "note": ""}
