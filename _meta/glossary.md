@@ -253,7 +253,7 @@ These are perspective-dependent and reflect the operator's current business-deve
 
 **HII Mission Technologies.** Huntington Ingalls Industries' services arm. Inherited Alion's ship-damage modeling work via a 2021 acquisition (commonly confused with CACI, see SOP rule 6 note). A primary competitor in naval modeling and simulation.
 
-**Amentum.** The defense services company that bought PAE in 2024. Parent of PAE-IO.
+**Amentum.** A defense services company that is a major Navy services contractor in maintenance, repair, and overhaul. Originally referenced in this vault as the parent of "PAE Industrial Operations" — that framing was incorrect. PAE-IO is a Navy organizational consolidation, not an Amentum subsidiary. Amentum's actual role in the BDR-FLEET-READINESS research is as the industrial-supply-side contractor whose public-facing planning assumptions we are tracking, independent of the PAE-IO label.
 
 ---
 

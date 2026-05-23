@@ -48,7 +48,7 @@ There are five threads inside that question, and the research has to address all
 
 1. **Is Carderock's modeling actually useful for fleet training?** That is, can the Navy's ship-damage modeling work be folded into multidomain training events at a fidelity that operators would actually use?
 
-2. **Is there a gap on either side of that modeling?** Specifically, do current fleet training scenarios understate how badly ships get hit in a real fight, and does the industrial-supply side (PAE Industrial Operations / Amentum) plan for steady-state repair when the actual demand under wartime conditions would be much higher?
+2. **Is there a gap on either side of that modeling?** Specifically, do current fleet training scenarios understate how badly ships get hit in a real fight, and does the industrial-supply side (Amentum and other major Navy maintenance-repair-overhaul contractors, plus the public-yard / Navy Regional Maintenance Center system now consolidated under the Navy's PAE Industrial Operations organizational structure described in the May 2026 Shipbuilding Plan) plan for steady-state repair when the actual demand under wartime conditions would be much higher?
 
 3. **What does the training program itself look like?** The working concept is a three-step progression — start with tabletop scenarios in a classroom, then guided site visits to actual repair facilities, then hands-on pilot operations on instrumented training rigs. Each step is a fidelity step-up and can also be a classification step-up.
 
@@ -294,22 +294,18 @@ The discipline that follows from this constraint:
 - If a future deliverable benefits from a quote or framing that originates with the contact, that framing must first be matched against a public source — either a public statement by a named individual at the relevant Navy organization or an analytical assessment that the operator is comfortable labeling as such. The contact themselves stays out of the brief.
 - This constraint is parallel to the classification gradient in section 9.1. Both are sensitivity disciplines that limit what can be said in derived artifacts. Both are load-bearing on the integrity of the eventual recommendation.
 
-### 9.4 "PAE Industrial Operations" terminology ambiguity — verification flag
+### 9.4 "PAE Industrial Operations" terminology — RESOLVED 2026-05-23
 
-The Navy May 2026 Shipbuilding Plan (page 34) uses the term "PAE Industrial Operations" to describe a Navy-internal organizational structure that "combines control of the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, the four Navy Shipyards and all Navy Regional Maintenance Centers." This usage is distinct from — and may not be the same entity as — the privately-owned ship-repair business "PAE Industrial Operations" that was acquired by Amentum in 2024. Both entities use the identical name.
+The May 2026 Navy Shipbuilding Plan (page 34) uses the term "PAE Industrial Operations" to describe a Navy-internal organizational consolidation that combines the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy Shipyards into a single structure.
 
-The vault-wide glossary at `_meta/glossary.md` currently defines PAE-IO as the Amentum subsidiary. The Navy plan describes a structure that does not sound like a private contractor. Three possibilities:
+**Operator confirmed 2026-05-23:** PAE Industrial Operations as used in the Navy Shipbuilding Plan is a Navy reorganization — NOT a commercialization of the public shipyards and Regional Maintenance Centers, and not the same thing as any Amentum-owned defense services subsidiary. The vault was previously conflating two unrelated things under the same acronym; the Amentum-side framing was incorrect and has been corrected in `_meta/glossary.md`.
 
-1. The Amentum subsidiary PAE-IO is contracted to operate the Navy Regional Maintenance Centers, NAVSEA Industrial Operations Directorate, and the four Navy Shipyards. In this reading, the Navy plan is saying "we will run our maintenance through this contracted operator."
-2. The Navy has stood up a parallel Navy-internal organization that happens to share the PAE-IO name with the Amentum subsidiary. Possible if the acronym now expands differently (e.g., "Public Affairs Engagement" or some other Navy term).
-3. The same name is being used for the same thing — meaning the Amentum subsidiary has been given operational control of the four public Navy shipyards and the NAVSEA Industrial Operations Directorate. This would be a substantial change in how Navy ship-repair work is organized.
+**Discipline going forward:**
 
-The discipline that follows:
-
-- The vault glossary entry for PAE-IO must NOT be edited until this ambiguity is resolved.
-- No claim in this research file or any derived deliverable should treat the two PAE-IO usages as interchangeable until a primary source confirms which interpretation is correct.
-- The next find_sources pass should include a targeted query for NAVSEA Industrial Operations Directorate organizational announcements and any PAE / Amentum public statements about Navy Regional Maintenance Center contracts. The right primary source to resolve this is either a NAVSEA organizational chart, an Amentum SEC filing, or a DoD press release announcing the consolidation.
-- Until resolved, both usages should be cited verbatim with the source attached and not paraphrased.
+- PAE-IO in this research file and in any derived deliverable refers exclusively to the Navy organizational structure.
+- Amentum is a separate entity — a major Navy maintenance, repair, and overhaul contractor. Amentum is the industrial-supply-side actor whose planning assumptions the research has been tracking. Amentum is NOT the parent of PAE-IO; that framing was incorrect and should not appear in any future writing.
+- The acronym expansion of "PAE" in this Navy-internal context is not given in the primary source. If we find a NAVSEA or Office of the Secretary of the Navy organizational announcement that expands the acronym, it should be added to the glossary.
+- Anywhere in the file that currently reads "PAE-IO / Amentum" should be treated as a candidate for re-wording on next edit pass; both entities are mentioned because they both matter to the research, but they are separate.
 
 ---
 

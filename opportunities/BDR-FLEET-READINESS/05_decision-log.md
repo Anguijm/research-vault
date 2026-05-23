@@ -175,6 +175,24 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-23 — PAE-IO terminology resolved by operator
+
+The §9.4 verification flag added earlier today is closed. Operator confirmed that PAE Industrial Operations as used in the May 2026 Navy Shipbuilding Plan is a Navy reorganization, not a commercialization of the public shipyards or Regional Maintenance Centers, and is not the same thing as any Amentum-owned defense services subsidiary.
+
+The vault was previously conflating two unrelated entities under the PAE-IO acronym. That framing came from incorrect context I held about an Amentum acquisition of "PAE Industrial Operations" — there is no primary source for that link, and the operator has now corrected it. This was a SOP rule 4 violation that escaped detection earlier: an Assessment-level claim about Amentum's structure had been written into the glossary as if it were a FACT.
+
+What changed:
+
+- `_meta/glossary.md` PAE-IO entry rewritten to describe the Navy organizational consolidation. The acronym expansion is left blank because the primary source does not give it.
+- `_meta/glossary.md` Amentum entry rewritten to describe Amentum as an independent Navy services contractor, with an explicit note that the prior PAE-IO parent-company framing was incorrect.
+- `00_research-file.md` §1 thread 2 rewritten to separate Amentum (the industrial-supply-side contractor we track) from the PAE-IO Navy consolidation. Both are mentioned because both matter to the research, but they are now correctly distinguished.
+- `00_research-file.md` §9.4 retitled and rewritten to show the flag as resolved rather than open.
+- `01_sources/2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.md` provenance note rewritten to reflect the resolution.
+
+Out of scope this session: the index.md frontmatter `customer:` field still reads "PAE-IO / Amentum as industrial supply-side" in the candidate-customers list. That language carries forward the incorrect framing. It should be rewritten on the next edit pass to separate the two. Deferred because the file is operator-touched and a quick edit risks crossing the readability pass.
+
+---
+
 ### 2026-05-23 — Two load-bearing sources recovered via manual operator paste
 
 The operator manually recovered two sources that the automated ingest pipeline could not reach.
