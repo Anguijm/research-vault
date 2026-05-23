@@ -49,6 +49,24 @@ The skill is fast (the audits run in seconds), so the cost of running it more of
 
 The audits are only as good as the watchlist at `_meta/named-entities-watchlist.yaml`. If an opportunity introduces a new contractor, product, or program name that the watchlist does not cover, add it. The watchlist grows over time as the vault matures. Adding an entity to the watchlist does NOT mean the entity is contaminated — it just means the audits will track it going forward.
 
+## Per-opportunity allowlist
+
+Each opportunity can have a `_entity-allowlist.yaml` file at the opportunity-folder root. The allowlist excuses specific entities from the audit's "contaminated" bucket, on the operator's say-so. Use it when an entity is legitimately part of the research's analytical context but has not yet surfaced in an ingested source.
+
+Format:
+
+```yaml
+allowlist:
+  CACI: The operator's company. Baseline reference for any opportunity in this vault.
+  ARKA: CACI subsidiary acquired March 2026. Operator-blessed cross-opportunity reference.
+```
+
+The key is the entity name (case-sensitive, matching the watchlist). The value is the operator's one-line reason — for future-self documentation, not for the audit logic.
+
+Allowlisting an entity does NOT mean every claim about it is FACT. The verify-facts workflow still checks specific claims against specific sources. The allowlist resolves only the entity-presence audit, not the FACT-claim audit.
+
+When the audit finds an allowlisted entity in analytical content with zero source backing, it reports it in an ALLOWLISTED bucket rather than a CONTAMINATED bucket, and does NOT fail. The allowlisted bucket is informational — the operator can see at a glance which entities are riding on operator-knowledge alone, in case any of them eventually warrant a source.
+
 ## What this skill does NOT do
 
 This skill does not check FACT claims line-by-line against their cited sources. That is the job of `verify_facts.py`. This skill checks the *existence* of named entities in analytical content, not whether the specific claims about them are accurate. The two complement each other: this skill catches pollution at the entity level; the verifier catches it at the claim level.

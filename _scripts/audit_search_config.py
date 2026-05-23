@@ -45,6 +45,23 @@ def _load_watchlist() -> list[str]:
     return sorted(entities, key=lambda s: (-len(s), s))
 
 
+def _load_opportunity_allowlist(opp_dir: Path) -> dict[str, str]:
+    """Read the per-opportunity allowlist file if it exists. Returns a dict
+    mapping entity name to operator's reason. Empty dict if no allowlist."""
+    path = opp_dir / "_entity-allowlist.yaml"
+    if not path.exists():
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+    except Exception:
+        return {}
+    allowlist = data.get("allowlist") or {}
+    if not isinstance(allowlist, dict):
+        return {}
+    return {str(k).strip(): str(v).strip() if v else "" for k, v in allowlist.items()}
+
+
 def _count_in_text(entity: str, text: str) -> int:
     pattern = r'(?:^|[^A-Za-z0-9_])' + re.escape(entity) + r'(?=[^A-Za-z0-9_]|$)'
     return len(re.findall(pattern, text, re.IGNORECASE))
@@ -109,7 +126,7 @@ def _collect_query_strings(config: dict) -> list[tuple[str, str]]:
 
 def _audit_opportunity(opp_dir: Path, watchlist: list[str]) -> int:
     """Run the audit against one opportunity's search config. Returns count
-    of contaminated queries."""
+    of contaminated queries (excluding operator-allowlisted entities)."""
     print(f"\n{'=' * 70}")
     print(f"Auditing search config: {opp_dir.name}")
     print(f"{'=' * 70}")
@@ -122,28 +139,48 @@ def _audit_opportunity(opp_dir: Path, watchlist: list[str]) -> int:
     with open(cfg_path, encoding="utf-8") as f:
         config = yaml.safe_load(f) or {}
 
+    allowlist = _load_opportunity_allowlist(opp_dir)
     queries = _collect_query_strings(config)
     print(f"Total queries in config: {len(queries)}")
+    print(f"Allowlisted entities:    {len(allowlist)}")
 
     contaminated: list[tuple[str, str, list[str]]] = []
+    allowlisted_in_queries: list[tuple[str, str, list[str]]] = []
+
     for section, query in queries:
-        matched_entities: list[str] = []
+        not_in_sources_not_allowlisted: list[str] = []
+        not_in_sources_allowlisted: list[str] = []
         for entity in watchlist:
             if _count_in_text(entity, query) > 0:
                 source_count = _entity_in_sources(entity, opp_dir)
                 if source_count == 0:
-                    matched_entities.append(entity)
-        if matched_entities:
-            contaminated.append((section, query, matched_entities))
+                    if entity in allowlist:
+                        not_in_sources_allowlisted.append(entity)
+                    else:
+                        not_in_sources_not_allowlisted.append(entity)
+        if not_in_sources_not_allowlisted:
+            contaminated.append((section, query, not_in_sources_not_allowlisted))
+        if not_in_sources_allowlisted:
+            allowlisted_in_queries.append((section, query, not_in_sources_allowlisted))
 
     if contaminated:
-        print(f"\n❌ CONTAMINATED — {len(contaminated)} query/queries naming entities NOT in any ingested source:")
+        print(f"\n❌ CONTAMINATED — {len(contaminated)} query/queries naming non-allowlisted entities NOT in any ingested source:")
         for section, query, entities in contaminated:
             print(f"\n  [{section}]  {query[:100]}{'...' if len(query) > 100 else ''}")
             for e in entities:
-                print(f"     ↳ entity not in sources: {e}")
+                print(f"     ↳ entity not in sources and not allowlisted: {e}")
     else:
-        print(f"\n✓ All queries are clean. No watchlist entities appear in queries without source support.")
+        print(f"\n✓ All queries are clean. No non-allowlisted watchlist entities appear in queries without source support.")
+
+    if allowlisted_in_queries:
+        print(f"\n✓ ALLOWLISTED — {len(allowlisted_in_queries)} query/queries naming allowlisted entities without source support:")
+        print(f"   (these are operator-blessed and do not fail the audit)")
+        for section, query, entities in allowlisted_in_queries:
+            print(f"\n  [{section}]  {query[:100]}{'...' if len(query) > 100 else ''}")
+            for e in entities:
+                reason = allowlist.get(e, "")
+                note = f" — {reason}" if reason else ""
+                print(f"     ↳ {e}{note}")
 
     return len(contaminated)
 

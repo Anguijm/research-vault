@@ -1,0 +1,47 @@
+# Operator-confirmed entities for the BDR-FLEET-READINESS research track.
+#
+# Entities listed here are excluded from the audit_named_entities and
+# audit_search_config "contaminated" bucket because the operator has
+# affirmed they are legitimately part of this research's analytical
+# context — even when no ingested source has surfaced them yet.
+#
+# Allowlisting an entity name DOES NOT mean every claim about that entity
+# is FACT. The verify_facts.py workflow still has to check specific claims
+# against specific sources. The allowlist only resolves the entity-presence
+# audit, not the FACT-claim audit.
+#
+# Format: entity name as the YAML key, operator's reason as the value.
+# Use exact case-sensitive name matching the entry in the watchlist at
+# _meta/named-entities-watchlist.yaml.
+
+allowlist:
+  # CACI and its tracked products — the operator's company; baseline reference
+  # for any opportunity in this vault.
+  CACI: The operator's company. Baseline reference for any opportunity in this vault. Does not require an ingested source to appear in analytical content.
+  ARKA: CACI subsidiary acquired March 2026. Operator-blessed cross-opportunity reference.
+  Spectral: CACI legacy SIGINT capability. Operator-blessed cross-opportunity reference.
+  Trojan: CACI legacy SIGINT capability. Operator-blessed cross-opportunity reference.
+  SkyTracker: CACI counter-UAS product. Operator-blessed cross-opportunity reference.
+  CORIAN: CACI counter-UAS product. Operator-blessed cross-opportunity reference.
+  X-MADIS: CACI counter-UAS product. Operator-blessed cross-opportunity reference.
+
+# Remaining contaminated entities surfaced by the 2026-05-23 audit but NOT yet
+# added to the allowlist — left here as a working note so the operator can
+# review them when picking up the research. Move any operator-blessed item
+# from this commented section into the allowlist above.
+#
+#  - BISim                            (simulation platform vendor; industry standard)
+#  - VBS4                             (BISim product; industry standard)
+#  - MAK ONE / MAK Technologies       (simulation platform vendor; industry standard)
+#  - VR-Forces                        (MAK product; industry standard)
+#  - Bohemia Interactive Simulations  (full name of BISim)
+#  - SAIC                             (canonical defense services incumbent)
+#  - Leidos                           (canonical defense services incumbent)
+#  - HII Mission Technologies         (canonical naval competitor)
+#  - Vigor                            (Navy ship-repair contractor)
+#  - Titan Acquisitions               (Navy ship-repair contractor)
+#  - MHI / Marine Hydraulics International  (Navy ship-repair contractor)
+#  - General Dynamics NASSCO          (Navy shipbuilder)
+#  - BAE Norfolk                      (Navy ship-repair facility)
+#  - Bollinger                        (Navy shipbuilder)
+#  - Fincantieri Marinette Marine     (Navy shipbuilder)

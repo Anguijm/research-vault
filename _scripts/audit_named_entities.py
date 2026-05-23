@@ -52,6 +52,25 @@ def _load_watchlist() -> list[str]:
     return sorted(entities, key=lambda s: (-len(s), s))
 
 
+def _load_opportunity_allowlist(opp_dir: Path) -> dict[str, str]:
+    """Read the per-opportunity allowlist file if it exists. Returns a dict
+    mapping entity name to operator's reason for allowlisting it. Empty dict
+    if no allowlist file is present."""
+    path = opp_dir / "_entity-allowlist.yaml"
+    if not path.exists():
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+    except Exception:
+        return {}
+    allowlist = data.get("allowlist") or {}
+    if not isinstance(allowlist, dict):
+        return {}
+    # Normalize: strip whitespace from keys
+    return {str(k).strip(): str(v).strip() if v else "" for k, v in allowlist.items()}
+
+
 def _count_in_text(entity: str, text: str) -> int:
     """Case-sensitive whole-word count, allowing common punctuation around the
     entity. Uses word boundary regex so 'CACI' doesn't match inside 'CACIIs'."""
@@ -105,7 +124,9 @@ def _config_files_for_opportunity(opp_dir: Path) -> list[Path]:
 
 
 def _audit_opportunity(opp_dir: Path, watchlist: list[str]) -> int:
-    """Run the audit against one opportunity. Returns count of contaminated entries."""
+    """Run the audit against one opportunity. Returns count of contaminated
+    entries (excluding operator-allowlisted entries, which are reported but
+    do not fail the audit)."""
     print(f"\n{'=' * 70}")
     print(f"Auditing opportunity: {opp_dir.name}")
     print(f"{'=' * 70}")
@@ -113,12 +134,15 @@ def _audit_opportunity(opp_dir: Path, watchlist: list[str]) -> int:
     analytical_files = _analytical_files_for_opportunity(opp_dir)
     source_files = _source_files_for_opportunity(opp_dir)
     config_files = _config_files_for_opportunity(opp_dir)
+    allowlist = _load_opportunity_allowlist(opp_dir)
 
     print(f"Analytical files scanned: {sum(1 for f in analytical_files if f.exists())}")
     print(f"Source files scanned:     {len(source_files)}")
     print(f"Config files scanned:     {sum(1 for f in config_files if f.exists())}")
+    print(f"Allowlisted entities:     {len(allowlist)}")
 
     contaminated: list[tuple[str, list[tuple[Path, int, str]]]] = []
+    allowlisted: list[tuple[str, list[tuple[Path, int, str]], str]] = []
     ok: list[tuple[str, int, int]] = []
     source_only: list[tuple[str, int]] = []
 
@@ -133,14 +157,17 @@ def _audit_opportunity(opp_dir: Path, watchlist: list[str]) -> int:
         appearing_in_writing = analytical_count + config_count
 
         if appearing_in_writing > 0 and source_count == 0:
-            contaminated.append((entity, analytical_hits + config_hits))
+            if entity in allowlist:
+                allowlisted.append((entity, analytical_hits + config_hits, allowlist[entity]))
+            else:
+                contaminated.append((entity, analytical_hits + config_hits))
         elif appearing_in_writing > 0 and source_count > 0:
             ok.append((entity, appearing_in_writing, source_count))
         elif appearing_in_writing == 0 and source_count > 0:
             source_only.append((entity, source_count))
 
     if contaminated:
-        print(f"\n❌ CONTAMINATED — {len(contaminated)} entity name(s) in vault content but in ZERO sources:")
+        print(f"\n❌ CONTAMINATED — {len(contaminated)} entity name(s) in vault content but in ZERO sources and NOT allowlisted:")
         for entity, hits in contaminated:
             print(f"\n  {entity}")
             for path, lineno, line in hits[:3]:
@@ -151,7 +178,13 @@ def _audit_opportunity(opp_dir: Path, watchlist: list[str]) -> int:
             if len(hits) > 3:
                 print(f"     · ... and {len(hits) - 3} more file(s)")
     else:
-        print(f"\n✓ No contaminated entities. All names in analytical/config content are source-backed.")
+        print(f"\n✓ No contaminated entities. All non-allowlisted names in analytical/config content are source-backed.")
+
+    if allowlisted:
+        print(f"\n✓ ALLOWLISTED — {len(allowlisted)} entity name(s) operator-blessed for this research without requiring a source:")
+        for entity, _hits, reason in allowlisted:
+            note = f" — {reason}" if reason else ""
+            print(f"     {entity:<40}{note}")
 
     if ok:
         print(f"\n✓ OK — {len(ok)} entity name(s) appearing in both vault content and ingested sources:")
