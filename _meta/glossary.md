@@ -212,7 +212,7 @@ The functional ones include:
 
 **BDA.** Battle damage assessment. The diagnostic work of figuring out what is broken on a hit platform and how bad it is. Subsumed under BDAR.
 
-**BDAR.** Battle Damage Assessment and Repair. The formal U.S. military term for the unified cycle of assessing damage on a struck platform, classifying it, prioritizing the repair work, and executing it. The primary scope frame for the BDR-FLEET-READINESS research track as tightened by the operator on 2026-05-24 — specifically focused on training, simulation, and exercises in this space, not the broader ship-repair industrial base.
+**BDAR.** Battle Damage Assessment and Repair. The formal U.S. military term for the unified cycle of assessing damage on a struck platform, classifying it, prioritizing the repair work, and executing it. The primary scope frame for the BDR-FLEET-READINESS research track as tightened by the operator on 2026-05-24 — specifically focused on training, simulation, and exercises in this space, not the broader ship-repair industrial base. **Structural framing — [Inference (Gemini Pro red-team, 2026-05-25) — Pending Source-Grounding]:** BDAR is plausibly the capability gap between Organizational-level Damage Control (DC — ship-organic immediate-casualty response) and Intermediate / Depot-level Fleet Maintenance Activity (FMA) and shipyard work (deep maintenance and modernization). Currently a structural inference, not source-grounded.
 
 **BDAT.** Battle Damage Assessment Team. The personnel cell that performs the assessment side of BDAR on a hit platform. BDAT training is one of the two pillars of the BDR-FLEET-READINESS research scope (the other is the repair-side training, also under BDAR).
 
@@ -255,7 +255,7 @@ These are perspective-dependent and reflect the operator's current business-deve
 
 **PAE-IO.** PAE Industrial Operations — a Navy-internal organizational consolidation described in the May 2026 Navy Shipbuilding Plan (page 34) that combines the Navy Regional Maintenance Centers, NAVSEA's Industrial Operations Directorate, and the four public Navy Shipyards into a single structure tying contracting functions for maintenance work to the fleet components responsible for the ships. The acronym expansion of "PAE" in this Navy-internal context is not stated in the primary source.
 
-**HII Mission Technologies.** Huntington Ingalls Industries' services arm. Inherited Alion's ship-damage modeling work via a 2021 acquisition (commonly confused with CACI, see SOP rule 6 note). A primary competitor in naval modeling and simulation.
+<!-- A vault-wide glossary entry for a watchlisted services contractor was removed 2026-05-25 because no ingested vault source supported the prior analytical claims (corporate parentage, M&S inheritance, competitor framing). The named-entities audit at _scripts/audit_named_entities.py flagged the entry that day; over-cleaning safeguards per the 2026-05-25 corpus-cleanup decision log entry preserve the analytical lineage there rather than here. Per-opportunity allowlist treatment for any flagged entity lives at opportunities/<ID>/_entity-allowlist.yaml. -->
 
 ---
 

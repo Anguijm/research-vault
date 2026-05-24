@@ -30,11 +30,9 @@ ai_searches:
   - "I/ITSEC Navy serious game damage control battle damage assessment vendor"
 
   # ---- Week 2: GAO / CRS oversight materials ----
-  - "GAO Navy ship maintenance depot capacity report 2024 2025 2026"
-  - "GAO Navy industrial base private shipyard capacity report"
+  # Off-scope shipbuilding queries removed 2026-05-25 per cleanup dialogue —
+  # they were producing noise outside BDAR/BDAT training scope.
   - "GAO Navy live virtual constructive LVC training architecture report"
-  - "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair"
-  - "CRS report industrial base shipbuilding repair attrition wargaming"
 
   # ---- Week 2: Navy ship-repair industrial footprint ----
   # Note: do NOT name specific commercial contractors in these queries until a
@@ -62,11 +60,9 @@ ai_searches:
 
   # ---- Targeted follow-ups added 2026-05-23 after first-pass triage ----
   # The first-pass search returned a 9/10 SWARMEX article (now 404) plus several
-  # leads worth chasing more directly.
-  - "USNI News expanding US naval repair overseas Pacific shipyards China"
+  # leads worth chasing more directly. Out-of-scope shipbuilding queries removed
+  # 2026-05-25 per cleanup dialogue.
   - "SRF-JRMC commanding officer relieved 2024 2025 ship repair Japan"
-  - "Pacific Fleet forward sustainment repair industrial base wartime"
-  - "Department of War Navy shipbuilding plan 2026 long-range FY27"
 
   # ---- 2026-05-24 BDAR/BDAT scope-tightening queries — testing §7 legs 1 + 2 ----
   # Active-procurement signals for BDAR/BDAT training and simulation. Designed
@@ -79,6 +75,36 @@ ai_searches:
   - "ONR Office of Naval Research broad agency announcement damage assessment training simulation BAA"
   - "Navy SIMA Shore Intermediate Maintenance Activity Norfolk San Diego training advanced manufacturing"
   - "Regional Maintenance Center RMC advanced manufacturing lab Navy training contract 2026"
+
+  # ---- 2026-05-25 buyer-triad and verified-via-dialogue-target queries ----
+  # The 2026-05-25 right-to-win-reframe dialogue (5 rounds with Gemini Pro)
+  # surfaced specific Navy organizations and programs as plausible inferences
+  # with cited contract evidence: NETC, NAWCTSD, SWSC, NWDC, ATG, NCTE
+  # (HII prime), RRL (NETC's Sailor 2025 pillar), STAVE (NAWCTSD-executed
+  # SWSC system), SMMTT (submarine), NSST (Fitzgerald/McCain analog).
+  # Per the named-contractor discipline at _meta/feedback_named_contractor_discipline.md,
+  # these are NOT yet vault-citable as FACTs — these queries are TESTING the
+  # dialogue's claims against primary Navy sources, not asserting them. If the
+  # entities exist as Gemini described, primary-source results will surface them.
+  # Queries are written to probe the procurement-signal space, with a few
+  # direct-entity queries to test the specific dialogue claims.
+
+  # Space-probing queries (do not name specific dialogue-surfaced programs):
+  - "Naval Education Training Command surface warfare training curriculum 2025 2026 contractor procurement"
+  - "Naval Air Warfare Center Training Systems Division surface ship training systems contract 2025 2026"
+  - "Surface Warfare Schools Command BDAR battle damage assessment curriculum requirement"
+  - "Naval Warfare Development Center surface fleet tactical doctrine battle damage NTTP TACMEMO"
+  - "Afloat Training Group surface readiness BDAR damage assessment training"
+  - "Navy curriculum development contract surface warfare battle damage assessment 2025 2026"
+  - "Navy fleet synthetic training architecture contract integration HLA DIS standards"
+  - "Navy training simulator BDAR battle damage assessment procurement program of record"
+  - "Navy Combat Information Center crew training BDA contract"
+  - "Navy Ready Relevant Learning Sailor 2025 BDAR damage control curriculum modernization"
+
+  # Direct-entity testing queries (named-but-testing, with the discipline note above applying):
+  - "Navy Continuous Training Environment NCTE Fleet Synthetic Training contract"
+  - "STAVE Surface Training Advanced Virtual Environment NAWCTSD contract"
+  - "Navigation Seamanship Shiphandling Trainer NSST Fitzgerald McCain upgrade contract"
 
 # SAM.gov queries — Carderock-adjacent SBIR/STTR + Navy ship repair vehicles.
 # Carderock itself rarely buys big; SBIR/STTR topics and NAVSEA depot-repair

@@ -15,6 +15,8 @@ verified: 2026-05-24
 
 ## Summary
 
+**Scope note added 2026-05-25 from corpus-cleanup dialogue.** This source is a SkillBridge job posting for a Damage Control Training & Inventory Control role at a Hampton-Roads contractor (Phoenix Group of Virginia). Use it as evidence that a contractor base exists for **damage-control-adjacent training** (organic-Navy DC functions) in the Hampton Roads ship-repair labor market. Do NOT use it as a procurement signal for **BDAR/BDAT training, simulation, and exercises**. DC (organic ship-level immediate-casualty response) and BDAR (post-immediate assessment + repair) are distinct training categories per the 2026-05-25 corpus-cleanup dialogue with Gemini Pro; conflating them was an analytical pattern that needed correction. See `_red-teams/2026-05-25-gemini-pro-corpus-cleanup-dialogue.md`.
+
 
 
 ## Extracted content
