@@ -370,6 +370,13 @@ All three empty-ingest files should be moved to `01_sources/_quarantine/` and th
 - [s.2026-05-24-afdp-3-60-targeting-air-force-] https://www.doctrine.af.mil/Portals/61/documents/AFDP_3-60/3-60-AFDP-TARGETING.pdf  →  `01_sources/2026-05-24_doctrine-af-mil_afdp-3-60-targeting-air-force-doctrine-publication.md`
 - [s.2026-05-24-opening-the-training-bottlenec] https://www.diu.mil/latest/opening-the-training-bottleneck-how-dius-xr-devices-deliver-increased-access-and-readiness  →  `01_sources/2026-05-24_diu-mil_opening-the-training-bottleneck-how-diu-s-xr-devices-deliver.md`
 - [s.2026-05-24-chairman-wicker-leads-sasc-hea] https://www.wicker.senate.gov/2026/5/chairman-wicker-leads-sasc-hearing-on-department-of-the-navy-posture-for-fiscal-year-2027  →  `01_sources/2026-05-24_wicker-senate-gov_chairman-wicker-leads-sasc-hearing-on-department-of-the-navy.md`
+- [s.2026-05-24-c3f-and-international-partners] https://www.c3f.navy.mil/News/Article/4461121/c3f-and-international-partners-conclude-final-planning-for-rimpac-2026-exercise/  →  `01_sources/2026-05-24_c3f-navy-mil_c3f-and-international-partners-conclude-final-planning-for-r.md`
+- [s.2026-05-24-nswc-crane-to-receive-two-nati] https://www.navsea.navy.mil/Media/News/Article/4187898/nswc-crane-to-receive-two-nationwide-federal-laboratory-consortium-awards-for-s/  →  `01_sources/2026-05-24_navsea-navy-mil_nswc-crane-to-receive-two-nationwide-federal-laboratory-cons.md`
+- [s.2026-05-24-damage-control-training-invent] https://www.ziprecruiter.com/c/Phoenix-Group-of-Virgina,-Inc./Job/Damage-Control-Training-&-Inventory-Control/-in-Chesapeake,VA?jid=88cf337c16cea358  →  `01_sources/2026-05-24_ziprecruiter-com_damage-control-training-inventory-control-job-in-chesapeake.md`
+- [s.2026-05-24-transitions-spring-2026] https://www.navysbir.com/docs/Transitions_Spring-2026.pdf  →  `01_sources/2026-05-24_navysbir-com_transitions-spring-2026.md`
+- [s.2026-05-24-pressure-points-training-cic-c] https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/  →  `01_sources/2026-05-24_euro-sd-com_pressure-points-training-cic-crews-european-security-defence.md`
+- [s.2026-05-24-a-new-strategy-for-high-perfor] https://www.navsea.navy.mil/Media/News/Article-View/Article/4196134/a-new-strategy-for-high-performance-computing-at-carderock/  →  `01_sources/2026-05-24_navsea-navy-mil_a-new-strategy-for-high-performance-computing-at-carderock-n.md`
+- [s.2026-05-24-northrop-grumman-uses-ar-and-v] https://defence-industry.eu/northrop-grumman-uses-augmented-and-virtual-reality-tools-to-improve-e-2d-advanced-hawkeye-readiness/  →  `01_sources/2026-05-24_defence-industry-eu_northrop-grumman-uses-ar-and-vr-tools-to-improve-e-2d-advanc.md`
 
 ## 9. Verification flags
 
