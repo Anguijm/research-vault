@@ -175,6 +175,48 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-25 — Five-round iterated Gemini Pro red-team of operator's right-to-win reframe
+
+Operator proposed a substantive reframe of CACI's right-to-win on 2026-05-25: pivot from "CACI as ship-damage simulation platform builder" to "CACI as scenario-based war-game designer and operational training curriculum developer for BDAR/BDAT teams at RMCs, leveraging C4ISR and ARKA strengths." Operator authorized an iterated red-team with up to 10-15 rounds of Claude-challenges-Gemini and Gemini-challenges-Claude, ending in a clean list of unresolved disagreements. Five rounds were sufficient to converge; the full dialogue is captured at `_red-teams/2026-05-25-gemini-pro-right-to-win-reframe-dialogue.md`.
+
+**Round-by-round outcomes:** Round 1 produced Gemini's initial critique (BAH wargaming dominance, SAIC/HII surface training, OCI Biased Ground Rules trap, commoditization). Round 2 had Claude challenge each unsupported assertion; Gemini conceded BAH dominance (BDAR is white space), OCI trap (mitigable under FAR 9.5), commoditization (C4ISR + ARKA + tech-enabled delivery is genuinely differentiated). Round 3 had Claude demand verification of the still-asserted SAIC FDTPS contract and the HII NCTE claim; Gemini conceded FDTPS as a hallucination/mashup, conceded that white-space-vs-competitive-territory means CACI can bid as prime on SeaPort-NxG / NAWCTSD vehicles, conceded Element 7 (foreign-port procurement planning) is valid training audience-alignment, conceded RMC-budget inference and surfaced multiple alternative funding paths (DIU CSO, NavalX, PACFLT). Round 4 had Claude demand truth-labeling; Gemini produced verifiable evidence for NCTE/HII (specific contract values), Ready, Relevant Learning (NETC program of record), NAWCTSD as surface-and-subsurface training execution authority (executing STAVE and SMMTT), and the buyer-triad pattern (post-Fitzgerald/McCain NSST upgrades as historical analog). Round 5 had Gemini steelman the kill-case using only verified facts and surface remaining nagging concerns.
+
+**Outcome — no residual Claude/Gemini disagreements after five rounds.** The dialogue converged completely. Gemini conceded substantially on every critique that rested on un-evidenced incumbency or competitive moats. What remains is empirical questions (three open research questions for operator-side verification), strategic decisions (three kill-case requirements for any forward capture plan), and scope concerns (three nagging structural items). All require operator-side resolution, not further AI dialogue.
+
+**Most consequential verified findings:**
+
+- **NCTE (Navy Continuous Training Environment)** is a real program with HII Mission Technologies as prime via the Alion acquisition. Specific contract values: $772M 2018 award, $274M 2023 task order at NSWC Corona. Scope is the network backbone for Fleet Synthetic Training (not "all" Navy LVC as Gemini initially overstated). HLA/DIS standards-based — meaning third-party plug-ins are technically possible but face standard ATO/RMF queue managed by the incumbent.
+- **NAWCTSD is the surface and subsurface training-systems execution authority**, not just aviation. Executes STAVE (Surface Training Advanced Virtual Environment) for SWSC and SMMTT (Submarine Multi-Mission Team Trainer). Acts on behalf of NETC and SWSC requirements, not in a vacuum. This corrects Gemini's Round 1 overstatement of NAWCTSD as "sole" training buyer and the operator's correct push-back yesterday.
+- **The buyer-triad pattern** (Fleet sponsor + NETC curriculum requirement + NAWCTSD execution vehicle) has a verified historical analog: the post-Fitzgerald/McCain Navigation, Seamanship, and Shiphandling Trainer (NSST) upgrades from 2017+. PACFLT/USFF urgency → SWSC/NETC requirement rewrite → NAWCTSD contract execution.
+
+**Three open research questions for operator verification:**
+
+1. Who is the actual Operational Sponsor for BDAR? PACFLT N4 (Logistics/Maintenance), NAVSEA Code 05 (Engineering), NECC (Expeditionary), or someone else?
+2. Does a Master Training Task List for BDAR currently exist within NETC/RRL? If yes, the work can sell through NAWCTSD now. If no, the operator faces a year-long requirements-definition lobbying effort.
+3. Is the target an NCTE network integration or a standalone STAVE schoolhouse deployment? This single decision dictates the engineering roadmap, the HII teaming question, and the ATO/RMF risk profile.
+
+**Three kill-case requirements that any forward capture plan must answer:**
+
+1. Scope/Over-engineering Trap — networked LVC vs. standalone schoolhouse trainer.
+2. Prime Vehicle Trap — why doesn't the work get ECP'd to HII as the NCTE prime?
+3. Timeline/Funding Trap — what funded Program Element makes NAWCTSD able to buy this?
+
+**Three nagging structural concerns:**
+
+1. The Physics of BDAR — XR is plausibly strong for Assessment but likely weak for Repair (which is physical/tactile, traditionally trained on wet trainers like USS Buttercup and USS Trayer). Scope may need to narrow to the BDA side.
+2. The ATO / RMF accreditation timeline (12-24 months for new training systems on Navy networks).
+3. The Hardware Agnosticism Paradox — NAWCTSD training contracts often bundle software + hardware, which would force CACI into hardware reseller and lifecycle-manager roles.
+
+**Recommended next moves before §7 rewrite:**
+
+- Run a targeted find_sources pass against the named research targets (NCTE, RRL, STAVE, SMMTT, NSST, JSAF, NAWCTSD charters, NETC/SWSC/NWDC org structure). These cannot enter analytical content until ingested.
+- Resolve the network-vs-standalone scope question. If standalone STAVE, the §7 hypothesis simplifies dramatically. If NCTE integration, the HII teaming question becomes load-bearing.
+- Identify the BDAR operational sponsor with a funded line. Without one, the rest of the analysis is academic.
+
+**Process discipline observation:** the iterated red-team pattern produced substantially more analytical value than the single-pass red-team from 2026-05-24. The single pass surfaced concerns (some valid, some hallucinated). The five-round iteration separated verified facts from unverified assertions, killed the SAIC FDTPS hallucination, corrected the NAWCTSD overstatement, and produced a clean operator decision artifact with three kinds of unresolved items (empirical, strategic, scope). Going forward, every analytical reframe that would land in the research file should run through this iterated pattern before §7 / §3 / §4 / §5 get rewritten.
+
+---
+
 ### 2026-05-24 — Gemini Pro red-team of §7 hypothesis surfaces material analytical errors
 
 Operator flagged that the small-ships workflow's per-section red-team discipline had been ignored across §3 / §4 / §5 drafting and the §7 hypothesis refocus. Ran the first cross-AI red-team on §7 using Gemini Pro with the cross-ai-red-team.md three-persona prompt structure (Navy customer reviewer, competitor analyst, skeptical exec). Full output captured at `_red-teams/2026-05-24-gemini-pro-section-7-hypothesis.md`.
