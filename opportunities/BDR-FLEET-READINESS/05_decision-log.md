@@ -175,6 +175,35 @@ Every claim in section 3 carries a FACT or Assessment label per the SOP and a `[
 
 ---
 
+### 2026-05-24 — Gemini Pro red-team of §7 hypothesis surfaces material analytical errors
+
+Operator flagged that the small-ships workflow's per-section red-team discipline had been ignored across §3 / §4 / §5 drafting and the §7 hypothesis refocus. Ran the first cross-AI red-team on §7 using Gemini Pro with the cross-ai-red-team.md three-persona prompt structure (Navy customer reviewer, competitor analyst, skeptical exec). Full output captured at `_red-teams/2026-05-24-gemini-pro-section-7-hypothesis.md`.
+
+**The catch that most invalidates current analytical content:** the Navy's actual contracting center for simulators, serious games, and training pipelines is NAWCTSD (Naval Air Warfare Center Training Systems Division, Orlando) — not NAVSEA or NSWC Carderock. The §3 customer-landscape and §5 competitive-landscape sections have been drafted around the wrong customer organization. Carderock is R&D and T&E (specifically LFT&E — Live Fire Test & Evaluation), not a schoolhouse. The §11.2 BDAR repair-side training pipeline names Carderock as a candidate site for hands-on instrumented-test-bed training; per Gemini, the actual Navy training infrastructure for damage-control is wet trainers (e.g., the "Buttercup" trainer), ex-service hulks, RMCs, public shipyards, and Surface Warfare Engineering Schools Command (SWESC). Multiple analytical corrections are required.
+
+**Three disconfirming threads Gemini surfaced that the §7 hypothesis missed entirely:**
+
+1. The Technical Data Package (TDP) / data-rights wall. Cannot train assessment teams on a specific ship class without OEM shipbuilder ship-blueprint data, which is tightly controlled by NAVSEA and OEMs. CACI has no path to access this data.
+2. NAWCTSD is the actual buyer for training systems, not NAVSEA. This is the structural scope error noted above.
+3. Teaming necessity. CACI's gap in maritime deckplate experience means a prime-position bid is not credible. The research has to add a teaming-feasibility leg.
+
+**The single most important Gemini critique to address before further investment:** "Does CACI actually have a right-to-win here, or is this just an interesting Navy problem?" If CACI's plausible role is "build the network architecture / data pipeline / scenario engine that someone else's training program runs on" (leveraging CACI's actual C4ISR / cyber / enterprise-IT strengths), that's a fundamentally different opportunity shape than the current §7 hypothesis assumes. The hypothesis as written points at a ship-repair training capability that CACI does not credibly have the deckplate experience to deliver.
+
+**Named entities Gemini surfaced that are NOT yet source-grounded:** NAWCTSD, MOTISS (the legacy ship-damage simulation model), SURFMEPP, TTGP (Tactical Training Group Pacific), TTGL (Atlantic), FST (Fleet Synthetic Training), SWESC, GDIT (as FST incumbent), Buttercup (wet trainer), SeaPort-NxG, NAVSEA Code 04 / Code 05, NAVSEA-OEM teaming agreements. Per the named-contractor discipline at `_meta/feedback_named_contractor_discipline.md`, none of these can enter the analytical research file as FACT claims yet. They are the priority targets for the next find_sources pass — particularly NAWCTSD, which may reorient the entire research direction.
+
+**Recommended next moves (per the red-team file, deferred for operator decision):**
+
+1. Fix §11.2 to remove Carderock-as-hands-on-test-bed framing; replace with Navy wet-trainer / hulk / schoolhouse infrastructure once source-verified.
+2. Refocus §7 leg 3 to make explicit that Carderock is a modeling SOURCE, not a training VENUE.
+3. Add a new §7 leg 7 (teaming feasibility) — explicit falsifier on whether CACI can secure a prime / sub relationship with HII, GD, or a maritime firm.
+4. Reframe §7 leg 1 (demand gap) to be specific about WHICH gap is being signaled — Gemini reads SIMA stand-up as industrial-workforce capacity, not training-content gap.
+5. Target the next find_sources pass at NAWCTSD specifically.
+6. Pause further analytical drafting on §3 / §4 / §5 until §7 is reshaped. The current §3-§5 target the wrong customer organization.
+
+**Process lesson recorded:** every drafting session that adds analytical content (FACT claims, scope statements, hypothesis modifications) should run a cross-AI red-team before that content lands in the research file. The small-ships workflow's per-section red-team step exists for exactly this reason; we ignored it for §3, §4, §5, the §7 refocus, and the §11 reframe. The cost of the discipline is ~5 minutes of Gemini quota per section; the cost of skipping it is shown by this red-team — several analytical positions need rework now that we've spent days operating on incorrect framings.
+
+---
+
 ### 2026-05-24 — Section 7 hypothesis legs refocused on BDAR/BDAT scope; OCI primer captured
 
 Two changes following the BDAR/BDAT scope narrowing and the brainstorming session.
