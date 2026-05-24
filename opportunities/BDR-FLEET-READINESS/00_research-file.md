@@ -354,6 +354,22 @@ The first ingest pass left these in incomplete state. They are listed here so fu
 All three empty-ingest files should be moved to `01_sources/_quarantine/` and the correct sources re-found in the next source-finder pass.
 - [s.2026-05-23-2026-05-14-caudle-testimony] https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf  →  `01_sources/2026-05-23_armedservices-house-gov_2026-05-14-caudle-testimony.md`
 - [s.2026-05-23-error-aspx] https://docs.house.gov/committee/Error/Error.aspx?Code=404  →  `01_sources/2026-05-23_docs-house-gov_error-aspx.md`
+- [s.2026-05-24-arcs-aviation-awarded-sbir-pha] https://www.arcsaviation.com/07/arcs-aviation-awarded-sbir-phase-ii-by-u-s-navy/  →  `01_sources/2026-05-24_arcsaviation-com_arcs-aviation-awarded-sbir-phase-ii-by-u-s-navy.md`
+- [s.2026-05-24-calendar] https://armedservices.house.gov/calendar/  →  `01_sources/2026-05-24_armedservices-house-gov_calendar.md`
+- [s.2026-05-24-2026-05-14-caudle-testimony] https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf  →  `01_sources/2026-05-24_armedservices-house-gov_2026-05-14-caudle-testimony.md`
+- [s.2026-05-24-department-of-the-navy-release] https://www.navy.mil/Press-Office/News-Stories/Article/3769970/department-of-the-navy-releases-fiscal-year-2027-shipbuilding-plan/  →  `01_sources/2026-05-24_navy-mil_department-of-the-navy-releases-fiscal-year-2027-shipbuildin.md`
+- [s.2026-05-24-budget-hearing-united-states-n] https://appropriations.house.gov/events/hearings/budget-hearing-united-states-navy-and-marine-corps  →  `01_sources/2026-05-24_appropriations-house-gov_budget-hearing-united-states-navy-and-marine-corps.md`
+- [s.2026-05-24-weapon-system-sustainment-dod-] https://www.gao.gov/products/gao-26-108140  →  `01_sources/2026-05-24_gao-gov_weapon-system-sustainment-dod-identified-critical-cost-growt.md`
+- [s.2026-05-24-weekly-update-for-government-c] https://www.pmpc.com/news-events/weekly-update-for-government-contractors-and-commercial-businesses-april-2026-5/  →  `01_sources/2026-05-24_pmpc-com_weekly-update-for-government-contractors-and-commercial-busi.md`
+- [s.2026-05-24-u-s-senator-elizabeth-warren] https://www.warren.senate.gov/newsroom/press-releases/warren-sheehy-push-armed-services-leaders-in-congress-to-get-military-right-to-repair-done  →  `01_sources/2026-05-24_warren-senate-gov_u-s-senator-elizabeth-warren.md`
+- [s.2026-05-24-u-s-pacific-fleet-announces-30] https://www.cpf.navy.mil/Newsroom/News/Article/4465055/us-pacific-fleet-announces-30th-rimpac-exercise/  →  `01_sources/2026-05-24_cpf-navy-mil_u-s-pacific-fleet-announces-30th-rimpac-exercise.md`
+- [s.2026-05-24-private-sector-services-that-c] https://www.shipuniverse.com/naval/private-sector-services-that-could-become-critical-as-naval-maintenance-backlogs-deepen/  →  `01_sources/2026-05-24_shipuniverse-com_private-sector-services-that-could-become-critical-as-naval.md`
+- [s.2026-05-24-why-the-united-states-south-ko] https://www.rand.org/pubs/commentary/2025/05/why-the-united-states-south-korea-and-japan-must-cooperate.html  →  `01_sources/2026-05-24_rand-org_why-the-united-states-south-korea-and-japan-must-cooperate-o.md`
+- [s.2026-05-24-identifying-pathways-for-u-s-s] https://www.csis.org/analysis/identifying-pathways-us-shipbuilding-cooperation-northeast-asian-allies  →  `01_sources/2026-05-24_csis-org_identifying-pathways-for-u-s-shipbuilding-cooperation-with-n.md`
+- [s.2026-05-24-artificial-intelligence-and-ma] https://spie.org/DS/conferencedetails/artificial-intelligence-and-machine-learning-for-mdo-applications  →  `01_sources/2026-05-24_spie-org_artificial-intelligence-and-machine-learning-for-multi-domai.md`
+- [s.2026-05-24-afdp-3-60-targeting-air-force-] https://www.doctrine.af.mil/Portals/61/documents/AFDP_3-60/3-60-AFDP-TARGETING.pdf  →  `01_sources/2026-05-24_doctrine-af-mil_afdp-3-60-targeting-air-force-doctrine-publication.md`
+- [s.2026-05-24-opening-the-training-bottlenec] https://www.diu.mil/latest/opening-the-training-bottleneck-how-dius-xr-devices-deliver-increased-access-and-readiness  →  `01_sources/2026-05-24_diu-mil_opening-the-training-bottleneck-how-diu-s-xr-devices-deliver.md`
+- [s.2026-05-24-chairman-wicker-leads-sasc-hea] https://www.wicker.senate.gov/2026/5/chairman-wicker-leads-sasc-hearing-on-department-of-the-navy-posture-for-fiscal-year-2027  →  `01_sources/2026-05-24_wicker-senate-gov_chairman-wicker-leads-sasc-hearing-on-department-of-the-navy.md`
 
 ## 9. Verification flags
 
