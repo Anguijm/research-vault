@@ -1,7 +1,7 @@
 ---
 type: inbox
 opportunity: BDR-FLEET-READINESS
-last_updated: 2026-05-23T12:33:00
+last_updated: 2026-05-24T11:57:06
 ---
 
 # Inbox — pending review
@@ -10,587 +10,31 @@ last_updated: 2026-05-23T12:33:00
 Then run `python _scripts/approve_inbox.py BDR-FLEET-READINESS` to ingest approved items
 and interactively review the rest.
 
-## Candidates added 2026-05-21 23:02
+## Candidates (sorted by score — 156 items, re-sorted 2026-05-24T11:57:06)
 
-- [x] **[SRF-JRMC Successfully Completes First Ship Wartime Repair and Maintenance Exercise (SWARMEX) in Japan](https://www.navsea.navy.mil/Media/News/Article/3748283/srf-jrmc-successfully-completes-first-ship-wartime-repair-and-maintenance-exerc/)** `9/10` — www.navsea.navy.mil
-  - URL: https://www.navsea.navy.mil/Media/News/Article/3748283/srf-jrmc-successfully-completes-first-ship-wartime-repair-and-maintenance-exerc/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The article directly addresses battle damage assessment and repair within the NAVSEA context, making it highly relevant to the research focus.
-  - Reason: This article details exercises in 'battle damage assessment and repair' and 'maintenance and repair resiliency', directly addressing the battle damage repair and survivability components of the query, within the broader NAVSEA context.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Navy And Coast Guard Shipbuilding: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/products/gao-26-109068)** `8/10` — www.gao.gov
-  - URL: https://www.gao.gov/products/gao-26-109068
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: This GAO report addresses shipbuilding and maintenance capacity, directly relevant to the Navy's strategic readiness and industrial base.
-  - Reason: This is a GAO testimony addressing shipbuilding challenges and the need for a strategic approach to private sector industrial base investments, which is related to overall naval industrial and maintenance capacity.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[NAVY AND COAST GUARD SHIPBUILDING: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/products/GAO-26-109068)** `8/10` — www.gao.gov
-  - URL: https://www.gao.gov/products/GAO-26-109068
-  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
-  - Note: This GAO report provides relevant insights into the Navy's industrial base and shipbuilding capacity, aligning well with the research context on ship maintenance and readiness.
-  - Reason: This is a primary source GAO report discussing persistent issues in Navy and Coast Guard shipbuilding, including challenges within the private sector industrial base and its capacity to meet construction goals.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Testimony on Challenges Facing the Navy's and Coast Guard's Shipbuilding Programs and the Shipbuilding Industrial Base](https://www.cbo.gov/publication/62310)** `8/10` — www.cbo.gov
-  - URL: https://www.cbo.gov/publication/62310
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: This testimony provides relevant insights into challenges in Navy shipbuilding and maintenance, directly linking to fleet readiness and the shipbuilding industrial base.
-  - Reason: This testimony directly discusses challenges in Navy shipbuilding and maintenance, including delays and cost growth, referencing CRS reports on fleet readiness and deterrence.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[U.S. Navy's Shipbuilding Plan](https://www.defense.gov/Portals/1/Documents/pubs/Navy-Shipbuilding-Plan-May-2026.pdf)** `8/10` — www.defense.gov
-  - URL: https://www.defense.gov/Portals/1/Documents/pubs/Navy-Shipbuilding-Plan-May-2026.pdf
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The document provides a direct overview of the Navy's shipbuilding plan, including aspects of ship repair and maintenance relevant to the research context.
-  - Reason: This primary document outlines the Navy's shipbuilding plan, explicitly covering 'Ship Repair and Maintenance,' industrial base revitalization, and their contributions to deterrence.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[Warfare Center Develops New Tool to Help Sailors Keep Vertical Launching System Latch Rods Moving](https://www.navsea.navy.mil/Media/News/Article/3774844/warfare-center-develops-new-tool-to-help-sailors-keep-vertical-launching-syste/)** `8/10` — www.navsea.navy.mil
-  - URL: https://www.navsea.navy.mil/Media/News/Article/3774844/warfare-center-develops-new-tool-to-help-sailors-keep-vertical-launching-syste/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: This article directly addresses a tool developed for battle damage repair, enhancing naval asset survivability, which aligns well with the research context.
-  - Reason: This NAVSEA article describes a new tool for VLS 'cell hatch repairs' to 'boost readiness', directly relating to battle damage repair and enhancing survivability for naval assets.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[2026 NAVSUP Commander's Conference Reinforces Strategy and Unity](https://www.navy.mil/Press-Office/News-Stories/Article/3773173/2026-navsup-commanders-conference-reinforces-strategy-and-unity/)** `7/10` — www.navy.mil
-  - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3773173/2026-navsup-commanders-conference-reinforces-strategy-and-unity/
-  - Found by: gemini (query: "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog")
-  - Note: The article provides relevant insights into strategic alignment and logistics related to fleet readiness, making it useful but not directly focused on ship maintenance backlog.
-  - Reason: This article discusses the NAVSUP Commander's Conference aligning strategic goals with the Chief of Naval Operations' fighting instructions, focusing on warfighting readiness, backorder statuses, and contested logistics, which is highly relevant to fleet readiness and indirectly to maintenance challenges.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Government & Military News](https://www.ndtahq.com/news-issue-papers/government-military-news/)** `7/10` — www.ndtahq.com
-  - URL: https://www.ndtahq.com/news-issue-papers/government-military-news/
-  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
-  - Note: The source discusses a recent GAO report on Navy ship maintenance, which is relevant to the research context regarding fleet readiness and maintenance capacity.
-  - Reason: This news aggregation mentions a recent GAO report indicating that only half of the U.S. Navy's amphibious ships are in satisfactory condition due to deferred maintenance and repair cancellations.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Can the Navy's Shipbuilding Plan Deliver?](https://fleetlogic.substack.com/p/can-the-navys-shipbuilding-plan-deliver)** `7/10` — fleetlogic.substack.com
-  - URL: https://fleetlogic.substack.com/p/can-the-navys-shipbuilding-plan-deliver
-  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
-  - Note: The article discusses the Navy's shipbuilding plan and references a GAO report on private-sector shipbuilding capacity, making it relevant to the research context.
-  - Reason: This article references a 2025 GAO report regarding the Navy's approach to private-sector shipbuilding industrial-base investment and questions if the new 2026 plan adequately addresses these capacity issues.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[2026 412th Test Wing Test Capabilities guide here - Edwards Air Force Base](https://www.edwards.af.mil/Portals/50/260504_Capabilities_Guide_.pdf)** `7/10` — www.edwards.af.mil
-  - URL: https://www.edwards.af.mil/Portals/50/260504_Capabilities_Guide_.pdf
-  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
-  - Note: The document discusses Live Virtual Constructive environments relevant to Navy training architecture, making it a useful resource.
-  - Reason: This document from a primary military source discusses Live Virtual Constructive environments and the Joint Simulation Environment as an Air Force and Navy effort, relevant to LVC training architecture.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Newsletter - Navy SBIR](https://www.navysbir.com/docs/Transitions_Spring-2026.pdf)** `7/10` — www.navysbir.com
-  - URL: https://www.navysbir.com/docs/Transitions_Spring-2026.pdf
-  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
-  - Note: The newsletter discusses Live, Virtual, Constructive training technologies relevant to Navy operations, aligning with the research context.
-  - Reason: This primary source document lists 'Live, Virtual, Constructive (LVC) Training Technologies' as a key technology area of focus for the Navy Rapid Capabilities Office.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Navy Awards $990M Construction Contract to 12 Companies](https://www.govconwire.com/2025/04/navy-990million-construction-contract-12-companies/)** `7/10` — www.govconwire.com
-  - URL: https://www.govconwire.com/2025/04/navy-990million-construction-contract-12-companies/
-  - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article discusses a significant contract related to the Pacific Deterrence Initiative, which is relevant to Navy ship repair and maintenance efforts.
-  - Reason: Reports the Navy awarded a $990M contract to 12 companies for construction services explicitly in support of the Pacific Deterrence Initiative program, covering repair and construction in NAVFAC Pacific's area of operations.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[The Navy Needs Precise Mass and Here Is How to Get There](https://warontherocks.com/the-navy-needs-precise-mass-and-here-is-how-to-get-there/)** `7/10` — warontherocks.com
-  - URL: https://warontherocks.com/the-navy-needs-precise-mass-and-here-is-how-to-get-there/
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: This article discusses Navy ship maintenance and fleet size, which are relevant to the broader context of fleet readiness and deterrence in the Indo-Pacific.
-  - Reason: This analysis addresses Navy ship maintenance issues, fleet size, and new shipbuilding approaches necessary for maintaining deterrence in the Indo-Pacific.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Navy vs. Army in 2026: America's $1 Trillion Defense Budget Reveals Who Really Wins the Pentagon's Battle for Resources](https://thedefensewatch.com/navy-vs-army-in-2026-americas-1-trillion-defense-budget-reveals-who-really-wins-the-pentagons-battle-for-resources/)** `7/10` — thedefensewatch.com
-  - URL: https://thedefensewatch.com/navy-vs-army-in-2026-americas-1-trillion-defense-budget-reveals-who-really-wins-the-pentagons-battle-for-resources/
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article provides relevant insights into Navy investments and the Pacific Deterrence Initiative, but it does not directly address ship maintenance or repair capacity.
-  - Reason: This article analyzes the FY2027 defense budget, detailing Navy investments and the Pacific Deterrence Initiative, and underscores the importance of naval power for deterring China.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Secretary of the Navy Announces $448M Investment in Shipbuilding Operating System](https://www.navy.mil/Press-Office/News-Stories/Article/3748245/secretary-of-the-navy-announces-448m-investment-in-shipbuilding-operating-syst/)** `7/10` — www.navy.mil
-  - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3748245/secretary-of-the-navy-announces-448m-investment-in-shipbuilding-operating-syst/
-  - Found by: gemini (query: "CRS report industrial base shipbuilding repair attrition wargaming")
-  - Note: The article discusses a significant investment in the Shipbuilding Operating System, which is relevant to enhancing the industrial base but does not directly address ship repair or maintenance backlog issues.
-  - Reason: This article details a significant investment in the Shipbuilding Operating System (Ship OS) to enhance the industrial base through AI and autonomy, which is directly relevant to the shipbuilding industrial base aspect of the query.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[Decades of Carderock Expertise Continue to Shape Orion Recovery](https://www.navsea.navy.mil/Media/News/Article/3750059/decades-of-carderock-expertise-continue-to-shape-orion-recovery/)** `7/10` — www.navsea.navy.mil
-  - URL: https://www.navsea.navy.mil/Media/News/Article/3750059/decades-of-carderock-expertise-continue-to-shape-orion-recovery/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The article provides relevant insights into NSWC Carderock's expertise in survivability systems, which is related to the battle damage repair survivability aspect of the research.
-  - Reason: This article from NSWC Carderock highlights the division's expertise in 'Vulnerability and Survivability Systems', which aligns with the survivability aspect of the query.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Low Cost Munitions, Higher Quantity Ships](https://www.defensetechandacquisition.com/low-cost-munitions-higher-quantity-ships/)** `6/10` — www.defensetechandacquisition.com
-  - URL: https://www.defensetechandacquisition.com/low-cost-munitions-higher-quantity-ships/
-  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
-  - Note: The article provides useful background on GAO findings related to Navy shipbuilding efficiency, but it is not directly focused on the specific topics of fleet readiness or battle damage assessment.
-  - Reason: This article mentions a GAO annual report that identifies opportunities for efficiency in federal programs, specifically noting that Navy shipbuilding could achieve cost savings by improving acquisition practices, which impacts the industrial base's ability to sustain ships.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Pressure Points – Training CIC Crews - European Security & Defence](https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/)** `6/10` — euro-sd.com
-  - URL: https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/
-  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
-  - Note: The article discusses LVC training for Navy CIC crews, which is related but not directly focused on the specific ship maintenance and battle damage assessment topics outlined in the research context.
-  - Reason: This piece details the use of synthetic (virtual and constructive) and live training for US Navy CIC crews, including the Surface Training Advanced Virtual Environment – Combat Systems (STAVE-CS), which is relevant to LVC training architecture.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[The AUKUS Submarine Deal Is Based on Math That Won't Ever Work](https://www.19fortyfive.com/2026/05/the-aukus-submarine-deal-is-based-on-math-that-wont-ever-work/)** `6/10` — www.19fortyfive.com
-  - URL: https://www.19fortyfive.com/2026/05/the-aukus-submarine-deal-is-based-on-math-that-wont-ever-work/
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article provides useful background on U.S. submarine production and industrial base issues, which are related to Navy ship maintenance and deterrence capacity.
-  - Reason: This article discusses U.S. submarine production and industrial base issues, citing a CRS report on worsening delays, highly relevant to Navy ship maintenance and deterrence capacity.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Pressure Points – Training CIC Crews - European Security & Defence](https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/)** `5/10` — euro-sd.com
-  - URL: https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/
-  - Found by: gemini (query: "I/ITSEC Navy serious game damage control battle damage assessment vendor")
-  - Note: The article provides useful background on training and damage control coordination but is primarily focused on the Royal Navy rather than the specific Navy context outlined in the research.
-  - Reason: This article details Royal Navy efforts to reinvigorate training, including damage control coordination and synthetic training, mentioning specific vendors like QinetiQ and Rheinmetall, which aligns with Navy training, damage control, and vendor information.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Force Structure](https://cimsec.org/force-structure-perspectives-capt-jeff-kline-ret-on-bringing-the-fleet-into-the-robotics-age/)** `5/10` — cimsec.org
-  - URL: https://cimsec.org/force-structure-perspectives-capt-jeff-kline-ret-on-bringing-the-fleet-into-the-robotics-age/
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article discusses force structure and maintenance performance but is tangential to the specific research context on ship maintenance and battle damage assessment.
-  - Reason: This piece discusses the U.S. Navy's force structure, shipbuilding delays, and surface ship maintenance performance, linking them to overall deterrence capabilities in the Indo-Pacific.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[The new Indo-Pacific security architecture: From hub-and-spoke to allied security web](https://breakingdefense.com/2026/05/the-new-indo-pacific-security-architecture-from-hub-and-spoke-to-allied-security-web/)** `5/10` — breakingdefense.com
-  - URL: https://breakingdefense.com/2026/05/the-new-indo-pacific-security-architecture-from-hub-and-spoke-to-allied-security-web/
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: The article provides useful background on the Indo-Pacific security architecture and its implications for logistics and ship repair, but it is not directly focused on the specific Navy ship maintenance issues outlined in the research context.
-  - Reason: The article explores the evolving Indo-Pacific security architecture, 'deterrence webs,' and the industrial redesign of supply chains, which has implications for logistics and potential ship repair for regional forces.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[NSWC Crane Sailor brings Fleet to the lab to elevate electromagnetic warfare capabilities](https://www.navsea.navy.mil/Media/News/Article/3768407/nswc-crane-sailor-brings-fleet-to-the-lab-to-elevate-electromagnetic-warfare-cap/)** `5/10` — www.navsea.navy.mil
-  - URL: https://www.navsea.navy.mil/Media/News/Article/3768407/nswc-crane-sailor-brings-fleet-to-the-lab-to-elevate-electromagnetic-warfare-cap/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The article provides relevant information on maintenance and repair related to mission readiness, but it is more focused on NSWC Crane rather than directly addressing battle damage repair survivability.
-  - Reason: While focusing on NSWC Crane, this NAVSEA article mentions 'maintenance, troubleshooting, and repair' to improve 'mission readiness,' aligning with broader concepts of battle damage repair and survivability.
-  - Added: 2026-05-21T23:02:08
-
-- [ ] **[Carderock Scientists Inspire Future Innovators at Calvert County MESA Day](https://www.navsea.navy.mil/Media/News/Article/3747124/carderock-scientists-inspire-future-innovators-at-calvert-county-mesa-day/)** `5/10` — www.navsea.navy.mil
-  - URL: https://www.navsea.navy.mil/Media/News/Article/3747124/carderock-scientists-inspire-future-innovators-at-calvert-county-mesa-day/
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The article provides useful background on NSWC Carderock's engagement in STEM and defense technology, but it does not directly address the specific topics of battle damage repair survivability or SBIR/STTR authorship.
-  - Reason: This article showcases NSWC Carderock's engagement in STEM and defense technology, indicating ongoing research and development efforts relevant to the query.
-  - Added: 2026-05-21T23:02:08
-
-- [x] **[Department of War Fiscal Year (FY) 2027 Budget Estimates - Justification Book for the Defense Threat Reduction Agency](https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf)** `5/10` — comptroller.defense.gov
-  - URL: https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf
-  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
-  - Note: The document provides useful background on SBIR/STTR and survivability research but is not directly focused on Navy ship maintenance or battle damage repair.
-  - Reason: This primary document mentions 'SBIR and STTR Extension Act of 2022' and 'CBRN survivability needs' with 'FY 2025' and 'FY 2026' program plans, providing high-level context for SBIR/STTR and survivability research within the DoD.
-  - Added: 2026-05-21T23:02:08
+- [ ] **[Statement of Admiral Daryl L. Caudle Chief of Naval Operations on the Posture of the United States Navy Before the Senate Armed Services Committee](https://www.armed-services.senate.gov/hearings/2026/05/19/closed-open-to-receive-testimony-on-the-posture-of-the-department-of-the-navy)** `9/10` — www.armed-services.senate.gov
+  - URL: https://www.armed-services.senate.gov/hearings/2026/05/19/closed-open-to-receive-testimony-on-the-posture-of-the-department-of-the-navy
+  - Found by: gemini (query: "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity")
+  - Note: This document is a primary source that directly addresses naval readiness, maintenance, and repair capacity, aligning closely with the research context.
+  - Reason: This primary document discusses naval posture, readiness, maintenance, the industrial base, and warfighting effectiveness, directly addressing strategic readiness and repair capacity.
+  - Added: 2026-05-24T08:45:36
 
 
-## SAM.gov candidates added 2026-05-21 23:14
-
-- [ ] **[JBSA Hood and Duct Cleaning Services](https://sam.gov/workspace/contract/opp/ffecc8fbbf414be699e045438cc2962d/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/ffecc8fbbf414be699e045438cc2962d/view
-  - Notice ID: ffecc8fbbf414be699e045438cc2962d
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Special Notice
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-04
-  - Set-aside: Service-Disabled Veteran-Owned Small Business Set Aside
-  - NAICS: 561790
-  - Department: DEPT OF DEFENSE / DEPT OF THE AIR FORCE
-  - Attachments: 1 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/45d908135a5c41418a4eef98aaf2200e/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[20--DOOR,METAL,MARINE S](https://sam.gov/workspace/contract/opp/ff920cd69ee44e1fac0e0102f4ce314d/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/ff920cd69ee44e1fac0e0102f4ce314d/view
-  - Notice ID: ff920cd69ee44e1fac0e0102f4ce314d
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Award Notice
-  - Posted: 2026-05-21
-  - Response deadline: 
-  - Set-aside: None
-  - NAICS: 336611
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[25--CYLINDER,HYDRAULIC](https://sam.gov/workspace/contract/opp/ff79c63565c14cb1a43bd9bcd1774d74/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/ff79c63565c14cb1a43bd9bcd1774d74/view
-  - Notice ID: ff79c63565c14cb1a43bd9bcd1774d74
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: None
-  - NAICS: 336992
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[59--FILTER,CONTROL UNIT](https://sam.gov/workspace/contract/opp/ff524541fd5e4e99888404409fc48094/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/ff524541fd5e4e99888404409fc48094/view
-  - Notice ID: ff524541fd5e4e99888404409fc48094
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Women-Owned Small Business
-  - NAICS: 334419
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[Airborne Ethernet Units](https://sam.gov/workspace/contract/opp/ff1c09c909384f3589fa60891e7f538e/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/ff1c09c909384f3589fa60891e7f538e/view
-  - Notice ID: ff1c09c909384f3589fa60891e7f538e
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Award Notice
-  - Posted: 2026-05-21
-  - Response deadline: 
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 334111
-  - Department: DEPT OF DEFENSE / DEPT OF THE AIR FORCE
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[Moscow Research Station sewer line repair](https://sam.gov/workspace/contract/opp/fe7c000ad02b4dfdad1170d59095ab3b/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fe7c000ad02b4dfdad1170d59095ab3b/view
-  - Notice ID: fe7c000ad02b4dfdad1170d59095ab3b
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Award Notice
-  - Posted: 2026-05-21
-  - Response deadline: 
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 237110
-  - Department: AGRICULTURE, DEPARTMENT OF / FOREST SERVICE
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[DLA Industry Collider Day 2026](https://sam.gov/workspace/contract/opp/fe3914d8990c48a5a14b11db05f5d766/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fe3914d8990c48a5a14b11db05f5d766/view
-  - Notice ID: fe3914d8990c48a5a14b11db05f5d766
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Special Notice
-  - Posted: 2026-05-21
-  - Response deadline: 2026-09-09
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 541715
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 1 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2b4fa72af22a4bad813dd1cd42111288/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[61--MOTOR,ALTERNATING C](https://sam.gov/workspace/contract/opp/fe1025c3ebdd453cbfc6e94665830260/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fe1025c3ebdd453cbfc6e94665830260/view
-  - Notice ID: fe1025c3ebdd453cbfc6e94665830260
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 335312
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[Bicycles, Quantity 400](https://sam.gov/workspace/contract/opp/fd8dd95a92364460a2669bc9c21ae511/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fd8dd95a92364460a2669bc9c21ae511/view
-  - Notice ID: fd8dd95a92364460a2669bc9c21ae511
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-05-28
-  - Set-aside: None
-  - NAICS: 423910
-  - Department: DEPT OF DEFENSE / DEPT OF THE NAVY
-  - Attachments: 1 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/da6c3def21674ae0ab9d2b9ed01c9627/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[59--PC IO SPECL COMPASS](https://sam.gov/workspace/contract/opp/fd285506c3ae489b9d489fa365828f12/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fd285506c3ae489b9d489fa365828f12/view
-  - Notice ID: fd285506c3ae489b9d489fa365828f12
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Award Notice
-  - Posted: 2026-05-21
-  - Response deadline: 
-  - Set-aside: None
-  - NAICS: 334412
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[48--VALVE,SOLENOID](https://sam.gov/workspace/contract/opp/fcd99e9daf7340ce881a377dc097b136/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fcd99e9daf7340ce881a377dc097b136/view
-  - Notice ID: fcd99e9daf7340ce881a377dc097b136
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 332911
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[Parts Kit, Door Lift](https://sam.gov/workspace/contract/opp/fc85cbdcf88a432ca27334d708084e9d/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fc85cbdcf88a432ca27334d708084e9d/view
-  - Notice ID: fc85cbdcf88a432ca27334d708084e9d
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Presolicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-07-08
-  - Set-aside: None
-  - NAICS: 336992
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 2 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/25ec25cf7a644ea0a236b489793e44b6/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2bdf82337ae74dbca353d759f7dfe55f/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[CONTROL PANEL,AIRCR](https://sam.gov/workspace/contract/opp/fc6fb763e7ae429a8204d0fba550f0b5/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fc6fb763e7ae429a8204d0fba550f0b5/view
-  - Notice ID: fc6fb763e7ae429a8204d0fba550f0b5
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-05
-  - Set-aside: None
-  - NAICS: 336413
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[61--MOTOR,DIRECT CURREN](https://sam.gov/workspace/contract/opp/fbbb2e383c504b9ea8c4cf76a0d4404a/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fbbb2e383c504b9ea8c4cf76a0d4404a/view
-  - Notice ID: fbbb2e383c504b9ea8c4cf76a0d4404a
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 335312
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[Repair Requirement for NIIN 011440132](https://sam.gov/workspace/contract/opp/fbac0a1c35ae49b4afb44f3097e68813/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fbac0a1c35ae49b4afb44f3097e68813/view
-  - Notice ID: fbac0a1c35ae49b4afb44f3097e68813
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-19
-  - Set-aside: No Set aside used
-  - NAICS: 336413
-  - Department: DEPT OF DEFENSE / DEPT OF THE NAVY
-  - Attachments: 1 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4668936f6d7a4589af58922ca5bbaff4/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[Grades 6 - 12 Health Education Instructional Resources](https://sam.gov/workspace/contract/opp/fb90e0f0987244b5a92e345c5a4a9656/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fb90e0f0987244b5a92e345c5a4a9656/view
-  - Notice ID: fb90e0f0987244b5a92e345c5a4a9656
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-05-18
-  - Set-aside: No Set aside used
-  - NAICS: 513130
-  - Department: DEPT OF DEFENSE / DEPT OF DEFENSE EDUCATION ACTIVITY (DODEA)
-  - Attachments: 15 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/02664a7ada24410197a3d15712c10b95/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/036cb9b02f0e425288b4ac1b64572879/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2706e2d71d794a229a52f22b8c79ea35/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2f90d2d66d114a21b07b5e589f97c8a1/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/36b38161c57d46eb9cbdd4768f1f3ba3/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6afe62a720d64d94bf6c025576dc0c48/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/755e582b09564cb3a194daa9d385c546/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/8691da22e51a405fa71a7549218bba12/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c7aa498ff8f041ae95f520c3e2a985ca/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d2388a518c61446b90399beb885608e3/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/dbe956b1807e46439b416a43c04129c9/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/e1c63d40fe2747739d834b432aeffabf/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ecefc5bf66ae44538702668c6da7be60/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ed63189bc058411eab6921830d10c8dc/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/eedccabf9b724fa5a17da6d5ff193a4f/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[APRIVA Mobile Endpoint Security Architecture Virtual Private Network Follow-on Sole Source](https://sam.gov/workspace/contract/opp/fb1f1c20ea964462b28487622988fce7/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fb1f1c20ea964462b28487622988fce7/view
-  - Notice ID: fb1f1c20ea964462b28487622988fce7
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Sources Sought
-  - Posted: 2026-05-21
-  - Response deadline: 2026-05-29
-  - Set-aside: None
-  - NAICS: 541511
-  - Department: DEPT OF DEFENSE / DEFENSE INFORMATION SYSTEMS AGENCY (DISA)
-  - Attachments: 1 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d2e6c2fe803c4252b945c6dd3e269bc3/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[5670--36C242-26-AP-2640 | 561-26-3-5112-0038 Fire Door  Replacements](https://sam.gov/workspace/contract/opp/faadbe78a9534a608b28ef886c8cb5d0/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/faadbe78a9534a608b28ef886c8cb5d0/view
-  - Notice ID: faadbe78a9534a608b28ef886c8cb5d0
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-05-27
-  - Set-aside: None
-  - NAICS: 332321
-  - Department: VETERANS AFFAIRS, DEPARTMENT OF / VETERANS AFFAIRS, DEPARTMENT OF
-  - Attachments: 2 (not yet downloaded)
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4451c9290b8642d692fadbbe5ace44a6/download
-    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7307c80e6dbf481f8b5ffbe264e53e70/download
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[59--TRANSFORMER,POWER](https://sam.gov/workspace/contract/opp/fa1a18b6a7ae46bbaafce20d8b5513ea/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/fa1a18b6a7ae46bbaafce20d8b5513ea/view
-  - Notice ID: fa1a18b6a7ae46bbaafce20d8b5513ea
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Women-Owned Small Business
-  - NAICS: 334416
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[53--BOOT,DUST AND MOIST](https://sam.gov/workspace/contract/opp/f9ecaf1c0c8f43f8b015ed574e15b970/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/f9ecaf1c0c8f43f8b015ed574e15b970/view
-  - Notice ID: f9ecaf1c0c8f43f8b015ed574e15b970
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-05
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 332510
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[59--ELECTRONIC COMPONEN](https://sam.gov/workspace/contract/opp/f93e8ddf7f6749139346d922e7ec8307/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/f93e8ddf7f6749139346d922e7ec8307/view
-  - Notice ID: f93e8ddf7f6749139346d922e7ec8307
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: None
-  - NAICS: 334413
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[53--RING,OIL CONTROL](https://sam.gov/workspace/contract/opp/f8913fe68bed445384835858942aa6bc/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/f8913fe68bed445384835858942aa6bc/view
-  - Notice ID: f8913fe68bed445384835858942aa6bc
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Women-Owned Small Business
-  - NAICS: 339991
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[61--BATTERY,STORAGE](https://sam.gov/workspace/contract/opp/f8843b0d281e414ab9d1227557096db4/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/f8843b0d281e414ab9d1227557096db4/view
-  - Notice ID: f8843b0d281e414ab9d1227557096db4
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Award Notice
-  - Posted: 2026-05-21
-  - Response deadline: 
-  - Set-aside: None
-  - NAICS: 488190
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[VALVE ASSEMBLY](https://sam.gov/workspace/contract/opp/f7d82fab68d74aa0b8107ee355419149/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/f7d82fab68d74aa0b8107ee355419149/view
-  - Notice ID: f7d82fab68d74aa0b8107ee355419149
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-05
-  - Set-aside: None
-  - NAICS: 332919
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
-
-- [ ] **[47--HOSE ASSEMBLY,NONME](https://sam.gov/workspace/contract/opp/f7506646e7a74e82ae7389a7c5de38db/view)** — sam.gov
-  - URL: https://sam.gov/workspace/contract/opp/f7506646e7a74e82ae7389a7c5de38db/view
-  - Notice ID: f7506646e7a74e82ae7389a7c5de38db
-  - Source type: sam_gov
-  - Found by: sam.gov (query: "NSWC Carderock")
-  - Notice type: Combined Synopsis/Solicitation
-  - Posted: 2026-05-21
-  - Response deadline: 2026-06-01
-  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
-  - NAICS: 332999
-  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
-  - Attachments: 0
-  - Reason: matched query "NSWC Carderock"
-  - Added: 2026-05-21T23:14:23
+- [ ] **[WATCH: In SASC Hearing, Kelly Warns Against Outsourcing Navy Shipbuilding, Pushes to Rebuild American Maritime Industry](https://www.kelly.senate.gov/newsroom/press-releases/watch-in-sasc-hearing-kelly-warns-against-outsourcing-navy-shipbuilding-pushes-to-rebuild-american-maritime-industry/)** `9/10` — www.kelly.senate.gov
+  - URL: https://www.kelly.senate.gov/newsroom/press-releases/watch-in-sasc-hearing-kelly-warns-against-outsourcing-navy-shipbuilding-pushes-to-rebuild-american-maritime-industry/
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The candidate is a primary source from a Senate Armed Services Committee hearing that directly addresses critical issues related to the Navy's shipbuilding industrial base and maintenance backlogs.
+  - Reason: Primary source Senate Armed Services Committee press release from ~May 20, 2025, directly addressing shipbuilding industrial base decline, maintenance backlogs, workforce shortages, and repair cooperation with allies.
+  - Added: 2026-05-24T08:45:36
 
 
-## Candidates added 2026-05-23 12:20
+- [ ] **[To receive testimony on the posture of the Department of the Navy in review of the Defense Authorization Request for Fiscal Year 2027 and the Future Years Defense Program](https://www.armed-services.senate.gov/hearings/2026/05/19/to-receive-testimony-on-the-posture-of-the-department-of-the-navy-in-review-of-the-defense-authorization-request-for-fiscal-year-2027-and-the-future-years-defense-program)** `9/10` — www.armed-services.senate.gov
+  - URL: https://www.armed-services.senate.gov/hearings/2026/05/19/to-receive-testimony-on-the-posture-of-the-department-of-the-navy-in-review-of-the-defense-authorization-request-for-fiscal-year-2027-and-the-future-years-defense-program
+  - Found by: gemini (query: "Navy Regional Maintenance Center contract public testimony ship repair industrial base")
+  - Note: This testimony directly addresses the Navy's industrial base and maintenance capacity, making it highly relevant to the research context.
+  - Reason: This is a direct public testimony by the Chief of Naval Operations addressing the Navy's industrial base, maintenance, and ship repair capacity, including 'reintroducing public repair capacity' and strengthening the 'industrial base'.
+  - Added: 2026-05-24T08:45:36
+
 
 - [ ] **[ARCS Aviation awarded SBIR Phase II by U.S. Navy](https://www.arcsaviation.com/07/arcs-aviation-awarded-sbir-phase-ii-by-u-s-navy/)** `9/10` — www.arcsaviation.com
   - URL: https://www.arcsaviation.com/07/arcs-aviation-awarded-sbir-phase-ii-by-u-s-navy/
@@ -599,6 +43,7 @@ and interactively review the rest.
   - Reason: Directly announces a Navy SBIR Phase II award (May 22, 2025) for ARCS Aviation's Battle-Damage Data Recording System (BDDRS), using XR/AR simulation and ML for aircraft battle damage assessment in partnership with NAVAIR — the closest recent primary source matching multiple query terms.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[C3F and International Partners Conclude Final Planning for RIMPAC 2026 Exercise](https://www.c3f.navy.mil/News/Article/4461121/c3f-and-international-partners-conclude-final-planning-for-rimpac-2026-exercise/)** `9/10` — www.c3f.navy.mil
   - URL: https://www.c3f.navy.mil/News/Article/4461121/c3f-and-international-partners-conclude-final-planning-for-rimpac-2026-exercise/
   - Found by: claude (query: "COMPTUEX RIMPAC Large Scale Exercise LSE battle damage assessment inject training")
@@ -606,12 +51,6 @@ and interactively review the rest.
   - Reason: Most recent primary .mil source on RIMPAC 2026 exercise planning, published within approximately 35 days of today, covering final pre-exercise coordination directly relevant to the RIMPAC component of the query.
   - Added: 2026-05-23T12:20:49
 
-- [x] **[U.S. Navy's Shipbuilding Plan - May 2026](https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf)** `9/10` — www.navy.mil
-  - URL: https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf
-  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
-  - Note: This primary .mil source provides direct insights into the Navy's shipbuilding and maintenance strategy, aligning closely with the research context.
-  - Reason: As a primary document, this plan directly addresses 'Ship Repair and Maintenance' and 'Revitalizing the Shipbuilding Industrial Base', providing critical insights into Navy's strategy.
-  - Added: 2026-05-23T12:20:49
 
 - [ ] **[Full Committee Hearing: "Department of the Navy FY27 Budget Request"](https://armedservices.house.gov/calendar/)** `9/10` — armedservices.house.gov
   - URL: https://armedservices.house.gov/calendar/
@@ -620,12 +59,14 @@ and interactively review the rest.
   - Reason: This primary document from the Chief of Naval Operations discusses strategic investments in shipyard infrastructure (SIOP) and maintenance, including future capacity planning for 2025/2026 and beyond.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[U.S. Navy's Shipbuilding Plan - Department of War](https://media.defense.gov/2026/May/11/2003928909/-1/-1/1/NAVY%20SHIPBUILDING%20PLAN%20MAY%202026.PDF)** `9/10` — media.defense.gov
   - URL: https://media.defense.gov/2026/May/11/2003928909/-1/-1/1/NAVY%20SHIPBUILDING%20PLAN%20MAY%202026.PDF
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
   - Note: This document is a primary source detailing the U.S. Navy's shipbuilding plan, directly relevant to the research context.
   - Reason: This is a primary document directly outlining the U.S. Navy's shipbuilding plan, including FY27 funding and long-range strategy, and explicitly mentions 'Department of War'.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[NOT FOR PUBLICATION UNTIL RELEASED BY THE HOUSE ARMED SERVICES COMMITTEE STATEMENT OF ADMIRAL DARYL L. CAUDLE CHIEF OF NAVAL](https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf)** `9/10` — armedservices.house.gov
   - URL: https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf
@@ -634,12 +75,78 @@ and interactively review the rest.
   - Reason: This is a primary document, likely testimony, discussing the Navy's 'Golden Fleet Initiative' and future force design which directly relates to long-range shipbuilding plans.
   - Added: 2026-05-23T12:20:49
 
+
+- [ ] **[Department of the Navy Releases Fiscal Year 2027 Shipbuilding Plan](https://www.navy.mil/Press-Office/News-Stories/Article/3769970/department-of-the-navy-releases-fiscal-year-2027-shipbuilding-plan/)** `8/10` — www.navy.mil
+  - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3769970/department-of-the-navy-releases-fiscal-year-2027-shipbuilding-plan/
+  - Found by: gemini (query: "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity")
+  - Note: This press release provides relevant information on the Navy's shipbuilding plan, which is closely tied to fleet readiness and repair capacity.
+  - Reason: This press release announces the Navy's long-term strategy to expand fleet capacity, strengthen the maritime industrial base, and improve readiness, directly related to strategic readiness and repair capacity.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Budget Hearing - The United States Navy and Marine Corps](https://appropriations.house.gov/events/hearings/budget-hearing-united-states-navy-and-marine-corps)** `8/10` — appropriations.house.gov
+  - URL: https://appropriations.house.gov/events/hearings/budget-hearing-united-states-navy-and-marine-corps
+  - Found by: gemini (query: "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity")
+  - Note: The budget hearing page provides relevant insights into shipbuilding capacity and maintenance issues affecting Navy and Marine Corps readiness, aligning well with the research context.
+  - Reason: This hearing page contains remarks discussing shipbuilding capacity, deferred maintenance, workforce challenges, and attrition rates impacting Navy and Marine Corps readiness.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[WEAPON SYSTEM SUSTAINMENT: DOD Identified Critical Cost Growth, and the Army Should Take Action to Yield Cost Sav](https://www.gao.gov/products/gao-26-108140)** `8/10` — www.gao.gov
+  - URL: https://www.gao.gov/products/gao-26-108140
+  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
+  - Note: This GAO report provides relevant insights into Navy organic repair capability and sustainment, aligning well with the research context on ship maintenance and readiness.
+  - Reason: This is a direct GAO report (GAO-26-108140) discussing weapon system sustainment, including Navy organic repair capability, depot and field maintenance, and FY 2024 sustainment reviews.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Weekly Update for Government Contractors and Commercial Businesses – April 2026 #5](https://www.pmpc.com/news-events/weekly-update-for-government-contractors-and-commercial-businesses-april-2026-5/)** `8/10` — www.pmpc.com
+  - URL: https://www.pmpc.com/news-events/weekly-update-for-government-contractors-and-commercial-businesses-april-2026-5/
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The update summarizes a relevant GAO report on Navy shipbuilding challenges and industrial base investments, making it directly related to the research context.
+  - Reason: This update summarizes a GAO report released on April 22, 2026, concerning Navy and Coast Guard shipbuilding challenges, industrial base investments, and related recommendations.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Department of the Navy Releases FY27 Budget Request](https://www.hstoday.us/federal-news/department-of-the-navy-releases-fy27-budget-request/)** `8/10` — www.hstoday.us
+  - URL: https://www.hstoday.us/federal-news/department-of-the-navy-releases-fy27-budget-request/
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The article provides relevant insights into the Navy's FY27 budget request, which is crucial for understanding investments in shipbuilding and private shipyard capacity.
+  - Reason: This article details the Navy's FY27 budget request, highlighting significant investments in strengthening shipbuilding and the maritime industrial base, which directly impacts private shipyard capacity.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Answers to Questions for the Record Following a Hearing on the Navy's 2025 Shipbuilding Plan and Its Implications for the Shipbuilding Industrial Base](https://www.cbo.gov/publication/61291)** `8/10` — www.cbo.gov
+  - URL: https://www.cbo.gov/publication/61291
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The document provides insights into the Navy's shipbuilding plan and its implications for the industrial base, directly relevant to the research context on ship maintenance and repair capacity.
+  - Reason: CBO primary document answering congressional questions on the shipbuilding industrial base, explicitly identifying the attrition rate of shipyard workers as a key metric Congress should track to measure industrial base health.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[STATEMENT OF ADMIRAL DARYL L. CAUDLE CHIEF OF NAVAL](https://www.armed-services.senate.gov/download/testimony/caudle-testimony)** `8/10` — www.armed-services.senate.gov
+  - URL: https://www.armed-services.senate.gov/download/testimony/caudle-testimony
+  - Found by: gemini (query: "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors")
+  - Note: Admiral Caudle's statement directly addresses the integration of advanced training methodologies relevant to battle damage assessment, aligning well with the research context.
+  - Reason: Admiral Caudle's statement highlights the Navy's implementation of artificial intelligence and deep reinforcement learning within schoolhouses to analyze complex combat scenarios and enhance training, aligning with serious game concepts for naval readiness.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[AFDP 3-60, Targeting](https://www.doctrine.af.mil/Portals/61/documents/AFDP_3-60_Targeting.pdf)** `8/10` — www.doctrine.af.mil
+  - URL: https://www.doctrine.af.mil/Portals/61/documents/AFDP_3-60_Targeting.pdf
+  - Found by: gemini (query: "Navy NWDC Naval Warfare Development Command battle damage assessment training curriculum product catalog")
+  - Note: The document provides essential doctrine on Battle Damage Assessment, directly relevant to the Navy's training curriculum and operational context.
+  - Reason: This primary document from the U.S. Air Force, published within the last 30 days, provides detailed doctrine on Targeting and explicitly defines Battle Damage Assessment (BDA), which is a core component of the query, making it highly relevant for understanding BDA principles and processes within a military context.
+  - Added: 2026-05-24T08:45:36
+
+
 - [ ] **[Warren, Sheehy Push Armed Services Leaders in Congress to Get Military Right to Repair Done](https://www.warren.senate.gov/newsroom/press-releases/warren-sheehy-push-armed-services-leaders-in-congress-to-get-military-right-to-repair-done)** `8/10` — www.warren.senate.gov
   - URL: https://www.warren.senate.gov/newsroom/press-releases/warren-sheehy-push-armed-services-leaders-in-congress-to-get-military-right-to-repair-done
   - Found by: gemini (query: "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog")
   - Note: This press release is relevant as it discusses military readiness and maintenance costs, directly linking to SASC and HASC efforts related to the Navy's ship maintenance backlog.
   - Reason: This press release details senators' efforts to promote 'right to repair' policies, directly mentioning SASC, HASC, military readiness, and maintenance costs, and its impact on the FY27 NDAA.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[U.S. Pacific Fleet announces 30th RIMPAC Exercise](https://www.cpf.navy.mil/Newsroom/News/Article/4465055/us-pacific-fleet-announces-30th-rimpac-exercise/)** `8/10` — www.cpf.navy.mil
   - URL: https://www.cpf.navy.mil/Newsroom/News/Article/4465055/us-pacific-fleet-announces-30th-rimpac-exercise/
@@ -648,12 +155,14 @@ and interactively review the rest.
   - Reason: Official U.S. Pacific Fleet announcement of RIMPAC 2026 details (31 nations, June 24–July 31, 2026), directly relevant to the RIMPAC exercise training component of the query.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Testimony on Challenges Facing the Navy's and Coast Guard's Shipbuilding Programs and the Shipbuilding Industrial Base](https://www.cbo.gov/publication/59795)** `8/10` — www.cbo.gov
   - URL: https://www.cbo.gov/publication/59795
   - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
   - Note: This testimony directly addresses challenges in Navy shipbuilding and maintenance, aligning well with the research context on ship repair and industrial base issues.
   - Reason: This testimony discusses the challenges in Navy shipbuilding and the industrial base, referencing maintenance delays and prior CRS reports relevant to ship maintenance, making it highly relevant to the query's themes.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[NSWC Crane to receive two nationwide Federal Laboratory Consortium awards for superior technology transfer](https://www.navsea.navy.mil/Media/News/Article/4187898/nswc-crane-to-receive-two-nationwide-federal-laboratory-consortium-awards-for-s/)** `8/10` — www.navsea.navy.mil
   - URL: https://www.navsea.navy.mil/Media/News/Article/4187898/nswc-crane-to-receive-two-nationwide-federal-laboratory-consortium-awards-for-s/
@@ -662,12 +171,158 @@ and interactively review the rest.
   - Reason: Official NAVSEA/Navy.mil press release on FLC 2025 awards to a sister NSWC division, directly relevant to the FLC–NSWC technology transfer award context within the past 30 days.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Lawmakers push for domestic shipbuilding fixes as US Navy explores overseas options](https://www.defensenews.com/news/2026/05/14/lawmakers-push-for-domestic-shipbuilding-fixes-as-us-navy-explores-overseas-options/)** `8/10` — www.defensenews.com
   - URL: https://www.defensenews.com/news/2026/05/14/lawmakers-push-for-domestic-shipbuilding-fixes-as-us-navy-explores-overseas-options/
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
   - Note: The article directly addresses congressional concerns regarding the Navy's shipbuilding plan, making it relevant to the research context.
   - Reason: This article highlights congressional reactions to the Navy's FY27 budget request and the long-range shipbuilding plan, particularly concerning domestic industrial base concerns.
   - Added: 2026-05-23T12:20:49
+
+
+- [ ] **[Navy And Coast Guard Shipbuilding: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/products/gao-26-109068)** `8/10` — www.gao.gov
+  - URL: https://www.gao.gov/products/gao-26-109068
+  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
+  - Note: This GAO report addresses shipbuilding and maintenance capacity, directly relevant to the Navy's strategic readiness and industrial base.
+  - Reason: This is a GAO testimony addressing shipbuilding challenges and the need for a strategic approach to private sector industrial base investments, which is related to overall naval industrial and maintenance capacity.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[NAVY AND COAST GUARD SHIPBUILDING: A Disciplined, Strategy-Driven Approach Is Needed to Achieve Ambitious Goals](https://www.gao.gov/products/GAO-26-109068)** `8/10` — www.gao.gov
+  - URL: https://www.gao.gov/products/GAO-26-109068
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: This GAO report provides relevant insights into the Navy's industrial base and shipbuilding capacity, aligning well with the research context on ship maintenance and readiness.
+  - Reason: This is a primary source GAO report discussing persistent issues in Navy and Coast Guard shipbuilding, including challenges within the private sector industrial base and its capacity to meet construction goals.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Testimony on Challenges Facing the Navy's and Coast Guard's Shipbuilding Programs and the Shipbuilding Industrial Base](https://www.cbo.gov/publication/62310)** `8/10` — www.cbo.gov
+  - URL: https://www.cbo.gov/publication/62310
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: This testimony provides relevant insights into challenges in Navy shipbuilding and maintenance, directly linking to fleet readiness and the shipbuilding industrial base.
+  - Reason: This testimony directly discusses challenges in Navy shipbuilding and maintenance, including delays and cost growth, referencing CRS reports on fleet readiness and deterrence.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Private-Sector Services That Could Become Critical as Naval Maintenance Backlogs Deepen](https://www.shipuniverse.com/naval/private-sector-services-that-could-become-critical-as-naval-maintenance-backlogs-deepen/)** `7/10` — www.shipuniverse.com
+  - URL: https://www.shipuniverse.com/naval/private-sector-services-that-could-become-critical-as-naval-maintenance-backlogs-deepen/
+  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
+  - Note: The article discusses naval maintenance backlogs and references a GAO report, making it relevant to the research context.
+  - Reason: This article discusses naval maintenance backlogs, mentions a 2025 GAO report, and references the FY 2026 Navy budget priorities for ship operations and depot maintenance.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[China Shipyard vs US Naval Shipyard - Civil Military Fusion Explained](https://www.youtube.com/watch?v=GjYJp3hF3eU)** `7/10` — www.youtube.com
+  - URL: https://www.youtube.com/watch?v=GjYJp3hF3eU
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The video provides relevant insights into US naval shipbuilding capacity and maintenance issues, aligning with the research context on industrial base limitations.
+  - Reason: This video utilizes data, including from the GAO, to compare Chinese and US naval shipbuilding capacity, discussing the US maintenance crisis and industrial base limitations.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[The US Navy's Shipbuilding Crisis is Worse Than We Thought](https://www.youtube.com/watch?v=fA9jT1x-N3g)** `7/10` — www.youtube.com
+  - URL: https://www.youtube.com/watch?v=fA9jT1x-N3g
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The video discusses the US Navy's shipbuilding crisis and references a GAO report, making it relevant to the industrial base challenges in ship maintenance.
+  - Reason: This analysis discusses the US Navy's shipbuilding crisis, including delays and industrial base challenges, referencing a 2025 GAO report (GAO-25-108225) on warships behind schedule.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Why the United States, South Korea, and Japan Must Cooperate on Shipbuilding](https://www.rand.org/pubs/commentary/2025/05/why-the-united-states-south-korea-and-japan-must-cooperate.html)** `7/10` — www.rand.org
+  - URL: https://www.rand.org/pubs/commentary/2025/05/why-the-united-states-south-korea-and-japan-must-cooperate.html
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The RAND commentary provides relevant insights into the U.S. shipbuilding industrial base and allied cooperation, aligning with themes of workforce attrition and industrial capacity.
+  - Reason: RAND commentary directly addresses the U.S. shipbuilding industrial base crisis, workforce attrition, and the need for allied industrial cooperation to counter Chinese naval production dominance—core themes of the query.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Shipbuilding Industry Takes Center Stage in US Relations With Japan and South Korea](https://thediplomat.com/2025/05/shipbuilding-industry-takes-center-stage-in-us-relations-with-japan-and-south-korea/)** `7/10` — thediplomat.com
+  - URL: https://thediplomat.com/2025/05/shipbuilding-industry-takes-center-stage-in-us-relations-with-japan-and-south-korea/
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The article provides relevant insights into U.S. shipbuilding repair capacity and allied cooperation, aligning with the industrial base aspects of the research.
+  - Reason: Analyzes U.S. shipbuilding repair capacity shortfalls, allied MRO cooperation with Japan and South Korea, and industrial base constraints—directly relevant to the repair and industrial base dimensions of the query.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Identifying Pathways for U.S. Shipbuilding Cooperation with Northeast Asian Allies](https://csis-website-prod.s3.amazonaws.com/s3fs-public/2025-05/250514_Carroll_Identifying_Pathways.pdf)** `7/10` — csis-website-prod.s3.amazonaws.com
+  - URL: https://csis-website-prod.s3.amazonaws.com/s3fs-public/2025-05/250514_Carroll_Identifying_Pathways.pdf
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The candidate discusses U.S. shipbuilding cooperation and industrial base challenges, which are relevant to the Navy's ship maintenance and repair capacity.
+  - Reason: CSIS brief (Carroll & Cook) explicitly cites a CRS March 2025 report on workforce attrition challenges, discusses wargame findings on U.S. ship and submarine losses in a Taiwan conflict, and addresses industrial base repair and production capacity shortfalls.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[The Navy's 2025 Shipbuilding Plan and Its Implications for the Shipbuilding Industrial Base (QFR PDF)](https://www.cbo.gov/system/files/2025-04/61291-Shipbuilding-QFRs.pdf)** `7/10` — www.cbo.gov
+  - URL: https://www.cbo.gov/system/files/2025-04/61291-Shipbuilding-QFRs.pdf
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The document provides relevant insights into shipbuilding industrial base health, which is related to the Navy's ship maintenance and readiness context.
+  - Reason: The PDF of CBO's April 2025 QFR document explicitly names shipyard worker attrition rate, Virginia-class production rate, and industrial base capacity as the primary congressional oversight metrics for shipbuilding industrial base health.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Identifying Pathways for U.S. Shipbuilding Cooperation with Northeast Asian Allies](https://www.csis.org/analysis/identifying-pathways-us-shipbuilding-cooperation-northeast-asian-allies)** `7/10` — www.csis.org
+  - URL: https://www.csis.org/analysis/identifying-pathways-us-shipbuilding-cooperation-northeast-asian-allies
+  - Found by: claude (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The report discusses U.S. shipbuilding cooperation and capacity constraints, which are relevant to the Navy's ship maintenance and readiness context.
+  - Reason: CSIS report citing 2024 CSIS Taiwan conflict wargames showing significant U.S. ship/submarine attrition, alongside CRS findings on workforce attrition in the shipbuilding industrial base and repair capacity constraints.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[LPD In-Service Modernization and Shipbuilding - SMALL BUSINESS-ONLY SOURCES SOUGHT | Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing](https://sam.gov/opp/5083fba8580d4fe786645c42da461582/view)** `7/10` — sam.gov
+  - URL: https://sam.gov/opp/5083fba8580d4fe786645c42da461582/view
+  - Found by: gemini (query: "NAVSEA Industrial Operations Directorate consolidation public yards Navy maintenance")
+  - Note: This source is relevant as it pertains to NAVSEA's modernization and shipbuilding efforts, aligning with Navy maintenance strategies.
+  - Reason: This NAVSEA Sources Sought Notice seeks industry capabilities for LPD modernization and shipbuilding, reflecting ongoing Navy maintenance strategies that involve both public and private industrial base support.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Damage Control Training & Inventory Control Job in Chesapeake, VA at Phoenix Group of Virgina, Inc.](https://www.ziprecruiter.com/c/Phoenix-Group-of-Virgina,-Inc./Job/Damage-Control-Training-&-Inventory-Control/-in-Chesapeake,VA?jid=88cf337c16cea358)** `7/10` — www.ziprecruiter.com
+  - URL: https://www.ziprecruiter.com/c/Phoenix-Group-of-Virgina,-Inc./Job/Damage-Control-Training-&-Inventory-Control/-in-Chesapeake,VA?jid=88cf337c16cea358
+  - Found by: gemini (query: "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors")
+  - Note: The job posting is relevant as it involves damage control training and simulations, aligning with the Navy's focus on battle damage assessment training.
+  - Reason: This job posting from Phoenix Group of Virginia, Inc. describes a Navy SkillBridge program that involves damage control training, including the use of simulations, indicating a vendor's involvement in such training.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Artificial Intelligence and Machine Learning for Multi-Domain Operations Applications VIII, Conference Details](https://spie.org/DS/conferencedetails/artificial-intelligence-and-machine-learning-for-mdo-applications)** `7/10` — spie.org
+  - URL: https://spie.org/DS/conferencedetails/artificial-intelligence-and-machine-learning-for-mdo-applications
+  - Found by: gemini (query: "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors")
+  - Note: The conference focuses on battle damage assessments and simulation platforms, making it relevant to the Navy's serious game training initiatives.
+  - Reason: This conference highlights a system that provides real-time engagement outcomes and battle damage assessments through simulation, directly matching 'battle damage assessment' and 'simulation platforms for AI' relevant to serious games.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Northrop Grumman Boosts E-2D Advanced Hawkeye Maintenance, Training With Augmented And Virtual Reality - Eurasia Review](https://www.eurasiareview.com/22052026-northrop-grumman-boosts-e-2d-advanced-hawkeye-maintenance-training-with-augmented-and-virtual-reality/)** `7/10` — www.eurasiareview.com
+  - URL: https://www.eurasiareview.com/22052026-northrop-grumman-boosts-e-2d-advanced-hawkeye-maintenance-training-with-augmented-and-virtual-reality/
+  - Found by: gemini (query: "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors")
+  - Note: The article discusses Northrop Grumman's use of augmented and virtual reality for maintenance and training, which is relevant to the Navy's focus on serious game simulations for battle damage assessment.
+  - Reason: Northrop Grumman, a defense contractor, is utilizing augmented and virtual reality tools to enhance training and maintenance, which is indicative of vendor involvement in serious game-like simulations for military applications.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Opening the Training Bottleneck: How DIU's XR Devices Deliver Increased Access and Readiness](https://www.diu.mil/latest-news/opening-the-training-bottleneck-how-dius-xr-devices-deliver)** `7/10` — www.diu.mil
+  - URL: https://www.diu.mil/latest-news/opening-the-training-bottleneck-how-dius-xr-devices-deliver
+  - Found by: gemini (query: "DIU Defense Innovation Unit naval damage control training simulation award portfolio 2025 2026")
+  - Note: The article discusses DIU's use of XR devices for military training, which is relevant to the training simulation aspect of the query, but it does not directly address the specific naval damage control training simulation award portfolio.
+  - Reason: This DIU project spotlight details the use of Extended Reality (XR) devices for military training, which is relevant to the 'training simulation' aspect of the query and falls within DIU's 2025-2026 portfolio.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Textron Systems wins DIU contract for Tsunami USV](https://calibredefense.com/textron-systems-wins-diu-contract-for-tsunami-usv/)** `7/10` — calibredefense.com
+  - URL: https://calibredefense.com/textron-systems-wins-diu-contract-for-tsunami-usv/
+  - Found by: gemini (query: "DIU Defense Innovation Unit naval damage control training simulation award portfolio 2025 2026")
+  - Note: The article provides relevant information about a DIU contract award, aligning with the research context on naval training simulations.
+  - Reason: This trade press article reports on the DIU contract award to Textron Systems for Tsunami USVs for the US Navy, confirming a DIU naval award within the relevant timeframe.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Brunswick platforms Textron TSUNAMI USVs under DIU contract award](https://www.publicnow.com/brunswick-platforms-textron-tsunami-usvs-under-diu-contract-award)** `7/10` — www.publicnow.com
+  - URL: https://www.publicnow.com/brunswick-platforms-textron-tsunami-usvs-under-diu-contract-award
+  - Found by: gemini (query: "DIU Defense Innovation Unit naval damage control training simulation award portfolio 2025 2026")
+  - Note: The report discusses a DIU contract relevant to naval platforms, aligning with the research context on damage control training simulations.
+  - Reason: This report highlights Brunswick's role in providing platforms for Textron Systems' TSUNAMI USVs under a DIU contract, relevant to DIU's naval portfolio.
+  - Added: 2026-05-24T08:45:36
+
 
 - [ ] **[Navy vs. Army in 2026: America's $1 Trillion Defense Budget Reveals Who Really Wins the Pentagon's Battle for Resources](https://thedefensewatch.com/policy-strategy/us-navy-vs-us-army-in-2026-who-holds-the-edge-in-americas-evolving-defense-strategy/)** `7/10` — thedefensewatch.com
   - URL: https://thedefensewatch.com/policy-strategy/us-navy-vs-us-army-in-2026-who-holds-the-edge-in-americas-evolving-defense-strategy/
@@ -676,12 +331,14 @@ and interactively review the rest.
   - Reason: This article discusses the FY2026 defense budget allocations, highlighting the Navy's significant investment and quoting a 'U.S. Navy FY2026 Budget Highlights Book' regarding the need for investment in the industrial base, installations, and physical infrastructure.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[AFDP 3-60, Targeting, 01 May 2026](https://www.airuniversity.af.edu/AFDP3-60Targeting/)** `7/10` — www.airuniversity.af.edu
   - URL: https://www.airuniversity.af.edu/AFDP3-60Targeting/
   - Found by: gemini (query: "Navy BDA battle damage assessment training pipeline NWDC Naval Warfare Development Command")
   - Note: The document provides relevant insights into Battle Damage Assessment (BDA) within the context of targeting, which aligns with the Navy's training pipeline focus.
   - Reason: This primary Air Force doctrine document explicitly defines and discusses 'Battle Damage Assessment (BDA)' and its integration into targeting processes, including intelligence functions, which is highly relevant to the query's BDA component.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[Systems Engineer Lead in Suffolk - Energy Jobline](https://www.energyjobline.com/job/systems-engineer-lead-suffolk-30518254)** `7/10` — www.energyjobline.com
   - URL: https://www.energyjobline.com/job/systems-engineer-lead-suffolk-30518254
@@ -690,12 +347,14 @@ and interactively review the rest.
   - Reason: This job posting directly supports Navy LVC training activities, specifying requirements for knowledge of distributed simulation protocols like High Level Architecture (HLA) and Distributed Interactive Simulation (DIS) for Navy LVC events.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[U.S. Navy seeks $377.5B FY2027 budget to expand fleet, boost readiness and advance Golden Fleet initiative](https://defence-industry.eu/u-s-navy-seeks-377-5b-fy2027-budget-to-expand-fleet-boost-readiness-and-advance-golden-fleet-initiative/)** `7/10` — defence-industry.eu
   - URL: https://defence-industry.eu/u-s-navy-seeks-377-5b-fy2027-budget-to-expand-fleet-boost-readiness-and-advance-golden-fleet-initiative/
   - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
   - Note: The article discusses the U.S. Navy's FY2027 budget and its implications for fleet readiness and shipbuilding, making it relevant to the research context.
   - Reason: The article discusses the U.S. Navy's FY2027 budget request, which includes strengthening shipbuilding and supporting the maritime industrial base, and mentions a CRS report on U.S. nuclear deterrence.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[Defueled Ex-Long Beach (CGN 9) Transportation & Disposal](https://sam.gov/opp/N0002426ICGN9/view)** `7/10` — sam.gov
   - URL: https://sam.gov/opp/N0002426ICGN9/view
@@ -704,12 +363,14 @@ and interactively review the rest.
   - Reason: This NAVSEA Sources Sought notice announces an Industry Day in June 2026 for the transportation, dismantling, and disposal of a former Navy vessel, directly relevant to shipyard operations.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Upcoming Industry Days & Outreach Events](https://www.navfac.navy.mil/Divisions/Office-of-Small-Business-Programs/Upcoming-Industry-Days-Outreach-Events/)** `7/10` — www.navfac.navy.mil
   - URL: https://www.navfac.navy.mil/Divisions/Office-of-Small-Business-Programs/Upcoming-Industry-Days-Outreach-Events/
   - Found by: gemini (query: "NAVSEA industry day shipyard depot repair 2025 2026")
   - Note: This source provides relevant information about upcoming industry days that may relate to shipyard depot repair, aligning with the research context.
   - Reason: This official NAVFAC page provides a calendar of upcoming industry days and outreach events, some of which are relevant to engineering and construction projects that support naval facilities and shipyards in 2026.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[NSWC Crane to receive two nationwide Federal Laboratory Consortium awards for superior technology transfer](https://www.wbiw.com/2025/05/16/nswc-crane-to-receive-two-nationwide-federal-laboratory-consortium-awards-for-superior-technology-transfer/)** `7/10` — www.wbiw.com
   - URL: https://www.wbiw.com/2025/05/16/nswc-crane-to-receive-two-nationwide-federal-laboratory-consortium-awards-for-superior-technology-transfer/
@@ -718,12 +379,14 @@ and interactively review the rest.
   - Reason: Trade/local press coverage of the 2025 FLC National Meeting awards to a Navy NSWC lab, contextually relevant to the FLC–NSWC technology transfer query.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[NSWC Carderock Upgrades HPC Infrastructure, Streamlines Naval Research Workflows](https://www.hpcwire.com/off-the-wire/nswc-carderock-upgrades-hpc-infrastructure-streamlines-naval-research-workflows/)** `7/10` — www.hpcwire.com
   - URL: https://www.hpcwire.com/off-the-wire/nswc-carderock-upgrades-hpc-infrastructure-streamlines-naval-research-workflows/
   - Found by: claude (query: "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue")
   - Note: The article discusses NSWC Carderock's HPC infrastructure upgrades, which are relevant to the lab's technology development and transfer, but it does not directly address ship maintenance or battle damage assessment.
   - Reason: Recent (within 30 days) article specifically about NSWC Carderock innovation and technology infrastructure — contextually adjacent to the lab's technology development and transfer pipeline.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[Navy Shipbuilding Plan Signals Industrial Shift | Insights | Greenberg Traurig LLP](https://www.gtlaw.com/en/insights/2026/5/navy-shipbuilding-plan-signals-industrial-shift)** `7/10` — www.gtlaw.com
   - URL: https://www.gtlaw.com/en/insights/2026/5/navy-shipbuilding-plan-signals-industrial-shift
@@ -732,12 +395,14 @@ and interactively review the rest.
   - Reason: This analysis from a legal firm provides insights into the May 2026 Navy Shipbuilding Plan, highlighting its implications for industry and acquisition strategies.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Understanding the President's FY 2027 Budget Request for the Department of War | Insights](https://www.gtlaw.com/en/insights/2026/5/understanding-the-presidents-fy-2027-budget-request-for-the-department-of-war)** `7/10` — www.gtlaw.com
   - URL: https://www.gtlaw.com/en/insights/2026/5/understanding-the-presidents-fy-2027-budget-request-for-the-department-of-war
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
   - Note: The candidate provides insights into the FY 2027 budget request, which includes naval shipbuilding investments relevant to the Department of War, but is not specifically focused on the Navy's ship maintenance or readiness issues.
   - Reason: This insight piece analyzes the President's FY2027 defense budget request, including significant naval shipbuilding investments and references to the 'Department of War'.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[US Navy submits record $377.5bn funding request for fiscal 2027 - Naval Technology](https://www.naval-technology.com/news/us-navy-budget-2027/)** `7/10` — www.naval-technology.com
   - URL: https://www.naval-technology.com/news/us-navy-budget-2027/
@@ -746,12 +411,14 @@ and interactively review the rest.
   - Reason: This article reports on the US Navy's substantial FY27 budget request, highlighting the specific allocation for shipbuilding and the acquisition of new vessels.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[US Navy FY 2027 Budget Request – Key Trends, Risks, and Implications | Insights](https://www.gtlaw.com/en/insights/2026/5/us-navy-fy-2027-budget-request-key-trends-risks-and-implications)** `7/10` — www.gtlaw.com
   - URL: https://www.gtlaw.com/en/insights/2026/5/us-navy-fy-2027-budget-request-key-trends-risks-and-implications
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
   - Note: The analysis provides insights into the Navy's FY27 budget request with a focus on shipbuilding, which is relevant to the broader context of naval readiness and maintenance.
   - Reason: This analysis delves into the Department of the Navy's FY27 budget request, emphasizing shipbuilding as a central pillar and its implications for the defense industrial base.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[Senate Debates Record Navy Budget Increase Amid Concerns - Legis1](https://legis1.com/news/navy-budget-increase-senate-debates-record-amid)** `7/10` — legis1.com
   - URL: https://legis1.com/news/navy-budget-increase-senate-debates-record-amid
@@ -760,12 +427,94 @@ and interactively review the rest.
   - Reason: This article details the Senate's review of the Navy's FY27 budget request, which includes significant shipbuilding funding and references the recently released 2026 Shipbuilding Plan.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Implications for Industry as the U.S. Navy Determines Which Fleet It Will Field | Defense.info](https://defense.info/defense-decisions/2026/04/implications-for-industry-as-the-u-s-navy-determines-which-fleet-it-will-field/)** `7/10` — defense.info
   - URL: https://defense.info/defense-decisions/2026/04/implications-for-industry-as-the-u-s-navy-determines-which-fleet-it-will-field/
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
   - Note: The article discusses the U.S. Navy's shipbuilding plan and its implications for the maritime industry, making it relevant to the research context.
   - Reason: This article discusses the U.S. Navy's shipbuilding plan, specifically mentioning the 'golden fleet' initiative and its implications for the maritime industry regarding future fleet composition.
   - Added: 2026-05-23T12:20:49
+
+
+- [ ] **[2026 NAVSUP Commander's Conference Reinforces Strategy and Unity](https://www.navy.mil/Press-Office/News-Stories/Article/3773173/2026-navsup-commanders-conference-reinforces-strategy-and-unity/)** `7/10` — www.navy.mil
+  - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3773173/2026-navsup-commanders-conference-reinforces-strategy-and-unity/
+  - Found by: gemini (query: "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog")
+  - Note: The article provides relevant insights into strategic alignment and logistics related to fleet readiness, making it useful but not directly focused on ship maintenance backlog.
+  - Reason: This article discusses the NAVSUP Commander's Conference aligning strategic goals with the Chief of Naval Operations' fighting instructions, focusing on warfighting readiness, backorder statuses, and contested logistics, which is highly relevant to fleet readiness and indirectly to maintenance challenges.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Government & Military News](https://www.ndtahq.com/news-issue-papers/government-military-news/)** `7/10` — www.ndtahq.com
+  - URL: https://www.ndtahq.com/news-issue-papers/government-military-news/
+  - Found by: gemini (query: "GAO Navy ship maintenance depot capacity report 2024 2025 2026")
+  - Note: The source discusses a recent GAO report on Navy ship maintenance, which is relevant to the research context regarding fleet readiness and maintenance capacity.
+  - Reason: This news aggregation mentions a recent GAO report indicating that only half of the U.S. Navy's amphibious ships are in satisfactory condition due to deferred maintenance and repair cancellations.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Can the Navy's Shipbuilding Plan Deliver?](https://fleetlogic.substack.com/p/can-the-navys-shipbuilding-plan-deliver)** `7/10` — fleetlogic.substack.com
+  - URL: https://fleetlogic.substack.com/p/can-the-navys-shipbuilding-plan-deliver
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The article discusses the Navy's shipbuilding plan and references a GAO report on private-sector shipbuilding capacity, making it relevant to the research context.
+  - Reason: This article references a 2025 GAO report regarding the Navy's approach to private-sector shipbuilding industrial-base investment and questions if the new 2026 plan adequately addresses these capacity issues.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[2026 412th Test Wing Test Capabilities guide here - Edwards Air Force Base](https://www.edwards.af.mil/Portals/50/260504_Capabilities_Guide_.pdf)** `7/10` — www.edwards.af.mil
+  - URL: https://www.edwards.af.mil/Portals/50/260504_Capabilities_Guide_.pdf
+  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
+  - Note: The document discusses Live Virtual Constructive environments relevant to Navy training architecture, making it a useful resource.
+  - Reason: This document from a primary military source discusses Live Virtual Constructive environments and the Joint Simulation Environment as an Air Force and Navy effort, relevant to LVC training architecture.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Newsletter - Navy SBIR](https://www.navysbir.com/docs/Transitions_Spring-2026.pdf)** `7/10` — www.navysbir.com
+  - URL: https://www.navysbir.com/docs/Transitions_Spring-2026.pdf
+  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
+  - Note: The newsletter discusses Live, Virtual, Constructive training technologies relevant to Navy operations, aligning with the research context.
+  - Reason: This primary source document lists 'Live, Virtual, Constructive (LVC) Training Technologies' as a key technology area of focus for the Navy Rapid Capabilities Office.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Navy Awards $990M Construction Contract to 12 Companies](https://www.govconwire.com/2025/04/navy-990million-construction-contract-12-companies/)** `7/10` — www.govconwire.com
+  - URL: https://www.govconwire.com/2025/04/navy-990million-construction-contract-12-companies/
+  - Found by: claude (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: The article discusses a significant contract related to the Pacific Deterrence Initiative, which is relevant to Navy ship repair and maintenance efforts.
+  - Reason: Reports the Navy awarded a $990M contract to 12 companies for construction services explicitly in support of the Pacific Deterrence Initiative program, covering repair and construction in NAVFAC Pacific's area of operations.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[The Navy Needs Precise Mass and Here Is How to Get There](https://warontherocks.com/the-navy-needs-precise-mass-and-here-is-how-to-get-there/)** `7/10` — warontherocks.com
+  - URL: https://warontherocks.com/the-navy-needs-precise-mass-and-here-is-how-to-get-there/
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: This article discusses Navy ship maintenance and fleet size, which are relevant to the broader context of fleet readiness and deterrence in the Indo-Pacific.
+  - Reason: This analysis addresses Navy ship maintenance issues, fleet size, and new shipbuilding approaches necessary for maintaining deterrence in the Indo-Pacific.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Navy vs. Army in 2026: America's $1 Trillion Defense Budget Reveals Who Really Wins the Pentagon's Battle for Resources](https://thedefensewatch.com/navy-vs-army-in-2026-americas-1-trillion-defense-budget-reveals-who-really-wins-the-pentagons-battle-for-resources/)** `7/10` — thedefensewatch.com
+  - URL: https://thedefensewatch.com/navy-vs-army-in-2026-americas-1-trillion-defense-budget-reveals-who-really-wins-the-pentagons-battle-for-resources/
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: The article provides relevant insights into Navy investments and the Pacific Deterrence Initiative, but it does not directly address ship maintenance or repair capacity.
+  - Reason: This article analyzes the FY2027 defense budget, detailing Navy investments and the Pacific Deterrence Initiative, and underscores the importance of naval power for deterring China.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Secretary of the Navy Announces $448M Investment in Shipbuilding Operating System](https://www.navy.mil/Press-Office/News-Stories/Article/3748245/secretary-of-the-navy-announces-448m-investment-in-shipbuilding-operating-syst/)** `7/10` — www.navy.mil
+  - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3748245/secretary-of-the-navy-announces-448m-investment-in-shipbuilding-operating-syst/
+  - Found by: gemini (query: "CRS report industrial base shipbuilding repair attrition wargaming")
+  - Note: The article discusses a significant investment in the Shipbuilding Operating System, which is relevant to enhancing the industrial base but does not directly address ship repair or maintenance backlog issues.
+  - Reason: This article details a significant investment in the Shipbuilding Operating System (Ship OS) to enhance the industrial base through AI and autonomy, which is directly relevant to the shipbuilding industrial base aspect of the query.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Invested Allies: How the Private Sector Can Boost U.S.-South Korea Economic Security Cooperation](https://www.cnas.org/publications/reports/invested-allies)** `6/10` — www.cnas.org
+  - URL: https://www.cnas.org/publications/reports/invested-allies
+  - Found by: gemini (query: "Navy Regional Maintenance Center contract public testimony ship repair industrial base")
+  - Note: The report discusses supply chain resilience and the U.S. shipbuilding industry's capacity, which is related but not directly focused on the Navy's ship repair industrial base.
+  - Reason: This report examines strengthening domestic capabilities, supply chain resilience, and the U.S. shipbuilding industry's capacity, directly relevant to the ship repair industrial base.
+  - Added: 2026-05-24T08:45:36
+
 
 - [ ] **[Senate Debates Record Navy Budget Increase Amid Concerns - Legis1](https://legis1.com/news/navy-budget-increase-senate-debates-record-amid)** `6/10` — legis1.com
   - URL: https://legis1.com/news/navy-budget-increase-senate-debates-record-amid
@@ -774,12 +523,126 @@ and interactively review the rest.
   - Reason: While primarily focused on the FY2027 budget, this article references FY2026 shipbuilding appropriations and the Navy's 2026 Shipbuilding Plan, providing contextual information on the prior year's budget and long-term trajectory for the fleet, which impacts maintenance.
   - Added: 2026-05-23T12:20:49
 
+
+- [ ] **[Low Cost Munitions, Higher Quantity Ships](https://www.defensetechandacquisition.com/low-cost-munitions-higher-quantity-ships/)** `6/10` — www.defensetechandacquisition.com
+  - URL: https://www.defensetechandacquisition.com/low-cost-munitions-higher-quantity-ships/
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The article provides useful background on GAO findings related to Navy shipbuilding efficiency, but it is not directly focused on the specific topics of fleet readiness or battle damage assessment.
+  - Reason: This article mentions a GAO annual report that identifies opportunities for efficiency in federal programs, specifically noting that Navy shipbuilding could achieve cost savings by improving acquisition practices, which impacts the industrial base's ability to sustain ships.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Pressure Points – Training CIC Crews - European Security & Defence](https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/)** `6/10` — euro-sd.com
+  - URL: https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/
+  - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
+  - Note: The article discusses LVC training for Navy CIC crews, which is related but not directly focused on the specific ship maintenance and battle damage assessment topics outlined in the research context.
+  - Reason: This piece details the use of synthetic (virtual and constructive) and live training for US Navy CIC crews, including the Surface Training Advanced Virtual Environment – Combat Systems (STAVE-CS), which is relevant to LVC training architecture.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[The AUKUS Submarine Deal Is Based on Math That Won't Ever Work](https://www.19fortyfive.com/2026/05/the-aukus-submarine-deal-is-based-on-math-that-wont-ever-work/)** `6/10` — www.19fortyfive.com
+  - URL: https://www.19fortyfive.com/2026/05/the-aukus-submarine-deal-is-based-on-math-that-wont-ever-work/
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: The article provides useful background on U.S. submarine production and industrial base issues, which are related to Navy ship maintenance and deterrence capacity.
+  - Reason: This article discusses U.S. submarine production and industrial base issues, citing a CRS report on worsening delays, highly relevant to Navy ship maintenance and deterrence capacity.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[From Slogan to Standard: How the Pentagon Should Define Affordable Mass](https://warontherocks.com/cogs-of-war/from-slogan-to-standard-how-the-pentagon-should-define-affordable-mass/)** `5/10` — warontherocks.com
+  - URL: https://warontherocks.com/cogs-of-war/from-slogan-to-standard-how-the-pentagon-should-define-affordable-mass/
+  - Found by: gemini (query: "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity")
+  - Note: The article discusses attrition and industrial base concepts relevant to the Navy's readiness but does not directly address specific ship maintenance or repair capacity issues.
+  - Reason: This article discusses the concepts of attrition, replenishment, and reconstitution of combat capacity, highlighting the importance of industrial base and production rates.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[FY 2027 President's Budget (PB27) Documents](https://www.secnav.navy.mil/fmc/Pages/Fiscal-Year-2027.aspx)** `5/10` — www.secnav.navy.mil
+  - URL: https://www.secnav.navy.mil/fmc/Pages/Fiscal-Year-2027.aspx
+  - Found by: gemini (query: "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity")
+  - Note: The candidate is related to the Navy's budget and strategic readiness but is currently inaccessible for content evaluation.
+  - Reason: This landing page provides access to the official budget request outlining investments in naval capabilities, shipbuilding, and the maritime industrial base, directly impacting strategic readiness and repair capacity.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[CMSI Translation #30: “Vision for Future Next-Generation Aircraft Carrier Supply Ships”](https://www.andrewerickson.com/2026/04/cmsi-translation-30-vision-for-future-next-generation-aircraft-carrier-supply-ships/)** `5/10` — www.andrewerickson.com
+  - URL: https://www.andrewerickson.com/2026/04/cmsi-translation-30-vision-for-future-next-generation-aircraft-carrier-supply-ships/
+  - Found by: gemini (query: "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity")
+  - Note: The candidate provides useful background on naval sustainment and logistics but is tangential to the specific focus on Navy ship maintenance and battle damage assessment.
+  - Reason: This analysis offers insight into Chinese naval strategic thinking regarding sustainment, logistics, and industrial production capacity, providing comparative context for warfighting attrition.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Weekly Update for Government Contractors and Commercial Businesses – May 21, 2026](https://www.pmpc.com/news-events/weekly-update-for-government-contractors-and-commercial-businesses-may-21-2026/)** `5/10` — www.pmpc.com
+  - URL: https://www.pmpc.com/news-events/weekly-update-for-government-contractors-and-commercial-businesses-may-21-2026/
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The update provides relevant information on GAO reports related to the Navy's industrial base but lacks specific details on shipyard capacity or maintenance operations.
+  - Reason: This update provides information on recent GAO releases regarding federal government accountability and mentions Department of War announcements on industrial base investments.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Inside the Navy's Radical Foreign Design Strategy (2026 Analysis)](https://www.youtube.com/watch?v=4dJ4e3fHw1I)** `5/10` — www.youtube.com
+  - URL: https://www.youtube.com/watch?v=4dJ4e3fHw1I
+  - Found by: gemini (query: "GAO Navy industrial base private shipyard capacity report")
+  - Note: The video provides useful background on the industrial capacity issues related to Navy shipbuilding but does not directly address the specific topics of fleet readiness or battle damage assessment.
+  - Reason: This video analyzes the domestic industrial bottleneck in US Navy shipbuilding, exploring foreign designs and allied shipyard capacity, and references GAO testimony.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Maritime Cost Imposition: A New Approach to Great Power War](https://cimsec.org/maritime-cost-imposition-a-new-approach-to-great-power-war/)** `5/10` — cimsec.org
+  - URL: https://cimsec.org/maritime-cost-imposition-a-new-approach-to-great-power-war/
+  - Found by: gemini (query: "Navy Regional Maintenance Center contract public testimony ship repair industrial base")
+  - Note: The article provides useful background on the maritime industrial base and fleet strategy, but it is not directly focused on ship repair or the specific Navy contracts mentioned.
+  - Reason: This article discusses expanding the maritime industrial base, shipbuilding capacity, and the Navy's fleet strategy, directly relevant to ship repair and the industrial base.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Special Forces Advance Tech and Ops](https://sonsanddaughterslondon.com/special-forces-advance-tech-and-ops/)** `5/10` — sonsanddaughterslondon.com
+  - URL: https://sonsanddaughterslondon.com/special-forces-advance-tech-and-ops/
+  - Found by: gemini (query: "Navy Regional Maintenance Center contract public testimony ship repair industrial base")
+  - Note: The publication provides useful background on the defense industrial base and budget deliberations, but it is not directly focused on the specific Navy maintenance and repair topics outlined in the research context.
+  - Reason: This publication discusses rebuilding and modernizing the defense industrial base, acquisition, and congressional budget deliberations, which implicitly relate to maintenance and repair, and mentions a CEO's Guide to the FY2027 Defense Budget.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[STATEMENT FOR THE RECORD ADMIRAL CHARLES BRADFORD COOPER II COMMANDER, U.S. CENTRAL COMMAND BEFORE THE SENATE COMMITTEE ON ARMED SERVICES](https://www.armed-services.senate.gov/imo/media/doc/Cooper_Testimony_05-14-26.pdf)** `5/10` — www.armed-services.senate.gov
+  - URL: https://www.armed-services.senate.gov/imo/media/doc/Cooper_Testimony_05-14-26.pdf
+  - Found by: gemini (query: "Navy Regional Maintenance Center contract public testimony ship repair industrial base")
+  - Note: While the testimony discusses the naval defense industrial base, it is more focused on adversary capabilities rather than specific Navy ship repair or maintenance issues.
+  - Reason: This is a direct public testimony by the CENTCOM Commander discussing the degradation of an adversary's naval defense industrial base and how it supports efforts to strengthen the U.S. Defense Industrial Base.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[TECHNICAL PROGRAM EXHIBITION GUIDE - SPIE](https://spie.org/ds)** `5/10` — spie.org
+  - URL: https://spie.org/ds
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: The exhibition guide mentions NSWC Carderock's involvement in defense-related technical contributions, making it somewhat relevant but not directly focused on the specific research context.
+  - Reason: This exhibition guide for a Defense + Security conference lists an NSWC Carderock author for a technical presentation and mentions the Army SBIR|STTR Program Manager, indicating NSWC Carderock's involvement in defense-related technical contributions that could inform or be related to SBIR/STTR topic development.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[SOCOM highlights 6 focus areas for naval capabilities modernization | DefenseScoop](https://defensescoop.com/2026/04/27/socom-naval-capabilities-modernization-focus-areas/)** `5/10` — defensescoop.com
+  - URL: https://defensescoop.com/2026/04/27/socom-naval-capabilities-modernization-focus-areas/
+  - Found by: gemini (query: "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors")
+  - Note: The article discusses SOCOM's focus on naval capabilities modernization, which is related to training technologies but does not directly address the specific Navy ship maintenance and battle damage assessment topics outlined in the research context.
+  - Reason: The article mentions SOCOM's interest in augmented and virtual reality technologies for training, which is relevant to serious games and naval simulation for enhancing human-machine teaming prowess.
+  - Added: 2026-05-24T08:45:36
+
+
+- [ ] **[Usajobs Gov Jobs, Employment in Silverdale, WA | Indeed](https://www.indeed.com/q-Usajobs-Gov-jobs-employment-Silverdale,-WA.html)** `5/10` — www.indeed.com
+  - URL: https://www.indeed.com/q-Usajobs-Gov-jobs-employment-Silverdale,-WA.html
+  - Found by: gemini (query: "Pacific Fleet forward sustainment repair industrial base wartime")
+  - Note: The job listings are related to ship repair projects for the U.S. Pacific Fleet, but they do not provide specific insights into the strategic readiness plan or detailed operational aspects.
+  - Reason: This search result page for job listings includes positions like 'CONTRACT SPECIALIST' and 'INDUSTRIAL HYGIENIST/ CHEMICAL ENGINEER (INTERDISCIPLINARY)' related to ship repair projects for the U.S. Pacific Fleet, indicating active efforts to staff and bolster the defense industrial base.
+  - Added: 2026-05-24T08:45:36
+
+
 - [ ] **[Why U.S. Force Posture in Europe Is Shifting: OSINT Analysis of Rotational Deployments, NATO Burden-Sharing and 2026 Deterrence Architecture - debugliesintel](https://www.debugliesintel.com/why-u-s-force-posture-in-europe-is-shifting-osint-analysis-of-rotational-deployments-nato-burden-sharing-and-2026-deterrence-architecture/)** `5/10` — www.debugliesintel.com
   - URL: https://www.debugliesintel.com/why-u-s-force-posture-in-europe-is-shifting-osint-analysis-of-rotational-deployments-nato-burden-sharing-and-2026-deterrence-architecture/
   - Found by: gemini (query: "FY2026 Navy budget justification ship depot maintenance O&M operations and maintenance")
   - Note: The article provides some relevant context regarding funding and maintenance but is primarily focused on European force posture rather than specific Navy ship depot maintenance issues.
   - Reason: This article confirms that FY2026 European Deterrence Initiative funding, which impacts maintenance and infrastructure, is appropriated but not publicly itemized in unclassified budget justification documents, offering insight into public data availability.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[2026 NAVSUP Commander's Conference Reinforces Strategy and Unity](https://www.navy.mil/Press-Office/News-Stories/Article/2026/05/13/2026-navsup-commanders-conference-reinforces-strategy-and-unity/)** `5/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/2026/05/13/2026-navsup-commanders-conference-reinforces-strategy-and-unity/
@@ -788,12 +651,14 @@ and interactively review the rest.
   - Reason: This article discusses NAVSUP's efforts to align with the CNO's strategic pillars to generate warfighting readiness and sustain naval forces.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Navy Shore Enterprise Honors 2025 Fire and Emergency Services Award Winners](https://www.navy.mil/Press-Office/News-Stories/Article/2026/05/08/navy-shore-enterprise-honors-2025-fire-and-emergency-services-award-winners/)** `5/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/2026/05/08/navy-shore-enterprise-honors-2025-fire-and-emergency-services-award-winners/
   - Found by: gemini (query: "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog")
   - Note: The press release provides recognition of contributions to fleet readiness but lacks direct relevance to the specific research context on ship maintenance and repair capacity.
   - Reason: This press release highlights award winners who contribute to the 'foundation of fleet readiness' for the 2025 calendar year.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[Commander, Navy Installations Command Announces 2025 Installation Navy Security Force of the Year Awards](https://www.navy.mil/Press-Office/News-Stories/Article/2026/05/06/commander-navy-installations-command-announces-2025-installation-navy-security-force-of-the-year-awards/)** `5/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/2026/05/06/commander-navy-installations-command-announces-2025-installation-navy-security-force-of-the-year-awards/
@@ -802,12 +667,14 @@ and interactively review the rest.
   - Reason: The article acknowledges security departments contributing to the 'security and operational readiness of the fleet' for the 2025 awards.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[USNS Robert E. Peary Enables 4th Fleet Combat Readiness with 154-Day Deployment](https://www.navy.mil/Press-Office/News-Stories/Article/2026/04/30/usns-robert-e-peary-enables-4th-fleet-combat-readiness-with-154-day-deployment/)** `5/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/2026/04/30/usns-robert-e-peary-enables-4th-fleet-combat-readiness-with-154-day-deployment/
   - Found by: gemini (query: "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog")
   - Note: The article discusses fleet combat readiness, which is related but not directly focused on ship maintenance backlog or the specific research context.
   - Reason: This news story directly addresses 'fleet combat readiness' following a significant deployment.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[HURREX 2026: U.S. Navy Launches Major Hurricane Drill to Test Fleet and Shore Readiness](https://www.navy.mil/Press-Office/News-Stories/Article/2026/04/28/hurrex-2026-us-navy-launches-major-hurricane-drill-to-test-fleet-and-shore-readiness/)** `5/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/2026/04/28/hurrex-2026-us-navy-launches-major-hurricane-drill-to-test-fleet-and-shore-readiness/
@@ -816,12 +683,14 @@ and interactively review the rest.
   - Reason: This press release details a major exercise aimed at testing and improving 'fleet and shore readiness' in 2026.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[MAKO Storm 2026 Prepares Navy Reserve Forces for High-End Maritime Operations](https://www.navy.mil/Press-Office/News-Stories/Article/3785235/mako-storm-2026-prepares-navy-reserve-forces-for-high-end-maritime-operations/)** `5/10` — www.navy.mil
   - URL: https://www.navy.mil/Press-Office/News-Stories/Article/3785235/mako-storm-2026-prepares-navy-reserve-forces-for-high-end-maritime-operations/
   - Found by: gemini (query: "Navy BDA battle damage assessment training pipeline NWDC Naval Warfare Development Command")
   - Note: The article provides useful background on Navy training related to maritime operations but does not directly address battle damage assessment or ship repair specifics.
   - Reason: This article from the official U.S. Navy website details an advanced Maritime Operations Center training event hosted by the Navy Warfare Development Center (NWDC), which is relevant to naval training and warfare development.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[National All-Domain Warfighting Center (NADWC) Capabilities Overview](https://www.michigan.gov/nationalguard/NADWC)** `5/10` — www.michigan.gov
   - URL: https://www.michigan.gov/nationalguard/NADWC
@@ -830,12 +699,14 @@ and interactively review the rest.
   - Reason: This page describes the capabilities of the National All-Domain Warfighting Center (NADWC), which includes how space-based imagery can enhance operational awareness, mission planning, and 'battle damage assessment' during training exercises like Northern Strike.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Senior IT Auditor - Virginia Beach, VA 23460 - Indeed.com](https://www.indeed.com/viewjob?jk=2a50a3efe5aadb04)** `5/10` — www.indeed.com
   - URL: https://www.indeed.com/viewjob?jk=2a50a3efe5aadb04
   - Found by: gemini (query: "GAO Navy live virtual constructive LVC training architecture report")
   - Note: The candidate's role involves familiarity with Navy LVC training systems, which is tangentially related to the research context but does not directly address the specific topics of fleet readiness or ship maintenance.
   - Reason: This job description for a role supporting a US Navy customer requires familiarity with Navy Live, Virtual, Constructive (LVC) training systems and customer network architecture for cybersecurity compliance.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[Congressional Research Service (CRS) Report: U.S. Aircraft Combat Losses in Operation Epic Fury: Considerations for Congress](https://www.gao.gov/assets/gao-26-108740.pdf)** `5/10` — www.gao.gov
   - URL: https://www.gao.gov/assets/gao-26-108740.pdf
@@ -844,12 +715,14 @@ and interactively review the rest.
   - Reason: This result refers to a recently released Congressional Research Service (CRS) report that tallies U.S. aircraft combat losses and mentions 'updated repair and replacement of equipment costs', demonstrating recent congressional oversight on military readiness.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Members of the command workforce recognized for their hard work, dedication in support of the U.S. Navy throughout 2025](https://www.navsea.navy.mil/Media/News/Article-View/Article/3762460/members-of-the-command-workforce-recognized-for-their-hard-work-dedication-in-s/)** `5/10` — www.navsea.navy.mil
   - URL: https://www.navsea.navy.mil/Media/News/Article-View/Article/3762460/members-of-the-command-workforce-recognized-for-their-hard-work-dedication-in-s/
   - Found by: gemini (query: "NAVSEA industry day shipyard depot repair 2025 2026")
   - Note: The article recognizes workforce efforts in shipyard maintenance, providing useful background but lacking direct relevance to specific ship repair programs or budget justifications.
   - Reason: This NAVSEA article from Puget Sound Naval Shipyard recognizes employees for work in 2025, indirectly highlighting the ongoing efforts in shipyard maintenance and modernization.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[DC-44 Fire Suppression Installation](https://sam.gov/opp/N42158-26-NNSY-710-0018/view)** `5/10` — sam.gov
   - URL: https://sam.gov/opp/N42158-26-NNSY-710-0018/view
@@ -858,12 +731,14 @@ and interactively review the rest.
   - Reason: This NAVSEA (NNSY) Sources Sought notice for specific fire suppression system installation services on portal cranes indicates ongoing infrastructure work at a naval shipyard relevant to depot repair.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[FLC Awards Recognize Federal Lab Success Bringing Technologies to the Public](https://federallabs.org/about/media/flc-press-releases/flc-awards-2025)** `5/10` — federallabs.org
   - URL: https://federallabs.org/about/media/flc-press-releases/flc-awards-2025
   - Found by: claude (query: "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue")
   - Note: The press release provides relevant context about technology transfer achievements related to Navy labs but does not specifically address NSWC Carderock or the specific research context.
   - Reason: Official FLC press release announcing 2025 FLC National Meeting award winners, covering Navy labs and DoD technology transfer achievements — the closest recent primary FLC document to the query context, though NSWC Carderock is not a named winner.
   - Added: 2026-05-23T12:20:49
+
 
 - [ ] **[U.S. Navy goes All In on Submarines in Released Shipbuilding Plan - Naval News](https://www.navalnews.com/naval-news/2026/05/u-s-navy-goes-all-in-on-submarines-in-released-shipbuilding-plan/)** `5/10` — www.navalnews.com
   - URL: https://www.navalnews.com/naval-news/2026/05/u-s-navy-goes-all-in-on-submarines-in-released-shipbuilding-plan/
@@ -872,12 +747,54 @@ and interactively review the rest.
   - Reason: This article focuses on the significant investment in submarines within the U.S. Navy's FY27-FY31 shipbuilding plan.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[U.S. Navy's Trump-class nuclear battleship plan draws questions over cost and shipyard capacity - Defence Industry Europe](https://defence-industry.eu/u-s-navys-trump-class-nuclear-battleship-plan-draws-questions-over-cost-and-shipyard-capacity/)** `5/10` — defence-industry.eu
   - URL: https://defence-industry.eu/u-s-navys-trump-class-nuclear-battleship-plan-draws-questions-over-cost-and-shipyard-capacity/
   - Found by: gemini (query: "Department of War Navy shipbuilding plan 2026 long-range FY27")
   - Note: The article provides useful background on the Navy's shipbuilding plan and shipyard capacity, but it is not directly focused on the specific aspects of fleet readiness or maintenance backlog.
   - Reason: This article discusses aspects of the Navy's broader shipbuilding plan, including the long-range vision for a 450-ship fleet and specific programs like the Trump-class battleship.
   - Added: 2026-05-23T12:20:49
+
+
+- [ ] **[Pressure Points – Training CIC Crews - European Security & Defence](https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/)** `5/10` — euro-sd.com
+  - URL: https://euro-sd.com/2026/04/allgemein/50613/pressure-points-training-cic-crews/
+  - Found by: gemini (query: "I/ITSEC Navy serious game damage control battle damage assessment vendor")
+  - Note: The article provides useful background on training and damage control coordination but is primarily focused on the Royal Navy rather than the specific Navy context outlined in the research.
+  - Reason: This article details Royal Navy efforts to reinvigorate training, including damage control coordination and synthetic training, mentioning specific vendors like QinetiQ and Rheinmetall, which aligns with Navy training, damage control, and vendor information.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Force Structure](https://cimsec.org/force-structure-perspectives-capt-jeff-kline-ret-on-bringing-the-fleet-into-the-robotics-age/)** `5/10` — cimsec.org
+  - URL: https://cimsec.org/force-structure-perspectives-capt-jeff-kline-ret-on-bringing-the-fleet-into-the-robotics-age/
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: The article discusses force structure and maintenance performance but is tangential to the specific research context on ship maintenance and battle damage assessment.
+  - Reason: This piece discusses the U.S. Navy's force structure, shipbuilding delays, and surface ship maintenance performance, linking them to overall deterrence capabilities in the Indo-Pacific.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[The new Indo-Pacific security architecture: From hub-and-spoke to allied security web](https://breakingdefense.com/2026/05/the-new-indo-pacific-security-architecture-from-hub-and-spoke-to-allied-security-web/)** `5/10` — breakingdefense.com
+  - URL: https://breakingdefense.com/2026/05/the-new-indo-pacific-security-architecture-from-hub-and-spoke-to-allied-security-web/
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: The article provides useful background on the Indo-Pacific security architecture and its implications for logistics and ship repair, but it is not directly focused on the specific Navy ship maintenance issues outlined in the research context.
+  - Reason: The article explores the evolving Indo-Pacific security architecture, 'deterrence webs,' and the industrial redesign of supply chains, which has implications for logistics and potential ship repair for regional forces.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[NSWC Crane Sailor brings Fleet to the lab to elevate electromagnetic warfare capabilities](https://www.navsea.navy.mil/Media/News/Article/3768407/nswc-crane-sailor-brings-fleet-to-the-lab-to-elevate-electromagnetic-warfare-cap/)** `5/10` — www.navsea.navy.mil
+  - URL: https://www.navsea.navy.mil/Media/News/Article/3768407/nswc-crane-sailor-brings-fleet-to-the-lab-to-elevate-electromagnetic-warfare-cap/
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: The article provides relevant information on maintenance and repair related to mission readiness, but it is more focused on NSWC Crane rather than directly addressing battle damage repair survivability.
+  - Reason: While focusing on NSWC Crane, this NAVSEA article mentions 'maintenance, troubleshooting, and repair' to improve 'mission readiness,' aligning with broader concepts of battle damage repair and survivability.
+  - Added: 2026-05-21T23:02:08
+
+
+- [ ] **[Carderock Scientists Inspire Future Innovators at Calvert County MESA Day](https://www.navsea.navy.mil/Media/News/Article/3747124/carderock-scientists-inspire-future-innovators-at-calvert-county-mesa-day/)** `5/10` — www.navsea.navy.mil
+  - URL: https://www.navsea.navy.mil/Media/News/Article/3747124/carderock-scientists-inspire-future-innovators-at-calvert-county-mesa-day/
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: The article provides useful background on NSWC Carderock's engagement in STEM and defense technology, but it does not directly address the specific topics of battle damage repair survivability or SBIR/STTR authorship.
+  - Reason: This article showcases NSWC Carderock's engagement in STEM and defense technology, indicating ongoing research and development efforts relevant to the query.
+  - Added: 2026-05-21T23:02:08
+
 
 - [ ] **[FLC | 2025 Award Winners](https://federallabs.org/page-not-found)** `1/10` — federallabs.org
   - URL: https://federallabs.org/page-not-found
@@ -886,6 +803,7 @@ and interactively review the rest.
   - Reason: FLC's official 2025 award winners page lists Navy NSWC Crane and other DoD labs recognized at the May 2025 FLC National Meeting, providing the current FLC technology transfer landscape in which NSWC Carderock operates as a member lab.
   - Added: 2026-05-23T12:20:49
 
+
 - [ ] **[Naval Surface Warfare Center (NSWC) - Carderock Division | Federal Labs](https://federallabs.org/page-not-found)** `1/10` — federallabs.org
   - URL: https://federallabs.org/page-not-found
   - Found by: claude (query: "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue")
@@ -893,8 +811,6 @@ and interactively review the rest.
   - Reason: FLC's official member lab profile page for NSWC Carderock Division, the primary FLC directory entry linking the two organizations in the query.
   - Added: 2026-05-23T12:20:49
 
-
-## SAM.gov candidates added 2026-05-23 12:33
 
 - [ ] **[OHARNG Tactical Vehicle Maneuver Lane Improvement at Camp James A. Garfield Joint Military Training Center (CJAG)](https://sam.gov/workspace/contract/opp/fff85f25f13040f3b9c673a1179c22d1/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fff85f25f13040f3b9c673a1179c22d1/view
@@ -911,6 +827,7 @@ and interactively review the rest.
     - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/e5559f297f2948e2a67f182abf4e7817/download
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[Bear Creek Service & Emergency Gates Replacement](https://sam.gov/workspace/contract/opp/ffeea8e8165b49e58bf8117663a6a2f4/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/ffeea8e8165b49e58bf8117663a6a2f4/view
@@ -933,6 +850,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[48--VALVE,GLOBE](https://sam.gov/workspace/contract/opp/ffdd096b7b5f4c32b44b8e9b732f9c4a/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/ffdd096b7b5f4c32b44b8e9b732f9c4a/view
   - Notice ID: ffdd096b7b5f4c32b44b8e9b732f9c4a
@@ -947,6 +865,7 @@ and interactively review the rest.
   - Attachments: 0
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[Headquarters Building (HQB) Mechanical and Electrical Upgrades at the Mike Monroney Aeronautical Center (MMAC), Oklahoma City, OK.](https://sam.gov/workspace/contract/opp/ffdc931cc3284dd893ea2851c9a55b07/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/ffdc931cc3284dd893ea2851c9a55b07/view
@@ -990,6 +909,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[95--Notice of Intent to Sole Source-Transmission Tower Climbing Deterrent Equipment](https://sam.gov/workspace/contract/opp/fee1d2349eb948459b1830dcdeeca852/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fee1d2349eb948459b1830dcdeeca852/view
   - Notice ID: fee1d2349eb948459b1830dcdeeca852
@@ -1004,6 +924,7 @@ and interactively review the rest.
   - Attachments: 0
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[58--COMPUTER, RADAR SVR - AND OTHER REPLACEMENT PARTS](https://sam.gov/workspace/contract/opp/feddff8973b248abaaecc9956d4f3604/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/feddff8973b248abaaecc9956d4f3604/view
@@ -1020,6 +941,7 @@ and interactively review the rest.
     - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2bab503e7cec4d44bcc914cb3a61c262/download
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[26Q4023 - Uninterrupted Power Supply](https://sam.gov/workspace/contract/opp/fe11a7d372464aa086a9c273571302ef/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fe11a7d372464aa086a9c273571302ef/view
@@ -1039,6 +961,7 @@ and interactively review the rest.
     - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ffda36caf8d142eba52eb37810dce4b1/download
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[Conlon Creek Culvert Removal & Restoration, GOGA](https://sam.gov/workspace/contract/opp/fd9688dff04c43d8a90dcac14ff49475/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fd9688dff04c43d8a90dcac14ff49475/view
@@ -1068,6 +991,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[Fiber Optic Installation](https://sam.gov/workspace/contract/opp/fd8eb2e073d5473187c791775ca0c816/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fd8eb2e073d5473187c791775ca0c816/view
   - Notice ID: fd8eb2e073d5473187c791775ca0c816
@@ -1085,6 +1009,7 @@ and interactively review the rest.
     - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/aaadbef840b44763a3037ea360f68b90/download
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[R--RFI - Landsat 10 MOC & Ops _ FAQs](https://sam.gov/workspace/contract/opp/fd1809a169834f37af4c4e8dc3a7cb6e/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fd1809a169834f37af4c4e8dc3a7cb6e/view
@@ -1117,6 +1042,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[DC HIPOT 80KV 10MA](https://sam.gov/workspace/contract/opp/fce4f184e5de49d1b893aa5e6c418d49/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fce4f184e5de49d1b893aa5e6c418d49/view
   - Notice ID: fce4f184e5de49d1b893aa5e6c418d49
@@ -1132,6 +1058,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[SHAFT,SHOULDERED](https://sam.gov/workspace/contract/opp/fc06a1bb352e4c988f0797913d1849a4/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fc06a1bb352e4c988f0797913d1849a4/view
   - Notice ID: fc06a1bb352e4c988f0797913d1849a4
@@ -1146,6 +1073,7 @@ and interactively review the rest.
   - Attachments: 0
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[Amarillo VA Temporary Housing Lodging](https://sam.gov/workspace/contract/opp/fbeb9ff0c0e04bce96108c18bbf97022/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fbeb9ff0c0e04bce96108c18bbf97022/view
@@ -1164,6 +1092,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[Amplifier for Integration into a Custom NIST-built Absolute Magnetometer](https://sam.gov/workspace/contract/opp/fbcc155ad478439fb7886946334cf4ab/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fbcc155ad478439fb7886946334cf4ab/view
   - Notice ID: fbcc155ad478439fb7886946334cf4ab
@@ -1181,6 +1110,7 @@ and interactively review the rest.
     - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a7b0f96475de476e905ecb3e7a72ba51/download
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[CPMT Boatlift Maintenance](https://sam.gov/workspace/contract/opp/fb72ee62c6b044fe8ca19c2c82a3e6ab/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fb72ee62c6b044fe8ca19c2c82a3e6ab/view
@@ -1201,6 +1131,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[56--CA-MODOC NWR-CULVERT PIPE](https://sam.gov/workspace/contract/opp/fb70e30019704d91b1b816676bd3f34a/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fb70e30019704d91b1b816676bd3f34a/view
   - Notice ID: fb70e30019704d91b1b816676bd3f34a
@@ -1219,6 +1150,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[6515--Sources Sought: Colorectal Analyzer for the Northport VA  Medical Center.  In support of the Fecal Immunochemical Testing Program.](https://sam.gov/workspace/contract/opp/fb4ccbecef384d51b4c410d6e7c760af/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fb4ccbecef384d51b4c410d6e7c760af/view
   - Notice ID: fb4ccbecef384d51b4c410d6e7c760af
@@ -1235,6 +1167,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[Hazardous Rated LED Fixtures](https://sam.gov/workspace/contract/opp/fb19df4386164976b46d7c8667491b24/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fb19df4386164976b46d7c8667491b24/view
   - Notice ID: fb19df4386164976b46d7c8667491b24
@@ -1249,6 +1182,7 @@ and interactively review the rest.
   - Attachments: 0
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[Psychological Treatment Services](https://sam.gov/workspace/contract/opp/fb091ad321ce4e78bd79afe3ed83d7cd/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fb091ad321ce4e78bd79afe3ed83d7cd/view
@@ -1266,6 +1200,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[ONE (1) 150 METRIC TON MOBILE BOAT HOIST, NSWCCD, NORFOLK VA](https://sam.gov/workspace/contract/opp/fadd213d7d6741ab9133ffa12dfa4528/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fadd213d7d6741ab9133ffa12dfa4528/view
   - Notice ID: fadd213d7d6741ab9133ffa12dfa4528
@@ -1280,6 +1215,7 @@ and interactively review the rest.
   - Attachments: 0
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[FOOD 4TH QTR FY26](https://sam.gov/workspace/contract/opp/fa871632579c45b7bf16839c8d470569/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fa871632579c45b7bf16839c8d470569/view
@@ -1298,6 +1234,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[44--FILTER,AIR,ELECTROS](https://sam.gov/workspace/contract/opp/fa5f0042ded0459db64f128f8e4d62db/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fa5f0042ded0459db64f128f8e4d62db/view
   - Notice ID: fa5f0042ded0459db64f128f8e4d62db
@@ -1313,6 +1250,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[Notice of Intent to Sole Source: Defense Stockpile Management Systems (DSMS) Support](https://sam.gov/workspace/contract/opp/fa197ab80cd5430187108c3bf3067ee5/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/fa197ab80cd5430187108c3bf3067ee5/view
   - Notice ID: fa197ab80cd5430187108c3bf3067ee5
@@ -1327,6 +1265,7 @@ and interactively review the rest.
   - Attachments: 0
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
 
 - [ ] **[CDC AFM case classification](https://sam.gov/workspace/contract/opp/f9f8577ab278471082899f6526111e3c/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/f9f8577ab278471082899f6526111e3c/view
@@ -1345,6 +1284,7 @@ and interactively review the rest.
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
 
+
 - [ ] **[Overhaul of Aileron Booster](https://sam.gov/workspace/contract/opp/f953f34c09b5486aa16cd39af5c6d2cc/view)** — sam.gov
   - URL: https://sam.gov/workspace/contract/opp/f953f34c09b5486aa16cd39af5c6d2cc/view
   - Notice ID: f953f34c09b5486aa16cd39af5c6d2cc
@@ -1362,4 +1302,476 @@ and interactively review the rest.
     - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6e19c543f5ec4ec7bba99e15c77762b0/download
   - Reason: matched query "NSWC Carderock"
   - Added: 2026-05-23T12:33:00
+
+
+- [ ] **[JBSA Hood and Duct Cleaning Services](https://sam.gov/workspace/contract/opp/ffecc8fbbf414be699e045438cc2962d/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/ffecc8fbbf414be699e045438cc2962d/view
+  - Notice ID: ffecc8fbbf414be699e045438cc2962d
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Special Notice
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-04
+  - Set-aside: Service-Disabled Veteran-Owned Small Business Set Aside
+  - NAICS: 561790
+  - Department: DEPT OF DEFENSE / DEPT OF THE AIR FORCE
+  - Attachments: 1 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/45d908135a5c41418a4eef98aaf2200e/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[20--DOOR,METAL,MARINE S](https://sam.gov/workspace/contract/opp/ff920cd69ee44e1fac0e0102f4ce314d/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/ff920cd69ee44e1fac0e0102f4ce314d/view
+  - Notice ID: ff920cd69ee44e1fac0e0102f4ce314d
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Award Notice
+  - Posted: 2026-05-21
+  - Response deadline: 
+  - Set-aside: None
+  - NAICS: 336611
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[25--CYLINDER,HYDRAULIC](https://sam.gov/workspace/contract/opp/ff79c63565c14cb1a43bd9bcd1774d74/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/ff79c63565c14cb1a43bd9bcd1774d74/view
+  - Notice ID: ff79c63565c14cb1a43bd9bcd1774d74
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: None
+  - NAICS: 336992
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[59--FILTER,CONTROL UNIT](https://sam.gov/workspace/contract/opp/ff524541fd5e4e99888404409fc48094/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/ff524541fd5e4e99888404409fc48094/view
+  - Notice ID: ff524541fd5e4e99888404409fc48094
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Women-Owned Small Business
+  - NAICS: 334419
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[Airborne Ethernet Units](https://sam.gov/workspace/contract/opp/ff1c09c909384f3589fa60891e7f538e/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/ff1c09c909384f3589fa60891e7f538e/view
+  - Notice ID: ff1c09c909384f3589fa60891e7f538e
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Award Notice
+  - Posted: 2026-05-21
+  - Response deadline: 
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 334111
+  - Department: DEPT OF DEFENSE / DEPT OF THE AIR FORCE
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[Moscow Research Station sewer line repair](https://sam.gov/workspace/contract/opp/fe7c000ad02b4dfdad1170d59095ab3b/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fe7c000ad02b4dfdad1170d59095ab3b/view
+  - Notice ID: fe7c000ad02b4dfdad1170d59095ab3b
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Award Notice
+  - Posted: 2026-05-21
+  - Response deadline: 
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 237110
+  - Department: AGRICULTURE, DEPARTMENT OF / FOREST SERVICE
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[DLA Industry Collider Day 2026](https://sam.gov/workspace/contract/opp/fe3914d8990c48a5a14b11db05f5d766/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fe3914d8990c48a5a14b11db05f5d766/view
+  - Notice ID: fe3914d8990c48a5a14b11db05f5d766
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Special Notice
+  - Posted: 2026-05-21
+  - Response deadline: 2026-09-09
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 541715
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 1 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2b4fa72af22a4bad813dd1cd42111288/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[61--MOTOR,ALTERNATING C](https://sam.gov/workspace/contract/opp/fe1025c3ebdd453cbfc6e94665830260/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fe1025c3ebdd453cbfc6e94665830260/view
+  - Notice ID: fe1025c3ebdd453cbfc6e94665830260
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 335312
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[Bicycles, Quantity 400](https://sam.gov/workspace/contract/opp/fd8dd95a92364460a2669bc9c21ae511/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fd8dd95a92364460a2669bc9c21ae511/view
+  - Notice ID: fd8dd95a92364460a2669bc9c21ae511
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-05-28
+  - Set-aside: None
+  - NAICS: 423910
+  - Department: DEPT OF DEFENSE / DEPT OF THE NAVY
+  - Attachments: 1 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/da6c3def21674ae0ab9d2b9ed01c9627/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[59--PC IO SPECL COMPASS](https://sam.gov/workspace/contract/opp/fd285506c3ae489b9d489fa365828f12/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fd285506c3ae489b9d489fa365828f12/view
+  - Notice ID: fd285506c3ae489b9d489fa365828f12
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Award Notice
+  - Posted: 2026-05-21
+  - Response deadline: 
+  - Set-aside: None
+  - NAICS: 334412
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[48--VALVE,SOLENOID](https://sam.gov/workspace/contract/opp/fcd99e9daf7340ce881a377dc097b136/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fcd99e9daf7340ce881a377dc097b136/view
+  - Notice ID: fcd99e9daf7340ce881a377dc097b136
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 332911
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[Parts Kit, Door Lift](https://sam.gov/workspace/contract/opp/fc85cbdcf88a432ca27334d708084e9d/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fc85cbdcf88a432ca27334d708084e9d/view
+  - Notice ID: fc85cbdcf88a432ca27334d708084e9d
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Presolicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-07-08
+  - Set-aside: None
+  - NAICS: 336992
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 2 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/25ec25cf7a644ea0a236b489793e44b6/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2bdf82337ae74dbca353d759f7dfe55f/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[CONTROL PANEL,AIRCR](https://sam.gov/workspace/contract/opp/fc6fb763e7ae429a8204d0fba550f0b5/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fc6fb763e7ae429a8204d0fba550f0b5/view
+  - Notice ID: fc6fb763e7ae429a8204d0fba550f0b5
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-05
+  - Set-aside: None
+  - NAICS: 336413
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[61--MOTOR,DIRECT CURREN](https://sam.gov/workspace/contract/opp/fbbb2e383c504b9ea8c4cf76a0d4404a/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fbbb2e383c504b9ea8c4cf76a0d4404a/view
+  - Notice ID: fbbb2e383c504b9ea8c4cf76a0d4404a
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 335312
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[Repair Requirement for NIIN 011440132](https://sam.gov/workspace/contract/opp/fbac0a1c35ae49b4afb44f3097e68813/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fbac0a1c35ae49b4afb44f3097e68813/view
+  - Notice ID: fbac0a1c35ae49b4afb44f3097e68813
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-19
+  - Set-aside: No Set aside used
+  - NAICS: 336413
+  - Department: DEPT OF DEFENSE / DEPT OF THE NAVY
+  - Attachments: 1 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4668936f6d7a4589af58922ca5bbaff4/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[Grades 6 - 12 Health Education Instructional Resources](https://sam.gov/workspace/contract/opp/fb90e0f0987244b5a92e345c5a4a9656/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fb90e0f0987244b5a92e345c5a4a9656/view
+  - Notice ID: fb90e0f0987244b5a92e345c5a4a9656
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-05-18
+  - Set-aside: No Set aside used
+  - NAICS: 513130
+  - Department: DEPT OF DEFENSE / DEPT OF DEFENSE EDUCATION ACTIVITY (DODEA)
+  - Attachments: 15 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/02664a7ada24410197a3d15712c10b95/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/036cb9b02f0e425288b4ac1b64572879/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2706e2d71d794a229a52f22b8c79ea35/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2f90d2d66d114a21b07b5e589f97c8a1/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/36b38161c57d46eb9cbdd4768f1f3ba3/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6afe62a720d64d94bf6c025576dc0c48/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/755e582b09564cb3a194daa9d385c546/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/8691da22e51a405fa71a7549218bba12/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c7aa498ff8f041ae95f520c3e2a985ca/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d2388a518c61446b90399beb885608e3/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/dbe956b1807e46439b416a43c04129c9/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/e1c63d40fe2747739d834b432aeffabf/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ecefc5bf66ae44538702668c6da7be60/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ed63189bc058411eab6921830d10c8dc/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/eedccabf9b724fa5a17da6d5ff193a4f/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[APRIVA Mobile Endpoint Security Architecture Virtual Private Network Follow-on Sole Source](https://sam.gov/workspace/contract/opp/fb1f1c20ea964462b28487622988fce7/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fb1f1c20ea964462b28487622988fce7/view
+  - Notice ID: fb1f1c20ea964462b28487622988fce7
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Sources Sought
+  - Posted: 2026-05-21
+  - Response deadline: 2026-05-29
+  - Set-aside: None
+  - NAICS: 541511
+  - Department: DEPT OF DEFENSE / DEFENSE INFORMATION SYSTEMS AGENCY (DISA)
+  - Attachments: 1 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d2e6c2fe803c4252b945c6dd3e269bc3/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[5670--36C242-26-AP-2640 | 561-26-3-5112-0038 Fire Door  Replacements](https://sam.gov/workspace/contract/opp/faadbe78a9534a608b28ef886c8cb5d0/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/faadbe78a9534a608b28ef886c8cb5d0/view
+  - Notice ID: faadbe78a9534a608b28ef886c8cb5d0
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-05-27
+  - Set-aside: None
+  - NAICS: 332321
+  - Department: VETERANS AFFAIRS, DEPARTMENT OF / VETERANS AFFAIRS, DEPARTMENT OF
+  - Attachments: 2 (not yet downloaded)
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4451c9290b8642d692fadbbe5ace44a6/download
+    - attachment — https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7307c80e6dbf481f8b5ffbe264e53e70/download
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[59--TRANSFORMER,POWER](https://sam.gov/workspace/contract/opp/fa1a18b6a7ae46bbaafce20d8b5513ea/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/fa1a18b6a7ae46bbaafce20d8b5513ea/view
+  - Notice ID: fa1a18b6a7ae46bbaafce20d8b5513ea
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Women-Owned Small Business
+  - NAICS: 334416
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[53--BOOT,DUST AND MOIST](https://sam.gov/workspace/contract/opp/f9ecaf1c0c8f43f8b015ed574e15b970/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/f9ecaf1c0c8f43f8b015ed574e15b970/view
+  - Notice ID: f9ecaf1c0c8f43f8b015ed574e15b970
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-05
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 332510
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[59--ELECTRONIC COMPONEN](https://sam.gov/workspace/contract/opp/f93e8ddf7f6749139346d922e7ec8307/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/f93e8ddf7f6749139346d922e7ec8307/view
+  - Notice ID: f93e8ddf7f6749139346d922e7ec8307
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: None
+  - NAICS: 334413
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[53--RING,OIL CONTROL](https://sam.gov/workspace/contract/opp/f8913fe68bed445384835858942aa6bc/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/f8913fe68bed445384835858942aa6bc/view
+  - Notice ID: f8913fe68bed445384835858942aa6bc
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Women-Owned Small Business
+  - NAICS: 339991
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[61--BATTERY,STORAGE](https://sam.gov/workspace/contract/opp/f8843b0d281e414ab9d1227557096db4/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/f8843b0d281e414ab9d1227557096db4/view
+  - Notice ID: f8843b0d281e414ab9d1227557096db4
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Award Notice
+  - Posted: 2026-05-21
+  - Response deadline: 
+  - Set-aside: None
+  - NAICS: 488190
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[VALVE ASSEMBLY](https://sam.gov/workspace/contract/opp/f7d82fab68d74aa0b8107ee355419149/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/f7d82fab68d74aa0b8107ee355419149/view
+  - Notice ID: f7d82fab68d74aa0b8107ee355419149
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-05
+  - Set-aside: None
+  - NAICS: 332919
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [ ] **[47--HOSE ASSEMBLY,NONME](https://sam.gov/workspace/contract/opp/f7506646e7a74e82ae7389a7c5de38db/view)** — sam.gov
+  - URL: https://sam.gov/workspace/contract/opp/f7506646e7a74e82ae7389a7c5de38db/view
+  - Notice ID: f7506646e7a74e82ae7389a7c5de38db
+  - Source type: sam_gov
+  - Found by: sam.gov (query: "NSWC Carderock")
+  - Notice type: Combined Synopsis/Solicitation
+  - Posted: 2026-05-21
+  - Response deadline: 2026-06-01
+  - Set-aside: Total Small Business Set-Aside (FAR 19.5)
+  - NAICS: 332999
+  - Department: DEPT OF DEFENSE / DEFENSE LOGISTICS AGENCY
+  - Attachments: 0
+  - Reason: matched query "NSWC Carderock"
+  - Added: 2026-05-21T23:14:23
+
+
+- [x] **[U.S. Navy's Shipbuilding Plan - May 2026](https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf)** `9/10` — www.navy.mil
+  - URL: https://www.navy.mil/Portals/1/Documents/2026_US_Navy_Shipbuilding_Plan_May_2026.pdf
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: This primary .mil source provides direct insights into the Navy's shipbuilding and maintenance strategy, aligning closely with the research context.
+  - Reason: As a primary document, this plan directly addresses 'Ship Repair and Maintenance' and 'Revitalizing the Shipbuilding Industrial Base', providing critical insights into Navy's strategy.
+  - Added: 2026-05-23T12:20:49
+
+
+- [x] **[SRF-JRMC Successfully Completes First Ship Wartime Repair and Maintenance Exercise (SWARMEX) in Japan](https://www.navsea.navy.mil/Media/News/Article/3748283/srf-jrmc-successfully-completes-first-ship-wartime-repair-and-maintenance-exerc/)** `9/10` — www.navsea.navy.mil
+  - URL: https://www.navsea.navy.mil/Media/News/Article/3748283/srf-jrmc-successfully-completes-first-ship-wartime-repair-and-maintenance-exerc/
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: The article directly addresses battle damage assessment and repair within the NAVSEA context, making it highly relevant to the research focus.
+  - Reason: This article details exercises in 'battle damage assessment and repair' and 'maintenance and repair resiliency', directly addressing the battle damage repair and survivability components of the query, within the broader NAVSEA context.
+  - Added: 2026-05-21T23:02:08
+
+
+- [x] **[U.S. Navy's Shipbuilding Plan](https://www.defense.gov/Portals/1/Documents/pubs/Navy-Shipbuilding-Plan-May-2026.pdf)** `8/10` — www.defense.gov
+  - URL: https://www.defense.gov/Portals/1/Documents/pubs/Navy-Shipbuilding-Plan-May-2026.pdf
+  - Found by: gemini (query: "CRS report Navy ship maintenance Pacific Deterrence Initiative ship repair")
+  - Note: The document provides a direct overview of the Navy's shipbuilding plan, including aspects of ship repair and maintenance relevant to the research context.
+  - Reason: This primary document outlines the Navy's shipbuilding plan, explicitly covering 'Ship Repair and Maintenance,' industrial base revitalization, and their contributions to deterrence.
+  - Added: 2026-05-21T23:02:08
+
+
+- [x] **[Warfare Center Develops New Tool to Help Sailors Keep Vertical Launching System Latch Rods Moving](https://www.navsea.navy.mil/Media/News/Article/3774844/warfare-center-develops-new-tool-to-help-sailors-keep-vertical-launching-syste/)** `8/10` — www.navsea.navy.mil
+  - URL: https://www.navsea.navy.mil/Media/News/Article/3774844/warfare-center-develops-new-tool-to-help-sailors-keep-vertical-launching-syste/
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: This article directly addresses a tool developed for battle damage repair, enhancing naval asset survivability, which aligns well with the research context.
+  - Reason: This NAVSEA article describes a new tool for VLS 'cell hatch repairs' to 'boost readiness', directly relating to battle damage repair and enhancing survivability for naval assets.
+  - Added: 2026-05-21T23:02:08
+
+
+- [x] **[Decades of Carderock Expertise Continue to Shape Orion Recovery](https://www.navsea.navy.mil/Media/News/Article/3750059/decades-of-carderock-expertise-continue-to-shape-orion-recovery/)** `7/10` — www.navsea.navy.mil
+  - URL: https://www.navsea.navy.mil/Media/News/Article/3750059/decades-of-carderock-expertise-continue-to-shape-orion-recovery/
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: The article provides relevant insights into NSWC Carderock's expertise in survivability systems, which is related to the battle damage repair survivability aspect of the research.
+  - Reason: This article from NSWC Carderock highlights the division's expertise in 'Vulnerability and Survivability Systems', which aligns with the survivability aspect of the query.
+  - Added: 2026-05-21T23:02:08
+
+
+- [x] **[Department of War Fiscal Year (FY) 2027 Budget Estimates - Justification Book for the Defense Threat Reduction Agency](https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf)** `5/10` — comptroller.defense.gov
+  - URL: https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2027/fy2027_DTRA_J-Book.pdf
+  - Found by: gemini (query: "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability")
+  - Note: The document provides useful background on SBIR/STTR and survivability research but is not directly focused on Navy ship maintenance or battle damage repair.
+  - Reason: This primary document mentions 'SBIR and STTR Extension Act of 2022' and 'CBRN survivability needs' with 'FY 2025' and 'FY 2026' program plans, providing high-level context for SBIR/STTR and survivability research within the DoD.
+  - Added: 2026-05-21T23:02:08
 

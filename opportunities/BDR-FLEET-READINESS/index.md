@@ -26,9 +26,9 @@ next_action: Triage the second-pass inbox (87 new candidates added 2026-05-23). 
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
 auto_find: true    # resumed 2026-05-22 after readability + workflow improvements landed
-last_find_run: 2026-05-23T12:33:10
-last_find_count_ai: 62
-last_find_count_sam: 25
+last_find_run: 2026-05-24T09:34:53
+last_find_count_ai: 38
+last_find_count_sam: 0
 last_find_count_usa: 0
 ---
 

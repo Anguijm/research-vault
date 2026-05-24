@@ -68,6 +68,18 @@ ai_searches:
   - "Pacific Fleet forward sustainment repair industrial base wartime"
   - "Department of War Navy shipbuilding plan 2026 long-range FY27"
 
+  # ---- 2026-05-24 BDAR/BDAT scope-tightening queries — testing §7 legs 1 + 2 ----
+  # Active-procurement signals for BDAR/BDAT training and simulation. Designed
+  # to test whether the Navy is acquiring this capability through contractors
+  # (leg 2 procurement-path reality) and how senior leadership is publicly
+  # signaling the requirement (leg 1 demand gap).
+  - "active NAVSEA SBIR STTR topic battle damage assessment training simulation 2026 solicitation"
+  - "Navy NWDC Naval Warfare Development Command battle damage assessment training curriculum product catalog"
+  - "DIU Defense Innovation Unit naval damage control training simulation award portfolio 2025 2026"
+  - "ONR Office of Naval Research broad agency announcement damage assessment training simulation BAA"
+  - "Navy SIMA Shore Intermediate Maintenance Activity Norfolk San Diego training advanced manufacturing"
+  - "Regional Maintenance Center RMC advanced manufacturing lab Navy training contract 2026"
+
 # SAM.gov queries — Carderock-adjacent SBIR/STTR + Navy ship repair vehicles.
 # Carderock itself rarely buys big; SBIR/STTR topics and NAVSEA depot-repair
 # vehicles are the most useful BD signals.
@@ -113,6 +125,10 @@ usa_spending_searches:
   - keywords: ["battle damage assessment", "training"]
     start: "2023-01-01"
   - keywords: ["serious game", "Navy"]
+    start: "2023-01-01"
+  - keywords: ["Shore Intermediate Maintenance Activity"]
+    start: "2023-01-01"
+  - keywords: ["damage control", "simulation"]
     start: "2023-01-01"
 
 rss_feeds: []   # Phase 4b — deferred
