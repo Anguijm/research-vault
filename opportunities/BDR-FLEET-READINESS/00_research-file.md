@@ -456,6 +456,7 @@ All three empty-ingest files should be moved to `01_sources/_quarantine/` and th
 - [s.2026-05-26-cont-awd-47qfca21f0042-4732-gs] https://www.usaspending.gov/award/CONT_AWD_47QFCA21F0042_4732_GS00Q14OADU127_4732/  →  `01_sources/2026-05-26_usaspending-gov_cont-awd-47qfca21f0042-4732-gs00q14oadu127-4732.md`
 - [s.2026-05-26-cont-awd-hq014716c0034-9700-no] https://www.usaspending.gov/award/CONT_AWD_HQ014716C0034_9700_-NONE-_-NONE-/  →  `01_sources/2026-05-26_usaspending-gov_cont-awd-hq014716c0034-9700-none-none.md`
 - [s.2026-05-26-cont-awd-47qfca20f0002-4732-gs] https://www.usaspending.gov/award/CONT_AWD_47QFCA20F0002_4732_GS00Q14OADU121_4732/  →  `01_sources/2026-05-26_usaspending-gov_cont-awd-47qfca20f0002-4732-gs00q14oadu121-4732.md`
+- [s.2026-05-26-2026-05-14-caudle-testimony] https://armedservices.house.gov/uploadedfiles/2026-05-14_caudle_testimony.pdf  →  `01_sources/2026-05-26_armedservices-house-gov_2026-05-14-caudle-testimony.md`
 
 ## 9. Verification flags
 
