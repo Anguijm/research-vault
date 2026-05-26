@@ -459,13 +459,10 @@ def build():
 
     _body(doc,
         "The Navy is not running an RFP for this today. The path to procurement runs through proactive CACI "
-        "executive engagement with PACFLT N7, FLTFORCOM N7, INDOPACOM J7, NAVSEA 04, or SRF-JRMC leadership. The "
-        "pitch is concrete on day one: here is the work-type, here is the AFRICOM precedent demonstrating CACI "
-        "executes this work at scale, here are the GSA-wide vehicles we already hold, issue a Level 1 pilot task "
-        "order against our existing OASIS or CIO-SP3 holdings. This is the salesmanship step the procurement-"
-        "vehicle question requires. It cannot be done by the analyst preparing this brief or by the BD team alone. "
-        "CACI executive leadership has to make the engagement happen at the right level of seniority at the named "
-        "commands.")
+        "executive engagement with PACFLT N7, FLTFORCOM N7, INDOPACOM J7, NAVSEA 04 (PAE-IO), or SRF-JRMC "
+        "leadership. The pitch is concrete on day one: here is the work-type, here is the AFRICOM precedent "
+        "demonstrating CACI executes this work at scale, here are the GSA-wide vehicles we already hold, issue a "
+        "Level 1 pilot task order against our existing OASIS or CIO-SP3 holdings.")
 
     _h2(doc, "7.3 Decide the HM&E-data bridge approach early")
 

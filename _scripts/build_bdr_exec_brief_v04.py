@@ -171,8 +171,7 @@ def build():
     _bullet(doc,
         "Initiate CACI executive engagement with the named Navy commands. The Navy is not running an RFP for this "
         "today. The path to procurement runs through proactive executive-level engagement at PACFLT N7, FLTFORCOM "
-        "N7, INDOPACOM J7, NAVSEA 04, or SRF-JRMC leadership. This cannot be done by the analyst or the BD team "
-        "alone — it requires CACI executive leadership engagement at the right level of seniority.")
+        "N7, INDOPACOM J7, NAVSEA 04 (PAE-IO), or SRF-JRMC leadership.")
 
     _bullet(doc,
         "Decide the HM&E-data bridge approach early. Repair-side scenario realism needs Navy Hull, Mechanical, and "
