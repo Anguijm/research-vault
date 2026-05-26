@@ -6,7 +6,11 @@ drafting_model: Claude (Anthropic) representing the operator's analytical positi
 reviewing_model: Gemini Pro (Google)
 rounds_completed: 5
 date: 2026-05-25
+status: SUPERSEDED 2026-05-26
+superseded_by: 00_research-file.md §1 (rewritten 2026-05-26); 05_decision-log.md 2026-05-26 entry
 ---
+
+> **SUPERSEDED 2026-05-26.** This dialogue's central output — the buyer triad of Naval Education and Training Command (NETC), Naval Air Warfare Center Training Systems Division (NAWCTSD), and Surface Warfare Schools Command (SWSC) as the customer chain for BDAR/BDAT — is no longer the working frame for the research. The 2026-05-26 scope correction established that the right customer set is the Navy repair-activity ecosystem (the four public naval shipyards, the Regional Maintenance Centers, the forward-deployed repair facilities like SRF-JRMC), and the right product is gamified operational-decision scenarios for the existing professional team, not curriculum delivery through the schoolhouse / Sailor pipeline. This dialogue file is preserved for analytical lineage — both the convergence reached here and the 2026-05-25 find_sources diagnostic that disconfirmed the buyer-triad's AI-search visibility are evidence the scope correction was warranted. The schoolhouse-vs-operational-decision distinction is named explicitly in the 2026-05-26 decision log entry; the corrected §1 of `00_research-file.md` is the new controlling frame for the LLM lens during find_sources. Do NOT treat the entities and program names below (NETC, NAWCTSD, SWSC, Ready Relevant Learning, Surface Training Advanced Virtual Environment, Submarine Multi-Mission Team Trainer, Navigation Seamanship Shiphandling Trainer) as load-bearing for the current research scope. They live here as a lineage record of the framing the operator corrected away from on 2026-05-26.
 
 # Iterated cross-AI red-team — operator's right-to-win reframe
 

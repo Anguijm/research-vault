@@ -99,7 +99,6 @@ def execute_query(filters: dict, max_candidates: int = 100) -> list[dict]:
             "Place of Performance City Code",
             "Total Outlays",
             "generated_internal_id",
-            "internal_id",
         ],
         "page": 1,
         "limit": min(int(max_candidates), 100),

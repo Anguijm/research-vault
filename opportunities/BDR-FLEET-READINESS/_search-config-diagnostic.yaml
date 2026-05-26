@@ -1,0 +1,54 @@
+# BDR-FLEET-READINESS — DIAGNOSTIC config for 2026-05-25 0-candidate investigation.
+#
+# Built per the converged v3 diagnostic plan
+# (_red-teams/2026-05-25-gemini-pro-diagnostic-plan-dialogue.md). Purpose:
+# isolate which stage of _run_ai_search produced 0 candidates queued in the
+# 2026-05-25 morning find_sources pass.
+#
+# Two buckets:
+#   - Bucket A: 10 buyer-triad queries (test hypothesis that AI search
+#     returns 0 results for these specific queries).
+#   - Bucket B: 3 baseline queries with known recent successes in 01_sources/.
+#
+# SAM and USAspending are intentionally minimal (1 query each) so the diagnostic
+# focuses on the AI path. USAspending also tests whether the 2026-05-25
+# internal_id field fix in _scripts/lib/usaspending.py:102 resolves the
+# 500-outage pattern.
+
+ai_searches:
+  # ---- Bucket B: 3 baseline queries (control group) ----
+  # Picked from the production config's Week-1 disconfirming-evidence queries.
+  # These were issued in both the 08:30 and 20:55 runs of 2026-05-25.
+  - "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity"
+  - "FY2026 Navy budget justification ship depot maintenance O&M operations and maintenance"
+  - "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog"
+
+  # ---- Bucket A: 10 buyer-triad queries (test group) ----
+  # The 10 queries added 2026-05-25 from the right-to-win-reframe dialogue
+  # plus space-probing queries that target the same buyer triad.
+  - "Naval Education Training Command surface warfare training curriculum 2025 2026 contractor procurement"
+  - "Naval Air Warfare Center Training Systems Division surface ship training systems contract 2025 2026"
+  - "Surface Warfare Schools Command BDAR battle damage assessment curriculum requirement"
+  - "Naval Warfare Development Center surface fleet tactical doctrine battle damage NTTP TACMEMO"
+  - "Afloat Training Group surface readiness BDAR damage assessment training"
+  - "Navy curriculum development contract surface warfare battle damage assessment 2025 2026"
+  - "Navy fleet synthetic training architecture contract integration HLA DIS standards"
+  - "Navy Ready Relevant Learning Sailor 2025 BDAR damage control curriculum modernization"
+  - "Navy Continuous Training Environment NCTE Fleet Synthetic Training contract"
+  - "Navigation Seamanship Shiphandling Trainer NSST Fitzgerald McCain upgrade contract"
+
+# Minimal SAM probe so we can see whether the 429 rate-limit pattern recurs.
+sam_searches:
+  - params:
+      q: "battle damage assessment training simulation"
+
+# Minimal USAspending probe — tests whether the 2026-05-25 internal_id fix
+# resolves the HTTP 500 pattern.
+usa_spending_searches:
+  - keywords: ["Carderock"]
+    start: "2023-01-01"
+
+rss_feeds: []
+
+date_window_days: 30
+max_candidates_per_run: 25

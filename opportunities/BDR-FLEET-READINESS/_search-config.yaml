@@ -1,114 +1,103 @@
 # BDR-FLEET-READINESS source-finding config.
 #
-# Sequencing per 00_research-file.md §10.3:
-#   Week 1 — pull the two disconfirming-evidence threads FIRST
-#            (DON Strategic Readiness Plan + FY26 Navy budget exhibits + recent
-#             SASC/HASC CNO/NAVSEA testimony) to test §7 hypothesis early.
-#   Week 2 — broaden to Carderock public materials + Navy ship-repair footprint.
-#   Week 3 — synthesize into research-file update + Gate 1 decision.
+# 2026-05-26 SCOPE CORRECTION: this config targets the Navy repair-activity
+# ecosystem (four public naval shipyards + Regional Maintenance Centers +
+# forward-deployed repair facilities) executing gamified operational-decision
+# scenarios — port selection for damaged ships, foreign-port emergency
+# contracting, forward-team mobilization, BDAR triage under combat tempo,
+# BDAT-to-BDAR handoff, degraded-comms information access. The product audience
+# is the team leader / staff cell / commander, NOT the deck-plate Sailor on the
+# schoolhouse pipeline. See 00_research-file.md §1 and the 2026-05-26 decision
+# log entry for the controlling frame. The 2026-05-25 right-to-win-reframe
+# dialogue's buyer triad (NETC / NAWCTSD / SWSC) is SUPERSEDED and its
+# associated queries are removed from this config.
 #
-# Ordering of ai_searches reflects §10.3 Week 1 disconfirming-evidence priority.
-# Operator should treat the first three queries as load-bearing; the rest are
-# broadening queries that should NOT run until Week 1 disconfirmation completes.
+# Sequencing per 00_research-file.md §10.3:
+#   Week 1 — disconfirming-evidence threads (DON Strategic Readiness Plan,
+#            FY26 budget exhibits, recent SASC/HASC testimony).
+#   Week 2 — broaden to repair-activity organizations and exercise authorities.
+#   Week 3 — synthesize into research-file update + Gate 1 decision.
 
 ai_searches:
-  # ---- Week 1: disconfirming-evidence threads (highest priority, §10.2 counter #1) ----
+  # ---- Week 1: disconfirming-evidence threads (highest priority) ----
   - "Department of the Navy Strategic Readiness Plan warfighting attrition repair capacity"
   - "FY2026 Navy budget justification ship depot maintenance O&M operations and maintenance"
   - "SASC HASC 2025 2026 CNO NAVSEA testimony fleet readiness ship maintenance backlog"
 
-  # ---- Week 1: disconfirming-evidence threads (§10.2 counter #2 — Carderock OSI fidelity) ----
+  # ---- Week 1: Carderock OSI-fidelity (§10.2 counter #2) ----
   - "NSWC Carderock battle damage repair survivability methodology unclassified publication"
   - "NAVSEA Carderock ship survivability modeling public technical paper SNAME Naval Engineers Journal"
 
-  # ---- Week 1: disconfirming-evidence threads (§7-leg-6 — BDA pipeline viability) ----
-  # These can falsify the BDA-pipeline scope (§11.3) early; load-bearing for the new
-  # 2026-05-21 scope-expansion-#2 dimension.
+  # ---- Week 1: BDA pipeline (§7-leg-6 — pipeline viability) ----
   - "Navy BDA battle damage assessment training pipeline NWDC Naval Warfare Development Command"
   - "SBIR Phase II Phase III battle damage assessment serious game simulation Navy"
   - "COMPTUEX RIMPAC Large Scale Exercise LSE battle damage assessment inject training"
   - "I/ITSEC Navy serious game damage control battle damage assessment vendor"
 
   # ---- Week 2: GAO / CRS oversight materials ----
-  # Off-scope shipbuilding queries removed 2026-05-25 per cleanup dialogue —
-  # they were producing noise outside BDAR/BDAT training scope.
   - "GAO Navy live virtual constructive LVC training architecture report"
 
-  # ---- Week 2: Navy ship-repair industrial footprint ----
-  # Note: do NOT name specific commercial contractors in these queries until a
-  # source has surfaced them organically. The earlier contractor-name-targeted
-  # queries here were removed 2026-05-23 because the named contractors had not
-  # appeared in any ingested source and the queries were producing polluted
-  # inbox content.
+  # ---- Week 2: Navy ship-repair industrial footprint (kept for context) ----
   - "Navy Regional Maintenance Center contract public testimony ship repair industrial base"
   - "NAVSEA Industrial Operations Directorate consolidation public yards Navy maintenance"
 
-  # ---- Week 2/3: engagement-surface inventory feeders (§11.1) ----
+  # ---- Week 2/3: engagement-surface inventory feeders ----
   - "NSWC Carderock SBIR STTR topic authorship 2024 2025 battle damage repair survivability"
   - "NAVSEA industry day shipyard depot repair 2025 2026"
   - "Federal Laboratory Consortium FLC NSWC Carderock technology transfer queue"
 
-  # ---- Week 2/3: BDA-platform vendor landscape (§11.3 candidate platforms) ----
-  # Specific commercial simulation-platform vendor queries were removed
-  # 2026-05-23 because those platform names had not appeared in any ingested
-  # source and the queries were producing downstream matches that masqueraded
-  # as organic surfacing. Re-add a platform-specific query only when an
-  # ingested source has named that platform organically.
+  # ---- Week 2/3: BDA-platform vendor landscape ----
   - "Naval Postgraduate School thesis battle damage assessment serious game simulation"
   - "I ITSEC Navy serious game damage control battle damage assessment vendor exhibitors"
   - "Navy SBIR Phase II Phase III battle damage assessment training simulation platform contract"
 
-  # ---- Targeted follow-ups added 2026-05-23 after first-pass triage ----
-  # The first-pass search returned a 9/10 SWARMEX article (now 404) plus several
-  # leads worth chasing more directly. Out-of-scope shipbuilding queries removed
-  # 2026-05-25 per cleanup dialogue.
+  # ---- Targeted follow-ups (2026-05-23) ----
   - "SRF-JRMC commanding officer relieved 2024 2025 ship repair Japan"
 
-  # ---- 2026-05-24 BDAR/BDAT scope-tightening queries — testing §7 legs 1 + 2 ----
-  # Active-procurement signals for BDAR/BDAT training and simulation. Designed
-  # to test whether the Navy is acquiring this capability through contractors
-  # (leg 2 procurement-path reality) and how senior leadership is publicly
-  # signaling the requirement (leg 1 demand gap).
+  # ---- 2026-05-24 BDAR/BDAT broad-scope queries (kept; productive across reframings) ----
   - "active NAVSEA SBIR STTR topic battle damage assessment training simulation 2026 solicitation"
   - "Navy NWDC Naval Warfare Development Command battle damage assessment training curriculum product catalog"
   - "DIU Defense Innovation Unit naval damage control training simulation award portfolio 2025 2026"
   - "ONR Office of Naval Research broad agency announcement damage assessment training simulation BAA"
-  - "Navy SIMA Shore Intermediate Maintenance Activity Norfolk San Diego training advanced manufacturing"
-  - "Regional Maintenance Center RMC advanced manufacturing lab Navy training contract 2026"
 
-  # ---- 2026-05-25 buyer-triad and verified-via-dialogue-target queries ----
-  # The 2026-05-25 right-to-win-reframe dialogue (5 rounds with Gemini Pro)
-  # surfaced specific Navy organizations and programs as plausible inferences
-  # with cited contract evidence: NETC, NAWCTSD, SWSC, NWDC, ATG, NCTE
-  # (HII prime), RRL (NETC's Sailor 2025 pillar), STAVE (NAWCTSD-executed
-  # SWSC system), SMMTT (submarine), NSST (Fitzgerald/McCain analog).
-  # Per the named-contractor discipline at _meta/feedback_named_contractor_discipline.md,
-  # these are NOT yet vault-citable as FACTs — these queries are TESTING the
-  # dialogue's claims against primary Navy sources, not asserting them. If the
-  # entities exist as Gemini described, primary-source results will surface them.
-  # Queries are written to probe the procurement-signal space, with a few
-  # direct-entity queries to test the specific dialogue claims.
+  # ---- 2026-05-26 SCOPE CORRECTION: repair-activity teams ----
+  # Targets the professional team at each Navy repair activity executing
+  # battle damage assessment + repair work. NOT schoolhouse, NOT Sailor pipeline.
+  - "Norfolk Naval Shipyard battle damage repair team training exercise contract"
+  - "Puget Sound Naval Shipyard ship repair team training exercise battle damage"
+  - "Pearl Harbor Naval Shipyard battle damage repair team operational exercise"
+  - "Portsmouth Naval Shipyard battle damage repair team training exercise"
+  - "Regional Maintenance Center battle damage repair team exercise scenario contract"
+  - "SRF-JRMC forward deployed ship repair team battle damage assessment exercise"
+  - "Forward Deployed Ship Repair Team FDSRT training scenario design contractor"
+  - "Navy public shipyard battle damage assessment team operational readiness exercise"
 
-  # Space-probing queries (do not name specific dialogue-surfaced programs):
-  - "Naval Education Training Command surface warfare training curriculum 2025 2026 contractor procurement"
-  - "Naval Air Warfare Center Training Systems Division surface ship training systems contract 2025 2026"
-  - "Surface Warfare Schools Command BDAR battle damage assessment curriculum requirement"
-  - "Naval Warfare Development Center surface fleet tactical doctrine battle damage NTTP TACMEMO"
-  - "Afloat Training Group surface readiness BDAR damage assessment training"
-  - "Navy curriculum development contract surface warfare battle damage assessment 2025 2026"
-  - "Navy fleet synthetic training architecture contract integration HLA DIS standards"
-  - "Navy training simulator BDAR battle damage assessment procurement program of record"
-  - "Navy Combat Information Center crew training BDA contract"
-  - "Navy Ready Relevant Learning Sailor 2025 BDAR damage control curriculum modernization"
+  # ---- 2026-05-26 SCOPE CORRECTION: operational-decision scenarios ----
+  # The six concrete decision moments named in 00_research-file.md §1.
+  - "Navy damaged ship port selection decision support tactical operator routing"
+  - "Navy battle damaged ship emergency foreign port contracting host nation legal framework"
+  - "Navy forward repair team mobilization equipment sourcing logistics damaged ship"
+  - "Navy ship repair triage prioritization combat tempo battle damage sequencing"
+  - "Navy battle damage assessment to repair handoff team coordination"
+  - "Navy ship repair information access degraded communications technical drawings legacy"
 
-  # Direct-entity testing queries (named-but-testing, with the discipline note above applying):
-  - "Navy Continuous Training Environment NCTE Fleet Synthetic Training contract"
-  - "STAVE Surface Training Advanced Virtual Environment NAWCTSD contract"
-  - "Navigation Seamanship Shiphandling Trainer NSST Fitzgerald McCain upgrade contract"
+  # ---- 2026-05-26 SCOPE CORRECTION: exercise injects in named fleet exercises ----
+  # Whether contractors design and inject battle-damage scenarios into named
+  # fleet exercises that already exist as Navy training events.
+  - "Navy COMPTUEX Composite Training Unit Exercise battle damage scenario inject design contractor"
+  - "RIMPAC 2026 Rim of the Pacific exercise battle damage assessment scenario inject vendor"
+  - "Navy Large Scale Exercise LSE 2026 battle damage scenario design inject contractor"
+  - "SWARMEX Ship Wartime Repair Maintenance Exercise scenario design 2025 2026 contractor"
+  - "Navy joint exercise INDOPACOM scenario design contractor battle damage red team"
 
-# SAM.gov queries — Carderock-adjacent SBIR/STTR + Navy ship repair vehicles.
-# Carderock itself rarely buys big; SBIR/STTR topics and NAVSEA depot-repair
-# vehicles are the most useful BD signals.
+  # ---- 2026-05-26 SCOPE CORRECTION: gamified scenario design / staff-cell level ----
+  # Serious-game / table-top / command-post-exercise content for the team
+  # leader and staff cell, not for individual Sailors.
+  - "Navy command post exercise CPX battle damage assessment scenario contractor"
+  - "Navy table top exercise scenario design naval repair team contractor 2025 2026"
+  - "Navy staff cell decision exercise serious game contractor battle damage"
+
+# SAM.gov queries — broadened to capture repair-activity-team scenario design.
 sam_searches:
   - params:
       q: "NSWC Carderock"
@@ -118,14 +107,10 @@ sam_searches:
       q: "ship survivability modeling"
   - params:
       q: "NAVSEA ship depot maintenance"
-      ncode: ["336611", "541330", "541715"]   # ship building & repair / engineering svcs / R&D
+      ncode: ["336611", "541330", "541715"]
   - params:
       q: "live virtual constructive Navy training"
       ncode: ["541330", "541512", "611430"]
-
-  # ---- BDA serious-game / sim platform vehicles (§11.3) ----
-  # General capability queries only; specific-vendor recipient queries
-  # were removed 2026-05-23 for the same reason as the AI queries above.
   - params:
       q: "battle damage assessment training simulation"
       ncode: ["541330", "541512", "611430"]
@@ -135,12 +120,21 @@ sam_searches:
   - params:
       q: "AR VR augmented virtual reality Navy damage control training"
 
-# USAspending.gov — Navy ship-repair obligation history.
-# Recipient-named queries naming specific commercial contractors were removed
-# 2026-05-23 because those contractor names had not surfaced in ingested
-# sources organically. Keyword-only queries are fine — they let the data
-# show whichever recipients show up.
-# Wider start window than default 7-day so the contract base is visible.
+  # 2026-05-26 SCOPE CORRECTION additions:
+  - params:
+      q: "Regional Maintenance Center exercise scenario"
+      ncode: ["541330", "541512", "611430"]
+  - params:
+      q: "Naval Shipyard team training exercise scenario"
+      ncode: ["541330", "541512", "611430"]
+  - params:
+      q: "ship repair team operational exercise design"
+      ncode: ["541330", "541512", "611430"]
+  - params:
+      q: "Navy command post exercise scenario design"
+      ncode: ["541330", "541512", "611430"]
+
+# USAspending.gov queries — keyword-only.
 usa_spending_searches:
   - keywords: ["Carderock"]
     start: "2023-01-01"
@@ -155,6 +149,22 @@ usa_spending_searches:
   - keywords: ["Shore Intermediate Maintenance Activity"]
     start: "2023-01-01"
   - keywords: ["damage control", "simulation"]
+    start: "2023-01-01"
+
+  # 2026-05-26 SCOPE CORRECTION additions:
+  - keywords: ["Pearl Harbor Naval Shipyard", "training"]
+    start: "2023-01-01"
+  - keywords: ["Norfolk Naval Shipyard", "exercise"]
+    start: "2023-01-01"
+  - keywords: ["Puget Sound Naval Shipyard", "training"]
+    start: "2023-01-01"
+  - keywords: ["Portsmouth Naval Shipyard", "training"]
+    start: "2023-01-01"
+  - keywords: ["SRF-JRMC", "exercise"]
+    start: "2023-01-01"
+  - keywords: ["scenario design", "Navy"]
+    start: "2023-01-01"
+  - keywords: ["exercise design", "Navy"]
     start: "2023-01-01"
 
 rss_feeds: []   # Phase 4b — deferred
