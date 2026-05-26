@@ -4,6 +4,49 @@ Every decision: date, decision, by whom, rationale, what changed.
 
 ---
 
+### 2026-05-26 — Capture brief v0.1 and executive brief v0.1 built and Gemini-cleared
+
+**By:** Claude Code (Opus 4.7) building the two artifacts from the sealed §§3-7 prose; Gemini Pro running the brief-assembly integrity check; operator's path-2 autonomous-run directive authorizing the full ship of both deliverables before the operator returns.
+
+**What changed:**
+
+- `04_artifacts/capture-brief-v0.1-draft.docx` — 10-section BD-team capture brief, built from scratch by `_scripts/build_bdr_capture_brief_v01.py` (one-shot from-scratch Python-docx build, no prior v0.1 to surgically edit). Structure: BLUF (3 paragraphs) / Demand Signal (five subsections) / Customer Landscape (two-layer procurement model) / Competitive Landscape (four-layer incumbent map) / Our Fit (three pillars + OCI flag) / Working Hypothesis (one-paragraph plus six falsifying legs) / Recommendation / Risks (procurement-vehicle, incumbent-lockout, HM&E-data-bridge schedule, OCI, verifier/source-corpus pilot findings) / Asks (BD team, operator, vault/tooling) / Source Ledger Reference. Target 10-12 pages.
+
+- `04_artifacts/executive-brief-v0.1-draft.docx` — 1-page distillation per the SOP §5.5 prompt at `_meta/prompts/distillation-capture-to-exec.md`, built by `_scripts/build_bdr_exec_brief_v01.py`. Structure: BLUF (3-5 sentences) / Why It Matters (4 bullets) / Recommendation (3 bullets) / Top Risks (3 bullets) / Asks (3 bullets). Approximately 450 words. Tight margins for single-page rendering.
+
+- One-round Gemini Pro red-team integrity check on both briefs (`_red-teams/2026-05-26-gemini-pro-briefs-v01-red-team.md`). Three checks — BLUF integrity, capture-to-exec compression discipline, and new-framing-risk audit. All three passed. Gemini issued unconditional GO on both artifacts as v0.1 drafts shippable for BD-team review and exec review respectively.
+
+**Why this matters:** the path-2 autonomous run completed end-to-end in approximately four hours of wall-clock time. The total path-2 deliverable set is the sealed §§3-7 prose under the 2026-05-26 corrected scope, the capture brief v0.1, and the executive brief v0.1, plus three Gemini red-team dialogue files documenting the convergence across five rounds (3 on §3, 2 on §§4-7, 1 on the briefs). Compared to the PMTEC big-batch baseline (v0.1 → v0.3.1 across four full-brief revisions over several hours each), the small-ships variant produced a research-file-aligned brief set in a single autonomous run.
+
+**Three small-ships-workflow pilot findings recorded across the full run, pending operator triage:**
+
+1. **FACT-label format divergence (from the §3 ship).** BDR-local convention `**FACT.**` inline-trailing vs. PMTEC and verifier-canonical `**FACT:**` paragraph-leading. §§3-7 converted to canonical format during the small-ships rebuild. §§8-11 of `00_research-file.md` are still in BDR-local format and will need conversion in their own small-ships loops if those sections come up for rebuild. Operator-pending: whether to bulk-convert outside the loops or per-section in the loops.
+
+2. **Cross-AI temporal-mismatch (from the §3 ship).** Gemini's training-data state pre-2026 caused a false NO-GO on the Caudle-as-CNO claim in §3 Round 1 — the primary source PDF in `01_sources/` titles the document "STATEMENT OF ADMIRAL DARYL L. CAUDLE CHIEF OF NAVAL OPERATIONS" but Gemini's pre-2026 training data has Caudle at U.S. Fleet Forces Command and the CNO as Franchetti. Operator-pending: whether to save the lesson as a vault-wide memory note (`feedback_cross_ai_temporal_mismatch.md` proposed). Suggested rule: when cross-AI red-team challenges a name / title / role / state-of-world claim, verify against vault primary source before accepting as a finding.
+
+3. **Verifier truncation against large source files (from the §§4-7 ship).** `verify_facts.py` reads each source file as a single Claude API call and truncates large files when the API context limit is exceeded. The comptroller-book source at 3822 lines triggered this — the JExD / MAGTF / scenario-generation quotes Claude cited (and which appear verbatim in the source per direct grep) are at lines 3406-3639, outside the verifier's effective context window for a single-file read. Produces false-negative DOES_NOT_SUPPORT verdicts on FACTs whose underlying quotes are real but late in the file. Operator-pending: whether to fix the verifier (chunked-context evaluation, page-range support, or per-source-section verification), accept the limitation and rely on operator-side grep verification for large sources, or both.
+
+**Total path-2 timing (2026-05-26 autonomous run, single session):**
+
+- §3 single-section ship: ~90 minutes wall-clock, 3 Gemini rounds, GO.
+- §§4-7 multi-section ship: ~120 minutes wall-clock, 2 Gemini rounds + 1 micro-fix, SEAL.
+- Brief assembly + integrity check: ~30 minutes wall-clock, 1 Gemini round, GO on both artifacts.
+- Total from §3 ship-start to both briefs shippable: approximately 4 hours.
+
+**Cross-references:**
+- `04_artifacts/capture-brief-v0.1-draft.docx` — capture brief
+- `04_artifacts/executive-brief-v0.1-draft.docx` — executive brief
+- `_red-teams/2026-05-26-gemini-pro-section-3-red-team-dialogue.md` — §3 ship dialogue
+- `_red-teams/2026-05-26-gemini-pro-sections-4-to-7-red-team-dialogue.md` — §§4-7 multi-section ship dialogue
+- `_red-teams/2026-05-26-gemini-pro-briefs-v01-red-team.md` — brief integrity check
+- `_scripts/build_bdr_capture_brief_v01.py` — capture brief build script
+- `_scripts/build_bdr_exec_brief_v01.py` — exec brief build script
+- Sealed prose in `00_research-file.md` §§1, 3, 4, 5, 6, 7
+
+**Next on the operator's return:** BD-team gate review of the capture brief; operator review of the executive brief; triage of the three small-ships-workflow pilot findings; decision on whether to run the next find_sources pass against fleet-command-exercise-planning queries to close the §4.3 / research-file §5.3 incumbent-identification research gap.
+
+---
+
 ### 2026-05-26 — §§4-7 sealed as multi-section ship (second ship of the small-ships-workflow pilot)
 
 **By:** Claude Code (Opus 4.7) drafting §§4-7 under the 2026-05-26 corrected scope; Gemini Pro running cross-AI red-team across two consolidated dialogue rounds; operator's path-2 green-light authorizing the small-ships-workflow rebuild of §§3-7 plus brief assembly before the operator returns.
