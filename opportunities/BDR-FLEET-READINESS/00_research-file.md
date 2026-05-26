@@ -788,56 +788,94 @@ Three feasibility models, in increasing order of realism and difficulty:
 
 The instrumented test-bed at NSWC Carderock or a partner site is the highest fidelity that is realistic to achieve at unclassified level.
 
-### 11.3 BDAT training pipeline — gamified simulation first, then real-world exercises
+### 11.3 BDAT and BDAR training pipeline — five-level analog-first progression under the corrected scope
 
-> **LVC scope note added 2026-05-25.** Where this section refers to "live, virtual, constructive" or to simulation platforms, the Navy-customer interpretation is specifically Navy Continuous Training Environment (NCTE)-compliant Fleet Synthetic Training using HLA / DIS federation standards — not generic commercial AR/VR or stand-alone gaming engines. Per the 2026-05-25 corpus-cleanup dialogue with Gemini Pro, a BDAT simulation product that does not federate into the existing Navy synthetic training architecture is unlikely to be procured as "Navy LVC" even if it is technically live/virtual/constructive in the generic sense. The next find_sources pass is testing whether NCTE-compliance is a hard requirement or a strong preference, and where the BDAT training-system program-of-record sits if one exists. See `_red-teams/2026-05-25-gemini-pro-corpus-cleanup-dialogue.md` and decision log entry 2026-05-25.
+This section was rewritten on 2026-05-26 to replace the prior two-phase model. The corrected-scope product is not a single 1-hour gamified session by itself. It is a five-level progression that builds wardroom and staff-cell decision-making skills over time. The progression starts analog and small. It builds toward software-driven scenarios injected into live fleet exercises. The reason it starts analog is straightforward. Analog has lower technical risk. Analog iterates faster on content. Analog proves the concept with the customer before CACI commits to the game-engine investment. The AI scenario engine pays for itself starting at Level 4 when the customer commits to scale. Before that, analog beats software.
 
-This section covers training for the people who **assess** damage, which is a different skill from doing the actual repair work covered in the previous section.
+The audience for the progression is the wardroom and staff cell at a Navy repair activity. That means the commanding officer, executive officer, department heads, training officer, and visiting fleet liaisons at a public naval shipyard, a Regional Maintenance Center, or the forward-deployed Ship Repair Facility Japan. It does not mean individual Sailors learning damage-control hand skills. The 2026-05-26 scope correction is binding.
 
-When a ship gets hit, a damage-assessment team has to look at what just happened and answer four questions fast: how bad is the damage, can the ship still fight, what needs fixing first, and where should the repair team start. The repair team can only act on what the assessment team tells them, which is why we treat this as a separate, earlier training pipeline rather than rolling it into the repair training in section 11.2. Same overall mission, different audience, different cadence of practice, and different fidelity ramp.
+The progression covers both sides of the work. The assessment team learns what to look for and how to classify damage. The repair team learns how to translate the assessment into a triage plan, mobilize forward, contract local, and execute under combat tempo. The two sides have separate audiences but the same scenario base. Each level can run for either audience independently or for both audiences in a coordinated session.
 
-The proposed pipeline has two phases, in this order:
+#### 11.3.1 Level 1 — flash drills
 
-**Phase 1 — high-frequency gamified practice between live exercises.** The point of this phase is volume. Damage-assessment skill decays without practice, and live exercises happen rarely. A gamified simulation layer — running on software platforms, on instrumented training rigs, or both — gives assessment teams enough repetitions to stay sharp.
+Five to fifteen minutes. One decision per drill. Printed scenario card or single tabletop sheet. The wardroom picks an answer and defends it in 60 seconds.
 
-Candidate software platforms are open research — specific commercial military training platforms, simulation engines, and serious-game toolchains should be named only as ingested sources surface them or as the operator scopes a vendor inquiry. The 2026-05-21 and 2026-05-23 source-finder passes did not surface a clear set of platform options; this is an open research thread that requires either targeted operator-initiated outreach (industry days at I/ITSEC, DoD SBIR Phase II award catalogs, NWDC product listings) or further source ingestion. Categories of platforms worth investigating once sources surface them: commercial military training simulation engines, federated-simulation toolchains (DIS / HLA protocol families), digital-twin / scenario-engine pipelines, and tabletop digital-wargame engines used as gamification-mechanic references.
+Example. A destroyer takes shock damage 800 miles from three friendly ports. Each port has different repair capability, different security posture, and different host-nation contracting friction. Here are the five variables. Pick the port. Defend the choice.
 
-Candidate hardware-in-the-loop or instrumented simulation paths:
+The goal is pattern recognition. The wardroom builds an instinct for which variables actually matter and which are noise. The cost per drill is near zero. The Navy customer can run 20 drills in a month at no marginal cost beyond a moderator. This is the cheapest level to procure and the easiest entry point to sell to a first customer.
 
-- Carderock's existing structural shock-and-vibration rigs, repurposed in a controlled training mode rather than R&D mode.
-- Augmented-reality or virtual-reality headset stacks that overlay damage on a digital twin of a known ship class.
-- Tabletop instrumented training boards — physical mock-ups with embedded sensors that generate live-feed damage signatures the trainee has to classify.
+#### 11.3.2 Level 2 — linked-decision sequences
 
-Gamification mechanics that are pedagogical rather than cosmetic:
+Thirty to forty-five minutes. Three to five decisions in a row. Each decision changes the next one.
 
-- Scenario branching keyed to the trainee's first-call damage classification, so a wrong call triggers cascading downstream consequences in later repetitions and the trainee experiences the cost of getting the assessment wrong.
-- Scoring and after-action replay compared to the ground-truth damage state.
-- Leaderboards across ships, squadrons, or training cohorts to drive practice volume.
-- Replay archives that feed back into doctrine-update loops at NWDC and surface-force training authorities.
+Example. Port chosen in decision one. Now stage the forward repair team. Now hire local welders under the Acquisition and Cross-Servicing Agreement. Now handle host-nation customs paperwork for the replacement valves. Each decision narrows the options for the next.
 
-Audience scoping — three different cohorts at three different intensities:
+The goal is awareness that early decisions box you in later. This is the cognitive skill the corrected-scope product is trying to build. The wardroom learns that the port-selection call has downstream consequences for the contracting environment, the legal environment, and the security environment. A short-sighted port choice in decision one creates an unsolvable problem in decision four.
 
-- **Ship-level damage-control teams.** Highest volume of practice, shortest individual scenarios.
-- **Fleet-level damage-assessment cells** sitting at numbered-fleet staffs. Longer scenarios with more emphasis on triaging the mission impact, not just the physical damage.
-- **Joint damage-assessment staff at Combatant Command level.** Cross-domain scenarios — kinetic damage on a ship combined with simultaneous cyber, electronic-warfare, and space-disrupted-communications problems. This is the multidomain framing that links back to the scope statement in section 1.
+Delivery is still analog. A moderator runs the session with printed scenario inserts and a simple decision-tracking sheet. Software helps but is not required.
 
-**Phase 2 — real-world exercises that the simulation layer cannot replace.** Once teams are practicing reliably in simulation, the pipeline graduates them into real exercises where the cost-per-repetition is much higher but the fidelity is also much higher.
+#### 11.3.3 Level 3 — full one-hour gamified wardroom session
 
-Three modalities:
+This is the sub-product the brief has been calling the differentiated wedge. Full scenario. Multi-disciplinary audience. Turn-based gamification. Still analog or analog-plus-software-aid.
 
-- **Embedded damage-assessment injects in existing fleet exercises** — COMPTUEX, RIMPAC, Large-Scale Exercise, and smaller events like ANTX (Advanced Naval Technology Exercise) and Trident Warrior. The approach is to add a small assessment-cell module that runs in parallel with the parent exercise rather than replacing existing scenarios, because nobody wants to redesign COMPTUEX around a new training module.
-- **Carderock-instrumented controlled events.** These are the bridge between pure simulation and full live exercise: ground-truth damage state is known because Carderock controls the rig, but the participating team experiences it as real.
-- **Joint red-team / blue-team evolutions.** A red team generates realistic damage signatures from a known threat library; the assessment cohort classifies them in operationally-realistic time pressure. Useful at multidomain level because the threat library can include non-kinetic effects.
+The scenario covers all six operational-decision moments from §1 in one integrated session. Port selection, forward team mobilization, foreign-port emergency contracting, BDAR triage under combat tempo, BDAT-to-BDAR handoff, and information-resource access in degraded comms. The wardroom plays the scenario as a team with a moderator running the clock and injecting events.
 
-**Why simulation goes first and live exercises second.** This is the proposed order for two reasons. First, skill retention is driven by repetition, and only the simulation layer can supply repetitions at a usable cadence — a single live exercise can be a year apart. Second, each live exercise costs orders of magnitude more than a simulation repetition, so live time should be reserved for scenarios that the simulation cannot replicate. There is also a classification angle that mirrors the same step-up logic as the repair-side training in section 11.2: simulation content can be designed unclassified or at controlled-unclassified-information level, and live exercises can step up to classified ground-truth only when the participant cohort is cleared and the venue is approved.
+The goal is to integrate decisions across all six moments under time pressure. The 60-minute time box matches the realistic decision window in an actual damage event. The wardroom finishes the session having played through a complete decision sequence in real time.
 
-**The differentiator hook to watch.** If ARKA's electro-optical, infrared, and hyperspectral sensor signature libraries can be released for training use, they could feed the simulation engine with realistic threat-effect signatures that the incumbent training competitors — SAIC, Leidos, HII Mission Technologies — cannot easily source. This is a hypothesis to test against ARKA's intellectual-property and release-authority constraints, not a finding. It is the most likely way the engagement strategy in this section turns into a real differentiator at the recommendation stage.
+This level is where the procurement vehicle question gets pointed. A 1-hour session inside a fleet exercise event runs against a different vehicle than a multi-day exercise contract. The recommendation in §7 targets PACFLT or FLTFORCOM N7/N4 as the contracting authority for this level.
 
-**Three ways this whole subsection could be wrong.** Cross-listed with the open questions in section 2:
+#### 11.3.4 Level 4 — multi-session campaign exercise
 
-- A Department of Defense-funded damage-assessment serious-game already exists at sufficient maturity that this pipeline would be a me-too entry. The places to look are SBIR Phase II and Phase III award databases, the NWDC product catalog, and Naval Postgraduate School and Naval War College thesis libraries.
-- Damage-assessment training is already deeply embedded in COMPTUEX, RIMPAC, and LSE at a depth that leaves no gap for a new pipeline.
-- The simulation layer cannot achieve operationally-meaningful realism at unclassified level — which is the same classification-gradient problem that threatens leg 3 of the hypothesis in section 7, applied specifically to simulation content.
+Two to four hours of total play, broken into multiple sessions over a deployment cycle. Decisions from session one carry into session two. The campaign simulates a six-month deployment with multiple damage events.
+
+This is where the AI scenario engine starts to pay for itself. Each participating wardroom needs a different variant because their decision history is different. The Joint Exercise Design workforce and AI scenario generation funding in the FY27 comptroller justification book funds exactly this kind of capability for joint exercises. The Navy fleet-command equivalent is what the next find_sources pass is trying to find.
+
+The goal at this level is consequence reasoning and leadership continuity. The wardroom builds memory of how its own prior choices shaped its current situation. This is the cognitive skill that traditional one-off exercises cannot build because they reset between events.
+
+#### 11.3.5 Level 5 — live exercise injection
+
+Scenarios injected into actual fleet exercises. COMPTUEX. RIMPAC. Large-Scale Exercise. SWARMEX. Software-driven so the scenario reacts to live exercise events in real time.
+
+This is the endgame product. The customer is the fleet-command training authority that owns the parent exercise. The Navy professional society community sees the value at this level because the scenario content shows up in after-action reports and lessons-learned documents.
+
+Level 5 is the natural follow-on once Levels 1 through 4 have established CACI as a known scenario-content provider. It is also the highest-margin level because the scenario IP, the software engine, and the customer relationship all carry forward from earlier levels.
+
+#### 11.3.6 Analog-first scaling — when software pays for itself
+
+The five-level progression is designed to start analog and graduate to software at the point where the customer commits to scale. The decision points are:
+
+- Levels 1 and 2 should never be software-first. The customer learning curve is in the scenario content, not the delivery technology.
+- Level 3 can be analog or hybrid. The choice depends on how many simultaneous sessions the customer wants to run. One wardroom at a time, analog wins. Five wardrooms at a time, hybrid starts to make sense.
+- Level 4 needs software. Variant generation across multiple participating wardrooms is the breakpoint. The AI scenario generation funding line in the FY27 comptroller book is the procurement signal for this level at the Joint Staff side.
+- Level 5 needs software. The live exercise event runs on Navy synthetic training architecture and the scenario content has to federate into it. This is where the LVC scope note from the 2026-05-25 corpus cleanup applies — Navy Continuous Training Environment compatibility is the customer requirement at this level, not generic commercial gaming tech.
+
+The capture strategy follows the same shape. Start with a small Level-1 or Level-2 pilot at one Navy customer site. Prove the analog version works. Iterate on scenario content with the customer in the room. Use the analog success to justify the Level-3 contract. Use the Level-3 reference to justify the Level-4 software investment. Use the Level-4 capability to compete for the Level-5 fleet-exercise injection follow-on.
+
+This is what the brief means by "subcontractor first, prime contingent on a new vehicle or pilot maturation." The pilot path runs through Levels 1 through 3 at analog and small scale. The prime path runs through Levels 4 and 5 at software and fleet-exercise scale.
+
+#### 11.3.7 Why the Navy will likely have to be sold this, not just pitched it
+
+A practical note on the recommendation. The sources prove the Navy has a problem with wartime repair readiness. The sources prove the rest of the Defense Department buys exercise design and scenario content from contractors at multi-hundred-million-dollar scale. The sources do not yet prove a Navy fleet-command procurement vehicle exists today for the specific corrected-scope sub-product. The next find_sources pass is trying to find one.
+
+The honest read is that this is a hypothesis. The Navy probably does need this. The Defense Department definitely buys this kind of work from contractors. So the Navy should buy this kind of work too. But "should" is not "is procuring." There is a salesmanship step between the hypothesis and the procurement.
+
+That step is real BD work, not desk research. CACI executives have to pitch the concept to PACFLT N7, FLTFORCOM N7, INDOPACOM J7, or SRF-JRMC leadership directly. They have to show the value of the analog Level 1 and Level 2 starting point. They have to make the case for why this fits inside the fleet-exercise rhythm rather than competing with it. The relationship-development work in §11.1 has to set up those meetings. The OCI analysis in §6.4 has to be closed before the meetings happen. The capture brief itself is one of the artifacts the BD team brings to those meetings.
+
+This is a capture strategy that requires CACI to lead the customer, not wait for the customer to lead CACI. That is operator-owned to execute. The research file documents the hypothesis, the candidate customer set, and the recommended progression. The execution is on the BD team and CACI executive leadership.
+
+#### 11.3.8 Material from the prior two-phase framing — preserved for lineage
+
+This subsection holds the prior framing of §11.3 that was written under the 2026-05-21 scope-expansion-#2 scaffolding and updated through the 2026-05-25 corpus cleanup. The prior framing had a two-phase model: Phase 1 high-frequency gamified practice between live exercises; Phase 2 real-world exercises that the simulation layer cannot replace. The phase content is preserved in git history. Specific elements that carry forward into the new five-level model:
+
+- The Phase-1 candidate gamification mechanics (scenario branching, scoring with after-action replay, leaderboards across cohorts, replay archives feeding NWDC doctrine-update loops) map directly into Level 4 of the new model where the AI scenario engine pays for itself.
+- The Phase-2 modalities (embedded damage-assessment injects in fleet exercises, Carderock-instrumented controlled events, joint red-team / blue-team evolutions) map directly into Level 5 of the new model.
+- The audience scoping (ship-level damage-control teams, fleet-level damage-assessment cells, joint Combatant Command staff) maps into the wardroom and staff-cell audience set the corrected-scope product addresses, with the deck-plate damage-control tier explicitly excluded per the 2026-05-26 scope correction.
+- The ARKA differentiator hook from the prior framing is now decomposed in §6.3 into threat-side realism (ARKA) and repair-side realism (HM&E bridge needed separately).
+- The three "ways this whole subsection could be wrong" map onto §7 falsifying legs 1, 2, and 6 under the corrected scope.
+
+The full prior text is in git history and in `_red-teams/2026-05-25-gemini-pro-corpus-cleanup-dialogue.md`. The new five-level model in §11.3.1 through §11.3.7 is the load-bearing version for the recommendation and the briefs.
+
+<!-- ship: 2026-05-26 claude-opus-4-7 — five-level progression added per operator's 2026-05-26 brainstorm. Replaces the prior two-phase framing as load-bearing content; prior framing preserved at §11.3.8 for lineage. -->
 
 ### 11.4 Engagement timeline assumption
 
