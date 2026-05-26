@@ -136,18 +136,29 @@ def _process_opportunity(
         print(f"  No AI keys available — skipping AI search.")
 
     # ── SAM.gov search ─────────────────────────────────────────────────
+    # Wrapped in try/except 2026-05-26 after the SAM description-fetch stage
+    # silently killed a production pass before USAspending could run. If SAM
+    # fails for any reason (429 cascade, ranker exception, hang) we print a
+    # traceback and continue to USAspending rather than aborting the pass.
     sam_count = 0
     if sam_searches:
         if not sam_key:
             print(f"  SAM.gov skipped (no key).")
         else:
             sam_min_score = int(cfg.get("sam_min_score", 5))
-            sam_count, sam_deduped, sam_errors = _run_sam_search(
-                opp_dir, opp_id, sam_searches, date_window, max_candidates,
-                sam_key, openai_key, sam_min_score, dry_run,
-            )
-            deduped_count += sam_deduped
-            errors += sam_errors
+            try:
+                sam_count, sam_deduped, sam_errors = _run_sam_search(
+                    opp_dir, opp_id, sam_searches, date_window, max_candidates,
+                    sam_key, openai_key, sam_min_score, dry_run,
+                )
+                deduped_count += sam_deduped
+                errors += sam_errors
+            except Exception as e:
+                import traceback
+                print(f"  [SAM] FATAL: {type(e).__name__}: {e}")
+                print(f"  [SAM] Traceback (continuing to USAspending):")
+                traceback.print_exc()
+                errors += 1
 
     # ── USAspending.gov search ─────────────────────────────────────────
     usa_count = 0

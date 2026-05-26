@@ -1,0 +1,43 @@
+# BDR-FLEET-READINESS — USA-only retry config for 2026-05-26.
+#
+# Used when the SAM description-fetch stage silently exits the script before
+# USAspending gets to run, as happened in the 08:14 production pass. AI and
+# SAM blocks are intentionally empty so the run is bounded to USA only.
+
+ai_searches: []
+sam_searches: []
+
+usa_spending_searches:
+  - keywords: ["Carderock"]
+    start: "2023-01-01"
+  - keywords: ["battle damage repair"]
+    start: "2023-01-01"
+  - keywords: ["Navy Regional Maintenance Center"]
+    start: "2023-01-01"
+  - keywords: ["battle damage assessment", "training"]
+    start: "2023-01-01"
+  - keywords: ["serious game", "Navy"]
+    start: "2023-01-01"
+  - keywords: ["Shore Intermediate Maintenance Activity"]
+    start: "2023-01-01"
+  - keywords: ["damage control", "simulation"]
+    start: "2023-01-01"
+  - keywords: ["Pearl Harbor Naval Shipyard", "training"]
+    start: "2023-01-01"
+  - keywords: ["Norfolk Naval Shipyard", "exercise"]
+    start: "2023-01-01"
+  - keywords: ["Puget Sound Naval Shipyard", "training"]
+    start: "2023-01-01"
+  - keywords: ["Portsmouth Naval Shipyard", "training"]
+    start: "2023-01-01"
+  - keywords: ["SRF-JRMC", "exercise"]
+    start: "2023-01-01"
+  - keywords: ["scenario design", "Navy"]
+    start: "2023-01-01"
+  - keywords: ["exercise design", "Navy"]
+    start: "2023-01-01"
+
+rss_feeds: []
+
+date_window_days: 30
+max_candidates_per_run: 25

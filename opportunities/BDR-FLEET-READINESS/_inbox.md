@@ -1,7 +1,7 @@
 ---
 type: inbox
 opportunity: BDR-FLEET-READINESS
-last_updated: 2026-05-26T08:49:43
+last_updated: 2026-05-26T09:51:44
 ---
 
 # Inbox — pending review
@@ -890,4 +890,1882 @@ and interactively review the rest.
   - Note: The article is off-topic as it focuses on a 3-D archery event and does not provide relevant information about battle damage repair training exercises.
   - Reason: This article details a port damage repair training exercise at Naval Station Norfolk, mentioning the need for contracting heavy equipment support for future exercises, directly relating to battle damage repair training and potential contracts.
   - Added: 2026-05-26T08:49:43
+
+
+## USAspending candidates added 2026-05-26 09:51
+
+- [ ] **[200606!SS2183!1700!N00167!NAVAL SURFACE WARFARE CENTER    !N0017804D4119  !A!N! !Y!FD01         !      !20060310!2009030](https://www.usaspending.gov/award/CONT_AWD_FD01_9700_N0017804D4119_9700/)** `$50,933,850` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FD01_9700_N0017804D4119_9700/
+  - Award ID: FD01
+  - Generated ID: CONT_AWD_FD01_9700_N0017804D4119_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: SCIENCE APPLICATIONS INTERNATIONAL CORPORATION
+  - Amount obligated: $50,933,850
+  - Period: 2006-03-10 → 2009-03-01
+  - Place: MD
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ENGINEERING AND TECHNICAL SUPPORT SERVICES FOR SUBMARINE AND SURFACE SHIP ACOUSTIC SIGNATURE TRIALS FOR NAVAL SURFACE WA](https://www.usaspending.gov/award/CONT_AWD_N0016721F3010_9700_N0017819D8070_9700/)** `$45,567,177` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016721F3010_9700_N0017819D8070_9700/
+  - Award ID: N0016721F3010
+  - Generated ID: CONT_AWD_N0016721F3010_9700_N0017819D8070_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: MANTECH ADVANCED SYSTEMS INTERNATIONAL, INC.
+  - Amount obligated: $45,567,177
+  - Period: 2021-08-27 → 2026-08-26
+  - Place: WA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SIGNATURE TRAINING SYSTEMS DEVELOPMENT, SECURITY, AND OPERATIONS FOR SIGNATURE MEASUREMENT TECHNOLOGIES AND SYSTEMS DIVI](https://www.usaspending.gov/award/CONT_AWD_FA807525F0032_9700_FA807518D0009_9700/)** `$41,424,035` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA807525F0032_9700_FA807518D0009_9700/
+  - Award ID: FA807525F0032
+  - Generated ID: CONT_AWD_FA807525F0032_9700_FA807518D0009_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: LEIDOS, INC.
+  - Amount obligated: $41,424,035
+  - Period: 2025-03-14 → 2030-03-13
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::CT::IGF PROVIDE ENGINEERING, LOGISTICS, AND PROGRAM SUPPORT SERVICES TO THE NAVAL SURFACE WARFARE CENTER, CARDEROCK](https://www.usaspending.gov/award/CONT_AWD_EHQ5_9700_N0017804D4078_9700/)** `$38,992,811` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_EHQ5_9700_N0017804D4078_9700/
+  - Award ID: EHQ5
+  - Generated ID: CONT_AWD_EHQ5_9700_N0017804D4078_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: NOBLIS MSD LLC
+  - Amount obligated: $38,992,811
+  - Period: 2015-04-08 → 2021-07-07
+  - Place: PA
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[NAVAL SURFACE WARFARE CENTER CARDEROCK DIVISION (NSWCCD) CODE 70 REQUIRES SUPPORT SERVICES FOR SCIENTIFIC, ENGINEERING, ](https://www.usaspending.gov/award/CONT_AWD_N0016721F3008_9700_N0017819D7111_9700/)** `$32,980,184` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016721F3008_9700_N0017819D7111_9700/
+  - Award ID: N0016721F3008
+  - Generated ID: CONT_AWD_N0016721F3008_9700_N0017819D7111_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: AMERICAN SYSTEMS CORPORATION
+  - Amount obligated: $32,980,184
+  - Period: 2021-03-25 → 2025-12-17
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ENGINEERING SERVICES FOR SYSTEM MEASUREMENT SYSTEMS AND ADVANCED SIGNAL PROCESSING IN SUPPORT OF THE NAVAL SURFACE WARFA](https://www.usaspending.gov/award/CONT_AWD_N0025318F3003_9700_N0017804D4096_9700/)** `$32,868,647` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0025318F3003_9700_N0017804D4096_9700/
+  - Award ID: N0025318F3003
+  - Generated ID: CONT_AWD_N0025318F3003_9700_N0017804D4096_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: PERATON SERVICES & SOLUTIONS INC.
+  - Amount obligated: $32,868,647
+  - Period: 2018-07-06 → 2024-07-05
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF IT SUPPORT SERVICES (ITSS) NSWC - CARDEROCK DIVISION](https://www.usaspending.gov/award/CONT_AWD_N0016717F3006_9700_N0017814D7939_9700/)** `$30,634,084` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016717F3006_9700_N0017814D7939_9700/
+  - Award ID: N0016717F3006
+  - Generated ID: CONT_AWD_N0016717F3006_9700_N0017814D7939_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: STRATEGIC DATA SYSTEMS, INC.
+  - Amount obligated: $30,634,084
+  - Period: 2017-07-03 → 2023-07-02
+  - Place: CA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[FOR SCIENTIFIC, ENGINEERING, TECHNICAL AND PROGRAMMATIC SUPPORT FOR STEALTH TECHNOLOGY DEVELOPMENT, SHIP DESIGN APPLICAT](https://www.usaspending.gov/award/CONT_AWD_N0016718F3000_9700_N0017804D4093_9700/)** `$29,109,464` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016718F3000_9700_N0017804D4093_9700/
+  - Award ID: N0016718F3000
+  - Generated ID: CONT_AWD_N0016718F3000_9700_N0017804D4093_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: NTI CORPORATION
+  - Amount obligated: $29,109,464
+  - Period: 2017-12-08 → 2024-04-07
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE CONTRACTOR SHALL PROVIDE TECHNICAL SUPPORT SERVICES FOR THE DESIGN, DEVELOPMENT, MANUFACTURE, INSTALLATION, INSPECTI](https://www.usaspending.gov/award/CONT_AWD_N0016718F3002_9700_N0017812D7017_9700/)** `$16,179,663` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016718F3002_9700_N0017812D7017_9700/
+  - Award ID: N0016718F3002
+  - Generated ID: CONT_AWD_N0016718F3002_9700_N0017812D7017_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: PROPULSOR TECHNOLOGY INC
+  - Amount obligated: $16,179,663
+  - Period: 2018-01-12 → 2023-03-31
+  - Place: PA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[CERTIFICATION AND ACCREDITATION (C&A)/ASSESSMENT AND AUTHORIZATION (A&A) SUPPORT SERVICES. THE CONTRACTOR SHALL CREATE R](https://www.usaspending.gov/award/CONT_AWD_N0016718F3004_9700_N0017810D6082_9700/)** `$11,205,000` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016718F3004_9700_N0017810D6082_9700/
+  - Award ID: N0016718F3004
+  - Generated ID: CONT_AWD_N0016718F3004_9700_N0017810D6082_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: I - ASSURE, L.L.C
+  - Amount obligated: $11,205,000
+  - Period: 2018-08-06 → 2023-08-05
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PWD WASHINGTON (WNY, CARDEROCK, USNO, VPR, NMIC, HQMC, BUMED, MBW](https://www.usaspending.gov/award/CONT_AWD_N4008021F4213_9700_N6247019D2013_9700/)** `$11,034,362` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N4008021F4213_9700_N6247019D2013_9700/
+  - Award ID: N4008021F4213
+  - Generated ID: CONT_AWD_N4008021F4213_9700_N6247019D2013_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: AMENTUM SERVICES, INC.
+  - Amount obligated: $11,034,362
+  - Period: 2021-04-01 → 2022-03-31
+  - Place: DC
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ENGINEERING, TECHNICAL, PROGRAM MANAGEMENT, MAINTENANCE, AND LOGISTICAL SERVICES IN SUPPORT OF RESEARCH, DEVELOPMENT, TE](https://www.usaspending.gov/award/CONT_AWD_N0016722F3001_9700_N0017819D7979_9700/)** `$10,789,520` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016722F3001_9700_N0017819D7979_9700/
+  - Award ID: N0016722F3001
+  - Generated ID: CONT_AWD_N0016722F3001_9700_N0017819D7979_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: KMS SOLUTIONS, LLC
+  - Amount obligated: $10,789,520
+  - Period: 2022-02-24 → 2026-03-14
+  - Place: WA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE NAVAL SURFACE WARFARE CENTER CARDEROCK DIVISION NSWCCD DETACHMENT DANIA FL SOUTH FLORIDA OCEAN MEASUREMENT FACILITY ](https://www.usaspending.gov/award/CONT_AWD_N0016719F3002_9700_N0017814D7828_9700/)** `$7,746,575` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016719F3002_9700_N0017814D7828_9700/
+  - Award ID: N0016719F3002
+  - Generated ID: CONT_AWD_N0016719F3002_9700_N0017814D7828_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: THE METAMORPHOSIS GROUP, INC.
+  - Amount obligated: $7,746,575
+  - Period: 2019-02-05 → 2025-01-12
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[OPERATIONS AND MAINTENANCE (O&M) SUPPORT FOR THE NAVAL SURFACE WARFARE CENTER, CARDEROCK DIVISION (NSWCCD) SOUTHEAST ALA](https://www.usaspending.gov/award/CONT_AWD_N0016719F0141_9700_N0016718D0001_9700/)** `$5,723,487` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016719F0141_9700_N0016718D0001_9700/
+  - Award ID: N0016719F0141
+  - Generated ID: CONT_AWD_N0016719F0141_9700_N0016718D0001_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: LEIDOS, INC.
+  - Amount obligated: $5,723,487
+  - Period: 2019-08-23 → 2020-08-22
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS TASK ORDER IS TO PROVIDE SUPPORT FOR CYBERSECURITY/INFORMATION ASSURANCE ACTIVITIES AND SYSTEMS AT T](https://www.usaspending.gov/award/CONT_AWD_EHP2_9700_N0017804D4019_9700/)** `$5,537,284` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_EHP2_9700_N0017804D4019_9700/
+  - Award ID: EHP2
+  - Generated ID: CONT_AWD_EHP2_9700_N0017804D4019_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: BASIC COMMERCE & INDUSTRIES INC
+  - Amount obligated: $5,537,284
+  - Period: 2012-07-30 → 2016-03-31
+  - Place: NJ
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF NSWC CARDEROCK ADVANCED SIGNATURES TECHNOLOGIES SUPPORT SERVICES](https://www.usaspending.gov/award/CONT_AWD_N6426718F3000_9700_N0017814D7860_9700/)** `$4,622,588` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6426718F3000_9700_N0017814D7860_9700/
+  - Award ID: N6426718F3000
+  - Generated ID: CONT_AWD_N6426718F3000_9700_N0017814D7860_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: OPAL SOFT, INC.
+  - Amount obligated: $4,622,588
+  - Period: 2017-11-03 → 2021-05-28
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SERVICENOW  LICENSES FOR NAVAL SURFACE WARFARE CENTERS CARDEROCK, NEWPORT, PANAMA CITY, AND HEADQUARTERS.](https://www.usaspending.gov/award/CONT_AWD_N0016725F1024_9700_N6600119A0120_9700/)** `$2,887,774` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016725F1024_9700_N6600119A0120_9700/
+  - Award ID: N0016725F1024
+  - Generated ID: CONT_AWD_N0016725F1024_9700_N6600119A0120_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: CARAHSOFT TECHNOLOGY CORP
+  - Amount obligated: $2,887,774
+  - Period: 2025-04-15 → 2025-05-07
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PROJECT MD NP CHOH 235(2), 242(1), ETC.:  THE PROJECT CONSISTS OF THE REPAIR OF CARDEROCK, FOUR LOCKS, AND MCCOYS FERRY ](https://www.usaspending.gov/award/CONT_AWD_693C7326F00011N_6925_693C7326D000002_6925/)** `$2,776,552` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_693C7326F00011N_6925_693C7326D000002_6925/
+  - Award ID: 693C7326F00011N
+  - Generated ID: CONT_AWD_693C7326F00011N_6925_693C7326D000002_6925
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: BLUEGRASS CONTRACTING CORP
+  - Amount obligated: $2,776,552
+  - Period: 2025-12-18 → 2027-01-11
+  - Place: MD
+  - Awarder: Department of Transportation / Federal Highway Administration
+  - Funder: Department of Transportation / Federal Highway Administration
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PROVIDE ALL QUALIFIED PERSONNEL, EQUIPMENT, SUPPLIES, TRANSPORTATION, MATERIALS, AND SUPERVISION NECESSARY TO PERFORM IN](https://www.usaspending.gov/award/CONT_AWD_W912BU21C0016_9700_-NONE-_-NONE-/)** `$1,743,932` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W912BU21C0016_9700_-NONE-_-NONE-/
+  - Award ID: W912BU21C0016
+  - Generated ID: CONT_AWD_W912BU21C0016_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: CONQUEST SOLUTIONS L.L.C
+  - Amount obligated: $1,743,932
+  - Period: 2021-01-22 → 2026-07-21
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[WIRELESS SERVICES FOR NAVAL SURFACE WARFARE CENTER CARDEROCK DIVISION](https://www.usaspending.gov/award/CONT_AWD_N0016719F0019_9700_N0024418D0001_9700/)** `$1,723,568` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016719F0019_9700_N0024418D0001_9700/
+  - Award ID: N0016719F0019
+  - Generated ID: CONT_AWD_N0016719F0019_9700_N0024418D0001_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: AT&T MOBILITY NATIONAL ACCOUNTS LLC
+  - Amount obligated: $1,723,568
+  - Period: 2018-11-07 → 2023-11-06
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TWO KM-HDR SYSTEMS AND ONE UPGRADE OF A KM-HDR SYSTEM IN SUPPORT OF FRCSW AND CARDEROCK.](https://www.usaspending.gov/award/CONT_AWD_N6833520C0364_9700_-NONE-_-NONE-/)** `$1,592,442` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6833520C0364_9700_-NONE-_-NONE-/
+  - Award ID: N6833520C0364
+  - Generated ID: CONT_AWD_N6833520C0364_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: INNOVATIVE TECHNOLOGY, INC.
+  - Amount obligated: $1,592,442
+  - Period: 2020-09-11 → 2022-01-17
+  - Place: CA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[CARDEROCK RECURRING](https://www.usaspending.gov/award/CONT_AWD_N0016723C0010_9700_-NONE-_-NONE-/)** `$1,122,565` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016723C0010_9700_-NONE-_-NONE-/
+  - Award ID: N0016723C0010
+  - Generated ID: CONT_AWD_N0016723C0010_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Carderock")
+  - Recipient: NJS JOINT VENTURE, LLC
+  - Amount obligated: $1,122,565
+  - Period: 2023-07-01 → 2024-03-31
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Carderock"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PROCUREMENT OF MX SENSOR SYSTEM BATTLE DAMAGE REPAIR SERVICES AND SPARE PARTS](https://www.usaspending.gov/award/CONT_AWD_W56KGY23F0063_9700_W56KGY20D0008_9700/)** `$173,643` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W56KGY23F0063_9700_W56KGY20D0008_9700/
+  - Award ID: W56KGY23F0063
+  - Generated ID: CONT_AWD_W56KGY23F0063_9700_W56KGY20D0008_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage repair")
+  - Recipient: CANADIAN COMMERCIAL CORPORATION
+  - Amount obligated: $173,643
+  - Period: 2023-09-01 → 2024-11-29
+  - Place: 
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage repair"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[BATTLE DAMAGE REPAIR RIGHT ANGLE GRINDER](https://www.usaspending.gov/award/CONT_AWD_N6833524F0216_9700_N6833524A0002_9700/)** `$42,083` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6833524F0216_9700_N6833524A0002_9700/
+  - Award ID: N6833524F0216
+  - Generated ID: CONT_AWD_N6833524F0216_9700_N6833524A0002_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage repair")
+  - Recipient: KUOG CORP
+  - Amount obligated: $42,083
+  - Period: 2024-09-10 → 2024-09-13
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage repair"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[LAWSON - ABDAR5 ARMY BATTLE DAMAGE REPAIR KIT 5](https://www.usaspending.gov/award/CONT_AWD_47QSHA23P11NR_4732_-NONE-_-NONE-/)** `$8,083` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QSHA23P11NR_4732_-NONE-_-NONE-/
+  - Award ID: 47QSHA23P11NR
+  - Generated ID: CONT_AWD_47QSHA23P11NR_4732_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage repair")
+  - Recipient: LAWSON PRODUCTS, INC.
+  - Amount obligated: $8,083
+  - Period: 2023-07-12 → 2023-09-10
+  - Place: IL
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: General Services Administration / Federal Acquisition Service
+  - Reason: matched search "battle damage repair"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[LAWSON PRODUCTS - ABDAR5 ARMY BATTLE DAMAGE REPAIR KIT 5](https://www.usaspending.gov/award/CONT_AWD_47QSHA23P0RK4_4732_-NONE-_-NONE-/)** `$8,083` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QSHA23P0RK4_4732_-NONE-_-NONE-/
+  - Award ID: 47QSHA23P0RK4
+  - Generated ID: CONT_AWD_47QSHA23P0RK4_4732_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage repair")
+  - Recipient: LAWSON PRODUCTS, INC.
+  - Amount obligated: $8,083
+  - Period: 2023-04-26 → 2023-06-25
+  - Place: IL
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: General Services Administration / Federal Acquisition Service
+  - Reason: matched search "battle damage repair"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[HANDLE, WIRE STRIPPER: GENERAL CHARACTERISTICS: SUBCOMPONENT OF BATTLE DAMAGE REPAIR KIT TO BE ADDED TO AVIM AND AVUM EL](https://www.usaspending.gov/award/CONT_AWD_47QSHA23P16PK_4732_-NONE-_-NONE-/)** `$414` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QSHA23P16PK_4732_-NONE-_-NONE-/
+  - Award ID: 47QSHA23P16PK
+  - Generated ID: CONT_AWD_47QSHA23P16PK_4732_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage repair")
+  - Recipient: KAUFMAN COMPANY, INC.
+  - Amount obligated: $414
+  - Period: 2023-08-14 → 2023-10-28
+  - Place: MA
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: General Services Administration / Federal Acquisition Service
+  - Reason: matched search "battle damage repair"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THIS CONTRACT IS FOR THE PROCUREMENT OF PROFESSIONAL SUPPORT SERVICES FOR THE DEPUTY COMMANDER FOR SURFACE WARFARE, SEA ](https://www.usaspending.gov/award/CONT_AWD_N0017418F3005_9700_N0017814D7987_9700/)** `$57,534,474` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0017418F3005_9700_N0017814D7987_9700/
+  - Award ID: N0017418F3005
+  - Generated ID: CONT_AWD_N0017418F3005_9700_N0017814D7987_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Navy Regional Maintenance Center")
+  - Recipient: VALKYRIE ENTERPRISES, LLC
+  - Amount obligated: $57,534,474
+  - Period: 2018-06-11 → 2023-12-23
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Navy Regional Maintenance Center"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PROFESSIONAL SUPPORT SERVICES (PSS), SPECIFICALLY FLEET READINESS SUPPORT FOR COMMANDER, NAVY REGIONAL MAINTENANCE CENTE](https://www.usaspending.gov/award/CONT_AWD_N0016424F3006_9700_N0017819D7883_9700/)** `$19,384,385` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0016424F3006_9700_N0017819D7883_9700/
+  - Award ID: N0016424F3006
+  - Generated ID: CONT_AWD_N0016424F3006_9700_N0017819D7883_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Navy Regional Maintenance Center")
+  - Recipient: INVICTUS ASSOCIATES, LLC
+  - Amount obligated: $19,384,385
+  - Period: 2024-04-10 → 2029-07-11
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Navy Regional Maintenance Center"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE MISSILE DEFENSE AGENCY (MDA), GROUND-BASED MIDCOURSE DEFENSE (GMD) DEVELOPMENT AND SUSTAINMENT CONTRACT (DSC) THE GM](https://www.usaspending.gov/award/CONT_AWD_HQ014712C0004_9700_-NONE-_-NONE-/)** `$6,466,627,868` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_HQ014712C0004_9700_-NONE-_-NONE-/
+  - Award ID: HQ014712C0004
+  - Generated ID: CONT_AWD_HQ014712C0004_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: THE BOEING COMPANY
+  - Amount obligated: $6,466,627,868
+  - Period: 2011-12-30 → 2025-12-31
+  - Place: AL
+  - Awarder: Department of Defense / Missile Defense Agency
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF MANAGEMENT OF THE OAK RIDGE INSTITUTE FOR SCIENCE AND EDUCATION](https://www.usaspending.gov/award/CONT_AWD_DESC0014664_8900_-NONE-_-NONE-/)** `$3,038,492,500` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_DESC0014664_8900_-NONE-_-NONE-/
+  - Award ID: DESC0014664
+  - Generated ID: CONT_AWD_DESC0014664_8900_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: OAK RIDGE ASSOCIATED UNIVERSITIES, INCORPORATED
+  - Amount obligated: $3,038,492,500
+  - Period: 2016-03-10 → 2026-09-30
+  - Place: TN
+  - Awarder: Department of Energy / Department of Energy
+  - Funder: Department of Energy / Department of Energy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE GOVERNMENT IS PROCURING THE NEXT-GENERATION GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES (GOES) SERIES TO CONT](https://www.usaspending.gov/award/CONT_AWD_NNG09HR00C_8000_-NONE-_-NONE-/)** `$2,032,336,135` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_NNG09HR00C_8000_-NONE-_-NONE-/
+  - Award ID: NNG09HR00C
+  - Generated ID: CONT_AWD_NNG09HR00C_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORP
+  - Amount obligated: $2,032,336,135
+  - Period: 2008-12-04 → 2039-04-30
+  - Place: CO
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: Department of Commerce / National Oceanic and Atmospheric Administration
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SUPPORT EQUIPMENT, AUTONOMIC LOGISTICS INFORMATION SYSTEM HARDWARE, TRAINING SYSTEMS, SITE ACTIVATIONS, INTEGRATED CONTR](https://www.usaspending.gov/award/CONT_AWD_N0001920C0032_9700_-NONE-_-NONE-/)** `$1,828,735,122` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001920C0032_9700_-NONE-_-NONE-/
+  - Award ID: N0001920C0032
+  - Generated ID: CONT_AWD_N0001920C0032_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $1,828,735,122
+  - Period: 2020-07-17 → 2029-12-30
+  - Place: TX
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[AEGIS COMBAT SYSTEM ENGINEERING AGENT (CSEA) ADVANCED CAPABILITY BUILD 16 (ACB 16), TECHNOLOGY INSERTION 16 (TI 16), FUT](https://www.usaspending.gov/award/CONT_AWD_N0002413C5116_9700_-NONE-_-NONE-/)** `$1,812,244,593` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0002413C5116_9700_-NONE-_-NONE-/
+  - Award ID: N0002413C5116
+  - Generated ID: CONT_AWD_N0002413C5116_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $1,812,244,593
+  - Period: 2013-03-04 → 2025-03-31
+  - Place: NJ
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF TRAINING AND SUPPORT FOR THE BENEFIT OF MNG.](https://www.usaspending.gov/award/CONT_AWD_W90BRJ15C0004_9700_-NONE-_-NONE-/)** `$1,558,808,139` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W90BRJ15C0004_9700_-NONE-_-NONE-/
+  - Award ID: W90BRJ15C0004
+  - Generated ID: CONT_AWD_W90BRJ15C0004_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: VINNELL ARABIA, LLC
+  - Amount obligated: $1,558,808,139
+  - Period: 2014-12-21 → 2021-12-31
+  - Place: 
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[HARPOON COASTAL DEFENSE SYSTEM FOR LAUNCHER TRANSPORTER UNITS (LTUS), RADAR UNITS (RUS) AND TRAINING EQUIPMENT.](https://www.usaspending.gov/award/CONT_AWD_N0001922F0030_9700_N0001921G0006_9700/)** `$1,553,797,869` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001922F0030_9700_N0001921G0006_9700/
+  - Award ID: N0001922F0030
+  - Generated ID: CONT_AWD_N0001922F0030_9700_N0001921G0006_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: THE BOEING COMPANY
+  - Amount obligated: $1,553,797,869
+  - Period: 2022-03-02 → 2029-03-31
+  - Place: MO
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DDG 1002 DIMINISHING MANUFACTURING SOURCES (DMS) MATERIALS AND LONG-LEAD/ADVANCED PROCUREMENT ITEMS, DDG 1000 CLASS TRAI](https://www.usaspending.gov/award/CONT_AWD_N0002410C5126_9700_-NONE-_-NONE-/)** `$1,341,505,621` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0002410C5126_9700_-NONE-_-NONE-/
+  - Award ID: N0002410C5126
+  - Generated ID: CONT_AWD_N0002410C5126_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $1,341,505,621
+  - Period: 2010-03-10 → 2022-07-01
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THAAD FMS KSA PHASE I LONG LEAD ITEMS, OBSOLESCENCE, TOOLING AND TEST EQUIPMENT, KEY PERSONNEL, LINE REQUALIFICATION ACT](https://www.usaspending.gov/award/CONT_AWD_HQ014719C0007_9700_-NONE-_-NONE-/)** `$1,075,010,333` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_HQ014719C0007_9700_-NONE-_-NONE-/
+  - Award ID: HQ014719C0007
+  - Generated ID: CONT_AWD_HQ014719C0007_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $1,075,010,333
+  - Period: 2019-03-04 → 2027-08-31
+  - Place: TX
+  - Awarder: Department of Defense / Missile Defense Agency
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS EFFORT IS TO ACQUIRE CONTRACTOR SERVICES TO PROVIDE REAL-TIME, COMPREHENSIVE THREAT ANALYSIS AND ASS](https://www.usaspending.gov/award/CONT_AWD_47QFCA20F0014_4732_GS00Q14OADU108_4732/)** `$1,070,585,832` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QFCA20F0014_4732_GS00Q14OADU108_4732/
+  - Award ID: 47QFCA20F0014
+  - Generated ID: CONT_AWD_47QFCA20F0014_4732_GS00Q14OADU108_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: BOOZ ALLEN HAMILTON INC
+  - Amount obligated: $1,070,585,832
+  - Period: 2020-06-26 → 2025-06-25
+  - Place: NC
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF AFSS TRAINING SERVICES AND LABOR, MD-530 PARTS AND LABOR](https://www.usaspending.gov/award/CONT_AWD_W90BRJ15C0006_9700_-NONE-_-NONE-/)** `$1,063,181,981` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W90BRJ15C0006_9700_-NONE-_-NONE-/
+  - Award ID: W90BRJ15C0006
+  - Generated ID: CONT_AWD_W90BRJ15C0006_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: VINNELL ARABIA, LLC
+  - Amount obligated: $1,063,181,981
+  - Period: 2014-12-31 → 2021-12-31
+  - Place: 
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TRIDENT II FLEET TRAINING (U.K.)](https://www.usaspending.gov/award/CONT_AWD_N0003011C0100_9700_-NONE-_-NONE-/)** `$1,038,049,058` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0003011C0100_9700_-NONE-_-NONE-/
+  - Award ID: N0003011C0100
+  - Generated ID: CONT_AWD_N0003011C0100_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORP
+  - Amount obligated: $1,038,049,058
+  - Period: 2010-10-01 → 2015-09-30
+  - Place: CA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ADVANCED PILOT TRAINING](https://www.usaspending.gov/award/CONT_AWD_FA861718F8001_9700_FA861718D6219_9700/)** `$913,084,291` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA861718F8001_9700_FA861718D6219_9700/
+  - Award ID: FA861718F8001
+  - Generated ID: CONT_AWD_FA861718F8001_9700_FA861718D6219_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: THE BOEING COMPANY
+  - Amount obligated: $913,084,291
+  - Period: 2018-09-27 → 2026-07-30
+  - Place: MO
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS TO IS TO PROVIDE RESEARCH, DESIGN, DEVELOPMENT, INTEGRATION, T&E, INITIAL FIELDING AND OPERATION, LO](https://www.usaspending.gov/award/CONT_AWD_47QFCA22F0051_4732_GS00Q14OADU122_4732/)** `$840,114,000` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QFCA22F0051_4732_GS00Q14OADU122_4732/
+  - Award ID: 47QFCA22F0051
+  - Generated ID: CONT_AWD_47QFCA22F0051_4732_GS00Q14OADU122_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LEIDOS, INC.
+  - Amount obligated: $840,114,000
+  - Period: 2022-09-14 → 2026-09-13
+  - Place: VA
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TRAINING PRODUCTION REQUIREMENTS FOR FY23 AND FY24 OPTIONS](https://www.usaspending.gov/award/CONT_AWD_N0001924F0181_9700_N0001923D0010_9700/)** `$833,479,197` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001924F0181_9700_N0001923D0010_9700/
+  - Award ID: N0001924F0181
+  - Generated ID: CONT_AWD_N0001924F0181_9700_N0001923D0010_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $833,479,197
+  - Period: 2023-12-29 → 2028-12-29
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THIS ACTION PROCURES TRAINING AND MENTORING FOR THE AFGHANISTAN NATIONAL DEFENSE SECURITY FORCES (ANDSF) AT THE MANAGEME](https://www.usaspending.gov/award/CONT_AWD_W56HZV17C0117_9700_-NONE-_-NONE-/)** `$792,342,385` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W56HZV17C0117_9700_-NONE-_-NONE-/
+  - Award ID: W56HZV17C0117
+  - Generated ID: CONT_AWD_W56HZV17C0117_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: AMENTUM SERVICES, INC.
+  - Amount obligated: $792,342,385
+  - Period: 2017-05-23 → 2021-08-30
+  - Place: 
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[AVIATION TRAINING AND SUPPORT SERVICES (ATSS) - SOLE SOURCE](https://www.usaspending.gov/award/CONT_AWD_W519TC24C2005_9700_-NONE-_-NONE-/)** `$757,727,126` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W519TC24C2005_9700_-NONE-_-NONE-/
+  - Award ID: W519TC24C2005
+  - Generated ID: CONT_AWD_W519TC24C2005_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: GDC MIDDLE EAST COMPANY
+  - Amount obligated: $757,727,126
+  - Period: 2024-01-01 → 2026-06-30
+  - Place: 
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[F-16 TRAINING SIMULATORS](https://www.usaspending.gov/award/CONT_AWD_FA862119F6251_9700_FA862115D6273_9700/)** `$745,219,323` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862119F6251_9700_FA862115D6273_9700/
+  - Award ID: FA862119F6251
+  - Generated ID: CONT_AWD_FA862119F6251_9700_FA862115D6273_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: CAE USA INC.
+  - Amount obligated: $745,219,323
+  - Period: 2018-11-09 → 2026-09-26
+  - Place: TX
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SITEC 3 EOM PROVIDES USSOCOM WITH O&M SERVICES TO MAINTAIN NETOPS, MAINTAIN SYSTEMS & NETWORK INFRASTRUCTURE, PROVIDE EN](https://www.usaspending.gov/award/CONT_AWD_47QFCA24F0002_4732_47QTCK18D0011_4732/)** `$700,348,130` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QFCA24F0002_4732_47QTCK18D0011_4732/
+  - Award ID: 47QFCA24F0002
+  - Generated ID: CONT_AWD_47QFCA24F0002_4732_47QTCK18D0011_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: PERATON INC.
+  - Amount obligated: $700,348,130
+  - Period: 2023-10-31 → 2027-05-16
+  - Place: FL
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[F-35 BLOCK FOUR DEVELOPMENT CONTRACT FOR THE CONTINUED DEVELOPMENT OF CRITICAL WARFIGHTING CAPABILITIES, AS WELL AS REQU](https://www.usaspending.gov/award/CONT_AWD_N0001923C0009_9700_-NONE-_-NONE-/)** `$679,431,034` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001923C0009_9700_-NONE-_-NONE-/
+  - Award ID: N0001923C0009
+  - Generated ID: CONT_AWD_N0001923C0009_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $679,431,034
+  - Period: 2023-04-01 → 2028-03-31
+  - Place: TX
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[C-130J MATS III](https://www.usaspending.gov/award/CONT_AWD_FA862117F0026_9700_FA862115D6276_9700/)** `$662,670,219` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862117F0026_9700_FA862115D6276_9700/
+  - Award ID: FA862117F0026
+  - Generated ID: CONT_AWD_FA862117F0026_9700_FA862115D6276_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $662,670,219
+  - Period: 2017-04-21 → 2025-09-24
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[INTEGRATION EFFORTS FOR AN F-35 FOREIGN MILITARY SALES (FMS) CUSTOMER INCLUDING PROGRAM MANAGEMENT, NON-RECURRING UNIQUE](https://www.usaspending.gov/award/CONT_AWD_N0001923C0058_9700_-NONE-_-NONE-/)** `$635,797,370` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001923C0058_9700_-NONE-_-NONE-/
+  - Award ID: N0001923C0058
+  - Generated ID: CONT_AWD_N0001923C0058_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $635,797,370
+  - Period: 2023-08-17 → 2027-12-31
+  - Place: TX
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF  AFSOC ACTS AWARD OF CONTRACT FOR CLS, ENGINEERING, INSTRUCTION, CYBERSECURITY, DMO](https://www.usaspending.gov/award/CONT_AWD_FA862118F6251_9700_FA862115D6276_9700/)** `$625,256,177` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862118F6251_9700_FA862115D6276_9700/
+  - Award ID: FA862118F6251
+  - Generated ID: CONT_AWD_FA862118F6251_9700_FA862115D6276_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $625,256,177
+  - Period: 2018-02-08 → 2027-01-31
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[F-16 MTC FOLLOW-ON](https://www.usaspending.gov/award/CONT_AWD_FA862109C6292_9700_-NONE-_-NONE-/)** `$624,897,510` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862109C6292_9700_-NONE-_-NONE-/
+  - Award ID: FA862109C6292
+  - Generated ID: CONT_AWD_FA862109C6292_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: CAE USA INC.
+  - Amount obligated: $624,897,510
+  - Period: 2008-12-29 → 2024-06-17
+  - Place: TX
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF](https://www.usaspending.gov/award/CONT_AWD_W9124G17C0005_9700_-NONE-_-NONE-/)** `$592,077,979` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W9124G17C0005_9700_-NONE-_-NONE-/
+  - Award ID: W9124G17C0005
+  - Generated ID: CONT_AWD_W9124G17C0005_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "battle damage assessment, training")
+  - Recipient: AMENTUM SERVICES, INC.
+  - Amount obligated: $592,077,979
+  - Period: 2017-09-01 → 2027-01-09
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "battle damage assessment, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[MULTI SERVICE, 5 YR, MULTI-YR CONTRACT FOR H-60 HELICOPTERS. FY2012 FY2016 PRODUCTION CONTRACT FOR ARMY/NAVY/FMS UH/HH/M](https://www.usaspending.gov/award/CONT_AWD_W58RGZ12C0008_9700_-NONE-_-NONE-/)** `$11,602,480,135` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W58RGZ12C0008_9700_-NONE-_-NONE-/
+  - Award ID: W58RGZ12C0008
+  - Generated ID: CONT_AWD_W58RGZ12C0008_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: SIKORSKY AIRCRAFT CORPORATION
+  - Amount obligated: $11,602,480,135
+  - Period: 2012-06-06 → 2023-07-21
+  - Place: CT
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PROCUREMENT OF 54 EACH ARMY UH-60M BLACK HAWK HELICOPTERS; 18 EACH NAVY MH-60S SEA HAWK HELICOPTERS; 25 EACH NAVY NH-60R](https://www.usaspending.gov/award/CONT_AWD_W58RGZ08C0003_9700_-NONE-_-NONE-/)** `$9,971,085,290` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W58RGZ08C0003_9700_-NONE-_-NONE-/
+  - Award ID: W58RGZ08C0003
+  - Generated ID: CONT_AWD_W58RGZ08C0003_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: SIKORSKY AIRCRAFT CORPORATION
+  - Amount obligated: $9,971,085,290
+  - Period: 2007-12-12 → 2016-09-30
+  - Place: CT
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[KSA FMS ARMY NAVY TRANSPORTABLE RADAR SURVEILLANCE AND CONTROL MODEL 2 (AN/TPY-2) PRODUCTION](https://www.usaspending.gov/award/CONT_AWD_HQ086220C0002_9700_-NONE-_-NONE-/)** `$2,732,984,085` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_HQ086220C0002_9700_-NONE-_-NONE-/
+  - Award ID: HQ086220C0002
+  - Generated ID: CONT_AWD_HQ086220C0002_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $2,732,984,085
+  - Period: 2020-06-26 → 2032-08-31
+  - Place: MA
+  - Awarder: Department of Defense / Missile Defense Agency
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[MQ-4C TRITON LRIP LOT 5 LONG LEAD ITEMS TO SUPPORT U.S. NAVY AND COOPERATIVE PARTNER AUSTRALIA.](https://www.usaspending.gov/award/CONT_AWD_N0001919C0008_9700_-NONE-_-NONE-/)** `$1,808,132,092` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001919C0008_9700_-NONE-_-NONE-/
+  - Award ID: N0001919C0008
+  - Generated ID: CONT_AWD_N0001919C0008_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  - Amount obligated: $1,808,132,092
+  - Period: 2019-05-29 → 2029-01-31
+  - Place: CA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[NAVY ENTERPRISE RESOURCE PLANNING (ERP) TECHNICAL SUPPORT SERVICES (NETSS).](https://www.usaspending.gov/award/CONT_AWD_N0003921F3007_9700_N0017819D7876_9700/)** `$849,355,960` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0003921F3007_9700_N0017819D7876_9700/
+  - Award ID: N0003921F3007
+  - Generated ID: CONT_AWD_N0003921F3007_9700_N0017819D7876_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: INTERNATIONAL BUSINESS MACHINES CORPORATION
+  - Amount obligated: $849,355,960
+  - Period: 2021-04-23 → 2026-04-22
+  - Place: DC
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[FULL RATE PRODUCTION (FOFD) NAVY MULTIBAND TERMINAL (NMT) BASIC CONTRACT AWARD](https://www.usaspending.gov/award/CONT_AWD_N0003916C0050_9700_-NONE-_-NONE-/)** `$561,058,206` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0003916C0050_9700_-NONE-_-NONE-/
+  - Award ID: N0003916C0050
+  - Generated ID: CONT_AWD_N0003916C0050_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $561,058,206
+  - Period: 2015-12-29 → 2025-12-28
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DIGITAL ENGINEERING AND DIGITAL TRANSFORMATION RESEARCH, ANALYSIS, AND DEVELOPMENT FOR THE NAVY DIGITAL INTEGRATION SUPP](https://www.usaspending.gov/award/CONT_AWD_FA807522F0030_9700_FA807518D0006_9700/)** `$468,333,874` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA807522F0030_9700_FA807518D0006_9700/
+  - Award ID: FA807522F0030
+  - Generated ID: CONT_AWD_FA807522F0030_9700_FA807518D0006_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: CACI, INC. - FEDERAL
+  - Amount obligated: $468,333,874
+  - Period: 2022-05-04 → 2027-05-04
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Immediate Office of the Secretary of Defense
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF  THIS REQUIREMENT IS FOR FULL AND OPEN COMPETITION FOR THE JOINT AIR-TO-GROUND MISSILE (JAGM) IN SUPPORT OF](https://www.usaspending.gov/award/CONT_AWD_W31P4Q15C0102_9700_-NONE-_-NONE-/)** `$456,076,316` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W31P4Q15C0102_9700_-NONE-_-NONE-/
+  - Award ID: W31P4Q15C0102
+  - Generated ID: CONT_AWD_W31P4Q15C0102_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $456,076,316
+  - Period: 2015-07-31 → 2023-11-21
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF  HELLENIC NAVY P-3B MODERNIZATION PROGRAM](https://www.usaspending.gov/award/CONT_AWD_N6833516C0125_9700_-NONE-_-NONE-/)** `$376,391,571` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6833516C0125_9700_-NONE-_-NONE-/
+  - Award ID: N6833516C0125
+  - Generated ID: CONT_AWD_N6833516C0125_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: LOCKHEED MARTIN CORP
+  - Amount obligated: $376,391,571
+  - Period: 2016-02-11 → 2026-02-28
+  - Place: GA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE DEPARTMENT OF THE NAVY AND THE UNITED STATES MARINE CORPS FINANCIAL STATEMENT AUDITS FOR FISCAL YEARS 2021-2025](https://www.usaspending.gov/award/CONT_AWD_HQ042321F0002_9700_GS00F290CA_4732/)** `$339,046,287` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_HQ042321F0002_9700_GS00F290CA_4732/
+  - Award ID: HQ042321F0002
+  - Generated ID: CONT_AWD_HQ042321F0002_9700_GS00F290CA_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: ERNST & YOUNG LLP
+  - Amount obligated: $339,046,287
+  - Period: 2021-01-01 → 2026-12-31
+  - Place: DC
+  - Awarder: Department of Defense / Defense Finance and Accounting Service
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PROPOSAL PREP FOR NAVY TACAMO OFFICE](https://www.usaspending.gov/award/CONT_AWD_FA862522FB001_9700_FA862520D3000_9700/)** `$311,784,977` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862522FB001_9700_FA862520D3000_9700/
+  - Award ID: FA862522FB001
+  - Generated ID: CONT_AWD_FA862522FB001_9700_FA862520D3000_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: LOCKHEED MARTIN CORP
+  - Amount obligated: $311,784,977
+  - Period: 2022-06-14 → 2027-07-31
+  - Place: GA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[FISCAL YEAR 2017 THROUGH FISCAL YEAR 2021 U.S. NAVY, OTHER GOVERNMENT AGENCIES, AND FOREIGN MILITARY SALES, STANDARD MIS](https://www.usaspending.gov/award/CONT_AWD_N0002417C5410_9700_-NONE-_-NONE-/)** `$291,869,130` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0002417C5410_9700_-NONE-_-NONE-/
+  - Award ID: N0002417C5410
+  - Generated ID: CONT_AWD_N0002417C5410_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $291,869,130
+  - Period: 2017-04-14 → 2022-04-13
+  - Place: AZ
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ACQUISITION OF MICROSOFT 365 E SERIES SOFTWARE LICENSES AND SOFTWARE ASSURANCE VIA THE NAVY ESI BPA TO SUPPORT APPROXIMA](https://www.usaspending.gov/award/CONT_AWD_FA877226F0001_9700_N6600121A0083_9700/)** `$280,853,878` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA877226F0001_9700_N6600121A0083_9700/
+  - Award ID: FA877226F0001
+  - Generated ID: CONT_AWD_FA877226F0001_9700_N6600121A0083_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: DELL MARKETING L.P.
+  - Amount obligated: $280,853,878
+  - Period: 2025-11-01 → 2026-05-31
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[FISCAL YEAR 2013 THROUGH FISCAL YEAR 2017 U.S. NAVY, OTHER GOVERNMENT AGENCIES, AND FOREIGN MILITARY SALES STANDARD MISS](https://www.usaspending.gov/award/CONT_AWD_N0002413C5403_9700_-NONE-_-NONE-/)** `$276,393,451` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0002413C5403_9700_-NONE-_-NONE-/
+  - Award ID: N0002413C5403
+  - Generated ID: CONT_AWD_N0002413C5403_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $276,393,451
+  - Period: 2013-05-31 → 2018-05-31
+  - Place: AZ
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ECASS CORE STATIONS (NAVY)](https://www.usaspending.gov/award/CONT_AWD_N6833517C0253_9700_-NONE-_-NONE-/)** `$270,442,068` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6833517C0253_9700_-NONE-_-NONE-/
+  - Award ID: N6833517C0253
+  - Generated ID: CONT_AWD_N6833517C0253_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $270,442,068
+  - Period: 2017-02-01 → 2024-12-31
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DESIGN, DEVELOP, INTEGRATE NAVY SYSTEMS](https://www.usaspending.gov/award/CONT_AWD_N0002419C6407_9700_-NONE-_-NONE-/)** `$262,891,431` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0002419C6407_9700_-NONE-_-NONE-/
+  - Award ID: N0002419C6407
+  - Generated ID: CONT_AWD_N0002419C6407_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+  - Amount obligated: $262,891,431
+  - Period: 2019-07-19 → 2027-07-18
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SUPPORT TO THE PROGRAM OFFICE WILL ASSIST IN THEIR EFFORTS TO SATISFY BOTH CURRENT AND FUTURE NAVY/MARINE CORPS NEEDS FO](https://www.usaspending.gov/award/CONT_AWD_EH09_9700_N0017804D4066_9700/)** `$227,348,223` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_EH09_9700_N0017804D4066_9700/
+  - Award ID: EH09
+  - Generated ID: CONT_AWD_EH09_9700_N0017804D4066_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: SERCO-IPS CORPORATION
+  - Amount obligated: $227,348,223
+  - Period: 2011-07-18 → 2020-03-31
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[NAVY CONTINUOUS TRAINING ENVIRONMENT INTEGRATING ARCHITECTURE DEVELOPMENT FOR LIVE, VIRTUAL, AND CONSTRUCTIVE CAPABILITY](https://www.usaspending.gov/award/CONT_AWD_FA807520F0017_9700_FA807518D0002_9700/)** `$225,222,250` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA807520F0017_9700_FA807518D0002_9700/
+  - Award ID: FA807520F0017
+  - Generated ID: CONT_AWD_FA807520F0017_9700_FA807518D0002_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: HII MISSION TECHNOLOGIES CORP
+  - Amount obligated: $225,222,250
+  - Period: 2020-01-31 → 2025-02-02
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS CONTRACT ACTION IS TO PROVIDE THROUGH LIFE SUPPORT FOR THE ROYAL AUSTRALIAN NAVY MH-60R PROGRAM.](https://www.usaspending.gov/award/CONT_AWD_N0001913C4000_9700_-NONE-_-NONE-/)** `$211,936,822` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0001913C4000_9700_-NONE-_-NONE-/
+  - Award ID: N0001913C4000
+  - Generated ID: CONT_AWD_N0001913C4000_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: MARITIME HELICOPTER SUPPORT COMPANY LLC
+  - Amount obligated: $211,936,822
+  - Period: 2012-12-12 → 2020-01-31
+  - Place: NY
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[PORT ENGINEERING, COMBAT SYSTEMS ENGINEERING, MAINTENANCE MANAGEMENT AND PORT ENGINEERING SUPPORT SERVICES FOR NAVY SURF](https://www.usaspending.gov/award/CONT_AWD_N0024419F3003_9700_N0017814D7979_9700/)** `$202,571,717` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0024419F3003_9700_N0017814D7979_9700/
+  - Award ID: N0024419F3003
+  - Generated ID: CONT_AWD_N0024419F3003_9700_N0017814D7979_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: T-SOLUTIONS, INC.
+  - Amount obligated: $202,571,717
+  - Period: 2019-09-27 → 2025-03-26
+  - Place: CA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DEPARTMENT OF THE NAVY ORACLE III ULA AND AGENCY CATALOG](https://www.usaspending.gov/award/CONT_AWD_N0018923FR338_9700_NNG15SC98B_8000/)** `$202,262,063` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0018923FR338_9700_NNG15SC98B_8000/
+  - Award ID: N0018923FR338
+  - Generated ID: CONT_AWD_N0018923FR338_9700_NNG15SC98B_8000
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: DLT SOLUTIONS, LLC
+  - Amount obligated: $202,262,063
+  - Period: 2023-05-19 → 2028-05-30
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE CONTRACTOR SHALL SUPPLY PROGRAM, TECHNICAL, BUSINESS AND FINANCIAL, LOGISTICS, AND ADMINISTRATIVE SUPPORT SERVICES F](https://www.usaspending.gov/award/CONT_AWD_EH11_9700_N0017804D4066_9700/)** `$190,287,249` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_EH11_9700_N0017804D4066_9700/
+  - Award ID: EH11
+  - Generated ID: CONT_AWD_EH11_9700_N0017804D4066_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: SERCO-IPS CORPORATION
+  - Amount obligated: $190,287,249
+  - Period: 2015-03-20 → 2019-01-17
+  - Place: VA
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE NAVAL AIR WARFARE CENTER AIRCRAFT DIVISION (NAWC-AD) PATUXENT RIVER, MD IS TASKED BY NUMEROUS DEPARTMENT OF DEFENSE ](https://www.usaspending.gov/award/CONT_AWD_M809_9700_N0017804D4018_9700/)** `$183,062,214` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_M809_9700_N0017804D4018_9700/
+  - Award ID: M809
+  - Generated ID: CONT_AWD_M809_9700_N0017804D4018_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: BAE SYSTEMS TECHNOLOGY SOLUTIONS & SERVICES INC.
+  - Amount obligated: $183,062,214
+  - Period: 2014-08-01 → 2020-05-31
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DEPARTMENT OF NAVY RED HAT II ENTERPRISE LICENSE AGREEMENT](https://www.usaspending.gov/award/CONT_AWD_N0018922FR009_9700_NNG15SC98B_8000/)** `$167,504,709` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0018922FR009_9700_NNG15SC98B_8000/
+  - Award ID: N0018922FR009
+  - Generated ID: CONT_AWD_N0018922FR009_9700_NNG15SC98B_8000
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: DLT SOLUTIONS, LLC
+  - Amount obligated: $167,504,709
+  - Period: 2021-12-27 → 2027-01-26
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[200609!SS4313!1700!N00024!NAVAL SEA SYSTEMS COMMAND       !N0017805D4364  !A!N! !Y!EH01         !      !20060620!2006093](https://www.usaspending.gov/award/CONT_AWD_EH01_9700_N0017805D4364_9700/)** `$160,018,891` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_EH01_9700_N0017805D4364_9700/
+  - Award ID: EH01
+  - Generated ID: CONT_AWD_EH01_9700_N0017805D4364_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "serious game, Navy")
+  - Recipient: INTERNATIONAL BUSINESS MACHINES CORPORATION
+  - Amount obligated: $160,018,891
+  - Period: 2006-06-20 → 2009-09-30
+  - Place: MD
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "serious game, Navy"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PRIMARY ACTIVITIES COVERED BY THIS EFFORT SPAN THE MAJOR PHASES OF THE MISSION BEGINNING WITH FORMULATION THROUGH DE](https://www.usaspending.gov/award/CONT_AWD_NAS503127_8000_-NONE-_-NONE-/)** `$1,530,047,143` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_NAS503127_8000_-NONE-_-NONE-/
+  - Award ID: NAS503127
+  - Generated ID: CONT_AWD_NAS503127_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: ASSOCIATION OF UNIVERSITIES FOR RESEARCH IN ASTRONOMY, INC.
+  - Amount obligated: $1,530,047,143
+  - Period: 2003-10-01 → 2027-06-25
+  - Place: MD
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SOLAR PROBE PLUS (SPP) PHASE A ACTIVITIES  THE CONTRACTOR SHALL PERFORM THE WORK THAT IS DESIGNATED IN TASK ORDERS ISSUE](https://www.usaspending.gov/award/CONT_AWD_NNN10AA08T_8000_NNN06AA01C_8000/)** `$894,500,235` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_NNN10AA08T_8000_NNN06AA01C_8000/
+  - Award ID: NNN10AA08T
+  - Generated ID: CONT_AWD_NNN10AA08T_8000_NNN06AA01C_8000
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: THE JOHNS HOPKINS UNIVERSITY APPLIED PHYSICS LABORATORY LLC
+  - Amount obligated: $894,500,235
+  - Period: 2010-05-17 → 2026-03-31
+  - Place: MD
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TASK ORDER 0001 UNDER THE FOLLOW-ON CONTRACT IS FOR THE CONTINUED DEVELOPMENT OF SPIRAL 8.2, SYSTEMS AND COMPONENT ENGIN](https://www.usaspending.gov/award/CONT_AWD_0001_9700_HQ014712D0003_9700/)** `$580,243,224` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_0001_9700_HQ014712D0003_9700/
+  - Award ID: 0001
+  - Generated ID: CONT_AWD_0001_9700_HQ014712D0003_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: LOCKHEED MARTIN CORPORATION
+  - Amount obligated: $580,243,224
+  - Period: 2012-01-01 → 2018-10-31
+  - Place: MD
+  - Awarder: Department of Defense / Missile Defense Agency
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[BASE AWARD 2017T-02- LABOR/TRAVEL  TECHNICAL SUPPORT REQUIREMENTS FOR THE U.S. ARMY RESEARCH, DEVELOPMENT, AND ENGINEERI](https://www.usaspending.gov/award/CONT_AWD_0020_9700_W31P4Q09A0021_9700/)** `$575,268,246` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_0020_9700_W31P4Q09A0021_9700/
+  - Award ID: 0020
+  - Generated ID: CONT_AWD_0020_9700_W31P4Q09A0021_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: TORCH TECHNOLOGIES INC
+  - Amount obligated: $575,268,246
+  - Period: 2018-01-04 → 2022-06-20
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[NEXT GENERATION SPACE TELESCOPE NIRCAM THE CONTRACTOR SHALL PROVIDE THE PERSONNEL, SERVICES, MATERIALS, EQUIPMENT, AND F](https://www.usaspending.gov/award/CONT_AWD_GSFC0200208DNAS502105_8000_-NONE-_-NONE-/)** `$486,654,377` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_GSFC0200208DNAS502105_8000_-NONE-_-NONE-/
+  - Award ID: GSFC0200208DNAS502105
+  - Generated ID: CONT_AWD_GSFC0200208DNAS502105_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: UNIVERSITY OF ARIZONA
+  - Amount obligated: $486,654,377
+  - Period: 2002-07-17 → 2027-09-30
+  - Place: AZ
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SINGLE AWARD TO AGAINST GSA OASIS SB (POOL 5B) FOR ENGINEERING AND PROFESSIONAL SERVICES SUPPORTING AVIATION AND MISSILE](https://www.usaspending.gov/award/CONT_AWD_W31P4Q21F0054_9700_GS00Q14OADS621_4732/)** `$377,684,283` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W31P4Q21F0054_9700_GS00Q14OADS621_4732/
+  - Award ID: W31P4Q21F0054
+  - Generated ID: CONT_AWD_W31P4Q21F0054_9700_GS00Q14OADS621_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: TORCH TECHNOLOGIES INC
+  - Amount obligated: $377,684,283
+  - Period: 2021-01-20 → 2026-11-11
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[B-2 TRAINING SYSTEM](https://www.usaspending.gov/award/CONT_AWD_FA862119F6250_9700_FA862115D6273_9700/)** `$343,271,205` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862119F6250_9700_FA862115D6273_9700/
+  - Award ID: FA862119F6250
+  - Generated ID: CONT_AWD_FA862119F6250_9700_FA862115D6273_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: CAE USA INC.
+  - Amount obligated: $343,271,205
+  - Period: 2018-12-27 → 2027-05-28
+  - Place: TX
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[SINGLE AWARD TO AGAINST GSA OASIS SB R POOL 5B FOR HWIL MISSILE TO ACQUIRE SOFTWARE/SYSTEMS/SIMULATION ENGINEERING AND C](https://www.usaspending.gov/award/CONT_AWD_W31P4Q21F0052_9700_GS00Q14OADS621_4732/)** `$340,638,405` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W31P4Q21F0052_9700_GS00Q14OADS621_4732/
+  - Award ID: W31P4Q21F0052
+  - Generated ID: CONT_AWD_W31P4Q21F0052_9700_GS00Q14OADS621_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: TORCH TECHNOLOGIES INC
+  - Amount obligated: $340,638,405
+  - Period: 2021-02-01 → 2027-07-21
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[HITS-IV CONTRACT TO PROCURE 1 WST TO RETROFIT, TECH REFRESH, AND UPDATE SOFTWARE (CYBER/DSSC-4) ON HITS SUITE OF TRAINER](https://www.usaspending.gov/award/CONT_AWD_N6134021C0017_9700_-NONE-_-NONE-/)** `$323,300,182` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6134021C0017_9700_-NONE-_-NONE-/
+  - Award ID: N6134021C0017
+  - Generated ID: CONT_AWD_N6134021C0017_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: ROCKWELL COLLINS SIMULATION & TRAINING SOLUTIONS LLC
+  - Amount obligated: $323,300,182
+  - Period: 2021-06-30 → 2027-09-11
+  - Place: IA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[E2D HITS-III TT DEVICE 15F14 S/N 4](https://www.usaspending.gov/award/CONT_AWD_N6134017C0014_9700_-NONE-_-NONE-/)** `$315,302,107` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N6134017C0014_9700_-NONE-_-NONE-/
+  - Award ID: N6134017C0014
+  - Generated ID: CONT_AWD_N6134017C0014_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: ROCKWELL COLLINS SIMULATION & TRAINING SOLUTIONS LLC
+  - Amount obligated: $315,302,107
+  - Period: 2017-06-15 → 2026-07-31
+  - Place: IA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF SPACE AND EARTH SCIENCES DATA ANALYSIS (SESDA) THE PURPOSE OF THIS CONTRACT IS TO PROVIDE A BROAD RANGE OF ](https://www.usaspending.gov/award/CONT_AWD_80GSFC17C0003_8000_-NONE-_-NONE-/)** `$302,855,257` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_80GSFC17C0003_8000_-NONE-_-NONE-/
+  - Award ID: 80GSFC17C0003
+  - Generated ID: CONT_AWD_80GSFC17C0003_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: ADNET SYSTEMS INC
+  - Amount obligated: $302,855,257
+  - Period: 2017-10-01 → 2023-03-31
+  - Place: MD
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[COMBINED F-15C/E MTC SIMULATOR SERVICES](https://www.usaspending.gov/award/CONT_AWD_FA862116C6397_9700_-NONE-_-NONE-/)** `$301,311,880` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862116C6397_9700_-NONE-_-NONE-/
+  - Award ID: FA862116C6397
+  - Generated ID: CONT_AWD_FA862116C6397_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: THE BOEING COMPANY
+  - Amount obligated: $301,311,880
+  - Period: 2016-07-01 → 2023-12-31
+  - Place: MO
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[HE PURPOSE OF THE SWDC DE TASK ORDER IS TO MAINTAIN, SUSTAIN, AND DEVELOP THE BALLISTIC MISSILE DEFENSE INTERNATIONAL SI](https://www.usaspending.gov/award/CONT_AWD_HQ085421F0029_9700_HQ014718D0005_9700/)** `$255,963,215` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_HQ085421F0029_9700_HQ014718D0005_9700/
+  - Award ID: HQ085421F0029
+  - Generated ID: CONT_AWD_HQ085421F0029_9700_HQ014718D0005_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  - Amount obligated: $255,963,215
+  - Period: 2021-03-05 → 2026-03-04
+  - Place: AL
+  - Awarder: Department of Defense / Missile Defense Agency
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TECHNICAL ENGINEERING SUPPORT FOR THE CCDC, AVIATION AND MISSILE CENTER (AVMC), SOFTWARE, SIMULATION, SYSTEMS ENGINEERIN](https://www.usaspending.gov/award/CONT_AWD_W31P4Q20FB003_9700_47QRAA20D0022_4732/)** `$246,799,675` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W31P4Q20FB003_9700_47QRAA20D0022_4732/
+  - Award ID: W31P4Q20FB003
+  - Generated ID: CONT_AWD_W31P4Q20FB003_9700_47QRAA20D0022_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: INTUITIVE RESEARCH AND TECHNOLOGY CORPORATION
+  - Amount obligated: $246,799,675
+  - Period: 2020-06-05 → 2026-04-04
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[WEAPONS SYSTEMS AND AVIATION WARFARE MODELING & SIMULATION, ENGINEERING, INTEGRATION, EXPERIMENTATION, AND CYBER SECURIT](https://www.usaspending.gov/award/CONT_AWD_FA807522F0017_9700_FA807518D0011_9700/)** `$242,370,874` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA807522F0017_9700_FA807518D0011_9700/
+  - Award ID: FA807522F0017
+  - Generated ID: CONT_AWD_FA807522F0017_9700_FA807518D0011_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: MANTECH TSG-2 JOINT VENTURE
+  - Amount obligated: $242,370,874
+  - Period: 2022-05-11 → 2026-08-22
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF  THE CONTRACTOR SHALL SUPPORT THE HYDROSPHERIC AND BIOSPHERIC SCIENCES (HBS), CODE 610 IN THE FOLLOWING ARE](https://www.usaspending.gov/award/CONT_AWD_NNG15HQ01C_8000_-NONE-_-NONE-/)** `$226,845,380` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_NNG15HQ01C_8000_-NONE-_-NONE-/
+  - Award ID: NNG15HQ01C
+  - Generated ID: CONT_AWD_NNG15HQ01C_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: SCIENCE SYSTEMS AND APPLICATIONS, INC.
+  - Amount obligated: $226,845,380
+  - Period: 2014-12-01 → 2020-05-31
+  - Place: MD
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::CL::IGF ASTERIOD IMPACT AND DEFLECTION ASSESSMENT (AIDA) - DOUBLE ASTERIOD REDIRECTION TEST (DART) PHASE A STUDY   ](https://www.usaspending.gov/award/CONT_AWD_NNN15AA05T_8000_NNN06AA01C_8000/)** `$222,014,203` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_NNN15AA05T_8000_NNN06AA01C_8000/
+  - Award ID: NNN15AA05T
+  - Generated ID: CONT_AWD_NNN15AA05T_8000_NNN06AA01C_8000
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: THE JOHNS HOPKINS UNIVERSITY APPLIED PHYSICS LABORATORY LLC
+  - Amount obligated: $222,014,203
+  - Period: 2015-09-25 → 2022-08-15
+  - Place: MD
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[B-1 TRAINING SYSTEM (TS)](https://www.usaspending.gov/award/CONT_AWD_FA862118F6261_9700_FA862115D6252_9700/)** `$215,293,602` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA862118F6261_9700_FA862115D6252_9700/
+  - Award ID: FA862118F6261
+  - Generated ID: CONT_AWD_FA862118F6261_9700_FA862115D6252_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: AERO SIMULATION, INC.
+  - Amount obligated: $215,293,602
+  - Period: 2018-09-25 → 2026-06-30
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF  SOLID STATE PHASED ARRAY RADAR SYSTEM (SSPARS) PROGRAM IS COMPRISED OF FIVE RADAR SITES AT THE FOLLOWING 2](https://www.usaspending.gov/award/CONT_AWD_FA251718C8000_9700_-NONE-_-NONE-/)** `$214,583,693` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA251718C8000_9700_-NONE-_-NONE-/
+  - Award ID: FA251718C8000
+  - Generated ID: CONT_AWD_FA251718C8000_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: INDYNE, INC.
+  - Amount obligated: $214,583,693
+  - Period: 2018-03-05 → 2022-04-30
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS ACTION IS TO AWARD A NEW FIVE (5) YEAR TASK ORDER UNDER THE RS3 CONTRACT FOR MODELING AND SIMULATION](https://www.usaspending.gov/award/CONT_AWD_W56KGU20F0012_9700_W15P7T19D0157_9700/)** `$201,598,496` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W56KGU20F0012_9700_W15P7T19D0157_9700/
+  - Award ID: W56KGU20F0012
+  - Generated ID: CONT_AWD_W56KGU20F0012_9700_W15P7T19D0157_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: CACI TECHNOLOGIES, LLC
+  - Amount obligated: $201,598,496
+  - Period: 2020-04-13 → 2026-10-31
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TIME HISTORY OF EVENTS&MACROSCALE INTERACTIONS DURING SUBSTORMS (THEMIS) MISSION PHASE A EFFORT THE CONTRACTOR SHALL PRO](https://www.usaspending.gov/award/CONT_AWD_GSFC0200207DNAS502099_8000_-NONE-_-NONE-/)** `$199,537,577` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_GSFC0200207DNAS502099_8000_-NONE-_-NONE-/
+  - Award ID: GSFC0200207DNAS502099
+  - Generated ID: CONT_AWD_GSFC0200207DNAS502099_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: THE REGENTS OF THE UNIVERSITY OF CALIFORNIA
+  - Amount obligated: $199,537,577
+  - Period: 2002-07-15 → 2028-09-30
+  - Place: CA
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE TANDEM RECONNECTION AND CUSP ELECTRODYNAMICS RECONNAISSANCE SATELLITE (TRACERS) IS PROPOSED BY THE CONTRACTOR IN RES](https://www.usaspending.gov/award/CONT_AWD_80GSFC18C0008_8000_-NONE-_-NONE-/)** `$184,007,564` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_80GSFC18C0008_8000_-NONE-_-NONE-/
+  - Award ID: 80GSFC18C0008
+  - Generated ID: CONT_AWD_80GSFC18C0008_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: THE UNIVERSITY OF IOWA
+  - Amount obligated: $184,007,564
+  - Period: 2018-03-05 → 2026-10-24
+  - Place: IA
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[ENGINEERING, INTEGRATION, MODELING & SIMULATION, AND CYBER SECURITY FOR LEADING EDGE TRAINING FOR NAVAL SURFACE WARFARE ](https://www.usaspending.gov/award/CONT_AWD_FA807521F0042_9700_FA807518D0002_9700/)** `$178,451,126` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA807521F0042_9700_FA807518D0002_9700/
+  - Award ID: FA807521F0042
+  - Generated ID: CONT_AWD_FA807521F0042_9700_FA807518D0002_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: HII MISSION TECHNOLOGIES CORP
+  - Amount obligated: $178,451,126
+  - Period: 2021-05-21 → 2026-01-31
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF MOBILITY AIR FORCES DISTRIBUTED MISSION OPERATIONS (MAF DMO)](https://www.usaspending.gov/award/CONT_AWD_0002_9700_FA862115D6278_9700/)** `$158,100,120` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_0002_9700_FA862115D6278_9700/
+  - Award ID: 0002
+  - Generated ID: CONT_AWD_0002_9700_FA862115D6278_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "damage control, simulation")
+  - Recipient: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  - Amount obligated: $158,100,120
+  - Period: 2016-09-29 → 2019-09-28
+  - Place: VA
+  - Awarder: Department of Defense / Defense Contract Management Agency
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "damage control, simulation"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[AMDR BASIC CONTRACT AWARD FOR EMD AND EXERCISE OF ENHANCED DATA RIGHTS CLIN](https://www.usaspending.gov/award/CONT_AWD_N0002414C5315_9700_-NONE-_-NONE-/)** `$1,671,263,972` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N0002414C5315_9700_-NONE-_-NONE-/
+  - Award ID: N0002414C5315
+  - Generated ID: CONT_AWD_N0002414C5315_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $1,671,263,972
+  - Period: 2013-10-10 → 2026-01-30
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DYNAMIC AND EVOLVING FEDERAL ENTERPRISE NETWORK DEFENSE GROUP A DEFEND A  OPTION EXERCISE AND TRANSFER FROM PIID 47QFCA1](https://www.usaspending.gov/award/CONT_AWD_47QFRA19F0011_4732_GS00Q09BGD0020_4735/)** `$708,253,080` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QFRA19F0011_4732_GS00Q09BGD0020_4735/
+  - Award ID: 47QFRA19F0011
+  - Generated ID: CONT_AWD_47QFRA19F0011_4732_GS00Q09BGD0020_4735
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: CACI, INC. - FEDERAL
+  - Amount obligated: $708,253,080
+  - Period: 2019-05-08 → 2024-04-30
+  - Place: VA
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: Department of Homeland Security / Cybersecurity and Infrastructure Security Agency
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS AWARD IS FOR THE C5ISR, EXERCISES, OPERATIONS, AND INFORMATION SERVICES (CEOIS) TASK ORDER IS TO PRO](https://www.usaspending.gov/award/CONT_AWD_47QFCA21F0042_4732_GS00Q14OADU127_4732/)** `$556,853,906` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QFCA21F0042_4732_GS00Q14OADU127_4732/
+  - Award ID: 47QFCA21F0042
+  - Generated ID: CONT_AWD_47QFCA21F0042_4732_GS00Q14OADU127_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: PARSONS GOVERNMENT SERVICES INC.
+  - Amount obligated: $556,853,906
+  - Period: 2021-04-21 → 2026-10-20
+  - Place: DC
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: Department of Defense / Immediate Office of the Secretary of Defense
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[MEDICAL DISABILITY EXAMINATIONS (MDES) UNDER SECTION 504 OF THE VETERANS BENEFITS IMPROVEMENTS ACT OF 1996 (PUBLIC LAW 1](https://www.usaspending.gov/award/CONT_AWD_36C10X22N0183_3600_36C10X19D0005_3600/)** `$436,626,628` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_36C10X22N0183_3600_36C10X19D0005_3600/
+  - Award ID: 36C10X22N0183
+  - Generated ID: CONT_AWD_36C10X22N0183_3600_36C10X19D0005_3600
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: QTC MEDICAL SERVICES INC
+  - Amount obligated: $436,626,628
+  - Period: 2022-10-01 → 2023-09-30
+  - Place: CA
+  - Awarder: Department of Veterans Affairs / Department of Veterans Affairs
+  - Funder: Department of Veterans Affairs / Department of Veterans Affairs
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF OPERATION AND MAINTENANCE OF THE COMBINED TACTICAL TRAINING RANGES IN AT MILITARY FACILITIES AND RANGES, IN](https://www.usaspending.gov/award/CONT_AWD_J101_9700_N0017804D4042_9700/)** `$371,351,995` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_J101_9700_N0017804D4042_9700/
+  - Award ID: J101
+  - Generated ID: CONT_AWD_J101_9700_N0017804D4042_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: AMENTUM SERVICES, INC.
+  - Amount obligated: $371,351,995
+  - Period: 2014-04-01 → 2019-09-30
+  - Place: MD
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::CT::IGF  EXERCISE OPTIONS, NEW TASK ORDER NUMBER REQUIRED FOR ADMINISTRATIVE PURPOSES AS 0037 RAN OUT OF ACRNS.](https://www.usaspending.gov/award/CONT_AWD_0038_9700_W31P4Q05A0031_9700/)** `$340,712,643` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_0038_9700_W31P4Q05A0031_9700/
+  - Award ID: 0038
+  - Generated ID: CONT_AWD_0038_9700_W31P4Q05A0031_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: SCIENCE APPLICATIONS INTERNATIONAL CORPORATION
+  - Amount obligated: $340,712,643
+  - Period: 2015-07-10 → 2018-08-20
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[EXERCISE OPTION YEAR 2 FOR FA8721-09-C-0002](https://www.usaspending.gov/award/CONT_AWD_FA872111C0001_9700_-NONE-_-NONE-/)** `$324,034,335` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA872111C0001_9700_-NONE-_-NONE-/
+  - Award ID: FA872111C0001
+  - Generated ID: CONT_AWD_FA872111C0001_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: THE MITRE CORPORATION
+  - Amount obligated: $324,034,335
+  - Period: 2010-10-01 → 2011-09-30
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF   MITRE EXERCISE OF OPTION YEAR 2](https://www.usaspending.gov/award/CONT_AWD_FA870216C0001_9700_-NONE-_-NONE-/)** `$303,401,041` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA870216C0001_9700_-NONE-_-NONE-/
+  - Award ID: FA870216C0001
+  - Generated ID: CONT_AWD_FA870216C0001_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: THE MITRE CORPORATION
+  - Amount obligated: $303,401,041
+  - Period: 2015-10-01 → 2016-09-30
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[AWARD FISCAL YEAR 2017 120MM TANK TRAINING AMMUNITION REQUIREMENTS.  OPTIONS FOR FISCAL YEAR 2018 THROUGH FISCAL YEAR 20](https://www.usaspending.gov/award/CONT_AWD_W52P1J17C0024_9700_-NONE-_-NONE-/)** `$294,018,407` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W52P1J17C0024_9700_-NONE-_-NONE-/
+  - Award ID: W52P1J17C0024
+  - Generated ID: CONT_AWD_W52P1J17C0024_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: GENERAL DYNAMICS ORDNANCE AND TACTICAL SYSTEMS, INC.
+  - Amount obligated: $294,018,407
+  - Period: 2017-03-29 → 2023-10-17
+  - Place: FL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF MITRE EXERCISE OPTION YEAR 1](https://www.usaspending.gov/award/CONT_AWD_FA870215C0001_9700_-NONE-_-NONE-/)** `$293,411,696` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA870215C0001_9700_-NONE-_-NONE-/
+  - Award ID: FA870215C0001
+  - Generated ID: CONT_AWD_FA870215C0001_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: THE MITRE CORPORATION
+  - Amount obligated: $293,411,696
+  - Period: 2014-10-01 → 2015-09-30
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF EXERCISE OF OPTION YEAR 4 FOR THE MITRE CONTRACT](https://www.usaspending.gov/award/CONT_AWD_FA870213C0001_9700_-NONE-_-NONE-/)** `$290,158,573` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_FA870213C0001_9700_-NONE-_-NONE-/
+  - Award ID: FA870213C0001
+  - Generated ID: CONT_AWD_FA870213C0001_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: THE MITRE CORPORATION
+  - Amount obligated: $290,158,573
+  - Period: 2012-10-01 → 2013-09-30
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Air Force
+  - Funder: Department of Defense / Department of the Air Force
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF THIS MODIFICATION IS TO EXERCISE CY 17 ENGINEERING SERVICES](https://www.usaspending.gov/award/CONT_AWD_W31P4Q17C0073_9700_-NONE-_-NONE-/)** `$246,075,720` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W31P4Q17C0073_9700_-NONE-_-NONE-/
+  - Award ID: W31P4Q17C0073
+  - Generated ID: CONT_AWD_W31P4Q17C0073_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: RAYTHEON COMPANY
+  - Amount obligated: $246,075,720
+  - Period: 2017-02-01 → 2019-11-30
+  - Place: MA
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF  THE CONTRACTOR SHALL PROVIDE WORLDWIDE SYSTEMS FIELD SOFTWARE SUPPORT FOR THE SOFTWARE ENGINEERING CENTER ](https://www.usaspending.gov/award/CONT_AWD_KX04_9700_W15P7T12DE005_9700/)** `$240,056,142` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_KX04_9700_W15P7T12DE005_9700/
+  - Award ID: KX04
+  - Generated ID: CONT_AWD_KX04_9700_W15P7T12DE005_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: MANTECH ADVANCED SYSTEMS INTERNATIONAL, INC.
+  - Amount obligated: $240,056,142
+  - Period: 2016-09-23 → 2022-09-22
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[TEST, EXERCISE AND WARGAMES SUPPORT IGF::OT::IGF](https://www.usaspending.gov/award/CONT_AWD_HQ014716C0034_9700_-NONE-_-NONE-/)** `$233,761,711` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_HQ014716C0034_9700_-NONE-_-NONE-/
+  - Award ID: HQ014716C0034
+  - Generated ID: CONT_AWD_HQ014716C0034_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: AXIENT LLC
+  - Amount obligated: $233,761,711
+  - Period: 2016-05-25 → 2021-10-21
+  - Place: AL
+  - Awarder: Department of Defense / Missile Defense Agency
+  - Funder: Department of Defense / Missile Defense Agency
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::OT::IGF NASA, THROUGH THE SPACE TECHNOLOGY MISSION DIRECTORATE (STMD,) SEEKS TO DEMONSTRATE AN ADVANCED SOLAR ELECT](https://www.usaspending.gov/award/CONT_AWD_NNC16CA21C_8000_-NONE-_-NONE-/)** `$232,928,992` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_NNC16CA21C_8000_-NONE-_-NONE-/
+  - Award ID: NNC16CA21C
+  - Generated ID: CONT_AWD_NNC16CA21C_8000_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: AEROJET ROCKETDYNE, INC.
+  - Amount obligated: $232,928,992
+  - Period: 2016-05-16 → 2027-08-04
+  - Place: WA
+  - Awarder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Funder: National Aeronautics and Space Administration / National Aeronautics and Space Administration
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[MEDICAL DISABILITY EXAMINATIONS (MDES) UNDER SECTION 504 OF THE VETERANS BENEFITS IMPROVEMENTS ACT OF 1996 (PUBLIC LAW 1](https://www.usaspending.gov/award/CONT_AWD_36C10X22N0184_3600_36C10X19D0008_3600/)** `$229,886,904` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_36C10X22N0184_3600_36C10X19D0008_3600/
+  - Award ID: 36C10X22N0184
+  - Generated ID: CONT_AWD_36C10X22N0184_3600_36C10X19D0008_3600
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: QTC MEDICAL SERVICES INC
+  - Amount obligated: $229,886,904
+  - Period: 2022-10-01 → 2023-09-30
+  - Place: CA
+  - Awarder: Department of Veterans Affairs / Department of Veterans Affairs
+  - Funder: Department of Veterans Affairs / Department of Veterans Affairs
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[DB REPAIR BERTHS 40 AND 41, NORFOLK NAVAL SHIPYARD, PORTSMOUTH, VA](https://www.usaspending.gov/award/CONT_AWD_N4008522F5863_9700_N6247019D8022_9700/)** `$229,651,456` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N4008522F5863_9700_N6247019D8022_9700/
+  - Award ID: N4008522F5863
+  - Generated ID: CONT_AWD_N4008522F5863_9700_N6247019D8022_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: AECOM TECHNICAL SERVICES, INC.
+  - Amount obligated: $229,651,456
+  - Period: 2022-07-29 → 2027-03-29
+  - Place: VA
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[VA ENDPOINTS - BASE AWARD WITH OPTIONS EXERCISED AT AWARD.](https://www.usaspending.gov/award/CONT_AWD_36C10B22F0310_3600_NNG15SD34B_8000/)** `$229,014,314` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_36C10B22F0310_3600_NNG15SD34B_8000/
+  - Award ID: 36C10B22F0310
+  - Generated ID: CONT_AWD_36C10B22F0310_3600_NNG15SD34B_8000
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: MINBURN TECHNOLOGY GROUP, LLC
+  - Amount obligated: $229,014,314
+  - Period: 2022-09-16 → 2025-07-31
+  - Place: VA
+  - Awarder: Department of Veterans Affairs / Department of Veterans Affairs
+  - Funder: Department of Veterans Affairs / Department of Veterans Affairs
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[AWARD FISCAL YEAR 2017 120MM TANK TRAINING AMMUNITION REQUIREMENTS.  OPTIONS FOR FISCAL YEARS 18-21 REQUIREMENTS AVAILAB](https://www.usaspending.gov/award/CONT_AWD_W52P1J17C0025_9700_-NONE-_-NONE-/)** `$222,947,802` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_W52P1J17C0025_9700_-NONE-_-NONE-/
+  - Award ID: W52P1J17C0025
+  - Generated ID: CONT_AWD_W52P1J17C0025_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: ALLIANT TECHSYSTEMS OPERATIONS LLC
+  - Amount obligated: $222,947,802
+  - Period: 2017-03-29 → 2024-06-03
+  - Place: MN
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[IGF::CT::IGF EXERCISE OPTION](https://www.usaspending.gov/award/CONT_AWD_0035_9700_W31P4Q05A0031_9700/)** `$198,739,846` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_0035_9700_W31P4Q05A0031_9700/
+  - Award ID: 0035
+  - Generated ID: CONT_AWD_0035_9700_W31P4Q05A0031_9700
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Norfolk Naval Shipyard, exercise")
+  - Recipient: SCIENCE APPLICATIONS INTERNATIONAL CORPORATION
+  - Amount obligated: $198,739,846
+  - Period: 2013-08-29 → 2017-01-31
+  - Place: AL
+  - Awarder: Department of Defense / Department of the Army
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "Norfolk Naval Shipyard, exercise"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[P-381 MULTI-MISSION DRY DOCK #1, PORTSMOUTH NAVAL SHIPYARD, KITTERY, ME](https://www.usaspending.gov/award/CONT_AWD_N4008521C0077_9700_-NONE-_-NONE-/)** `$1,775,745,878` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_N4008521C0077_9700_-NONE-_-NONE-/
+  - Award ID: N4008521C0077
+  - Generated ID: CONT_AWD_N4008521C0077_9700_-NONE-_-NONE-
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "Portsmouth Naval Shipyard, training")
+  - Recipient: 381 CONSTRUCTORS
+  - Amount obligated: $1,775,745,878
+  - Period: 2021-08-13 → 2029-03-30
+  - Place: ME
+  - Awarder: Department of Defense / Department of the Navy
+  - Funder: Department of Defense / Department of the Navy
+  - Reason: matched search "Portsmouth Naval Shipyard, training"
+  - Added: 2026-05-26T09:51:44
+
+- [ ] **[THE PURPOSE OF THIS AWARD IS TO PROVIDE PLANS, OPERATIONS, LOGISTICS, ENGAGEMENT, TRAINING, EXERCISE, AND ASSESSMENT SUP](https://www.usaspending.gov/award/CONT_AWD_47QFCA20F0002_4732_GS00Q14OADU121_4732/)** `$194,034,792` — usaspending.gov
+  - URL: https://www.usaspending.gov/award/CONT_AWD_47QFCA20F0002_4732_GS00Q14OADU121_4732/
+  - Award ID: 47QFCA20F0002
+  - Generated ID: CONT_AWD_47QFCA20F0002_4732_GS00Q14OADU121_4732
+  - Source type: usa_spending
+  - Found by: usaspending.gov (query: "SRF-JRMC, exercise")
+  - Recipient: CACI NSS, LLC
+  - Amount obligated: $194,034,792
+  - Period: 2020-01-29 → 2026-01-28
+  - Place: 
+  - Awarder: General Services Administration / Federal Acquisition Service
+  - Funder: Department of Defense / Department of the Army
+  - Reason: matched search "SRF-JRMC, exercise"
+  - Added: 2026-05-26T09:51:44
 

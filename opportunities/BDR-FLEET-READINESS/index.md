@@ -26,10 +26,10 @@ next_action: Triage the second-pass inbox (87 new candidates added 2026-05-23). 
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
 auto_find: true    # resumed 2026-05-22 after readability + workflow improvements landed
-last_find_run: 2026-05-25T08:55:25
+last_find_run: 2026-05-26T09:51:44
 last_find_count_ai: 0
 last_find_count_sam: 0
-last_find_count_usa: 0
+last_find_count_usa: 125
 ---
 
 # Battle Damage Repair (BDR) modeling integration into multidomain fleet training and PAE-IO repair-capacity planning — Index

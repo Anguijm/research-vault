@@ -14,3 +14,5 @@
 [2026-05-24T09:34:53] [run summary] 1 opps processed, 38 new candidates queued
 [2026-05-25T08:55:25] BDR-FLEET-READINESS: 0 new, 0 deduped, 14 errors
 [2026-05-25T08:55:25] [run summary] 1 opps processed, 0 new candidates queued
+[2026-05-26T09:51:44] BDR-FLEET-READINESS: 125 new, 157 deduped, 0 errors
+[2026-05-26T09:51:44] [run summary] 1 opps processed, 125 new candidates queued
