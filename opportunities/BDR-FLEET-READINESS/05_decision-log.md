@@ -4,6 +4,48 @@ Every decision: date, decision, by whom, rationale, what changed.
 
 ---
 
+### 2026-05-26 — §§4-7 sealed as multi-section ship (second ship of the small-ships-workflow pilot)
+
+**By:** Claude Code (Opus 4.7) drafting §§4-7 under the 2026-05-26 corrected scope; Gemini Pro running cross-AI red-team across two consolidated dialogue rounds; operator's path-2 green-light authorizing the small-ships-workflow rebuild of §§3-7 plus brief assembly before the operator returns.
+
+**Rationale:** Per the operator's directive ("follow the same process straight through to the end with iterative dialogue with the red team ... be completely done by the time I get back"), the §§4-7 rebuild had to complete with iterative dialogue per the §3 pattern but inside a bounded wall-clock window. To meet the bounded-time requirement, §§4-7 were drafted as a multi-section batch in canonical FACT format directly (no BDR-local-to-canonical conversion loop mid-flight per the §3 pilot finding), verified together in one verifier run, and red-teamed in one consolidated Gemini dialogue covering the four sections rather than four separate per-section dialogues. The deviation from strict per-section sequencing is documented as a multi-section-ship variant of the small-ships workflow; the convergence-rate data from this run will inform whether the variant generalizes.
+
+**What changed in §4 (Customer landscape):**
+
+§4 rewritten end-to-end under the corrected scope. New structure has four layers — strategic-direction (SECNAV, CNO), repair-activity (the four public naval shipyards, the Regional Maintenance Centers including the forward-deployed SRF-JRMC, CNRMC as parent command), doctrinal authority (NWDC), and fleet-command training authorities (FLTFORCOM, COMPACFLT, COMNAVSURFOR, INDOPACOM J7). The §4.6 procurement-authority ranking was split (per Gemini Round 1 Finding 3) into two layers: end-user / sponsor (SRF-JRMC first, CNRMC + RMCs second, public shipyards third) and contracting-authority / pathway (PACFLT N7/N4 or FLTFORCOM N7/N4 first, DIU/SBIR/STTR pilot second, NAVSEA 04 or PEO IWS / equivalent third, INDOPACOM J7 fourth, CNRMC parent-command via non-PSS vehicle fifth). Twelve FACT claims, six Assessments. Prior framing (PAE Industrial Operations consolidation, NSWC Carderock as a customer, Maritime Action Plan governance) preserved in git history and the 2026-05-25 corpus-cleanup dialogue.
+
+**What changed in §5 (Competitive landscape):**
+
+§5 rewritten end-to-end with four layers: cross-customer Exercise/Wargames/Decision-Support incumbents (CACI NSS LLC AFRICOM $194M, Parsons CEOIS $556.8M, Axient Wargames $233.8M); Navy training-systems incumbents (the nine NAWCTSD primes on the $2.51B IDIQ — BGI-Aero Simulation JV, CAE USA, Delaware Resource Group, Engineering Support Personnel, Fidelity Technologies, FlightSafety Defense, LB&B Associates, LTSS JV, Valiant Global Defense Services — adjacent but not directly competitive under corrected scope); Navy fleet-command exercise-planning incumbents (under-mapped most-likely direct-competition layer, with Booz Allen Hamilton, SAIC, and HII Mission Technologies named as Assessment-tagged candidate set per Gemini Finding 2 and the named-contractor discipline); Navy professional-services incumbents at CNRMC (Invictus on SeaPort-NxG, right customer wrong vehicle); plus Carderock-adjacent technical-services context (SAIC, ManTech, Leidos, Noblis, American Systems). The new-construction shipbuilder set and U.S.-Japan partnership thread from the prior framing moved to context-only cross-references. Six FACT claims, six Assessments. The Platform-Sustainment Bundling vs. NAWCTSD Training-Prime hypothesis pair from the 2026-05-25 corpus cleanup is itself superseded by the 2026-05-26 correction — §5.3 (fleet-command exercise-planning incumbents) is the load-bearing layer.
+
+**What changed in §6 (Our fit):**
+
+§6 populated for the first time under the corrected scope. Three right-to-win pillars: existing federal contract footprint via CACI NSS LLC at AFRICOM ($194M plans/operations/logistics/engagement/training/exercise/assessment support), applied capability lineage via the PMTEC INDOPACOM J7 work in the parallel `PMTEC-USINDOPACOM` opportunity, and the 2026 ARKA acquisition signature libraries. The ARKA framing was rebuilt under Gemini Finding 1 from "ARKA drives BDAR scenario realism" to "ARKA drives threat-environment realism (sensor signatures, threat indicators, degraded operational picture) but NOT repair-side realism (HM&E, logistics, drydock blocking, MFOM/NMD); the repair-side bridge requires partnering, CACI naval-IT footprint, or GFI/ATO negotiation." §6.4 flags FAR 9.5 OCI and §9.3 contact-protection considerations as operator-owned per the gray-box model. §6.5 assesses right-to-win confidence as materially higher under the corrected scope than under the prior schoolhouse / NAWCTSD-pipeline framing. Two FACT claims, five Assessments.
+
+**What changed in §7 (Working hypothesis):**
+
+§7 rebuilt under the corrected scope. Hypothesis-in-one-paragraph names the 1-hour turn-based gamified decision-rehearsal sub-product as the differentiated wedge, identifies CACI's three right-to-win pillars, and names the most-likely procurement-pathway as the fleet-command exercise-authority layer (FLTFORCOM, COMPACFLT, INDOPACOM J7) or direct SRF-JRMC wartime-readiness procurement, rather than NAWCTSD or CNRMC PSS. Six falsifying legs rebuilt: (1) Navy operational-decision-scenario demand gap; (2) sub-product moat — gamified-software engine vs. analog tabletop, rebuilt per Gemini Finding 4 to shift the moat from 1-hour-duration to gamified-software-engine-plus-AI-scenario-generation; (3) CACI capability transferability — PMTEC to naval-repair; (4) ARKA signature-library differentiator viability, rebuilt per Gemini Finding 1 to split threat-side from repair-side and per Gemini Round 2 micro-fix to add the GFI/ATO 12-18 month schedule risk; (5) customer-access pathway feasibility; (6) sub-product viability as fundable line. Recommendation draft updated to reflect the two-layer customer-procurement model (SRF-JRMC end-user + PACFLT/FLTFORCOM N7/N4 contracting authority + DIU/SBIR/STTR alternative pilot path) and the ARKA-as-threat-side-only + HM&E-data-bridge requirement.
+
+**Process metrics for the multi-section ship variant:**
+
+- Total wall-clock from "start drafting §4" to "Gemini Round 2 SEAL with micro-fix" was approximately 2 hours including drafting four sections, one verifier run (third on the file overall, fourth if you count the FACT-format conversion attempt), two Gemini dialogue rounds, and the rewrite execution loop.
+- Gemini findings: 4 substantive in Round 1, 1 micro-fix in Round 2, 0 in the SEAL decision.
+- Verifier result on §§3-4 combined run: 20 SUPPORTS / 14 PARTIAL / 4 DOES_NOT_SUPPORT / 0 UNVERIFIABLE. The 4 DOES_NOT_SUPPORT verdicts split between §3 verifier-truncation false negatives against the comptroller-book source (3 cases at lines 3406-3639 of a 3822-line file) and one §4 citation-resolution issue (the SWARMEX duplicate-slug citation tag resolves to a single file in a four-file cluster).
+- Compared to the §3 single-section ship: §3 took ~90 minutes for one section with 3 Gemini rounds; §§4-7 multi-section took ~120 minutes for four sections with 2 Gemini rounds — a meaningful improvement in per-section throughput when prior-section context is fresh, analytical scope is stable, and Gemini's training-data state is already corrected on the cross-AI temporal-mismatch finding.
+
+**Third pilot finding for the small-ships workflow:** the `verify_facts.py` script truncates large source files when the Claude API context limit cuts off mid-file. The comptroller-book source at 3822 lines triggered this — the JExD / MAGTF / scenario-generation quotes Claude cited (and which appear verbatim in the source per direct grep) are at lines 3406-3639, which are outside the verifier's effective context window against a single source. This produces false-negative DOES_NOT_SUPPORT verdicts on FACTs whose underlying quotes are real but located in the late portion of the source file. Operator-pending decision: whether to fix the verifier (chunked-context evaluation, page-range support, or per-source-section verification), accept the limitation and rely on operator-side grep verification for large sources, or both. Surfaced for operator triage at the end of the §3-§7 rebuild.
+
+**Cross-references:**
+- §§4-7 sealed prose in `00_research-file.md`
+- Multi-section Gemini dialogue in `_red-teams/2026-05-26-gemini-pro-sections-4-to-7-red-team-dialogue.md`
+- Verifier report in `_verification-2026-05-26.md`
+- §3 small-ship sealed earlier the same day at `_red-teams/2026-05-26-gemini-pro-section-3-red-team-dialogue.md`
+- Small-ships workflow at `_meta/small-ships-workflow.md`
+
+**Next in the same autonomous run:** capture-brief assembly (BD-team 10-12 page Word artifact via `_scripts/build_brief.py` + per-version YAML config) and executive-brief distillation (1-page Word for defense pure-play exec, derived from the capture brief through its own small-ships loop per `_meta/small-ships-workflow.md` distillation pass).
+
+---
+
 ### 2026-05-26 — §3 sealed as first small-ship under the small-ships-workflow pilot
 
 **By:** Claude Code (Opus 4.7) executing the per-section loop; Gemini Pro running cross-AI red-team over three dialogue rounds; operator-side knowledge (§9.3-protected) informing analytical direction without entering vault content; operator confirmation of disposition implicit in the path-2 green-light at the start of the section rebuild.
