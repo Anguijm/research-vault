@@ -51,7 +51,7 @@ VAULT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR))
 load_dotenv(SCRIPT_DIR / ".env")
 
-from lib import sam_gov
+from lib import sam_gov as sam_gov_lib
 
 CONFIG_PATH = VAULT_ROOT / "_meta" / "caci-discovery-config.yaml"
 SEEDS_INBOX = VAULT_ROOT / "_meta" / "seeds-inbox.md"
@@ -113,41 +113,125 @@ def _fingerprint(candidate: dict) -> str:
 
 def _query_sam_gov(lookback_days: int) -> list[dict]:
     """Query SAM.gov for pre-solicitation, sources-sought, RFI, special notice,
-    industry day notices in the lookback window."""
+    industry day notices in the lookback window.
+
+    Routes every API call through `lib/sam_gov.py::execute_query` so the lib's
+    2 req/sec throttle, 900/1000 daily safety-pause, and 429 retry-with-backoff
+    are applied automatically. We do NOT issue direct `requests.get()` calls
+    against the SAM.gov endpoint — that bypasses rate limiting and produces
+    429 storms.
+    """
     api_key = os.environ.get("SAM_GOV_API_KEY", "")
     if not api_key:
         print("  WARN: SAM_GOV_API_KEY not set — skipping SAM.gov source.")
         return []
 
+    # Quota check before any calls — fail fast if today's quota is exhausted.
+    quota = sam_gov_lib.load_quota()
+    used = quota.get("requests_today", 0)
+    if sam_gov_lib.quota_paused():
+        print(f"  SAM.gov DAILY QUOTA PAUSE — used {used}/{sam_gov_lib.DAILY_LIMIT} today (safety pause at {sam_gov_lib.SAFETY_PAUSE_AT}).")
+        print(f"  Resumes 00:00 UTC tomorrow. Skipping SAM.gov source for this run.")
+        return []
+    remaining_today = sam_gov_lib.DAILY_LIMIT - used
+    print(f"  SAM.gov quota: {used}/{sam_gov_lib.DAILY_LIMIT} used today ({remaining_today} remaining, polite throttle at {sam_gov_lib.RATE_LIMIT_PER_SEC} req/sec).")
+
+    # Consolidate all four notice types into a single API call via
+    # comma-separated `ptype` codes. SAM.gov accepts multi-value ptype and
+    # returns notices across all matching types in one response. This cuts
+    # our daily SAM.gov spend by 4x — critical for non-federal API keys
+    # capped at 10 requests/day.
     notice_types = ["Sources Sought", "Special Notice", "Presolicitation", "Combined Synopsis/Solicitation"]
-    posted_from = (date.today() - timedelta(days=lookback_days)).strftime("%m/%d/%Y")
-    posted_to = date.today().strftime("%m/%d/%Y")
+    ptype_codes = [_sam_ptype_code(nt) for nt in notice_types if _sam_ptype_code(nt)]
+    ptype_combined = ",".join(ptype_codes)
+    params = {
+        "ptype": ptype_combined,
+        "deptname": "DEPT OF DEFENSE",
+    }
+    entry = {"params": params}
+    full_params = sam_gov_lib.parse_search_entry(entry, lookback_days)
+    candidates: list[dict] = []
+    try:
+        # max_candidates=1000 because SAM.gov caps at 1000 per call and we
+        # only get one call per run for non-federal tier; pull as many as
+        # the API will return so the dedup + ranker has a full window.
+        notices = sam_gov_lib.execute_query(full_params, api_key, max_candidates=1000)
+    except sam_gov_lib.SamGovKeyError as e:
+        print(f"  SAM.gov KEY ERROR — {e}; aborting SAM.gov source for this run.")
+        return candidates
+    except Exception as e:
+        print(f"  SAM.gov error: {e}")
+        return candidates
+    print(f"  SAM.gov [combined ptype={ptype_combined}]: {len(notices)} notices in one API call")
+    for n in notices:
+        # The lib's normalized notice carries `notice_type` from the API
+        # response (e.g., "Sources Sought", "Special Notice"). Map it back
+        # to our actionability labels.
+        nt_label = _sam_label_from_lib_notice_type(n.get("notice_type", ""))
+        candidates.append(_normalize_sam_notice_from_lib(n, nt_label))
 
-    candidates = []
-    for notice_type in notice_types:
-        params = {
-            "api_key": api_key,
-            "limit": 100,
-            "postedFrom": posted_from,
-            "postedTo": posted_to,
-            "ptype": _sam_ptype_code(notice_type),
-            "deptname": "DEPT OF DEFENSE",
-        }
-        try:
-            url = "https://api.sam.gov/opportunities/v2/search"
-            r = requests.get(url, params=params, timeout=60)
-            if r.status_code != 200:
-                print(f"  SAM.gov [{notice_type}] HTTP {r.status_code} — skipping")
-                continue
-            data = r.json()
-        except requests.RequestException as e:
-            print(f"  SAM.gov [{notice_type}] network error: {e}")
-            continue
-
-        for n in data.get("opportunitiesData", []) or []:
-            candidates.append(_normalize_sam_notice(n, notice_type))
-
+    # Post-call quota status
+    quota_after = sam_gov_lib.load_quota()
+    used_after = quota_after.get("requests_today", 0)
+    print(f"  SAM.gov quota after this run: {used_after}/{sam_gov_lib.DAILY_LIMIT} used today ({sam_gov_lib.DAILY_LIMIT - used_after} remaining).")
     return candidates
+
+
+def _sam_label_from_lib_notice_type(api_notice_type: str) -> str:
+    """Map a SAM.gov API notice-type string back to our canonical
+    actionability label. The API returns full names (e.g., 'Sources Sought',
+    'Special Notice') matching our labels, but normalize for safety."""
+    api_lower = (api_notice_type or "").lower()
+    if "sources sought" in api_lower:
+        return "Sources Sought"
+    if "special notice" in api_lower:
+        return "Special Notice"
+    if "presolicitation" in api_lower:
+        return "Presolicitation"
+    if "combined synopsis" in api_lower or "combined solicitation" in api_lower:
+        return "Combined Synopsis/Solicitation"
+    if "request for information" in api_lower or api_lower == "rfi":
+        return "Request for Information"
+    if "industry day" in api_lower:
+        return "Industry Day"
+    if "solicitation" in api_lower or "rfp" in api_lower:
+        return "Solicitation"
+    if "award" in api_lower:
+        return "Award Notice"
+    return api_notice_type or "Sources Sought"
+
+
+def _normalize_sam_notice_from_lib(n: dict, notice_type_label: str) -> dict:
+    """Normalize a sam_gov_lib-returned notice dict into our candidate shape.
+
+    The lib's `_normalize_notice` returns a richer structured dict than the
+    raw API payload. We map its fields to the find_seeds candidate shape.
+    Note: the lib does NOT fetch the description text (that's a separate
+    `fetch_description` call against the noticedesc endpoint that would
+    double our SAM.gov API call count). For v1 we leave `snippet` empty and
+    rely on the title + customer + notice type for ranking. The raw API
+    payload is preserved in `n["raw"]` for fields the lib doesn't surface.
+    """
+    naics_list = n.get("naics") or []
+    naics = naics_list[0] if isinstance(naics_list, list) and naics_list else ""
+    raw = n.get("raw") or {}
+    psc = (raw.get("classificationCode") or "").strip()
+    return {
+        "source": "sam_gov",
+        "notice_id": n.get("notice_id", ""),
+        "title": n.get("title", ""),
+        "url": n.get("url") or f"https://sam.gov/opp/{n.get('notice_id', '')}/view",
+        "notice_type": notice_type_label,
+        "department": n.get("department", ""),
+        "subtier": n.get("subtier", ""),
+        "office": n.get("office", ""),
+        "naics": naics,
+        "psc": psc,
+        "posted": n.get("posted_date", ""),
+        "response_deadline": n.get("response_deadline", ""),
+        "set_aside": n.get("set_aside", ""),
+        "snippet": "",  # not fetched by default; clicking the URL pulls the full notice
+    }
 
 
 def _sam_ptype_code(notice_type: str) -> str:
@@ -161,39 +245,6 @@ def _sam_ptype_code(notice_type: str) -> str:
         "Request for Information": "r",
     }
     return mapping.get(notice_type, "")
-
-
-def _normalize_sam_notice(n: dict, notice_type_label: str) -> dict:
-    """Normalize a SAM.gov notice payload into our candidate dict."""
-    title = (n.get("title") or "").strip()
-    notice_id = n.get("noticeId") or ""
-    naics = n.get("naicsCode") or ""
-    psc = n.get("classificationCode") or ""
-    department = (n.get("department") or "").strip()
-    subtier = (n.get("subtier") or "").strip()
-    office = (n.get("office") or "").strip()
-    posted = n.get("postedDate", "")
-    response_deadline = n.get("responseDeadLine", "") or n.get("archiveDate", "")
-    set_aside = n.get("typeOfSetAsideDescription") or n.get("typeOfSetAside") or ""
-    description = (n.get("description") or "")[:1500]
-    url = n.get("uiLink") or f"https://sam.gov/opp/{notice_id}/view"
-
-    return {
-        "source": "sam_gov",
-        "notice_id": notice_id,
-        "title": title,
-        "url": url,
-        "notice_type": notice_type_label,
-        "department": department,
-        "subtier": subtier,
-        "office": office,
-        "naics": naics,
-        "psc": psc,
-        "posted": posted,
-        "response_deadline": response_deadline,
-        "set_aside": set_aside,
-        "snippet": description,
-    }
 
 
 # ── Source 2: war.gov daily contract announcements ─────────────────────

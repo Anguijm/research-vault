@@ -27,8 +27,19 @@ QUOTA_FILE = VAULT_ROOT / "_meta" / "sam-quota.json"
 
 SAM_API_URL = "https://api.sam.gov/opportunities/v2/search"
 
-DAILY_LIMIT = 1000
-SAFETY_PAUSE_AT = 900
+# Tier-aware daily quota. SAM.gov publishes 1,000 req/day for federal-tier
+# API keys and 10 req/day for non-federal keys (as of 2026-05-30 per the
+# open.gsa.gov public-API documentation). Tier is set via the SAM_GOV_TIER
+# env variable, defaulting to "non_federal" (the safer assumption — if the
+# key is actually federal, the operator can set SAM_GOV_TIER=federal in
+# `_scripts/.env`). The lib's safety pause kicks in at 80-90% of cap.
+_TIER = os.environ.get("SAM_GOV_TIER", "non_federal").strip().lower()
+if _TIER == "federal":
+    DAILY_LIMIT = 1000
+    SAFETY_PAUSE_AT = 900
+else:
+    DAILY_LIMIT = 10
+    SAFETY_PAUSE_AT = 8
 RATE_LIMIT_PER_SEC = 2   # conservative; SAM.gov burst-throttles below 10/sec
 _MIN_INTERVAL = 1.0 / RATE_LIMIT_PER_SEC
 
