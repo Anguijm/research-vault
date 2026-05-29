@@ -1,0 +1,386 @@
+schema_version: 1
+last_full_update_utc: '2026-05-29T11:16:56Z'
+ranker_weights:
+  operator_team_layer_boost: 1.5
+  operator_team_extendable_boost: 1.3
+  directional_layer_boost: 1.2
+  baseline_layer_boost: 1.0
+  customer_signal: 0.35
+  work_type_match: 0.35
+  scale_signal: 0.15
+  actionability_window: 0.15
+  delivery_model_mismatch_penalty: 0.1
+actionability_logic:
+  high_priority:
+  - Sources Sought
+  - Special Notice
+  - Request for Information
+  - Industry Day
+  medium_priority:
+  - Pre-Solicitation
+  - Combined Synopsis/Solicitation
+  low_priority:
+  - Solicitation
+  - Award Notice
+thresholds:
+  min_score_to_promote: 0.75
+  min_score_to_monitor: 0.5
+  precedent_scale_min_usd: 10000000
+  prime_scale_min_usd: 50000000
+baseline_caci_footprint:
+  derivation_notes: 'Rebuilt periodically from a USAspending pass on the listed CACI
+
+    entities (top NAICS / PSC / awarding-agency aggregations) plus a
+
+    scrape of caci.com/contracts. Operator does NOT edit by hand.
+
+    '
+  last_derived_utc: '2026-05-29T11:16:21Z'
+  caci_entities:
+  - CACI NSS, LLC
+  - CACI Enterprise Solutions, LLC
+  customer_orgs:
+  - label: Defense Logistics Agency
+    award_count: 49
+    share_pct: 24.5
+  - label: Department of the Air Force
+    award_count: 36
+    share_pct: 18.0
+  - label: Federal Acquisition Service
+    award_count: 18
+    share_pct: 9.0
+  - label: Office of Procurement Operations
+    award_count: 17
+    share_pct: 8.5
+  - label: Department of the Army
+    award_count: 17
+    share_pct: 8.5
+  - label: Department of the Navy
+    award_count: 9
+    share_pct: 4.5
+  - label: U.S. Special Operations Command
+    award_count: 8
+    share_pct: 4.0
+  - label: Defense Contract Management Agency
+    award_count: 7
+    share_pct: 3.5
+  - label: Defense Information Systems Agency
+    award_count: 5
+    share_pct: 2.5
+  - label: Federal Emergency Management Agency
+    award_count: 4
+    share_pct: 2.0
+  - label: Departmental Offices
+    award_count: 4
+    share_pct: 2.0
+  - label: Centers for Disease Control and Prevention
+    award_count: 4
+    share_pct: 2.0
+  - label: Cybersecurity and Infrastructure Security Agency
+    award_count: 8
+    share_pct: 4.0
+  - label: Office of the Chief Information Officer
+    award_count: 7
+    share_pct: 3.5
+  - label: Defense Health Agency
+    award_count: 6
+    share_pct: 3.0
+  work_types:
+  - label: 541512 — COMPUTER SYSTEMS DESIGN SERVICES
+    award_count: 88
+    share_pct: 44.0
+  - label: 541519 — OTHER COMPUTER RELATED SERVICES
+    award_count: 60
+    share_pct: 30.0
+  - label: 541330 — ENGINEERING SERVICES
+    award_count: 15
+    share_pct: 7.5
+  - label: 541990 — ALL OTHER PROFESSIONAL, SCIENTIFIC, AND TECHNICAL SERVICES
+    award_count: 15
+    share_pct: 7.5
+  - label: 561621 — SECURITY SYSTEMS SERVICES (EXCEPT LOCKSMITHS)
+    award_count: 6
+    share_pct: 3.0
+  - label: 541511 — CUSTOM COMPUTER PROGRAMMING SERVICES
+    award_count: 5
+    share_pct: 2.5
+  - label: 541712 — RESEARCH AND DEVELOPMENT IN THE PHYSICAL, ENGINEERING, AND LIFE SCIENCES (EXCEPT BIOTECHNOLOGY)
+    award_count: 4
+    share_pct: 2.0
+  - label: D307 — IT AND TELECOM- IT STRATEGY AND ARCHITECTURE
+    award_count: 31
+    share_pct: 15.5
+  - label: 'R499 — SUPPORT- PROFESSIONAL: OTHER'
+    award_count: 23
+    share_pct: 11.5
+  - label: DA01 — IT AND TELECOM - BUSINESS APPLICATION/APPLICATION DEVELOPMENT SUPPORT SERVICES (LABOR)
+    award_count: 23
+    share_pct: 11.5
+  - label: D399 — IT AND TELECOM- OTHER IT AND TELECOMMUNICATIONS
+    award_count: 19
+    share_pct: 9.5
+  - label: 'R425 — SUPPORT- PROFESSIONAL: ENGINEERING/TECHNICAL'
+    award_count: 18
+    share_pct: 9.0
+  - label: 'R408 — SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT'
+    award_count: 13
+    share_pct: 6.5
+  - label: 'DE01 — IT AND TELECOM - END USER: HELP DESK; TIER 1-2, WORKSPACE, PRINT, OUTPUT, PRODUCTIVITY TOOLS (LABOR)'
+    award_count: 9
+    share_pct: 4.5
+  - label: DF01 — IT AND TELECOM - IT MANAGEMENT SUPPORT SERVICES (LABOR)
+    award_count: 8
+    share_pct: 4.0
+  - label: D302 — IT AND TELECOM- SYSTEMS DEVELOPMENT
+    award_count: 5
+    share_pct: 2.5
+  - label: D321 — IT AND TELECOM- HELP DESK
+    award_count: 5
+    share_pct: 2.5
+  - label: D318 — IT AND TELECOM- INTEGRATED HARDWARE/SOFTWARE/SERVICES SOLUTIONS, PREDOMINANTLY SERVICES
+    award_count: 4
+    share_pct: 2.0
+  - label: 'R799 — SUPPORT- MANAGEMENT: OTHER'
+    award_count: 4
+    share_pct: 2.0
+  - label: D316 — IT AND TELECOM- TELECOMMUNICATIONS NETWORK MANAGEMENT
+    award_count: 4
+    share_pct: 2.0
+  - label: 7010 — ADPE SYSTEM CONFIGURATION
+    award_count: 4
+    share_pct: 2.0
+  vehicles:
+  - label: HHSN316201200009W
+    award_count: 18
+    share_pct: 9.0
+  - label: SP470917D0009
+    award_count: 14
+    share_pct: 7.0
+  - label: FA822417D0004
+    award_count: 14
+    share_pct: 7.0
+  - label: SP470121D8002
+    award_count: 13
+    share_pct: 6.5
+  - label: 70RTAC20A00000003
+    award_count: 12
+    share_pct: 6.0
+  - label: GS00Q14OADU121
+    award_count: 11
+    share_pct: 5.5
+  - label: GS00Q09BGD0037
+    award_count: 11
+    share_pct: 5.5
+  - label: SP470116D2001
+    award_count: 10
+    share_pct: 5.0
+  - label: W91QUZ12D0010
+    award_count: 7
+    share_pct: 3.5
+  - label: FA872622A0001
+    award_count: 6
+    share_pct: 3.0
+  - label: H9222211D0008
+    award_count: 5
+    share_pct: 2.5
+  - label: GS35F349CA
+    award_count: 4
+    share_pct: 2.0
+  - label: HC102808D2021
+    award_count: 4
+    share_pct: 2.0
+  - label: HSHQDC14A00010
+    award_count: 4
+    share_pct: 2.0
+  - label: FA873015D0002
+    award_count: 4
+    share_pct: 2.0
+  - label: IND14PC00002
+    award_count: 4
+    share_pct: 2.0
+directional_caci_footprint:
+  derivation_notes: 'Rebuilt periodically from a scrape of CACI''s public careers page
+
+    (caci.com/careers) and the most recent earnings-call transcripts
+
+    available on investors.caci.com. Operator does NOT edit by hand.
+
+    '
+  last_derived_utc: '2026-05-29T11:16:56Z'
+  hiring_concentrations:
+  - keyword: AI
+    estimated_share: see growth_signals
+  - keyword: Navy
+    estimated_share: see growth_signals
+  - keyword: Electronic Warfare
+    estimated_share: see growth_signals
+  - keyword: Cyber
+    estimated_share: see growth_signals
+  - keyword: Counter-UAS
+    estimated_share: see growth_signals
+  - keyword: Workforce
+    estimated_share: see growth_signals
+  - keyword: DevSecOps
+    estimated_share: see growth_signals
+  - keyword: Cloud
+    estimated_share: see growth_signals
+  growth_signals:
+  - keyword: AI
+    occurrences: 10
+  - keyword: Navy
+    occurrences: 4
+  - keyword: Electronic Warfare
+    occurrences: 1
+  - keyword: Cyber
+    occurrences: 1
+  - keyword: Counter-UAS
+    occurrences: 1
+  - keyword: Workforce
+    occurrences: 1
+  - keyword: DevSecOps
+    occurrences: 1
+  - keyword: Cloud
+    occurrences: 1
+  executive_themes:
+  - Populate manually from the most recent CACI quarterly earnings call transcript at investors.caci.com if needed.
+  fetch_log:
+  - url: https://careers.caci.com/global/en/search-results
+    ok: true
+    note: ''
+  - url: https://investor.caci.com/news-releases
+    ok: false
+    note: HTTP 404
+  - url: https://investor.caci.com/
+    ok: true
+    note: ''
+  - url: https://www.caci.com/insights-and-news
+    ok: false
+    note: HTTP 404
+  - url: https://www.caci.com/
+    ok: true
+    note: ''
+operator_team_layer:
+  populated: true
+  last_updated_utc: 2026-05-29 00:00:00+00:00
+  team_primary_customer: SRF-JRMC
+  team_secondary_customers:
+  # Active partnership customers below SRF-JRMC primary but above extendable.
+  # Same 1.5x boost as primary because the team has an active working relationship.
+  - NSWC-Corona (Ship Maintenance Data and Information Integration partnership / SMDII)
+  team_extendable_customers:
+  # Navy maintenance / repair-activity extensions (work-type portable)
+  - CNRMC
+  - Regional Maintenance Centers (other RMCs beyond SRF-JRMC)
+  - Norfolk Naval Shipyard (NNSY)
+  - Puget Sound Naval Shipyard (PSNS)
+  - Pearl Harbor Naval Shipyard (PHNS)
+  - Portsmouth Naval Shipyard (PNSY)
+  # Indo-Pacific regional preference (operator geographic preference;
+  # the team is colocated at Yokosuka within INDOPACOM AOR)
+  - USINDOPACOM
+  - U.S. Pacific Fleet (COMPACFLT)
+  - U.S. Seventh Fleet (C7F)
+  - U.S. Pacific Air Forces (PACAF)
+  - U.S. Army Pacific (USARPAC)
+  - Marine Forces Pacific (MARFORPAC)
+  - U.S. Forces Japan (USFJ)
+  team_work_types:
+  # ── Tech Solutions sub-team ────────────────────────────────────────────
+  - Power Apps development for SRF-JRMC production-data workflows
+  - Bespoke application development for SRF-JRMC business processes
+  - Application development in the FlankSpeed environment (Navy M365)
+  - Application development in the Air Force One Cloud environment
+  - Production-data integration from the Maritime Systems Environment (MSE) suite
+  - Ship Maintenance Data and Information Integration (SMDII) — NSWC-Corona partnership
+  - Flag-level maintenance database population
+  # ── Waterfront Operations sub-team — major C&O availability advance planning
+  - Advance planning for Selected Restricted Availabilities (SRA)
+  - Advance planning for Docking Selected Restricted Availabilities (DSRA)
+  - Advance planning for Selected Incremental Availabilities (SIA)
+  - Work induction for major availabilities
+  - Availability brief development
+  - Availability risk identification
+  - Workload prioritization and resource analysis for availabilities
+  - Dry dock coordination
+  - Barge coordination
+  - Integrated Project Team Development (IPTD)
+  - Requisition management for ship maintenance
+  # ── Engineering Support sub-team ────────────────────────────────────────
+  - Advanced Manufacturing Program Manager — Advanced and Additive Manufacturing program standup
+  - Departure from Specification (DFS) coordination — screening, assessment, adjudication with Chief Engineer
+  - Technology transfer office standup — TRL 6-8 operationalization on the waterfront
+  - New engineering initiative standup at Navy repair activities
+  # ── Workforce / Organizational Development sub-team ─────────────────────
+  - Leadership Development Academy curriculum and class facilitation
+  - Crucial Conversations training
+  - Project Management Fundamentals training
+  - Customer-requested workforce development
+  - Per-department training curriculum development
+  - Per-department qualification program development from references
+  # ── Other ───────────────────────────────────────────────────────────────
+  - Exercise planning (limited capacity — one planner)
+  - Contracts support
+  team_vehicles_held_by_caci_nss:
+  - GSA OASIS Pool 1 (parent IDC GS00Q14OADU121)
+  - NITAAC CIO-SP3 (parent IDC HHSN316201200032W)
+  - GSA Multiple Award Schedule (GS-35F-349CA)
+  delivery_model:
+    colocation: on-site at SRF-JRMC alongside customer personnel
+    customer_systems_access: operates customer-owned systems and equipment
+    work_location: predominantly on-site (not standoff / not remote)
+    implications:
+    - team competitive advantage is colocation + customer-system access + operational knowledge an off-site contractor cannot
+      easily replicate
+    - team is exposed to FAR Subpart 9.5 Organizational Conflict of Interest (OCI) on every pursuit at SRF-JRMC because the
+      team is colocated with the customer and operates customer systems — OCI review is a hard precondition on any seed promoted
+      to capture
+    - opportunities requiring contractor-isolated dev environments, standoff service delivery, or distributed remote teams
+      DO NOT fit the team's operating model and should be flagged as delivery-model-mismatch even when work-type fit is high
+    - extension to other repair activities requires either new geographic deployment OR a different delivery model — both
+      are real options but neither is the team's current baseline
+  active_team_pursuits:
+  - description: 'AI engagement with SRF-JRMC Engineering Department, scoped to DFS
+
+      workflow tooling and additive manufacturing cell support.
+
+      Engagement is being spun up as of 2026-05-29.
+
+      '
+    partner_candidate_preferred: Big Bear AI
+    partner_candidate_alternatives: any AI services provider
+    seed_finder_implication: 'Boost AI-services seeds at Navy maintenance / repair activities,
+
+      particularly DFS workflow automation, deviation adjudication
+
+      process automation, NAVSEA technical-authority data integration,
+
+      and additive manufacturing process support.
+
+      '
+out_of_scope:
+# Categories CACI cannot structurally deliver — these get a max-0.3 score
+# cap regardless of which layer matched.
+
+# Schoolhouse curriculum and individual-sailor training
+- Schoolhouse curriculum (NETC, Sailor 2025, Ready Relevant Learning)
+- Damage-control hand-skills training for individual Sailors
+
+# Generic Navy work-types CACI does not specifically pursue
+- General Navy shipbuilding without a training / exercise / maintenance angle
+- General Navy IT helpdesk vehicles
+- Aircraft training systems (NAWCTSD-managed simulator sustainment)
+- Non-DoD federal civil work
+
+# Physical labor / trades / manufacturing — work-types CACI does not deliver
+# (CACI does not have factories, shipyards, or trades crews; these contracts
+# go to HII, Vigor, GD-NASSCO, BAE-Norfolk, and similar trades primes)
+- Housing maintenance and grounds maintenance
+- Corrosion control (paint, blasting, coatings) and other physical preservation
+- General trades work (electrical, plumbing, HVAC, carpentry, welding, metalworking)
+- Manufacturing and factory production work
+- Shipyard physical labor and craftsperson work
+- Shipyard physical infrastructure (drydock, crane, MILCON) without a training / engineering / IT angle
+
+# Generic facility-services contracts that mismatch CACI's operating model
+- Janitorial and facility services
+- Food service and retail support

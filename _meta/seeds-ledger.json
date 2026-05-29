@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "last_run_utc": "2026-05-29T19:28:54Z",
+  "seeds": {
+    "COMPT:FY27_RDTE_TJS": {
+      "first_seen_utc": "2026-05-29T19:28:54Z",
+      "last_seen_utc": "2026-05-29T19:28:54Z",
+      "status": "in-inbox",
+      "url": "https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2027/budget_justification/pdfs/03_RDT_and_E/RDTE_TJS_PB_2027.pdf",
+      "title": "FY27 RDT&E Justification Book \u2014 Joint Staff (TJS)",
+      "final_score": 0.522
+    },
+    "COMPT:FY27_DON_PB": {
+      "first_seen_utc": "2026-05-29T19:28:54Z",
+      "last_seen_utc": "2026-05-29T19:28:54Z",
+      "status": "in-inbox",
+      "url": "https://www.secnav.navy.mil/fmc/fmb/Documents/27pres/DON_Press_Brief.pdf",
+      "title": "FY27 Department of the Navy President's Budget Press Brief",
+      "final_score": 1.125
+    }
+  }
+}
