@@ -33,6 +33,7 @@ allowlist:
   SAIC: Canonical naval-services incumbent. Operator-blessed for §7 hypothesis leg 5 — Carderock-adjacent technical partner whose existing relationships shape CACI's entry timeline. Specific claims about SAIC capability still need source backing.
   Leidos: Canonical naval-services incumbent. Operator-blessed for §7 hypothesis leg 5 — Carderock-adjacent technical partner whose existing relationships shape CACI's entry timeline. Specific claims about Leidos capability still need source backing.
   HII Mission Technologies: Canonical naval competitor. Operator-blessed for §7 hypothesis leg 5 — inherited the Alion ship-damage modeling work and is the most directly competitive incumbent for Carderock-adjacent capability. Specific claims still need source backing.
+  Booz Allen Hamilton: Canonical large-services incumbent with Indo-Pacific defense and wargaming footprint. Operator-blessed 2026-05-28 (re-added after 2026-05-23 removal) as a §5.3 candidate fleet-command exercise-planning incumbent. Specific claims still need source backing.
 
 
 # Entities surfaced by the 2026-05-23 audit but DECLINED for allowlisting and
@@ -59,7 +60,7 @@ allowlist:
 #
 #  REMOVED FROM §5 (competitive landscape placeholder — pre-named without sources):
 #    - BAE Systems
-#    - Booz Allen
+#    - Booz Allen  (re-added to allowlist 2026-05-28 after the Indo-Pacific defense-services portfolio source was ingested)
 #    - Alion
 #
 # If sources later surface any of the above organically, they can be added

@@ -39,10 +39,15 @@ load_dotenv(SCRIPT_DIR / ".env")
 DEFAULT_MODEL = "claude-sonnet-4-6"
 
 # Per-source content truncation (LLM input budget guard).
-# Sonnet handles ~200K tokens of context; ~120K chars leaves headroom for the
-# prompt + a long source. Bumped from 24K (which truncated the FY26 PDI book
-# before its PMTEC tables on p.19 were visible).
-_MAX_SOURCE_CHARS = 120000
+# Sonnet 4.6 handles ~200K tokens of context (~750K chars). Set to 600K to leave
+# headroom for the verification prompt while covering the largest source we
+# currently hold (FY27 RDT&E Justification Book at ~216K chars, 3,822 lines).
+# Bumped from 120K on 2026-05-27 after the 2026-05-26 small-ships finding that
+# 120K truncated the justification book before the JExD / MAGTF / scenario-
+# generation quotes at lines 3,406-3,639 were visible, producing false
+# DOES_NOT_SUPPORT verdicts on FACTs whose underlying quotes are real but late
+# in the file.
+_MAX_SOURCE_CHARS = 600000
 
 
 # ── Research-file parsing ───────────────────────────────────────────────

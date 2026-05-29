@@ -1,0 +1,53 @@
+# Exec brief v0.6 — sync to today's research-file work + Gemini-agreed edits.
+#
+# Companion to capture-v0.5.yaml; applies the subset of the eight findings
+# that affect the exec brief.
+#
+# Findings closed by this build (exec-brief instances):
+#   2. Add CIO-SP3 PIID detail to the procurement-path bullet.
+#   3. OASIS Pool 1 framing — inline name with PIID.
+#   4. Axient obligation precision: $234M → $233.8M.
+#   6. HM&E bridge framing rewrite.
+#   7. Incumbent-lockout risk bullet — name the source-grounding state.
+#   8. SWARMEX terminology consistency (already mostly correct).
+# Plus version-bump.
+
+source: opportunities/BDR-FLEET-READINESS/04_artifacts/executive-brief-v0.5-draft.docx
+output: opportunities/BDR-FLEET-READINESS/04_artifacts/executive-brief-v0.6-draft.docx
+
+text_replacements:
+
+  # ── Finding 4: Axient precision $234M → $233.8M ──────────────────────────
+  - find: "The Missile Defense Agency (MDA) via Axient holds $234 million for missile-defense exercise and wargames support."
+    replace: "The Missile Defense Agency (MDA) via Axient holds $233.8 million for missile-defense exercise and wargames support."
+
+  # ── Finding 2: Add CIO-SP3 PIID detail to procurement-path bullet ───────
+  - find: "NITAAC CIO-SP3 — Information Technology services contract."
+    replace: "NITAAC CIO-SP3 (parent contract HHSN316201200032W) — Information Technology services contract; CACI NSS, LLC has delivered at $101.2M-task-order scale under this vehicle."
+
+  # ── Finding 3: OASIS Pool 1 inline framing ──────────────────────────────
+  - find: "GSA OASIS — Federal-wide Professional Services contract."
+    replace: "GSA OASIS Pool 1 (parent contract GS00Q14OADU121) — federal-wide Professional Services contract; CACI NSS, LLC executes the $194M AFRICOM task order against this vehicle."
+
+  # ── Finding 6: HM&E bridge framing rewrite ──────────────────────────────
+  - find: "Decide the Hull, Mechanical, and Electrical (HM&E) data bridge approach early. Repair-side scenario realism needs Navy HM&E engineering and logistics data. ARKA (the CACI subsidiary acquired in March 2026) covers threat-environment realism only. Three options: partner with a prime that already holds HM&E data; leverage CACI's existing naval information-technology footprint; or negotiate Government Furnished Information (GFI). The most likely GFI source is Naval Surface Warfare Center Carderock Division (NSWC Carderock), with possible additional sources at another Naval Surface Warfare Center or somewhere in PAE Industrial Operations. The GFI path carries 12-to-18-month schedule risk for the Authority to Operate (ATO) on a gamified non-system-of-record environment. The decision is needed before pitch meetings."
+    replace: "Set up the Hull, Mechanical, and Electrical (HM&E) data bridge decision for downstream owners. The decision belongs to the executive engaged with the customer or to the proposal team that drafts the actual response, not to the BD analyst. The analyst recommendation: negotiate Government Furnished Information (GFI) from a Navy data-holder, most likely Naval Surface Warfare Center Carderock Division (NSWC Carderock); treat the 12-to-18-month Authority to Operate (ATO) risk as a known schedule item; and avoid the partner-with-HM&E-prime path because it forces an early commit to a specific partner before customer pull is known. CACI's internal naval-IT footprint remains a viable fallback. ARKA (the CACI subsidiary acquired in March 2026) covers threat-environment realism only and does not close the repair-side data gap."
+
+  # ── Finding 7: incumbent-lockout risk — full bullet rewrite ──────────────
+  # Replace the entire bullet (prefix-only replacement leaves a self-
+  # contradictory tail because the original ended with "are not yet
+  # source-grounded in this research").
+  - find: "Incumbent lockout at the fleet-command exercise-planning layer. Candidate incumbents (Booz Allen Hamilton, Science Applications International Corporation (SAIC), Huntington Ingalls Industries Mission Technologies (HII Mission Technologies), and specialized sub-tier firms) are not yet source-grounded in this research. A source-finding pass on this question was initiated 2026-05-26; results will inform a later brief version."
+    replace: "Incumbent lockout at the fleet-command exercise-planning layer. Three credible candidate incumbents are source-grounded at adjacent Navy customers: Booz Allen Hamilton at the Indo-Pacific defense-services portfolio level; Science Applications International Corporation (SAIC) at $120 million Navy Tactical Training War Game Support; Huntington Ingalls Industries Mission Technologies (HII Mission Technologies) at a $267 million Navy training multiple-award IDIQ and a $75 million Aegis live-virtual-constructive task order. Specialized sub-tier firms remain to be source-grounded. The specific incumbent subset active at FLTFORCOM N7, PACFLT N7, INDOPACOM J7, and SRF-JRMC is the next find_sources pass target."
+
+  # ── Subtitle date 2026-05-26 → 2026-05-28 ───────────────────────────────
+  - find: "U.S. Navy Battle Damage Assessment and Repair (BDAR) decision-rehearsal training. Five-level progression. 2026-05-26. For CACI executive review (open-source-only)."
+    replace: "U.S. Navy Battle Damage Assessment and Repair (BDAR) decision-rehearsal training. Five-level progression. 2026-05-28. For CACI executive review (open-source-only)."
+
+  # ── Cover title v0.5 → v0.6 ─────────────────────────────────────────────
+  - find: "BDR-FLEET-READINESS — Executive Brief v0.5 (Draft)"
+    replace: "BDR-FLEET-READINESS — Executive Brief v0.6 (Draft)"
+
+  # ── Closing version-table paragraph ─────────────────────────────────────
+  - find: "v0.5 built 2026-05-26. Distilled from the long-form capture brief (v0.4 draft). v0.5 changes from v0.4: tone tightened away from confirmatory framing; every acronym expanded on first appearance; single-author voice (the \"operator\" and \"analyst\" labels removed)."
+    replace: "v0.6 built 2026-05-28. Distilled from the long-form capture brief (v0.5 draft). v0.6 changes from v0.5: 2026-05-28 verifier-sweep / source-grounding / read-aloud closure — Axient obligation precision ($234M → $233.8M), CIO-SP3 source-grounding (PIID HHSN316201200032W), OASIS Pool 1 inline framing, HM&E bridge framing (decision owned downstream; analyst recommendation NSWC Carderock GFI), and incumbent-lockout risk reframed with three source-grounded candidates."

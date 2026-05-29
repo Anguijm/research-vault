@@ -14,7 +14,7 @@ This is the operating manual for producing defense capture briefs and executive 
 
 This SOP assumes:
 
-- You are producing two artifacts per opportunity — a 10–12 page **capture brief** for the BD team and a 1–2 page **executive brief** derived from it.
+- You are producing two artifacts per opportunity — a **capture brief** for the BD team and an **executive brief** derived from it. The original SOP target was 10-12 pages for the capture brief and 1-2 pages for the executive brief; that target was retired 2026-05-28 against the BDR-FLEET-READINESS v1.0-candidate measurement, which produces a 23-page capture and a 3-page exec under the `build_brief.py` default layout (1" margins, 11pt body, default paragraph spacing). The v1.0-quality content set requires the larger footprint; cutting to the original target was found to drop content that an external red-team specifically requested. Treat page count as a quality-of-rendering check, not a quality-of-content gate. If a future opportunity wants tighter page counts, change the docx layout (margins / font / spacing in the build script) before cutting content.
 - All research is **OSI** (open-source intelligence). No CUI, no classified, no proprietary client data.
 - You operate a **simplified 3-gate process**: Identify → Pursue → Bid.
 - The repository lives **locally** on your machine, with whatever backup discipline you already have for important work.

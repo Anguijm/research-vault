@@ -1,0 +1,41 @@
+# Exec brief v0.7 — eight Gemini-convergent edits from the 2026-05-28 red-team,
+# distilled into the exec-page format (one-page constraint preserved).
+#
+# Mapping from capture v0.6 edits to exec v0.7 changes:
+#   - Phased ask with B&P gate (capture §7.2) → exec Recommendations bullet
+#   - OCI precondition (capture §7.1) → exec Recommendations bullet
+#   - Realism math (capture §5.3) → exec Recommendations bullet on HM&E bridge
+#   - GFI Plan B technical fallbacks → exec Recommendations bullet on HM&E bridge
+#   - Vehicles as friction-removers (capture §5.4) → exec Procurement-Path section
+#   - AFRICOM-vs-PACFLT contracting culture → not added (exec is too tight)
+#   - Scaling logic → exec Five-Level Progression intro
+#   - NAVSEA 05 add → exec Recommendations bullet on HM&E bridge
+
+source: opportunities/BDR-FLEET-READINESS/04_artifacts/executive-brief-v0.6-draft.docx
+output: opportunities/BDR-FLEET-READINESS/04_artifacts/executive-brief-v0.7-draft.docx
+
+text_replacements:
+
+  # ── Cover title v0.6 → v0.7 ─────────────────────────────────────────────
+  - find: "BDR-FLEET-READINESS — Executive Brief v0.6 (Draft)"
+    replace: "BDR-FLEET-READINESS — Executive Brief v0.7 (Draft)"
+
+  # ── Procurement-Path intro: vehicles are friction-removers ──────────────
+  - find: "CACI NSS, LLC holds three governmentwide acquisition contracts open to any federal customer, including any Navy command. A task order against any of these vehicles would not require a new Navy-specific contract."
+    replace: "CACI NSS, LLC holds three governmentwide acquisition contracts open to any federal customer, including any Navy command. The holdings are not a competitive differentiator against the named §4.3-equivalent incumbents (who hold their own OASIS / CIO-SP3 / MAS positions) — they are a path-to-market feasibility asset that removes the multi-year procurement-vehicle stand-up that would otherwise sit between the Navy's decision to buy and an actual task-order award."
+
+  # ── Five-Level Progression: add scaling-logic preamble ───────────────────
+  - find: "Start analog. Move to software as scale justifies it. Each level can be procured separately. Each level builds reference material for the next."
+    replace: "Start analog. Move to software as scale justifies it. Each level can be procured separately. Each level builds reference material for the next. The forcing function is exercise rhythm: L1-L2 are bespoke, analyst-time-per-engagement, cost-scales-linearly delivery; L3-L5 introduce reusable scenario libraries and AI-driven scenario generation, where the cost per exercise drops sharply at quarterly-or-higher cadence across multiple wardrooms. Customers move to L3-L5 when their exercise rhythm exceeds what L1-L2 manual delivery can sustain."
+
+  # ── Recommendations: phased ask + OCI precondition (rewrite the engagement bullet) ─
+  - find: "Initiate CACI executive engagement with the named Navy commands. The Navy is not running a Request for Proposal (RFP) for this work today. Procurement is likely to require proactive executive-level engagement at PACFLT N7, FLTFORCOM N7, the U.S. Indo-Pacific Command Joint Operations Directorate (INDOPACOM J7), the Naval Sea Systems Command Logistics, Maintenance, and Industrial Operations Directorate (NAVSEA 04, which is the headquarters above PAE Industrial Operations or PAE-IO), or SRF-JRMC leadership."
+    replace: "Initiate a two-phase engagement with a hard gate between phases. Phase 1 (low-cost): executive-led discovery meeting at PACFLT N7, FLTFORCOM N7, INDOPACOM J7, NAVSEA 04, or SRF-JRMC leadership; cost is executive travel and analyst prep; no Bid-and-Proposal (B&P) commitment. Phase 2 (B&P gate): commit B&P to a Level 1 pilot task-order proposal ONLY if Phase 1 produces a customer Letter of Interest, a named funding vehicle (O&M or RDT&E realignment), or a comparably concrete buying signal. Precondition for any engagement step: CACI legal and contracts complete the Federal Acquisition Regulation (FAR) Subpart 9.5 Organizational Conflict of Interest (OCI) review described in the Risks section. The OCI review is a hard gate, not a parallel workstream."
+
+  # ── Recommendations: HM&E bridge bullet — add NAVSEA 05 + realism math + Plan B ─
+  - find: "Set up the Hull, Mechanical, and Electrical (HM&E) data bridge decision for downstream owners. The decision belongs to the executive engaged with the customer or to the proposal team that drafts the actual response, not to the BD analyst. The analyst recommendation: negotiate Government Furnished Information (GFI) from a Navy data-holder, most likely Naval Surface Warfare Center Carderock Division (NSWC Carderock); treat the 12-to-18-month Authority to Operate (ATO) risk as a known schedule item; and avoid the partner-with-HM&E-prime path because it forces an early commit to a specific partner before customer pull is known. CACI's internal naval-IT footprint remains a viable fallback. ARKA (the CACI subsidiary acquired in March 2026) covers threat-environment realism only and does not close the repair-side data gap."
+    replace: "Set up the Hull, Mechanical, and Electrical (HM&E) data bridge decision for downstream owners. The realism math: ARKA delivers roughly half the scenario realism (threat-side); the HM&E bridge has to deliver the other half (repair-side); both halves are required for a credible BDAR environment. The decision belongs to the executive engaged with the customer or to the proposal team, not to the BD analyst. The analyst recommendation: negotiate Government Furnished Information (GFI) from Naval Surface Warfare Center Carderock Division (NSWC Carderock), with Naval Sea Systems Command Ship Design and Engineering (NAVSEA 05) as the data-release technical authority — without NAVSEA 05's blessing the GFI conversation will not progress. Plan B if NAVSEA 05 declines: pivot to a tactical teaming arrangement with a naval-engineering firm that holds HM&E modeling capability, partner choice contingent on customer pull. Plan C: CACI's internal naval-IT footprint, scoped to whatever HM&E telemetry or maintenance-record data it actually holds — the proposal team confirms availability before relying on it. Treat the 12-to-18-month Authority to Operate (ATO) risk as a known schedule item."
+
+  # ── Closing paragraph ────────────────────────────────────────────────────
+  - find: "v0.6 built 2026-05-28. Distilled from the long-form capture brief (v0.5 draft). v0.6 changes from v0.5: 2026-05-28 verifier-sweep / source-grounding / read-aloud closure — Axient obligation precision ($234M → $233.8M), CIO-SP3 source-grounding (PIID HHSN316201200032W), OASIS Pool 1 inline framing, HM&E bridge framing (decision owned downstream; analyst recommendation NSWC Carderock GFI), and incumbent-lockout risk reframed with three source-grounded candidates."
+    replace: "v0.7 built 2026-05-28. Distilled from the long-form capture brief (v0.6 draft). v0.7 changes from v0.6: eight Gemini-convergent edits from the 2026-05-28 red-team — phased ask with hard B&P gate, OCI promoted to engagement precondition, realism math articulated (ARKA threat-side + HM&E repair-side = full BDAR), GFI Plan B and Plan C technical fallbacks named, NAVSEA 05 added as data-release technical authority and negative-stakeholder credibility anchor, vehicles reframed as path-to-market friction-removers, scaling logic articulated for L1-L2 → L3-L5 cost-curve transition."

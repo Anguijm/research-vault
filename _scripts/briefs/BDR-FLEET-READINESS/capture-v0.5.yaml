@@ -1,0 +1,84 @@
+# Capture brief v0.5 — sync to today's research-file work + Gemini-agreed edits.
+#
+# Driven by _scripts/build_brief.py. Applies eight edits from the 2026-05-28
+# read-aloud pass that converged with Gemini Flash after a two-round dialogue.
+#
+# Findings closed by this build:
+#   1. PIID typo on CACI NSS AFRICOM task order (47QFCA20F0042 → 47QFCA20F0002)
+#   2. Add CIO-SP3 PIID detail (HHSN316201200032W + 19AQMM21F1762 $101.2M proof)
+#   3. OASIS Pool 1 framing: inline-name in brief (research file keeps split)
+#   4. (Capture brief already uses $233.8M Axient — no change here; exec brief
+#      gets the precision fix in exec-v0.6.yaml.)
+#   5. Invictus funder hierarchy stays "Department of the Navy funder" in
+#      brief (research file keeps DoD/DoN sub-tier split). No change needed.
+#   6. HM&E bridge framing rewrite at §7.3
+#   7. §4.3 named-contractor reframing — three sources now grounded
+#   8. SWARMEX-Cebu compound terminology — drop the coinage
+# Plus version-bump and cover-stamp update.
+
+source: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.4-draft.docx
+output: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.5-draft.docx
+
+text_replacements:
+
+  # ── Finding 1: PIID typo (replaces all occurrences across paragraphs) ────
+  - find: "47QFCA20F0042"
+    replace: "47QFCA20F0002"
+
+  # ── Finding 3: OASIS Pool 1 inline framing in §5.1 and §5.4 ──────────────
+  - find: "an OASIS-equivalent governmentwide vehicle"
+    replace: "GSA OASIS Pool 1"
+  - find: "an OASIS-equivalent governmentwide acquisition contract"
+    replace: "GSA OASIS Pool 1"
+  - find: "an OASIS-equivalent vehicle CACI already held"
+    replace: "GSA OASIS Pool 1 — a vehicle CACI NSS, LLC already held"
+
+  # ── Finding 2: Add CIO-SP3 PIID detail to the §5.4 vehicle-holdings bullet
+  - find: "NITAAC Chief Information Officer–Solutions and Partners 3 (CIO-SP3) — Information Technology services contract."
+    replace: "NITAAC Chief Information Officer–Solutions and Partners 3 (CIO-SP3) — Information Technology services contract. CACI NSS, LLC holds parent contract HHSN316201200032W with demonstrated delivery at $101.2M-task-order scale (PIID 19AQMM21F1762, Iterative Software Development Project Management)."
+
+  # ── Finding 7: §4.3 named-contractor reframing ──────────────────────────
+  - find: "The biggest research gap in this section. The fleet-command exercise authorities (FLTFORCOM N7, PACFLT N7, INDOPACOM J7, and SRF-JRMC's wartime-readiness cell) procure exercise-planning support for Composite Training Unit Exercise (COMPTUEX), the Rim of the Pacific Exercise (RIMPAC), the Navy Large-Scale Exercise (LSE) series, the SWARMEX program, and unit-level workups. The specific contractor incumbents are not yet source-grounded in the ingested public material. The typical Master Scenario Events List (MSEL) prime base under similar vehicles at adjacent Combatant Commands likely includes Booz Allen Hamilton, Science Applications International Corporation (SAIC), and Huntington Ingalls Industries Mission Technologies (HII Mission Technologies), plus specialized sub-tier firms. These are candidates pending source-grounding. A targeted source-finding pass on this question was initiated 2026-05-26; results will inform v0.5 of this brief."
+    replace: "The fleet-command exercise authorities (FLTFORCOM N7, PACFLT N7, INDOPACOM J7, and SRF-JRMC's wartime-readiness cell) procure exercise-planning support for Composite Training Unit Exercise (COMPTUEX), the Rim of the Pacific Exercise (RIMPAC), the Navy Large-Scale Exercise (LSE) series, the Ship Wartime Repair and Maintenance Exercise (SWARMEX) program, and unit-level workups. Three credible candidate incumbents are now source-grounded at adjacent Navy customers — SAIC at $120M Navy Tactical Training War Game Support (NAVSUP, 2024); HII Mission Technologies at $267M Navy training multiple-award IDIQ (2025) plus $75M Aegis live-virtual-constructive task order (2024); and Booz Allen Hamilton at the Indo-Pacific defense-services portfolio level. Whether these primes pivot capability into FLTFORCOM N7, PACFLT N7, INDOPACOM J7, or SRF-JRMC specifically depends on whether they identify the fleet-command exercise-planning procurement pathway and commit capability into it. The specific incumbent subset at those N7 contracting offices is the open research question for the next find_sources pass; specialized exercise-design sub-tier firms exist alongside the named primes and remain to be source-grounded."
+
+  # ── Finding 6: HM&E bridge framing rewrite — §7.3 (recommendation) ─────
+  - find: "Repair-side scenario realism needs Navy HM&E engineering and logistics data. ARKA covers threat-side only. Three candidate closures. Partner with a prime that holds HM&E data. Leverage CACI's existing naval IT footprint. Negotiate GFI from a Navy data-holder, most likely NSWC Carderock, with possible additional sources at another Naval Surface Warfare Center or somewhere in PAE-IO. The GFI path carries 12-to-18-month ATO schedule risk. The decision is best made before pitch meetings begin."
+    replace: "Repair-side scenario realism needs Navy Hull, Mechanical, and Electrical (HM&E) engineering and logistics data. The ARKA acquisition covers threat-side realism only. The path-selection decision belongs to the executive engaged with the customer or to the proposal team that drafts the actual response, not to the BD analyst. The analyst recommendation, recorded for downstream reference, is to negotiate Government Furnished Information (GFI) from a Navy data-holder, most likely NSWC Carderock, with possible additional sources at another Naval Surface Warfare Center or somewhere in PAE-IO; treat the 12-to-18-month Authority to Operate (ATO) risk as a known schedule item; and avoid the teaming-with-HM&E-prime path because it forces an early commit to a specific partner before customer pull is known. CACI's internal naval-IT footprint remains a viable fallback if the GFI negotiation stalls."
+
+  # ── Finding 6 again: §5.3 has its own copy of the HM&E paragraph ────────
+  - find: "Repair-side realism requires a bridge to Navy Hull, Mechanical, and Electrical (HM&E) engineering and logistics data. There are three candidate closures for the bridge: partner with a prime that holds HM&E data; leverage CACI's existing naval IT footprint; or negotiate Government Furnished Information (GFI) from a Navy data-holder. The most likely GFI source is Naval Surface Warfare Center Carderock Division (NSWC Carderock), with possible additional sources at another Naval Surface Warfare Center or somewhere in PAE Industrial Operations (PAE-IO). The GFI path carries a 12-to-18-month Authority to Operate (ATO) schedule risk for a gamified non-system-of-record environment. The bridge decision should be made early so the executive pitch can offer a concrete data plan rather than a placeholder."
+    replace: "Repair-side realism requires a bridge to Navy Hull, Mechanical, and Electrical (HM&E) engineering and logistics data. The path-selection decision is owned by the executive engaged with the customer or by the proposal team that drafts the actual response, not by the BD analyst; the analyst recommendation, recorded for downstream reference, is to negotiate Government Furnished Information (GFI) from a Navy data-holder, most likely Naval Surface Warfare Center Carderock Division (NSWC Carderock), with possible additional sources at another Naval Surface Warfare Center or somewhere in PAE Industrial Operations (PAE-IO). The GFI path carries a 12-to-18-month Authority to Operate (ATO) schedule risk for a gamified non-system-of-record environment; CACI's internal naval-IT footprint remains a viable fallback if the GFI negotiation stalls. Section 7.3 lays out the full recommendation."
+
+  # ── §8.2 incumbent-lockout risk — bring up to date with §4.3 ────────────
+  - find: "The fleet-command exercise-planning incumbent base is real but under-mapped in the public sources ingested for this research. Candidate names (Booz Allen Hamilton, SAIC, HII Mission Technologies, sub-tier firms) are not yet source-grounded. The actual subset active at FLTFORCOM N7, PACFLT N7, INDOPACOM J7, and SRF-JRMC could be crowded enough to require partnering, or sparse enough to allow first-mover prime entry. A targeted source-finding pass on this question was initiated 2026-05-26; results will inform v0.5 of this brief."
+    replace: "The fleet-command exercise-planning incumbent base is partially mapped. Three credible candidate incumbents are source-grounded at adjacent Navy customers per section 4.3 (Booz Allen Hamilton, SAIC, HII Mission Technologies). The specific incumbent subset active at FLTFORCOM N7, PACFLT N7, INDOPACOM J7, and SRF-JRMC remains an open research question — the layer could be crowded enough to require partnering, or sparse enough to allow first-mover prime entry. A find_sources pass narrowed to those N7 contracting offices is the next investigative step before any partnering or capture decision."
+
+  # ── §9 self-referential v0.5 → v0.6 ─────────────────────────────────────
+  - find: "Run the targeted source-finding pass on fleet-command-exercise-planning incumbents at PACFLT N7, FLTFORCOM N7, INDOPACOM J7, and SRF-JRMC (initiated 2026-05-26). Results will be reflected in brief v0.5."
+    replace: "Run a follow-on source-finding pass narrowed to specific contracting offices at PACFLT N7, FLTFORCOM N7, INDOPACOM J7, and SRF-JRMC — surface the incumbent subset active at those N7 offices, not the adjacent-customer footprint already source-grounded in section 4.3. Results will inform brief v0.6."
+
+  # ── Finding 8: SWARMEX-Cebu compound coinage — replace with descriptive name
+  - find: "Ship Wartime Repair and Maintenance in Cebu, Philippines (SWARMEX-Cebu)"
+    replace: "the Ship Wartime Repair and Maintenance Exercise (SWARMEX) at Cebu, Philippines"
+  - find: "USS Ashland SWARMEX-Cebu primary press releases"
+    replace: "USS Ashland Ship Wartime Repair and Maintenance Exercise primary press releases"
+  - find: "The SWARMEX-Cebu exercise"
+    replace: "The SWARMEX-class Cebu exercise"
+  - find: "SWARMEX-Cebu"
+    replace: "the SWARMEX-class Cebu event"
+
+  # ── Cover paragraph: title + draft-date + changelog rewritten as one ────
+  # P0 holds the title, BDR-FLEET-READINESS, the subtitle, the draft-date line,
+  # and the changelog all in a single paragraph separated by hard newlines.
+  # "First match per paragraph wins" means we must put all three v0.4→v0.5
+  # edits in a single find/replace targeting the whole paragraph.
+  - find: "CAPTURE BRIEF — v0.4 DRAFT\n\nBDR-FLEET-READINESS\n\nFive-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support\n\nDraft date: 2026-05-26  |  For CACI executive review (open-source-only).\n\nv0.4 changes from v0.3: tone tightened away from confirmatory framing; every acronym expanded on first appearance; single-author voice (the \"operator\" and \"analyst\" labels removed)."
+    replace: "CAPTURE BRIEF — v0.5 DRAFT\n\nBDR-FLEET-READINESS\n\nFive-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support\n\nDraft date: 2026-05-28  |  For CACI executive review (open-source-only).\n\nv0.5 changes from v0.4: incorporates the 2026-05-28 verifier-sweep / source-grounding / read-aloud closure pass — PIID corrections (47QFCA20F0042 → 47QFCA20F0002), CIO-SP3 source-grounding with PIID HHSN316201200032W, OASIS Pool 1 inline framing, §4.3 named-contractor citations (SAIC / HII Mission Technologies / Booz Allen all source-grounded), HM&E bridge framing (decision owned downstream; analyst recommendation NSWC Carderock GFI), and the SWARMEX-Cebu compound coinage replaced with the program name."
+
+  # ── BD-team review bullet ("at v0.4" → "at v0.5") ───────────────────────
+  - find: "BD team gate review of this brief at v0.4 to confirm the proposed-scope frame."
+    replace: "BD team gate review of this brief at v0.5 to confirm the proposed-scope frame."
+
+  # ── Closing version-table paragraph ─────────────────────────────────────
+  - find: "End of capture brief v0.4 draft. Build date: 2026-05-26. v0.4 changes from v0.3: tone tightened to non-confirmatory framing; every acronym expanded on first appearance; single-author voice throughout."
+    replace: "End of capture brief v0.5 draft. Build date: 2026-05-28. v0.5 changes from v0.4: 2026-05-28 verifier-sweep / source-grounding / read-aloud closure pass."

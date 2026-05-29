@@ -219,10 +219,15 @@ def _run_ai_search(
     known_urls_final = dedup.load_known_urls(opp_dir) | inbox.load_inbox_urls(opp_dir)
     validated = [c for c in validated if c["url"] not in known_urls_final]
 
-    opp_context = f"{opp_id} — {', '.join(queries)}"
+    capture_pillars = ranker.load_capture_pillars(opp_dir)
     if openai_key and validated:
-        print(f"  [AI] Ranking {len(validated)} candidates with OpenAI...")
-        validated = ranker.rank_candidates(validated, opp_context, openai_key)
+        if capture_pillars:
+            print(f"  [AI] Ranking {len(validated)} candidates with four-pillar capture rubric...")
+            validated = ranker.rank_candidates_capture(validated, capture_pillars, openai_key)
+        else:
+            opp_context = f"{opp_id} — {', '.join(queries)}"
+            print(f"  [AI] Ranking {len(validated)} candidates with OpenAI (legacy rubric)...")
+            validated = ranker.rank_candidates(validated, opp_context, openai_key)
         scores = [c.get('_score', '?') for c in validated]
         print(f"  [AI] Scores: {scores}")
 
