@@ -368,8 +368,7 @@ out_of_scope:
 # Generic Navy work-types CACI does not specifically pursue
 - General Navy shipbuilding without a training / exercise / maintenance angle
 - General Navy IT helpdesk vehicles
-- Aircraft training systems (NAWCTSD-managed simulator sustainment)
-- Non-DoD federal civil work
+- NAWCTSD simulator sustainment, NAWCTSD-managed aviator training, naval flight simulator IDIQ task orders
 
 # Physical labor / trades / manufacturing — work-types CACI does not deliver
 # (CACI does not have factories, shipyards, or trades crews; these contracts
@@ -384,3 +383,33 @@ out_of_scope:
 # Generic facility-services contracts that mismatch CACI's operating model
 - Janitorial and facility services
 - Food service and retail support
+
+# Refined non-DoD federal civil work carve-outs (replaces the prior blanket
+# "Non-DoD federal civil work" exclusion 2026-05-30; CACI does plausibly
+# deliver general civil-IT work, but not the specialty domains below).
+- Clinical healthcare data work, PACS / medical imaging informatics, clinical-trial systems
+- Direct clinical-care delivery contracts (VA hospital operations, clinical workflow systems)
+- Specialized non-IT domain work (agricultural inspection, environmental remediation, specialized lab services)
+
+# Triaged false-positive patterns from the 2026-05-30 first-run inbox review
+- HR services, job-fair logistics, recruitment advertising, NAICS 541810 advertising agencies
+- Marketing sponsorships, public-relations partnerships, athletic / sports marketing, National Guard recruitment marketing
+- Sanitation services, portable toilet rental, waste management, NAICS 562991 septic services
+- Telecommunications circuit provisioning, leased-line / fiber-optic carrier services, NAICS 517111 wired telecom carriers, PSC DG11 telecom hardware
+
+# Round 4 pattern-closure rules from 2026-05-30 triage (out-of-scope ranges
+# expanded with NAICS/PSC code lists; the find_seeds.py matcher matches a
+# seed's NAICS / PSC fields against the codes anywhere in the rule).
+
+# Real estate appraisal services — close the DOI Indian Affairs appraisal cluster
+- Real estate appraisal services, land valuation and surveying, NAICS 531320 real estate appraisers, PSC R411 real estate professional services
+
+# Hardware component / parts / assembly procurement — DLA Aviation, DLA Land and Maritime, DLA Aviation Huntsville parts notices.
+# Code list catches truncated-title parts seeds that the keyword matcher would otherwise miss.
+- Hardware component and parts procurement; manufactured parts, assemblies, retainers, adapters, couplers, hoses, ducts, evaporators, coolers, motor parts, shipping and storage containers, aircraft engine parts; NAICS codes 336413 aircraft engine parts, 332439 metal container manufacturing, 334413 semiconductor manufacturing, 336412 aircraft engine and parts other, 332710 machine shops, 332919 metal valve manufacturing, 336390 motor vehicle parts; PSC codes 1680 aircraft accessories, 2590 miscellaneous vehicular equipment, 2840 jet engines, 4710 pipe and tubing, 5310 nuts and washers, 5325 retaining rings, 5340 brackets and clamps, 5365 bushings, 5825 navigation aids, 5895 communications equipment, 5999 electrical components, 6105 motors and generators, 6150 power equipment, 8145 shipping containers
+
+# Building / facility equipment maintenance — elevators, HVAC, building equipment
+- Elevator and conveyor system service, building equipment maintenance, HVAC and mechanical maintenance, NAICS 238290 building equipment contractors, NAICS 238220 plumbing heating air conditioning, PSC Z1JZ industrial equipment maintenance, PSC Z1KA installation of equipment, PSC J032 maintenance and repair of buildings
+
+# Vehicle support infrastructure — EV charging, vehicle facility equipment
+- EV charging infrastructure maintenance, electric vehicle supply equipment, vehicle-support facility equipment, NAICS 336390 motor vehicle parts manufacturing, PSC 2590 miscellaneous vehicular equipment

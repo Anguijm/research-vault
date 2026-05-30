@@ -538,14 +538,65 @@ def _delivery_model_mismatch(c: dict, cfg: dict) -> bool:
     return any(m in text for m in mismatch_markers)
 
 
+def _term_variants(term: str) -> list[str]:
+    """Return plural / singular variants of an English noun. Handles the
+    common patterns: -ies → -y, -es → (drop), -s → (drop). Lets
+    "partnerships" (rule) match "partnership" (seed) and vice versa without
+    per-rule wording effort. Variants are checked with word-boundary
+    matching (see `_term_matches`) to avoid substring false positives like
+    "part" inside "department"."""
+    variants = [term]
+    if term.endswith("ies") and len(term) > 4:
+        variants.append(term[:-3] + "y")     # factories → factory
+    elif term.endswith("es") and len(term) > 3:
+        variants.append(term[:-2])           # addresses → address
+    elif term.endswith("s") and len(term) > 2:
+        variants.append(term[:-1])           # partnerships → partnership; toilets → toilet
+    return variants
+
+
+def _term_matches(term: str, text: str) -> bool:
+    """Word-boundary substring check across plural/singular variants of the
+    term. Avoids substring false positives — e.g. "part" matches the word
+    "part" but not the substring inside "department"."""
+    for v in _term_variants(term):
+        if re.search(r"\b" + re.escape(v) + r"\b", text):
+            return True
+    return False
+
+
 def _is_out_of_scope(c: dict, cfg: dict) -> bool:
-    text = (c.get("title", "") + " " + c.get("snippet", "")).lower()
+    """A candidate is out-of-scope if any out_of_scope rule matches.
+
+    Match logic (any one is sufficient):
+      (a) keyword match: rule phrase shares >= 2 distinct 5+ char alphabetic
+          words with the seed's title + snippet text. Each rule term is also
+          checked under its plural/singular variants to handle word-form
+          mismatches between rule and seed (e.g. "partnerships" → "partnership").
+      (b) NAICS code match: the seed's NAICS code appears anywhere in the
+          rule phrase (e.g., rule says "NAICS 336413" and seed NAICS is
+          "336413").
+      (c) PSC code match: same logic for the seed's Product Service Code.
+
+    The code-based match catches DLA parts notices that have very short
+    titles (e.g., "47--ADAPTER,STRAIGHT,FL") which the keyword matcher
+    cannot match on text alone. Rules that include specific NAICS/PSC
+    codes get this precision automatically.
+    """
+    title_snippet = (c.get("title", "") + " " + c.get("snippet", "")).lower()
+    naics = (c.get("naics") or "").strip()
+    psc = (c.get("psc") or "").strip()
     for oos in cfg.get("out_of_scope", []) or []:
-        # Extract a few key terms from each out-of-scope phrase
-        terms = re.findall(r"[a-zA-Z]{5,}", oos.lower())
-        # require at least 2 distinct key terms
-        hits = sum(1 for t in set(terms) if t in text)
+        # (a) Word-boundary keyword match with plural/singular variant handling
+        terms = set(re.findall(r"[a-zA-Z]{5,}", oos.lower()))
+        hits = sum(1 for t in terms if _term_matches(t, title_snippet))
         if hits >= 2:
+            return True
+        # (b) NAICS code match — seed's NAICS appears in the rule phrase
+        if naics and naics in oos:
+            return True
+        # (c) PSC code match — seed's PSC appears in the rule phrase
+        if psc and psc in oos:
             return True
     return False
 
