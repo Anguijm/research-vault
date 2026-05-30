@@ -274,7 +274,7 @@ operator_team_layer:
   - Norfolk Naval Shipyard (NNSY)
   - Puget Sound Naval Shipyard (PSNS)
   - Pearl Harbor Naval Shipyard (PHNS)
-  - Portsmouth Naval Shipyard (PNSY)
+  - Portsmouth Naval Shipyard (PSNY)
   # Indo-Pacific regional preference (operator geographic preference;
   # the team is colocated at Yokosuka within INDOPACOM AOR)
   - USINDOPACOM
@@ -387,7 +387,7 @@ out_of_scope:
 # Refined non-DoD federal civil work carve-outs (replaces the prior blanket
 # "Non-DoD federal civil work" exclusion 2026-05-30; CACI does plausibly
 # deliver general civil-IT work, but not the specialty domains below).
-- Clinical healthcare data work, PACS / medical imaging informatics, clinical-trial systems
+- Clinical healthcare data work, PACS medical imaging informatics, radiology cardiology and pathology workflow systems, hospital PACS migration, clinical-trial systems, biological containment isolation systems, immunohistochemistry equipment, NAICS 334516 analytical lab instruments, NAICS 339113 surgical and medical instruments
 - Direct clinical-care delivery contracts (VA hospital operations, clinical workflow systems)
 - Specialized non-IT domain work (agricultural inspection, environmental remediation, specialized lab services)
 
@@ -413,3 +413,42 @@ out_of_scope:
 
 # Vehicle support infrastructure — EV charging, vehicle facility equipment
 - EV charging infrastructure maintenance, electric vehicle supply equipment, vehicle-support facility equipment, NAICS 336390 motor vehicle parts manufacturing, PSC 2590 miscellaneous vehicular equipment
+
+# Round 5 closure rules from 2026-05-30 triage (seeds 21-25)
+- Foreign parts waiver packages, antifriction bearings procurement, NAICS 332991 ball and roller bearing manufacturing, PSC 3110 bearings antifriction unmounted
+- Building repairs and minor construction, child development center facilities, institutional building maintenance, NAICS 236220 commercial institutional building construction, PSC Z2AA maintenance of living buildings, PSC J032 maintenance and repair of buildings
+- Trash and garbage collection services, waste removal from aircraft, NAICS 562111 solid waste collection, PSC S205 trash garbage collection services
+- Federal land acquisition and lease procurement, cemetery and federal construction land procurement, NAICS 237210 land subdivision, PSC E1PC construction of national cemeteries
+- Fluid handling and offload onload services, hydraulic oil and lubricant transfer services, fluid logistics work at Navy shipyards
+
+# Round 6 closure rules from 2026-05-30 triage (seeds 26-30)
+- Vocational training services, correctional education programs, NAICS 611210 junior colleges, Federal Bureau of Prisons training contracts
+- Corrections and detention services, juvenile detention facility operations, residential reentry services, NAICS 623990 residential care facilities, PSC G004 social services, Federal Bureau of Prisons facility contracts
+- Pond aeration and water-feature maintenance, environmental construction services, NAICS 237110 water and sewer line construction, PSC Y1ND construction of conservation development facilities
+- Fabricated metal products and welding equipment, shipyard cutting shields, NAICS 332999 fabricated metal product manufacturing, PSC 3439 welding equipment
+
+# Round 7 closure rules from 2026-05-30 triage (seeds 31-33)
+- Textile and insulation material procurement, refrasil cloth and high-temperature fabrics, fabric and textile mill products, NAICS 313310 textile and fabric finishing mills, PSC 8305 textile fabrics
+- Road maintenance and road construction, forest road and trail maintenance, GAOA (Great American Outdoors Act) infrastructure projects, NAICS 115310 support activities for forestry, PSC Z1LB maintenance of other land operations
+- Welding machining painting and fabrication trades services, metalworking trades labor, test-center fabrication shop services, NAICS 333992 welding and soldering equipment manufacturing, PSC K034 modification of equipment specialized test
+
+# Round 8 closure rules from 2026-05-30 triage (seeds 36-40)
+- Custodial services and AbilityOne custodial contracts, janitorial and custodial labor at military installations, NAICS 561720 janitorial services, PSC S201 custodial janitorial services
+- Federal real-estate leasing acquisition, commercial space lease procurement, USACE real-estate division solicitations, leased retail and office space sources sought, DACA-series real-estate notices
+- Pier berth and waterfront real-estate utilization, naval pier leasing and outgrant notices, NAVFAC real-estate utilization RFIs, Outer Mole Pier and similar pier-use solicitations
+- Unmanned aircraft systems and UAS platform development, tactical resupply unmanned aircraft (TRUAS), naval UAS platform solutions, PSC AC13 defense system operational systems development for aircraft platforms
+- Aircraft reliability and maintainability engineering, rotary-wing aircraft sustainment engineering, helicopter platform R&M support, AFLCMC helicopter division platform engineering, PSC 1520 aircraft rotary wing, PSC 1510 aircraft fixed wing
+
+# Round 9 closure rules from 2026-05-30 triage (seeds 41-45)
+- Measuring and metrology instrument procurement, ship-repair specialty tooling and gauge sole-source notices, naval shipyard tool and instrument procurement, NAICS 334519 other measuring and controlling device manufacturing, PSC J998 non-nuclear ship repair specialty tooling
+- Forest stand exams, timber-stand measurement and forest-resource assessment, USDA Forest Service natural-resource exams, Land Management Integrated Resources BPA (LMIR) call orders, PSC F009 forest range management other
+- Air Force pilot indoctrination training, individual-pilot flight school and aviator schoolhouse curriculum, Special Air Mission training contracts, undergraduate and graduate pilot training, NAICS 611512 flight training, PSC U099 education and training other for individual-aviator schoolhouse
+- Aircraft ground-support equipment, shipboard aircraft handlers and tow tractors, naval flight-deck aircraft-movement hardware, helicopter handling and nose-tail integrated systems, NAICS 333924 industrial truck tractor and trailer manufacturing, PSC 1730 aircraft ground servicing equipment
+- Railroad rolling stock and railcar procurement, DODX military rail fleet, flatcar and freight-car manufacturing, NAICS 336510 railroad rolling stock manufacturing, PSC 2220 rail cars
+
+# Round 10 closure rules from 2026-05-30 triage (seeds 46-50; seeds 48 and 50
+# dropped as one-offs without pattern — comptroller-source reference doc and
+# expired-deadline timing drop, respectively)
+- Industrial baskets and material-handling equipment, shipyard cranes hoists and rigging hardware, SUPSHIP physical-equipment sole-source procurement, NAICS 333923 overhead traveling crane and hoist manufacturing, PSC 5440 builders hardware
+- Vessel dry-docking and industrial-availability execution at private shipyards, MSC platform availability dry-docking, deep-sea freight and vessel-charter services, NAICS 483111 deep sea freight transportation, PSC V124 miscellaneous vessel charter and dry-dock services
+- Industrial rigging jacking and carrying services, dolly handling and equipment movement services at shipyards and FLC sites, physical material-handling labor at naval activities

@@ -5,18 +5,20 @@
     "COMPT:FY27_RDTE_TJS": {
       "first_seen_utc": "2026-05-29T19:28:54Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2027/budget_justification/pdfs/03_RDT_and_E/RDTE_TJS_PB_2027.pdf",
       "title": "FY27 RDT&E Justification Book \u2014 Joint Staff (TJS)",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:14:45Z"
     },
     "COMPT:FY27_DON_PB": {
       "first_seen_utc": "2026-05-29T19:28:54Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "monitor",
       "url": "https://www.secnav.navy.mil/fmc/fmb/Documents/27pres/DON_Press_Brief.pdf",
       "title": "FY27 Department of the Navy President's Budget Press Brief",
-      "final_score": 1.125
+      "final_score": 1.125,
+      "status_updated_utc": "2026-05-30T09:52:53Z"
     },
     "SAM:ffc66ba00c28423d98d125d172c59ba6": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -70,10 +72,11 @@
     "SAM:fc32f4cf10114737bb7b8ec767599777": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/fc32f4cf10114737bb7b8ec767599777/view",
       "title": "Request for Information (RFI) for a Tactical Resupply Unmanned Aircraft System (TRUAS) Solution",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:56:42Z"
     },
     "SAM:fb9243494245430c97d640fe1701c356": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -216,10 +219,11 @@
     "SAM:f2b698dc86774350b0aae92f4c16397e": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/f2b698dc86774350b0aae92f4c16397e/view",
       "title": "Biological Containment Isolation System (BCIS)",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T06:55:30Z"
     },
     "SAM:f0938945306d42808755bb37f4240098": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -264,10 +268,11 @@
     "SAM:ed8a2799f34d47bb99ef40dd36c5fb61": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/ed8a2799f34d47bb99ef40dd36c5fb61/view",
       "title": "AOE Vocational Training Services",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:39:31Z"
     },
     "SAM:ed616da3495f4e9a886dca67e3a792f5": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -353,10 +358,11 @@
     "SAM:e97eb912180443cd8062c4b9f295ba43": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/e97eb912180443cd8062c4b9f295ba43/view",
       "title": "Reliability and Maintainability (R&M) Engineering Support for Helicopter Division",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:56:42Z"
     },
     "SAM:e784339fc8db49578e4a231343724195": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -602,10 +608,11 @@
     "SAM:d7804a1c03354e9db8a80918917349ba": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "monitor",
       "url": "https://sam.gov/workspace/contract/opp/d7804a1c03354e9db8a80918917349ba/view",
       "title": "Combined RFI/Sources Sought - NOAA Multi-Cloud Enterprise Data Infrastructure Services",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T09:52:53Z"
     },
     "SAM:d6f04616206c43978262caad5db6ce0a": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -1098,10 +1105,11 @@
     "SAM:ba996475c1b2418ea50cdaee275a5c73": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/ba996475c1b2418ea50cdaee275a5c73/view",
       "title": "International Aircraft Trash Removal",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:ba5b070997d446f28672b3cfa0bbf78f": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -1122,10 +1130,11 @@
     "SAM:b9fe8644f70141e2b9ce74b550f04d0d": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/b9fe8644f70141e2b9ce74b550f04d0d/view",
       "title": "E1PC--Department of Veteran Affairs Seeks LAND  to Expand or Replace the Baltimore National Cemetery  Baltimore, MD",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:b9a9e53e69c9428a869d288ff55e6499": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -1138,10 +1147,11 @@
     "SAM:b98e3fe844264182a6f98f1090ec3e0e": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/b98e3fe844264182a6f98f1090ec3e0e/view",
       "title": "(DACA63-5-26-0050) US GOVERNMENT SEEKS SOURCES FOR LEASED RETAIL AND RELATED SPACE DUMAS, TX",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:56:42Z"
     },
     "SAM:b96fe9496a344c97a31fd89fbb1a74b4": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -1194,10 +1204,11 @@
     "SAM:b348c79eb4c54f1bbde6d026b29c8bf1": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/b348c79eb4c54f1bbde6d026b29c8bf1/view",
       "title": "GAOA Road Maintenance Los Padres National Forest",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:48:43Z"
     },
     "SAM:b16aa9382413425c8bd8d246c72391a5": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -1275,10 +1286,11 @@
     "SAM:aa4f493c928e44c8a82fc3ffdcc2ce04": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "monitor",
       "url": "https://sam.gov/workspace/contract/opp/aa4f493c928e44c8a82fc3ffdcc2ce04/view",
       "title": "Student Information System (SIS) Modernization and Sustainment",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T09:52:53Z"
     },
     "SAM:aa4925d1bd1a4f4c9cbb5b8883362cae": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -1636,10 +1648,11 @@
     "SAM:9199215400804f6793c6a18ee4940f21": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/9199215400804f6793c6a18ee4940f21/view",
       "title": "CSS 88855 - Repair AMSA Interior - Reading, PA",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:913411273e444633ab9159681f4842d1": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -2167,10 +2180,11 @@
     "SAM:71d4b342f0924d65b34dd8d629a4838e": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/71d4b342f0924d65b34dd8d629a4838e/view",
       "title": "Notice of Intent to Award Ability One Custodial Services for March Air Reserve Base",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:56:42Z"
     },
     "SAM:71c1a9db1a1045e8b753037aecd80662": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -2296,10 +2310,11 @@
     "SAM:6a7a5a5dcaaf49d482c2f153c8a2647a": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/6a7a5a5dcaaf49d482c2f153c8a2647a/view",
       "title": "SOURCES SOUGHT NOTICE to identify firms capable of performing ATON Repair & Replace Work at Base Tongue Point/Columbia R",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:6a301cfc32d84ce4b229923b0bd840df": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -2336,10 +2351,11 @@
     "SAM:6848e622e78f4d909e63684b6df465af": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/6848e622e78f4d909e63684b6df465af/view",
       "title": "Aberdeen Test Center Welding, Machining, Painting, and Fabrication Services",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:48:43Z"
     },
     "SAM:6742ae4b3887448c96180fe5c79a1346": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -2843,10 +2859,11 @@
     "SAM:4b89739cf3854cf1ae6ced46568e601d": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/4b89739cf3854cf1ae6ced46568e601d/view",
       "title": "Unit Dolly Jacking and Carrying Services (SRF-JRMC) Yokosuka, Japan",
-      "final_score": 0.772
+      "final_score": 0.772,
+      "status_updated_utc": "2026-05-30T08:14:45Z"
     },
     "SAM:4b68252af5d84f0fa3a200a378d1f490": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -3367,10 +3384,11 @@
     "SAM:2a7efcfc67db42599b1af1441d019207": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/2a7efcfc67db42599b1af1441d019207/view",
       "title": "Intent to Sole Source - PH Tools, LLC - Special Notice/Pre-Solicitation",
-      "final_score": 0.562
+      "final_score": 0.562,
+      "status_updated_utc": "2026-05-30T08:07:23Z"
     },
     "SAM:2a59bc6c28f141ada4c74fb25a5b371f": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -3688,18 +3706,20 @@
     "SAM:1585ca1e40aa4bdf9e08e5113877a815": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/1585ca1e40aa4bdf9e08e5113877a815/view",
       "title": "FY26-6A Foreign Bearings Waiver Package Sources Sought Notice",
-      "final_score": 0.732
+      "final_score": 0.732,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:13b04c44cd1343c998aba34e6c2ee7df": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/13b04c44cd1343c998aba34e6c2ee7df/view",
       "title": "SOURCES SOUGHT NOTICE FOR DESIGN BUILD, NAVAL AIR MAINTENANCE CENTER FOR EXCELLENCE (NAMCE), TENSION FABRIC STRUCTURE (T",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:12780e06e19b43bf8cafd89677b52ac2": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -3849,10 +3869,11 @@
     "SAM:0c3fbcc6ac414c2b8f7b23fcc2b666f6": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/0c3fbcc6ac414c2b8f7b23fcc2b666f6/view",
       "title": "Notice of Intent to Award a BPA Call Order against The Land Management Integrated Resources BPA (LMIR) for Common Stand ",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:07:23Z"
     },
     "SAM:0c20354f54694b6a91b0304598c705e3": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -4293,10 +4314,11 @@
     "SAM:fba64b8ef6064c6ea5552cfcc70c5d47": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/fba64b8ef6064c6ea5552cfcc70c5d47/view",
       "title": "REQUEST FOR INTEREST  Potential Use of the Outer Mole Pier at Truman Annex, Naval Air Station Key West, Monroe County, F",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:56:42Z"
     },
     "SAM:fb65713e8e8e413ba14995b8be8bb75f": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -4479,10 +4501,11 @@
     "SAM:f5a40fb3d9944445895bdeff7ef9c937": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/f5a40fb3d9944445895bdeff7ef9c937/view",
       "title": "B100 Child Development Center Repairs",
-      "final_score": 0.66
+      "final_score": 0.66,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:f5a1aa13685a498ea662d460726aaaf3": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -4691,10 +4714,11 @@
     "SAM:ef411dbab1f04443a27c161f75e4ed21": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/ef411dbab1f04443a27c161f75e4ed21/view",
       "title": "Sea-Based X-Band Radar (SBX-1) Industrial Availability and Dry Docking",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:14:45Z"
     },
     "SAM:eefa24602ee64e49b032a799fb758c48": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -4835,10 +4859,11 @@
     "SAM:e9e447cc1aaa4b84b917e9fb02927dc5": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/e9e447cc1aaa4b84b917e9fb02927dc5/view",
       "title": "1 AS Special Air Mision Pilot Indoctrination Training",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:07:23Z"
     },
     "SAM:e910892198bc41558cb487c0769f4160": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -5011,10 +5036,11 @@
     "SAM:e26e18ffcdc34901a38dcb8013a5d202": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/e26e18ffcdc34901a38dcb8013a5d202/view",
       "title": "Shipboard Helicopter Handler Extra Low Profile (SHH-ELP) and the Multi-Aircraft Nose/Tail Integrated System (MANTIS)",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:07:23Z"
     },
     "SAM:e187399053ba4394af552b142c2236a7": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -5027,10 +5053,11 @@
     "SAM:e17b7aa5035a49cc8d6a669114f7eee1": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/e17b7aa5035a49cc8d6a669114f7eee1/view",
       "title": "R425--Migration of Nuclear Cardiology stress test imaging data  from the Optum Cardiology PACS to the Optum Radiology PA",
-      "final_score": 0.862
+      "final_score": 0.862,
+      "status_updated_utc": "2026-05-30T06:55:30Z"
     },
     "SAM:e17663f374134107b0c836c4cbe00e62": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -5549,10 +5576,11 @@
     "SAM:cfe84fa69c41436095d95997abb4fa0b": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/cfe84fa69c41436095d95997abb4fa0b/view",
       "title": "NNSY CUTTING SHIELD",
-      "final_score": 0.601
+      "final_score": 0.601,
+      "status_updated_utc": "2026-05-30T07:39:31Z"
     },
     "SAM:cfe5c78dad82453d908afd3456368912": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -5687,10 +5715,11 @@
     "SAM:cc4269e08a8543ba9d84b024856d25bf": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/cc4269e08a8543ba9d84b024856d25bf/view",
       "title": "NOTICE OF INTENT TO SOLE SOURCE: IDIQ CEILING INCREASE FOR EPOXY FLOOR REPAIRS",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:cb68dcdf7f2a437d9d6ce6f5dc0345e2": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -5711,10 +5740,11 @@
     "SAM:cb186c35f6a94279b51d51af70d311fa": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/cb186c35f6a94279b51d51af70d311fa/view",
       "title": "FY26-27 D63 CELL BLOCK REPAIR",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:cb05cc9621a443e3b7c088158c442c6f": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -5993,10 +6023,11 @@
     "SAM:c2aee1c858544cd98bd2e54f7b2e4ea4": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/c2aee1c858544cd98bd2e54f7b2e4ea4/view",
       "title": "CLOTH, REFRASIL",
-      "final_score": 0.601
+      "final_score": 0.601,
+      "status_updated_utc": "2026-05-30T07:48:43Z"
     },
     "SAM:c2954f59944c4f869aafc7caa1b3a889": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -6589,10 +6620,11 @@
     "SAM:b189204202e94138b72592a501156cd9": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/b189204202e94138b72592a501156cd9/view",
       "title": "Leadership Assessment and Development",
-      "final_score": 0.862
+      "final_score": 0.862,
+      "status_updated_utc": "2026-05-30T09:52:52Z"
     },
     "SAM:b15bebbc616c4c8ca5c37703e6c5e320": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -6621,10 +6653,11 @@
     "SAM:b0bcba1999354c4bab9feeb6f5ba31c8": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/b0bcba1999354c4bab9feeb6f5ba31c8/view",
       "title": "McConnell AFB Air Park Pond Aeration",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:39:31Z"
     },
     "SAM:b067e3b066f84cf48b001fa37c3aefe5": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -6886,10 +6919,11 @@
     "SAM:a6fec50c79124cb0b44b3bf913efb249": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/a6fec50c79124cb0b44b3bf913efb249/view",
       "title": "Hydraulic Oil Offload (4500G of 2190-S & 500G of 2075 TH) & Onload",
-      "final_score": 0.601
+      "final_score": 0.601,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:a6e372ce1185499bb84e110ad4d1d001": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -6926,10 +6960,11 @@
     "SAM:a644bc0a01784c67b379269c4924f1ec": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/a644bc0a01784c67b379269c4924f1ec/view",
       "title": "RFI for Juvenile Detention Services within the boundaries of the contiguous 48 states (excluding Alaska and Hawaii)",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:39:31Z"
     },
     "SAM:a619b425799e4a10ade8756ed63f1666": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -7190,10 +7225,11 @@
     "SAM:9dd405305f20469c881e0a1b2fd2192d": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/9dd405305f20469c881e0a1b2fd2192d/view",
       "title": "Request For Information-DODX Flat Railcars",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:07:23Z"
     },
     "SAM:9d8dae26786d4b95a2e4f590e96d067b": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -7230,10 +7266,11 @@
     "SAM:9c80b396da134a24b8f7ef41eed40d8a": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/9c80b396da134a24b8f7ef41eed40d8a/view",
       "title": "9999--Braun ironer repair and retune (VA-26-00062409)",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:9c3d16d59d604716a2b161eb7fe51886": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -7432,10 +7469,11 @@
     "SAM:970757cf57184db8acf401bd5e06a6eb": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/970757cf57184db8acf401bd5e06a6eb/view",
       "title": "Commercial Ground Shuttle Charter Service at the FAA, William J. Hughes Technical Center for Advanced Aerospace, Atlanti",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T07:02:04Z"
     },
     "SAM:96cc70f753ef498392affe82db796d44": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -7465,10 +7503,11 @@
     "SAM:95928d945b2f43dbafaeb8b05e8558cf": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/95928d945b2f43dbafaeb8b05e8558cf/view",
       "title": "Training and Certification in \"Configuration Management (CM) Principles and Implementation\".",
-      "final_score": 0.728
+      "final_score": 0.728,
+      "status_updated_utc": "2026-05-30T08:14:45Z"
     },
     "SAM:957023b7e9194b35a1ef835da88a4686": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -7676,10 +7715,11 @@
     "SAM:8fd000af9dba499a812ed52013c58b92": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "rejected",
       "url": "https://sam.gov/workspace/contract/opp/8fd000af9dba499a812ed52013c58b92/view",
       "title": "NOTICE OF INTENT TO AWARD A SOLE SOURCE CONTRACT: ST-17 Air Spider Industrial Basket",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T08:14:45Z"
     },
     "SAM:8faaade10998439e97d8cf837b828732": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
@@ -8061,10 +8101,11 @@
     "SAM:83092d4d037c4167b351e731faceeb2b": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
       "last_seen_utc": "2026-05-30T00:38:58Z",
-      "status": "in-inbox",
+      "status": "monitor",
       "url": "https://sam.gov/workspace/contract/opp/83092d4d037c4167b351e731faceeb2b/view",
       "title": "Request for Information - National Coordination Center, blockchain analytics",
-      "final_score": 0.522
+      "final_score": 0.522,
+      "status_updated_utc": "2026-05-30T09:52:53Z"
     }
   }
 }
