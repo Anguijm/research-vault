@@ -358,8 +358,10 @@ operator_team_layer:
 
       '
 sam_searches:
-  # Nine SAM.gov query slices targeting CACI's Layer 1 baseline (NAICS/PSC
+  # Eight SAM.gov query slices targeting CACI's Layer 1 baseline (NAICS/PSC
   # share data above) and the operator-team's Pacific INDOPACOM footprint.
+  # (Originally 9; geo_pacific dropped 2026-05-31 after SAM.gov ignored its
+  # placeOfPerformanceCountry parameter — see comment below catchall_keyword.)
   # Each slice is one quota call covering the full lookback window. The lib
   # paginates if max_candidates > 1000 per slice.
   #
@@ -375,16 +377,9 @@ sam_searches:
   #          Pacific-customer hits surfaced by catchall_keyword on Day 1.
   #          Populate team_maritime.params.organizationCode with the
   #          discovered values.
-  #   Day 3: --slices team_maritime,caci_security,caci_psc,geo_pacific
-  #          Four calls. team_maritime now anchored to the discovered org-codes,
+  #   Day 3: --slices team_maritime,caci_security,caci_psc
+  #          Three calls. team_maritime now anchored to the discovered org-codes,
   #          cutting 336611 (Ship Building) noise from CONUS shipyards.
-  #
-  # NOTE on geo_pacific: the SAM.gov v2 search API's documented place-of-
-  # performance params are `state` and `zip` (US-only). `placeOfPerformanceCountry`
-  # is included here because empirical behavior is uncertain — if SAM.gov
-  # ignores the param, this slice falls back to the unfiltered DoD pool and
-  # the date-span output will reveal it (we'd then drop it and rely on
-  # catchall_keyword for geographic coverage).
 
   - name: daily_delta
     description: "Daily delta — all DoD, last 48 hours"
@@ -436,12 +431,14 @@ sam_searches:
       ptype: r,s,p,k
       ccode: R425,R408,R499,R799,D307,D399,DA01,D302,DE01,DF01,D321
 
-  - name: geo_pacific
-    description: "Pacific-region geographic catchall. UNVERIFIED parameter name (placeOfPerformanceCountry not in lib's documented _API_PARAMS); confirm empirically on first Day-3 run and drop if SAM.gov ignores it. Country codes: Japan, Singapore, South Korea, Thailand, Hawaii, Guam, Northern Mariana Islands, American Samoa, Philippines, Australia, Malaysia."
-    params:
-      deptname: DEPT OF DEFENSE
-      ptype: r,s,p,k
-      placeOfPerformanceCountry: JA,SG,KS,TH,US-HI,GU,MP,AS,PH,AU,MY
+  # geo_pacific slice REMOVED 2026-05-31 after empirical test confirmed SAM.gov's
+  # v2 search API ignores the `placeOfPerformanceCountry` parameter — the call
+  # returned the full unfiltered DoD pool (totalRecords=20,678 vs. ≈20,677 for
+  # the equivalent no-filter call). Pacific geographic coverage now flows
+  # entirely through catchall_keyword, which already names Yokosuka, Sasebo,
+  # Singapore, Pearl Harbor, Guam, INDOPACOM, 7th Fleet, PACFLT. If a future
+  # SAM.gov API revision adds a working country-of-performance parameter,
+  # re-add this slice.
 
   - name: catchall_keyword
     description: "Pacific keyword catchall + team contract vehicle. q= supports OR per SAM.gov v2 docs; verify empirically. Catches Pacific work regardless of NAICS/PSC/subtier coding. Includes FA807518D0006 (operator team's Air Force IDIQ — task orders against this vehicle should surface here)."
