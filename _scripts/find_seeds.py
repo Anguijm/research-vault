@@ -111,72 +111,86 @@ def _fingerprint(candidate: dict) -> str:
 # ── Source 1: SAM.gov pre-solicitation notices ─────────────────────────
 
 
-def _query_sam_gov(lookback_days: int, max_candidates: int = 1000) -> list[dict]:
-    """Query SAM.gov for pre-solicitation, sources-sought, RFI, special notice,
-    industry day notices in the lookback window.
+def _query_sam_gov(lookback_days: int, max_candidates: int = 1000,
+                   slice_filter: list[str] | None = None) -> list[dict]:
+    """Query SAM.gov via the slice list from `caci-discovery-config.yaml`.
 
-    Routes every API call through `lib/sam_gov.py::execute_query` so the lib's
-    2 req/sec throttle, 900/1000 daily safety-pause, and 429 retry-with-backoff
-    are applied automatically. We do NOT issue direct `requests.get()` calls
-    against the SAM.gov endpoint — that bypasses rate limiting and produces
-    429 storms.
+    Each slice is one quota call (or more if max_candidates > 1000 per slice,
+    via the lib's pagination). The lib's quota_paused() check stops the loop
+    cleanly if we hit the cap mid-run. Per-slice candidates are accumulated
+    then returned; fingerprint dedup happens downstream in main().
+
+    `slice_filter` (optional): list of slice names from the config's
+    sam_searches block. If provided, only those slices run; otherwise all run.
+    Used for phased rollout (e.g., Day 1 anchors only).
     """
     api_key = os.environ.get("SAM_GOV_API_KEY", "")
     if not api_key:
         print("  WARN: SAM_GOV_API_KEY not set — skipping SAM.gov source.")
         return []
 
-    # Quota check before any calls — fail fast if today's quota is exhausted.
     quota = sam_gov_lib.load_quota()
     used = quota.get("requests_today", 0)
     if sam_gov_lib.quota_paused():
-        print(f"  SAM.gov DAILY QUOTA PAUSE — used {used}/{sam_gov_lib.DAILY_LIMIT} today (safety pause at {sam_gov_lib.SAFETY_PAUSE_AT}).")
-        print(f"  Resumes 00:00 UTC tomorrow. Skipping SAM.gov source for this run.")
+        print(f"  SAM.gov DAILY QUOTA PAUSE — used {used}/{sam_gov_lib.DAILY_LIMIT} today.")
         return []
-    remaining_today = sam_gov_lib.DAILY_LIMIT - used
-    print(f"  SAM.gov quota: {used}/{sam_gov_lib.DAILY_LIMIT} used today ({remaining_today} remaining, polite throttle at {sam_gov_lib.RATE_LIMIT_PER_SEC} req/sec).")
+    print(f"  SAM.gov quota: {used}/{sam_gov_lib.DAILY_LIMIT} used today "
+          f"({sam_gov_lib.DAILY_LIMIT - used} remaining, throttle {sam_gov_lib.RATE_LIMIT_PER_SEC} req/sec).")
 
-    # Consolidate all four notice types into a single API call via
-    # comma-separated `ptype` codes. SAM.gov accepts multi-value ptype and
-    # returns notices across all matching types in one response. This cuts
-    # our daily SAM.gov spend by 4x — critical for non-federal API keys
-    # capped at 10 requests/day.
-    notice_types = ["Sources Sought", "Special Notice", "Presolicitation", "Combined Synopsis/Solicitation"]
-    ptype_codes = [_sam_ptype_code(nt) for nt in notice_types if _sam_ptype_code(nt)]
-    ptype_combined = ",".join(ptype_codes)
-    params = {
-        "ptype": ptype_combined,
-        "deptname": "DEPT OF DEFENSE",
-    }
-    entry = {"params": params}
-    full_params = sam_gov_lib.parse_search_entry(entry, lookback_days)
+    cfg = _load_config()
+    slices = cfg.get("sam_searches") or []
+    if not slices:
+        print("  WARN: no sam_searches slices in config — skipping SAM.gov source.")
+        return []
+
+    if slice_filter:
+        wanted = set(slice_filter)
+        available = {s.get("name", "") for s in slices}
+        unknown = wanted - available
+        if unknown:
+            print(f"  WARN: unknown slice names in --slices: {sorted(unknown)}")
+            print(f"  Available: {sorted(s for s in available if s)}")
+        slices = [s for s in slices if s.get("name") in wanted]
+        if not slices:
+            print("  No slices selected after filter — nothing to do.")
+            return []
+
+    print(f"  Running {len(slices)} slice(s): {[s.get('name') for s in slices]}")
+
     candidates: list[dict] = []
-    try:
-        # SAM.gov caps at 1000 per page; the lib paginates via offset when
-        # max_candidates exceeds the page size. Each page consumes one quota
-        # call, so on non-federal tier (10/day cap) prefer max_candidates
-        # ≤ 1000 unless you've budgeted the extra calls. The lib also logs
-        # the posted-date span of the returned set so we can see whether
-        # the per-page cap silently truncated the requested window.
-        notices = sam_gov_lib.execute_query(full_params, api_key, max_candidates=max_candidates)
-    except sam_gov_lib.SamGovKeyError as e:
-        print(f"  SAM.gov KEY ERROR — {e}; aborting SAM.gov source for this run.")
-        return candidates
-    except Exception as e:
-        print(f"  SAM.gov error: {e}")
-        return candidates
-    print(f"  SAM.gov [combined ptype={ptype_combined}]: {len(notices)} notices returned (cap={max_candidates})")
-    for n in notices:
-        # The lib's normalized notice carries `notice_type` from the API
-        # response (e.g., "Sources Sought", "Special Notice"). Map it back
-        # to our actionability labels.
-        nt_label = _sam_label_from_lib_notice_type(n.get("notice_type", ""))
-        candidates.append(_normalize_sam_notice_from_lib(n, nt_label))
+    for i, slice_def in enumerate(slices, 1):
+        if i > 1 and sam_gov_lib.quota_paused():
+            print(f"  SAM.gov: quota cap reached after {i-1}/{len(slices)} slices; stopping early")
+            break
 
-    # Post-call quota status
+        name = slice_def.get("name", f"slice_{i}")
+        params = slice_def.get("params") or {}
+        slice_lookback = slice_def.get("lookback_days", lookback_days)
+
+        try:
+            full_params = sam_gov_lib.parse_search_entry({"params": params}, slice_lookback)
+        except ValueError as e:
+            print(f"  Slice {i}/{len(slices)} '{name}': bad config — {e}")
+            continue
+
+        print(f"  Slice {i}/{len(slices)}: {name} (lookback {slice_lookback}d)")
+        try:
+            notices = sam_gov_lib.execute_query(full_params, api_key, max_candidates=max_candidates)
+        except sam_gov_lib.SamGovKeyError as e:
+            print(f"  SAM.gov KEY ERROR — {e}; aborting.")
+            return candidates
+        except Exception as e:
+            print(f"  SAM.gov slice error: {e}")
+            continue
+
+        for n in notices:
+            nt_label = _sam_label_from_lib_notice_type(n.get("notice_type", ""))
+            candidates.append(_normalize_sam_notice_from_lib(n, nt_label))
+
     quota_after = sam_gov_lib.load_quota()
     used_after = quota_after.get("requests_today", 0)
-    print(f"  SAM.gov quota after this run: {used_after}/{sam_gov_lib.DAILY_LIMIT} used today ({sam_gov_lib.DAILY_LIMIT - used_after} remaining).")
+    print(f"  SAM.gov quota after this run: {used_after}/{sam_gov_lib.DAILY_LIMIT} used today "
+          f"({sam_gov_lib.DAILY_LIMIT - used_after} remaining).")
     return candidates
 
 
@@ -707,8 +721,11 @@ def main():
                     help="Shorthand for --lookback-days 14. Useful with --source sam-gov.")
     ap.add_argument("--dry-run", action="store_true", help="Don't write inbox or ledger.")
     ap.add_argument("--max-candidates", type=int, default=1000,
-                    help="Max SAM.gov candidates to pull (paginated, 1000/page). "
-                         "Each page consumes one quota call. Default 1000 (one page).")
+                    help="Max SAM.gov candidates to pull PER SLICE (paginated, 1000/page). "
+                         "Each page consumes one quota call. Default 1000 (one page per slice).")
+    ap.add_argument("--slices", type=str, default=None,
+                    help="Comma-separated SAM.gov slice names to run (matches `name` in "
+                         "config's sam_searches block). Default: run all slices.")
     args = ap.parse_args()
 
     cfg = _load_config()
@@ -722,7 +739,10 @@ def main():
     candidates: list[dict] = []
     if args.source in ("sam-gov", "all"):
         print("\n→ SAM.gov pre-solicitation notices")
-        sam_c = _query_sam_gov(lookback, args.max_candidates)
+        slice_filter = None
+        if args.slices:
+            slice_filter = [s.strip() for s in args.slices.split(",") if s.strip()]
+        sam_c = _query_sam_gov(lookback, args.max_candidates, slice_filter)
         print(f"  {len(sam_c)} candidates from SAM.gov")
         candidates.extend(sam_c)
     if args.source in ("war-gov", "all"):
