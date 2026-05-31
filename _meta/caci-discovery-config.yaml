@@ -358,94 +358,76 @@ operator_team_layer:
 
       '
 sam_searches:
-  # Eight SAM.gov query slices targeting CACI's Layer 1 baseline (NAICS/PSC
-  # share data above) and the operator-team's Pacific INDOPACOM footprint.
-  # (Originally 9; geo_pacific dropped 2026-05-31 after SAM.gov ignored its
-  # placeOfPerformanceCountry parameter — see comment below catchall_keyword.)
-  # Each slice is one quota call covering the full lookback window. The lib
-  # paginates if max_candidates > 1000 per slice.
+  # SAM.gov query slices anchored on `organizationName` text search.
   #
-  # Slice "daily_delta" is the steady-state daily run (short lookback). The
-  # other eight are backfill slices — full 56-day lookback, run during the
-  # phased rollout then refreshed weekly (Gemini Round 2 recommendation).
+  # Architecture rewrite 2026-06-01 after empirical verification that
+  # SAM.gov v2 search ignores `ncode`, `naicsCode`, `ccode`, `q`, and
+  # `placeOfPerformanceCountry` parameters. The only parameter we've
+  # confirmed filters meaningfully is `organizationName`. The previous
+  # 8-slice plan (NAICS/PSC/keyword-based) is preserved in git history at
+  # commit 8922ce2 if needed for reference.
   #
-  # Phased deployment (Gemini Round 3 recommendation):
-  #   Day 1: --slices daily_delta,caci_it_core,caci_eng_pro,team_training,catchall_keyword
-  #          Four calls. Anchors are high-signal, low-noise. Dump output to
-  #          CSV and cluster-triage offline before adding more slices.
-  #   Day 2: Discovery query — extract organizationCode from JSON of confirmed
-  #          Pacific-customer hits surfaced by catchall_keyword on Day 1.
-  #          Populate team_maritime.params.organizationCode with the
-  #          discovered values.
-  #   Day 3: --slices team_maritime,caci_security,caci_psc
-  #          Three calls. team_maritime now anchored to the discovered org-codes,
-  #          cutting 336611 (Ship Building) noise from CONUS shipyards.
+  # Empirical baseline: `organizationName=NAVSUP FLC YOKOSUKA` returned
+  # 29 records over 56 days on 2026-05-31 — well under the 1000-record
+  # page cap, so full window coverage in one quota call. Each slice
+  # below targets a Pacific Navy or Air Force contracting office expected
+  # to be similarly small (10s to low hundreds of records per 56 days).
+  #
+  # Day-1 deployment: run all eight in one batch (8 quota calls). Per-slice
+  # date-span output will reveal which organizationName strings SAM.gov
+  # recognizes vs. silently no-matches. Drop any that return zero.
+  #
+  # The exact text strings here are educated candidates based on standard
+  # DoD-contracting-office nomenclature; only NAVSUP FLC YOKOSUKA is
+  # empirically confirmed.
 
-  - name: daily_delta
-    description: "Daily delta — all DoD, last 48 hours"
-    lookback_days: 2
+  - name: nav_yokosuka
+    description: "NAVSUP FLC YOKOSUKA — operator-team's primary customer contracting office. EMPIRICALLY CONFIRMED 2026-05-31: 29 records over 56 days."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: NAVSUP FLC YOKOSUKA
       ptype: r,s,p,k
 
-  - name: caci_it_core
-    description: "CACI IT core NAICS (541512+541519+541511) — 76.5% of CACI Layer 1 baseline"
+  - name: nav_pearl_harbor
+    description: "NAVSUP FLC PEARL HARBOR — Pacific Fleet primary supply chain contracting office at Pearl Harbor, Hawaii. Operator-team extendable customer per operator_team_layer."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: NAVSUP FLC PEARL HARBOR
       ptype: r,s,p,k
-      ncode: 541512,541519,541511
 
-  - name: caci_eng_pro
-    description: "CACI engineering and professional NAICS (541330+541990+541712+541611+541618) — ≈17% of baseline + management consulting"
+  - name: nav_san_diego
+    description: "NAVSUP FLC SAN DIEGO — West Coast Pacific Fleet supply chain contracting office. Operator-team extendable per Pacific footprint."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: NAVSUP FLC SAN DIEGO
       ptype: r,s,p,k
-      ncode: 541330,541990,541712,541611,541618
 
-  - name: team_training
-    description: "Operator-team training and workforce-development NAICS (611430+611710+611512)"
+  - name: nav_puget_sound
+    description: "NAVSUP FLC PUGET SOUND — Pacific Northwest supply chain contracting office. Operator team has direct work history here per operator confirmation 2026-05-31."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: NAVSUP FLC PUGET SOUND
       ptype: r,s,p,k
-      ncode: 611430,611710,611512
 
-  - name: team_maritime
-    description: "Maritime/ship NAICS (336611 Ship Building, 488390 Other Water Transport Support). High noise without org-code anchoring; team_maritime.params.organizationCode populated Day 2 after discovery query."
+  - name: nav_srf_jrmc
+    description: "SRF-JRMC direct customer-name search — Ship Repair Facility / Japan Regional Maintenance Center, Yokosuka. Operator's primary customer."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: SRF-JRMC
       ptype: r,s,p,k
-      ncode: 336611,488390
-      # organizationCode: <discovered Day 2 — Pacific FLCs + NAVSEA shipyard offices>
 
-  - name: caci_security
-    description: "CACI security/cyber NAICS (561621) — Layer 1 baseline 3%"
+  - name: nav_nswc_corona
+    description: "NSWC CORONA — Naval Surface Warfare Center Corona Division, operator-team secondary customer (SMDII partnership)."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: NSWC CORONA
       ptype: r,s,p,k
-      ncode: 561621
 
-  - name: caci_psc
-    description: "Consolidated CACI top PSC codes — R-codes (labor support) + D-codes (IT). Gemini-collapsed from 3 slices to 1 because KO PSC assignment is inconsistent at RFI/Sources-Sought stage; single safety-net slice is the right hedge."
+  - name: af_yokota
+    description: "Air Force at Yokota AB Japan — 374 CONS (Contracting Squadron), 374th Airlift Wing. Main Air Force contracting shop in mainland Japan. Operator-team's Air Force IDIQ (FA807518D0006) makes Pacific Air Force opportunities a reachable expansion lane."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: 374 CONS
       ptype: r,s,p,k
-      ccode: R425,R408,R499,R799,D307,D399,DA01,D302,DE01,DF01,D321
 
-  # geo_pacific slice REMOVED 2026-05-31 after empirical test confirmed SAM.gov's
-  # v2 search API ignores the `placeOfPerformanceCountry` parameter — the call
-  # returned the full unfiltered DoD pool (totalRecords=20,678 vs. ≈20,677 for
-  # the equivalent no-filter call). Pacific geographic coverage now flows
-  # entirely through catchall_keyword, which already names Yokosuka, Sasebo,
-  # Singapore, Pearl Harbor, Guam, INDOPACOM, 7th Fleet, PACFLT. If a future
-  # SAM.gov API revision adds a working country-of-performance parameter,
-  # re-add this slice.
-
-  - name: catchall_keyword
-    description: "Pacific keyword catchall + team contract vehicle. q= supports OR per SAM.gov v2 docs; verify empirically. Catches Pacific work regardless of NAICS/PSC/subtier coding. Includes FA807518D0006 (operator team's Air Force IDIQ — task orders against this vehicle should surface here)."
+  - name: af_kadena
+    description: "Air Force at Kadena AB Okinawa — 18 CONS, 18th Wing. Largest combat wing in PACAF; high task-order volume expected."
     params:
-      deptname: DEPT OF DEFENSE
+      organizationName: 18 CONS
       ptype: r,s,p,k
-      q: 'FA807518D0006 OR SRF-JRMC OR JRMC OR Yokosuka OR Sasebo OR Singapore OR "Pearl Harbor" OR Guam OR INDOPACOM OR "7th Fleet" OR "Seventh Fleet" OR PACFLT'
 
 out_of_scope:
 # Categories CACI cannot structurally deliver — these get a max-0.3 score
