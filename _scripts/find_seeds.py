@@ -111,7 +111,7 @@ def _fingerprint(candidate: dict) -> str:
 # ── Source 1: SAM.gov pre-solicitation notices ─────────────────────────
 
 
-def _query_sam_gov(lookback_days: int) -> list[dict]:
+def _query_sam_gov(lookback_days: int, max_candidates: int = 1000) -> list[dict]:
     """Query SAM.gov for pre-solicitation, sources-sought, RFI, special notice,
     industry day notices in the lookback window.
 
@@ -152,17 +152,20 @@ def _query_sam_gov(lookback_days: int) -> list[dict]:
     full_params = sam_gov_lib.parse_search_entry(entry, lookback_days)
     candidates: list[dict] = []
     try:
-        # max_candidates=1000 because SAM.gov caps at 1000 per call and we
-        # only get one call per run for non-federal tier; pull as many as
-        # the API will return so the dedup + ranker has a full window.
-        notices = sam_gov_lib.execute_query(full_params, api_key, max_candidates=1000)
+        # SAM.gov caps at 1000 per page; the lib paginates via offset when
+        # max_candidates exceeds the page size. Each page consumes one quota
+        # call, so on non-federal tier (10/day cap) prefer max_candidates
+        # ≤ 1000 unless you've budgeted the extra calls. The lib also logs
+        # the posted-date span of the returned set so we can see whether
+        # the per-page cap silently truncated the requested window.
+        notices = sam_gov_lib.execute_query(full_params, api_key, max_candidates=max_candidates)
     except sam_gov_lib.SamGovKeyError as e:
         print(f"  SAM.gov KEY ERROR — {e}; aborting SAM.gov source for this run.")
         return candidates
     except Exception as e:
         print(f"  SAM.gov error: {e}")
         return candidates
-    print(f"  SAM.gov [combined ptype={ptype_combined}]: {len(notices)} notices in one API call")
+    print(f"  SAM.gov [combined ptype={ptype_combined}]: {len(notices)} notices returned (cap={max_candidates})")
     for n in notices:
         # The lib's normalized notice carries `notice_type` from the API
         # response (e.g., "Sources Sought", "Special Notice"). Map it back
@@ -703,6 +706,9 @@ def main():
     ap.add_argument("--weekly", action="store_true",
                     help="Shorthand for --lookback-days 14. Useful with --source sam-gov.")
     ap.add_argument("--dry-run", action="store_true", help="Don't write inbox or ledger.")
+    ap.add_argument("--max-candidates", type=int, default=1000,
+                    help="Max SAM.gov candidates to pull (paginated, 1000/page). "
+                         "Each page consumes one quota call. Default 1000 (one page).")
     args = ap.parse_args()
 
     cfg = _load_config()
@@ -716,7 +722,7 @@ def main():
     candidates: list[dict] = []
     if args.source in ("sam-gov", "all"):
         print("\n→ SAM.gov pre-solicitation notices")
-        sam_c = _query_sam_gov(lookback)
+        sam_c = _query_sam_gov(lookback, args.max_candidates)
         print(f"  {len(sam_c)} candidates from SAM.gov")
         candidates.extend(sam_c)
     if args.source in ("war-gov", "all"):

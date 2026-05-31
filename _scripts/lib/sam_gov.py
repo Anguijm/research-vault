@@ -124,23 +124,79 @@ class SamGovKeyError(Exception):
     """Raised when SAM.gov rejects the API key (401/403)."""
 
 
-def execute_query(params: dict, api_key: str, max_candidates: int = 100) -> list[dict]:
-    """Call the search endpoint once. Returns normalized candidate dicts.
+def execute_query(params: dict, api_key: str, max_candidates: int = 1000) -> list[dict]:
+    """Call the search endpoint, paginating as needed.
+
+    Returns up to `max_candidates` normalized notices. Pages of up to 1000
+    each (SAM.gov's per-call cap); every page consumes one quota call.
+    Stops early on quota_paused mid-pagination, on an empty page, or when
+    the API's reported `totalRecords` has been exhausted.
+
+    Logs the posted-date span of the returned set vs the requested window
+    so the caller can see how much of the requested window was actually
+    covered (vs silently truncated by the per-page cap).
 
     Raises SamGovKeyError on 401/403. Honors quota and rate-limit pauses.
-    Performs one retry on 429 with backoff.
+    Performs one retry on 429 with backoff (per page).
     """
     if quota_paused():
         return []
 
-    call = dict(params)
-    call["api_key"] = api_key
-    call["limit"] = min(int(max_candidates), 1000)
+    PAGE_SIZE = 1000
+    collected: list[dict] = []
+    offset = 0
+    total_records: int | None = None
+    pages = 0
 
-    resp = _request_with_retry(SAM_API_URL, call)
-    data = resp.json()
-    notices = data.get("opportunitiesData") or []
-    return [_normalize_notice(n, params) for n in notices]
+    while len(collected) < max_candidates:
+        if pages > 0 and quota_paused():
+            print(f"  SAM.gov: quota paused mid-pagination at offset={offset}; "
+                  f"returning {len(collected)} candidates so far")
+            break
+
+        remaining = max_candidates - len(collected)
+        call = dict(params)
+        call["api_key"] = api_key
+        call["limit"] = min(PAGE_SIZE, remaining)
+        call["offset"] = offset
+
+        resp = _request_with_retry(SAM_API_URL, call)
+        data = resp.json()
+        pages += 1
+
+        if total_records is None:
+            tr_raw = data.get("totalRecords")
+            try:
+                total_records = int(tr_raw) if tr_raw is not None else None
+            except (TypeError, ValueError):
+                total_records = None
+
+        notices = data.get("opportunitiesData") or []
+        collected.extend(_normalize_notice(n, params) for n in notices)
+
+        if not notices:
+            break
+        offset += len(notices)
+        if total_records is not None and offset >= total_records:
+            break
+
+    if collected:
+        dates = sorted(d for d in (c.get("posted_date") for c in collected) if d)
+        if dates:
+            req_from = params.get("postedFrom", "?")
+            req_to = params.get("postedTo", "?")
+            print(f"  SAM.gov: returned {len(collected)} notices over {pages} page(s); "
+                  f"posted-date span {dates[0]} → {dates[-1]} "
+                  f"(requested window {req_from} → {req_to})")
+            if total_records is not None:
+                truncated = max(0, total_records - len(collected))
+                if truncated > 0:
+                    print(f"  SAM.gov: totalRecords={total_records}; "
+                          f"truncated={truncated} (raise --max-candidates to pull more)")
+                else:
+                    print(f"  SAM.gov: totalRecords={total_records} (full window covered)")
+
+    return collected
 
 
 def fetch_notice_by_id(notice_id: str, api_key: str) -> dict | None:
