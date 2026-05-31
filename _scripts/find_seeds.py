@@ -340,19 +340,26 @@ def _query_comptroller(lookback_days: int) -> list[dict]:
 
 
 def _score_candidate(c: dict, cfg: dict) -> dict:
-    """Score a candidate via four pillars + layered boost + penalty + out-of-scope cap."""
+    """Score a candidate via five pillars + layered boost + penalty + out-of-scope cap.
+
+    Pillars: customer signal, work-type match, capability-area match (from
+    the capability book), scale signal, actionability window. Plus three-way
+    classification of how the operator should handle the surfaced notice.
+    """
     pillar_customer, customer_layer = _score_customer(c, cfg)
     pillar_worktype, worktype_layer = _score_worktype(c, cfg)
+    pillar_capability, matched_areas = _score_capability_area(c, cfg)
     pillar_scale = _score_scale(c, cfg)
     pillar_actionability = _score_actionability(c, cfg)
 
     # Weighted base score (0-1)
     w = cfg.get("ranker_weights", {})
     base = (
-        pillar_customer * w.get("customer_signal", 0.35)
-        + pillar_worktype * w.get("work_type_match", 0.35)
-        + pillar_scale * w.get("scale_signal", 0.15)
-        + pillar_actionability * w.get("actionability_window", 0.15)
+        pillar_customer * w.get("customer_signal", 0.30)
+        + pillar_worktype * w.get("work_type_match", 0.25)
+        + pillar_capability * w.get("capability_area_match", 0.25)
+        + pillar_scale * w.get("scale_signal", 0.10)
+        + pillar_actionability * w.get("actionability_window", 0.10)
     )
 
     # Layer boost — take the highest-matching layer across customer + worktype matches
@@ -376,16 +383,29 @@ def _score_candidate(c: dict, cfg: dict) -> dict:
     else:
         oos_flagged = False
 
+    # Three-way classification (direct-execute / relationship-lead / customer-intel / low-match)
+    classification = _classify_notice(
+        {
+            "pillar_customer": pillar_customer,
+            "pillar_worktype": pillar_worktype,
+            "pillar_capability_area": pillar_capability,
+        },
+        cfg,
+    )
+
     return {
         "pillar_customer": round(pillar_customer, 2),
         "pillar_worktype": round(pillar_worktype, 2),
+        "pillar_capability_area": round(pillar_capability, 2),
         "pillar_scale": round(pillar_scale, 2),
         "pillar_actionability": round(pillar_actionability, 2),
+        "matched_capability_areas": matched_areas,
         "base_score": round(base, 3),
         "layer_boost": round(layer_boost, 2),
         "layer_matched": customer_layer if _layer_boost(customer_layer, cfg) >= _layer_boost(worktype_layer, cfg) else worktype_layer,
         "delivery_penalty": round(delivery_penalty, 2),
         "out_of_scope_flagged": oos_flagged,
+        "classification": classification,
         "final_score": round(final, 3),
         "score_display": f"{int(round(final * 10))}/10",
     }
@@ -533,6 +553,128 @@ def _score_actionability(c: dict, cfg: dict) -> float:
     return 0.4
 
 
+def _score_capability_area(c: dict, cfg: dict) -> tuple[float, list[str]]:
+    """Score a notice against CACI's capability areas from the capability book.
+
+    Reads `capability_areas` block in caci-discovery-config.yaml (the
+    structured projection of _meta/caci-capability-book/). For each area,
+    scans the notice text for keywords, named products, named customers,
+    and checks NAICS/PSC hints. Applies the area's growth_weight multiplier.
+
+    Returns:
+        - max_score: highest per-area match (0-1, capped at 1.0 after weight)
+        - matched_areas: list of capability area names that scored >= 0.3
+    """
+    text = " ".join([
+        c.get("title", ""),
+        c.get("snippet", ""),
+        c.get("department", ""),
+        c.get("subtier", ""),
+        c.get("office", ""),
+    ]).lower()
+
+    naics_field = c.get("naics", "")
+    naics = str(naics_field).strip() if naics_field else ""
+    psc = str(c.get("psc", "")).strip()
+
+    matches: list[tuple[str, float]] = []
+
+    for area in cfg.get("capability_areas") or []:
+        area_name = area.get("name", "")
+        if not area_name:
+            continue
+
+        score = 0.0
+
+        # Keyword match: each match adds 0.15, cap at 0.6 from keywords alone
+        kw_hits = 0
+        for kw in area.get("keywords") or []:
+            if not kw:
+                continue
+            if re.search(r"\b" + re.escape(kw.lower()) + r"\b", text):
+                kw_hits += 1
+        score += min(0.6, 0.15 * kw_hits)
+
+        # Named product match: 0.2 per hit, cap at 0.4
+        prod_hits = 0
+        for prod in area.get("named_products") or []:
+            if not prod:
+                continue
+            if re.search(r"\b" + re.escape(prod.lower()) + r"\b", text):
+                prod_hits += 1
+        score += min(0.4, 0.2 * prod_hits)
+
+        # Customer match: 0.15 per hit, cap at 0.3
+        cust_hits = 0
+        for cust in area.get("customers_seen") or []:
+            if not cust:
+                continue
+            if cust.lower() in text:
+                cust_hits += 1
+        score += min(0.3, 0.15 * cust_hits)
+
+        # NAICS hint: exact match adds 0.3
+        for n_hint in area.get("naics_hints") or []:
+            if n_hint and str(n_hint).strip() == naics:
+                score += 0.3
+                break
+
+        # PSC hint: exact match adds 0.2
+        for p_hint in area.get("psc_hints") or []:
+            if p_hint and str(p_hint).strip().upper() == psc.upper():
+                score += 0.2
+                break
+
+        # Apply growth weight
+        score *= float(area.get("growth_weight", 1.0))
+        score = min(1.0, score)
+
+        if score > 0:
+            matches.append((area_name, score))
+
+    if not matches:
+        return 0.0, []
+
+    max_score = max(s for _, s in matches)
+    matched_areas = sorted(
+        [name for name, s in matches if s >= 0.3],
+        key=lambda n: -dict(matches)[n],
+    )
+    return max_score, matched_areas
+
+
+def _classify_notice(scores: dict, cfg: dict) -> str:
+    """Three-way classification per Gemini red-team Round 3 + operator framing.
+
+    Independent of final_score; determines HOW the operator should handle
+    a surfaced notice (vs. WHETHER it surfaces, which is final_score's job).
+
+    Returns one of:
+        direct_execute    — high capability match + high team-execution fit
+        relationship_lead — high capability match + high customer-access but low team-execution fit
+        customer_intel    — high customer-access but low capability match
+        low_match         — doesn't clear any threshold (informational)
+    """
+    w = cfg.get("ranker_weights", {})
+    hi = w.get("classification_high_threshold", 0.6)
+
+    capability = scores.get("pillar_capability_area", 0.0)
+    team_worktype = scores.get("pillar_worktype", 0.0)
+    team_customer = scores.get("pillar_customer", 0.0)
+
+    high_capability = capability >= hi
+    high_worktype = team_worktype >= hi
+    high_customer = team_customer >= hi
+
+    if high_capability and high_worktype:
+        return "direct_execute"
+    if high_capability and high_customer and not high_worktype:
+        return "relationship_lead"
+    if high_customer and not high_capability:
+        return "customer_intel"
+    return "low_match"
+
+
 def _layer_boost(layer_name: str, cfg: dict) -> float:
     w = cfg.get("ranker_weights", {})
     if layer_name == "operator_team_layer":
@@ -585,36 +727,45 @@ def _term_matches(term: str, text: str) -> bool:
 def _is_out_of_scope(c: dict, cfg: dict) -> bool:
     """A candidate is out-of-scope if any out_of_scope rule matches.
 
-    Match logic (any one is sufficient):
-      (a) keyword match: rule phrase shares >= 2 distinct 5+ char alphabetic
-          words with the seed's title + snippet text. Each rule term is also
-          checked under its plural/singular variants to handle word-form
-          mismatches between rule and seed (e.g. "partnerships" → "partnership").
-      (b) NAICS code match: the seed's NAICS code appears anywhere in the
-          rule phrase (e.g., rule says "NAICS 336413" and seed NAICS is
-          "336413").
-      (c) PSC code match: same logic for the seed's Product Service Code.
-
-    The code-based match catches DLA parts notices that have very short
-    titles (e.g., "47--ADAPTER,STRAIGHT,FL") which the keyword matcher
-    cannot match on text alone. Rules that include specific NAICS/PSC
-    codes get this precision automatically.
+    Match logic (tightened 2026-06-01 to filter common-DoD-vocabulary
+    false positives):
+      - CODE-ANCHORED rule (rule mentions "NAICS" or "PSC"): fire only
+        if the seed's NAICS/PSC string appears in the rule AND the rule
+        shares ≥1 keyword with the seed's title/snippet (or the seed is
+        a short/code-only listing, e.g. DLA parts notice with title
+        "47--ADAPTER,STRAIGHT,FL").
+      - CATEGORICAL rule (no NAICS/PSC mention): fire on ≥3 distinct
+        keyword overlaps with the seed's title/snippet. Previously was
+        ≥2, but that triggered on common vocabulary pairs like
+        ("naval", "platform") between an unrelated unmanned-aircraft
+        rule and a legitimate mission-engineering notice.
     """
     title_snippet = (c.get("title", "") + " " + c.get("snippet", "")).lower()
     naics = (c.get("naics") or "").strip()
     psc = (c.get("psc") or "").strip()
+    short_seed = len(title_snippet.strip()) < 80
+
     for oos in cfg.get("out_of_scope", []) or []:
-        # (a) Word-boundary keyword match with plural/singular variant handling
+        # Code-anchor detection: rule explicitly references NAICS or PSC
+        has_code_anchors = bool(re.search(r"\b(NAICS|PSC)\b", oos, re.IGNORECASE))
+
+        # Seed code match: the seed's NAICS or PSC string appears anywhere in the rule
+        naics_match = bool(naics) and naics in oos
+        psc_match = bool(psc) and psc.upper() in oos.upper()
+
+        # Keyword overlap (5+ char words, plural-variant matching)
         terms = set(re.findall(r"[a-zA-Z]{5,}", oos.lower()))
-        hits = sum(1 for t in terms if _term_matches(t, title_snippet))
-        if hits >= 2:
-            return True
-        # (b) NAICS code match — seed's NAICS appears in the rule phrase
-        if naics and naics in oos:
-            return True
-        # (c) PSC code match — seed's PSC appears in the rule phrase
-        if psc and psc in oos:
-            return True
+        kw_hits = sum(1 for t in terms if _term_matches(t, title_snippet))
+
+        if has_code_anchors:
+            # Require code match AND ≥1 keyword (or short/code-only seed)
+            if (naics_match or psc_match) and (kw_hits >= 1 or short_seed):
+                return True
+        else:
+            # Categorical rule: ≥3 keyword overlap
+            if kw_hits >= 3:
+                return True
+
     return False
 
 
@@ -655,14 +806,28 @@ def _seed_block(c: dict, score: dict, layer_matched: str) -> str:
     oos_marker = " ⚑ OUT-OF-SCOPE" if score.get("out_of_scope_flagged") else ""
     dm_marker = " ⚑ DELIVERY-MODEL-MISMATCH" if score.get("delivery_penalty", 0) > 0 else ""
 
+    classification = score.get("classification", "low_match")
+    class_label = {
+        "direct_execute": "DIRECT-EXECUTE",
+        "relationship_lead": "RELATIONSHIP-LEAD",
+        "customer_intel": "CUSTOMER-INTEL",
+        "low_match": "low-match",
+    }.get(classification, classification)
+    class_marker = f" ⚑ {class_label}" if classification in ("direct_execute", "relationship_lead", "customer_intel") else ""
+
+    matched_areas = score.get("matched_capability_areas") or []
+    areas_str = ", ".join(matched_areas) if matched_areas else "(none)"
+
     lines = [
-        f"- [ ] **[{title}]({url})** `{score['score_display']}` — {src_label}{oos_marker}{dm_marker}",
+        f"- [ ] **[{title}]({url})** `{score['score_display']}` — {src_label}{class_marker}{oos_marker}{dm_marker}",
         f"  - Source: {src_label} ({notice_type or 'announcement'})",
         f"  - Customer: {customer}",
         f"  - Posted: {posted} | Response deadline: {deadline}" if (posted or deadline) else f"  - Posted: {posted}",
         f"  - NAICS: {naics} | PSC: {psc}",
         f"  - Layer matched: {layer_label}",
-        f"  - Pillars: customer {score['pillar_customer']} / work-type {score['pillar_worktype']} / scale {score['pillar_scale']} / actionability {score['pillar_actionability']}  →  base {score['base_score']} × boost {score['layer_boost']} − penalty {score['delivery_penalty']} = final {score['final_score']}",
+        f"  - Classification: {class_label}",
+        f"  - Capability areas matched: {areas_str}",
+        f"  - Pillars: customer {score['pillar_customer']} / work-type {score['pillar_worktype']} / capability {score['pillar_capability_area']} / scale {score['pillar_scale']} / actionability {score['pillar_actionability']}  →  base {score['base_score']} × boost {score['layer_boost']} − penalty {score['delivery_penalty']} = final {score['final_score']}",
         f"  - Snippet: {snippet_short}",
         f"  - Triage: [ ] promote  [ ] drop  [ ] monitor",
         f"  - First-seen: {_utc_now()}",

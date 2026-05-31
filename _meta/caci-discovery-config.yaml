@@ -5,11 +5,23 @@ ranker_weights:
   operator_team_extendable_boost: 1.3
   directional_layer_boost: 1.2
   baseline_layer_boost: 1.0
-  customer_signal: 0.35
-  work_type_match: 0.35
-  scale_signal: 0.15
-  actionability_window: 0.15
+  # Pillar weights — total 1.0 across the five soft-signal pillars.
+  # Updated 2026-06-01 to add capability_area_match as a fifth pillar
+  # that reads the capability_areas block (derived from the capability
+  # book). Customer_signal slightly outweighs the others because customer
+  # access is the most direct constraint on whether the operator-team
+  # can reach an opportunity at all.
+  customer_signal: 0.30
+  work_type_match: 0.25
+  capability_area_match: 0.25
+  scale_signal: 0.10
+  actionability_window: 0.10
   delivery_model_mismatch_penalty: 0.1
+  # Three-way classification thresholds (Gemini red-team Round 3 + operator
+  # framing). A notice's classification is independent of final_score but
+  # determines how the operator should handle a surfaced notice.
+  classification_high_threshold: 0.6
+  classification_mid_threshold: 0.4
 actionability_logic:
   high_priority:
   - Sources Sought
@@ -428,6 +440,282 @@ sam_searches:
     params:
       organizationName: 18 CONS
       ptype: r,s,p,k
+
+capability_areas:
+  # Structured machine-readable projection of _meta/caci-capability-book/
+  # for use by the scorer in find_seeds.py. The markdown capability book is
+  # the source of truth (narrative, citations, FACT/Assessment labeling);
+  # this block is the derived structured extract the ranker reads.
+  #
+  # Each entry corresponds to one of CACI's seven publicly-stated capability
+  # areas (from caci.com/{area}/ and the FY25 10-K Business section).
+  # `growth_weight` reflects the area's trend-tailwind position per
+  # growth-signals.md §2 — cyber/space/EMS got named EXPLICITLY in the
+  # market-environment trend list, so they get >1.0; areas positioned only
+  # by implication get 1.0.
+  #
+  # Refresh cadence: when the capability book is materially updated
+  # (annually per 10-K, on M&A close, or when caci.com adds a new area),
+  # regenerate this block by hand from the markdown.
+
+  - name: c3i
+    display_name: "C3I — Command, Control, Communications, Intelligence"
+    growth_weight: 1.1  # implied by trends #5 (near-peer) + #7 (counterintel)
+    keywords:
+      - C3I
+      - command and control
+      - command, control
+      - C2
+      - signals intelligence
+      - SIGINT
+      - electronic warfare
+      - EW
+      - ISR mission management
+      - distributed common ground
+      - DCGS
+      - FADE
+      - fusion analysis
+      - multi-domain command
+    naics_hints: []  # C3I cross-cuts multiple NAICS; no single anchor
+    psc_hints:
+      - R425  # Engineering/Technical
+      - R408  # Program management
+    named_products:
+      - DCGS
+      - FADE
+      - Distributed Common Ground System
+      - Fusion Analysis and Development Effort
+    customers_seen:
+      - U.S. Army
+      - U.S. Air Force
+      - USAF
+      - Air Force
+
+  - name: cyber
+    display_name: "Cyber"
+    growth_weight: 1.3  # named explicitly in trend #2 AND in trend #3
+    keywords:
+      - cyber
+      - cybersecurity
+      - cyber defense
+      - cyber operations
+      - offensive cyber
+      - defensive cyber
+      - critical infrastructure defense
+      - information dominance
+      - DarkBlue
+      - CluesAI
+      - CDM DEFEND
+      - continuous diagnostics
+      - FEDND
+      - federal enterprise network defense
+      - DTRA counter-WMD
+    naics_hints:
+      - "561621"  # Security Systems Services
+    psc_hints:
+      - D399  # IT - Other
+      - DA01  # IT Business App Dev (cyber-related task orders often here)
+    named_products:
+      - DarkBlue Intelligence Suite
+      - CluesAI
+    customers_seen:
+      - Intelligence Community
+      - IC
+      - National Security Agency
+      - NSA
+      - Department of War
+      - DoW
+      - U.S. Army
+
+  - name: digital_solutions
+    display_name: "Digital Solutions"
+    growth_weight: 1.2  # named by implication in trend #3 (modernization) + #4 (AI)
+    keywords:
+      - digital transformation
+      - agile transformation
+      - agile delivery
+      - business process automation
+      - application modernization
+      - data analytics
+      - data visualization
+      - cloud-native
+      - cloud migration
+      - cloud adoption
+      - financial management
+      - human capital management
+      - PeopleSoft
+      - supply chain management
+      - Agile Solution Factory
+      - ASF
+      - DAI Application Development
+      - WBSCM
+      - background investigation
+    naics_hints: []
+    psc_hints:
+      - DA01  # IT Business App Dev (LABOR)
+      - D302  # Systems Development
+    named_products:
+      - Agile Solution Factory
+      - ASF
+    customers_seen:
+      - U.S. Army
+      - Customs and Border Protection
+      - CBP
+      - Department of War
+      - Air Force
+      - Intelligence Agency
+
+  - name: enterprise_it
+    display_name: "Enterprise IT"
+    growth_weight: 1.2  # named by implication in trend #3 (modernization) + #6 (homeland)
+    keywords:
+      - enterprise IT
+      - IT infrastructure
+      - IT modernization
+      - network modernization
+      - network sustainment
+      - cloud solutions
+      - IT service delivery
+      - help desk
+      - active cyber defense
+      - end-user experience
+      - ELITE
+      - Enterprise Level IT Expertise
+      - Communication and Information Technology Services
+    naics_hints: []
+    psc_hints:
+      - D307  # IT Strategy and Architecture
+      - DE01  # IT End-User Help Desk
+      - DF01  # IT Management Support
+      - D321  # IT Help Desk
+      - D318  # IT Integrated HW/SW Services
+    named_products: []  # Enterprise IT page on caci.com names no products
+    customers_seen:
+      - U.S. European Command
+      - EUCOM
+      - U.S. Africa Command
+      - AFRICOM
+      - U.S. Army
+      - Customs and Border Protection
+      - CBP
+
+  - name: mission_engineering
+    display_name: "Mission and Engineering Support"
+    growth_weight: 1.1  # implied by trends #5 (near-peer) + #7 (counterintel)
+    keywords:
+      - platform integration
+      - mission operations
+      - intelligence analysis
+      - dark web investigations
+      - training and fielding
+      - engineering and platform integration
+      - modeling and simulation
+      - logistics engineering
+      - naval architecture
+      - ship design
+      - system integration
+      - weapons systems sustainment
+      - mission platform
+      - payload integration
+      - IPPS-A
+      - Integrated Personnel and Pay System
+      - satellite control network
+      - AFSCN
+    naics_hints:
+      - "541330"  # Engineering Services
+      - "336611"  # Ship Building and Repairing — operator-team naval architecture anchor
+    psc_hints:
+      - R425  # Engineering/Technical
+      - R499  # Professional - Other
+    named_products:
+      - DarkBlue Intelligence Suite
+      - CluesAI
+    customers_seen:
+      - U.S. Navy Naval Surface Warfare Center
+      - NSWC
+      - National Geospatial-Intelligence Agency
+      - NGA
+      - U.S. Southern Command
+      - SOUTHCOM
+      - DoD combatant commands
+
+  - name: space
+    display_name: "Space"
+    growth_weight: 1.4  # named explicitly in trend #2; Golden Dome ($25B); ARKA closed
+    keywords:
+      - space domain awareness
+      - space mission management
+      - space data processing
+      - sensing and sense-making
+      - counterspace
+      - optical communications
+      - electro-optical
+      - EO/IR
+      - hyperspectral imaging
+      - agentic AI
+      - geospatial intelligence
+      - GEOINT
+      - Golden Dome
+      - space-based sensor
+      - ground-based software processing
+      - PALLAS
+      - M3OCS
+      - VORTYX
+      - CrossBeam
+    naics_hints: []
+    psc_hints: []
+    named_products:
+      - PALLAS
+      - M3OCS
+      - VORTYX
+      - CrossBeam
+    customers_seen:
+      - Department of War
+      - DoW
+      - Intelligence Community
+      - IC
+      - Space Development Agency
+      - SDA
+      - NASA
+
+  - name: spectrum_superiority
+    display_name: "Spectrum Superiority"
+    growth_weight: 1.3  # named explicitly in trend #2 (EMS); Azure Summit closed
+    keywords:
+      - electromagnetic spectrum
+      - EMS
+      - software-defined
+      - software-defined radio
+      - radio frequency
+      - RF
+      - C-UxS
+      - counter-unmanned
+      - tactical electronic warfare
+      - signal detection
+      - ISR and EW
+      - secure networks
+      - photonics
+      - VPX
+      - SOSA
+      - Sensor Open Systems Architecture
+      - CMOSS
+      - C4ISR Modular Open Suite
+      - waveforms
+      - full-spectrum ISR
+      - Signal Vision
+      - Azure Summit
+    naics_hints: []
+    psc_hints: []
+    named_products:
+      - Signal Vision
+      - SOSA and CMOSS systems
+      - C-UxS systems
+    customers_seen:
+      - U.S. Army
+      - U.S. armed services
+      - NASA
+      - Jet Propulsion Laboratory
+      - JPL
 
 out_of_scope:
 # Categories CACI cannot structurally deliver — these get a max-0.3 score
