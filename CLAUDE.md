@@ -54,6 +54,29 @@ Phase 4d adds:
 - `verify_facts.py` — LLM-based FACT-vs-source verifier; produces a markdown
   verification report per opportunity, can update inline status markers.
 
+Post-Phase-4 work in progress (not yet enumerated as a numbered phase):
+
+- **Opportunity-seed-finder pipeline** — `_scripts/find_seeds.py`,
+  `_scripts/approve_seeds.py`, plus the `sam_searches` block in
+  `_meta/caci-discovery-config.yaml`. Routes SAM.gov queries via a slice
+  list with per-slice quota tracking and pagination via
+  `lib/sam_gov.py::execute_query`. **Current state: the SAM.gov query
+  layer is partially broken** — empirical testing on 2026-05-31 confirmed
+  v2 search ignores `ncode`, `ccode`, and `q` parameters; only
+  `organizationName` filters meaningfully. Slice plan needs rewrite around
+  organizationName-anchored queries for Pacific Navy + Air Force
+  contracting offices. See `_meta/seeds-inbox.md` for triage state and
+  the 12 rounds of out-of-scope closure rules in `caci-discovery-config.yaml`.
+- **CACI capability book** — `_meta/caci-capability-book/`. Seven capability
+  areas with dual-language coverage (caci.com marketing + FY25 10-K
+  investor language + FY26 Q3 10-Q current state), corporate overview,
+  growth signals, acquisitions inventory (8 identified plus 2 unnamed),
+  contract vehicles inventory (8 marketed IDIQs + 6 GSA Schedules + 16
+  USAspending-observed vehicles), and top-25 past-performance citations.
+  Functions as the scoring layer for the opportunity pipeline. Refresh
+  cadence: annual on each 10-K, quarterly on each 10-Q, event-driven on
+  M&A announcements.
+
 ## How to behave in this project
 
 - When the operator asks for "another opportunity like PMTEC," clone the folder
