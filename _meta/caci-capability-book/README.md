@@ -31,7 +31,7 @@ The relationship-lead category specifically requires the corporate capability bo
 | `acquisitions.md` | press releases (2023-2025) | five of seven recent CACI acquisitions identified by name; ARKA Group ($2.6B, FY26) flagged forward; two FY24 acquisitions still unnamed |
 | `vehicles.md` | caci.com/contracts | eight IDIQs + six GSA Schedules with contract numbers and PoP dates; **DTIC IAC MAC (FA807518D0006)** = operator-team's vehicle, recompetes 2027-09-29; vehicle-to-capability-area mapping |
 | `source-ledger.md` | — | citation index; every claim in any other file references an entry here |
-| `past-performance/` | (empty — reserved for future per-program detail pages) | |
+| `past-performance/top-25-by-amount.md` | USAspending top-25 CACI awards (FY19-FY26, sorted by amount) | concrete past-performance citations with PIIDs, parent IDVs, periods; cross-referenced to capability areas; **EH02 SHIP DESIGN SERVICES** confirms naval-architecture past performance for operator-team relevance |
 
 ## The capability taxonomy (one-line summary per area)
 

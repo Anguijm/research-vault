@@ -149,6 +149,15 @@ Files in the capability book reference these slugs inline (e.g.,
 - Sections used: Announcement summary
 - Notes: November 2023 timing places this in FY24. UK-based digital transformation agency specializing in UX and open-source technologies. Acquired by CACI Limited (UK subsidiary). Future Session 4 refresh should fetch the canonical press release URL.
 
+### caci-usaspending-top25-2026-05-31
+
+- URL: USAspending API endpoint `https://api.usaspending.gov/api/v2/search/spending_by_award/` queried via `_scripts/lib/usaspending.py`
+- Fetched: 2026-05-31
+- Source-type: usaspending-award (API query, multiple results)
+- Title: CACI top-25 awards by amount, FY2019-2026 window
+- Sections used: PIID (Award ID), Recipient Name, Description, Period (Start/End Date), Place of Performance State, Parent IDV (extracted from `generated_internal_id`-derived URL)
+- Notes: Query filters: `recipient_search_text=CACI` (substring match), `time_period=[2019-06-02 → 2026-05-31]`, `award_type_codes=[A,B,C,D]` (contracts), `sort=Award Amount desc`, limit=50. After substring filter for "CACI"-prefix recipients (to avoid Acacia-family false positives), 48 results remained; top 25 captured. **Caveat**: Award Amount field returned null/empty for all 25 records — USAspending's spending_by_award endpoint does not populate the amount column for the queried fields list. Awarding Agency / Funding Agency fields also empty. PIID, recipient, description, place of performance, dates, and parent IDV (from URL path) are all reliable. Resolving dollar amounts requires per-award detail calls against `awards/{generated_id}/` endpoint — deferred unless material.
+
 ### caci-contracts-page-2026-05-31
 
 - URL: https://www.caci.com/contracts
