@@ -703,3 +703,14 @@ Two things to watch as research proceeds:
 2. The USAspending API was returning HTTP 500 errors on 2026-05-21 and only the SAM keyword query against "NSWC Carderock" produced results on that pass. A second `find_sources.py` pass against this track should be queued for 7-14 days from now to pick up any USAspending data and any AI-search results that became available after the API recovery.
 
 ---
+
+### 2026-06-01 — Phase 1 demo folder scaffolded under `_demo/`
+
+The operator authorized standing up a personal-portfolio demonstration of the Level-1 flash-drill game described in §11.3.1 of the research file. The grill-me alignment skill (`_meta/grill-me.md`) was invoked before any scaffolding per the CLAUDE.md mandate; the alignment record is captured in `_demo/_decisions.md` and is not duplicated here.
+
+The new folder `_demo/` parallels the existing underscore-prefixed subfolders (`_red-teams/`, `_plays/`, `_decisions/`). It contains a README, a facilitator's guide, three initial scenario cards in `_demo/scenarios/`, and the demo-scope decision log. The medium is intentionally printable markdown — no software, no code, no web app. The audience is the operator's personal portfolio, not a Navy customer.
+
+The three scenarios cover the RMC-wardroom-receiving-side decision moments — forward team mobilization, BDAT-to-BDAR handoff, and surge triage under combat tempo. Port selection (fleet-commander side) is deferred. The customer-facing product CACI would sell at Level 1 still includes NWDC content review, classification handling, and a multi-session engagement plan, none of which apply to a portfolio piece.
+
+The work was authored on the `bdr-demo` branch and fast-forward merged into `main` on the same date. The branch is preserved at `origin/bdr-demo` as a record of the workspace; deletion is at the operator's discretion.
+
