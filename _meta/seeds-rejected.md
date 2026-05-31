@@ -89,3 +89,4 @@ Each row: URL, title, drop-date, drop-reason.
 | https://sam.gov/workspace/contract/opp/ef411dbab1f04443a27c161f75e4ed21/view | Sea-Based X-Band Radar (SBX-1) Industrial Availability and Dry Docking | 2026-05-30 | operator-dropped via approve_seeds |
 | https://sam.gov/workspace/contract/opp/8fd000af9dba499a812ed52013c58b92/view | NOTICE OF INTENT TO AWARD A SOLE SOURCE CONTRACT: ST-17 Air Spider Industrial Basket | 2026-05-30 | operator-dropped via approve_seeds |
 | https://sam.gov/workspace/contract/opp/b189204202e94138b72592a501156cd9/view | Leadership Assessment and Development | 2026-05-30 | operator-dropped via approve_seeds |
+| https://sam.gov/workspace/contract/opp/42ae471a15384ed0aa3f7f618d17b26a/view | Côte d’Ivoire-Sélection de Prestataires pour les services d'agence de voyage | 2026-05-31 | operator-dropped via approve_seeds |
