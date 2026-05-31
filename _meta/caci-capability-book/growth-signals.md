@@ -1,22 +1,85 @@
 ---
 schema_version: 1
-session: 3
+session: 3 + refresh 2026-05-31
 last_updated_utc: '2026-05-31'
-source-anchor: caci-10k-fy25-2026-05-31
-purpose: Growth-signal annotations sourced from the FY25 10-K MD&A — what
-  CACI's executives spotlight as growth-relevant for investors, mapped where
-  possible to capability areas in capability-areas.md.
-notes-on-coverage: Quarterly earnings-call transcripts were not accessible
-  via investor.caci.com (JavaScript-loaded). Session 3 uses the FY25 10-K
-  MD&A as the consolidated annual-level signal. A future refresh pass could
-  add quarterly granularity from 10-Q filings or paid transcript services.
+source-anchors:
+  - caci-10k-fy25-2026-05-31  (annual baseline)
+  - caci-10q-fy26-q3-2026-05-31  (refresh — supersedes for current-state)
+purpose: Growth-signal annotations from CACI executive commentary. §0 (FY26
+  Q3 update) is the CURRENT-STATE picture and supersedes §1-§7 for forward-
+  looking interpretation. §1-§7 are preserved as the historical FY25-10-K
+  baseline.
+notes-on-coverage: Quarterly earnings-call transcripts not directly
+  accessible via investor.caci.com (JavaScript-loaded). Substantive
+  quarterly MD&A available via 10-Q filings on SEC EDGAR.
 ---
 
-# Growth signals — FY25 MD&A
+# Growth signals
+
+## §0 — Current-state update (FY26 Q3 10-Q, March 31, 2026)
+
+**This section supersedes §1-§7 below for forward-looking interpretation.** The FY25 10-K MD&A (§1-§7) is preserved as historical baseline because some FACT claims about events through August 2025 remain accurate, but the budget environment has materially shifted since then.
+
+### §0.1 — What actually happened to GFY26 (correction to §4 below)
+
+The FY25 10-K's "+13% defense growth for GFY26" framing assumed the PBR ($893B) plus OBBBA ($156B) would be the full GFY26 picture. The actual outcome:
+
+> **FACT.** Two government shutdowns occurred during GFY26: (a) Oct 1 - Nov 12, 2025 (full government); (b) Jan 30 - Feb 3, 2026 (partial). `[caci-10q-fy26-q3-2026-05-31]`
+
+> **FACT.** "On February 3, 2026, President Trump signed five of the six remaining GFY26 full year appropriations bills, as well as a two-week CR for the Department of Homeland Security. The defense appropriations bill was passed, providing full year funding for the Department of Defense (DoD) with a topline of $838.7 billion, approximately $8.4 billion above the President's defense budget request for GFY26." `[caci-10q-fy26-q3-2026-05-31]`
+
+> **FACT.** "On February 14, 2026, the CR funding the Department of Homeland Security ended, and the department entered a shutdown. While DHS currently remains in a shutdown, portions of the department's operations have continued due to funding from the OBBBA." `[caci-10q-fy26-q3-2026-05-31]`
+
+> **Assessment.** **The FY25 10-K's "+13% defense growth" estimate did not materialize as projected.** Actual GFY26 DoD topline at $838.7 billion is approximately **$54 billion LOWER** than GFY25's $893 billion full-year-CR level (-6.0%) — though it's $8.4B above the President's PBR. The OBBBA's $156B in defense supplemental is still available throughout GFY26, so combined defense funding remains higher than GFY25 alone. Net effect on pipeline volume is mixed — base appropriations are smaller while reconciliation-funded program areas (Golden Dome, OBBBA-defense supplemental) remain active.
+
+> **Assessment.** **The shutdown risk warned about in the FY25 10-K materialized — twice.** Customers operating under repeated CRs and shutdowns experience delayed contract award decisions, slipped task-order awards, and program-start postponements. The operator-team should expect FY26 surfacing volume to be patchy, not the smooth 13% growth the FY25 10-K's market-environment language suggested.
+
+> **Assessment.** **DHS is in ongoing partial shutdown as of the most recent 10-Q reporting date.** This affects the Federal Civilian customer mix — CACI's CBP / DHS task orders (including the 70RTAC vehicle from `vehicles.md` §5) may be paused or operating in degraded form. Notices from DHS-family contracting offices may also be delayed or canceled until the shutdown resolves.
+
+### §0.2 — Updated financial snapshot (Q3 FY26)
+
+> **FACT.** Q3 FY26 (three months ending March 31, 2026) revenue: $2.351 billion, up 8.5% year-over-year. Q3 operating income: $228.9 million, up 16.6%. Net income $130.4 million, up 16.6%. Nine-month FY26 revenue: $6.86 billion. `[caci-10q-fy26-q3-2026-05-31]`
+
+> **FACT.** Q3 FY26 organic growth: 6.8% (three months); 5.6% (nine months). Slower than FY25 full-year organic growth of 7.2%. `[caci-10q-fy26-q3-2026-05-31]`
+
+> **FACT.** Total backlog as of March 31, 2026: $33.4 billion, up from $31.4 billion at the end of FY25. Funded backlog: $5.0 billion, up from $4.2 billion. `[caci-10q-fy26-q3-2026-05-31]`
+
+### §0.3 — Customer-mix shift toward defense (correction to §2 below)
+
+> **FACT.** Nine-month FY26 revenue mix (note: presentation now separates IC from DoD, where FY25 10-K combined them):
+>
+> - **DoD: $3.627B = 52.9%**
+> - **IC (Intelligence Community): $1.718B = 25.0%**
+> - **Federal Civilian Agencies: $1.224B = 17.8%**
+> - **Commercial and other: balance**
+>
+> Combined DoD+IC = **78%** (up from 75.4% in FY25 — the consolidation now includes the prior "defense IC" as a separate disclosed segment). `[caci-10q-fy26-q3-2026-05-31]`
+
+> **Assessment.** CACI's revenue concentration in DoD+IC continues to grow. The +3-point shift toward defense-aligned customers in nine months reinforces that CACI's strategic direction matches the operator-team's Pacific Navy focus. The IC line item is now disclosed separately, suggesting it has grown to material visibility — relevant to the C3I (§1), Cyber (§2), and Mission and Engineering Support (§5) capability areas where IC customer relationships dominate.
+
+### §0.4 — ARKA integrated (closed March 9, 2026)
+
+> **FACT.** "On March 9, 2026, CACI acquired all of the equity interests of ARKA Group L.P. (ARKA) for purchase consideration of approximately $2,642.7 million, net of cash acquired, subject to post closing adjustments." `[caci-10q-fy26-q3-2026-05-31]`
+
+> **Assessment.** ARKA closed within Q3 FY26 — only ~22 days before quarter end. The Q3 financials therefore include only a partial-quarter ARKA contribution. Q4 FY26 and FY27 will be the first full-quarter and full-year ARKA-inclusive periods. Track CACI Q4 FY26 reporting (~August 2026) for the first full-quarter ARKA reveal. The $2.64B final consideration is slightly above the $2.6B announcement figure.
+
+### §0.5 — Market-trend language is stable
+
+> **FACT.** The Market Environment section's eight named trends are substantively identical to the FY25 10-K — same trends, slight reordering. AI moved earlier in the list. Cyber + space + EMS still named explicitly. Near-peer competitors trend retained. Defend-the-homeland trend retained. `[caci-10q-fy26-q3-2026-05-31]`
+
+> **Assessment.** No new strategic-direction signals from the executive market-trends list. The capability-area-to-trend mapping in §3 of this file (FY25 10-K version) is still operationally valid for scoring purposes.
+
+### §0.6 — GFY27 PBR not yet referenced
+
+> **Assessment.** The FY26 Q3 10-Q (period ending March 31, 2026; filed April 2026) does NOT reference a GFY27 Presidential Budget Request. The PBR is conventionally submitted in February — about two months before this 10-Q was filed. Two possible explanations: (a) the GFY27 PBR was delayed by the administration; (b) the PBR was submitted but is so recent that the 10-Q drafting cycle didn't incorporate it. This is worth re-checking in the FY26 Q4 10-K (filing approximately August 2026).
+
+---
+
+# Growth signals — FY25 MD&A (historical baseline)
 
 This file captures what CACI's management explicitly identifies as growth-relevant in the most recent annual 10-K. It is the scoring layer's input for "what is CACI emphasizing in 2025?" — answering questions like "is a notice in the cyber domain higher-priority because cyber is a named focus area?" and "what does the budget environment imply for opportunity volume in the next 12 months?"
 
-## §1 — Headline financial signals (FY25)
+## §1 — Headline financial signals (FY25 — historical baseline; superseded by §0.2 for current state)
 
 > **FACT.** Total revenues grew 12.6% to $8.6 billion in FY25 from $7.7 billion in FY24, with organic growth of 7.2% (balance from acquisitions). Net income grew 19.0% to $499.8 million. `[caci-10k-fy25-2026-05-31]`
 
@@ -26,7 +89,7 @@ This file captures what CACI's management explicitly identifies as growth-releva
 
 > **Assessment.** A 60%+ cost-plus mix is structurally important for the opportunity scoring layer — cost-plus contracts are predominantly long-term IDIQs and program-of-record support, not short-cycle competitive bids. CACI's revenue base is anchored in steady-state program performance, not transaction-driven wins. Operator's AF IDIQ task order (FA807518D0006) fits this pattern.
 
-## §2 — Customer-segment growth (FY25)
+## §2 — Customer-segment growth (FY25 — superseded by §0.3 for current state)
 
 > **FACT.** Customer-type revenue breakdown for FY25:
 >
@@ -59,7 +122,7 @@ The 10-K MD&A names **eight market-trend themes** CACI believes will drive U.S. 
 
 > **Assessment.** Trend #6 ("defend the homeland") is the only listed trend that's largely NOT operator-team-relevant — homeland defense work is CONUS-focused (border, infrastructure, FEMA-adjacent) and doesn't align with the Pacific operational theater. Score notices that lean homeland-defense lower for this operator unless the customer is a Pacific command.
 
-## §4 — Budget environment (FY25 → FY26)
+## §4 — Budget environment (FY25 perspective on GFY26 — superseded by §0.1 for what actually happened)
 
 > **FACT.** "On March 15, 2025, President Trump signed a CR that extended government funding through September 30, 2025, the remainder of GFY25 (a full-year CR). This is the first time that the Department of Defense (DoD) has been funded by a full-year CR." The CR included anomalies: new appropriations levels (not GFY24 levels); DoD allowed to start certain new programs; DoD given expanded transfer authority to reallocate funding. `[caci-10k-fy25-2026-05-31]`
 

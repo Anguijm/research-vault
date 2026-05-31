@@ -104,6 +104,15 @@ Files in the capability book reference these slugs inline (e.g.,
 - Sections used: Item 1. Business (Overview, Expertise/Technology framing, Our Markets — Domestic Operations + International Operations, Competition, Strengths and Strategy, Recent Acquisitions, Human Capital, Patents/Trademarks); Item 7. Management's Discussion and Analysis (Overview, Budgetary Environment, Market Environment, Results of Operations, Customer-type revenue breakdown, Contract Backlog, Revenues by Contract Type, Liquidity)
 - Notes: Filed 2025-08-07. Local extracted plaintext cached at `/tmp/caci-10k-fy25.txt` and section extracts at `/tmp/caci-10k-business.txt` and `/tmp/caci-10k-mda.txt` during this session (not persisted — re-extract from SEC URL if needed later). The 10-K Business section reaffirms the 7 capability areas from caci.com but uses a different top-level frame ("Expertise" + "Technology" as two foundational categories that cut across the 7 market areas). The MD&A section provides FY25 financial detail, customer-type revenue breakdown, and named market trends (AI, cyber, space, EMS, near-peer competitors).
 
+### caci-10q-fy26-q3-2026-05-31
+
+- URL: https://www.sec.gov/Archives/edgar/data/0000016058/000162828026026802/caci-20260331.htm
+- Fetched: 2026-05-31
+- Source-type: sec-filing
+- Title: CACI International Inc — Form 10-Q for fiscal quarter ended March 31, 2026 (FY26 Q3)
+- Sections used: Item 2 Management's Discussion and Analysis — Budgetary Environment, Market Environment, Results of Operations (three and nine months ended March 31), customer-type revenue breakdown, ARKA acquisition note, backlog update
+- Notes: Filed approximately April 2026 (within ~30 days of quarter end per Exchange Act). This is the MOST CURRENT executive commentary on CACI's budget environment and supersedes the August 2025 10-K MD&A for forward-looking signal interpretation. Key changes from 10-K language: (a) two government shutdowns occurred during FY26 (Oct 1-Nov 12, 2025; Jan 30-Feb 3, 2026); (b) actual GFY26 DoD topline at $838.7B was ~$54B LOWER than GFY25's $893B CR level — the FY25 10-K's "+13% defense growth" estimate was a forward-looking projection that came in lower in actual appropriations; (c) DHS remained in partial shutdown as of 10-Q filing, operating from OBBBA-funded portions; (d) revenue mix shifted to 78% DoD+IC concentration (up from 75.4% reported in FY25 10-K).
+
 ### caci-investor-quarterly-results-page-2026-05-31
 
 - URL: https://investor.caci.com/financials/quarterly-results/default.aspx
