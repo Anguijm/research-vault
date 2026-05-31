@@ -455,3 +455,9 @@ out_of_scope:
 
 # Round 11 closure rules from 2026-05-31 triage (post-rerun, single new seed)
 - Travel agency services and travel-reservation booking, foreign-country travel-agency procurements, Millennium Challenge Corporation and similar foreign-aid agency country-specific solicitations, NAICS 56151 travel agencies, NAICS 561510 travel agencies
+
+# Round 12 closure rules from 2026-05-31 — pre-emptive (added before paginated
+# 56-day deployment per Gemini red-team Round 3 recommendation). These cover
+# predictable high-volume DoD noise categories we expect to surface once the
+# slice plan goes live but haven't seen in the 3-day window so far.
+- Family services, Morale Welfare and Recreation (MWR) programs, chapel and religious-services contracts, youth-sports and youth-program services, on-base recreation and fitness-center operations, child-development-center operational services (distinct from CDC construction, which is covered in the Round 5 building-repairs rule), military exchange and NEX/AAFES retail support, base library services, NAICS 713940 fitness and recreational sports centers, NAICS 624410 child day care services, NAICS 624190 other individual and family services, PSC 7830 recreational and athletic equipment, PSC G099 social services other, PSC R705 management support services for MWR or family programs
