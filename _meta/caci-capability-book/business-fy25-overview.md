@@ -7,6 +7,12 @@ purpose: CACI corporate-structure and business-overview facts from the FY25
   10-K Business section. Content here is corporate context that doesn't
   attach to a single capability area; capability-area-specific 10-K excerpts
   are in capability-areas.md §1-§7.
+see-also: For current-state financials, customer mix, backlog, and budget
+  environment, see growth-signals.md §1 (FY26 Q3 10-Q-derived). This file's
+  scope is the FY25 baseline snapshot; the structural facts here (corporate
+  structure, M&A pattern, contract-type mix, CRADLE) remain durable but
+  any dated number should be cross-checked against growth-signals.md before
+  use.
 ---
 
 # CACI corporate business overview — FY25 (fiscal year ended 2025-06-30)
