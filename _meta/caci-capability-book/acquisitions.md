@@ -25,11 +25,13 @@ This file maps named CACI acquisitions to capability areas so the scoring layer 
 | 6 | **Applied Insight** | FY25 — Q1/Q2 | Enterprise IT (§4), Digital Solutions (§3) — "cloud migration / adoption / transformation; DoD and IC customers" | not disclosed | `[caci-applied-insight-acquisition-2026-05-31]` |
 | 7 | (FY25 #3) — unidentified | FY25 | unknown | unknown | research gap |
 
-**Known forward acquisition (not in FY25 10-K):**
+**Known post-10-K acquisition (closed FY26 Q3):**
 
 | # | Target | Acquired by CACI | Capability area | Deal size | Source |
 |---|---|---|---|---|---|
-| 8 | **ARKA Group L.P.** | Announced 2025-12-22; closes in FY26 | Space (§6) — "space-based sensor portfolio + ground-based software processing" | $2.6 billion | `[caci-arka-acquisition-2026-05-31]` |
+| 8 | **ARKA Group L.P.** | Agreement 2025-12-22; **closed 2026-03-09** | Space (§6) — "electro-optical/infrared (EO/IR) and hyperspectral imaging, Agentic AI-based software for geospatial intelligence" | $2.6 billion all-cash | `[caci-arka-acquisition-2026-05-31]` |
+
+> **FACT.** ARKA is now part of CACI as of 2026-03-09 — approximately three months prior to today's date. It is a CURRENT capability addition, not a forward-looking one. The Space (§6) capability area's actual present-day reach is substantially larger than what the FY25 10-K (filed August 2025) documents. `[caci-arka-acquisition-2026-05-31]`
 
 ## §2 — Cross-references to capability areas
 
@@ -57,11 +59,13 @@ This file maps named CACI acquisitions to capability areas so the scoring layer 
 
 > **Assessment.** Same as Bitweave — UK organizational placement, primarily commercial UK customers. Limited operator-team-Pacific relevance.
 
-### Space (§6) — forward-looking
+### Space (§6) — ARKA is closed and integrated
 
-> **FACT.** ARKA Group acquisition (announced 2025-12-22, $2.6B all-cash) will add "space-based sensor portfolio and ground-based software processing" to Space. `[caci-arka-acquisition-2026-05-31]`
+> **FACT.** ARKA Group acquisition closed 2026-03-09. ARKA brings "electro-optical/infrared (EO/IR) and hyperspectral imaging capabilities, and Agentic AI-based software, that deliver robust geospatial intelligence for critical national security missions." `[caci-arka-acquisition-2026-05-31]`
 
-> **Assessment.** ARKA is the largest CACI acquisition by deal size in this list, materially larger than Azure Summit ($1.275B). It will reshape the Space area in ways the FY25 10-K does not yet reflect. The next 10-K (FY26 filing in approximately August 2026) will document ARKA's contribution.
+> **Assessment.** ARKA is the largest CACI acquisition by deal size in this list — materially larger than Azure Summit ($1.275B). Three months post-close, the Space (§6) capability area's present-day footprint is meaningfully larger than what the FY25 10-K (filed August 2025) and the current caci.com/space page (which has not been refreshed to reflect ARKA capabilities at the time of fetch 2026-05-31) document. The Space capability page should be re-fetched in subsequent refresh cycles to see when CACI updates the marketing copy to include ARKA's EO/IR, hyperspectral, and Agentic AI offerings.
+
+> **Assessment.** "Agentic AI-based software" is the most strategically significant phrase. Agentic AI for geospatial intelligence is a forward-trend capability that intersects with CACI's stated AI cross-cutting theme (sub-capability of every capability area) and the Golden Dome program-anchor opportunity (§4 of growth-signals.md, $25B in OBBBA). Track Pacific INDOPACOM space-domain opportunities forward — ARKA-derived capability may shift CACI's competitive position on these in FY26 and beyond.
 
 ## §3 — Acquisition-pattern observations
 

@@ -76,9 +76,49 @@ For the scoring layer, an opportunity matching a capability area can be cross-re
 
 > **Assessment.** **DTIC IAC MAC (the operator-team's vehicle) is the highest-utility cross-area IDIQ** — it appears in the candidate path for five of seven capability areas, more than any other vehicle. This is structurally important: the operator-team's contract is not narrowly scoped to one capability area but can serve as a routing path for multiple kinds of work. This corroborates the operator's earlier intuition that "there's a lot more flexibility maybe than what we're allowing ourselves here." The flexibility is real and structural.
 
-## §5 — Research gaps
+## §5 — USAspending-observed vehicles (the broader "where CACI gets paid" lens)
+
+`caci.com/contracts` lists CACI's marketed prime IDIQ and GSA positions. A complementary lens — every vehicle under which CACI has actually received award dollars — comes from the USAspending pass that populated `_meta/caci-discovery-config.yaml`'s `baseline_caci_footprint.vehicles` section. Sixteen distinct vehicles by contract number appear in CACI's top award shares; **only two of those 16 are also on the caci.com/contracts marketed list** (HHSN316201200009W = CIO-SP3 CACI Enterprise Solutions; GS-35F-349CA = IT Schedule 70).
+
+The other 14 USAspending-observed vehicles likely include subcontract positions under primes held by other companies, predecessor vehicles (OASIS Pool 1 before OASIS+; Alliant 1 before Alliant 2), and IDIQs CACI holds but doesn't market.
+
+| Contract number | USAspending share | Likely identification (unverified) |
+|---|---|---|
+| HHSN316201200009W | 9.0% | **CIO-SP3 (CACI Enterprise Solutions, LLC)** — confirmed in §2 |
+| SP470917D0009 | 7.0% | "SP47" prefix is DLA Land and Maritime contracting office — IDIQ identity TBD |
+| FA822417D0004 | 7.0% | "FA8224" is an Air Force Life Cycle Management Center contracting office — IDIQ identity TBD |
+| SP470121D8002 | 6.5% | DLA Land and Maritime again — IDIQ identity TBD |
+| 70RTAC20A00000003 | 6.0% | "70RTAC" prefix is U.S. Customs and Border Protection — IDIQ identity TBD |
+| GS00Q14OADU121 | 5.5% | **GSA OASIS Pool 1** — confirmed via `operator_team_layer.team_vehicles_held_by_caci_nss` (predecessor to OASIS+) |
+| GS00Q09BGD0037 | 5.5% | "GS00Q...BGD" prefix is GSA — candidate identification is Alliant 1 (predecessor to Alliant 2); needs verification |
+| SP470116D2001 | 5.0% | DLA Land and Maritime — IDIQ identity TBD |
+| W91QUZ12D0010 | 3.5% | "W91QUZ" prefix is U.S. Army CECOM (Communications-Electronics Command) — IDIQ identity TBD |
+| FA872622A0001 | 3.0% | "FA8726" prefix is AFLCMC Hanscom — IDIQ identity TBD |
+| H9222211D0008 | 2.5% | "H92222" prefix is USSOCOM — IDIQ identity TBD |
+| GS35F349CA | 2.0% | **IT Schedule 70 (GS-35F-349CA)** — confirmed in §3 |
+| HC102808D2021 | 2.0% | "HC10" prefix is DISA — IDIQ identity TBD |
+| HSHQDC14A00010 | 2.0% | "HSHQDC" prefix is DHS HQ — IDIQ identity TBD |
+| FA873015D0002 | 2.0% | "FA8730" prefix is AFLCMC Wright-Patterson AFB — IDIQ identity TBD |
+| IND14PC00002 | 2.0% | Prefix not immediately recognizable — agency identity TBD |
+
+> **Assessment.** This list materially expands the picture of where CACI is positioned to deliver work. Several of these are Pacific-region-adjacent — the AFLCMC offices (FA8224, FA8726, FA8730) and AFICA-family contracting (related to the operator's FA8075 prefix) suggest CACI has multiple Air Force task-order paths. CBP (70RTAC) and DHS HQ (HSHQDC) are Federal Civilian rather than Pacific-defense. The DLA Land and Maritime vehicles (SP47-family) are interesting because DLA is CACI's largest customer org by share (24.5%) per `baseline_caci_footprint.customer_orgs` — these are where the customer-share statistic actually lives. None of the SP47 vehicles appear on caci.com/contracts, suggesting they're either subcontract positions or single-award contracts that don't qualify as "marketed" multi-award IDIQs.
+
+> **Assessment.** Identifying the specific IDIQ names behind each of these contract numbers is a meaningful research follow-up — the prefix gives you the contracting office, but the IDIQ name and scope require either internal CACI records or a USAspending-detail pass. This is the kind of work the deferred USAspending top-50 pull would close.
+
+## §6 — Operator-team layer vehicles (CACI NSS-held)
+
+The operator-team-layer's `team_vehicles_held_by_caci_nss` field in `_meta/caci-discovery-config.yaml` enumerates vehicles held by the **CACI NSS, LLC** subsidiary — distinct from the DTIC IAC MAC vehicle which is held by **CACI, Inc. - Federal** (a different CACI subsidiary):
+
+- **GSA OASIS Pool 1** — parent IDC GS00Q14OADU121
+- **NITAAC CIO-SP3** — parent IDC HHSN316201200032W (the CACI NSS variant of CIO-SP3; distinct from the 009W variant held by CACI Enterprise Solutions)
+- **GSA Multiple Award Schedule** — GS-35F-349CA (= IT Schedule 70)
+
+> **Assessment.** The CACI NSS-held vehicles are organizationally adjacent to the operator-team but not the team's direct vehicle. They become relevant if the team's reach extends to work that natively fits NITAAC CIO-SP3 (NIH-managed IT IDIQ — broader federal IT scope than DTIC IAC MAC) or OASIS+ (professional services). Cross-subsidiary coordination within CACI (CACI, Inc. - Federal ↔ CACI NSS, LLC) is a known corporate pattern. The relationship-lead classification (Tier-2 surfacing) applies here — if an opportunity fits a CACI NSS-held vehicle better than DTIC IAC MAC, the operator's role is to surface the opportunity to the right CACI subsidiary, not to bid it directly through their team.
+
+## §7 — Research gaps
 
 - **Identify the specific IAC** the operator-team's task order falls under (CSIAC = Cyber Security; DSIAC = Defense Systems; HDIAC = Homeland Defense; or other DTIC IAC). This affects which technical-focus-area opportunities to prioritize.
 - **Identify the sponsoring agency** for the operator-team's specific task order (the task order's customer, distinct from the IDIQ's administering Air Force contracting office).
+- **Identify the 14 USAspending-observed vehicles** by IDIQ name and scope (§5 table). Highest leverage: SP470917D0009, FA822417D0004, SP470121D8002 (combined ~20% of CACI's USAspending share).
 - **Verify CIO-SP3 recompete timeline** — both CACI subsidiaries hold prime positions; follow-on competition timing affects FY26-FY27 portfolio shape.
 - **Verify ASTRO recompete timeline** — PoP ends 2026-11-14; follow-on competition expected in CY2026.

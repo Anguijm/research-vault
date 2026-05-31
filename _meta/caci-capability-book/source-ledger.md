@@ -160,9 +160,9 @@ Files in the capability book reference these slugs inline (e.g.,
 
 ### caci-arka-acquisition-2026-05-31
 
-- URL: https://www.washingtontechnology.com/companies/2025/12/caci-acquire-space-tech-outfit-26b/410336/
-- Fetched: 2026-05-31 (via web search; original announcement 2025-12-22)
+- URL: https://www.washingtontechnology.com/companies/2025/12/caci-acquire-space-tech-outfit-26b/410336/ (agreement announcement) + verification via web search 2026-05-31 of close status
+- Fetched: 2026-05-31 (via web search; agreement announcement 2025-12-22; close completed 2026-03-09)
 - Source-type: press-release / news
-- Title: CACI Enters into Definitive Agreement to Acquire ARKA Group L.P.
-- Sections used: Announcement summary — deal size, capability added, seller, transaction structure
-- Notes: $2.6B all-cash from Blackstone Tactical Opportunities; capability area: space-based sensor portfolio and ground-based software processing. Announced 2025-12-22 — AFTER the FY25 10-K filing (2025-08-07), so not counted in the "seven acquisitions in last three years" figure. ARKA closes in FY26 and will be a significant capability addition to Space (§6) area. Operator vault already references ARKA from prior work.
+- Title: CACI Enters into Definitive Agreement to Acquire ARKA Group L.P. (Dec 2025); CACI Completes Acquisition of ARKA Group (Mar 2026)
+- Sections used: Announcement and close-confirmation summaries — deal size, capability added, seller, transaction structure, close date
+- Notes: $2.6B all-cash from Blackstone Tactical Opportunities; announced 2025-12-22; **closed 2026-03-09**. Capability area: electro-optical/infrared (EO/IR), hyperspectral imaging, Agentic AI-based software for geospatial intelligence. Closed AFTER the FY25 10-K filing (2025-08-07), so not counted in the "seven acquisitions in last three years" 10-K figure — but ARKA is in CACI's portfolio AS OF 2026-03-09, so the Space (§6) area's present-day reach is larger than the FY25 10-K documents.
