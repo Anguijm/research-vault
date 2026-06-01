@@ -13,99 +13,98 @@ duration_minutes: 15
 
 ## Setup
 
-A three-ship surface action group took battle damage during a multi-day engagement in the Western Pacific. The group is being pulled out of contested space. All three ships are arriving in your AOR within a compressed window.
+*0445, SIPR email from COMPACFLT N43: three DDGs from CSG-XX returning damaged inside 72 hours. Triage rec to N43 by 1200. CO to brief COMPACFLT direct.*
 
-You are the wardroom at **Ship Repair Facility – Japan Regional Maintenance Center (SRF-JRMC), Yokosuka**. **Commander, U.S. Pacific Fleet (COMPACFLT) N43 (Maintenance Operations)** has asked your commanding officer for a triage recommendation. Your wardroom is staffing the response. The CO will brief the recommendation to COMPACFLT N43 this afternoon. Final decision authority sits with COMPACFLT.
+*0530, CO's conference room. Around the table: CHENG (technical engineering), Waterfront Ops (throughput and the SRF's work in progress), Production Officer (MLA workforce, trade availability), Business and Strategic Planning Officer (contracts, contractor availability, foreign-port procurement). CO presides. Ninety minutes to brief.*
 
-You have 90 minutes to develop the recommendation.
+## What the room knows
 
-### What the wardroom knows
+**The three DDGs, arrival order:**
 
-**The three ships, in arrival order:**
+- **Ship 1 (DDG-XX, arrives 18 hours).** Above-waterline missile hit, port quarter. Helo hangar structurally compromised. Port-side SLQ-32 EW antenna assembly destroyed. Hull integrity intact below the missile-deck. Self-sustaining damage control complete; transited under own power.
+- **Ship 2 (DDG-XX, arrives 54 hours).** Underwater hull damage, forward auxiliary machinery space. Compartment flooded then dewatered. Hull plating cracked but stable. Sea-water cooling to the forward HV switchboard compromised — running on the aft switchboard alone.
+- **Ship 3 (DDG-XX, arrives 66 hours).** No hull or propulsion damage. Primary sensor mast hit — search radar arrays and several smaller antennas degraded or destroyed. Combat systems degraded; operational but cannot fight at full picture.
 
-- **Ship 1 (DDG-XX, arrives 18 hours).** Above-waterline missile hit on the port quarter. Helo hangar structurally compromised. Port-side SLQ-32 electronic warfare antenna assembly destroyed. Hull integrity intact below the missile-deck. Self-sustaining damage control complete; ship transited under own power.
-- **Ship 2 (DDG-XX, arrives 54 hours).** Underwater hull damage to the forward auxiliary machinery space. Compartment flooded during the engagement; was dewatered by the ship's force. Hull plating cracked but stable. Sea-water cooling for the forward HV switchboard is compromised — the ship is running on the aft switchboard alone.
-- **Ship 3 (FFG-XX, arrives 66 hours).** No hull or propulsion damage. Primary sensor mast suffered combat-systems damage — search radar arrays and several smaller antennas degraded or destroyed. Combat systems degraded; ship is operational but cannot fight at full picture.
+**Trades the incoming work needs:**
 
-**Trade-mix the incoming work requires:**
-
-- Ship 1: shipfitters, welders, electricians, ETs (helo hangar structural rebuild; SLQ-32 antenna replacement / repair)
-- Ship 2: shipfitters, welders, hull maintenance technicians (HTs), pipefitters, electricians (hull-crack repair; sea-water cooling restoration to the forward switchboard)
-- Ship 3: ETs, electricians, plus shipfitters/welders in support (sensor mast structural support and electronics replacement)
+- Ship 1: shipfitters, welders, electricians, ETs.
+- Ship 2: shipfitters, welders, HTs, pipefitters, electricians.
+- Ship 3: ETs, electricians, with shipfitters and welders in support.
 
 **SRF-JRMC current state:**
 
-- Workforce is approximately 95% utilized on existing SRF backlog (an LCS overhaul, two DDG availabilities, a CG mid-life). Shipfitters and welders are the binding constraint — they are at capacity. ETs and electricians have ~15% slack. Pipefitters and HTs have ~20% slack.
-- **Master Labor Agreement (MLA) surge** — Japanese-national trade labor is available through the MLA. Mobilization timing:
-  - **Same day** for MLA labor in their home area (Yokosuka).
-  - **~5 days** to move MLA labor to another Japan location (Sasebo, for example).
-  - **Not realistic with any speed** to send MLA labor to facilities outside Japan (Apra, Pearl, Subic, Singapore, CONUS).
-- A contractor-labor surge authorization request to COMPACFLT for U.S.-contractor augmentation is in the system but has not been approved.
+- Existing backlog runs at approximately 95% utilization (an LCS overhaul, two DDG availabilities, a CG mid-life). Shipfitters and welders are at capacity. ETs and electricians ~15% slack. Pipefitters and HTs ~20% slack.
+- **MLA surge.** Same-day in Yokosuka. ~5 days to another Japan location. Not realistic outside Japan.
+- Contractor-labor surge authorization request to COMPACFLT is in the system; not approved.
 
-**The other Pacific repair facilities and their characteristics:**
+**Other Pacific options:**
 
-- **Pearl Harbor Naval Shipyard (PHNSY).** U.S. Navy capability, full trade workforce. ~3,700 nautical-mile transit from current ship positions. Capacity status: unknown to you at decision time.
-- **Apra Harbor / Naval Base Guam ship repair facility.** Closer than Pearl, ~1,500 nm. Smaller workforce than PHNSY or SRF-JRMC. Capacity status: unknown.
-- **Subic Bay (Philippines, commercial yard).** Closest non-U.S. option, ~1,500 nm. Non-Navy contractor work; bilateral framework governs U.S. Navy ship work there. Capacity and political climate: unknown.
-- **Sembawang (Singapore, commercial yard).** Established U.S. Navy commercial relationship. ~3,000 nm. Capacity: unknown.
-- **CONUS (San Diego, Norfolk).** 5,000-8,000 nm transit. Ship 1 with the helo hangar damage may not be transit-safe to that distance without intermediate repair.
+- **Pearl Harbor Naval Shipyard (PHNSY).** ~3,700 nm. Full trade workforce. Capacity status unknown.
+- **Apra Harbor / Naval Base Guam.** ~1,500 nm. Smaller workforce. Capacity unknown.
+- **Subic Bay (Philippines, commercial yard).** ~1,500 nm. Bilateral framework governs U.S. Navy work. Capacity and posture unknown.
+- **Sembawang (Singapore, commercial yard).** ~3,000 nm. Established U.S. Navy commercial relationship. Capacity unknown.
+- **CONUS.** 5,000-8,000 nm. Ship 1's hangar damage likely not transit-safe to CONUS without intermediate work.
 
-### What the wardroom does NOT know at decision time
+## What the room does NOT know
 
-- Whether COMPACFLT will authorize contractor-labor surge, and on what timeline.
-- Whether any of the other Pacific facilities have capacity to take diverted ships.
-- Whether the ships' COs prefer one option over another.
-- Whether there is political pressure to keep the ships in-theater (Indo-Pacific presence) versus send to CONUS.
-- Whether more damaged ships are arriving behind these three.
+- Whether COMPACFLT authorizes the contractor-labor surge, and when.
+- Whether any other Pacific facility has capacity.
+- Whether the ships' COs prefer one outcome.
+- Whether political pressure favors keeping ships in-theater.
+- Whether more ships are behind these three.
 
-This is the decision space. You are recommending under incomplete information.
+You are recommending under incomplete information.
 
 ## The decision
 
-**Pick one recommendation to brief to COMPACFLT N43. Defend it.**
+**Pick one recommendation. Defend it.**
 
-A. **All three at SRF-JRMC, sequential, full resourcing.** Take ship 1 in fully, complete her, then ship 2, then ship 3. Highest-quality work. Slowest overall. Ships 2 and 3 hold at anchor doing nothing for weeks.
+A. **All three at SRF-JRMC, sequential, full resourcing.** Ship 1 fully, then ship 2, then ship 3. Cleanest work. Slowest overall. Ships 2 and 3 hold at anchor for weeks.
 
-B. **All three at SRF-JRMC, parallel, with MLA surge activation.** Activate MLA surge today; with Yokosuka home-area mobilization the surge labor can be on the deckplate same-day. Bring all three ships in as they arrive. Accept higher rework risk on stretched-team weeks while MLA workers integrate with the core workforce, but no multi-day ramp delay.
+B. **All three at SRF-JRMC, parallel, with MLA surge.** Activate MLA today; same-day mobilization in Yokosuka. Bring all three in as they arrive. Higher rework risk during the integration period, but no multi-day labor ramp.
 
-C. **All three at SRF-JRMC, parallel, but triage by trade.** Bring all three in. Do *only* the trade-work each ship needs that we have capacity for today — ETs and electricians on all three for combat systems / cooling restoration, pipefitters / HTs on Ship 2's hull cooling. Defer the shipfitter / welder-heavy work (Ship 1 hangar, Ship 2 hull crack) until our existing backlog ships free those trades up.
+C. **All three at SRF-JRMC, parallel, triage by trade.** Bring all three in. Do only the trade-work each ship needs that we have capacity for today — ETs and electricians on Ship 3 combat systems; pipefitters and HTs on Ship 2 cooling; ship-3 lower-priority items first while shipfitter/welder-heavy work waits for existing backlog ships to free those trades.
 
-D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-JRMC (hull cracking is the most urgent and we have the pipefitter/HT capacity). Recommend Ship 1 be diverted to Pearl Harbor Naval Shipyard or Apra. Recommend Ship 3 be held in-theater pending Subic / Singapore availability or sent to Pearl. You do less work; you advocate for theater-distributed repair.
+D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-JRMC; recommend Ship 1 to Pearl or Apra; recommend Ship 3 held in-theater pending Subic / Singapore availability or sent to Pearl. Less work for SRF; recommends theater-distributed repair.
 
-E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without contractor surge.** Brief COMPACFLT that the wardroom's professional judgment is that taking all three without surge labor creates unacceptable quality and schedule risk. Request that COMPACFLT either authorize the contractor surge before the first ship arrives or accept diversion of at least one ship to another facility. You are pushing the decision back up the chain with a recommendation, not solving it yourself.
+E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without contractor surge.** Brief that taking all three without surge labor creates unacceptable quality and schedule risk. Request either the contractor-surge authorization before Ship 1 arrives or accept diversion of at least one ship. Push the decision back up with a recommendation.
 
-## What the wardroom is weighing
+## What the room is weighing
 
-*Note on framing:* the BDR brief's port-selection example uses "five variables" to mean attributes that differ across comparable options (each port has different repair capability, different security posture, etc.). This scenario's five options are heterogeneous *strategies* — sequential, parallel-with-surge, triage-by-trade, divert, escalate — not comparable instances. The section below names the trade-off dimensions the wardroom is weighing, not attributes that vary cleanly across all five options. This is a strategy-choice drill, not a variable-comparison drill; both kinds of Level-1 drills belong in a real scenario library.
+*Note on framing:* the brief's port-selection example uses "five variables" to mean attributes that differ across comparable options. The five options here are heterogeneous strategies — sequential, parallel-with-surge, triage-by-trade, divert, escalate — not comparable instances. The section below names the trade-off dimensions the room is weighing, mapped to which seat owns the call on each. This is a strategy-choice drill, not a variable-comparison drill.
 
-1. **Time-to-first-repaired-ship.** Operational commanders want a ship back in the fight. The recommendation that gets ONE ship back fastest is different from the one that gets all three back fastest on average.
-2. **Trade-bottleneck reality, and where MLA can relieve it.** Shipfitters and welders are the binding constraint at SRF-JRMC. MLA surge labor relieves that constraint same-day — but only for work done in Yokosuka. The moment work is diverted to Apra, Pearl, Subic, Singapore, or CONUS, the MLA workforce does not come with it; the receiving facility uses its own workforce, and SRF-JRMC's fast-surge advantage disappears. This pulls the math toward keeping the work in Yokosuka and against diverting — even when diversion looks geographically cleaner.
-3. **Quality and rework risk under stretched teams.** MLA surge labor needs supervision and integration time; the first 1-2 weeks of surge labor produces more rework than equivalent core-workforce hours, even when the workforce mobilizes same-day.
-4. **Theater operational footprint.** Keeping all three ships in Yokosuka means three damaged ships in one geographic node. Distributing them across Pearl, Apra, Subic, or Singapore changes the theater's resilience picture — both positively (less concentration risk) and negatively (more coordination burden on COMPACFLT staff).
-5. **What signal the recommendation sends to COMPACFLT.** Option A is the "we can absorb anything" signal. Option E is the "we will tell you when the math does not work" signal. The wardroom's recommendation is also a statement about how the SRF-JRMC wardroom does its job.
+1. **Technical engineering risk (CHENG).** Ship 2's hull crack near a flooded compartment is the highest engineering-integrity concern; deferring shipfitter/welder work on her is a risk that lives in CHENG's lane. Ship 1's helo hangar structural rebuild is a separate technical question — can she sortie before that's complete, and if so under what restrictions.
+
+2. **Throughput and the existing portfolio (Waterfront Ops).** The SRF is already running at 95%. Each option either preserves, stretches, or strains existing availability work. Waterfront Ops owns the call on which existing work slips, which doesn't, and what that does to the CG mid-life and the two DDG availabilities already on the books.
+
+3. **MLA workforce and trade availability (Production Officer).** Shipfitters and welders are the binding constraint at SRF-JRMC. MLA same-day surge relieves it — but only for work in Yokosuka. The Production Officer's call: how much MLA labor can be put on the deckplate, by trade, how fast, and what the integration cost looks like on the first one-to-two weeks.
+
+4. **Contracts and foreign-port procurement (Business and Strategic Planning Officer).** Diversion to Subic or Sembawang is a commercial-yard contract action, not a Navy-yard handoff. Contractor-labor surge authorization at SRF-JRMC is a separate contract action. Both have lead times and friction that aren't visible in the operational picture. The B&SP Officer's call: what contract paths are real on the 72-hour clock and what aren't.
+
+5. **Signal to COMPACFLT.** Option A signals "we can absorb anything." Option E signals "we will tell you when the math doesn't work." The CO is the one who has to land on what signal the recommendation sends. Cuts across all four lanes; CO presides.
 
 ## Defender's prompt
 
-Stand. In 60 seconds, defend the wardroom's recommendation to COMPACFLT N43. Name the operational outcome you are optimizing for. Name the risk you are accepting. The moderator will stop you at 60 seconds.
+Stand. In 60 seconds, defend the recommendation. Name the operational outcome you are optimizing for. Name the risk you are accepting. Moderator stops you at 60.
 
 ---
 
 ## After-action discussion prompts (for moderator)
 
-1. **Did the wardroom recommend keeping the work at SRF-JRMC, or did it recommend diverting?** The default instinct of any production-side wardroom is to take work in. Diverting work is harder to recommend even when the math says it is the right call. Surface which way the wardroom leaned and why.
+1. **Did the room recommend keeping the work at SRF-JRMC, or diverting?** The default instinct of any production-side wardroom is to take work in. Diverting is harder to recommend even when the math says so. Surface which way the room leaned.
 
-2. **Option E pushes the decision back up to COMPACFLT. Did anyone argue for it, and what was the counterargument?** Some wardrooms will read Option E as "we are refusing to do our job." Others will read it as "we are giving the operational commander the honest engineering picture." Both readings have merit. The discussion is more instructive than the choice.
+2. **Option E pushes the decision back up to COMPACFLT. Did anyone argue for it, and what was the counterargument?** Some rooms read E as "refusing to do the job." Others read it as "giving the operational commander the honest engineering picture." Both readings have merit. The discussion is more instructive than the choice.
 
-3. **Trade-mix matters more than overall workforce capacity in this scenario. Was that visible in the wardroom's deliberation?** Test whether the wardroom internalized the shipfitter/welder bottleneck or treated workforce as a single number.
+3. **Which seat at the table dominated the deliberation, and was that the right seat for this decision?** Tests whether the room recognized the trade-mix problem (Production Officer lane) versus the contracting timeline (B&SP Officer lane) versus the engineering risk (CHENG lane) versus the portfolio impact (Waterfront Ops lane). A wardroom that lets one seat carry the room may be missing the lane that actually drives the right call.
 
-4. **What questions did the wardroom WANT answered that the card did not answer?** Specifically — did anyone ask who else has capacity, what the political context is, or whether more ships are coming behind these three? Surfacing the absent information is part of the skill. A good wardroom does not just decide under ambiguity; it names the ambiguity in the recommendation.
+4. **What did the room want to know that wasn't in the message?** Did anyone press for capacity at the other Pacific facilities, the political picture, or what's behind these three ships? Naming the absent information is part of the skill. A good recommendation names the ambiguity. A poor one pretends it isn't there.
 
-5. **What does the wardroom's recommendation tell COMPACFLT N43 about how SRF-JRMC thinks under surge?** Same as the prompt in other scenarios — forces the wardroom to articulate the *signal to the customer*, not just the plan.
+5. **What does this recommendation tell COMPACFLT N43 about how SRF-JRMC thinks under surge?** Forces the room to articulate the signal to the customer, not just the plan.
 
 ## Learning objective (for moderator only)
 
-**Recognizing where SRF-JRMC's structural advantages actually apply — and where they don't.** The MLA same-day surge in Yokosuka is a real, location-bound advantage that no other repair facility in the chain can match. The wardroom's deliberation should surface that asymmetry explicitly: keeping work in Yokosuka unlocks fast labor expansion; diverting work outside Japan trades that advantage for whatever the receiving facility has. A wardroom that recommends diversion without naming the loss of MLA surge has not actually understood the trade.
+**Recognizing where SRF-JRMC's structural advantages apply — and where they don't.** The MLA same-day surge in Yokosuka is a real, location-bound advantage no other facility in the chain can match. The room's deliberation should surface that asymmetry: keeping work in Yokosuka unlocks fast labor expansion; diverting outside Japan trades that advantage for whatever the receiving facility brings. A room that recommends diversion without naming the loss of MLA hasn't understood the trade.
 
-At the same time — the SRF-JRMC wardroom's job under surge is operational-outcome optimization, not own-SRF utilization. There are still cases where diversion is the right call: when ship 1's helo-hangar damage makes her a long-stay project that would block ships 2 and 3 from any forward berth; when the trade-mix at SRF-JRMC truly cannot absorb the work even with MLA surge; when the political picture favors theater-distributed repair. The drill is teaching the wardroom to weigh both the structural advantage of staying in Yokosuka AND the structural advantage of theater distribution — and to recommend the right answer for the operational fight, not the right answer for SRF-JRMC's workload.
+At the same time, the wardroom's job under surge is theater operational-outcome optimization, not own-SRF utilization. Diversion is the right call when Ship 1's hangar damage makes her a long-stay that would block ships 2 and 3 from any forward berth; when trade-mix at SRF-JRMC cannot absorb the work even with MLA; when the political picture favors theater-distributed repair. The drill teaches the room to weigh both the structural advantage of staying in Yokosuka AND the structural advantage of distributing — and to recommend the right answer for the operational fight, not the right answer for SRF-JRMC's workload.
 
-The secondary lesson is that the wardroom is making a recommendation under ambiguity. They do not know capacity at the other Pacific facilities, they do not know whether contractor surge will be authorized, they do not know what is behind the three ships. A good recommendation names the ambiguity explicitly. A poor recommendation pretends the ambiguity is not there.
+Secondary lesson: the room is recommending under ambiguity. They don't know capacity at the other facilities, they don't know whether contractor surge gets authorized, they don't know what's behind the three ships. A good recommendation names the ambiguity explicitly. A poor one pretends it isn't there.
