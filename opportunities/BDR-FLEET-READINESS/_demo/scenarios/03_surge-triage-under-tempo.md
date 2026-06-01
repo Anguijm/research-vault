@@ -15,7 +15,7 @@ duration_minutes: 15
 
 *0445, SIPR email from COMPACFLT N43: three DDGs from CSG-XX returning damaged inside 72 hours. Triage rec to N43 by 1200. CO to brief COMPACFLT direct.*
 
-*0530, CO's conference room. Around the table: CHENG (technical engineering), Waterfront Ops (throughput and the SRF's work in progress), Production Officer (MLA workforce, trade availability), Business and Strategic Planning Officer (contracts, contractor availability, foreign-port procurement). CO presides. Ninety minutes to brief.*
+*0530, CO's conference room. Around the table: CHENG, Waterfront Ops, Production Officer, Business and Strategic Planning Officer. CO presides. Ninety minutes to brief.*
 
 ## What the room knows
 
@@ -71,17 +71,15 @@ E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without con
 
 ## What the room is weighing
 
-*Note on framing:* the brief's port-selection example uses "five variables" to mean attributes that differ across comparable options. The five options here are heterogeneous strategies — sequential, parallel-with-surge, triage-by-trade, divert, escalate — not comparable instances. The section below names the trade-off dimensions the room is weighing, mapped to which seat owns the call on each. This is a strategy-choice drill, not a variable-comparison drill.
+1. **Technical engineering risk.** Ship 2's hull crack near a flooded compartment is the highest engineering-integrity concern; deferring the shipfitter and welder work on her is a real risk. Ship 1's helo hangar rebuild is a separate question — can she sortie before it's complete, and under what restrictions.
 
-1. **Technical engineering risk (CHENG).** Ship 2's hull crack near a flooded compartment is the highest engineering-integrity concern; deferring shipfitter/welder work on her is a risk that lives in CHENG's lane. Ship 1's helo hangar structural rebuild is a separate technical question — can she sortie before that's complete, and if so under what restrictions.
+2. **Throughput and the existing portfolio.** The SRF is already running at 95%. Each option preserves, stretches, or strains the existing availability work. Which work slips, which doesn't, and what that does to the CG mid-life and the two DDG availabilities already on the books.
 
-2. **Throughput and the existing portfolio (Waterfront Ops).** The SRF is already running at 95%. Each option either preserves, stretches, or strains existing availability work. Waterfront Ops owns the call on which existing work slips, which doesn't, and what that does to the CG mid-life and the two DDG availabilities already on the books.
+3. **MLA workforce and trade availability.** Shipfitters and welders are the binding constraint. MLA same-day surge relieves it — but only for work in Yokosuka. How much MLA labor can be put on the deckplate, by trade, how fast, and what the integration cost looks like over the first one-to-two weeks.
 
-3. **MLA workforce and trade availability (Production Officer).** Shipfitters and welders are the binding constraint at SRF-JRMC. MLA same-day surge relieves it — but only for work in Yokosuka. The Production Officer's call: how much MLA labor can be put on the deckplate, by trade, how fast, and what the integration cost looks like on the first one-to-two weeks.
+4. **Contracts and foreign-port procurement.** Diversion to Subic or Sembawang is a commercial-yard contract action, not a Navy-yard handoff. Contractor-labor surge authorization at SRF-JRMC is a separate contract action. Both carry lead times and friction that don't show up in the operational picture. What contract paths are real on the 72-hour clock and what aren't.
 
-4. **Contracts and foreign-port procurement (Business and Strategic Planning Officer).** Diversion to Subic or Sembawang is a commercial-yard contract action, not a Navy-yard handoff. Contractor-labor surge authorization at SRF-JRMC is a separate contract action. Both have lead times and friction that aren't visible in the operational picture. The B&SP Officer's call: what contract paths are real on the 72-hour clock and what aren't.
-
-5. **Signal to COMPACFLT.** Option A signals "we can absorb anything." Option E signals "we will tell you when the math doesn't work." The CO is the one who has to land on what signal the recommendation sends. Cuts across all four lanes; CO presides.
+5. **Signal to COMPACFLT.** Option A signals "we can absorb anything." Option E signals "we will tell you when the math doesn't work." Cuts across all the lanes.
 
 ## Defender's prompt
 
@@ -95,7 +93,7 @@ Stand. In 60 seconds, defend the recommendation. Name the operational outcome yo
 
 2. **Option E pushes the decision back up to COMPACFLT. Did anyone argue for it, and what was the counterargument?** Some rooms read E as "refusing to do the job." Others read it as "giving the operational commander the honest engineering picture." Both readings have merit. The discussion is more instructive than the choice.
 
-3. **Which seat at the table dominated the deliberation, and was that the right seat for this decision?** Tests whether the room recognized the trade-mix problem (Production Officer lane) versus the contracting timeline (B&SP Officer lane) versus the engineering risk (CHENG lane) versus the portfolio impact (Waterfront Ops lane). A wardroom that lets one seat carry the room may be missing the lane that actually drives the right call.
+3. **Which seat dominated the deliberation, and was that the right seat for the call?** A room that lets one seat carry the deliberation may be missing the lane that actually drives the right answer.
 
 4. **What did the room want to know that wasn't in the message?** Did anyone press for capacity at the other Pacific facilities, the political picture, or what's behind these three ships? Naming the absent information is part of the skill. A good recommendation names the ambiguity. A poor one pretends it isn't there.
 
