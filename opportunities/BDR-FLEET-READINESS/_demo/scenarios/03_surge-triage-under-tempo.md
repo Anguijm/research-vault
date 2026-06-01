@@ -74,7 +74,9 @@ D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-J
 
 E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without contractor surge.** Brief COMPACFLT that the wardroom's professional judgment is that taking all three without surge labor creates unacceptable quality and schedule risk. Request that COMPACFLT either authorize the contractor surge before the first ship arrives or accept diversion of at least one ship to another facility. You are pushing the decision back up the chain with a recommendation, not solving it yourself.
 
-## The five variables
+## What the wardroom is weighing
+
+*Note on framing:* the BDR brief's port-selection example uses "five variables" to mean attributes that differ across comparable options (each port has different repair capability, different security posture, etc.). This scenario's five options are heterogeneous *strategies* — sequential, parallel-with-surge, triage-by-trade, divert, escalate — not comparable instances. The section below names the trade-off dimensions the wardroom is weighing, not attributes that vary cleanly across all five options. This is a strategy-choice drill, not a variable-comparison drill; both kinds of Level-1 drills belong in a real scenario library.
 
 1. **Time-to-first-repaired-ship.** Operational commanders want a ship back in the fight. The recommendation that gets ONE ship back fastest is different from the one that gets all three back fastest on average.
 2. **Trade-bottleneck reality, and where MLA can relieve it.** Shipfitters and welders are the binding constraint at SRF-JRMC. MLA surge labor relieves that constraint same-day — but only for work done in Yokosuka. The moment work is diverted to Apra, Pearl, Subic, Singapore, or CONUS, the MLA workforce does not come with it; the receiving facility uses its own workforce, and SRF-JRMC's fast-surge advantage disappears. This pulls the math toward keeping the work in Yokosuka and against diverting — even when diversion looks geographically cleaner.
