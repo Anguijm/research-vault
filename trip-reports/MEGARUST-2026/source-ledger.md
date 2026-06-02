@@ -26,4 +26,13 @@ Every fact, quote, or assessment in any artifact under `trip-reports/MEGARUST-20
 
 ## Sources
 
-(none yet — first source added when the first M4A clip is ingested)
+### mr26-clip1-laser-ablation-impl-2026-06-02
+
+- Audio file: 80b4803b-Voice_260602_101029.m4a
+- Session: NSRP SPC Panel Meeting — Laser Ablation Shipyard Implementation Presentation
+- Date / time (local): 2026-06-02 10:10–10:21 (approximate)
+- Panelists / speakers: NSRP SPC Panel led by Conlan Hsu and Angel Zepeda (NSRP). Presenter unidentified in this clip. Q&A participants: Conlan Hsu, John McRory (virtual).
+- Transcription method: faster-whisper, medium.en model, local CPU
+- Transcribed: 2026-06-03
+- Source file: `01_sources/2026-06-02_clip1-laser-ablation-shipyard-implementation.md`
+- Notes: 10:33 audio, 62 segments, clean transcription. Minor artifacts (e.g., "bare steel" → "Bear Steel", "MIL-PRF-23236" → "2-3-2-3-6", "disbondment" → "despondment") noted in the source file's FACT-quoted section.
