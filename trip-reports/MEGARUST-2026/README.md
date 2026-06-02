@@ -1,11 +1,14 @@
 ---
 type: trip-report-folder
 event: MegaRust 2026
-event_name_full: MegaRust 2026 — National Shipbuilding Research Program (NSRP) Surface Preparation & Coatings (SCP) Panel
+event_name_full: "MegaRust 2026 — sponsored by the American Society of Naval Engineers (ASNE)"
+location: Marriott Mission Valley, San Diego, CA
 operator: John Anguiano
 attended_in_person: true
 event_dates: 2026-06-02 to 2026-06-04
 created: 2026-06-03
+focus_panel: "NSRP SPC Panel Meeting — 8:00 AM-12:00 PM Tuesday June 2, Coastline Ballroom; led by Conlan Hsu and Angel Zepeda (NSRP)"
+note_on_panel_acronym: "Operator initially said 'SCP'; the agenda labels it 'SPC' (Surface Preparation and Coatings). Aligned to SPC per the agenda. If NSRP uses a different official name, flag it."
 audiences:
   - CACI internal leadership (BD bent)
   - SRF-JRMC customer leadership (intel + engagement bent)
