@@ -17,7 +17,7 @@ presenter:
     and works (or is closely associated with) HII Newport News — the project team partner.
 audience_voices_identified:
   - Conlan Hsu (panel co-lead) — surfaced in Q&A as "Conlon"
-  - John McRory — surfaced as a virtual ("online") attendee who joined the Q&A
+  - John McRory — Plate Technical Warrant Holder, NAVSEA 05 (confirmed by operator 2026-06-03). Joined the panel virtually and offered to help close the loop on the project.
 audio_clip: 80b4803b-Voice_260602_101029.m4a
 verbatim_transcript_path: ../audio/80b4803b-Voice_260602_101029.transcript.md
 transcribed: 2026-06-03
@@ -89,6 +89,7 @@ The presenter:
 
 ## Assessment — analyst observations
 
+- **NAVSEA 05 plate-TWH engagement is real on this project.** John McRory (NAVSEA 05 plate Technical Warrant Holder) joined the panel virtually and offered direct help on closing the loop. Plate is the technical authority area that laser ablation as a surface-preparation method most directly feeds into — so this isn't a passive interest, it's the responsible Navy technical authority actively engaging. For the CACI version of the trip report this is a meaningful procurement-signal: NSRP project outputs on laser ablation will land on McRory's desk, and McRory was visibly engaged.
 - The presenter's openness about the test plan still being flexible ("not too late to add additional samples") is a signal: NSRP-managed Navy projects of this scale appear to genuinely use panel-meeting Q&A as a steering input, not a rubber-stamp event. If CACI or SRF-JRMC has a stake in laser-ablation outcomes for a specific use case, this is the kind of venue where that input lands.
 - The Matt Bensfield / Newport News cathodic-disbondment finding is a meaningful piece of technical-risk context. A poor cathodic-disbondment result on laser-ablated surfaces would be a material adoption barrier for laser ablation in Navy ballast-tank / submerged-area coating systems. The current NSRP study is set up to confirm or refute that result. If it confirms, the laser-ablation push for bare-metal cleanliness in those applications has a real ceiling.
 - The HII Newport News project-partner role is a CACI-cross-reference signal — Newport News is owned by Huntington Ingalls Industries (HII), and HII Mission Technologies is an operator-team-relevant competitive incumbent named in the BDR research file (`opportunities/BDR-FLEET-READINESS/_entity-allowlist.yaml`: "HII Mission Technologies — inherited the Alion ship-damage modeling work and is the most directly competitive incumbent for Carderock-adjacent capability"). The shipbuilding side of HII is operationally distinct from HII MT, but the same parent corporate relationship matters for cross-portfolio awareness.
@@ -107,7 +108,7 @@ The presenter:
 - **MIL-PRF-23236 confirmation.** *Operator (2026-06-03): confirmed — "2-3-2-3-6" is MIL-PRF-23236.* All references in this source file and downstream artifacts use the full MIL-PRF-23236 designation.
 - **"PLA very thorough clean" AMP designation.** *Operator (2026-06-03): does not know the exact AMPP standard level.* The reference to "PLA" remains unverified; possible Whisper transcription artifact. Treat the quoted reference as illustrative ("the prior cathodic-disbondment failure was at the most aggressive cleanliness level above thorough ablation") rather than as a verified standard citation.
 - **Matt Bensfield's prior cathodic-disbondment study.** *Operator (2026-06-03): does not know whether/where it was published.* The prior study is referenced only verbally in the clip; treat it as institutional memory inside NSRP/Newport News rather than as a citable result.
-- **John McRory affiliation.** *Operator (2026-06-03): does not know.* The "John McRory online" attribution stands as-is. If he surfaces in a later session or correspondence, update.
+- **John McRory affiliation.** *Operator (2026-06-03): John McRory is the **Plate Technical Warrant Holder at NAVSEA 05**. Confirmed.* The fact that the plate TWH joined the panel virtually and volunteered to help close the loop is structurally meaningful — laser ablation is a surface-preparation method directly applied to plate (hull plating, structural steel), so the project's outputs feed into McRory's technical-authority lane. NAVSEA 05 senior staff appearing in this trip report: Mark Lattner (NAVSEA 05P, Wednesday morning comments), Mark Ingle (NAVSEA 05P2, Wednesday Technical Warrant Holder Update), John McRory (NAVSEA 05 plate TWH, this clip).
 - **G.C. Laser Systems — confirm vendor.** GC500/GC1000 likely G.C. Laser Systems products (exhibitor booth #39). Booth visit at the conference would confirm; deferred until the operator has booth time.
 
 ## Source-ledger entry
