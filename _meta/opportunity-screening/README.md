@@ -13,7 +13,7 @@ The system was named on 2026-06-02. Prior to that the pieces existed but were re
 
 ## What Opportunity Screening is, in one paragraph
 
-Eight SAM.gov query slices anchored on `organizationName` text search pull notices from named Pacific contracting offices (NAVSUP FLC Yokosuka, Pearl Harbor, San Diego, Puget Sound; SRF-JRMC direct; NSWC Corona; 374 CONS Yokota; 18 CONS Kadena). The lib paginates per slice, polite-throttles, and tracks daily quota. Returned notices are fingerprinted, deduped against a ledger, scored on five pillars (customer signal, work-type match, capability-area match, scale signal, actionability window) with a layered boost (operator-team / team-extendable / directional / baseline) and a three-way classification (direct_execute / relationship_lead / customer_intel / low_match). An out-of-scope gate caps known-noise patterns at 0.3. Candidates clearing the monitor threshold (0.5) land in the inbox as markdown plus a CSV row. The operator triages by marking `[x]` on promote, drop, or monitor. `approve_seeds.py` processes the marked entries — promoted seeds scaffold into `opportunities/<ID>/` folders; drops get a rejected-log entry; monitors stay in the inbox.
+Six SAM.gov query slices anchored on `organizationName` text search pull notices from named Pacific contracting offices (NAVSUP FLC Yokosuka, Pearl Harbor, San Diego, Puget Sound; 374 CONS Yokota; 18 CONS Kadena). The lib paginates per slice, polite-throttles, and tracks daily quota. Returned notices are fingerprinted, deduped against a ledger, scored on five pillars (customer signal, work-type match, capability-area match, scale signal, actionability window) with a layered boost (operator-team / team-extendable / directional / baseline) and a three-way classification (direct_execute / relationship_lead / customer_intel / low_match). An out-of-scope gate caps known-noise patterns at 0.3. Candidates clearing the monitor threshold (0.5) land in the inbox as markdown plus a CSV row. The operator triages by marking `[x]` on promote, drop, or monitor. `approve_seeds.py` processes the marked entries — promoted seeds scaffold into `opportunities/<ID>/` folders; drops get a rejected-log entry; monitors stay in the inbox.
 
 ## Components and where they live
 
@@ -89,24 +89,20 @@ python3 _scripts/approve_seeds.py
 python3 _scripts/derive_caci_baseline.py
 ```
 
-## What's empirically verified
+## Slice validation status (post 2026-06-02 first end-to-end batch)
 
 | Slice | Status | Notes |
 |---|---|---|
-| `nav_yokosuka` | **Verified 2026-05-31** — 29 records over 56 days |
-| `af_yokota` (374 CONS) | **Verified 2026-06-01** — 18 records over 56 days; PACAF Yokota AB; cross-service coverage (Camp Zama work) |
-| `nav_pearl_harbor` | Candidate, not yet run |
-| `nav_san_diego` | Candidate, not yet run |
-| `nav_puget_sound` | Candidate, not yet run |
-| `nav_srf_jrmc` | Candidate, not yet run |
-| `nav_nswc_corona` | Candidate, not yet run |
-| `af_kadena` (18 CONS) | Candidate, not yet run |
+| `nav_yokosuka` | ✓ Verified | 45 records / 56-day window; full coverage |
+| `nav_pearl_harbor` | ✓ Verified | 10 records / 56-day window |
+| `nav_san_diego` | ✓ Verified | 20 records / 56-day window |
+| `nav_puget_sound` | ✓ Verified | 22 records / 56-day window |
+| `af_yokota` (374 CONS) | ✓ Verified | 18 records / 56-day window; PACAF Yokota; covers cross-service work (Camp Zama) |
+| `af_kadena` (18 CONS) | ✓ Verified | 17 records / 56-day window |
+| ~~`nav_srf_jrmc`~~ | Dropped | Returned 0 — SRF-JRMC procurements code under NAVSUP FLC YOKOSUKA, not SRF-JRMC directly |
+| ~~`nav_nswc_corona`~~ | Dropped | Returned 0 — NSWC Corona Division doesn't post under any organizationName substring containing "CORONA"; likely routes through a NAVSEA parent office |
 
-### What's NOT verified
-
-- The full 8-slice batch has never run end-to-end with the current organizationName-anchored config.
-- The capability-area scoring layer has never seen real surfaced notices — only synthetic tests.
-- The OOS gate's tightened thresholds (≥3 keyword overlap on categorical rules; code+keyword on code-anchored rules) are validated against synthetic seeds only. The 12 rounds of closure rules accumulated against a 3-day data window; new 56-day data will surface false-positive shapes the existing rules don't catch.
+**First batch result (2026-06-02):** 132 raw candidates, 121 new, 4 surfaced (3.0% surface rate). 2 PROMOTE-eligible classified as CUSTOMER-INTEL (PSNS-named barge maintenance routing through NAVSUP FLC Yokosuka for a Japan detachment — correct relationship-intel classification, not a direct-execute bid). 2 MONITOR-eligible at low-match.
 
 ## SAM.gov v2 parameters — what works, what doesn't
 

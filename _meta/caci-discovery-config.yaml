@@ -376,22 +376,14 @@ sam_searches:
   # SAM.gov v2 search ignores `ncode`, `naicsCode`, `ccode`, `q`, and
   # `placeOfPerformanceCountry` parameters. The only parameter we've
   # confirmed filters meaningfully is `organizationName`. The previous
-  # 8-slice plan (NAICS/PSC/keyword-based) is preserved in git history at
-  # commit 8922ce2 if needed for reference.
+  # 8-slice NAICS/PSC/keyword plan is preserved in git history at commit
+  # 8922ce2 if needed for reference.
   #
-  # Empirical baseline: `organizationName=NAVSUP FLC YOKOSUKA` returned
-  # 29 records over 56 days on 2026-05-31 — well under the 1000-record
-  # page cap, so full window coverage in one quota call. Each slice
-  # below targets a Pacific Navy or Air Force contracting office expected
-  # to be similarly small (10s to low hundreds of records per 56 days).
-  #
-  # Day-1 deployment: run all eight in one batch (8 quota calls). Per-slice
-  # date-span output will reveal which organizationName strings SAM.gov
-  # recognizes vs. silently no-matches. Drop any that return zero.
-  #
-  # The exact text strings here are educated candidates based on standard
-  # DoD-contracting-office nomenclature; only NAVSUP FLC YOKOSUKA is
-  # empirically confirmed.
+  # Current state (post 2026-06-02 first-batch validation): six producing
+  # slices. Two slices (nav_srf_jrmc, nav_nswc_corona) were dropped after
+  # the first batch returned 0 records each — see commented block below.
+  # All six producing slices return well under the 1000-record cap with
+  # full 56-day window coverage in one quota call each.
 
   - name: nav_yokosuka
     description: "NAVSUP FLC YOKOSUKA — operator-team's primary customer contracting office. EMPIRICALLY CONFIRMED 2026-05-31: 29 records over 56 days."
@@ -417,17 +409,21 @@ sam_searches:
       organizationName: NAVSUP FLC PUGET SOUND
       ptype: r,s,p,k
 
-  - name: nav_srf_jrmc
-    description: "SRF-JRMC direct customer-name search — Ship Repair Facility / Japan Regional Maintenance Center, Yokosuka. Operator's primary customer."
-    params:
-      organizationName: SRF-JRMC
-      ptype: r,s,p,k
-
-  - name: nav_nswc_corona
-    description: "NSWC CORONA — Naval Surface Warfare Center Corona Division, operator-team secondary customer (SMDII partnership)."
-    params:
-      organizationName: NSWC CORONA
-      ptype: r,s,p,k
+  # nav_srf_jrmc REMOVED 2026-06-02 after the first 8-slice batch returned 0
+  # for this slice. SAM.gov codes SRF-JRMC procurements under their
+  # contracting authority (NAVSUP FLC YOKOSUKA), not under "SRF-JRMC" as
+  # organizationName. SRF-JRMC is the customer activity, not the awarding
+  # org. Coverage of SRF-JRMC work flows through `nav_yokosuka`. Confirmed
+  # by the 2026-06-02 batch where "Puget Sound Naval Shipyard Barge YR-85"
+  # work for an SRF-JRMC-managed detachment surfaced via nav_yokosuka.
+  #
+  # nav_nswc_corona REMOVED 2026-06-02. Tested `organizationName=CORONA`
+  # (substring-match) on 2026-06-02 — returned 0 across the 56-day window.
+  # NSWC Corona Division does not post procurements directly through an
+  # org path containing "CORONA"; the procurement route likely runs through
+  # a NAVSEA parent office whose string we have not yet identified. If
+  # operator surfaces the actual contracting-office name internally,
+  # re-add the slice with the correct string.
 
   - name: af_yokota
     description: "Air Force at Yokota AB Japan — 374 CONS (Contracting Squadron), 374th Airlift Wing. Main Air Force contracting shop in mainland Japan. Operator-team's Air Force IDIQ (FA807518D0006) makes Pacific Air Force opportunities a reachable expansion lane."
