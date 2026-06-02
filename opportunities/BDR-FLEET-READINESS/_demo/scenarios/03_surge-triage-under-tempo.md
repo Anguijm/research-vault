@@ -33,7 +33,8 @@ duration_minutes: 15
 
 **SRF-JRMC current state:**
 
-- Existing backlog runs at approximately 95% utilization (an LCS overhaul, two DDG availabilities, a CG mid-life). X11 and X26 are at capacity. X67 and X51 ~15% slack. X56 and X38 ~20% slack.
+- Existing backlog: Blue Ridge (LCC-19) in Drydock 6 for a depot availability. A DDG in Drydock 5 for a docking reset. Only one remaining drydock fits a DDG, and that dock cannot be wet-berthed — anything in it must be dry-docked.
+- Workforce: approximately 95% utilization supporting the two in-progress availabilities. X11 and X26 at capacity. X67 and X51 ~15% slack. X56 and X38 ~20% slack.
 - **MLA surge.** Same-day in Yokosuka. ~5 days to another Japan location. Not realistic outside Japan.
 - Contractor-labor surge authorization request to COMPACFLT is in the system; not approved.
 
@@ -63,17 +64,17 @@ A. **All three at SRF-JRMC, sequential, full resourcing.** Ship 1 fully, then sh
 
 B. **All three at SRF-JRMC, parallel, with MLA surge.** Activate MLA today; same-day mobilization in Yokosuka. Bring all three in as they arrive. Higher rework risk during the integration period, but no multi-day labor ramp.
 
-C. **All three at SRF-JRMC, parallel, triage by trade.** Bring all three in. Do only the trade-work each ship needs that we have capacity for today — X67 and X51 on Ship 3 combat systems; X56 on Ship 2 sea-water cooling; Ship 3 lower-priority items first while X11- and X26-heavy work (Ship 1 hangar, Ship 2 hull crack) waits for existing backlog ships to free those shops.
+C. **All three at SRF-JRMC, parallel, triage by trade.** Ship 2 gets the available drydock for hull work. Ships 1 and 3 pier-side. Do only the trade-work each ship needs that we have capacity for today — X67 and X51 on Ship 3 combat systems; X56 on Ship 2 sea-water cooling; Ship 3 lower-priority items first while X11- and X26-heavy work (Ship 1 hangar, Ship 2 hull crack) waits for existing backlog ships to free those shops.
 
-D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-JRMC; recommend Ship 1 to Pearl or Apra; recommend Ship 3 held in-theater pending Subic / Singapore availability or sent to Pearl. Less work for SRF; recommends theater-distributed repair.
+D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-JRMC in the available drydock; recommend Ship 1 to Pearl or Apra; recommend Ship 3 held in-theater pending Subic / Singapore availability or sent to Pearl. Less work for SRF; recommends theater-distributed repair. (Alternative within this option: send Ship 2 to Pearl if PHNSY drydock capacity is available — both Pearl and Yokosuka can dry-dock a DDG, and Ship 2 is the only one of the three that hard-requires it.)
 
 E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without contractor surge.** Brief that taking all three without surge labor creates unacceptable quality and schedule risk. Request either the contractor-surge authorization before Ship 1 arrives or accept diversion of at least one ship. Push the decision back up with a recommendation.
 
 ## What the room is weighing
 
-1. **Technical engineering risk.** Ship 2's hull crack near a flooded compartment is the highest engineering-integrity concern; deferring the X11 and X26 work on her is a real risk. Ship 1's helo hangar rebuild is a separate question — can she sortie before it's complete, and under what restrictions.
+1. **Technical engineering risk.** Ship 2's hull crack requires dry-dock work — the one available DDG-capable dock has to go to her unless we accept that her hull repair waits. Ship 1's helo hangar rebuild can be done pier-side; the question is whether she can sortie before it's complete, and under what restrictions. Ship 3's sensor-mast work is pier-feasible.
 
-2. **Throughput and the existing portfolio.** The SRF is already running at 95%. Each option preserves, stretches, or strains the existing availability work. Which work slips, which doesn't, and what that does to the CG mid-life and the two DDG availabilities already on the books.
+2. **Throughput and the existing portfolio.** Blue Ridge in Drydock 6 and the DDG in Drydock 5 are the existing portfolio. Bringing the three new ships in changes physical berthing demand and dock availability as well as workforce demand. Which existing work slips if we take all three; what that does to the Blue Ridge depot timeline; whether the in-progress docking reset can absorb compressed scope.
 
 3. **MLA workforce and trade availability.** X11 and X26 are the binding constraint. MLA same-day surge relieves it — but only for work in Yokosuka. How much MLA labor can be put on the deckplate, by shop, how fast, and what the integration cost looks like over the first one-to-two weeks.
 
