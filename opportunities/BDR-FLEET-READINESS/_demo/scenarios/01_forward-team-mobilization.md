@@ -3,8 +3,9 @@ type: scenario-card
 opportunity: BDR-FLEET-READINESS
 phase: 1
 created: 2026-06-01
+revised: 2026-06-02
 decision_moment: forward-team-mobilization
-audience: RMC-wardroom
+audience: SRF-JRMC-Yokosuka-wardroom
 duration_minutes: 15
 ---
 
@@ -12,48 +13,87 @@ duration_minutes: 15
 
 ## Setup
 
-A guided-missile destroyer (DDG-XX) sustained shock damage to her starboard main reduction gear bearings while transiting at flank speed. The ship is now alongside in **Sasebo**, Japan, having limped in under reduced shaft RPM. The Sasebo waterfront does not have the bearing-replacement capability the ship needs. The ship's commanding officer has requested a forward repair team from your Regional Maintenance Center.
+*0715, SIPR email from COMPACFLT N43: DDG-XX took shock damage to her starboard main reduction gear bearings transiting at flank speed. Currently alongside in Sasebo under reduced shaft RPM. Sasebo waterfront cannot do the work. Ship's CO has requested forward repair team support. Strategic-position commitments resume in 36 hours. Mobilize and brief by 1100.*
 
-You are the wardroom of a **CONUS-based Regional Maintenance Center**. You have 36 hours to put a team on the ground in Sasebo. You have the team. You need to decide what to put on the airlift with them.
+*0830, CO's conference room. Around the table: CHENG, Waterfront Ops, Production Officer, Business and Strategic Planning Officer. CO presides. Two and a half hours to brief.*
+
+## What the room knows
+
+**The ship and the damage:**
+
+- DDG-XX. Starboard main reduction gear bearings damaged by shock loading at flank speed. Transited to Sasebo under reduced shaft RPM on the port shaft alone. Hull integrity intact. No damage control casualties.
+- Sasebo waterfront does not have the bearing-replacement capability the ship needs. The Sasebo Fleet Activities maintenance shop is sized for routine alongside support, not main-propulsion-train work.
+- Strategic-position commitments resume in 36 hours. The ship's CO is at Sasebo waiting on the team.
+
+**The work:**
+
+- Primary trade: X38 (bearing replacement at the reduction gear).
+- Supporting trades: X11 and X26 (structural fit-up and any access cuts around the gear box), X51 (motor disconnect for the affected shaft).
+- Known-unknown: secondary damage may surface once the team has the gear box open — gear teeth condition, lube-oil system integrity, foundation cracking. Expanded scope adds X56 (lube-oil piping) and potentially more X38 / X11 hours.
+
+**SRF-JRMC enterprise reach:**
+
+- Sasebo detachment exists but is sized for routine forward maintenance. The detachment has shop coverage but not the X38 depth or specialized tooling for a reduction-gear job.
+- MLA mobilization: same-day in Yokosuka. ~5 days to move MLA labor to Sasebo.
+- Military airlift can move a small Yokosuka-led X38 lead cell to Sasebo same-day with the right priority.
+- KTR surge for Sasebo work: SRF can decide to bring KTR labor in, but FLCY is the warranted contracting officer. Cash + KTR availability + FLCY-Sasebo contracting bandwidth all have to close inside the 36-hour window.
+
+**SRF-JRMC current state:**
+
+- Existing backlog: Blue Ridge (LCC-19) in Drydock 6 for a depot availability. A DDG in Drydock 5 for a docking reset. X38 at Yokosuka is at capacity supporting those availabilities.
+- Pulling X38 leads off the in-progress availabilities to send forward to Sasebo means slip on Blue Ridge or the in-progress DDG.
+
+### What the room does NOT know
+
+- Whether the bearing replacement is the full scope or whether secondary damage (gear teeth, lube-oil, foundation) will surface once the team is on the ground.
+- Whether FLCY contracting bandwidth closes a Sasebo KTR contract inside the 36-hour window.
+- Whether C7F has political pressure to keep the ship at Sasebo (vs. accepting transit to Yokosuka for the repair).
+- Whether the ship can safely transit to Yokosuka under reduced RPM if that becomes the path.
 
 ## The decision
 
-**You can send one of the following forward repair team configurations. Pick one. Defend the choice.**
+**Pick one recommendation. Defend it.**
 
-A. Six-person bearing-specialist team, full bearing replacement kit, no on-site language support. Self-sufficient on technical work, dependent on the ship's officer-of-the-deck and Sasebo's Fleet Activities office for everything else.
+A. **Full Yokosuka-led team into Sasebo.** Pull X38 leads off the in-progress availabilities; move them to Sasebo via military airlift same-day. Supporting X11 / X26 / X51 follow with MLA on the ~5-day surface route. Self-sufficient on technical work. Slip on Blue Ridge or the in-progress DDG is the cost.
 
-B. Four-person bearing-specialist team, full bearing replacement kit, plus a contracting officer and a Japanese-language liaison. Half the technical hands; full coverage on host-nation legal, contracting, and language friction.
+B. **Sasebo detachment leads, augmented by a Yokosuka rapid-response cell.** Sasebo handles facility access, planning, and host-nation friction. Yokosuka airlifts 2–4 X38 leads same-day to provide depth. Hybrid team faster on the deckplate; technical depth thinner than Option A. Lighter pull on Yokosuka's in-progress availabilities.
 
-C. Six-person team that is half-bearing-specialist and half-mechanical-generalist, partial bearing kit and a 3D-printable bearing-housing template, no language support. Bets on additive manufacturing of the housing if the bearing-replacement scope expands.
+C. **Sasebo detachment leads, supplemented by a KTR surge contract.** Sasebo provides supervision and facility access. SRF works through FLCY to let a contract for X38 labor (cash + KTR + FLCY bandwidth all have to close). Spreads workforce demand across MLA and KTR. The contract path is the binding timeline risk.
 
-D. Eight-person team — six bearing specialists plus a two-person logistics cell — full bearing replacement kit, no language support. Maximum technical depth, no host-nation coverage.
+D. **Bring the ship to Yokosuka.** Transit under reduced shaft RPM. Work happens at Yokosuka with the full workforce and supporting infrastructure. Schedule is the issue — transit plus repair likely exceeds the 36-hour window.
 
-E. Coordinate with **SRF-JRMC Yokosuka** (the forward-deployed Ship Repair Facility a few hours away) to send their team to Sasebo instead of mobilizing your CONUS team at all. Your team supports remotely. Hands off the work to the Pacific theater.
+E. **Recommend that the math doesn't close.** Brief COMPACFLT honestly: Sasebo detachment alone is insufficient, surface MLA takes ~5 days, a KTR surge requires FLCY bandwidth that may not close in time, and bringing the ship to Yokosuka eats the window in transit. Ask for either schedule relief on the strategic-position commitment or a different repair-execution authority.
 
-## The five variables
+## What the room is weighing
 
-1. **Technical depth on the team.** Specialists do the work faster but cannot improvise if the scope expands. Generalists move slower but adapt.
-2. **Host-nation friction.** Sasebo is a Japan Maritime Self-Defense Force base with US Navy tenant operations. Routine US Navy contracting is straightforward. Anything *non-routine* — emergency parts, host-nation labor, customs clearance on flown-in tooling — has paperwork that takes hours-to-days, not minutes.
-3. **Time pressure.** The 36-hour window is real. The ship's strategic-position commitments resume when she is repaired. The wardroom does not control the political clock.
-4. **Forward partner availability.** SRF-JRMC's team is closer, faster, and Japan-fluent. They are also already running at full capacity on their own SRF backlog and may not be free to take the work.
-5. **Scope expansion risk.** A bearing replacement *might* surface secondary damage (the gear teeth, the lube-oil system, the foundation). If it does, your team has to either expand on-site or stop and re-mobilize. Equipping the team for the expanded scope costs airlift weight and time.
+1. **Technical engineering risk.** A reduction-gear bearing replacement is a known job. The unknown is whether the team finds secondary damage to the gear teeth or lube-oil system when it opens the gear box. Thin teams (rapid-response cells, KTR-led work) can do the bearing work but may not read the secondary-damage casualty correctly without depth.
+
+2. **Throughput and existing portfolio.** Pulling X38 from Yokosuka to send to Sasebo means schedule slip on Blue Ridge or the in-progress docking reset. How much slip is acceptable; which existing work is the higher priority.
+
+3. **MLA workforce and trade availability.** MLA same-day in Yokosuka but ~5 days to Sasebo. Military airlift of a small lead cell is the only way to bridge the Yokosuka-to-Sasebo gap inside the 36-hour window.
+
+4. **Contracts, cash, and FLCY coordination at Sasebo.** A KTR surge contract for Sasebo work needs cash, an in-region KTR with X38 capability and availability, and FLCY-Sasebo bandwidth to package and award the action. Host-nation labor and customs add friction. The 36-hour window may not be enough.
+
+5. **Signal to COMPACFLT and C7F.** Option A says "we own it from Yokosuka and accept slip on our in-progress work." Option D says "send the ship to us." Option E says "the math doesn't close — give us relief on the timeline or change the execution authority." Each signals a different posture about how the SRF deals with forward-deployed contingencies.
 
 ## Defender's prompt
 
-Stand. In 60 seconds, defend the wardroom's choice. Name which variable you weighted most heavily. Name the trade-off you are accepting. The moderator will stop you at 60 seconds.
+Stand. In 60 seconds, defend the recommendation. Name the operational outcome you are optimizing for. Name the risk you are accepting. Moderator stops you at 60.
 
 ---
 
 ## After-action discussion prompts (for moderator)
 
-1. **What did you weigh most heavily — technical depth, host-nation friction, time, partnering with SRF-JRMC, or scope-expansion risk?** Listen for whether the wardroom names one driver or hedges across several. Hedging is a tell that they didn't actually pick.
+1. **Did the room recommend a Yokosuka-led path (A or D), a Sasebo-led hybrid (B or C), or push back (E)?** The Yokosuka-led path takes ownership but slips existing work. The Sasebo-led hybrid uses the forward detachment as designed but risks technical depth. Push-back honors the math but lands as "we can't" to a fleet commander expecting "we can."
 
-2. **What was the strongest argument *against* your choice?** Did the wardroom consider the opposing case before committing? If they only argued for their choice, the deliberation was thin.
+2. **What did the room assume about secondary damage?** Bearing replacement turning into a gear-teeth job is the most common scope-expansion mode. A wardroom that planned only for the named scope is accepting a real risk; a wardroom that staffed against it explicitly is paying upfront for resilience.
 
-3. **Option E — handing the work to SRF-JRMC — is the option that does the least work and the most coordination. Did you consider it seriously? Why or why not?** This probes whether the wardroom treated their own team as the default tool when a forward partner might have been the smarter pick.
+3. **Did anyone ask what FLCY-Sasebo's current bandwidth is?** Option C and the KTR path depend on FLCY closing a contract inside the window. If nobody pressed the BSPO for a real timeline read, the option got picked on faith.
 
-4. **The card says you do not control the political clock. How did that constraint actually show up in your decision?** Tests whether the wardroom internalized the time constraint as a *binding* one or just acknowledged it.
+4. **What did the room weight more — protecting the in-progress Blue Ridge and DDG availabilities, or getting forward to Sasebo fast?** Both are real and both can be defended. The wardroom's choice is a real prioritization, not a technical optimization.
 
-## Learning objective (do not read aloud at start; for moderator and close-out only)
+## Learning objective (for moderator only)
 
-**Variable salience under host-nation friction.** The realistic answer in many cases is B or E — the host-nation legal, contracting, and language friction is the variable that dominates outcomes at a Japan port, even though it shows up in the card as one of five equal-weight items. Wardrooms that pick A or D tend to be optimizing for technical depth, which is the *American instinct* and not always the *right answer in Japan*. The drill is teaching the team to notice when host-nation friction is the binding constraint and to staff against it explicitly.
+**Recognizing that "forward team mobilization" is a portfolio decision, not just a team-composition decision.** The instinctive read of this scenario is "what team do I send forward to Sasebo." The realistic read is "how do I reallocate Yokosuka's existing workforce, the Sasebo detachment, and the contract path against a 36-hour clock — accepting which costs on the existing Blue Ridge and DDG availabilities, which risks on technical depth, and which timeline-risk on the KTR contract path." A wardroom that solves the team-composition question without naming the portfolio cost has not actually addressed the decision.
+
+Secondary lesson: the 36-hour clock is real but it isn't the only constraint. The wardroom can also push back (Option E) if the math doesn't close. That isn't refusing the mission — it's giving COMPACFLT honest engineering on what's possible inside the window and what's not.
