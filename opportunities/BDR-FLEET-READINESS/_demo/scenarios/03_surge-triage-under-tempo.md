@@ -27,13 +27,13 @@ duration_minutes: 15
 
 **Trades the incoming work needs:**
 
-- Ship 1: shipfitters, welders, electricians, ETs.
-- Ship 2: shipfitters, welders, HTs, pipefitters, electricians.
-- Ship 3: ETs, electricians, with shipfitters and welders in support.
+- Ship 1: X11, X26, X51, X67 (helo hangar structural rebuild; SLQ-32 antenna replacement).
+- Ship 2: X11, X26, X56, X51 (hull-crack repair; sea-water cooling restoration to the forward switchboard).
+- Ship 3: X67, X51, with X11 and X26 in support (sensor mast structural support and electronics replacement).
 
 **SRF-JRMC current state:**
 
-- Existing backlog runs at approximately 95% utilization (an LCS overhaul, two DDG availabilities, a CG mid-life). Shipfitters and welders are at capacity. ETs and electricians ~15% slack. Pipefitters and HTs ~20% slack.
+- Existing backlog runs at approximately 95% utilization (an LCS overhaul, two DDG availabilities, a CG mid-life). X11 and X26 are at capacity. X67 and X51 ~15% slack. X56 and X38 ~20% slack.
 - **MLA surge.** Same-day in Yokosuka. ~5 days to another Japan location. Not realistic outside Japan.
 - Contractor-labor surge authorization request to COMPACFLT is in the system; not approved.
 
@@ -63,7 +63,7 @@ A. **All three at SRF-JRMC, sequential, full resourcing.** Ship 1 fully, then sh
 
 B. **All three at SRF-JRMC, parallel, with MLA surge.** Activate MLA today; same-day mobilization in Yokosuka. Bring all three in as they arrive. Higher rework risk during the integration period, but no multi-day labor ramp.
 
-C. **All three at SRF-JRMC, parallel, triage by trade.** Bring all three in. Do only the trade-work each ship needs that we have capacity for today — ETs and electricians on Ship 3 combat systems; pipefitters and HTs on Ship 2 cooling; ship-3 lower-priority items first while shipfitter/welder-heavy work waits for existing backlog ships to free those trades.
+C. **All three at SRF-JRMC, parallel, triage by trade.** Bring all three in. Do only the trade-work each ship needs that we have capacity for today — X67 and X51 on Ship 3 combat systems; X56 on Ship 2 sea-water cooling; Ship 3 lower-priority items first while X11- and X26-heavy work (Ship 1 hangar, Ship 2 hull crack) waits for existing backlog ships to free those shops.
 
 D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-JRMC; recommend Ship 1 to Pearl or Apra; recommend Ship 3 held in-theater pending Subic / Singapore availability or sent to Pearl. Less work for SRF; recommends theater-distributed repair.
 
@@ -71,11 +71,11 @@ E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without con
 
 ## What the room is weighing
 
-1. **Technical engineering risk.** Ship 2's hull crack near a flooded compartment is the highest engineering-integrity concern; deferring the shipfitter and welder work on her is a real risk. Ship 1's helo hangar rebuild is a separate question — can she sortie before it's complete, and under what restrictions.
+1. **Technical engineering risk.** Ship 2's hull crack near a flooded compartment is the highest engineering-integrity concern; deferring the X11 and X26 work on her is a real risk. Ship 1's helo hangar rebuild is a separate question — can she sortie before it's complete, and under what restrictions.
 
 2. **Throughput and the existing portfolio.** The SRF is already running at 95%. Each option preserves, stretches, or strains the existing availability work. Which work slips, which doesn't, and what that does to the CG mid-life and the two DDG availabilities already on the books.
 
-3. **MLA workforce and trade availability.** Shipfitters and welders are the binding constraint. MLA same-day surge relieves it — but only for work in Yokosuka. How much MLA labor can be put on the deckplate, by trade, how fast, and what the integration cost looks like over the first one-to-two weeks.
+3. **MLA workforce and trade availability.** X11 and X26 are the binding constraint. MLA same-day surge relieves it — but only for work in Yokosuka. How much MLA labor can be put on the deckplate, by shop, how fast, and what the integration cost looks like over the first one-to-two weeks.
 
 4. **Contracts and foreign-port procurement.** Diversion to Subic or Sembawang is a commercial-yard contract action, not a Navy-yard handoff. Contractor-labor surge authorization at SRF-JRMC is a separate contract action. Both carry lead times and friction that don't show up in the operational picture. What contract paths are real on the 72-hour clock and what aren't.
 
