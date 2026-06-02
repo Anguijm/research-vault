@@ -103,12 +103,12 @@ The presenter:
 
 ## Open questions / follow-ups
 
-- **Speaker identification.** Who gave this presentation? The introduction was before recording start; the speaker references being "right after that presentation" — implying the prior speaker covered laser physics. Worth recovering the speaker's name from the conference agenda, name badge memory, or follow-up correspondence.
-- **MIL-PRF-23236 confirmation.** The "2-3-2-3-6" transcript needs operator verification — is that MIL-PRF-23236 (Navy chemical-agent-resistant coating spec) or some other coating spec?
-- **"PLA very thorough clean" AMP designation.** The exact AMPP standard level Conlan Hsu referenced as the prior cathodic-disbondment-failure level needs verification — possibly an artifact of Whisper's letter-level transcription.
-- **Matt Bensfield's prior cathodic-disbondment study.** Is that work published? Where? (NSRP project archive, internal Newport News report, AMPP paper?) If unpublished, the technical-risk context lives in the current NSRP project team's institutional memory.
-- **John McRory affiliation.** Joined virtually; his organization isn't named in this clip. Was he introduced earlier? Affiliation matters for whether the loop-closure recommendation is meaningful.
-- **G.C. Laser Systems — confirm vendor.** GC500/GC1000 likely G.C. Laser Systems products (exhibitor booth #39). Visit the booth to confirm and capture any sales-lit or specs.
+- **Speaker identification.** Who gave this presentation? *Operator (2026-06-03): does not recall the presenter's name. Leave as unidentified for now; if the speaker surfaces in a later clip or in the NSRP project paperwork (post-trip follow-up), update this entry.*
+- **MIL-PRF-23236 confirmation.** *Operator (2026-06-03): confirmed — "2-3-2-3-6" is MIL-PRF-23236.* All references in this source file and downstream artifacts use the full MIL-PRF-23236 designation.
+- **"PLA very thorough clean" AMP designation.** *Operator (2026-06-03): does not know the exact AMPP standard level.* The reference to "PLA" remains unverified; possible Whisper transcription artifact. Treat the quoted reference as illustrative ("the prior cathodic-disbondment failure was at the most aggressive cleanliness level above thorough ablation") rather than as a verified standard citation.
+- **Matt Bensfield's prior cathodic-disbondment study.** *Operator (2026-06-03): does not know whether/where it was published.* The prior study is referenced only verbally in the clip; treat it as institutional memory inside NSRP/Newport News rather than as a citable result.
+- **John McRory affiliation.** *Operator (2026-06-03): does not know.* The "John McRory online" attribution stands as-is. If he surfaces in a later session or correspondence, update.
+- **G.C. Laser Systems — confirm vendor.** GC500/GC1000 likely G.C. Laser Systems products (exhibitor booth #39). Booth visit at the conference would confirm; deferred until the operator has booth time.
 
 ## Source-ledger entry
 
