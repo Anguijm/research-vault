@@ -36,7 +36,7 @@ duration_minutes: 15
 - Existing backlog: Blue Ridge (LCC-19) in Drydock 6 for a depot availability. A DDG in Drydock 5 for a docking reset. Only one remaining drydock fits a DDG, and that dock cannot be wet-berthed — anything in it must be dry-docked.
 - Workforce: approximately 95% utilization supporting the two in-progress availabilities. X11 and X26 at capacity. X67 and X51 ~15% slack. X56 and X38 ~20% slack.
 - **MLA surge.** Same-day in Yokosuka. ~5 days to another Japan location. Not realistic outside Japan.
-- Contractor-labor surge authorization request to COMPACFLT is in the system; not approved.
+- **KTR surge.** SRF can let contracts directly to bring contractor labor in. No external authorization required. Two conditions have to hold: cash to fund the contract, and a KTR with the right capability and availability who can be put under contract on the timeline. Both legs are BSPO calls.
 
 **Other Pacific options:**
 
@@ -48,7 +48,7 @@ duration_minutes: 15
 
 ## What the room does NOT know
 
-- Whether COMPACFLT authorizes the contractor-labor surge, and when.
+- Whether SRF cash and KTR availability close the math for a surge contract on the timeline.
 - Whether any other Pacific facility has capacity.
 - Whether the ships' COs prefer one outcome.
 - Whether political pressure favors keeping ships in-theater.
@@ -68,7 +68,7 @@ C. **All three at SRF-JRMC, parallel, triage by trade.** Ship 2 gets the availab
 
 D. **Divert one or two ships to other Pacific facilities.** Take Ship 2 at SRF-JRMC in the available drydock; recommend Ship 1 to Pearl or Apra; recommend Ship 3 held in-theater pending Subic / Singapore availability or sent to Pearl. Less work for SRF; recommends theater-distributed repair. (Alternative within this option: send Ship 2 to Pearl if PHNSY drydock capacity is available — both Pearl and Yokosuka can dry-dock a DDG, and Ship 2 is the only one of the three that hard-requires it.)
 
-E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without contractor surge.** Brief that taking all three without surge labor creates unacceptable quality and schedule risk. Request either the contractor-surge authorization before Ship 1 arrives or accept diversion of at least one ship. Push the decision back up with a recommendation.
+E. **Recommend to COMPACFLT that SRF-JRMC cannot absorb all three within current cash, dock, and workforce posture.** Brief that the math doesn't close: the available drydock is binding on Ship 2, the X11 / X26 shops are at capacity supporting Blue Ridge and the in-progress DDG, MLA same-day surge alone won't bridge the gap, and the SRF either doesn't have cash for surge contracts or doesn't have a KTR who can be on the deckplate inside the timeline. Ask for either additional fund-cite authority, schedule relief on the in-progress Blue Ridge / DDG availabilities, or diversion direction. Push the decision back up with a recommendation rather than absorbing it silently.
 
 ## What the room is weighing
 
@@ -78,7 +78,7 @@ E. **Recommend back to COMPACFLT that SRF-JRMC cannot take all three without con
 
 3. **MLA workforce and trade availability.** X11 and X26 are the binding constraint. MLA same-day surge relieves it — but only for work in Yokosuka. How much MLA labor can be put on the deckplate, by shop, how fast, and what the integration cost looks like over the first one-to-two weeks.
 
-4. **Contracts and foreign-port procurement.** Diversion to Subic or Sembawang is a commercial-yard contract action, not a Navy-yard handoff. Contractor-labor surge authorization at SRF-JRMC is a separate contract action. Both carry lead times and friction that don't show up in the operational picture. What contract paths are real on the 72-hour clock and what aren't.
+4. **Contracts, cash, and foreign-port procurement.** Surge contracts at SRF-JRMC require cash availability and a KTR who can do the work on the timeline — no external authorization needed, but both legs have to be real. Diversion to Subic or Sembawang is a commercial-yard contract action with bilateral-framework friction. What's real on the 72-hour clock and what isn't.
 
 5. **Signal to COMPACFLT.** Option A signals "we can absorb anything." Option E signals "we will tell you when the math doesn't work." Cuts across all the lanes.
 
@@ -106,4 +106,4 @@ Stand. In 60 seconds, defend the recommendation. Name the operational outcome yo
 
 At the same time, the wardroom's job under surge is theater operational-outcome optimization, not own-SRF utilization. Diversion is the right call when Ship 1's hangar damage makes her a long-stay that would block ships 2 and 3 from any forward berth; when trade-mix at SRF-JRMC cannot absorb the work even with MLA; when the political picture favors theater-distributed repair. The drill teaches the room to weigh both the structural advantage of staying in Yokosuka AND the structural advantage of distributing — and to recommend the right answer for the operational fight, not the right answer for SRF-JRMC's workload.
 
-Secondary lesson: the room is recommending under ambiguity. They don't know capacity at the other facilities, they don't know whether contractor surge gets authorized, they don't know what's behind the three ships. A good recommendation names the ambiguity explicitly. A poor one pretends it isn't there.
+Secondary lesson: the room is recommending under ambiguity. They don't know capacity at the other facilities, they don't have a firm answer on cash + KTR availability for surge contracts inside the timeline, they don't know what's behind the three ships. A good recommendation names the ambiguity explicitly. A poor one pretends it isn't there.
