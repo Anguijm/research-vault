@@ -43,7 +43,7 @@ The verbatim timestamped transcript is preserved at `../audio/9fa50ed7-Voice_260
 
 > **\[01:11 → 01:18\]** "Mark Ingalls, we comprise every time you've had to address coating formulation changes in W932."
 
-(Transcription artifact: "Mark Ingalls" → almost certainly **Mark Ingle** (NAVSEA 05P2). "W932" is an unclear reference — possibly a Navy contract designator or account code, possibly a coating spec. Operator verification needed.)
+(Transcription artifacts resolved: "Mark Ingalls" → **Mark Ingle** (NAVSEA 05P2, Technical Warrant Holder). "W932" → **NAVSEA Standard Item 009-32** (operator-confirmed 2026-06-03) — the Navy-wide ship-maintenance standard item that governs paint and coating application requirements. "We comprise" is likely "we commiserate." Meaning: speaker is sympathizing with Mark Ingle about the pain of updating NSI 009-32 each time a coating formulation has to change due to environmental regulations.)
 
 > **\[01:28 → 01:42\]** "Our manufacturers have to kind of rethink their coatings that we are putting out there. So there's some new formulations that are starting to emit oxyl in 1K. And there's also some benefits in 1K coatings compared to 2K coatings that we're trying to address."
 
@@ -129,10 +129,10 @@ The verbatim timestamped transcript is preserved at `../audio/9fa50ed7-Voice_260
 - **Chemical identity of "Oxal" / "Oxyl".** Most operationally important unknown. Candidates: HAPs, isocyanate, alkoxysilane. Operator verification needed.
 - **Speaker last name and organization confirmation.** Eric — last name and confirmation that the org is Elzly Technology (vs. some other "LZ" or "L-Z" company).
 - **"OE Shipyards"** designator — operations-environment? OEM? Specific Navy operations command shipyards? Verify.
-- **"W932"** reference — Navy contract designator, account code, or coating spec? Verify.
+- **"W932"** reference — *Operator (2026-06-03): confirmed as **NAVSEA Standard Item (NSI) 009-32**, the Navy-wide ship-maintenance standard item for paint and coating application requirements.* The "Mark Ingle / W932" reference is now legible: speaker sympathizing with Mark Ingle's office about the workload of updating NSI 009-32 every time a coating reformulates.
 - **"FER and Parker Yards"** identification — which facilities? Verify.
-- **Mark Ingle (vs Mark Ingalls) confirmation** for the W932 anecdote reference.
-- **"Hillary"** referenced multiple times in the transcript (e.g., "this is the realm of this project... how one might work for Hillary"). Most likely a slide-operator name or a session moderator. Verify.
+- **Mark Ingle (vs Mark Ingalls) confirmation** for the NSI 009-32 anecdote — *Operator-implied via the W932 confirmation; treating Mark Ingle as confirmed.*
+- **"Hillary"** referenced multiple times in the transcript — *Operator (2026-06-03): Hillary was the slide operator.* Not a panelist, not a session moderator — just running the deck for the presenter. References resolved.
 - **Glenn's last name and affiliation confirmation.** Working assumption is Glenn from NCP Coatings; verify.
 
 ## Source-ledger entry
