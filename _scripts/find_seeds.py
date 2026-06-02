@@ -55,6 +55,7 @@ from lib import sam_gov as sam_gov_lib
 
 CONFIG_PATH = VAULT_ROOT / "_meta" / "caci-discovery-config.yaml"
 SEEDS_INBOX = VAULT_ROOT / "_meta" / "seeds-inbox.md"
+SEEDS_INBOX_CSV = VAULT_ROOT / "_meta" / "seeds-inbox.csv"
 SEEDS_LEDGER = VAULT_ROOT / "_meta" / "seeds-ledger.json"
 SEEDS_REJECTED = VAULT_ROOT / "_meta" / "seeds-rejected.md"
 SEEDS_PROMOTED = VAULT_ROOT / "_meta" / "seeds-promoted.md"
@@ -837,7 +838,14 @@ def _seed_block(c: dict, score: dict, layer_matched: str) -> str:
 
 
 def _write_inbox(new_seeds: list[dict], cfg: dict) -> None:
-    """Prepend new seeds to seeds-inbox.md under a dated section."""
+    """Prepend new seeds to seeds-inbox.md under a dated section.
+
+    Also writes seeds-inbox.csv (cumulative) — one row per surfaced seed
+    with the columns operator triage needs to cluster-sort surfaced
+    candidates by NAICS/PSC/capability area outside Obsidian. The CSV is
+    additive across runs; new rows appended to existing content. Use a
+    spreadsheet app to sort/filter for closure-rule recalibration work.
+    """
     if not SEEDS_INBOX.parent.exists():
         SEEDS_INBOX.parent.mkdir(parents=True, exist_ok=True)
 
@@ -852,6 +860,59 @@ def _write_inbox(new_seeds: list[dict], cfg: dict) -> None:
     block = "\n".join(block_lines)
 
     SEEDS_INBOX.write_text(existing + block, encoding="utf-8")
+
+    _append_inbox_csv(new_seeds, ts)
+
+
+def _append_inbox_csv(new_seeds: list[dict], ts: str) -> None:
+    """Append surfaced seeds to seeds-inbox.csv (cumulative across runs)."""
+    import csv
+    fields = [
+        "surfaced_ts", "score_display", "final_score", "classification",
+        "matched_capability_areas", "layer_matched", "out_of_scope_flagged",
+        "delivery_penalty_flag",
+        "source", "notice_type",
+        "title", "department", "subtier", "office",
+        "naics", "psc", "posted", "response_deadline",
+        "pillar_customer", "pillar_worktype", "pillar_capability_area",
+        "pillar_scale", "pillar_actionability",
+        "fingerprint", "url",
+    ]
+    file_exists = SEEDS_INBOX_CSV.exists()
+    with SEEDS_INBOX_CSV.open("a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
+        if not file_exists:
+            writer.writeheader()
+        for item in new_seeds:
+            c = item["candidate"]
+            s = item["score"]
+            writer.writerow({
+                "surfaced_ts": ts,
+                "score_display": s.get("score_display", ""),
+                "final_score": s.get("final_score", ""),
+                "classification": s.get("classification", ""),
+                "matched_capability_areas": ",".join(s.get("matched_capability_areas") or []),
+                "layer_matched": s.get("layer_matched", ""),
+                "out_of_scope_flagged": s.get("out_of_scope_flagged", False),
+                "delivery_penalty_flag": s.get("delivery_penalty", 0) > 0,
+                "source": c.get("source", ""),
+                "notice_type": c.get("notice_type", ""),
+                "title": c.get("title", ""),
+                "department": c.get("department", ""),
+                "subtier": c.get("subtier", ""),
+                "office": c.get("office", ""),
+                "naics": c.get("naics", ""),
+                "psc": c.get("psc", ""),
+                "posted": c.get("posted", ""),
+                "response_deadline": c.get("response_deadline", ""),
+                "pillar_customer": s.get("pillar_customer", 0),
+                "pillar_worktype": s.get("pillar_worktype", 0),
+                "pillar_capability_area": s.get("pillar_capability_area", 0),
+                "pillar_scale": s.get("pillar_scale", 0),
+                "pillar_actionability": s.get("pillar_actionability", 0),
+                "fingerprint": item.get("fingerprint", ""),
+                "url": c.get("url", ""),
+            })
 
 
 def _update_ledger(ledger: dict, new_seeds: list[dict]) -> None:
