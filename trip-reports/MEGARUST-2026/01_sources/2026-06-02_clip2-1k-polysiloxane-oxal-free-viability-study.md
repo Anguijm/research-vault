@@ -16,7 +16,7 @@ presenter:
 audience_voices_identified:
   - Glenn (jumped in to answer a 1K shelf-stability question; context suggests he is the NCP Coatings manufacturer rep — Glenn name appears later as the speaker who can speak to "manufacturing the product" and prior Oxal-containing version stability)
   - One questioner referenced as "Coach" — possible Whisper artifact for "Conlon" (Conlan Hsu, panel co-lead)
-  - "Mark Ingalls" referenced once in the speaker's opening remarks — almost certainly Mark Ingle (NAVSEA 05P2, Technical Warrant Holder, scheduled to speak Wednesday morning) given context
+  - "Mark Ingalls" referenced once in the speaker's opening remarks — Mark Ingle (NAVSEA 05, coatings-side Technical Warrant Holder; operator-confirmed 2026-06-03)
 audio_clip: 9fa50ed7-Voice_260602_102216.m4a
 verbatim_transcript_path: ../audio/9fa50ed7-Voice_260602_102216.transcript.md
 transcribed: 2026-06-03
@@ -35,7 +35,7 @@ The verbatim timestamped transcript is preserved at `../audio/9fa50ed7-Voice_260
 
 > **\[00:08 → 00:23\]** "So this project I'm going to talk about. Viability Study 1K Oxyl Free... No PRF24635F Type 5.1 Coatings and OE Shipyards."
 
-(Transcription artifacts: "PRF24635F" = **MIL-PRF-24635F** (by analogy with the operator-confirmed MIL-PRF-23236 from clip 1). "Type 5.1" = Type V Composition 1 in military-spec convention. "OE Shipyards" = operations-environment shipyards, or possibly "OEM" — unclear; treat as "Navy operations shipyards" until verified. "Oxyl" / "Oxal" — chemical compound name uncertain. Possibly Whisper artifact for **HAPs** (Hazardous Air Pollutants), **isocyanate**, or **alkoxysilane**, all of which are real regulatory/chemistry concerns for polysiloxane coating formulations. Operator should verify.)
+(Transcription artifacts: "PRF24635F" = **MIL-PRF-24635F** (by analogy with the operator-confirmed MIL-PRF-23236 from clip 1). "Type 5.1" = Type V Composition 1 in military-spec convention. "OE Shipyards" = operations-environment shipyards, or possibly "OEM" — unclear; treat as "Navy operations shipyards" until verified. **"Oxyl" / "Oxal" = "Oxsol-100"** (web-research confirmed 2026-06-03): brand-name solvent (parachlorobenzotrifluoride / PCBTF) used in MIL-PRF-24635F Type V formulations and being phased out. Active NRL-led ESTCP project [WP21-5154](https://serdp-estcp.mil/projects/details/2001c25e-9d5b-496a-ac64-e4c214d6b83a/wp21-5154-project-overview) "Qualification and Demonstration of Oxsol-Free and Low-VOC Topcoats for Surface Ships and Submarines" (PI James Tagert, NRL; completed 2025) is the sibling / predecessor effort.)
 
 > **\[00:23 → 00:40\]** "LZ Technology, we are the project lead. We have the goings involved in this project. We are partnering with H.I.I. Ingalls, H.I.I. News. We also have B.A.E. Jacksonville. From industry, MCP Codings is helping out as well."
 
@@ -43,7 +43,7 @@ The verbatim timestamped transcript is preserved at `../audio/9fa50ed7-Voice_260
 
 > **\[01:11 → 01:18\]** "Mark Ingalls, we comprise every time you've had to address coating formulation changes in W932."
 
-(Transcription artifacts resolved: "Mark Ingalls" → **Mark Ingle** (NAVSEA 05P2, Technical Warrant Holder). "W932" → **NAVSEA Standard Item 009-32** (operator-confirmed 2026-06-03) — the Navy-wide ship-maintenance standard item that governs paint and coating application requirements. "We comprise" is likely "we commiserate." Meaning: speaker is sympathizing with Mark Ingle about the pain of updating NSI 009-32 each time a coating formulation has to change due to environmental regulations.)
+(Transcription artifacts resolved: "Mark Ingalls" → **Mark Ingle** (NAVSEA 05, coatings-side Technical Warrant Holder; operator-confirmed 2026-06-03). "W932" → **NAVSEA Standard Item 009-32** (operator-confirmed 2026-06-03) — the Navy-wide ship-maintenance standard item that governs paint and coating application requirements. "We comprise" is likely "we commiserate." Meaning: speaker is sympathizing with Mark Ingle about the pain of updating NSI 009-32 each time a coating formulation has to change due to environmental regulations.)
 
 > **\[01:28 → 01:42\]** "Our manufacturers have to kind of rethink their coatings that we are putting out there. So there's some new formulations that are starting to emit oxyl in 1K. And there's also some benefits in 1K coatings compared to 2K coatings that we're trying to address."
 
@@ -120,13 +120,13 @@ The verbatim timestamped transcript is preserved at `../audio/9fa50ed7-Voice_260
 ## Cross-references
 
 - **CACI capability book:** Coating R&D / surface preparation is not a CACI corporate capability area. This content lands as **CUSTOMER-INTEL** classification — operator gains awareness of where Navy coatings R&D is going, but it isn't a direct-bid lead for CACI.
-- **Opportunity Screening:** None of the SAM.gov organizationName slices in the current Opportunity Screening config touch NSRP-managed work. Adding a slice for the NAVSEA technical authority that oversees Navy coatings (likely NAVSEA 05P / 05P2 — see Mark Ingle's upcoming Wednesday Technical Warrant Holder Update) might be worth considering after this trip if the operator wants forward visibility into Navy coatings procurement.
+- **Opportunity Screening:** None of the SAM.gov organizationName slices in the current Opportunity Screening config touch NSRP-managed work. Adding a slice for the NAVSEA technical authority that oversees Navy coatings (NAVSEA 05 — Mark Ingle is the coatings-side TWH) might be worth considering after this trip if the operator wants forward visibility into Navy coatings procurement.
 - **BDR opportunity:** HII Ingalls / HII Newport News / BAE Jacksonville are private-yard incumbents named in the BDR opportunity (HII MT specifically). Their continued investment in coating-research partnerships with NCP and NRL is positioning context for the BDR research thread — these are credentialed competitors at the trade level, even though the BDR opportunity itself targets a different (training / scenario-design) work scope.
-- **Wednesday morning context:** Mark Ingle (NAVSEA 05P2) speaks Wednesday morning. This 1K Polysiloxane project will eventually report up to a NAVSEA 05-family technical authority for Navy coating specs — likely Mark Ingle's office. Whatever Mark Ingle says on Wednesday about coating modernization priorities will provide useful context for interpreting this Tuesday-morning project.
+- **Wednesday morning context:** Mark Ingle (NAVSEA 05; operator-confirmed 2026-06-03) speaks Wednesday morning. This 1K Polysiloxane project will eventually report up to a NAVSEA 05-family technical authority for Navy coating specs — likely Mark Ingle's office. Whatever Mark Ingle says on Wednesday about coating modernization priorities will provide useful context for interpreting this Tuesday-morning project.
 
 ## Open questions / follow-ups
 
-- **Chemical identity of "Oxal" / "Oxyl".** Most operationally important unknown. Candidates: HAPs, isocyanate, alkoxysilane. Operator verification needed.
+- ~~**Chemical identity of "Oxal" / "Oxyl".**~~ **Resolved 2026-06-03 via web research:** "Oxsol-100" — brand-name solvent (parachlorobenzotrifluoride / PCBTF) used in MIL-PRF-24635F Type V coatings. The clip-2 project is an NSRP-funded sibling to NRL-led ESTCP project [WP21-5154](https://serdp-estcp.mil/projects/details/2001c25e-9d5b-496a-ac64-e4c214d6b83a/wp21-5154-project-overview) ("Qualification and Demonstration of Oxsol-Free and Low-VOC Topcoats for Surface Ships and Submarines"; PI James Tagert, NRL; completed 2025). Eric's clip-2 reference to "I know NCP has worked closely with NRL on that in the past" maps directly to James Tagert's NRL work.
 - **Speaker last name and organization confirmation.** Eric — last name and confirmation that the org is Elzly Technology (vs. some other "LZ" or "L-Z" company).
 - **"OE Shipyards"** designator — operations-environment? OEM? Specific Navy operations command shipyards? Verify.
 - **"W932"** reference — *Operator (2026-06-03): confirmed as **NAVSEA Standard Item (NSI) 009-32**, the Navy-wide ship-maintenance standard item for paint and coating application requirements.* The "Mark Ingle / W932" reference is now legible: speaker sympathizing with Mark Ingle's office about the workload of updating NSI 009-32 every time a coating reformulates.
@@ -147,5 +147,5 @@ The verbatim timestamped transcript is preserved at `../audio/9fa50ed7-Voice_260
 - Transcription method: faster-whisper, medium.en model, local CPU
 - Transcribed: 2026-06-03
 - Source file: 01_sources/2026-06-02_clip2-1k-polysiloxane-oxal-free-viability-study.md
-- Notes: 14:20 audio, 189 segments. Several transcription artifacts on technical terms (Whisper rendered "MIL-PRF-24635F" as "PRF24635F" and "middle 2, 4, 6, 3, 5, F-type, 5-com1"; "Elzly Technology" as "LZ Technology"; "NCP Coatings" as "MCP Codings"; "Mark Ingle" as "Mark Ingalls"). Chemical identity of "Oxal/Oxyl" — central project topic — is unresolved on tape and the most important verification item for the operator.
+- Notes: 14:20 audio, 189 segments. Several transcription artifacts on technical terms (Whisper rendered "MIL-PRF-24635F" as "PRF24635F" and "middle 2, 4, 6, 3, 5, F-type, 5-com1"; "Elzly Technology" as "LZ Technology"; "NCP Coatings" as "MCP Codings"; "Mark Ingle" as "Mark Ingalls"). "Oxal/Oxyl" resolved 2026-06-03 via web research to **Oxsol-100** (PCBTF solvent), with ESTCP project WP21-5154 (PI James Tagert at NRL) as the NRL-led sibling effort to this NSRP project.
 ```

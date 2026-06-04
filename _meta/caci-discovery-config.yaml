@@ -17,6 +17,14 @@ ranker_weights:
   scale_signal: 0.10
   actionability_window: 0.10
   delivery_model_mismatch_penalty: 0.1
+  # Customer-layer-boost gating (added 2026-06-04 per slice-revision Bucket C).
+  # Minimum pillar_worktype required for the customer-layer boost to apply.
+  # pillar_worktype scale: 1.0=team-work-type / 0.9=active-pursuit /
+  # 0.6=directional / 0.4=baseline-label-match / 0.0=no-match. Threshold
+  # 0.4 means: an FSC parts buy from an operator-team contracting office
+  # (pillar_worktype=0.0) loses its customer boost; a notice with at least
+  # a baseline NAICS/PSC work-type label match keeps it.
+  customer_boost_min_worktype: 0.4
   # Three-way classification thresholds (Gemini red-team Round 3 + operator
   # framing). A notice's classification is independent of final_score but
   # determines how the operator should handle a surfaced notice.
@@ -382,32 +390,42 @@ sam_searches:
   # Current state (post 2026-06-02 first-batch validation): six producing
   # slices. Two slices (nav_srf_jrmc, nav_nswc_corona) were dropped after
   # the first batch returned 0 records each — see commented block below.
-  # All six producing slices return well under the 1000-record cap with
-  # full 56-day window coverage in one quota call each.
+  # All six producing slices return well under the per-page cap of 1000
+  # with full 56-day window coverage in one quota call each.
+  #
+  # 2026-06-04 update: ptype reduced from `r,s,p,k` to `r,s,p` across all
+  # six slices. The `k` (Combined Synopsis/Solicitation) notice type was
+  # the source of the FSC parts/components noise in the 2026-06-02 batch
+  # (BALL VALVE PORTED, SEAL ASSEMBLY, FAIRING AIRCRAFT, PARTS KIT GUN, etc.
+  # — NSN-routed sustainment-supply line items). Cutting k drops volume
+  # ~70-80% but the cut is overwhelmingly low-BD-value. Real BD signals
+  # (services solicitations, IDIQ recompetes, support contracts, sources
+  # sought) surface under r/s/p. Reversion path: restore k in the ptype
+  # value if real-signal recall drops too far.
 
   - name: nav_yokosuka
     description: "NAVSUP FLC YOKOSUKA — operator-team's primary customer contracting office. EMPIRICALLY CONFIRMED 2026-05-31: 29 records over 56 days."
     params:
       organizationName: NAVSUP FLC YOKOSUKA
-      ptype: r,s,p,k
+      ptype: r,s,p
 
   - name: nav_pearl_harbor
     description: "NAVSUP FLC PEARL HARBOR — Pacific Fleet primary supply chain contracting office at Pearl Harbor, Hawaii. Operator-team extendable customer per operator_team_layer."
     params:
       organizationName: NAVSUP FLC PEARL HARBOR
-      ptype: r,s,p,k
+      ptype: r,s,p
 
   - name: nav_san_diego
     description: "NAVSUP FLC SAN DIEGO — West Coast Pacific Fleet supply chain contracting office. Operator-team extendable per Pacific footprint."
     params:
       organizationName: NAVSUP FLC SAN DIEGO
-      ptype: r,s,p,k
+      ptype: r,s,p
 
   - name: nav_puget_sound
     description: "NAVSUP FLC PUGET SOUND — Pacific Northwest supply chain contracting office. Operator team has direct work history here per operator confirmation 2026-05-31."
     params:
       organizationName: NAVSUP FLC PUGET SOUND
-      ptype: r,s,p,k
+      ptype: r,s,p
 
   # nav_srf_jrmc REMOVED 2026-06-02 after the first 8-slice batch returned 0
   # for this slice. SAM.gov codes SRF-JRMC procurements under their
@@ -429,13 +447,13 @@ sam_searches:
     description: "Air Force at Yokota AB Japan — 374 CONS (Contracting Squadron), 374th Airlift Wing. Main Air Force contracting shop in mainland Japan. Operator-team's Air Force IDIQ (FA807518D0006) makes Pacific Air Force opportunities a reachable expansion lane."
     params:
       organizationName: 374 CONS
-      ptype: r,s,p,k
+      ptype: r,s,p
 
   - name: af_kadena
     description: "Air Force at Kadena AB Okinawa — 18 CONS, 18th Wing. Largest combat wing in PACAF; high task-order volume expected."
     params:
       organizationName: 18 CONS
-      ptype: r,s,p,k
+      ptype: r,s,p
 
 capability_areas:
   # Structured machine-readable projection of _meta/caci-capability-book/

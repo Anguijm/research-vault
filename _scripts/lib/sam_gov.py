@@ -124,11 +124,14 @@ class SamGovKeyError(Exception):
     """Raised when SAM.gov rejects the API key (401/403)."""
 
 
-def execute_query(params: dict, api_key: str, max_candidates: int = 1000) -> list[dict]:
+def execute_query(params: dict, api_key: str, max_candidates: int = 5000) -> list[dict]:
     """Call the search endpoint, paginating as needed.
 
-    Returns up to `max_candidates` normalized notices. Pages of up to 1000
-    each (SAM.gov's per-call cap); every page consumes one quota call.
+    Returns up to `max_candidates` normalized notices (default 5000 — raised
+    from 1000 on 2026-06-04 since the previous default mirrored SAM.gov's
+    per-page cap rather than a principled value, and current slices have
+    headroom). Pages of up to 1000 each (SAM.gov's per-call cap); every
+    page consumes one quota call.
     Stops early on quota_paused mid-pagination, on an empty page, or when
     the API's reported `totalRecords` has been exhausted.
 

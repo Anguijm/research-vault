@@ -112,14 +112,16 @@ def _fingerprint(candidate: dict) -> str:
 # ── Source 1: SAM.gov pre-solicitation notices ─────────────────────────
 
 
-def _query_sam_gov(lookback_days: int, max_candidates: int = 1000,
+def _query_sam_gov(lookback_days: int, max_candidates: int = 5000,
                    slice_filter: list[str] | None = None) -> list[dict]:
     """Query SAM.gov via the slice list from `caci-discovery-config.yaml`.
 
-    Each slice is one quota call (or more if max_candidates > 1000 per slice,
-    via the lib's pagination). The lib's quota_paused() check stops the loop
-    cleanly if we hit the cap mid-run. Per-slice candidates are accumulated
-    then returned; fingerprint dedup happens downstream in main().
+    Each slice consumes 1+ quota calls (1 if the slice fits in one page; more
+    if pagination is needed). `max_candidates` defaults to 5000 (raised from
+    1000 on 2026-06-04 — see lib/sam_gov.execute_query docstring). The lib's
+    quota_paused() check stops the loop cleanly if we hit the daily quota
+    mid-run. Per-slice candidates are accumulated then returned; fingerprint
+    dedup happens downstream in main().
 
     `slice_filter` (optional): list of slice names from the config's
     sam_searches block. If provided, only those slices run; otherwise all run.
@@ -363,9 +365,24 @@ def _score_candidate(c: dict, cfg: dict) -> dict:
         + pillar_actionability * w.get("actionability_window", 0.10)
     )
 
-    # Layer boost — take the highest-matching layer across customer + worktype matches
+    # Layer boost — take the highest-matching layer across customer + worktype.
+    #
+    # Customer-layer boost gating (added 2026-06-04 per slice-revision Bucket C):
+    # An FSC parts buy from an operator-team customer office (e.g., NAVSUP
+    # FLC Yokosuka) was previously getting the 1.5x customer-layer boost
+    # despite being a hardware-supply line item with no services signal.
+    # Now: customer-layer boost is gated on pillar_worktype meeting a
+    # configurable threshold (default 0.4 = baseline work-type label match).
+    # When work-type is below the threshold, the customer boost is capped
+    # at 1.0 (neutral) so the candidate doesn't get amplified just because
+    # of the contracting-office string.
+    customer_boost_val = _layer_boost(customer_layer, cfg)
+    min_wt_for_customer_boost = w.get("customer_boost_min_worktype", 0.4)
+    if pillar_worktype < min_wt_for_customer_boost:
+        customer_boost_val = min(customer_boost_val, 1.0)
+
     layer_boost = max(
-        _layer_boost(customer_layer, cfg),
+        customer_boost_val,
         _layer_boost(worktype_layer, cfg),
     )
 
@@ -729,7 +746,8 @@ def _is_out_of_scope(c: dict, cfg: dict) -> bool:
     """A candidate is out-of-scope if any out_of_scope rule matches.
 
     Match logic (tightened 2026-06-01 to filter common-DoD-vocabulary
-    false positives):
+    false positives; PSC-prefix-from-title added 2026-06-04 to catch
+    DLA parts notices when SAM.gov omits the PSC field):
       - CODE-ANCHORED rule (rule mentions "NAICS" or "PSC"): fire only
         if the seed's NAICS/PSC string appears in the rule AND the rule
         shares ≥1 keyword with the seed's title/snippet (or the seed is
@@ -740,11 +758,27 @@ def _is_out_of_scope(c: dict, cfg: dict) -> bool:
         ≥2, but that triggered on common vocabulary pairs like
         ("naval", "platform") between an unrelated unmanned-aircraft
         rule and a legitimate mission-engineering notice.
+
+    PSC-prefix extraction (2026-06-04): when SAM.gov returns a notice
+    with an empty PSC field but a title that starts with the PSC numeric
+    prefix (e.g., "10--GUIDE,ELEMENT,EXIT" → implicit PSC 10), treat
+    that prefix as the candidate's PSC for matching purposes. This
+    catches DLA parts notices that the SAM.gov v2 API doesn't fully
+    populate.
     """
     title_snippet = (c.get("title", "") + " " + c.get("snippet", "")).lower()
     naics = (c.get("naics") or "").strip()
     psc = (c.get("psc") or "").strip()
     short_seed = len(title_snippet.strip()) < 80
+
+    # If SAM.gov omitted PSC, infer it from the title's PSC numeric prefix
+    # (e.g., "10--GUIDE,ELEMENT,EXIT" → PSC 10). Common pattern for DLA
+    # parts notices that the v2 search response leaves unpopulated.
+    if not psc:
+        title_raw = c.get("title", "")
+        prefix_match = re.match(r"^(\d{2,4})--", title_raw)
+        if prefix_match:
+            psc = prefix_match.group(1)
 
     for oos in cfg.get("out_of_scope", []) or []:
         # Code-anchor detection: rule explicitly references NAICS or PSC

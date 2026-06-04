@@ -56,7 +56,7 @@ The verbatim timestamped transcript is preserved at `../audio/80b4803b-Voice_260
 
 > **\[05:45 → 06:13\]** "The top one is a thorough ablation that's most similar to your SP-10, your SP-11 getting down to bare metal, and we will perform that on the PCPs before application of your coatings. And then the second level there, that's a partial ablation where you remove part of a coating or you can do a spot and sweep of damage down to bare metal and then sweep over the rest of the coating to give that surface for additional application of coating. And this would be more similar to like an SP-6 or an SP-3."
 
-(Maps the laser-ablation levels onto the established SSPC abrasive-blast surface preparation standards: SP-10/SP-11 are bare-metal cleanliness; SP-6 is commercial blast; SP-3 is power tool cleaning. The AMP[P] specification provides 5-6 levels of laser ablation that map onto these traditional cleanliness levels.)
+(Maps the laser-ablation levels onto the established SSPC abrasive-blast surface preparation standards: SP-10/SP-11 are bare-metal cleanliness; SP-6 is commercial blast; SP-3 is power tool cleaning. The AMPP specification provides 5-6 levels of laser ablation that map onto these traditional cleanliness levels.)
 
 > **\[06:55 → 07:12\]** "We're then going to recoat the samples and put a subset into cathodic despondment and a second subset into the D5894 cyclic corrosion, which has both high humidity and UV exposure in that cyclic system."
 
@@ -72,7 +72,7 @@ The verbatim timestamped transcript is preserved at `../audio/80b4803b-Voice_260
 
 > **\[09:51 → 10:18\]** (Conlan Hsu, summarizing): "I think the one thing to note was that I think the cathodic despondent problem would have been the **PLA very thorough clean**, not the thorough ablation. So... the thorough ablation is what we're targeting and... the AMP standard has one little thing above that, but I think that's what we call the cathodic despondent problem."
 
-(Important clarification: the prior cathodic-disbondment problem was at the most aggressive cleanliness level — labeled "PLA very thorough clean" in the AMP[P] standard — not at the "thorough ablation" level the current study targets. Operator: verify exact PLA designation — Whisper may have miscoded a letter prefix.)
+(Important clarification: the prior cathodic-disbondment problem was at the most aggressive cleanliness level — labeled "PLA very thorough clean" in the AMPP standard — not at the "thorough ablation" level the current study targets. Operator: verify exact PLA designation — Whisper may have miscoded a letter prefix.)
 
 ## FACT — paraphrased content
 
@@ -81,7 +81,7 @@ The presenter:
 - Stated the NSRP project's scope has shifted from a bare-steel investigation to two more realistic shipyard use cases.
 - Identified pre-construction primer (PCP) removal before fabrication as use case #1.
 - Identified partial ablation to remove or resurface aged MIL-PRF-23236 epoxy as use case #2.
-- Named AMP[P] (Association for Materials Protection and Performance) as the standards body developing laser-ablation levels (5-6 levels mapping to traditional SSPC SP-3/SP-6/SP-10/SP-11 cleanliness).
+- Named AMPP (Association for Materials Protection and Performance) as the standards body developing laser-ablation levels (5-6 levels mapping to traditional SSPC SP-3/SP-6/SP-10/SP-11 cleanliness).
 - Stated the current GC500 is the most common laser ablation device at NSRP shipyards; some interest in the more powerful GC1000.
 - Stated the test plan will NOT vary laser settings — will use Newport News's typical operating parameters as a single setting.
 - Test plan: order samples, apply different coating systems, take to Newport News for laser ablation, perform power tool and abrasive blasting in-house, recoat, run cathodic disbondment + ASTM D5894 cyclic corrosion testing, evaluate blistering / disbondment / rust-through / dolly adhesion / scribe cutback.
