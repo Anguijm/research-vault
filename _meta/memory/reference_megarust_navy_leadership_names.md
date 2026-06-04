@@ -62,6 +62,7 @@ These appear consistently across multiple MegaRust audio clips. Apply during sou
 - "Vice Admiral McClain" → **Vice Admiral Brendan McLane** (best match by role)
 - "Mark" (in clip-10 Bahrain diver passage, 27:40) → **MARMC** (Mid-Atlantic Regional Maintenance Center). Whisper mishears the spoken "Marmick"/MARMC as the name "Mark."
 - "covert relationship" (clip-10 Bahrain diver passage) → likely **co-located** or **co-owned relationship**. Whisper mishearing of "co-" prefix. Do not propagate the "covert" framing into drafts.
+- "area of maintenance coming under out there" (clip-10 SRF Japan reference, 32:09) → **"Area Maintenance Commander out there."** Robinson naming SRF Japan as the Area Maintenance Commander in the Western Pacific. Operator-confirmed 2026-06-05. Important: don't infer "co-responsibility" between SWRMC and SRF-JRMC from this phrasing — the exact division of labor on the container mission and the related Battle Damage Exercises is an open SRF-internal question.
 
 ## Verification rule
 

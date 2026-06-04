@@ -23,3 +23,5 @@
 - [Don't explain Navy chain of command to a Navy customer](feedback_dont_explain_navy_chain_of_command_to_navy.md) — drop glosses on AIRPAC, SES, NSI, ISEA, MARMC, etc. when the customer is a Navy activity; they know their own world
 - [MegaRust 2026 Navy leadership names](reference_megarust_navy_leadership_names.md) — verified spellings (Lannaman, McLane, Downey, etc.) plus Whisper-artifact decode table; verify all flag-officer names against command leadership webpages before propagating into drafts
 - [Operator's team at SRF-JRMC](project_operator_team_at_srf_jrmc.md) — named direct reports / SMEs (Amanda Keach, AM Program Manager); use when matching topics to the right SRF person
+- [Customer-facing report tone](feedback_customer_report_tone.md) — no contractor-vs-government tension framing, no self-congratulation about having information, don't punt analyst work to the customer as open follow-ups
+- [SRF-SWRMC is knowledge-sharing, not teaming](project_srf_swrmc_relationship_framing.md) — SRF learns from SWRMC's more-advanced work to avoid duplicating; SWRMC doesn't give SRF actions and they don't team on contracts
