@@ -6,7 +6,7 @@ audience: SRF-JRMC customer leadership
 target_length: 2 pages
 created: 2026-06-04
 operator: John Anguiano
-classification: OSI — open conference proceedings; all material is either my first-person observation of public sessions or slides marked Distribution A: Approved for Public Release
+classification: "OSI — open conference proceedings; all material is either my first-person observation of public sessions or slides marked Distribution A: Approved for Public Release"
 ---
 
 # MegaRust 2026 — SRF-JRMC Executive Summary
