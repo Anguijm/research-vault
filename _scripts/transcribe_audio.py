@@ -43,6 +43,8 @@ def main() -> int:
                     help="Whisper model size (tiny.en, base.en, small.en, medium.en, large-v3). Default: medium.en")
     ap.add_argument("--beam-size", type=int, default=5,
                     help="Beam size for decoding (higher = better quality, slower). Default: 5")
+    ap.add_argument("--device", default="cpu", choices=["cpu", "cuda"],
+                    help="Compute device. 'cuda' uses the GPU (much faster) if available. Default: cpu")
     args = ap.parse_args()
 
     audio_path = Path(args.audio_file).expanduser().resolve()
@@ -60,7 +62,8 @@ def main() -> int:
     print("Loading model (first run downloads it; subsequent runs use the cache)...", file=sys.stderr)
 
     from faster_whisper import WhisperModel
-    model = WhisperModel(args.model, device="cpu", compute_type="int8")
+    compute_type = "float16" if args.device == "cuda" else "int8"
+    model = WhisperModel(args.model, device=args.device, compute_type=compute_type)
 
     print(f"Transcribing...", file=sys.stderr)
     segments, info = model.transcribe(
@@ -81,7 +84,7 @@ def main() -> int:
         f"- **Audio duration:** {format_timestamp(info.duration)}",
         f"- **Detected language:** {info.language} (probability {info.language_probability:.2f})",
         f"- **Model:** {args.model}",
-        f"- **Transcription tool:** faster-whisper (local CPU)",
+        f"- **Transcription tool:** faster-whisper (local, device={args.device}, compute={compute_type})",
         f"- **Speaker diarization:** NONE — operator must identify speakers from context.",
         "",
         "## Transcript",

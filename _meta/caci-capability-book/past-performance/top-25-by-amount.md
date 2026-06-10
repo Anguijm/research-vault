@@ -8,19 +8,19 @@ purpose: Past-performance citations populated from USAspending top-25 CACI
   2026-05). Closes the past-performance gap identified in the Session 1-4
   audit. Cross-references each award to a capability area in
   capability-areas.md where the program description supports attribution.
-caveat-on-amount-field: USAspending's spending_by_award search endpoint
-  returns the Award Amount column as empty in the API response for these
-  records. The lib captured null/0 amounts. Resolving the actual dollar
-  amounts requires per-award detail calls against the awards/{id} endpoint
-  — deferred. PIID, recipient, dates, description, and parent IDV are all
-  reliable; only the dollar figure is missing.
+refresh: '2026-06-07 — re-pulled with the now-live programmatic USAspending
+  access. Dollar amounts now populate correctly (the 2026-05-31 pass returned
+  null amounts, so its "by amount" ranking was unreliable and is superseded).
+  Extended from top-25 to the top-50 window; two Acacia Center for Justice rows
+  (substring false-positives on "aCACIa") were excluded, leaving 48 genuine CACI
+  awards. See source-ledger caci-usaspending-refresh-2026-06-07.'
 ---
 
-# Top-25 CACI awards by amount (USAspending, last 7 fiscal years)
+# Top CACI awards by amount (USAspending, last 7 fiscal years)
 
-This file is the seventh capability-book artifact and the first to fill the past-performance directory. Awards are sorted by Award Amount descending per USAspending's `sort=Award Amount, order=desc` query parameter. The dollar amounts themselves are not captured (see caveat above) but the ordinal ranking is preserved from the API response.
+> **Refreshed 2026-06-07.** Originally a top-25 ordinal snapshot with null dollar amounts; re-pulled with the live USAspending client to add **real obligated amounts** and extend to the top-50 window (48 genuine CACI awards after excluding two Acacia Center for Justice false-positives). The §2 table below is the current data; the §1 attribution summary and §3 observations below were written against the original top-25 and remain broadly valid (the programs are unchanged) except where §2/§4 note a correction. Filename kept as-is for lineage.
 
-Most entries are task orders against a parent IDIQ vehicle. The parent IDV is visible in the USAspending URL pattern; where identifiable, the parent vehicle is named in the "IDV" column to cross-reference `vehicles.md`.
+This file is the seventh capability-book artifact and the first to fill the past-performance directory. Awards are sorted by obligated amount descending. Most entries are task orders against a parent IDIQ vehicle, named in the "Parent IDV" column to cross-reference `vehicles.md`.
 
 ## §1 — Capability-area attribution summary
 
@@ -41,37 +41,127 @@ Of the 25 top awards, attribution-by-program-language maps as follows. Where a p
 
 > **Assessment.** **Award EH02 ("SHIP DESIGN SERVICES", 2008-2018, DC place-of-performance)** is the most operator-team-relevant past-performance entry in the top-25. Ship design services for the U.S. Navy is exactly the naval-architecture work CACI corporate signals it can deliver — and CACI has a 10-year ship-design contract on record. This is foundational past-performance for the operator-team's Waterfront Operations sub-team work, even though the contract itself predates the operator's contract vehicle.
 
-## §2 — The 25 awards, ordinally ranked
+## §2 — The awards, ranked by obligated amount (top-50 window → 48 CACI awards)
 
-| # | Recipient (CACI subsidiary) | PIID | Description (first 80 chars) | PoP State | Period | Parent IDV |
+Re-pulled 2026-06-07 with **real obligated amounts** (the 2026-05-31 pass had null amounts, so its "by amount" ordering was unreliable and is superseded). Sorted by obligated amount descending, FY2019–FY2026 window. Two **Acacia Center for Justice** rows (140D0422C0009, 75P00125C00016) were excluded as substring false-positives. Parent-IDV column names the vehicle where resolved; `(prime)` = prime contract, not a task order; `*` = the operator-team's own DTIC IAC MAC vehicle.
+
+| # | Recipient (CACI subsidiary) | PIID | Obligated | PoP | Parent IDV | Description (first ~54 chars) |
 |---|---|---|---|---|---|---|
-| 1 | CACI, INC. - FEDERAL | GSQ0017AJ0006 | AWARD MADE TO CACI, INC.-FEDERAL FOR JIDA FS/DE TASK ORDER, IN THE AMOUNT NOT TO | VA | 2016-10 → 2022-02 | GS00Q14OADU407 (OASIS pool) |
-| 2 | CACI, INC. - FEDERAL | 47QFCA19F0006 | IGF::OT::IGF (description body truncated to procurement-code marker) | VA | 2019-05 → 2026-11 | 47QTCK18D0009 (Alliant 2) |
-| 3 | CACI, INC. - FEDERAL | 47QFCA20F0010 | BEAGLE TASK ORDER AWARD | VA | 2019-11 → 2024-09 | 47QTCK18D0009 (Alliant 2) |
-| 4 | CACI NSS, LLC | 47QFCA21F0087 | SPECIAL OPERATIONS FORCES EMERGING THREATS OPERATIONS AND PLANNING SUPPORT | NC | 2021-09 → 2026-09 | GS00Q14OADU121 (OASIS Pool 1) |
-| 5 | CACI, INC. - FEDERAL | 47QFRA24F0005 | CDM DEFEND GROUP A BRIDGE TASK ORDER | VA | 2024-05 → 2027-04 | Alliant 2 family |
-| 6 | CACI-ISS, LLC | W15QKN15C0049 | IGF::CL,CT::IGF SYSTEM INTEGRATOR FOR INCREMENT II OF INTEGRATED PERSONNEL AND P | VA | 2015-05 → 2025-06 | (prime contract, not task order) |
-| 7 | CACI, INC. - FEDERAL | 47QFRA19F0011 | DYNAMIC AND EVOLVING FEDERAL ENTERPRISE NETWORK DEFENSE GROUP A — DEFEND A — OPTION | VA | 2019-05 → 2024-04 | Alliant 2 family |
-| 8 | CACI, INC. - FEDERAL | 47QFMA19F0013 | COMMUNICATION AND INFORMATION TECHNOLOGY SERVICES III | (none) | 2019-06 → 2024-05 | Alliant 2 family |
-| 9 | CACI, INC. - FEDERAL | HS002123F0020 | TASK ORDER FOR BACKGROUND INVESTIGATION FIELDWORK SERVICES | VA | 2023-03 → 2027-03 | DHS / DCSA family |
-| 10 | CACI NSS, LLC | FA882316C0004 | IGF::OT::IGF CONSOLIDATED AIR FORCE SATELLITE CONTROL NETWORK MAINTENANCE, MODIF | CO | 2016-06 → 2025-05 | (prime contract) |
-| 11 | CACI NSS, LLC | FA875019F1000 | FULL-SPECTRUM INTELLIGENCE, SURVEILLANCE, AND RECONNAISSANCE (ISR) INNOVATION AND | VA | 2019-09 → 2024-09 | (Air Force task order) |
-| 12 | CACI PREMIER TECHNOLOGY, LLC | HS002119F0138 | BACKGROUND INVESTIGATIONS FIELDWORK SERV. THIS IS NOT A NEW TASK ORDER | VA | 2019-10 → 2024-03 | DHS / DCSA family |
-| 13 | CACI, INC. - FEDERAL | 47QFMA24F0014 | ENTERPRISE LEVEL IT EXPERTISE — ELITE | (none) | 2024-03 → 2029-05 | Alliant 2 family |
-| 14 | CACI, INC. - FEDERAL | 70B04C24F00001129 | BORDER ENFORCEMENT APPLICATIONS FOR GOVERNMENT LEADING-EDGE INFORMATION TECHNOLO | VA | 2024-09 → 2026-09 | CBP / DHS family |
-| 15 | CACI, INC. - FEDERAL | FA807522F0030 | DIGITAL ENGINEERING AND DIGITAL TRANSFORMATION RESEARCH, ANALYSIS, AND DEVELOPME | MD | 2022-05 → 2027-05 | **FA807518D0006 (DTIC IAC MAC — operator's vehicle)** |
-| 16 | CACI, INC. - FEDERAL | 47QFCA19F0050 | EXECUTE TASK ORDER FOR COMMERCIAL BASED TECHNOLOGY ANALYSIS (CBTA) | MD | 2019-07 → 2025-01 | Alliant 2 family |
-| 17 | CACI NSS, LLC | GST0013AJ0065 | IGF::CL,CT::IGF THE PURPOSE OF THIS TO IS TO ACQUIRE PERFORMANCE-BASED INFORMATI | VA | 2013-03 → 2018-09 | (predecessor OASIS) |
-| 18 | CACI NSS, LLC | 47QFCA21F0057 | DTRA IMAX DA | VA | 2021-06 → 2023-06 | OASIS family |
-| 19 | CACI, INC. - FEDERAL | EH02 | **SHIP DESIGN SERVICES** | DC | 2008-12 → 2018-09 | (prime contract) |
-| 20 | CACI, INC. - FEDERAL | FA875023F0080 | FULL-SPECTRUM INTELLIGENCE, SURVEILLANCE & RECONNAISSANCE (ISR), INNOVATION AND | VA | 2023-08 → 2028-08 | (Air Force follow-on to #11) |
-| 21 | CACI NSS, LLC | HDTRA123F0020 | PROFESSIONAL AND ANALYTICAL SERVICES IN SUPPORT OF COUNTERING AND DETERRENCE OF | VA | 2023-06 → 2026-06 | DTRA family |
-| 22 | CACI, INC. - FEDERAL | 47QFCA19F0034 | TENCAP E3I AWARD | VA | 2019-03 → 2024-09 | Alliant 2 family |
-| 23 | CACI, INC. - FEDERAL | 47QFCA24F0011 | DISTRIBUTED COMMON GROUND SYSTEM (DCGS) ENTERPRISE PRODUCT SUPPORT (EPS) TO 1 | GA | 2024-04 → 2026-04 | Alliant 2 family |
-| 24 | CACI, INC. - FEDERAL | 47QFCA21F0019 | TASK ORDER AWARD OF WBSCM 3. THE PURPOSE OF THIS TO IS TO ACQUIRE INFORMATION TE | NY | 2021-02 → 2027-01 | Alliant 2 family |
-| 25 | CACI ENTERPRISE SOLUTIONS, LLC | SP470922F0028 | DAI APPLICATION DEVELOPMENT AND SUSTAINMENT SUPPORT SERVICES — EBS PO 4556364846 | VA | 2022-03 → 2026-08 | SP47 (DLA Land and Maritime) |
+| 1 | CACI, Inc. - Federal | GSQ0017AJ0006 | $960.0M | VA | OASIS Pool (407) | JIDA FS/DE task order |
+| 2 | CACI, Inc. - Federal | 47QFCA19F0006 | $929.1M | VA | Alliant 2 | IGF::OT::IGF |
+| 3 | CACI, Inc. - Federal | 47QFCA20F0010 | $824.3M | VA | Alliant 2 | BEAGLE task order award |
+| 4 | CACI, Inc. - Federal | 47QFRA24F0005 | $762.6M | VA | Alliant 2 | CDM DEFEND Group A bridge task order |
+| 5 | CACI NSS, LLC | 47QFCA21F0087 | $758.9M | NC | OASIS Pool 1 | SOF Emerging Threats Operations and Planning |
+| 6 | CACI-ISS, LLC | W15QKN15C0049 | $733.7M | VA | (prime) | System integrator, IPPS-A Increment II |
+| 7 | CACI, Inc. - Federal | HS002123F0020 | $716.5M | VA | DCSA backgrnd | Background investigation fieldwork services |
+| 8 | CACI, Inc. - Federal | 47QFRA19F0011 | $708.3M | VA | Alliant 1 | FEDND DEFEND A (network defense) |
+| 9 | CACI, Inc. - Federal | 47QFMA19F0013 | $674.9M | — | Alliant 2 | Communication and IT Services III |
+| 10 | CACI NSS, LLC | FA882316C0004 | $600.7M | CO | (prime) | Consolidated AF Satellite Control Network maint |
+| 11 | CACI NSS, LLC | FA875019F1000 | $578.4M | VA | AF ISR IDV | Full-Spectrum ISR Innovation |
+| 12 | CACI Premier Technology, LLC | HS002119F0138 | $576.8M | VA | DCSA backgrnd | Background investigations fieldwork |
+| 13 | CACI, Inc. - Federal | 47QFMA24F0014 | $535.6M | — | Alliant 2 | Enterprise Level IT Expertise (ELITE) |
+| 14 | CACI, Inc. - Federal | 70B04C24F00001129 | $469.0M | VA | Alliant 2 | Border Enforcement Applications (GLEIT) |
+| 15 | CACI, Inc. - Federal | FA807522F0030 | $468.3M | MD | DTIC IAC MAC* | Digital Engineering and Digital Transformation |
+| 16 | CACI, Inc. - Federal | 47QFCA19F0050 | $451.5M | MD | OASIS Pool (407) | Commercial Based Technology Analysis (CBTA) |
+| 17 | CACI NSS, LLC | GST0013AJ0065 | $424.4M | VA | Alliant 1 | Performance-based information services |
+| 18 | CACI NSS, LLC | 47QFCA21F0057 | $399.6M | VA | OASIS Pool 1 | DTRA IMAX DA |
+| 19 | CACI, Inc. - Federal | EH02 | $391.2M | DC | SeaPort-e | **SHIP DESIGN SERVICES** |
+| 20 | CACI, Inc. - Federal | FA875023F0080 | $340.0M | VA | OASIS Pool (309) | Full-Spectrum ISR Innovation (follow-on) |
+| 21 | CACI NSS, LLC | HDTRA123F0020 | $302.5M | VA | OASIS Pool 1 | DTRA Counter-WMD professional/analytical svcs |
+| 22 | CACI, Inc. - Federal | 47QFCA19F0034 | $299.1M | VA | OASIS Pool (407) | TENCAP E3I award |
+| 23 | CACI, Inc. - Federal | 47QFCA24F0011 | $284.3M | GA | OASIS Pool (309) | DCGS Enterprise Product Support |
+| 24 | CACI, Inc. - Federal | 47QFCA21F0019 | $283.7M | NY | Alliant 2 | WBSCM 3 task order |
+| 25 | CACI Enterprise Solutions | SP470922F0028 | $248.3M | VA | DLA (DAI) | DAI Application Development and Sustainment |
+| 26 | CACI Premier Technology, LLC | 24362018F0104 | $247.4M | VA | OPM backgrnd | Background investigations TO #2 |
+| 27 | CACI, Inc. - Federal | FA807524F0060 | $244.8M | VA | DTIC IAC MAC* | **Advanced Product Innovation and Delivery for NavalX** |
+| 28 | CACI Technologies, LLC | 0127 | $238.5M | VA | Army S3 | PEO C3T engineering (S3R-043) |
+| 29 | CACI NSS, LLC | 36C10B20F0250 | $234.5M | VA | IT Schedule 70 | VA FMBT/iFAMS interface development |
+| 30 | CACI NSS, LLC | 70RTAC21FC0000006 | $215.3M | VA | DHS OCIO BPA | DHS OCIO services BPA call |
+| 31 | CACI, Inc. - Federal | N6523610C2843 | $213.9M | VA | (prime) | IT Business Support Services (Navy) |
+| 32 | CACI NSS, LLC | H9222210C0005 | $212.8M | NC | (prime) | USSOCOM labor (cost CLINs) |
+| 33 | CACI, Inc. - Federal | 80TECH24CA002 | $212.7M | VA | (prime) | NASA Consolidated Application & Platform (NCAPS) |
+| 34 | CACI Technologies, LLC | W56KGU20F0012 | $201.6M | VA | Army RS3 | Army RS3 five-year task order |
+| 35 | CACI NSS, LLC | FA872623FB093 | $201.1M | VA | AF EITAAS | Enterprise Service Desk / Unified Endpoint |
+| 36 | CACI Technologies, LLC | 0096 | $196.3M | VA | Army S3 | PEO C3T support |
+| 37 | CACI NSS, LLC | 47QFCA20F0002 | $194.0M | — | OASIS Pool 1 | Plans/operations/logistics support |
+| 38 | CACI Enterprise Solutions | N0003919F0202 | $193.1M | VA | CIO-SP3 | **MyNavy HR** |
+| 39 | CACI, Inc. - Federal | H9240221C0005 | $190.7M | NC | (prime) | Geospatial intelligence services |
+| 40 | CACI, Inc. - Federal | N0016417F3007 | $190.3M | VA | SeaPort-e | **Navy program management support** |
+| 41 | CACI, Inc. - Federal | FA882124FB001 | $185.2M | CO | Alliant 2 | Data transport product support/sustainment |
+| 42 | CACI, Inc. - Federal | EH07 | $180.5M | VA | SeaPort-e | **Navy (SeaPort-e task order)** |
+| 43 | CACI, Inc. - Federal | GSQ0016AJ0002 | $179.0M | VA | Alliant 1 | WBSCM services |
+| 44 | CACI Technologies, LLC | FK11 | $178.8M | VA | SeaPort-e | **NAVAL FORCES LOGISTICS SUPPORT** |
+| 45 | CACI-Athena, LLC | H9222216C0029 | $176.5M | NC | (prime) | USSOCOM ODCS |
+| 46 | CACI Technologies, LLC | W56KGU23F0009 | $172.4M | MD | Army RS3 | Replication/exploitation/analysis of threats |
+| 47 | CACI Inc - Federal | 70T03018F2BCIO660 | $170.9M | DC | DHS EAGLE II | IT management/performance analysis |
+| 48 | CACI, Inc. - Federal | EH03 | $168.0M | MD | SeaPort-e | **Navy (SeaPort-e task order)** |
 
-`[caci-usaspending-top25-2026-05-31]`
+`[caci-usaspending-refresh-2026-06-07]`
+
+> **FACT.** Five awards in the top-48 sit under the Navy **SeaPort-e** IDV (N0017804D4030 / N0017804D4026), totaling ~$1.11B: EH02 Ship Design Services ($391.2M), N0016417F3007 Navy program management ($190.3M), EH07 ($180.5M), FK11 Naval Forces Logistics Support ($178.8M), and EH03 ($168.0M). `[caci-usaspending-refresh-2026-06-07]`
+
+> **Assessment.** This SeaPort-e cluster is the most operator-relevant block in the entire top-48: it is CACI's Navy professional-services past performance — ship design, naval forces logistics, Navy program management — and its successor vehicle, **SeaPort NxG (N0017819D7295), is in `vehicles.md §2`** as the highest-relevance alternate routing path for the operator's region. So CACI's biggest Navy past performance and a live, long-runway Navy vehicle line up. Note the 2026-05-31 pass mis-tagged EH02 as a "prime contract" — it is in fact a SeaPort-e task order, now corrected.
+
+## §2.1 — Awarding (administering) office vs. funding office (the true customer)
+
+Pulled 2026-06-07 via per-award detail calls. The **administering office** issues the contract; the **funding office** is the real customer paying for the work — and for the many GSA-assisted awards the two diverge sharply. Same PIID order as §2.
+
+| PIID | Administering office | Funding office (true customer) |
+|---|---|---|
+| GSQ0017AJ0006 | GSA FEDSIM | DTRA |
+| 47QFCA19F0006 | GSA FEDSIM | Army Info Systems Engineering Cmd (W248) |
+| 47QFCA20F0010 | GSA FEDSIM | VA Office of Information & Technology |
+| 47QFRA24F0005 | GSA AAS Region 8 | CISA |
+| 47QFCA21F0087 | GSA FEDSIM | Army Special Operations Command (W45V) |
+| W15QKN15C0049 | ACC-PICA | PEO Enterprise (Army, IPPS-A) |
+| HS002123F0020 | DCSA | DCSA |
+| 47QFRA19F0011 | GSA AAS Region 8 | CISA |
+| 47QFMA19F0013 | GSA AAS Region 3 | DFAS-INDY (GFEBS) |
+| FA882316C0004 | FA8821 Sustainment BMC3 SSC | SMC Det 11 (Space) |
+| FA875019F1000 | FA8750 AFRL RIK | AFRL RIEB |
+| HS002119F0138 | DCSA | DCSA |
+| 47QFMA24F0014 | GSA AAS Region 3 | DFAS-INDY (GFEBS) |
+| 70B04C24F00001129 | CBP IT Contracting Div | VA Office of Information & Technology |
+| FA807522F0030 | FA8075 774 ESS (DTIC IAC MAC) | OUSD(AT&L) |
+| 47QFCA19F0050 | GSA FEDSIM | CCDC C5ISR Center (W4G8) |
+| GST0013AJ0065 | GSA FEDSIM | Army Info Systems Engineering Cmd (W248) |
+| 47QFCA21F0057 | GSA FEDSIM | DTRA |
+| EH02 | **NAVSEA HQ** | **NAVSEA HQ** |
+| FA875023F0080 | FA8750 AFRL RIK | AFRL RIEE |
+| HDTRA123F0020 | DTRA | DTRA |
+| 47QFCA19F0034 | GSA FEDSIM | PEO IEW&S Alexandria (W6DP) |
+| 47QFCA24F0011 | GSA FEDSIM | AFLCMC ESG |
+| 47QFCA21F0019 | GSA FEDSIM | USDA Food & Nutrition |
+| SP470922F0028 | DCSO Philadelphia (DLA) | DCSO Philadelphia (DLA) |
+| 24362018F0104 | OPM Boyers (FISD) | National Background Investigations Bureau |
+| FA807524F0060 | FA8075 774 ESS (DTIC IAC MAC) | **Naval Air Systems Command (NAVAIR)** |
+| 0127 | ACC-APG | Army HQ Comm-Electronics Cmd (W4GV) |
+| 36C10B20F0250 | VA Technology Acquisition Center NJ | VA Technology Acquisition Center NJ |
+| 70RTAC21FC0000006 | DHS Info Tech Acq Center | DHS Chief Information Officer |
+| N6523610C2843 | **NIWC Atlantic** | **NIWC Atlantic** |
+| H9222210C0005 | DCMA Southeast | HQ USSOCOM |
+| 80TECH24CA002 | NASA IT Procurement Office | NASA IT Procurement Office |
+| W56KGU20F0012 | ACC-APG | CCDC C5ISR Center (W4G8) |
+| FA872623FB093 | FA8726 AFLCMC HNK C3IN | AFLCMC HNI |
+| 0096 | ACC-APG | CCDC C5ISR Center (W4G8) |
+| 47QFCA20F0002 | GSA FEDSIM | US Africa Command (W6L6) |
+| N0003919F0202 | **NAVWAR** | **NAVWAR** (MyNavy HR) |
+| H9240221C0005 | HQ USSOCOM | HQ USSOCOM |
+| N0016417F3007 | DCMA Mid-Atlantic | **NAVSEA HQ** |
+| FA882124FB001 | FA8821 Sustainment BMC3 SSC | SMC Det 11 (Space) |
+| EH07 | **NSWC Crane** | **NAVSEA HQ** |
+| GSQ0016AJ0002 | GSA FEDSIM | USDA Food & Nutrition |
+| FK11 | **NAVSUP FLC Norfolk** | **Submarine Force Atlantic Fleet** |
+| H9222216C0029 | HQ USSOCOM | HQ USSOCOM |
+| W56KGU23F0009 | ACC-APG | SAF Financial Mgmt (F59900) |
+| 70T03018F2BCIO660 | (closed out) | Acquisition Program Mgmt |
+| EH03 | DCMA HQ | **PEO Submarines** |
+
+`[caci-usaspending-refresh-2026-06-07]`
+
+> **Assessment (the FEDSIM pattern).** About a dozen of CACI's largest awards are *administered* by **GSA FAS AAS FEDSIM** (GSA's assisted-acquisition shop) but *funded* by the real customer — DTRA, Army ISEC, Army Special Operations, CCDC C5ISR, PEO IEW&S, AFRICOM, AFLCMC, USDA. For the scoring layer this matters: the administering office tells you nothing about the customer. This is the general form of the capability book's "sponsoring agency vs. administering office" gap — and it resolves the operator-team's own case: **DTIC IAC MAC task orders are administered by FA8075 / 774 ESS (Air Force) but funded by the actual customer** (e.g., FA807522F0030 by OUSD(AT&L); the NavalX TO FA807524F0060 by NAVAIR).
+
+> **Assessment (the Navy cluster — most operator-relevant).** CACI's Navy past performance concentrates in two customer hubs: (1) **NAVSEA HQ and the submarine enterprise** — EH02 Ship Design and N0016417F3007 funded by NAVSEA HQ, EH07 by NAVSEA HQ via NSWC Crane, FK11 Naval Forces Logistics by Submarine Force Atlantic Fleet, EH03 by **PEO Submarines**; and (2) **NAVWAR / NIWC** — MyNavy HR (NAVWAR) and IT Business Support (NIWC Atlantic). So beyond the SeaPort-e *vehicle* cluster, the *customers* are NAVSEA, the submarine PEOs/forces, and NAVWAR — the spine of the Navy technical-services world the operator-team sits adjacent to. Note also that the highest-value Navy line on the team's own DTIC IAC MAC vehicle (NavalX, $244.8M) is **NAVAIR-funded**.
 
 ## §3 — Highest-priority observations
 
@@ -130,10 +220,16 @@ The USAspending URLs reveal parent IDV cross-references that improve identificat
 
 > **Assessment.** CACI Premier Technology specializes in background investigations. This is a distinct capability domain — DCSA/DOJ-aligned personnel investigations — not represented in the caci.com seven-area taxonomy. Either it's a "below-the-line" specialty subsidiary not foregrounded in CACI's corporate capability marketing, or it falls under Mission and Engineering Support (§5)'s "Intelligence analysis and operations" sub-capability with a security-clearance specialization. Worth noting that the Cyber (§2) area also has potential affinity given clearance-process work.
 
-## §4 — Research gaps remaining
+## §4 — Research gaps (updated 2026-06-07)
 
-- **Dollar amounts.** All Award Amount fields came back null/0 in this pass. Resolving requires per-award detail calls (`awards/{generated_id}/` endpoint) — straightforward but adds 25 more calls. Deferred unless the amounts become material to a specific scoring decision.
-- **Awarding agency identity.** The Awarding Agency and Awarding Sub Agency columns also returned empty. The parent IDV URL pattern is the workable substitute. Per-award detail would fill this too.
-- **Sub-25 awards.** Top-25 is one snapshot; a top-50 or top-100 would extend coverage but with diminishing per-award strategic value. Defer unless a specific capability area looks under-populated.
-- **CACI Premier Technology's full portfolio.** This subsidiary's role isn't yet documented in the capability book. A targeted CACI-Premier-Technology recipient search would surface its delivery scope.
-- **Place-of-performance Pacific representation.** Of the 25 top awards by amount, ZERO have a Pacific-region place of performance (no HI, GU, JA, etc. in the state field). This is notable — CACI's largest awards are concentrated in the National Capital Region (VA, DC, MD) and CONUS sites. The operator-team's Pacific footprint is a deliberate geographic extension that doesn't show up in top-25 award analytics. Consider this empirical evidence for the "team is a strategic geographic outpost" framing.
+Closed in the 2026-06-07 refresh:
+- **Dollar amounts** — now populated for all 48 (the §2 table). The "by amount" ranking is now trustworthy.
+- **Sub-25 awards** — extended to the top-50 window (48 CACI awards after Acacia exclusion).
+- **Vehicle attribution** — parent IDVs resolved across the table (Alliant 1/2, OASIS pools, SeaPort-e, DTIC IAC MAC, Army S3/RS3, DLA, AF EITAAS, DHS, etc.); cross-references `vehicles.md §5`.
+
+Closed (continued):
+- **Per-award awarding/funding office** — done for all 48 (§2.1). Surfaced the GSA-FEDSIM administering-vs-funding split and CACI's NAVSEA/submarine + NAVWAR Navy customer cluster.
+
+Still open / newly surfaced:
+- **CACI Premier Technology's full portfolio** — still only seen via background-investigations awards (#12, #26). A targeted recipient search would surface its scope. (Also newly noted: **CACI-Athena, LLC** at #45 — another subsidiary not yet documented.)
+- **Place-of-performance Pacific representation.** Of the top 48 by amount, ZERO have a Pacific place of performance (no HI/GU/JA in the state field) — all National Capital Region (VA/DC/MD) and CONUS. The operator-team's Pacific footprint remains a deliberate geographic extension invisible in top-award analytics — empirical support for the "team is a strategic geographic outpost" framing. (Caveat: place of performance for IDIQ-wide task orders is often recorded at the contracting/HQ location, not the actual work site, so this understates true Pacific delivery.)

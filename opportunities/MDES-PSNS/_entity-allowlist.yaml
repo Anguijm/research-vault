@@ -1,0 +1,21 @@
+# Operator-confirmed entities for the MDES-PSNS research track.
+#
+# Entities listed here are excluded from the audit_named_entities and
+# audit_search_config "contaminated" bucket because they are legitimately
+# part of this research's analytical context. Allowlisting a name DOES NOT
+# make claims about it FACT — verify_facts.py still checks specific claims
+# against specific sources. The allowlist only resolves the entity-presence
+# audit.
+#
+# Format: entity name (case-sensitive, matching the watchlist) as the key,
+# reason as the value.
+
+allowlist:
+  CACI: The operator's company. Baseline reference for any opportunity in this vault. Does not require an ingested source to appear in analytical content.
+
+# NOTE (2026-06-11): Tridentis, Gryphon Marine, and Huntington Ingalls Industries
+# are the three named predecessor-contract incumbents. They surfaced
+# source-first in the PWS [s.2026-06-11-mdes-pws], so they are legitimately citable
+# in analytical content WITH that citation — they are intentionally NOT pre-loaded
+# here. Any further contractor / teaming-partner names must likewise arrive with a
+# source citation, not be seeded into analysis or search config.

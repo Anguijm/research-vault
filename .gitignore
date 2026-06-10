@@ -35,8 +35,9 @@ Thumbs.db
 *.bak
 *.orig
 
-# ── Trip report audio (binaries, kept locally only) ─────────────────────
+# ── Trip report audio (binaries + transient processing logs, kept locally only) ──
 trip-reports/*/audio/*.m4a
 trip-reports/*/audio/*.mp3
 trip-reports/*/audio/*.wav
 trip-reports/*/audio/*.aac
+trip-reports/*/audio/*.log

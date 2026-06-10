@@ -23,6 +23,35 @@ CACI publishes its complete prime-contract-vehicle inventory at `caci.com/contra
 
 > **Assessment.** "DTIC IAC MAC" is the IDIQ family name. The DTIC Information Analysis Center program organizes its task orders by technical focus area (each IAC has a thematic focus — cybersecurity, defense systems, homeland defense, etc.). The operator-team's specific task order falls under one of those technical IACs; identifying which IAC and which sponsoring agency for the team's task order is a research gap — this requires either internal contract documentation OR the USAspending IDV-family pull Gemini recommended (still pending in the slice plan work).
 
+## §1.1 — Task-order family under DTIC IAC MAC (what the operator-team's vehicle actually carries)
+
+On 2026-06-07 a child-award pull on the IDV `CONT_IDV_FA807518D0006_9700` returned the **full set of 12 task orders** CACI holds under DTIC IAC MAC, with obligated amounts. This closes the Session-1–4 gap "what other task orders exist under FA807518D0006" — the book previously had only one data point (the digital-engineering TO).
+
+| TO PIID | Obligated | Period | Scope (USAspending description) |
+|---|---|---|---|
+| FA807522F0030 | $468.3M | 2022-05 → 2027-05 | Digital Engineering and Digital Transformation Research, Analysis, and Development |
+| FA807524F0060 | $244.8M | 2024-09 → 2029-09 | **Advanced Product Innovation and Delivery for NavalX** |
+| FA807522F0054 | $125.6M | 2022-08 → 2027-08 | **Design, Maintenance, Quality, Extension Engineering, and Shipyard Quality Assurance** (MSC N7) — **THIS IS THE OPERATOR-TEAM'S TASK ORDER** |
+| FA807521F0077 | $78.1M | 2021-09 → 2026-09 | Counter-Unmanned Aircraft Systems R&D and Sustainment |
+| FA807520F0037 | $68.7M | 2020-05 → 2025-05 | Research/analysis of technical, logistics, business operations, contingency ops |
+| FA807524F0042 | $68.0M | 2024-08 → 2029-08 | **Naval Undersea Warfare Center (NUWC) engineering and modernization operations analysis** |
+| FA807522F0033 | $42.9M | 2022-07 → 2027-07 | Assured PNT and Space Cross-Functional Team research/analysis |
+| FA807521F0027 | $32.8M | 2021-02 → 2026-02 | Research/engineering for intel technology & architecture (CCDC) |
+| FA807524F0015 | $16.4M | 2024-03 → 2027-03 | **Enterprise Application Innovation for Commander, Navy Reserve Forces Command N6** |
+| FA807525F0033 | $7.4M | 2025-03 → 2030-03 | Research/analysis of technical, logistics, business activities, contingency ops |
+| FA807525F0014 | $2.8M | 2025-02 → 2030-02 | Electromagnetic sensors / communications security systems analysis |
+| FA807518F0006 | $3,600 | 2018-09 → 2018-10 | IAC MAC base administrative line |
+
+`[caci-usaspending-refresh-2026-06-07]`
+
+> **FACT (operator-confirmed 2026-06-07).** The operator-team's own task order is **FA807522F0054** (MSC N7 Engineering Directorate). One TO, multiple non-overlapping contingents: the operator's team performs **USS** repair support at **SRF-JRMC, Japan**, while a separate worldwide contingent on the same TO performs **USNS** shipyard-QA / maintenance-engineering at MSC ship availabilities. The operator has met some of the USNS contingent (San Diego); the two do not operationally overlap.
+
+> **FACT.** Four of the twelve DTIC IAC MAC task orders are explicitly Navy/maritime: NavalX advanced product innovation ($244.8M), the MSC machinery/structural-maintenance + shipyard-QA engineering TO ($125.6M), NUWC engineering and modernization ($68.0M), and Navy Reserve Forces Command N6 enterprise applications ($16.4M). `[caci-usaspending-refresh-2026-06-07]`
+
+> **Assessment.** This is the strongest empirical corroboration yet of the operator's standing intuition that the team's vehicle has "much more reach than we're using." The team performs at SRF-JRMC Yokosuka, but the *same IDIQ* already carries ~$455M of Navy engineering work (NavalX product innovation, NUWC modernization, MSC shipyard QA, Navy Reserve apps) plus C-UAS, PNT/Space, and intel-architecture lines. DTIC IAC MAC is functionally a broad Navy-and-defense technical-services routing path, not a narrow analysis vehicle — exactly the cross-area flexibility the §4 mapping implies.
+
+> **Assessment (cross-link to the Hanwha Ocean track).** TO **FA807522F0054** — "Design, Maintenance, Quality, Extension Engineering, and Shipyard Quality Assurance" for Military Sealift Command, with "worldwide deployments to shipyards during MSC ship availabilities" — is **on this vehicle**. The `HANWHAOCEAN-DOD` opportunity's pull-through thesis (as MSC pushes ship availabilities into Korean yards, demand grows for the government-side maintenance-engineering/QA work CACI already does for MSC) therefore runs *through the operator-team's own IDIQ*, not a separate corporate vehicle. See `opportunities/HANWHAOCEAN-DOD/00_research-file.md` §6.
+
 ## §2 — Other CACI IDIQs (vehicles the operator-team does NOT directly perform under)
 
 The following are CACI's other prime IDIQ vehicles. The operator-team cannot task-order against these directly, but knowing the inventory matters because:
@@ -80,30 +109,32 @@ For the scoring layer, an opportunity matching a capability area can be cross-re
 
 `caci.com/contracts` lists CACI's marketed prime IDIQ and GSA positions. A complementary lens — every vehicle under which CACI has actually received award dollars — comes from the USAspending pass that populated `_meta/caci-discovery-config.yaml`'s `baseline_caci_footprint.vehicles` section. Sixteen distinct vehicles by contract number appear in CACI's top award shares; **only two of those 16 are also on the caci.com/contracts marketed list** (HHSN316201200009W = CIO-SP3 CACI Enterprise Solutions; GS-35F-349CA = IT Schedule 70).
 
-The other 14 USAspending-observed vehicles likely include subcontract positions under primes held by other companies, predecessor vehicles (OASIS Pool 1 before OASIS+; Alliant 1 before Alliant 2), and IDIQs CACI holds but doesn't market.
+All 16 were resolved on 2026-06-07 via per-PIID IDV lookups against USAspending (office name from the award-detail endpoint; IDIQ scope from the IDV description). They are **CACI prime IDV/BPA positions**, not subcontracts — most are real IDIQs or agency BPAs that CACI simply does not foreground on its marketed `caci.com/contracts` list.
 
-| Contract number | USAspending share | Likely identification (unverified) |
+| Contract number | USAspending share | Identity (resolved 2026-06-07) — contracting office / IDIQ scope |
 |---|---|---|
-| HHSN316201200009W | 9.0% | **CIO-SP3 (CACI Enterprise Solutions, LLC)** — confirmed in §2 |
-| SP470917D0009 | 7.0% | "SP47" prefix is DLA Land and Maritime contracting office — IDIQ identity TBD |
-| FA822417D0004 | 7.0% | "FA8224" is an Air Force Life Cycle Management Center contracting office — IDIQ identity TBD |
-| SP470121D8002 | 6.5% | DLA Land and Maritime again — IDIQ identity TBD |
-| 70RTAC20A00000003 | 6.0% | "70RTAC" prefix is U.S. Customs and Border Protection — IDIQ identity TBD |
-| GS00Q14OADU121 | 5.5% | **GSA OASIS Pool 1** — confirmed via `operator_team_layer.team_vehicles_held_by_caci_nss` (predecessor to OASIS+) |
-| GS00Q09BGD0037 | 5.5% | "GS00Q...BGD" prefix is GSA — candidate identification is Alliant 1 (predecessor to Alliant 2); needs verification |
-| SP470116D2001 | 5.0% | DLA Land and Maritime — IDIQ identity TBD |
-| W91QUZ12D0010 | 3.5% | "W91QUZ" prefix is U.S. Army CECOM (Communications-Electronics Command) — IDIQ identity TBD |
-| FA872622A0001 | 3.0% | "FA8726" prefix is AFLCMC Hanscom — IDIQ identity TBD |
-| H9222211D0008 | 2.5% | "H92222" prefix is USSOCOM — IDIQ identity TBD |
-| GS35F349CA | 2.0% | **IT Schedule 70 (GS-35F-349CA)** — confirmed in §3 |
-| HC102808D2021 | 2.0% | "HC10" prefix is DISA — IDIQ identity TBD |
-| HSHQDC14A00010 | 2.0% | "HSHQDC" prefix is DHS HQ — IDIQ identity TBD |
-| FA873015D0002 | 2.0% | "FA8730" prefix is AFLCMC Wright-Patterson AFB — IDIQ identity TBD |
-| IND14PC00002 | 2.0% | Prefix not immediately recognizable — agency identity TBD |
+| HHSN316201200009W | 9.0% | **NITAAC CIO-SP3** (NIH NITAAC) — confirmed; CACI Enterprise Solutions |
+| SP470917D0009 | 7.0% | **DLA Contracting Services Office (DCSO) Philadelphia** — DLA IT services IDIQ (parent of the DAI app-dev TO; "JETS / IT audit" scope) |
+| FA822417D0004 | 7.0% | **Air Force Sustainment Center (FA8224, AFSC OL-H PZIM)** — engineering services for integration/update/consolidation |
+| SP470121D8002 | 6.5% | **DCSO Philadelphia (DLA)** — PIEE (Procurement Integrated Enterprise Environment) COE support services |
+| 70RTAC20A00000003 | 6.0% | **DHS Info Tech Acquisition Center** — BPA supporting DHS HQ OCIO (Federal Civilian, not CBP as previously guessed) |
+| GS00Q14OADU121 | 5.5% | **GSA OASIS Pool 1** — confirmed |
+| GS00Q09BGD0037 | 5.5% | **GSA Alliant 1 GWAC** — confirmed (the book's prior guess was correct; predecessor to Alliant 2) |
+| SP470116D2001 | 5.0% | **DCSO Philadelphia (DLA)** — WAWF/EDA sustainment and development support |
+| W91QUZ12D0010 | 3.5% | **DCSO-Richmond (Army)** — programmatic support |
+| FA872622A0001 | 3.0% | **AFLCMC (FA8726, HNK C3IN)** — EITAAS Wave 1 BPA (Air Force Enterprise IT-as-a-Service) on GSA MAS IT Schedules |
+| H9222211D0008 | 2.5% | **USSOCOM (admin DCMA Mid-Atlantic)** — SITEC distributed computing services |
+| GS35F349CA | 2.0% | **GSA IT Schedule 70 (FSS)** — confirmed |
+| HC102808D2021 | 2.0% | **DISA Encore II** IT support MAC (predecessor to Encore III in §2) |
+| HSHQDC14A00010 | 2.0% | **DHS Info Tech Acquisition Center** — Desktop Support Services (DSS) |
+| FA873015D0002 | 2.0% | **AFLCMC Kessel Run (FA8730, HBBK)** — FPS3 Force Protection Site Security Systems / Integrated Base Defense |
+| IND14PC00002 | 2.0% | **DOI Interior Business Center (IBC)** — Business Integration Office assistance |
 
-> **Assessment.** This list materially expands the picture of where CACI is positioned to deliver work. Several of these are Pacific-region-adjacent — the AFLCMC offices (FA8224, FA8726, FA8730) and AFICA-family contracting (related to the operator's FA8075 prefix) suggest CACI has multiple Air Force task-order paths. CBP (70RTAC) and DHS HQ (HSHQDC) are Federal Civilian rather than Pacific-defense. The DLA Land and Maritime vehicles (SP47-family) are interesting because DLA is CACI's largest customer org by share (24.5%) per `baseline_caci_footprint.customer_orgs` — these are where the customer-share statistic actually lives. None of the SP47 vehicles appear on caci.com/contracts, suggesting they're either subcontract positions or single-award contracts that don't qualify as "marketed" multi-award IDIQs.
+`[caci-usaspending-refresh-2026-06-07]`
 
-> **Assessment.** Identifying the specific IDIQ names behind each of these contract numbers is a meaningful research follow-up — the prefix gives you the contracting office, but the IDIQ name and scope require either internal CACI records or a USAspending-detail pass. This is the kind of work the deferred USAspending top-50 pull would close.
+> **Assessment.** Three corrections to the prior (prefix-guessed) picture: (1) the **SP47-family is DLA Contracting Services Office Philadelphia, not "DLA Land and Maritime"** — it is CACI's DLA *IT/enterprise-software* franchise (DAI, PIEE, WAWF/EDA), which is where DLA's 24.5% customer-org share actually lives; (2) **70RTAC is DHS HQ OCIO, not CBP**; (3) **GS00Q09BGD0037 is confirmed Alliant 1**, and **HC102808D2021 is confirmed DISA Encore II** (the predecessor to the Encore III in §2). Net: the "16 observed vehicles" are CACI prime positions spread across DLA (DCSO Philadelphia), three Air Force AFLCMC/AFSC offices (FA8224, FA8726, FA8730), DISA, DHS, USSOCOM, GSA, and DOI — a broad multi-agency IDIQ footprint, none of it Pacific-specific.
+
+> **Assessment.** For the scoring layer, the resolved identities matter because several map to capability areas already in the taxonomy: EITAAS and the DHS desktop/OCIO work are **Enterprise IT (§4)**; SITEC and the AFSC engineering IDIQ touch **C3I (§1)** / **Mission and Engineering Support (§5)**; FPS3 (integrated base defense) is a physical-security/**C3I** adjacency. The DLA IT franchise (DAI/PIEE/WAWF) is **Digital Solutions (§3)**. This is the gap that was deferred to "the USAspending top-50 pull" — now closed.
 
 ## §6 — Operator-team layer vehicles (CACI NSS-held)
 

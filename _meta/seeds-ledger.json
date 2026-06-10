@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_utc": "2026-06-02T04:06:33Z",
+  "last_run_utc": "2026-06-10T12:29:40Z",
   "seeds": {
     "COMPT:FY27_RDTE_TJS": {
       "first_seen_utc": "2026-05-29T19:28:54Z",
@@ -2624,7 +2624,7 @@
     },
     "SAM:566bc6fbd2a349178fb1c404bed26c48": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
-      "last_seen_utc": "2026-06-02T04:06:31Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/566bc6fbd2a349178fb1c404bed26c48/view",
       "title": "USS MUSTIN (DDG-89) FY26 6J1 SIA",
@@ -5261,7 +5261,7 @@
     },
     "SAM:d86126be8a384b2c9191cac187d796b4": {
       "first_seen_utc": "2026-05-30T00:38:58Z",
-      "last_seen_utc": "2026-06-02T04:06:31Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/d86126be8a384b2c9191cac187d796b4/view",
       "title": "LSD-47 SOUNDING TUBE FOR CONTAMINATED OIL SETTING TANK; REPLACE",
@@ -8254,7 +8254,7 @@
     },
     "SAM:e82cfc0ef2e8474389da15848e33a70a": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/e82cfc0ef2e8474389da15848e33a70a/view",
       "title": "LPD-18 JOINER BULKHEAD AND DOOR ON 1ST PLATFORM OF 6-24-0-L; REPLACE",
@@ -8262,7 +8262,7 @@
     },
     "SAM:e67de8250fe34c83af18413b08cfcab2": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/e67de8250fe34c83af18413b08cfcab2/view",
       "title": "USS NEW ORLEANS (LPD-18) NO.ONE CWE 3RD PLATF DOOR DOGGING MECHANISM; REPAIR",
@@ -8270,7 +8270,7 @@
     },
     "SAM:e36ec8e528ff44e9aa99a94d1fdcf8bb": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/e36ec8e528ff44e9aa99a94d1fdcf8bb/view",
       "title": "LSD-47 FENDER STOWAGE AND STANCHION ASSEMBLY; REPLACE",
@@ -8278,7 +8278,7 @@
     },
     "SAM:d1643834330242ddbc8dde555ea2823f": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/d1643834330242ddbc8dde555ea2823f/view",
       "title": "LPD-18 PLUMBING WASTE DRAIN PIPING IN 7-25-01-E; REPLACE",
@@ -8286,7 +8286,7 @@
     },
     "SAM:c88176897084413d8d57fc8c80555262": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/c88176897084413d8d57fc8c80555262/view",
       "title": "LPD-18 LAN NIPR DROP BOX CABLE FOR CANES; INSPECT AND REPLACE",
@@ -8302,7 +8302,7 @@
     },
     "SAM:979adaa5fee84a9bb593794c4e413325": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/979adaa5fee84a9bb593794c4e413325/view",
       "title": "LPD-18 FLOW CONTROL VALVE BRACKET AND LATCH CABLE ASSEMBLY OF STBD SIDEPORT SHELL DOOR; ALIGN AND INSTALL",
@@ -8310,7 +8310,7 @@
     },
     "SAM:87fee091df634ade9ffb57def856f581": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/87fee091df634ade9ffb57def856f581/view",
       "title": "USS PATRIOT (MCM-7) SEAWATER PUMP DISCHARGE PIPING FOR 1A MPDE; REPLACE",
@@ -8318,7 +8318,7 @@
     },
     "SAM:73f4db3ee5714d3090389de08d157172": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/73f4db3ee5714d3090389de08d157172/view",
       "title": "USS NEW ORLEANS (LPD-18) EYE WASH ALARM SYSTEM; REPAIR",
@@ -8326,7 +8326,7 @@
     },
     "SAM:72bb5e141b7c4c81a9c0495ce6a24c1d": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/72bb5e141b7c4c81a9c0495ce6a24c1d/view",
       "title": "USS NEW ORLEANS (LPD-18) DECK INSIDE COAMING FOR LPAC NO.ONE; PRESERVE",
@@ -8334,7 +8334,7 @@
     },
     "SAM:373d843bc13d4ee1af6cbd6acbab5951": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/373d843bc13d4ee1af6cbd6acbab5951/view",
       "title": "USS NEW ORLEANS (LPD-18)WORKBENCH WITH SINK/CABINET IN HELICOPTER WORKSHOP 1- 114-2-Q; INSTALL",
@@ -8342,7 +8342,7 @@
     },
     "SAM:3566aab19b134b21b922b3cd3e46be12": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/3566aab19b134b21b922b3cd3e46be12/view",
       "title": "LPD-18 FIRE DAMAGE VALVE IN SD STR RM (5-18-2-A AND 6-18-2-K); INSPECT, REPAIR AND REPLACE",
@@ -8350,7 +8350,7 @@
     },
     "SAM:feda1fa6eeb445379c04bf9529af5946": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/feda1fa6eeb445379c04bf9529af5946/view",
       "title": "LPD-18 DECK INSIDE COAMING FOR ASW DUPLEX STRAINER; PRESERVE DECK INSIDE COAMING FOR LPAC NO.2; PRESERVE/",
@@ -8358,7 +8358,7 @@
     },
     "SAM:f1d846aa43a34aa49c7a38a08b182968": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/f1d846aa43a34aa49c7a38a08b182968/view",
       "title": "USS RUDHMORE (LSD-47) PORT ACCOMMODATION LADDER WINCH AND COMPONENT; REMOVE",
@@ -8366,7 +8366,7 @@
     },
     "SAM:e0602392291c49d8a88e51871b031849": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/e0602392291c49d8a88e51871b031849/view",
       "title": "LPD-18 VENTILATION DUCT FOR SS-31 AND ES-92; REPLACE",
@@ -8374,7 +8374,7 @@
     },
     "SAM:909774fd1af9459191014bc345658842": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/909774fd1af9459191014bc345658842/view",
       "title": "LPD-18 VENTILATION FAN MOTOR ASSEMBLY (TPSS-3, TPSS 03-58-1); REPAIR",
@@ -8382,7 +8382,7 @@
     },
     "SAM:4573388f35f943f0812684fc8236859f": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/4573388f35f943f0812684fc8236859f/view",
       "title": "LPD-18 VCHT PIPING IN 6-27-2-A AND 6-24-0-L; REPLACE",
@@ -8390,7 +8390,7 @@
     },
     "SAM:29cee48d58754f12bf3162f2c4cf09b4": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/29cee48d58754f12bf3162f2c4cf09b4/view",
       "title": "PRESOLICITATION NOTICE_Pearl Habor Naval Shipyard & IMF DET Guam (PDG)_Portable Toilets and Sinks",
@@ -8398,7 +8398,7 @@
     },
     "SAM:6ab05711960d441990484690fbb67fab": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/6ab05711960d441990484690fbb67fab/view",
       "title": "LSD-47 NO.4 A/C PLANT CONDENSER; CLEAN",
@@ -8406,7 +8406,7 @@
     },
     "SAM:11250174b2f54f2d8bdcc2bc30e023ee": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/11250174b2f54f2d8bdcc2bc30e023ee/view",
       "title": "LPD-18 NO.ONE FIRE PUMP MOTOR; REPLACE and NO.ONE FIRE PUMP SEA SUCTION VALVE (FM 1-V-001); REPLACE",
@@ -8414,7 +8414,7 @@
     },
     "SAM:06c229171f814c4db7e84a7b38bf3442": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/06c229171f814c4db7e84a7b38bf3442/view",
       "title": "MCM-7 SEAWATER PUMP DISCHARGE PIPING ASSEMBLY FOR NO.2 SSDG; REPLACE",
@@ -8422,7 +8422,7 @@
     },
     "SAM:dfe109f841dc4a798c64077a9a963a9d": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/dfe109f841dc4a798c64077a9a963a9d/view",
       "title": "USS NEW ORLEANS (LPD-18) WORKBENCH WITH SINK/CABINET; INSTALL",
@@ -8430,7 +8430,7 @@
     },
     "SAM:cc0715a0b7b149fda37b9d76364478ef": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/cc0715a0b7b149fda37b9d76364478ef/view",
       "title": "USS NEW ORLEANS (LPD-18) OVERHEAD PLATE IN 02-80-1-A; REPAIR",
@@ -8438,7 +8438,7 @@
     },
     "SAM:c98dc9397b914f8682be875c9c55a6eb": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/c98dc9397b914f8682be875c9c55a6eb/view",
       "title": "LSD-47 VENTILATION DUCT FOR SUPPLY SYSTEM IN 1-79-2-Q REPLACE AND PRESERVE",
@@ -8454,7 +8454,7 @@
     },
     "SAM:408e0b0253b743c696038afd63eea36f": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/408e0b0253b743c696038afd63eea36f/view",
       "title": "LPD-18, NONSKID DECK COVERING IN 4-123-1-L; REPLACE",
@@ -8462,7 +8462,7 @@
     },
     "SAM:127c1389824940f590f28db489da3da1": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/127c1389824940f590f28db489da3da1/view",
       "title": "USS RUSHMORE (LSD-47) JETTISON LOCKER AND RELEASE GEAR; REFURBISH AND REPAIR",
@@ -8470,7 +8470,7 @@
     },
     "SAM:dbd3228aa0a34eceaa84af212b8ec909": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/dbd3228aa0a34eceaa84af212b8ec909/view",
       "title": "SOURCES SOUGHT NOTICE_Joint Region Marianas_CISSP IT Training_GUAM",
@@ -8478,7 +8478,7 @@
     },
     "SAM:79f1b7c4651840579501ee3fc91c0baa": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/79f1b7c4651840579501ee3fc91c0baa/view",
       "title": "PRESOLICITATION NOTICE_Joint Region Marianas_CISSP IT Training_GUAM",
@@ -8486,7 +8486,7 @@
     },
     "SAM:5deffc7ab6794ba08c5e73791d0bc679": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/5deffc7ab6794ba08c5e73791d0bc679/view",
       "title": "PRESOLICITATION NOTICE: 30th NCR & NMCB Camp Covington Cable Services",
@@ -8526,7 +8526,7 @@
     },
     "SAM:369d3ff04b6541c98645bdf518d49813": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/369d3ff04b6541c98645bdf518d49813/view",
       "title": "6A1 Preventive Maintenance for Puget Sound Naval Shipyard (PSNS)Barge YR-85 and YR-95",
@@ -8566,7 +8566,7 @@
     },
     "SAM:a8735794433e467896cd1a2c380b8ca6": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/a8735794433e467896cd1a2c380b8ca6/view",
       "title": "6A1 Corrective Maintenance for Puget Sound Naval Shipyard (PSNS) Barge YR-85 and YR-95",
@@ -8614,7 +8614,7 @@
     },
     "SAM:959045a595254f168312f6f82ff1f216": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/959045a595254f168312f6f82ff1f216/view",
       "title": "Small Craft SME and Maintenance Tech Support Services",
@@ -8630,7 +8630,7 @@
     },
     "SAM:325daa4b7ec047d2b71b591c3db919de": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/325daa4b7ec047d2b71b591c3db919de/view",
       "title": "COMMANDER, NAVY REGION HAWAII REQUEST FOR INFORMATION (RFI) / SOURCES SOUGHT NOTICE LENEL ONGUARD ENTERPRISE SOFTWARE UP",
@@ -8654,7 +8654,7 @@
     },
     "SAM:6ab0278de8b84032b07436c4493184e0": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/6ab0278de8b84032b07436c4493184e0/view",
       "title": "NOTICE OF INTENT TO AWARD A SOLE SOURCE",
@@ -8662,7 +8662,7 @@
     },
     "SAM:3913a9fd0b2e44b6b6b802ac48212aa1": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/3913a9fd0b2e44b6b6b802ac48212aa1/view",
       "title": "NOTICE OF INTENT TO AWARD A SOLE SOURCE CONTRACT: WRIGHT LINE",
@@ -8686,7 +8686,7 @@
     },
     "SAM:c35336aff2b0416a9a7801924e3e5623": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/c35336aff2b0416a9a7801924e3e5623/view",
       "title": "Force Generation Professional Support Services",
@@ -8694,7 +8694,7 @@
     },
     "SAM:98688363761041d2982812ea4c1bfd56": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/98688363761041d2982812ea4c1bfd56/view",
       "title": "NOTICE OF INTENT TO AWARD A SOLE SOURCE CONTRACT: ARJIS",
@@ -8702,7 +8702,7 @@
     },
     "SAM:45df3bf4beca4620a4fd0f429a4454d7": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/45df3bf4beca4620a4fd0f429a4454d7/view",
       "title": "The Center for Homeland Defense and Security (CHDS) Educational Program Support",
@@ -8710,7 +8710,7 @@
     },
     "SAM:b848fdfc0fa143d69e27ba3ddf8e0eb9": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/b848fdfc0fa143d69e27ba3ddf8e0eb9/view",
       "title": "USS ESSEX'S OEM Maintenance for the Anesthesia Units",
@@ -8718,7 +8718,7 @@
     },
     "SAM:4047a8131fe941e8887e8648f989d4ed": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/4047a8131fe941e8887e8648f989d4ed/view",
       "title": "Port Boat Davit Inverter Installation & Optesting",
@@ -8734,7 +8734,7 @@
     },
     "SAM:1d5c63687f834cccb8d6fd53c6194738": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/1d5c63687f834cccb8d6fd53c6194738/view",
       "title": "RFI for Main Control Center Upgrade Supplies (Wright Line)",
@@ -8742,7 +8742,7 @@
     },
     "SAM:dfe997f389d94143b4f1fa548c3d4887": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/dfe997f389d94143b4f1fa548c3d4887/view",
       "title": "Force Generation Professional Support Services",
@@ -8822,7 +8822,7 @@
     },
     "SAM:54ad24d401c34626809be4e1afdab8d2": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/54ad24d401c34626809be4e1afdab8d2/view",
       "title": "Professional Support Services in Japan",
@@ -8846,7 +8846,7 @@
     },
     "SAM:9a07f376bfba4ae1870615102d072986": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/9a07f376bfba4ae1870615102d072986/view",
       "title": "MTU TRAINING",
@@ -8862,7 +8862,7 @@
     },
     "SAM:52ca8058ec794edea74b68e8b646f0c1": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/52ca8058ec794edea74b68e8b646f0c1/view",
       "title": "Mechanic Labor",
@@ -8870,7 +8870,7 @@
     },
     "SAM:fb19df4386164976b46d7c8667491b24": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/fb19df4386164976b46d7c8667491b24/view",
       "title": "Hazardous Rated LED Fixtures",
@@ -8886,7 +8886,7 @@
     },
     "SAM:629de22d66dd468f8a5b2f6fc32d3561": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/629de22d66dd468f8a5b2f6fc32d3561/view",
       "title": "OEM \"Aircraft Appliances & Equipment\" - Feed Tank Assembly Part(s)",
@@ -8894,7 +8894,7 @@
     },
     "SAM:8e41927c8f6942a2828ae02412844c2d": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/8e41927c8f6942a2828ae02412844c2d/view",
       "title": "OEM \"Roxul, Inc. dba Rockwool Fonden\" - Insulation Blanket/Thermal/Mineral Wool Part(s)",
@@ -8974,7 +8974,7 @@
     },
     "SAM:05f838fefa0d47b7ad9d0bc0136616d9": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/05f838fefa0d47b7ad9d0bc0136616d9/view",
       "title": "Install On-Demand Hot Water Heater in Room W-224 Bldg. 101, Camp Zama (CZ)",
@@ -8982,7 +8982,7 @@
     },
     "SAM:041ce54e7a864131803e6354303cb7d7": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/041ce54e7a864131803e6354303cb7d7/view",
       "title": "Bldg 8, MAN shelter bldg1246, and 1337 Rectifier Replacement",
@@ -9022,7 +9022,7 @@
     },
     "SAM:68acc343a25b4ebd845d8302bf38f8f8": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/68acc343a25b4ebd845d8302bf38f8f8/view",
       "title": "Repair Airfield Manhole Damage Service,\u202fYokota Air Base, Japan.",
@@ -9038,7 +9038,7 @@
     },
     "SAM:e8726f19f7564255ae42ec531b32bfe3": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/e8726f19f7564255ae42ec531b32bfe3/view",
       "title": "Replace emergency and exit light fixtures at Camp Zama and Sagamihara Family Housing Area",
@@ -9046,7 +9046,7 @@
     },
     "SAM:3f7ee7e839564fe3a3bee35771c85470": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/3f7ee7e839564fe3a3bee35771c85470/view",
       "title": "UFR Dronebuster Tradein",
@@ -9062,7 +9062,7 @@
     },
     "SAM:dbba8bc9520647bfaf0790b363be15b4": {
       "first_seen_utc": "2026-06-02T04:06:33Z",
-      "last_seen_utc": "2026-06-02T04:06:33Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
       "status": "in-inbox",
       "url": "https://sam.gov/workspace/contract/opp/dbba8bc9520647bfaf0790b363be15b4/view",
       "title": "BDOC Upgrade for Yokota Air Base, Japan",
@@ -9219,6 +9219,182 @@
       "url": "https://sam.gov/workspace/contract/opp/f9959d1778db47f0bdd749df37916e7b/view",
       "title": "UTS Systems Tent",
       "final_score": 0.163
+    },
+    "SAM:adedf4beedac4c788e45f1987ca1d267": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/adedf4beedac4c788e45f1987ca1d267/view",
+      "title": "LPD-18 NO.4 POTABLE WATER PUMP MOTOR; REPAIR",
+      "final_score": 0.387
+    },
+    "SAM:8bf3faf05ccb490d99e99a74d3bae577": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/8bf3faf05ccb490d99e99a74d3bae577/view",
+      "title": "LPD-18 SPARE MPDE FUEL INJECTION PUMP; REPAIR",
+      "final_score": 0.387
+    },
+    "SAM:2a7f02dd48484566b47bddce08c63434": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/2a7f02dd48484566b47bddce08c63434/view",
+      "title": "LPD-18 RMT VLV OPR FOR VCHT-V-069, PWD-V-1477 AND PWD-V-1479; REPAIR",
+      "final_score": 0.387
+    },
+    "SAM:0ec414f6d6ee437098fd01dace169cf0": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/0ec414f6d6ee437098fd01dace169cf0/view",
+      "title": "LPD-18, ELECTRIC HEATER FOR STBD MRG/CPP LO SETTLING TANK (7-70-2- F); INSTALL",
+      "final_score": 0.173
+    },
+    "SAM:e8fab862846c4304bbe26ab41d5a3faa": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/e8fab862846c4304bbe26ab41d5a3faa/view",
+      "title": "USS RUSHMORE(LSD-47) WATER CONTROL VALVE;REPLACE",
+      "final_score": 0.173
+    },
+    "SAM:ad593c69844248508aa6a17f396241f7": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/ad593c69844248508aa6a17f396241f7/view",
+      "title": "USS RUSHMORE (LSD-47) 7C1 VEHICLE LASHING SOCKET IN WELL DECK; REPLACE",
+      "final_score": 0.173
+    },
+    "SAM:3ab9550730844258919ecd4e03b27cbb": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/3ab9550730844258919ecd4e03b27cbb/view",
+      "title": "Joint Region Marianas Wireless BPAs",
+      "final_score": 0.203
+    },
+    "SAM:0060dac71ad6488bbdf7be3e75d4aba2": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/0060dac71ad6488bbdf7be3e75d4aba2/view",
+      "title": "Joint Region Marianas Wireless BPAs",
+      "final_score": 0.143
+    },
+    "SAM:00559d1bfacd4149bc3ad05357d5e51a": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/00559d1bfacd4149bc3ad05357d5e51a/view",
+      "title": "MCM-9 BONDING STRAP FOR AN/ASC-69 (V) ANTENNA PEDESTAL; REPLACE",
+      "final_score": 0.173
+    },
+    "SAM:dcf5f2cc7be643e5853b48c6dd72840a": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/dcf5f2cc7be643e5853b48c6dd72840a/view",
+      "title": "RFI/SOURCES SOUGHT:  JBPHH Furnishings Management Office Appliance Repair and  Furnishings Drayage Support Services",
+      "final_score": 0.3
+    },
+    "SAM:fa4f57118d074b2eb4f4e6fb35c5481f": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/fa4f57118d074b2eb4f4e6fb35c5481f/view",
+      "title": "SeaPort CNSP - Readiness Assistance Training Team (RATT) Support",
+      "final_score": 0.453
+    },
+    "SAM:0a8caf3ee8164cda82b1e85ee41ef469": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/0a8caf3ee8164cda82b1e85ee41ef469/view",
+      "title": "Notice of Intent to Sole Source - Weapons Synthetic Training System",
+      "final_score": 0.423
+    },
+    "SAM:0e7fd192e2b449bda6ecbd8bb1246698": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/0e7fd192e2b449bda6ecbd8bb1246698/view",
+      "title": "USS ESSEX'S OEM Maintenance and Parts for the Anesthesia Units",
+      "final_score": 0.423
+    },
+    "SAM:cb88329f961c4fa8aa4f7c3b13731462": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/cb88329f961c4fa8aa4f7c3b13731462/view",
+      "title": "R408 - REGIONAL OPERATIONAL CENTER (ROC)  WATCHSTANDER SERVICES -",
+      "final_score": 0.333
+    },
+    "SAM:e7cc9bea8f6b4d52a5c3392f5dae4dd4": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/e7cc9bea8f6b4d52a5c3392f5dae4dd4/view",
+      "title": "Two (2) 2.5-Ton Forklift for Sagami General Depot, Japan.",
+      "final_score": 0.143
+    },
+    "SAM:943cd3b12f8449edb81c4210219ea806": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/943cd3b12f8449edb81c4210219ea806/view",
+      "title": "Rental of Portable Office and Generators Service in Kagoshima, Japan",
+      "final_score": 0.203
+    },
+    "SAM:378d7f47cacd4fcba86c7ac75f1fb5fc": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/378d7f47cacd4fcba86c7ac75f1fb5fc/view",
+      "title": "Procurement and Installation of netting to inside of building to prevent birds from nesting",
+      "final_score": 0.143
+    },
+    "SAM:36bb899db19a4eef900b664811186d9e": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/36bb899db19a4eef900b664811186d9e/view",
+      "title": "UTVS for Security Forces",
+      "final_score": 0.203
+    },
+    "SAM:22aa2f5327374f05867f69f19c18f852": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/22aa2f5327374f05867f69f19c18f852/view",
+      "title": "Power Inverters",
+      "final_score": 0.143
+    },
+    "SAM:520d1549cbe14507b133df71e4f537db": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/520d1549cbe14507b133df71e4f537db/view",
+      "title": "Rental Portable Latrines and Hand-Washing Station Service in Kagoshima, Japan",
+      "final_score": 0.203
+    },
+    "SAM:8fdca0e3b9734dd8a4e140e4517c9f32": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/8fdca0e3b9734dd8a4e140e4517c9f32/view",
+      "title": "Purchase of 2ea Generators with oil and filter change service at Kawakami Ammunition Depot, Hiroshima, Japan",
+      "final_score": 0.143
+    },
+    "SAM:b9cb97b0eb684cb2a43ee60c4d9d3d7c": {
+      "first_seen_utc": "2026-06-10T12:29:40Z",
+      "last_seen_utc": "2026-06-10T12:29:40Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/b9cb97b0eb684cb2a43ee60c4d9d3d7c/view",
+      "title": "CAIRS MIGRATION TO AIR FORCE STACK, BILLING, AND TRAINING AT YOKOTA AIR BASE, JAPAN",
+      "final_score": 0.351
     }
   }
 }

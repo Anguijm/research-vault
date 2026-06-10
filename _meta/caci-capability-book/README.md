@@ -1,6 +1,7 @@
 ---
 schema_version: 1
 last_full_update_utc: '2026-05-31T05:00:00Z'
+last_usaspending_refresh_utc: '2026-06-07'
 sessions_complete: 4
 ---
 
@@ -29,9 +30,9 @@ The relationship-lead category specifically requires the corporate capability bo
 | `business-fy25-overview.md` | FY25 10-K Business section | corporate context not specific to one capability area: Expertise+Technology frame, scale ($8.6B / 25K employees), customer mix, contract instruments, acquisition pace, CRADLE facility |
 | `growth-signals.md` | FY25 10-K MD&A + FY26 Q3 10-Q refresh | §0 has current-state (FY26 Q3): GFY26 DoD topline $838.7B, two shutdowns, ARKA closed, 78% DoD+IC concentration. §1-§7 preserved as FY25-baseline historical context. |
 | `acquisitions.md` | press releases (2023-2025) | five of seven recent CACI acquisitions identified by name; ARKA Group ($2.6B, FY26) flagged forward; two FY24 acquisitions still unnamed |
-| `vehicles.md` | caci.com/contracts | eight IDIQs + six GSA Schedules with contract numbers and PoP dates; **DTIC IAC MAC (FA807518D0006)** = operator-team's vehicle, recompetes 2027-09-29; vehicle-to-capability-area mapping |
+| `vehicles.md` | caci.com/contracts + USAspending (2026-06-07) | eight IDIQs + six GSA Schedules; **DTIC IAC MAC (FA807518D0006)** = operator-team's vehicle (recompete 2027-09-29); §1.1 = its full 12-task-order family (Navy-heavy); §5 = the 16 USAspending-observed vehicles, all now resolved to office + IDIQ scope; vehicle-to-capability-area mapping |
 | `source-ledger.md` | — | citation index; every claim in any other file references an entry here |
-| `past-performance/top-25-by-amount.md` | USAspending top-25 CACI awards (FY19-FY26, sorted by amount) | concrete past-performance citations with PIIDs, parent IDVs, periods; cross-referenced to capability areas; **EH02 SHIP DESIGN SERVICES** confirms naval-architecture past performance for operator-team relevance |
+| `past-performance/top-25-by-amount.md` | USAspending top-50 CACI awards (FY19-FY26, refreshed 2026-06-07) | past-performance citations with PIIDs, **real obligated amounts**, resolved parent IDVs; now top-48 (Acacia false-positives excluded); a ~$1.11B **SeaPort-e Navy cluster** (Ship Design, Naval Forces Logistics, Navy PM) is the most operator-relevant block — successor vehicle SeaPort NxG is in vehicles.md §2 |
 
 ## The capability taxonomy (one-line summary per area)
 
@@ -66,16 +67,28 @@ AI is positioned as a cross-cutting sub-capability of every area, not a standalo
 - Named-entity discipline: contractor / product / person names appear here ONLY when the cited source surfaces them.
 - All capability area names use CACI's own wording from the source, not paraphrased.
 
+## Data sources — the shared USAspending client (added 2026-06-07)
+
+The award-derived sections of this book (`vehicles.md §5`, `past-performance/`) now draw from **live, programmatic USAspending access via `_scripts/lib/usaspending.py`** — the *same client the opportunity-discovery pipeline uses*. This means a USAspending finding in an opportunity track automatically uses the same authoritative records that feed the capability book, and a capability-book refresh is now a script run rather than a deferred manual pass. The endpoints in use: `spending_by_award` (search), `awards/{id}` (per-award detail / offices), and `idvs/awards` (task-order family under an IDV). Refreshes follow the same FACT/Assessment labeling, source-ledger citation, and named-entity discipline as the rest of the book; see `source-ledger.md → caci-usaspending-refresh-2026-06-07`.
+
 ## Future refresh cadence
 
 - **Annual**: refresh after each new CACI 10-K filing (typically August each year for fiscal year ending June 30).
-- **Quarterly**: optional refresh from 10-Q filings for growth-signal drift.
-- **Event-driven**: refresh acquisitions.md when CACI announces an M&A transaction.
+- **Quarterly**: optional refresh from 10-Q filings for growth-signal drift — and now a cheap programmatic USAspending re-pull (top-N awards, vehicle families) since the client is live.
+- **Event-driven**: refresh acquisitions.md when CACI announces an M&A transaction; refresh `vehicles.md §1.1` (DTIC IAC MAC family) when a new task order posts under the team's vehicle.
 
 ## Known research gaps
 
+Closed in the 2026-06-07 USAspending refresh:
+- ~~USAspending top-50 awards detail~~ → done (`past-performance/`, now top-48 with real dollar amounts; the prior null-amount ranking is superseded).
+- ~~Identify the 14 USAspending-observed vehicles in vehicles.md §5~~ → all 16 resolved to office + IDIQ scope (Alliant 1, DISA Encore II, DLA DCSO franchise, AF EITAAS/AFSC/Kessel Run, SOCOM SITEC, DHS, DOI IBC).
+- ~~What else rides DTIC IAC MAC (FA807518D0006)~~ → full 12-task-order family pulled (`vehicles.md §1.1`); the team's vehicle carries ~$455M of Navy engineering (NavalX, NUWC, MSC shipyard QA, Navy Reserve).
+
+Still open:
 - Two FY24 acquisitions remain unnamed; deeper press-release pass needed (acquisitions.md §4).
-- The specific IAC under DTIC IAC MAC that the operator-team's task order falls under (vehicles.md §5).
-- The sponsoring agency for the operator-team's specific task order vs. the administering AF contracting office.
+- **RESOLVED 2026-06-07 (operator-confirmed):** the operator-team's specific task order is **FA807522F0054** under DTIC IAC MAC — sponsored by **MSC N7 (Engineering Directorate)**, scope "Design, Maintenance, Quality, Extension Engineering, and Shipyard Quality Assurance," administered by AF 774 ESS, funded by Military Sealift Command. Note: that one TO spans multiple non-overlapping contingents — the operator's team does USS repair support at SRF-JRMC (Japan), while a separate worldwide contingent on the same TO does USNS shipyard-QA at MSC ship availabilities. (Still open: the specific DTIC IAC the TO falls under, and the contracting mechanism by which an MSC-funded TO also covers USS/SRF-JRMC work.)
 - CRADLE facility location (CONUS or also Pacific).
-- USAspending top-50 awards detail (deferred to future Session 4 follow-up — would benefit from the IDV-family pull Gemini recommended in the slice-plan red-team).
+- CACI Premier Technology and CACI-Athena subsidiary portfolios (surfaced in past-performance, not yet documented).
+
+Closed in the 2026-06-07 office pass:
+- ~~Per-award awarding/funding office across the 48 top awards~~ → done (`past-performance §2.1`): resolved the GSA-FEDSIM administering-vs-funding split and CACI's NAVSEA / submarine-enterprise / NAVWAR Navy customer cluster.

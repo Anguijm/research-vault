@@ -21,7 +21,7 @@ The earlier operator statement that "I'm not trying to team with Swarmic" should
 
 1. **Don't make negative claims about teaming** in customer-facing artifacts. Don't write "not a teaming arrangement" or "SRF doesn't team with SWRMC." Both could be wrong in the future, and both put a negative cast on a relationship the operator values.
 
-2. **Describe the immediate work** without ruling out the long-term shape of the relationship. "Connect Amanda Keach with SWRMC for knowledge sharing on advanced manufacturing" is enough — don't add "not a teaming arrangement" as a qualifier.
+2. **Describe the immediate work** without ruling out the long-term shape of the relationship. "Connect Amanda Keech with SWRMC for knowledge sharing on advanced manufacturing" is enough — don't add "not a teaming arrangement" as a qualifier.
 
 3. **When the operator says they want to avoid duplicating SWRMC's work,** read that as "the immediate value is knowledge transfer," not "we'll never team."
 

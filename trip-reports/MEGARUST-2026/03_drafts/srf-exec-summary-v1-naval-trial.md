@@ -115,7 +115,7 @@ Encl: (1) Action Items List
 
     d.  Mark Ingle's office (NAVSEA 05P2). Coatings technical authority for any SRF-JRMC question on coating specs.
 
-    e.  John Robinson's office (SWRMC Executive Director). ED-level entry point for two distinct SRF conversations: getting Amanda Keach (SRF-JRMC AM Program Manager) connected with SWRMC on advanced manufacturing, and opening the expeditionary maintenance container conversation.
+    e.  John Robinson's office (SWRMC Executive Director). ED-level entry point for two distinct SRF conversations: getting Amanda Keech (SRF-JRMC AM Program Manager) connected with SWRMC on advanced manufacturing, and opening the expeditionary maintenance container conversation.
 
 J. M. ANGUIANO
 Contract Analyst
@@ -138,6 +138,6 @@ ACTION ITEMS LIST
 
 6.  Chase James Holman on the ST-1 Japan POC name. I asked him in person at MegaRust; he offered to look it up from his shared drive. I will follow up through the SURFMEPP / ST-1 SharePoint ticket pathway he described.
 
-7.  Connect Amanda Keach (SRF-JRMC AM Program Manager) with SWRMC for knowledge-sharing on advanced manufacturing. SWRMC is further along on the CNC + AM + reverse engineering work than SRF is — Robinson called reverse engineering the Achilles heel of his program but is months into commissioning a DMG MORI laser-deposit machine and has worked through real production examples (gate valve seat build-up, shaft coupling bolt reverse engineering, bridge crane motor mapping). Goal is for Amanda to learn what SWRMC has figured out so she can build SRF's program without duplicating their work.
+7.  Connect Amanda Keech (SRF-JRMC AM Program Manager) with SWRMC for knowledge-sharing on advanced manufacturing. SWRMC is further along on the CNC + AM + reverse engineering work than SRF is — Robinson called reverse engineering the Achilles heel of his program but is months into commissioning a DMG MORI laser-deposit machine and has worked through real production examples (gate valve seat build-up, shaft coupling bolt reverse engineering, bridge crane motor mapping). Goal is for Amanda to learn what SWRMC has figured out so she can build SRF's program without duplicating their work.
 
 8.  Figure out how SRF-JRMC's role in SWRMC's Pacific expeditionary maintenance container program is organized — and decide on engagement from there. Robinson named SRF Japan as the Area Maintenance Commander in the Western Pacific, with SWRMC project teams coordinating through that role on the container deployments. The division of labor between the two commands on the container mission and the related Battle Damage Exercises (BDX) is not visible from Robinson's keynote. Conversations with the SRF wartime-readiness group and the SRF chief engineer should clarify the SRF posture. SWRMC has worked through substantial operational realities — US-Freon-can't-go-overseas, calibration gases that cannot move by airfreight, broader airfreight-restricted contents — and getting visibility into what they have figured out is worth pursuing regardless of how the work ends up divided.

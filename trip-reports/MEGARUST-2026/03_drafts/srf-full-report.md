@@ -229,7 +229,7 @@ The named machine is a **DMG MORI** laser-deposit additive manufacturing system,
 2. **Shaft coupling bolts** — exotic, not readily available; sometimes the ship is docked and the bolts are missing. SWRMC reverse-engineered them, made plastic models, now producing experimental versions on CNC.
 3. **Bridge crane motor on an amphib** — crane down for an extended period. OEM said the motor was replaced by a different model with different mounting hole pattern. Reverse engineers mapped existing and new motor footprints on-site and produced a "drill here, drill there" plan instead of building a new foundation.
 
-Robinson's named reverse-engineering gap is a direct fit for Amanda Keach (SRF-JRMC AM Program Manager). See §11 for the action item.
+Robinson's named reverse-engineering gap is a direct fit for Amanda Keech (SRF-JRMC AM Program Manager). See §11 for the action item.
 
 ---
 
@@ -342,7 +342,7 @@ These are relationship-building suggestions, not bid recommendations. SRF leader
 
 - **Mark Ingle's office (NAVSEA 05P2).** Ingle is the coatings technical authority for any SRF-JRMC question on coating specs.
 
-- **John Robinson's office (SWRMC Executive Director).** Robinson is the right ED-level entry point for two distinct SRF conversations: getting Amanda Keach (your AM Program Manager) connected to SWRMC on reverse-engineering work, and opening the expeditionary maintenance container conversation as a possible SRF initiative.
+- **John Robinson's office (SWRMC Executive Director).** Robinson is the right ED-level entry point for two distinct SRF conversations: getting Amanda Keech (your AM Program Manager) connected to SWRMC on reverse-engineering work, and opening the expeditionary maintenance container conversation as a possible SRF initiative.
 
 ---
 
@@ -362,6 +362,6 @@ These are the things I'm following up on after the trip.
 
 6. **Chase James Holman on the ST-1 Japan POC name.** I asked him in person at MegaRust; he offered to look it up from his shared drive. I'll follow up through the SURFMEPP / ST-1 SharePoint ticket pathway he described.
 
-7. **Connect Amanda Keach (SRF-JRMC AM Program Manager) with SWRMC for knowledge-sharing on advanced manufacturing.** SWRMC is further along on the CNC + AM + reverse engineering work than SRF is — Robinson called reverse engineering the Achilles heel of his program but is months into commissioning a DMG MORI laser-deposit machine and has worked through real production examples (gate valve seat build-up, shaft coupling bolt reverse engineering, bridge crane motor mapping). Goal is for Amanda to learn what SWRMC has figured out so she can build SRF's program without duplicating their work.
+7. **Connect Amanda Keech (SRF-JRMC AM Program Manager) with SWRMC for knowledge-sharing on advanced manufacturing.** SWRMC is further along on the CNC + AM + reverse engineering work than SRF is — Robinson called reverse engineering the Achilles heel of his program but is months into commissioning a DMG MORI laser-deposit machine and has worked through real production examples (gate valve seat build-up, shaft coupling bolt reverse engineering, bridge crane motor mapping). Goal is for Amanda to learn what SWRMC has figured out so she can build SRF's program without duplicating their work.
 
 8. **Figure out how SRF-JRMC's role in SWRMC's Pacific expeditionary maintenance container program is organized — and decide on engagement from there.** Robinson named SRF Japan as the Area Maintenance Commander in the Western Pacific, with SWRMC project teams coordinating through that role on the container deployments. The division of labor between the two commands on the container mission and the related Battle Damage Exercises (BDX) isn't visible from Robinson's keynote. Conversations with the SRF wartime-readiness group and the SRF chief engineer should clarify the SRF posture. SWRMC has worked through substantial operational realities — the US-Freon-can't-go-overseas issue, calibration gases for gas-free devices that can't move by airfreight, broader airfreight-restricted contents — and getting visibility into what they've figured out is worth pursuing regardless of how the work ends up divided.

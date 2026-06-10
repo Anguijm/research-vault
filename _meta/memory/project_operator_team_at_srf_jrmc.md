@@ -8,7 +8,7 @@ The operator (J. Anguiano) at SRF-JRMC has named direct-report or SME relationsh
 
 ## Named team members
 
-- **Amanda Keach (Mandy)** — Advanced Manufacturing (AM) Program Manager at SRF-JRMC. Works for the operator directly. Operator-confirmed 2026-06-05 as the natural counterpart for SWRMC's reverse-engineering / advanced-manufacturing portfolio (clip 10 of MegaRust 2026 trip report). When AM, additive manufacturing, reverse engineering, or related topics surface at SRF level, Amanda is the right name to put forward.
+- **Amanda Keech (Mandy)** — Advanced Manufacturing (AM) Program Manager at SRF-JRMC. Works for the operator directly. Operator-confirmed 2026-06-05 as the natural counterpart for SWRMC's reverse-engineering / advanced-manufacturing portfolio (clip 10 of MegaRust 2026 trip report). When AM, additive manufacturing, reverse engineering, or related topics surface at SRF level, Amanda is the right name to put forward.
 
 ## Capture rule
 

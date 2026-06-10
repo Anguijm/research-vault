@@ -167,6 +167,15 @@ Files in the capability book reference these slugs inline (e.g.,
 - Sections used: PIID (Award ID), Recipient Name, Description, Period (Start/End Date), Place of Performance State, Parent IDV (extracted from `generated_internal_id`-derived URL)
 - Notes: Query filters: `recipient_search_text=CACI` (substring match), `time_period=[2019-06-02 → 2026-05-31]`, `award_type_codes=[A,B,C,D]` (contracts), `sort=Award Amount desc`, limit=50. After substring filter for "CACI"-prefix recipients (to avoid Acacia-family false positives), 48 results remained; top 25 captured. **Caveat**: Award Amount field returned null/empty for all 25 records — USAspending's spending_by_award endpoint does not populate the amount column for the queried fields list. Awarding Agency / Funding Agency fields also empty. PIID, recipient, description, place of performance, dates, and parent IDV (from URL path) are all reliable. Resolving dollar amounts requires per-award detail calls against `awards/{generated_id}/` endpoint — deferred unless material.
 
+### caci-usaspending-refresh-2026-06-07
+
+- URL: USAspending API (`/api/v2/search/spending_by_award/`, `/api/v2/awards/{id}/`, `/api/v2/idvs/awards/`) queried via `_scripts/lib/usaspending.py`
+- Fetched: 2026-06-07
+- Source-type: usaspending-award / IDV (API queries, multiple results)
+- Title: CACI capability-book USAspending refresh — §5 vehicle resolution, DTIC IAC MAC task-order family, and top-50 awards with dollar amounts
+- Sections used: (1) per-PIID IDV lookups resolving the 16 USAspending-observed vehicles in `vehicles.md §5` to office + IDIQ scope; (2) child-award pull on IDV `CONT_IDV_FA807518D0006_9700` (DTIC IAC MAC) returning its 12 task orders with obligated amounts; (3) `recipient_search_text=CACI`, contracts (A–D), 2019-06→2026-06, sorted by Award Amount desc, top 50 with real obligation figures and parent IDVs.
+- Notes: This pass closes the deferred items flagged in `caci-usaspending-top25-2026-05-31` and the README known-gaps. **Dollar amounts now populate correctly** (the 2026-05-31 pass returned null amounts, so that pass's ordinal "by amount" ranking was unreliable — superseded here). Award Amount values here are obligated amounts from the `spending_by_award` search; per-award detail confirms awarding/funding offices where cited. Performed with the now-live programmatic USAspending access (the same client the opportunity pipeline uses).
+
 ### caci-contracts-page-2026-05-31
 
 - URL: https://www.caci.com/contracts

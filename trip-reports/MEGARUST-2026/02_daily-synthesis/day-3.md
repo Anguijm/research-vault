@@ -73,7 +73,7 @@ Three example projects Robinson cited:
 2. **Shaft coupling bolts** — exotic, hard to find, sometimes the ship is docked and the bolts are unavailable. Reverse-engineered, plastic models made, CNC production underway.
 3. **Bridge crane motor on an amphib** — OEM motor replaced by new model with different mounting hole pattern. Reverse engineers mapped existing and new motor footprints on-site and produced a drill-here-drill-there plan instead of building a new foundation.
 
-**This is the direct hook for Amanda Keach (SRF-JRMC AM Program Manager) to engage with SWRMC at the ED level on reverse engineering** — operator's "when I get home" item 5 in `srf-full-report.md` §8.
+**This is the direct hook for Amanda Keech (SRF-JRMC AM Program Manager) to engage with SWRMC at the ED level on reverse engineering** — operator's "when I get home" item 5 in `srf-full-report.md` §8.
 
 (Source: clip 10.)
 
@@ -131,7 +131,7 @@ Day 3 is a single-session day, so the analytical content is mostly about how Day
 
 - **SIMA San Diego is a new structural touchpoint.** Capt Bill Albert (CO) and Capt Carl Brandel (training department head) are new named contacts for any SRF engagement on intermediate-maintenance topics with SWRMC's Pacific-Fleet counterpart. The operator's existing direct relationship with SWRMC is unaffected; the SIMA leadership is the new face on the Code-900 mission set.
 
-- **Advanced manufacturing / reverse engineering Achilles heel.** Robinson's named gap is a direct fit for SRF-JRMC's AM Program Manager (Amanda Keach) — operator's `srf-full-report.md` §8 item 5.
+- **Advanced manufacturing / reverse engineering Achilles heel.** Robinson's named gap is a direct fit for SRF-JRMC's AM Program Manager (Amanda Keech) — operator's `srf-full-report.md` §8 item 5.
 
 - **Dr. Foley innovation/innovative-manufacturing pitch posture.** Foley is actively pitching new capability to RMCs at MegaRust. Operator is following up directly — `srf-full-report.md` §8 item 3.
 
@@ -139,7 +139,7 @@ Day 3 is a single-session day, so the analytical content is mostly about how Day
 
 - **SIMA San Diego stand-up is a structural reorganization of Code 900 functions.** New contracting touchpoints at SIMA over the 2026-2029 transition window. Worth tracking when the SIMA contracting office is named.
 
-- **SWRMC's reverse-engineering gap is real and named.** Robinson called it the Achilles heel of his AM program. If CACI ever has a capability to bring engineers with proper reverse-engineering tooling to a Navy maintenance organization, the timing is favorable. (Operator's Amanda Keach engagement via SRF is the SRF-side play; the CACI-side play would be different.)
+- **SWRMC's reverse-engineering gap is real and named.** Robinson called it the Achilles heel of his AM program. If CACI ever has a capability to bring engineers with proper reverse-engineering tooling to a Navy maintenance organization, the timing is favorable. (Operator's Amanda Keech engagement via SRF is the SRF-side play; the CACI-side play would be different.)
 
 - **Pat McDermott is the named driver of the expeditionary maintenance container program.** Worth tracking for any CACI BD posture touching Pacific battle-damage-repair pre-staging or surface-ship-maintenance-technology adoption under §345.
 
@@ -174,7 +174,7 @@ The BDR research file may want to incorporate the Robinson keynote as a primary-
 
 **Moved to operator's "when I get home" notes (see `srf-full-report.md` §8):**
 
-- Amanda Keach engagement with SWRMC ED (Robinson) for AM reverse engineering — new from Day 3.
+- Amanda Keech engagement with SWRMC ED (Robinson) for AM reverse engineering — new from Day 3.
 - BDR-relevant expeditionary maintenance container conversation at SWRMC ED level, plus internal SRF wartime-readiness-group and chief-engineer discussion — new from Day 3.
 - Jeff Apt (Edify) follow-up on wet NDI — Day-2 carryover.
 - Dr. Foley follow-up on innovation and innovative manufacturing — Day-3 update of an earlier Day-1 contact.
@@ -195,7 +195,7 @@ This is the last day of MegaRust 2026 trip-report source ingestion (the operator
    - The Foley-Robinson interaction confirming Composite Work Cell deployment to SWRMC during MegaRust week (cross-cutting item — affects both SRF "when I get home" §8 and the broader CACI/SRF program-tracking).
    - The SIMA San Diego stand-up as a new structural element in the NAVSEA / RMC organization.
    - The expeditionary maintenance container program as a BDR-adjacent operational mission where SRF Japan is named as the Area Maintenance Commander; division of labor between SWRMC and SRF-JRMC TBD.
-   - The advanced-manufacturing reverse-engineering gap as a specific Amanda-Keach engagement opportunity.
+   - The advanced-manufacturing reverse-engineering gap as a specific Amanda-Keech engagement opportunity.
 2. **Operator-side personal follow-ups** are in `srf-full-report.md` §8 — six items now, two carryovers from Days 1-2 plus four new from Day 3.
 
 ## Document scope

@@ -1,0 +1,21 @@
+# Operator-confirmed entities for the HANWHAOCEAN-DOD research track.
+#
+# Entities listed here are excluded from the audit_named_entities and
+# audit_search_config "contaminated" bucket because they are legitimately
+# part of this research's analytical context even when no ingested source
+# has surfaced them yet.
+#
+# Allowlisting a name DOES NOT make claims about it FACT — verify_facts.py
+# still checks specific claims against specific sources. The allowlist only
+# resolves the entity-presence audit.
+#
+# Format: entity name (case-sensitive, matching the watchlist) as the key,
+# reason as the value.
+
+allowlist:
+  CACI: The operator's company. Baseline reference for any opportunity in this vault. Does not require an ingested source to appear in analytical content.
+
+# NOTE (2026-06-07): "Vigor" surfaced source-only in this track (appeared in an
+# ingested source, not yet written into analysis). It is intentionally NOT
+# allowlisted — if it ever enters analytical content it must carry its source
+# citation, per the named-entity discipline.
