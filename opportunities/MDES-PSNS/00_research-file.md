@@ -150,20 +150,22 @@ PWS allows, and base-IDIQ ceiling values were not retrievable via the award API.
   point that internal/subcontract submarine-design work may not surface publicly. The
   baseline is thresholded (drops categories under ~2% of awards), so it is **too
   coarse to rule out** marine-design past performance — directional, not a verdict.
-- **Web-confirmed (2026-06-11): CACI has directly analogous submarine-modernization
-  planning/engineering past performance.** CACI holds a U.S. Navy task order at
-  **Portsmouth Naval Shipyard (PNS), Maine** — >$83M, one base + four option years —
-  providing engineering, technical, and **planning** support to the **Ships
+- **FACT (federal award data, pulled 2026-06-11 [s.2026-06-11-caci-seaport-pns-pastperf]):
+  CACI has directly relevant submarine-engineering past performance.** CACI holds the
+  Navy's **SeaPort-NxG** professional-services IDIQ (IDV **N0017819D7295**, awarded by
+  NSWC Dahlgren, 2019–2029) and rides it for a continuous line of **Portsmouth Naval
+  Shipyard** engineering-support task orders: **$74.5M** (2020–2025, N3904020F3000) and
+  an **$18.1M** current follow-on (2025–2030, N3904025F3001), with a 2017 predecessor
+  (N3904017F3000, on SeaPort-e) whose statement of work names support to the **Ships
   Availability Planning and Engineering Center (SHAPEC)** and the **Deep Submergence
-  Systems Program (DSSP)** for the maintenance and repair of **submarines**, on the
-  **SeaPort-NxG** vehicle; CACI built SHAPEC's planning tool, SPEAR
-  [s.2026-06-11-caci-pns-task-order]. CACI also runs a naval-architecture /
-  marine-engineering practice and does ship design to SEA 05D standards
-  [s.2026-06-11-caci-ship-engineering]. **Assessment:** Portsmouth is the East-Coast
-  submarine overhaul shipyard — a direct analogue to PSNS — so this is strong,
-  relevant past performance for the PSNS planning-yard / engineering IDIQ. Trade
-  reports describe related/follow-on CACI ship-and-submarine engineering awards
-  (~$145M, ~$85M) not independently fetched here (a source 403-blocked).
+  Systems Program (DSSP)** verbatim. **All are NAICS 541330 (Engineering Services) — the
+  exact code of this opportunity.** CACI also runs a naval-architecture / marine-
+  engineering practice and does ship design to SEA 05D standards
+  [s.2026-06-11-caci-ship-engineering]; trade press adds that CACI built SHAPEC's SPEAR
+  planning tool [s.2026-06-11-caci-pns-task-order]. **Assessment:** Portsmouth is the
+  East-Coast submarine overhaul shipyard, the direct analogue to PSNS — so this is now
+  **primary-sourced, directly-relevant** past performance (same NAICS, same submarine-
+  availability-planning mission), upgraded from the earlier trade-press-only basis.
 - [ ] **Targeted query (still open).** Direct PIID lookups of the three incumbent
       contracts (N4523A-19-D-1301/1302/1303) for award values; deeper pull for the
       *term-level* drawing-production scope (SIDs, TWDs, ship checks). Gaps handed to
@@ -176,10 +178,10 @@ Rating = strength of **public** evidence; internal past performance may be stron
 
 | PWS discriminator | CACI fit | Basis |
 |---|---|---|
-| Submarine-modernization engineering & **planning** | Strong (analogous) | Portsmouth NS SHAPEC/DSSP submarine task order [s.2026-06-11-caci-pns-task-order] |
+| Submarine-modernization engineering & **planning** | **Strong (primary-sourced)** | Portsmouth NS SHAPEC/DSSP task orders on SeaPort-NxG [s.2026-06-11-caci-seaport-pns-pastperf] |
 | Ship / marine design | Moderate–strong | SEA 05D concept/feasibility design; naval-architect practice [s.2026-06-11-caci-ship-engineering] |
 | Kitsap County local presence | **Confirmed** | Silverdale, WA office [s.2026-06-11-caci-jobs-silverdale] |
-| NAICS 541330 engineering services | Present | CACI baseline footprint (§6.1 first cut) |
+| NAICS 541330 engineering services | **Confirmed — exact-code match** | CACI's Portsmouth task orders are NAICS 541330 [s.2026-06-11-caci-seaport-pns-pastperf] |
 | SIDs / TWDs / ship checks (exact PWS terms) | **Unconfirmed** | Not yet sourced at the term level — internal-PP check / deeper pull |
 | Drawing production at PSNS specifically | Unconfirmed | Portsmouth past performance is analogous, not PSNS-specific |
 
@@ -230,6 +232,7 @@ local presence is a confirmed CACI strength, not a risk.)
 - [s.2026-06-11-caci-ship-engineering] caci.com — CACI Ship Engineering capability page (ship design per SEA 05D; shipyard engineer embedding; buyer's agent on DDG/LPD/LCS). https://www.caci.com/ship-engineering (tier 2, company)
 - [s.2026-06-11-caci-pns-task-order] naval-technology.com — CACI Portsmouth Naval Shipyard task order (>$83M, base + 4 options; SHAPEC + Deep Submergence Systems Program submarine maintenance/repair; SeaPort-NxG vehicle; SPEAR tool). https://www.naval-technology.com/news/caci-support-portsmouth-naval-shipyard/ (tier 4 trade press)
 - [s.2026-06-11-usaspending-n4523a-incumbents] usaspending.gov API — task-order obligations under the N4523A (PSNS) contracting line for Tridentis LLC (26 TOs, ~$13.7M), Gryphon Marine LLC (2, ~$0.34M), and Huntington Ingalls / HII Fleet Support Group LLC (11, ~$20.6M), WA place-of-performance, 2018–2026; pulled 2026-06-11 via `_scripts/lib/usaspending.py`. (tier 1, federal award data)
+- [s.2026-06-11-caci-seaport-pns-pastperf] usaspending.gov — CACI SeaPort-NxG IDV (N0017819D7295) + Portsmouth NS engineering task orders (N3904025F3001, N3904020F3000, N3904017F3000) supporting SHAPEC/DSSP, NAICS 541330; pulled 2026-06-11 → `01_sources/2026-06-11_usaspending_caci-seaport-nxg-pns-pastperf.md` (tier 1, federal award data — validates the Portsmouth past-performance claim)
 
 ## 9. Verification flags
 
@@ -248,8 +251,12 @@ local presence is a confirmed CACI strength, not a risk.)
   selected-record-drawing updates" — but a direct fetch of that page did **not**
   corroborate those specific terms. Only the directly-fetched page content is cited;
   the SIDs/TWDs/ship-checks term-level match for CACI remains unconfirmed.
-- **Related CACI submarine-engineering awards (~$145M Dec 2025, ~$85M Mar 2026) are
-  reported by trade press but not independently fetched** (one source 403-blocked).
-  The Portsmouth >$83M SHAPEC/DSSP task order is the verified anchor.
-- **Portsmouth past performance is analogous, not PSNS-specific** — relevant, but not
-  proof of CACI work at PSNS itself.
+- **RESOLVED (2026-06-11):** the Portsmouth SHAPEC/DSSP past performance is now
+  validated against federal award data [s.2026-06-11-caci-seaport-pns-pastperf] — the
+  SeaPort-NxG vehicle (N0017819D7295), the task orders, the SHAPEC/DSSP statement-of-work
+  language, and the NAICS 541330 match are all primary-sourced. The trade-press ~$145M /
+  ~$85M figures remain un-fetched, but they are no longer load-bearing — the task-order
+  obligations ($74.5M + $18.1M + $16.3M) are confirmed directly.
+- **Portsmouth past performance is at a peer shipyard, not PSNS itself** — directly
+  relevant (same NAICS, same submarine-availability-planning mission) but not proof of
+  CACI work at Puget Sound specifically.

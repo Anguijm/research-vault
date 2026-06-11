@@ -106,3 +106,28 @@ confirmed Portsmouth work is analogous, and the exact-term match is unverified u
 the operator's internal check.
 
 ---
+
+### 2026-06-11 — Portsmouth / SeaPort-NxG past performance validated against federal award data
+
+**By:** operator directed pulling the SeaPort award + tasking into the vault to validate the claims; Claude queried USAspending and ingested.
+
+**What changed:** the Portsmouth submarine-engineering past performance — previously
+trade-press only — is now **primary-sourced** [s.2026-06-11-caci-seaport-pns-pastperf].
+Confirmed: CACI holds the **SeaPort-NxG** IDV (N0017819D7295, NSWC Dahlgren, 2019–2029);
+rides it for **Portsmouth Naval Shipyard** engineering-support task orders ($74.5M
+2020–2025 N3904020F3000; $18.1M 2025–2030 follow-on N3904025F3001; $16.3M 2017–2020
+predecessor N3904017F3000); the 2017 order's statement of work names **SHAPEC and DSSP
+verbatim**; **NAICS 541330 — the exact code of this opportunity.** New source file added
+to `01_sources/`; research file §6.1 / §6.2 / §8 / §9 upgraded from analogous →
+primary-sourced; "HII" allowlisted (acronym of the sourced incumbent and its performing
+subsidiary "HII Fleet Support Group LLC"). Named-entity audit: PASS.
+
+**Significance:** the load-bearing falsifier (submarine-design past performance) is now
+retired on public, citable evidence — and it's an **exact-NAICS** match, not merely
+analogous. The remaining gaps are term-level shipcheck/SID/TWD work and PSNS-specific
+(vs. Portsmouth) performance, both internal-PP items.
+
+**Next:** these are public, releasable facts — they can backfill the RFI response Q2
+(experience) and frame Q12–16. Operator's call on what enters the customer submission.
+
+---

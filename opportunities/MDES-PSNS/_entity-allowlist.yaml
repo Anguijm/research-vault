@@ -12,6 +12,7 @@
 
 allowlist:
   CACI: The operator's company. Baseline reference for any opportunity in this vault. Does not require an ingested source to appear in analytical content.
+  HII: Standard acronym for Huntington Ingalls Industries — a named predecessor incumbent, sourced in the PWS [s.2026-06-11-mdes-pws] — and the legal name of its performing subsidiary "HII Fleet Support Group LLC" seen in federal award data. The acronym of an already-sourced entity, not a new introduction.
 
 # NOTE (2026-06-11): Tridentis, Gryphon Marine, and Huntington Ingalls Industries
 # are the three named predecessor-contract incumbents. They surfaced
