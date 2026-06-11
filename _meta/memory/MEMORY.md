@@ -28,3 +28,4 @@
 - [Fetching 403-blocked domains](reference_fetching_403_blocked_domains.md) — .mil/USNI hard-block ingest.py/WebFetch/curl; use headed Playwright (venv, DISPLAY=:1, stealth); USAspending via lib/usaspending.py API client, not site-scraping
 - [Team is USS/RMC, not USNS/MSC](project_team_uss_rmc_vs_usns_msc.md) — operator team at SRF-JRMC does USS warship repair; Hanwha research is USNS/MSC; do not conflate; USNS/Hanwha is CACI-corporate relationship-lead, USS/RMC is the team direct-execute lane
 - [SRFSG review speaker count](project_srfsg_speaker_count_ground_truth.md) — ~13 distinct voices total across both Day-1 clips, a couple spoke very little; calibrates diarization, the unified cross-clip run is the comparable count
+- [Keep draft versions](feedback_keep_draft_versions.md) — operator values draft lineage; keep every version (v0.1, v0.2, …), never prune to de-clutter
