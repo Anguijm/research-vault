@@ -26,3 +26,23 @@ The operator is attending MegaRust 2026 in person and capturing audio of the NSR
 - Audio transcription mechanism — test with first clip
 - Whether to wire any of this through the existing `build_brief.py` for .docx output if formal formatting is needed for distribution
 - Whether to add an SRF-JRMC-specific entity allowlist for this trip if many SRF / NSRP / coatings-industry entities surface (named-entity discipline applies)
+
+---
+
+## 2026-06-12 — Trip-report workflow codified
+
+The trip-report pattern (run ad-hoc for MegaRust and SRFSG) is now codified at
+`_meta/trip-report-workflow.md`, with a reusable structured-report template at
+`_templates/trip-report.md`. The template adopts the disciplined section structure
+evaluated from an external proposal — TL;DR as non-obvious takeaways, per-session blocks
+with cited claims + verbatim quotes + affect signals, cross-cutting themes, action items
+with provenance, confidence notes — adapted to the vault's provenance: cites are
+`[<ledger-slug> @ mm:ss]` resolving to the local `.transcript.named.md`; Key claims are
+FACT-of-speech, interpretive sections are labeled Assessment; quotes are verbatim from the
+local transcript. The structured report sits in `02_synthesis/` as the audience-agnostic
+base from which the `03_drafts/` audience artifacts derive.
+
+**Engine unchanged:** local faster-whisper + pyannote stays the default; no capture audio
+goes to the cloud. Two future phases are decided but NOT built — P2 slide OCR via Gemini
+vision (slide images only, never audio); P3 an optional sensitivity-gated Gemini audio
+fast-path for public events only, with the local pipeline as the default.

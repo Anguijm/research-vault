@@ -47,7 +47,7 @@ trip-reports/MEGARUST-2026/
 1. **Audio comes in.** Operator drops M4A clips into `audio/`. Each clip is one session — typically 10 minutes to an hour.
 2. **Transcribe per-session.** Each clip → a markdown source file in `01_sources/` named `<YYYY-MM-DD>_<session-slug>.md`. Format follows the per-session template (see below).
 3. **Cross-reference inline during transcription.** As panelists name programs / NAICS / companies / customer orgs / CACI capability areas, the source file flags the cross-reference (e.g., "panelist mentioned NSRP SCP work on X — maps to capability area Y in `_meta/caci-capability-book/`"). This is what makes the trip report capture-relevant rather than just notes.
-4. **Daily synthesis at end of day.** Pull the day's sources into a `02_daily-synthesis/day-N.md` file. Don't wait until Day 3 to start writing.
+4. **Daily synthesis at end of day.** Pull the day's sources into a `02_daily-synthesis/day-N.md` file. Don't wait until Day 3 to start writing. The consolidated, audience-agnostic structured report uses `_templates/trip-report.md` (see the codified `_meta/trip-report-workflow.md`).
 5. **Final artifacts after Day 3.** Use the daily syntheses to populate the four drafts in `03_drafts/`. The two CACI artifacts are BD-flavored (mostly intelligence-for-capture, some strategic synthesis). The two SRF artifacts are raw-notes-plus-recommendations.
 
 ## Source-file template (for `01_sources/`)
@@ -103,4 +103,4 @@ The FACT/Assessment/Speculation labeling discipline applies. Speakers' claims ar
 
 ## Future codification
 
-After this trip, if the workflow proves out, codify the pattern as a skill at `_meta/trip-report-workflow.md` so the next trip starts faster. Don't codify yet — wait to see what actually works.
+**Codified 2026-06-12** at `_meta/trip-report-workflow.md`, with the structured-report template at `_templates/trip-report.md`. The pattern proved out across MegaRust and SRFSG; that workflow doc is now the reference.

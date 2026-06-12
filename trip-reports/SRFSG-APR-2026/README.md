@@ -53,7 +53,7 @@ trip-reports/CACI-PROGRAM-REVIEW-2026-06-08/
 1. **Audio in.** Drop M4A clips into `audio/`. One clip ≈ one session/topic.
 2. **Photos in.** Drop images into `photos/`. Name or note which session/slide each belongs to (a `photos/<session-slug>/` subfolder per session works, as MegaRust did with `slides/`).
 3. **Transcribe per session.** Each clip → a markdown source file in `01_sources/` named `2026-06-08_<session-slug>.md`, using the per-session template below. Photos are referenced from the relevant source file (filename + one-line caption of what the slide showed).
-4. **Synthesis.** Roll the day's sources into `02_synthesis/`.
+4. **Synthesis.** Roll the day's sources into `02_synthesis/structured-report.md` using `_templates/trip-report.md` (see the codified `_meta/trip-report-workflow.md`).
 5. **Draft.** Populate the trip report draft(s) in `03_drafts/` from the synthesis.
 
 ## Per-session source template (`01_sources/`)
