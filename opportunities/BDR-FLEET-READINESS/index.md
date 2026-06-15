@@ -21,7 +21,7 @@ capability_tags:
   - fleet-readiness
 sensitivity: internal
 opened: 2026-05-21
-last_updated: 2026-05-21
+last_updated: 2026-06-01
 next_action: Triage the second-pass inbox (87 new candidates added 2026-05-23). Highest-value 9/10 cluster includes Admiral Caudle's HASC testimony on FY27 Navy budget (14 May 2026), the Navy Shipbuilding Plan May 2026 PDF at a working URL, and C3F RIMPAC 2026 final planning. See 05_decision-log.md 2026-05-23 entry for the recommended approve list.
 next_action_due: 2026-05-28
 focus_month: 2026-05-01
@@ -36,7 +36,7 @@ last_find_count_usa: 125
 
 **Customer:** Multi-customer research track (per scaffold decision B, 2026-05-21)
 **Gate:** Identify
-**Status:** Triaged — scaffold confirmed; awaiting operator "begin research" trigger before source ingestion starts
+**Status:** Triaged — but research clearly advanced: 108 sources are ingested and capture/exec briefs are drafted to v0.6/v0.7 (decision log through 2026-06-01). The `gate: identify` / `status: triaged` frontmatter is stale against that work and needs an operator gate/status call.
 
 ## Working summary
 
@@ -48,8 +48,8 @@ Research track exploring whether NSWC Carderock Division's battle damage and rep
 - [[02_quotes|Quotes]]
 - [[03_pocs|POC directory]]
 - [[05_decision-log|Decision log]]
-- `01_sources/` — source captures (none yet — research not started)
-- `04_artifacts/` — Word deliverables (none yet)
+- `01_sources/` — source captures (108 ingested through late May; see decision log)
+- `04_artifacts/` — Word deliverables (capture brief v0.1–v0.6, executive brief v0.1–v0.7 drafts)
 
 ## Related research tracks
 

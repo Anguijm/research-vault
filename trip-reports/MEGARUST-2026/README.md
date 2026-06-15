@@ -35,12 +35,18 @@ trip-reports/MEGARUST-2026/
   audio/                          — raw M4A clips the operator dropped from the conference
   01_sources/                     — per-session transcripts, FACT/Assessment/Speculation labeled
   02_daily-synthesis/             — end-of-day rollups (Day 1, Day 2, Day 3)
-  03_drafts/                      — working drafts of the four output artifacts:
+  03_drafts/                      — working drafts of the output artifacts:
                                       caci-exec-summary.md
                                       caci-full-report.md
-                                      srf-exec-summary.md
+                                      srf-exec-summary-v1.md            (internal/narrative format)
+                                      srf-exec-summary-v1-naval-trial.md (Navy memo-format variant, same content)
                                       srf-full-report.md
 ```
+
+The SRF executive summary exists in two formats by design: `srf-exec-summary-v1.md` is the
+plain narrative version, and `srf-exec-summary-v1-naval-trial.md` carries the same content in
+a Navy memo layout (SSIC / From / To / Subject / References / Enclosures) as a format trial.
+Both are kept; pick the one that fits the audience.
 
 ## Workflow
 

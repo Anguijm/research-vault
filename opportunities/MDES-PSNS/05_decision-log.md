@@ -131,3 +131,32 @@ analogous. The remaining gaps are term-level shipcheck/SID/TWD work and PSNS-spe
 (experience) and frame Q12–16. Operator's call on what enters the customer submission.
 
 ---
+
+### 2026-06-12 — RFI response and exec summary iterated v0.2 through v0.4 (CAGE/UEI verified)
+
+**By:** operator directed the revisions; Claude drafted each version. Every prior version
+is kept (operator's draft-lineage preference), so v0.1–v0.3 remain in the folder alongside
+the current v0.4 RFI and v0.2 exec.
+
+**What changed, by version:**
+- **Exec summary v0.2:** corrected the voice from a detached third-person read to
+  first-person plural ("we / our", i.e. CACI speaking), per operator feedback that v0.1
+  read as if written by an outsider.
+- **RFI response v0.2 → v0.3:** narrative answers tightened and expanded; still
+  questionnaire-narrative form.
+- **RFI response v0.4 (current):** rebuilt as the **full Sources Sought questionnaire
+  worksheet** — every field and question answered, none left blank, no questions grouped.
+  Supersedes v0.1–v0.3 in completeness. CACI **CAGE 1QU78** and **UEI N3PBJAVNKF61**
+  confirmed against the SAM.gov entity record for CACI, Inc. - Federal (registration active
+  through 2027-05-21). Predicted/unconfirmed fields are wrapped in `**double asterisks**`
+  so the operator can find and replace every guess before submission; confirmed items
+  (CAGE/UEI, federal-award past performance) are left unwrapped.
+
+**Standing caveat (unchanged):** the term-level shipcheck/SID/TWD past-performance answers
+(Q12–16) remain predictions pending the operator's internal-PP confirmation; they are
+flagged in v0.4, not asserted as fact.
+
+**Next:** operator reviews v0.4, replaces the asterisk-wrapped guesses with verified company
+data and internal past performance, and decides what enters the customer submission.
+
+---

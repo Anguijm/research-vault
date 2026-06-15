@@ -29,3 +29,5 @@
 - [Team is USS/RMC, not USNS/MSC](project_team_uss_rmc_vs_usns_msc.md) — operator team at SRF-JRMC does USS warship repair; Hanwha research is USNS/MSC; do not conflate; USNS/Hanwha is CACI-corporate relationship-lead, USS/RMC is the team direct-execute lane
 - [SRFSG review speaker count](project_srfsg_speaker_count_ground_truth.md) — ~13 distinct voices total across both Day-1 clips, a couple spoke very little; calibrates diarization, the unified cross-clip run is the comparable count
 - [Keep draft versions](feedback_keep_draft_versions.md) — operator values draft lineage; keep every version (v0.1, v0.2, …), never prune to de-clutter
+- [Avoid the em-dash tell](feedback_avoid_em_dash_tell.md) — don't overuse "—" (AI tell); conventional varied punctuation in ALL docs (internal too, "practice like you play"); commas / parentheses / colon / split-sentences per the house guide
+- [Second brain vault](project_second_brain_vault.md) — personal vault at /home/johnanguiano/brain, separate from research vault; staging→promote gate, expand.py topic engine, FACT only at operator promotion

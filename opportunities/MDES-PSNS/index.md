@@ -15,8 +15,8 @@ capability_tags:
   - ship-modernization
 sensitivity: shareable
 opened: 2026-06-11
-last_updated: 2026-06-11
-next_action: Operator — populate RFI data fields and the Q12–16 past-performance answers from verified CACI internal past performance (confirm the submarine-design / shipcheck / SID / TWD specifics); review and refine the v0.1 RFI response and exec summary drafts
+last_updated: 2026-06-12
+next_action: Operator — populate RFI data fields and the Q12–16 past-performance answers from verified CACI internal past performance (confirm the submarine-design / shipcheck / SID / TWD specifics); review and refine the v0.4 RFI worksheet (latest; supersedes v0.1–v0.3) and the v0.2 exec summary
 next_action_due: 2026-07-25
 focus_month: 2026-06-01
 auto_find: true

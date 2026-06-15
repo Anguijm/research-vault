@@ -70,12 +70,19 @@ Post-Phase-4 work in progress (not yet enumerated as a numbered phase):
 - **CACI capability book** — `_meta/caci-capability-book/`. Seven capability
   areas with dual-language coverage (caci.com marketing + FY25 10-K
   investor language + FY26 Q3 10-Q current state), corporate overview,
-  growth signals, acquisitions inventory (8 identified plus 2 unnamed),
-  contract vehicles inventory (8 marketed IDIQs + 6 GSA Schedules + 16
-  USAspending-observed vehicles), and top-25 past-performance citations.
+  growth signals, acquisitions inventory (named acquisitions tracked, two
+  FY24 entries still unnamed; see `acquisitions.md` for the live count),
+  contract vehicles inventory (marketed IDIQs + GSA Schedules +
+  USAspending-observed vehicles), and top-48 past-performance citations.
   Functions as the scoring layer for the opportunity pipeline. Refresh
   cadence: annual on each 10-K, quarterly on each 10-Q, event-driven on
   M&A announcements.
+
+Active opportunities run on the SOP pipeline (see `_meta/dashboard.md` and each
+`opportunities/<ID>/index.md` for live gate/status): PMTEC-USINDOPACOM,
+BDR-FLEET-READINESS, HANWHAOCEAN-DOD, and MDES-PSNS. Two trip-report captures run
+on the trip-report workflow (`_meta/trip-report-workflow.md`): MEGARUST-2026 and
+SRFSG-APR-2026.
 
 ## How to behave in this project
 

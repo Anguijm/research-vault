@@ -41,11 +41,11 @@ One entry per month. Update as you go. At month-end: note what was painful and w
 
 ## 2026-06
 
-**Focus opportunities:** TBD — pipeline-rebuild work (organizationName-anchored SAM.gov slices) is the active tactical thread carrying over from late May. Whether a new opportunity scaffolds this month depends on what the rebuilt pipeline surfaces.
+**Focus opportunities:** Two new opportunities scaffolded and HANWHAOCEAN-DOD researched; MDES-PSNS carried to drafted RFI responses. Two conference trip reports (MegaRust 2026, SRFSG April 2026) ingested and drafted on the new trip-report workflow. Pipeline-rebuild work (organizationName-anchored SAM.gov slices) remains the standing tactical thread but was not the month's focus.
 
-**Week 1 (early June):**
+**Week 1 (early June):** MegaRust 2026 trip report (2–4 June event) fully ingested: per-session transcripts, Day 1–3 daily syntheses, and CACI/SRF exec-summary and full-report drafts (SRF exec finalized to v1, plus a Navy-memo-format variant). HANWHAOCEAN-DOD opportunity opened and researched (Play 1 thesis, USN MRO ceiling sizing); USNS/MSC vs USS/RMC lane distinction clarified.
 
-**Week 2–3 (mid June):**
+**Week 2–3 (mid June):** MDES-PSNS opportunity opened (Marine Design and Engineering IDIQ, PSNS & IMF, Notice 3059-9900); gate upgraded to pursue; Portsmouth/SeaPort-NxG submarine-engineering past performance validated against federal award data (exact NAICS 541330 match); RFI response drafted v0.1 through v0.4 (full questionnaire worksheet) and exec summary v0.1 through v0.2; CACI CAGE/UEI verified against SAM.gov. SRFSG April 2026 trip report scaffolded (Day-1 clips diarized and speaker-identified); drafts await final synthesis.
 
 **Week 4 (late June):**
 

@@ -1,7 +1,7 @@
 # Research workflow & verification SOP
 
 **Owner:** [you]
-**Last updated:** [YYYY-MM-DD]
+**Last updated:** 2026-05-28
 **Cadence target:** 12 capture briefs per year (≈1 per month)
 **Team:** primary analyst (you) + Claude + Gemini + 1–2 on-call SMEs for surge
 **Data classification:** OSI / public-domain only
