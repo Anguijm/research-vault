@@ -104,6 +104,19 @@ Folded into instruction **v0.3**.
 14. **Aggregation agent-scoping: DROPPED.** The optional defense-in-depth scoping measure
     is not adopted (friction without reducing the underlying risk).
 
+## 2026-06-19 — per-department authoritative AI evaluator (instruction v0.4)
+
+15. **Authoritative evaluation of AI output is generalized to the cognizant domain
+    authority, and each department designates an evaluator.** Operator's refinement: rather
+    than only "technical → CHENG," AI-produced content is authoritatively evaluated by
+    whoever owns that subject matter — **technical → CHENG chain, IT/security → CIO,
+    business/strategic → BSPO (Business Strategic Planning Office), other functional content
+    → the cognizant department head/authority.** **Every department designates, in writing,
+    an authoritative AI content evaluator** who evaluates their own domain's content and
+    routes anything technical to the CHENG chain (the safety-of-life backstop). Folded into
+    instruction **v0.4** (§6 generalized + new §6.b; §8.e adds the designation duty; §7.b
+    cross-reference updated). The full domain-to-authority map is a working-group item.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

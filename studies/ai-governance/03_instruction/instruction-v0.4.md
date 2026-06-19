@@ -1,9 +1,38 @@
+---
+type: instruction-draft
+study: ai-governance-landscape
+title: SRF-JRMC askSage governance instruction — rewrite v0.4
+status: draft v0.4 (per-department authoritative AI evaluator added; B/C pending working group)
+classification: internal
+created: 2026-06-19
+derives_from: 02_synthesis/gap-analysis.md (Part F) + _decisions.md + _open-items.md
+red_team: 03_instruction/instruction-red-team.md
+prior_version: 03_instruction/instruction-v0.3.md
+v0.4_change: per operator — generalized Section 6 from "technical adjudication → CHENG" to "authoritative evaluation by the cognizant DOMAIN authority" (technical→CHENG chain, IT/security→CIO, business/strategic→BSPO, other→cognizant functional authority), and added the requirement that EACH DEPARTMENT designate, in writing, an authoritative AI content evaluator (who routes anything technical to the CHENG chain). Updated §8.e and the §7.b cross-reference.
+v0.3_change: folds in the operator's Section-A answers (2026-06-19) — standalone askSage instance (not GenAI.mil); Impact Level IL5; maturity target best-in-class (added framework alignment + annual review cadence); data residency treated as covered by existing accreditation (working-group confirm); governance forum = Department Heads, quarterly; manual fallback = immediate; aggregation agent-scoping DROPPED. Section B (confirmations) and C (command-specific code/role mappings) remain for the working group. Later same day: folded in the operator's standalone rationale (askSage is ATO'd at IL5 and connects to Flank Speed; GenAI.mil not yet mature enough for convergence; processes transferable to GenAI.mil when warranted), corrected the ATO framing (command operates UNDER askSage's IL5 ATO, not owns one), and tied data residency to the Flank Speed + askSage ATO boundaries.
+v0.2.1_change: per operator command-context — (1) NOFORN already barred from the SRF-JRMC share + all technical direction screened by a derivative classifier before reaching the share; §5.c/§7.c refined to INHERIT that control (index only the screened authoritative corpus; no un-screened uploads) instead of a new AI access-segmentation mechanism. (2) Aggregation/classification-by-compilation is NOT a new AI risk (a human with the same access could compile manually; the SCG already governs it); §4.e reframed to inherit the SCG + spillage procedure, the only AI delta being likelihood/inadvertence handled via training + user recognition; the agent-scoping control demoted to an optional defense-in-depth COMMAND DECISION.
+changelog: v0.2 folds in the 9 logic/consistency findings from the Gemini red-team — reordered Knowledge Base up; out-of-band verification; ingress DLP for PII/PHI; resolved the records-vs-spillage deadlock; access-segmented index (cross-caveat synthesis bar); CHENG concurrence over Dept-Head proposals; single accountable authority (CO) with distributed responsibilities; quarterly manual-reversion drill; mission-critical compute override.
+note: Study work-product, not a promulgated instruction. [COMMAND DECISION] / [CONFIRM] / [MAP TO COMMAND] mark items only the command resolves. Reference identifiers must be verified before promulgation.
+---
+
+# Reader's note (not part of the instruction)
+
+v0.3 resolves the strategic decisions (Section A of `_open-items.md`): this is a
+**command-standalone askSage instance at Impact Level 5**, built to a **best-in-class**
+maturity target. Two categories of marker remain, deliberately, for the working group:
+`[CONFIRM]` items (verify reference identifiers, the spillage/records-destruction
+authority, the screening process) and `[MAP TO COMMAND]` items (substitute the command's
+real engineering/QA codes, Security Classification Guide names, systems of record, and
+named authorities). Acronyms expanded on first use.
+
+---
+
 # DEPARTMENT OF THE NAVY
 **U.S. NAVAL SHIP REPAIR FACILITY AND JAPAN REGIONAL MAINTENANCE CENTER**
 **PSC 473 BOX 8**
 **FPO AP 96349-0008**
 
-**SRF-JRMC INSTRUCTION 5239.1 [DRAFT — FOR WORKING-GROUP REVIEW]**
+**SRF-JRMC INSTRUCTION 5239.1 [DRAFT — REWRITE v0.4]**
 
 **From:** Commanding Officer, U.S. Naval Ship Repair Facility and Japan Regional Maintenance Center
 **Subj:** GOVERNANCE, SECURITY, AND USE OF THE ASKSAGE ARTIFICIAL INTELLIGENCE PLATFORM
@@ -13,14 +42,16 @@
 - (b) SECNAVINST 5239.3C, Department of the Navy Cybersecurity Policy
 - (c) COMUSFLTFORCOMINST 4790.3 (Joint Fleet Maintenance Manual, JFMM)
 - (d) DoD Responsible Artificial Intelligence Strategy and Implementation Pathway (2022)
-- (e) DoDI 5400.19, Public Affairs Use of Artificial Intelligence (2025) **[WG: verify identifier]**
-- (f) DoD CDAO Memorandum, Guidelines and Guardrails to Inform Governance of Generative Artificial Intelligence (12 July 2024) **[WG: verify identifier]**
-- (g) DON CIO generative-AI / GenAI.mil guidance **[WG: insert exact memo identifiers]**
+- (e) DoDI 5400.19, Public Affairs Use of Artificial Intelligence (2025) *[verify identifier]*
+- (f) DoD CDAO Memorandum, Guidelines and Guardrails to Inform Governance of Generative Artificial Intelligence (12 July 2024) *[verify identifier]*
+- (g) DON CIO generative-AI / GenAI.mil guidance *[insert exact memo identifiers]*
 - (h) NIST AI Risk Management Framework 1.0 and Generative AI Profile
 - (i) The Privacy Act of 1974; HIPAA (PII/PHI prohibition)
-- (j) 36 CFR 1229, Emergency authorization to destroy records **[WG: verify citation; supports the spillage cleanup in para 11.a]**
+- (j) 36 CFR 1229, Emergency authorization to destroy records *[verify citation; for spillage cleanup, para 11.a]*
 
-> **Working group to resolve:** verify reference identifiers (e), (f), (g), (j) against the actual issuances, and add the command's cognizant cybersecurity, records-management, and security-spillage references.
+*[CONFIRM — identifiers (e), (f), (g), (j) are from open-source research and must be
+verified against the actual issuances before promulgation. Add the command's cognizant
+cybersecurity, records-management, and security-spillage references.]*
 
 ---
 
@@ -52,17 +83,16 @@ at SRF-JRMC and its detachments (Yokosuka and Sasebo) who use askSage.
 - **Final technical, quality, contractual, or disbursement authority.** AI output is
   always a draft for a qualified human to adjudicate (Sections 6 and 7).
 
-**Instance basis: the command uses askSage, not the DoD enterprise platform
-(GenAI.mil).** askSage already provides Authority-to-Operate (ATO) functionality at
-Impact Level 5 (IL5) and connects to the Navy's Flank Speed shares, so it delivers an
-accredited, integrated capability today; GenAI.mil is not yet mature enough to merit
-convergence. Convergence to GenAI.mil remains a future option, and any process built in
-askSage is intended to be transferable to GenAI.mil when that is warranted. The command
-operates **under askSage's IL5 ATO** and owns the governance layer — use-case approval,
-data controls, monitoring configuration, and the controls in this instruction — within
-the platform's accredited capabilities.
-
-> **Working group to resolve:** record the specific askSage ATO reference and the Flank Speed connection authority.
+**Instance basis (decided): the command uses askSage, not the DoD enterprise platform
+(GenAI.mil).** Rationale: askSage already provides Authority-to-Operate (ATO)
+functionality at Impact Level 5 and connects to the Navy's Flank Speed shares, so it
+delivers an accredited, integrated capability today; GenAI.mil is not yet mature enough
+to merit convergence. Convergence to GenAI.mil remains a future option, and any process
+built in askSage is intended to be transferable to GenAI.mil when that is warranted. The
+command operates **under askSage's IL5 ATO** and owns the governance layer — use-case
+approval, data controls, monitoring configuration, and the controls in this instruction —
+within the platform's accredited capabilities. *[CONFIRM — working group records the
+specific askSage ATO reference and the Flank Speed connection authority.]*
 
 ## 3. Policy
 
@@ -97,7 +127,7 @@ b. **Prohibited — shall not be entered into askSage under any circumstances:**
 
    PII and PHI are categories of CUI, but they carry independent legal regimes (the
    Privacy Act for PII, HIPAA for PHI) and are the worst case for the aggregation risk
-   in paragraph (e). They are carved out of the otherwise-authorized CUI, matching the
+   in paragraph (d). They are carved out of the otherwise-authorized CUI, matching the
    DoD enterprise (GenAI.mil) line. Personnel, manpower, and medical-readiness workflows
    are not askSage use cases.
 
@@ -124,9 +154,10 @@ The controls are therefore: (1) **user recognition** — personnel apply the sam
 judgment to AI output that they apply to their own analysis, per the SCG; (2) **training**
 (Section 13) covers classification by compilation in an AI context; and (3) a
 compiled-classified output is handled under the existing **spillage procedure**
-(Section 11.a).
-
-> **Working group to resolve:** name the cognizant Security Classification Guide(s).
+(Section 11.a). The optional agent-scoping defense-in-depth measure considered in an
+earlier draft was deliberately not adopted: it adds friction without reducing the
+underlying risk, since a user with the same access could compile manually regardless.
+*[MAP TO COMMAND — name the cognizant SCG(s).]*
 
 f. **Marking.** AI does not reliably apply CUI markings. Personnel portion-mark any
 AI-generated product containing CUI per reference (a) before storing or transmitting it.
@@ -140,9 +171,8 @@ and conserves compute (Annex A).
 
 b. **Recertification.** A stale authoritative source is a safety hazard, not merely an
 error. Indexed references are recertified on a defined cycle and upon change transmittal,
-with a named owner, so the AI never reasons from a superseded version.
-
-> **Working group to resolve:** assign the recertification owner and cadence.
+with a named owner, so the AI never reasons from a superseded version. *[MAP TO COMMAND —
+assign the recertification owner and cadence.]*
 
 c. **Releasability rests on the command's existing screening, not a new AI mechanism.**
 SRF-JRMC already bars NOFORN material from its network share and screens all technical
@@ -153,9 +183,8 @@ authoritative corpus. The AI is neither a new releasability authority nor a subs
 for the derivative classifier. The one new risk is that the AI could become a *bypass* of
 that screening, so **ad hoc ingestion of un-screened source documents into askSage is
 prohibited** — source material enters the knowledge base only after the existing
-screening, through the centralized index (5.a).
-
-> **Working group to resolve:** confirm the screening process and name the screened authoritative-corpus source.
+screening, through the centralized index (5.a). *[MAP TO COMMAND — confirm the screening
+process and name the screened authoritative-corpus source.]*
 
 ## 6. Authoritative evaluation of AI output (the human-in-the-loop)
 
@@ -163,21 +192,22 @@ a. **AI output is authoritatively evaluated by the cognizant domain authority.**
 output is authoritative on its own. A qualified human who owns the relevant subject matter
 must evaluate AI-produced content before it is used or released, and the cognizant
 authority follows the content, not the tool that produced it:
+   - **Technical content** (a weld specification, torque value, tag-out, NAVSEA Standard
+     Item interpretation, repair procedure): the **Chief Engineer (CHENG) and the CHENG's
+     chain.**
+   - **Information-technology and information-security content:** the **Command Information
+     Officer (CIO).**
+   - **Business and strategic-planning content:** the **Business Strategic Planning Office
+     (BSPO).**
+   - **Any other functional content** (for example contracts, supply, manpower, safety):
+     the cognizant department head or functional authority for that area.
 
-- **Technical content** (a weld specification, torque value, tag-out, NAVSEA Standard Item
-  interpretation, repair procedure): the **Chief Engineer (CHENG) and the CHENG's chain.**
-- **Information-technology and information-security content:** the **Command Information
-  Officer (CIO).**
-- **Business and strategic-planning content:** the **Business Strategic Planning Office
-  (BSPO).**
-- **Any other functional content** (for example contracts, supply, manpower, safety): the
-  cognizant department head or functional authority for that area.
-
-For technical content the bar is highest: because seaworthiness and safety of life are
-paramount, such output is a non-authoritative clerical draft until a qualified person in
-the CHENG's chain adjudicates it — never the general end user's or the CIO's call.
-
-> **Working group to resolve:** complete the domain-to-authority mapping for the command's full organization, and confirm the engineering and quality-assurance codes and Technical Warrant Holder assignments.
+   For technical content the bar is highest: because seaworthiness and safety of life are
+   paramount, such output is a non-authoritative clerical draft until a qualified person in
+   the CHENG's chain adjudicates it — never the general end user's or the CIO's call.
+   *[MAP TO COMMAND — complete the domain-to-authority mapping for the command's full
+   organization; confirm the engineering and quality-assurance codes and Technical Warrant
+   Holder assignments.]*
 
 b. **Each department designates an authoritative AI content evaluator.** Every department
 designates, in writing, a qualified person responsible for the authoritative evaluation of
@@ -197,8 +227,7 @@ against the controlling document through a non-AI authoritative source (the offi
 technical library / source of record), confirming the specific paragraph wording and
 current change number. **The AI's own retrieved snippet is not a sufficient verification
 source** — relying on it re-introduces the hallucination it is meant to catch.
-
-> **Working group to resolve:** name the authoritative source-of-record system (the non-AI technical library used for verification).
+*[MAP TO COMMAND — name the authoritative source-of-record system.]*
 
 e. **Structured approval (fight confirmation fatigue).** Where a human approval is required
 (this section and Section 7), the approval presents what is being approved — intent, the
@@ -233,18 +262,16 @@ use cases require closer human control and CHENG-chain concurrence (Section 8).
 
 e. **Separation and containment.** Where an agent generates and then executes work,
 generation and execution are separated by an approval gate. A means to halt an agent and
-revoke its access exists and is exercisable by a designated authority.
-
-> **Working group to resolve:** name the halt/revoke authority (for example the ISSM or the command duty IT watch).
+revoke its access exists and is exercisable by [the ISSM / the command duty IT watch —
+MAP TO COMMAND].
 
 ## 8. Roles, responsibilities, and governance
 
 a. **Accountability.** The **Commanding Officer** retains overall accountability for
 AI-augmented command outcomes, as for all command activity. Responsibilities are
 distributed across the existing roles below; this is a deliberate combination of
-authorities, not a single new owner and not a new board.
-
-> **Working group to resolve:** delegate accountability as appropriate (for example to the Executive Director).
+authorities, not a single new owner and not a new board. *[MAP TO COMMAND — delegate as
+appropriate, e.g., to the Executive Director.]*
 
 b. **Command Information Officer (CIO) and Information System Security Manager (ISSM).**
 Own the information-technology and information-security side: platform administration,
@@ -320,9 +347,8 @@ emergency destruction of the affected records where authorized — **only after 
 Manager and Legal adjudication.** This is the deliberate exception to ordinary records
 retention (Section 10): a spilled classified record is not preserved as a permanent record
 inside the CUI/IL5 store. Report through security channels, including the Naval Criminal
-Investigative Service (NCIS) as required.
-
-> **Working group to resolve:** align this flow with the command's security spillage procedures and records-destruction authority (ref (j)).
+Investigative Service (NCIS) as required. *[CONFIRM — align with the command's security
+spillage procedures and the records-destruction authority, ref (j).]*
 
 b. **Safety mishap (hallucination-driven).** If an AI error contributes to a safety or
 quality mishap, it is reported and investigated through the command's safety and JAGMAN
@@ -379,9 +405,15 @@ or a change in governing policy). The CIO, with the CHENG and Legal, owns the re
 d. **Data residency.** Source data resides in the Navy's Flank Speed environment, which
 askSage connects to, and AI processing occurs within askSage's IL5 ATO boundary — both
 accredited — so residency and host-nation cryptographic requirements are expected to be
-covered by those existing accreditations.
+covered by those existing accreditations. *[CONFIRM — working group verifies with the
+cognizant authority that the askSage ATO boundary and the Flank Speed connection satisfy
+the data-residency and encryption posture.]*
 
-> **Working group to resolve:** verify with the cognizant authority that the askSage ATO boundary and the Flank Speed connection satisfy the command's data-residency and encryption posture.
+e. **Working-group items.** The confirmations (reference identifiers, the spillage and
+records-destruction authority, the screening process) and the command-specific mappings
+(engineering/QA codes, Security Classification Guide names, systems of record, named
+authorities) carried as `[CONFIRM]` and `[MAP TO COMMAND]` markers are resolved during
+working-group review, before promulgation.
 
 ---
 
@@ -402,3 +434,9 @@ ration mission work.
   the initial departmental budget. Caps shall never stop mission-essential repair work.
 - **Efficiency.** Centralized indexing of large references (Section 5) and a shared, vetted
   prompt library reduce waste.
+
+---
+
+*End of draft v0.4. Prior versions retained at instruction-v0.1.md … v0.3.md;
+logic-pass record at instruction-red-team.md. Clean working-group routing package at
+routing/ (rebuilt from this version).*

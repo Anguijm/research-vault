@@ -22,8 +22,11 @@ Management Framework so it is defensible on its face.
   and connects to Flank Speed. Convergence to GenAI.mil stays a future option.
 - **Data:** **CUI authorized up to IL5; PII and PHI prohibited** (carved out), as are
   classified and NNPI.
-- **AI is decision support, not authority:** technical adjudication stays with the **CHENG
-  chain**; AI output is always a non-authoritative draft.
+- **AI is decision support, not authority:** AI output is authoritatively evaluated by the
+  **cognizant domain authority** (technical → CHENG chain, IT/security → CIO, business/
+  strategic → BSPO, and so on), and **each department designates an authoritative AI content
+  evaluator**. Anything technical always routes to the CHENG chain. AI output is always a
+  non-authoritative draft.
 - **Governance is run through existing structures:** CIO/ISSM own IT and security; CHENG
   chain owns technical use; Legal concurs on records; **Department Heads are the governance
   forum, reviewing the use-case inventory quarterly.** No new board.
@@ -45,8 +48,10 @@ flags inline as **"Working group to resolve"** (also listed here):
 4. Assign the knowledge-base recertification owner and cadence (§5.b).
 5. Confirm the derivative-classifier screening process and name the screened
    authoritative-corpus source the AI indexes from (§5.c).
-6. Confirm the engineering and quality-assurance codes and the Technical Warrant Holder
-   assignments for the CHENG chain (§6.a).
+6. Complete the domain-to-authority mapping (technical → CHENG, IT → CIO, business → BSPO,
+   plus the rest of the organization) and confirm the engineering/QA codes and Technical
+   Warrant Holder assignments; each department names its authoritative AI content evaluator
+   (§6.a–b).
 7. Name the authoritative source-of-record system used for out-of-band verification (§6.c).
 8. Name the halt/revoke authority for a rogue agent (§7.e).
 9. Confirm any delegation of accountability (e.g., to the Executive Director) (§8.a).

@@ -135,3 +135,10 @@ studies/ai-governance/
   for track-changes markup. Freshened all three main products (gap-analysis F.5 marked
   the strategic questions resolved; landscape report given a downstream pointer) and
   pushed the whole study to the GitHub backup (HBR PDFs excluded for copyright).
+- **2026-06-19 (v0.4)** — Per operator, generalized the authoritative-evaluation model:
+  AI output is evaluated by the cognizant domain authority (technical→CHENG, IT→CIO,
+  business/strategic→BSPO, other→cognizant authority), and each department designates an
+  authoritative AI content evaluator (anything technical routes to the CHENG chain).
+  `instruction-v0.4.md` (§6 generalized + new §6.b, §8.e, §7.b); routing package
+  (`instruction-clean.md`, cover sheet, `.docx`) rebuilt from v0.4. Decision logged as
+  `_decisions.md` item 15.

@@ -66,6 +66,12 @@ Key facts to carry forward:
   covered by existing accreditation (left as [CONFIRM], not closed), governance forum =
   **Department Heads quarterly**, manual fallback = **immediate**, aggregation agent-scoping
   **dropped**. See `_decisions.md` items 8–14.
+- **Instruction v0.4 (2026-06-19):** generalized authoritative evaluation — AI output is
+  evaluated by the **cognizant domain authority** (technical→CHENG chain, IT/security→CIO,
+  business/strategic→**BSPO**, other→cognizant authority), and **each department designates
+  an authoritative AI content evaluator** (anything technical routes to CHENG). `_decisions.md`
+  item 15. Routing package (clean instruction + cover + .docx) in `03_instruction/routing/`,
+  rebuilt from v0.4.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as
