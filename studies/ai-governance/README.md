@@ -170,3 +170,9 @@ studies/ai-governance/
   are Navy task orders off that IDIQ — NSWC Corona ($475K) and Naval Research Lab ($24.75K)** —
   the concrete vehicle a Navy command (likely incl. SRF-JRMC) uses. Source pack Part 4 +
   context note in `_decisions.md`.
+- **2026-06-19 (v0.7)** — Folded the concrete askSage authority/acquisition basis into §2:
+  GenAI.mil is the enterprise default not an exclusive bar; askSage holds its own IL5
+  authorization, acquired via decentralized task orders against the Army Ask Sage IDIQ
+  (W9128Z25DA001), the vehicle other Navy activities use. §2 `[CONFIRM]` now asks for the
+  command's own task-order PIID. `instruction-v0.7.md`; routing package + cover sheet rebuilt;
+  `_decisions.md` item 19.

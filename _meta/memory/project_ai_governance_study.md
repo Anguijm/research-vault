@@ -88,6 +88,13 @@ Key facts to carry forward:
   (digital supervision no longer stated — operator: nobody uses AI to supervise; residual MLA
   concern still covered by §7.c least-privilege); prohibited data stays in §4. `_decisions.md`
   items 17–18; routing package rebuilt from v0.6.
+- **USASpending check + instruction v0.7 (2026-06-19):** Ask Sage (UEI W9X4EWLUBAW1) has 46
+  contract actions + the Army "Decentralized IDIQ" **W9128Z25DA001**; **two are Navy task
+  orders** off it — **NSWC Corona** ($475K, N6426725F0007) and **Naval Research Lab** ($24.75K,
+  N0017326F0400) — which corrects the news sweep's "no Navy adopter." v0.7 folds this into §2 as
+  the askSage authority/acquisition basis (enterprise-default-not-exclusive + the Army IDIQ
+  vehicle); §2 `[CONFIRM]` now asks for the command's own task-order PIID. `_decisions.md` item
+  19. Source pack: `01_sources/asksage-genai-mil-adoption.md` Part 4 (via `lib/usaspending.py`).
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

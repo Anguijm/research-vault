@@ -180,6 +180,17 @@ implications for the §2 authority-basis `[CONFIRM]`:
 
 *(Surfaced for the operator; no instruction change made without direction.)*
 
+## 2026-06-19 — askSage authority/acquisition basis folded into §2 (instruction v0.7)
+
+19. **Folded the concrete authority basis into §2** (per operator, from the USASpending check).
+    §2 now states: GenAI.mil is the enterprise *default*, not an exclusive bar; askSage holds
+    its own IL5 authorization and is acquired across the Department as **decentralized task
+    orders against the Army Ask Sage IDIQ (PIID W9128Z25DA001)** — the same vehicle other Navy
+    activities (NSWC Corona, NRL) already use. The §2 `[CONFIRM]` marker now asks the working
+    group to record **the command's own task-order PIID** off that IDIQ, plus the IL5 ATO and
+    the Flank Speed connection authority. This makes the previously load-bearing authority-basis
+    open item concrete. Instruction **v0.7**; routing package rebuilt; cover sheet updated.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific
