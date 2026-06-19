@@ -23,8 +23,10 @@ Management Framework so it is defensible on its face.
   GenAI.mil first to save askSage tokens). askSage is ATO'd at IL5 and connects to Flank
   Speed; this instruction governs askSage, GenAI.mil runs under its DoD enterprise governance.
   GenAI.mil is the enterprise *default*, not an exclusive bar — askSage is separately
-  authorized and acquired via decentralized task orders against the **Army Ask Sage IDIQ
-  (W9128Z25DA001)**, the same vehicle other Navy activities (NSWC Corona, NRL) already use.
+  authorized at IL5 and acquired through a Department contract vehicle for askSage (e.g., the
+  Army-managed Ask Sage IDIQ that NSWC Corona and NRL already use). The specific ATO and
+  contract are held in command records, not in the instruction (which stays stable as contracts
+  renew).
 - **Data:** **CUI authorized up to IL5; PII and PHI prohibited** (carved out), as are
   classified and NNPI.
 - **The AI changes no existing process.** It governs askSage use within the command's
@@ -53,9 +55,9 @@ flags inline as **"Working group to resolve"** (also listed here):
 
 1. Verify the reference identifiers (refs e, f, g, j) and add the command's cognizant
    cybersecurity, records-management, and security-spillage references.
-2. Record the command's askSage acquisition instrument — its task-order PIID off the Army Ask
-   Sage Decentralized IDIQ (W9128Z25DA001) — plus the IL5 ATO reference and the Flank Speed
-   connection authority (§2).
+2. Confirm askSage's IL5 authorization (ATO) and the command's acquisition instrument are
+   current and valid — held in the command's cybersecurity and contracting records, not in the
+   instruction — and confirm the Flank Speed connection authority (§2).
 3. Name the governing SORM / records-management reference (§5.a) and the cognizant Security
    Classification Guide(s) (§4.e).
 4. Each department names its authoritative AI content evaluator; confirm the Technical

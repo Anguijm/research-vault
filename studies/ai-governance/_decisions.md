@@ -191,6 +191,20 @@ implications for the §2 authority-basis `[CONFIRM]`:
     the Flank Speed connection authority. This makes the previously load-bearing authority-basis
     open item concrete. Instruction **v0.7**; routing package rebuilt; cover sheet updated.
 
+## 2026-06-20 — no volatile contract identifiers in the instruction (v0.8)
+
+20. **Removed the contract PIID from §2** (operator: a command instruction shouldn't embed a
+    contract number — it ends/renews/changes and would force instruction updates). §2 now states
+    the durable mechanism only (askSage is separately IL5-authorized and acquired through a
+    Department contract vehicle for askSage, e.g. the Army-managed Ask Sage IDIQ); the specific
+    current ATO and acquisition instrument live in the command's cybersecurity and contracting
+    records, not the instruction. The §2 `[CONFIRM]` now asks the cognizant authorities to
+    **confirm those remain current**, not to embed a PIID. **General principle for this vault:
+    keep volatile identifiers (PIIDs, contract/ATO numbers) out of durable instructions; cite
+    them only in dated research/decision records.** The specific PIIDs stay in
+    `01_sources/asksage-genai-mil-adoption.md` (Part 4) and item 19 above — those are dated
+    records, correctly. Instruction **v0.8**; routing package + cover sheet rebuilt.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

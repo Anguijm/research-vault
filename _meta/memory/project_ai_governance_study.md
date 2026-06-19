@@ -95,6 +95,12 @@ Key facts to carry forward:
   the askSage authority/acquisition basis (enterprise-default-not-exclusive + the Army IDIQ
   vehicle); §2 `[CONFIRM]` now asks for the command's own task-order PIID. `_decisions.md` item
   19. Source pack: `01_sources/asksage-genai-mil-adoption.md` Part 4 (via `lib/usaspending.py`).
+- **Instruction v0.8 (2026-06-20):** removed the contract PIID from §2 — operator principle: a
+  command instruction should NOT embed volatile identifiers (PIIDs, contract/ATO numbers) that
+  churn and force instruction updates. §2 states the durable mechanism (separately IL5-authorized;
+  acquired via a Department contract vehicle, e.g. the Army-managed Ask Sage IDIQ); specifics live
+  in the command's cybersecurity/contracting records. PIIDs stay only in the dated research/decision
+  records. `_decisions.md` item 20. **Apply this principle to all future vault instructions.**
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

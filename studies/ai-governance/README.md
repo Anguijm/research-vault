@@ -176,3 +176,9 @@ studies/ai-governance/
   (W9128Z25DA001), the vehicle other Navy activities use. §2 `[CONFIRM]` now asks for the
   command's own task-order PIID. `instruction-v0.7.md`; routing package + cover sheet rebuilt;
   `_decisions.md` item 19.
+- **2026-06-20 (v0.8)** — Operator: a command instruction shouldn't embed a contract PIID (it
+  churns and would force instruction updates). Removed the PIID from §2; it now states the
+  durable mechanism only (separately IL5-authorized; acquired via a Department contract vehicle,
+  e.g. the Army-managed Ask Sage IDIQ), with specifics held in command cybersecurity/contracting
+  records. PIIDs remain only in the dated research/decision records. `instruction-v0.8.md`;
+  routing rebuilt; `_decisions.md` item 20.
