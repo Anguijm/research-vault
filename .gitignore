@@ -41,3 +41,6 @@ trip-reports/*/audio/*.mp3
 trip-reports/*/audio/*.wav
 trip-reports/*/audio/*.aac
 trip-reports/*/audio/*.log
+
+# HBR PDFs are licensed personal copies — keep local/vault only, do not push to the cloud backup
+studies/ai-governance/01_sources/hbr/*.pdf
