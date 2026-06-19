@@ -159,3 +159,11 @@ studies/ai-governance/
   wordy/redundant (data stays in §4, the "AI is not an authority" principle stays in §3/§6;
   digital supervision dropped). `instruction-v0.6.md`; routing package + cover sheet rebuilt;
   `_decisions.md` items 17–18; memory updated. Planned + approved in plan mode.
+- **2026-06-19 (research)** — Operator question: how do DoD/DoW activities run askSage given the
+  GenAI.mil mandate, and do any Navy activities use it? Two web-research streams →
+  `01_sources/asksage-genai-mil-adoption.md` + ledger rows. Findings: GenAI.mil is the enterprise
+  DEFAULT, not an exclusive ban (so dual-platform is sound; askSage runs as a separately
+  authorized capability + acquisition vehicle, e.g. the Army's IL5/IDIQ workspace); the DON
+  mandate is the strongest of the services and **no Navy command is a public askSage adopter**
+  (SRF-JRMC is early/unusual); **BigBear.ai acquired askSage ($250M, closed 2025-12-31) and
+  founder Chaillan departed Feb 2026.** Context note in `_decisions.md`.

@@ -80,6 +80,18 @@ unverified lead (NOT to be cited as fact without confirmation). `pay` = paywalle
 | sg-model-ai-gov | Singapore Model AI Governance Framework | IMDA/PDPC | 2019/2020/2024 | 1 | n | pdpc.gov.sg/.../model-ai-governance-framework |
 | owasp-llm-top10 | OWASP Top 10 for LLM Applications 2025 | OWASP GenAI | 2024-11-17 | 1 | n | genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025 |
 
+## askSage / GenAI.mil adoption  (`01_sources/asksage-genai-mil-adoption.md`)
+
+| slug | title | publisher | date | tier | pay | URL |
+|------|-------|-----------|------|------|-----|-----|
+| don-genai-mandate | DON Enterprise IT Service Designation for GenAI.MIL | DON CIO | 2026-01-28 | 1 | n | doncio.navy.mil/ContentView.aspx?ID=20455 (BLOCKED; via secondaries) |
+| usmc-genai-not-exclusive | Marine Corps GenAI.mil — "does not limit other LLMs" | DefenseScoop | 2026-01-22 | 2 | n | defensescoop.com/2026/01/22/marine-corps-genai-mil-enterprise-ai-platform |
+| genai-5of6-branches | 5 of 6 branches adopt GenAI.mil (legacy tools continue) | DefenseScoop | 2026-02-02 | 2 | n | defensescoop.com/2026/02/02/military-branches-genai-mil-enterprise-ai-adoption |
+| asksage-cdao-army | Ask Sage partners with DoD CDAO + Army (COCOMs/JS/OSD) | GlobeNewswire | 2025-06-20 | 2 | n | globenewswire.com/news-release/2025/06/20/3102728 |
+| army-llm-workspace | Army Enterprise LLM Workspace (powered by Ask Sage) | army.mil | 2025-05-15 | 1 | n | army.mil/article/285537 |
+| bigbear-asksage-acq | BigBear.ai finalizes $250M acquisition of Ask Sage | BigBear.ai | 2025-12-31 | 1 | n | bigbear.ai/newsroom/bigbear-ai-finalizes-250m-acquisition-of-ask-sage |
+| chaillan-departure | BigBear.ai personnel update (Chaillan departs) | BigBear.ai IR | 2026-02-28 | 1 | n | ir.bigbear.ai/news-events/press-releases/detail/137/personnel-update |
+
 ## Operator pull list (paywalled / subscription)
 
 The McKinsey items (`mck-*`, tier 3 here only because the bodies were un-fetchable,

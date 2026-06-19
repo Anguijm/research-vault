@@ -157,6 +157,25 @@ Folded into instruction **v0.3**.
     still covered by least-privilege / permission-inheritance (§7.c). Item 5 stays as the
     historical record; this is the supersession note.
 
+## 2026-06-19 — research context (NOT a decision): askSage authority basis + BigBear.ai ownership
+
+Web research (`01_sources/asksage-genai-mil-adoption.md`) on two operator questions, with
+implications for the §2 authority-basis `[CONFIRM]`:
+
+- **The GenAI.mil mandate is an enterprise DEFAULT, not an exclusive ban.** Marine Corps:
+  "prioritization of GenAI.mil does not limit the use of other LLMs"; Air Force: move to
+  GenAI.mil "or other approved systems." So the v0.6 dual-platform framing is well-founded; a
+  command runs askSage as a **separately authorized** capability + an acquisition vehicle (the
+  Army's IL5/cArmy workspace on a $49M IDIQ is the public model).
+- **But the DON mandate is the strongest of the services, and NO Navy command is a public
+  askSage adopter** — the Navy bet on GenAI.mil. SRF-JRMC is early/unusual for the Navy, which
+  raises the bar on **documenting its askSage authority basis** (the §2 `[CONFIRM]` marker).
+- **Vendor change is material:** askSage is now owned by **BigBear.ai** (acquired $250M, closed
+  Dec 31, 2025) and its founder-CTO Nicolas Chaillan departed Feb 28, 2026. Worth a vendor-
+  continuity line in the platform-governance posture and the working-group authority confirm.
+
+*(Surfaced for the operator; no instruction change made without direction.)*
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific
