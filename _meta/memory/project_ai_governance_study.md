@@ -72,6 +72,14 @@ Key facts to carry forward:
   an authoritative AI content evaluator** (anything technical routes to CHENG). `_decisions.md`
   item 15. Routing package (clean instruction + cover + .docx) in `03_instruction/routing/`,
   rebuilt from v0.4.
+- **Instruction v0.5 (2026-06-19):** embedded the real department structure (see
+  [[reference_srf_jrmc_department_structure]]); **DELETED** the overbearing "route technical
+  to CHENG" language — governing principle is **"the AI changes no existing process;
+  responsibility falls along established command lines"** (§3.e capstone). Flipped §5 to a
+  **federated** knowledge base (each dept owns/feeds/controls its repo; 200 owns the technical
+  library + derivative classifier; CIO/ISSM = platform custodian + connection registry, not
+  content). Records/directives generalized to "per the command SORM." Added study
+  `_glossary.md`. `_decisions.md` item 16; routing package rebuilt from v0.5.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

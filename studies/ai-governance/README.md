@@ -142,3 +142,13 @@ studies/ai-governance/
   `instruction-v0.4.md` (§6 generalized + new §6.b, §8.e, §7.b); routing package
   (`instruction-clean.md`, cover sheet, `.docx`) rebuilt from v0.4. Decision logged as
   `_decisions.md` item 15.
+- **2026-06-19 (v0.5)** — Operator supplied the real department structure (Codes 100–1200;
+  no 400/800/1000) and three corrections: (1) the AI changes no existing process —
+  responsibility falls along established lines, so the overbearing "route technical to CHENG"
+  language is deleted and each department is the authoritative evaluator for its own domain
+  (§6.a department table; §3.e capstone); (2) federated knowledge base — each dept owns/feeds/
+  controls its repository, 200 owns the technical library + derivative classifier, CIO/ISSM is
+  platform custodian (§5, §8.b, §8.e); (3) records/directives generalized to the command SORM.
+  `instruction-v0.5.md` + new study `_glossary.md`; routing package rebuilt from v0.5;
+  `_decisions.md` item 16; reference memory added for the department structure. Planned in
+  plan mode (`.claude/plans/let-me-just-tell-zany-corbato.md`, approved).

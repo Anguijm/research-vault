@@ -8,10 +8,11 @@ markers in the instruction to produce v0.3. Section references point into
 
 Status key: ☐ open · ☑ answered.
 
-**Status 2026-06-19:** Section A answered and folded into instruction **v0.3**
-(`03_instruction/instruction-v0.3.md`) and `_decisions.md` (items 8–14). Sections B and
-C are **deferred to the working group** per the operator and remain as `[CONFIRM]` /
-`[MAP TO COMMAND]` markers in v0.3.
+**Status 2026-06-19:** Section A answered and folded into the instruction (now **v0.5**)
+and `_decisions.md` (items 8–14). The **department structure (Codes 100–1200) is now
+provided** and embedded in v0.5 §6.a + `_glossary.md` (closes C3 below except the Technical
+Warrant Holder billets within Code 200). The rest of Sections B and C remain **deferred to
+the working group** as `[CONFIRM]` / `[MAP TO COMMAND]` markers in v0.5.
 
 ---
 
@@ -81,9 +82,11 @@ ANSWER: ______________________________________________
 ☐ **C2. Knowledge-base recertification owner + cadence.** (§5.b)
 ANSWER: ______________________________________________
 
-☐ **C3. Engineering & Quality-Assurance codes + Technical Warrant Holder assignments.** (§6.a)
-The real codes for the CHENG chain — Claude did not assert these.
-ANSWER: ______________________________________________
+☑ **C3. Engineering & Quality-Assurance codes + Technical Warrant Holder assignments.** (§6.a)
+Department structure provided 2026-06-19 and embedded (Code 200 = Engineering & Planning,
+owns the technical library + derivative classifier; full Code 100–1200 map in §6.a /
+`_glossary.md`). Remaining: the specific Technical Warrant Holder billets within Code 200.
+ANSWER: Codes 100–1200 provided; TWH billets within 200 still to be named.
 
 ☐ **C4. Authoritative source-of-record system for out-of-band verification.** (§6.c)
 The non-AI technical library / system of record users verify against.

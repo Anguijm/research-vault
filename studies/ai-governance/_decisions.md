@@ -117,6 +117,29 @@ Folded into instruction **v0.3**.
     instruction **v0.4** (§6 generalized + new §6.b; §8.e adds the designation duty; §7.b
     cross-reference updated). The full domain-to-authority map is a working-group item.
 
+## 2026-06-19 — real department structure + "AI changes no process" (instruction v0.5)
+
+16. **Embedded the real SRF-JRMC department structure and removed the overbearing routing.**
+    Operator provided the command's departments (Codes 100–1200; no 400/800/1000 — see
+    `_glossary.md`). Governing principle, stated by the operator: **the AI does not change
+    existing processes; responsibility falls along established command lines.** So:
+    - **Deleted** the "for technical content the bar is highest / route everything to CHENG"
+      language. A cost estimate doesn't go to the CHENG; 200 doesn't validate 300's schedule;
+      nobody from 1200 runs apprentice training. Each department is the authoritative
+      evaluator for AI content in its own area of responsibility (the §6.a table). No
+      special safety-of-life routing sentence — existing QA and technical authority already
+      enforce that.
+    - **Federated knowledge base** (§5): each department owns, feeds, and controls access to
+      its own repository; Code 200 owns the technical library + derivative classifier; the
+      CIO/ISSM is custodian of the platform (connection registry, access, monitoring), not
+      the content. Operator endorsed the "CIO would want to know which repos are connected"
+      reasoning → light registry, not central content ownership.
+    - **Records/directives generalized** to "in accordance with the command SORM" (operator:
+      "I don't think we need to break everything out this granularly"), not granular
+      Code-1100 mechanics. Added §3.e capstone: this instruction changes no existing
+      authority or line of responsibility.
+    Folded into **instruction v0.5**; routing package rebuilt; `_glossary.md` created.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

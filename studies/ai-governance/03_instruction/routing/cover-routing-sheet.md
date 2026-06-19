@@ -22,14 +22,21 @@ Management Framework so it is defensible on its face.
   and connects to Flank Speed. Convergence to GenAI.mil stays a future option.
 - **Data:** **CUI authorized up to IL5; PII and PHI prohibited** (carved out), as are
   classified and NNPI.
+- **The AI changes no existing process.** It governs askSage use within the command's
+  established authorities, quality, security, and records processes. Where it names who is
+  responsible, it restates the established line.
 - **AI is decision support, not authority:** AI output is authoritatively evaluated by the
-  **cognizant domain authority** (technical → CHENG chain, IT/security → CIO, business/
-  strategic → BSPO, and so on), and **each department designates an authoritative AI content
-  evaluator**. Anything technical always routes to the CHENG chain. AI output is always a
-  non-authoritative draft.
-- **Governance is run through existing structures:** CIO/ISSM own IT and security; CHENG
-  chain owns technical use; Legal concurs on records; **Department Heads are the governance
-  forum, reviewing the use-case inventory quarterly.** No new board.
+  cognizant authority **along existing lines of responsibility** — the department that owns
+  that subject matter (the Code 100–1200 map is embedded in §6.a) — and **each department
+  designates an authoritative AI content evaluator**. AI output is always a non-authoritative
+  draft.
+- **Knowledge base is federated:** each department owns, feeds, and controls access to its
+  own repository; Code 200 owns the technical library and the derivative-classifier
+  screening; the CIO/ISSM is custodian of the platform (connection registry, access,
+  monitoring), not the content.
+- **Governance is run through existing structures:** Legal concurs on records; **Department
+  Heads are the governance forum, reviewing the use-case inventory quarterly.** No new board.
+  Records and directives are managed per the command SORM.
 - **Out of scope:** digital supervision of any person; final technical/quality/contractual
   authority.
 - **Other settled calls:** immediate manual fallback (DDIL); token/compute control demoted
@@ -44,20 +51,17 @@ flags inline as **"Working group to resolve"** (also listed here):
 1. Verify the reference identifiers (refs e, f, g, j) and add the command's cognizant
    cybersecurity, records-management, and security-spillage references.
 2. Record the specific askSage ATO reference and the Flank Speed connection authority (§2).
-3. Name the cognizant Security Classification Guide(s) (§4.e).
-4. Assign the knowledge-base recertification owner and cadence (§5.b).
-5. Confirm the derivative-classifier screening process and name the screened
-   authoritative-corpus source the AI indexes from (§5.c).
-6. Complete the domain-to-authority mapping (technical → CHENG, IT → CIO, business → BSPO,
-   plus the rest of the organization) and confirm the engineering/QA codes and Technical
-   Warrant Holder assignments; each department names its authoritative AI content evaluator
-   (§6.a–b).
-7. Name the authoritative source-of-record system used for out-of-band verification (§6.c).
-8. Name the halt/revoke authority for a rogue agent (§7.e).
-9. Confirm any delegation of accountability (e.g., to the Executive Director) (§8.a).
-10. Align the spillage flow with the command's actual spillage and records-destruction
-    procedures (§11.a).
-11. Verify the data-residency and encryption posture with the cognizant authority (§14.d).
+3. Name the governing SORM / records-management reference (§5.a) and the cognizant Security
+   Classification Guide(s) (§4.e).
+4. Each department names its authoritative AI content evaluator; confirm the Technical
+   Warrant Holder billets within Code 200 (§6). *(The Code 100–1200 structure is already
+   embedded in §6.a.)*
+5. Name the authoritative source-of-record system used for out-of-band verification (§6.d).
+6. Name the halt/revoke authority for a rogue agent (§7.e).
+7. Confirm any delegation of accountability (e.g., to the Executive Director) (§8.a).
+8. Align the spillage flow with the command's actual spillage and records-destruction
+   procedures (§11.a).
+9. Verify the data-residency and encryption posture with the cognizant authority (§14.d).
 
 Beyond these, flag anything that conflicts with existing command process, is not feasible
 as written, or is missing.

@@ -32,3 +32,4 @@
 - [Avoid the em-dash tell](feedback_avoid_em_dash_tell.md) — don't overuse "—" (AI tell); conventional varied punctuation in ALL docs (internal too, "practice like you play"); commas / parentheses / colon / split-sentences per the house guide
 - [Second brain vault](project_second_brain_vault.md) — personal vault at /home/johnanguiano/brain, separate from research vault; staging→promote gate, expand.py topic engine, FACT only at operator promotion
 - [AI governance study](project_ai_governance_study.md) — new studies/ track; landscape research on AI governance to inform operator's SRF-JRMC askSage instruction; gap-analysis pass still pending
+- [SRF-JRMC department structure](reference_srf_jrmc_department_structure.md) — command codes 100–1200 (no 400/800/1000) and their functions; operator-confirmed org
