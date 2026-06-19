@@ -91,6 +91,9 @@ unverified lead (NOT to be cited as fact without confirmation). `pay` = paywalle
 | army-llm-workspace | Army Enterprise LLM Workspace (powered by Ask Sage) | army.mil | 2025-05-15 | 1 | n | army.mil/article/285537 |
 | bigbear-asksage-acq | BigBear.ai finalizes $250M acquisition of Ask Sage | BigBear.ai | 2025-12-31 | 1 | n | bigbear.ai/newsroom/bigbear-ai-finalizes-250m-acquisition-of-ask-sage |
 | chaillan-departure | BigBear.ai personnel update (Chaillan departs) | BigBear.ai IR | 2026-02-28 | 1 | n | ir.bigbear.ai/news-events/press-releases/detail/137/personnel-update |
+| asksage-army-idiq | Ask Sage Army "Decentralized IDIQ" (vehicle) | USASpending (Army) | 2025-02-03 | 1 | n | PIID W9128Z25DA001 (via lib/usaspending.py) |
+| asksage-navy-nswc-corona | Ask Sage task order — NSWC Corona ($475K) | USASpending (DON) | 2025-07-28 | 1 | n | usaspending.gov/award/CONT_AWD_N6426725F0007_9700_W9128Z25DA001_9700 |
+| asksage-navy-nrl | Ask Sage task order — Naval Research Lab ($24.75K) | USASpending (DON) | 2026-03-13 | 1 | n | usaspending.gov/award/CONT_AWD_N0017326F0400_9700_W9128Z25DA001_9700 |
 
 ## Operator pull list (paywalled / subscription)
 

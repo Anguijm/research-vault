@@ -163,7 +163,10 @@ studies/ai-governance/
   GenAI.mil mandate, and do any Navy activities use it? Two web-research streams →
   `01_sources/asksage-genai-mil-adoption.md` + ledger rows. Findings: GenAI.mil is the enterprise
   DEFAULT, not an exclusive ban (so dual-platform is sound; askSage runs as a separately
-  authorized capability + acquisition vehicle, e.g. the Army's IL5/IDIQ workspace); the DON
-  mandate is the strongest of the services and **no Navy command is a public askSage adopter**
-  (SRF-JRMC is early/unusual); **BigBear.ai acquired askSage ($250M, closed 2025-12-31) and
-  founder Chaillan departed Feb 2026.** Context note in `_decisions.md`.
+  authorized capability + acquisition vehicle, e.g. the Army's IL5/IDIQ workspace);
+  **BigBear.ai acquired askSage ($250M, closed 2025-12-31) and founder Chaillan departed Feb
+  2026.** Then a USASpending check via `lib/usaspending.py` (the news sweep had missed this):
+  Ask Sage has 46 contract actions + the Army "Decentralized IDIQ" (W9128Z25DA001), and **two
+  are Navy task orders off that IDIQ — NSWC Corona ($475K) and Naval Research Lab ($24.75K)** —
+  the concrete vehicle a Navy command (likely incl. SRF-JRMC) uses. Source pack Part 4 +
+  context note in `_decisions.md`.

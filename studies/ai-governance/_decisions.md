@@ -167,9 +167,13 @@ implications for the §2 authority-basis `[CONFIRM]`:
   GenAI.mil "or other approved systems." So the v0.6 dual-platform framing is well-founded; a
   command runs askSage as a **separately authorized** capability + an acquisition vehicle (the
   Army's IL5/cArmy workspace on a $49M IDIQ is the public model).
-- **But the DON mandate is the strongest of the services, and NO Navy command is a public
-  askSage adopter** — the Navy bet on GenAI.mil. SRF-JRMC is early/unusual for the Navy, which
-  raises the bar on **documenting its askSage authority basis** (the §2 `[CONFIRM]` marker).
+- **The DON mandate is the strongest of the services, BUT Navy commands ARE buying askSage.**
+  USASpending (authoritative; the news sweep missed this) shows **two Navy task orders** to Ask
+  Sage: **NSWC Corona** ($475K, N6426725F0007) and **Naval Research Laboratory** ($24.75K,
+  N0017326F0400). Both are **task orders against the Army's Ask Sage "Decentralized IDIQ"
+  (W9128Z25DA001)** — the concrete acquisition vehicle. That is almost certainly how SRF-JRMC
+  acquires askSage too, and it is exactly what the §2 `[CONFIRM]` authority-basis marker should
+  record (the Army Decentralized IDIQ + the task-order PIID).
 - **Vendor change is material:** askSage is now owned by **BigBear.ai** (acquired $250M, closed
   Dec 31, 2025) and its founder-CTO Nicolas Chaillan departed Feb 28, 2026. Worth a vendor-
   continuity line in the platform-governance posture and the working-group authority confirm.

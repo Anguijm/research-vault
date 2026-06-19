@@ -73,12 +73,42 @@ close but departed "for personal reasons" effective Feb 28, 2026.** askSage is n
   2025; ~19,000 users "in less than 45 days" (Army CIO Garciga, Breaking Defense). Sources above.
 - **CDAO + all COCOMs + Joint Staff + OSD — CONFIRMED collectively** (the $10M expansion); **no
   individual COCOM named.**
-- **U.S. NAVY — NO Navy-command askSage adopter found in any fetched source.** Searched NAVSEA,
-  NAVWAR, NAVAIR, NIWC, fleet commands, shipyards/RMCs. The Navy's enterprise bet is **GenAI.mil**
-  (Gemini/xAI/OpenAI/Anthropic), a separate Pentagon platform — askSage appears in Navy coverage
-  only as a *legacy* system, never as a Navy adoption.
+- **U.S. NAVY — the news sweep found no adopter, but USASpending DID (see Part 4 — this is a
+  correction).** Open-source *news* searched (NAVSEA, NAVWAR, NAVAIR, NIWC, fleet commands,
+  shipyards/RMCs) surfaced nothing, and the Navy's enterprise bet is **GenAI.mil** — but the
+  authoritative federal award data shows **two Navy Ask Sage task orders** (NSWC Corona; Naval
+  Research Laboratory). The news-only method missed them; the award data caught them.
 - **Defense Health Agency — PROBABLE, not verified** (press-release headline exists; body 403-blocked).
 - **Air Force/Space Force — no named adopter** (vendor "all-branches" marketing only).
+
+## Part 4 — USASpending award data (AUTHORITATIVE; corrects Part 3)
+
+Queried 2026-06-19 via the vault's `_scripts/lib/usaspending.py` API client (boring, citable,
+not site-scraping), recipient = "Ask Sage" / "ASK SAGE, INC." (UEI **W9X4EWLUBAW1**), award
+types contracts + IDVs, 2019→present. **Result: 46 contract actions + 1 IDV vehicle.** Total
+DoD footprint is broad: heavy **Army** and **Air Force** task orders, **Defense Health Agency**,
+**Missile Defense Agency**, and a $0 **Coast Guard (DHS)** action. Largest single: PIID
+**W9128Z25FA003**, ~$10.9M, Army, Mar 2025.
+
+**The acquisition vehicle (FACT):** the Army holds an Ask Sage **"Decentralized IDIQ"**, PIID
+**W9128Z25DA001** (Department of the Army, effective 2025-02-03). The "decentralized" structure
+lets any DoD activity place its own task order against it. This is the concrete mechanism behind
+"how DoD activities run askSage."
+
+**Two U.S. NAVY task orders (FACT — corrects the Part 3 news finding of "none"):**
+- **NSWC Corona Division** — PIID **N6426725F0007**, **$475,000**, awarding office **NAVAL
+  SURFACE WARFARE CENTER**, POP California. Description: *"ASK SAGE ARMY DECENTRALIZED IDIQ TASK
+  ORDER CLIN 0013 FOR NSWC, CORONA DIVISION."* (Task order off the Army IDIQ W9128Z25DA001.)
+  https://www.usaspending.gov/award/CONT_AWD_N6426725F0007_9700_W9128Z25DA001_9700/
+- **Naval Research Laboratory (NRL)** — PIID **N0017326F0400**, **$24,750**, awarding office
+  **NAVAL RESEARCH LABORATORY**, POP Maryland. Description: *"TOKENS FOR ORGANIZATION 6300 -
+  MATERIAL SCIENCE AND TECHNOLOGY."* (Also a task order off the Army IDIQ W9128Z25DA001.)
+  https://www.usaspending.gov/award/CONT_AWD_N0017326F0400_9700_W9128Z25DA001_9700/
+
+**Assessment:** both Navy buys are **token purchases placed as task orders against the Army's
+Ask Sage Decentralized IDIQ** — i.e., a Navy activity rides the Army's enterprise vehicle rather
+than standing up its own contract. That is the most likely path for SRF-JRMC's askSage as well,
+and it is exactly what the §2 `[CONFIRM]` authority-basis marker should capture.
 
 ## Assessment — what this means for the study / SRF-JRMC
 
