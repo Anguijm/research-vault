@@ -152,3 +152,10 @@ studies/ai-governance/
   `instruction-v0.5.md` + new study `_glossary.md`; routing package rebuilt from v0.5;
   `_decisions.md` item 16; reference memory added for the department structure. Planned in
   plan mode (`.claude/plans/let-me-just-tell-zany-corbato.md`, approved).
+- **2026-06-19 (v0.6)** — Two operator corrections: (1) the command uses **both askSage and
+  GenAI.mil** (not standalone) — §2 reframed with the recommended split (GenAI.mil for general
+  questions, askSage for agentic work, prototype on GenAI.mil to save askSage tokens);
+  instruction stays askSage-specific. (2) **Removed the entire §2 "out of scope" block** as
+  wordy/redundant (data stays in §4, the "AI is not an authority" principle stays in §3/§6;
+  digital supervision dropped). `instruction-v0.6.md`; routing package + cover sheet rebuilt;
+  `_decisions.md` items 17–18; memory updated. Planned + approved in plan mode.

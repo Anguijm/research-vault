@@ -18,8 +18,10 @@ Management Framework so it is defensible on its face.
 
 ## What is already decided (please do not relitigate without a substantive reason)
 
-- **Platform:** command-standalone **askSage** (not GenAI.mil); askSage is ATO'd at IL5
-  and connects to Flank Speed. Convergence to GenAI.mil stays a future option.
+- **Platforms:** the command uses **both askSage and GenAI.mil**. Recommended split:
+  GenAI.mil for general questions, **askSage for agentic work** (prototype agents/prompts on
+  GenAI.mil first to save askSage tokens). askSage is ATO'd at IL5 and connects to Flank
+  Speed; this instruction governs askSage, GenAI.mil runs under its DoD enterprise governance.
 - **Data:** **CUI authorized up to IL5; PII and PHI prohibited** (carved out), as are
   classified and NNPI.
 - **The AI changes no existing process.** It governs askSage use within the command's
@@ -37,8 +39,6 @@ Management Framework so it is defensible on its face.
 - **Governance is run through existing structures:** Legal concurs on records; **Department
   Heads are the governance forum, reviewing the use-case inventory quarterly.** No new board.
   Records and directives are managed per the command SORM.
-- **Out of scope:** digital supervision of any person; final technical/quality/contractual
-  authority.
 - **Other settled calls:** immediate manual fallback (DDIL); token/compute control demoted
   to an administrative annex with a mission-critical override; aggregation handled through
   the existing Security Classification Guide and spillage procedures.

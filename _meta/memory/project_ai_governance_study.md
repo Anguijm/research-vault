@@ -80,6 +80,14 @@ Key facts to carry forward:
   library + derivative classifier; CIO/ISSM = platform custodian + connection registry, not
   content). Records/directives generalized to "per the command SORM." Added study
   `_glossary.md`. `_decisions.md` item 16; routing package rebuilt from v0.5.
+- **Instruction v0.6 (2026-06-19) — DUAL-PLATFORM (supersedes the earlier "standalone askSage,
+  not GenAI.mil" framing).** The command uses **both askSage and GenAI.mil**. Recommended
+  split: GenAI.mil for general questions; askSage for agentic work; prototype agents/prompts
+  on GenAI.mil first to save askSage tokens. Instruction stays askSage-specific (GenAI.mil
+  under DoD enterprise governance). Also **removed the §2 "out of scope" block entirely**
+  (digital supervision no longer stated — operator: nobody uses AI to supervise; residual MLA
+  concern still covered by §7.c least-privilege); prohibited data stays in §4. `_decisions.md`
+  items 17–18; routing package rebuilt from v0.6.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

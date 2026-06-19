@@ -140,6 +140,23 @@ Folded into instruction **v0.3**.
       authority or line of responsibility.
     Folded into **instruction v0.5**; routing package rebuilt; `_glossary.md` created.
 
+## 2026-06-19 — dual-platform (askSage + GenAI.mil); trim §2 scope (instruction v0.6)
+
+17. **The command uses BOTH askSage and GenAI.mil — supersedes the standalone framing of
+    item 8.** Recommended split: **GenAI.mil for general questions; askSage for agentic work.**
+    GenAI.mil may also be used to develop/refine agents and agentic-workflow prompts before
+    spending askSage tokens (a token-economy practice; added to Annex A). GenAI.mil is not yet
+    mature enough to host the command's agentic work, so askSage carries it for now, with
+    transfer to GenAI.mil intended when it can. **The instruction stays askSage-specific**
+    (GenAI.mil runs under its DoD enterprise governance); §2 acknowledges both and the split.
+18. **Removed the entire §2 "Explicitly out of scope" block** (operator: the prohibited items
+    are wordy and "no one thinks an AI would be used to supervise someone"). No substantive
+    loss: prohibited data stays fully in §4; "AI output is always a draft / not an authority"
+    stays in §3.a and §6.a. **Digital supervision (item 5) is therefore no longer stated in the
+    instruction** — deemed unnecessary; the residual Master Labor Agreement / SOFA concern is
+    still covered by least-privilege / permission-inheritance (§7.c). Item 5 stays as the
+    historical record; this is the supersession note.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific
