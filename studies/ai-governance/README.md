@@ -127,3 +127,11 @@ studies/ai-governance/
   Section B (confirmations) and C (command-specific code/role mappings) deferred to the
   working group; they remain as [CONFIRM]/[MAP TO COMMAND] markers. Decisions logged in
   `_decisions.md` items 8–14.
+- **2026-06-19 (routing package)** — Built the working-group routing artifact in
+  `03_instruction/routing/`: a clean instruction (`instruction-clean.md`, study
+  scaffolding stripped, markers reframed as "Working group to resolve" callouts), a
+  one-page cover/comment sheet (`cover-routing-sheet.md`), and a combined Word document
+  (`SRF-JRMC-INST-5239.1-DRAFT-working-group.docx`, cover + page break + instruction)
+  for track-changes markup. Freshened all three main products (gap-analysis F.5 marked
+  the strategic questions resolved; landscape report given a downstream pointer) and
+  pushed the whole study to the GitHub backup (HBR PDFs excluded for copyright).
