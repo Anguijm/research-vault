@@ -224,6 +224,24 @@ implications for the §2 authority-basis `[CONFIRM]`:
     and a Department Head approval block. Draft for working-group adoption (cover-sheet item 10 now
     points to it). The §15.c instruction marker stays open (the WG formally adopts the template).
 
+## 2026-06-21 — Gemini advisory reconciliation
+
+23. **Reconciled the Gemini "Finalizing the askSage Framework" advisory** (`report.txt` from the
+    operator's Drive; saved to `01_sources/gemini-advisory-2026-06-finalizing-askSage-framework.txt`;
+    full disposition in `02_synthesis/gemini-advisory-reconciliation.md`). Verified Gemini's claims
+    via 2 web subagents + USASpending. **Operator decisions reaffirmed (firm): PII/PHI stay out;
+    NNPI completely off limits** — both Gemini reopenings REJECTED (the DHA-PHI and U-NNPI/Flank-Speed
+    capabilities are real-ish but it's the command's deliberate risk decision; the IL5-PHI superlative
+    is vendor-only). **Verified + to fold (v0.10, pending operator go-ahead):** the command-specific
+    references (SECNAVINST 5239.19A, 5510.36B + SECNAV M-5510.36 manual, SECNAV M-5210.1, OPNAVINST
+    3120.32D = the SORM, 36 CFR 1229.10/.12) and the §11.a emergency-destruction authority (36 CFR
+    1229.10). **Correct/flag, don't import:** OPNAVSTAFFINST 5510.168 (wrong instrument — OPNAV-staff
+    cyber policy, not command spillage authority); askSage "IL6/Top Secret/classified" (vendor-only,
+    irrelevant — we're IL5); Cattle Drive is run by **DON CIO**, not PEO Digital. **Declined (Gemini
+    constructs vs. prior decisions):** the "Risk Exposure Score" math (we map to existing Navy
+    Level-I/critical categories, item 16) and the "Token Efficiency Ratio." Contract data (the Army
+    SBIR Phase III IDIQ + task orders) verified accurate against USASpending.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

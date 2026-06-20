@@ -1,0 +1,196 @@
+# Finalizing the Command Governance Framework for the askSage AI Platform: A Comprehensive Advisory and Strategic Analysis for SRF-JRMC
+The rapid, localized integration of artificial intelligence within ship repair and maintenance activities presents a profound governance challenge for the U.S. Naval Ship Repair Facility and Japan Regional Maintenance Center (SRF-JRMC). While generative AI capabilities promise to reclaim significant workforce hours and streamline administrative and technical workflows, they must be deployed within a highly regulated cybersecurity and records management framework.
+As the command reviews the draft of SRF-JRMC Instruction 5239.1, establishing a defensible, compliant, and operationally resilient posture requires resolving a series of open regulatory placeholders, validating platform accreditations, and aligning with Navy-wide enterprise directives. This report provides the necessary policy determinations, technical resolutions, and strategic recommendations to transition the draft instruction into an executable, legally compliant command directive.
+## Executive Assessment of the Localized AI Governance Landscape
+Ship repair operations at SRF-JRMC require extreme operational agility, yet they must be executed under strict adherence to technical specifications, safety protocols, and information security standards. The command's dual-platform strategy—employing both GenAI.mil and the askSage platform—leverages the distinct strengths of each tool.
+While GenAI.mil serves as the enterprise default environment for general inquiry and basic research, askSage is retained to execute specialized, agentic workflows. These agentic workflows involve multi-step reasoning, direct file ingestion from naval network shares, and the synthesis of complex engineering and logistics drafts.
+However, maintaining a decentralized, platform-specific instruction for askSage requires a robust legal and technical defense. This defense is necessary because the Department of the Navy (DON) has enacted strict consolidation mandates designed to eliminate redundant, non-enterprise software environments.
+By defining clear human-in-the-loop technical boundaries, establishing strict data controls, and aligning localized procedures with national and departmental policies, this instruction provides the necessary framework to defend the command's use of askSage.
+## Reference Validation and Federal Compliance Mappings
+To ensure that SRF-JRMC Instruction 5239.1 is defensible on its face, the working group must verify and formally integrate several federal, departmental, and command-level references. These references establish the legal and regulatory boundaries for cybersecurity, records retention, and information security.
+### Verified Reference Identifiers
+The working group has verified the draft's placeholder references against active military and federal directives.
+ * **DoD Instruction 5400.19**: Promulgated on July 28, 2025, by the Office of the Assistant to the Secretary of Defense for Public Affairs, this instruction establishes the policy governance framework and limitations for utilizing artificial intelligence within DoD public affairs activities. It outlines five guiding principles for AI utilization: mission relevance, understanding benefits and limitations, upholding legal and ethical standards, maintaining security and responsible AI use, and establishing strict transparency and oversight. The directive requires that any visual or textual information created or edited with generative AI for public release must carry an explicit disclosure citing the technology's use, and that components must implement human oversight plans to review and approve all outputs prior to release.
+ * **CDAO Generative AI Guidelines**: The Chief Digital and Artificial Intelligence Officer (CDAO) issued the memorandum *Guidelines and Guardrails to Inform Governance of Generative Artificial Intelligence* on July 12, 2024. This policy has since been operationalized through the public launch of the CDAO "GenAI Toolkit". The toolkit progresses sequentially through the product development lifecycle, providing project leaders with 33 specialized risk assessment tools designed to manage generative AI deployments. CDAO co-chairs the White House Chief AI Officer Council Working Group on Risk Management to coordinate compliance with Office of Management and Budget (OMB) Memorandum M-24-10 and National Security Memorandum 25 (NSM-25).
+ * **DON CIO GenAI.mil Guidance**: The Assistant Secretary of the Navy for Research, Development, and Acquisition (ASN(RD&A)) and the DON Chief Information Officer formally issued a joint memorandum on January 28, 2026, designating GenAI.mil as the Naval Enterprise IT Service for Controlled Unclassified Information (CUI) and Impact Level 5 (IL5) workloads. A subsequent DON CIO memorandum, issued on March 16, 2026, details the Department's strategy for accelerating AI adoption, utilizing free training resources (such as Google Skills, Microsoft Copilot, LinkedIn Learning, and the Naval Postgraduate School's Harnessing AI Course), and measuring exact time savings.
+ * **36 CFR Part 1229**: Under the National Archives and Records Administration (NARA) regulations, Part 1229 governs the emergency disposal of federal records. Specifically, **36 CFR § 1229.10** dictates the mandatory notification and joint determination procedures required when records present a continuing menace to human health, life, or property. Additionally, **36 CFR § 1229.12** provides the legal authority to destroy records outside the territorial limits of the United States during a state of war or imminent hostile action, requiring a formal report to NARA within six months of the destruction event. These emergency provisions are critical to the command's security spillage cleanup workflow.
+### Integration of Command-Specific References
+To integrate localized administrative, security, and cyber incident processes, the working group must incorporate the following specific command-level and departmental policies:
+| Regulatory Area | Authoritative Policy Document | Core Governance Mandate |
+|---|---|---|
+| **Cyber Incident Handling** | **SECNAVINST 5239.19A**  | Establishes Navy computer network incident response and reporting requirements, defining electronic spillage as the unauthorized introduction of classified data onto lower-classification systems. |
+| **Information Security** | **SECNAVINST 5510.36B**  | Directs the Department of the Navy Information Security Program (ISP), prescribing mandatory safeguarding, marking, and destruction procedures for classified and CUI assets. |
+| **Records Management** | **SECNAV Manual M-5210.1**  | Establishes the lifecycle management (creation, maintenance, use, and disposition) of all Department of the Navy records, incorporating NARA-approved disposition schedules listed by Standard Subject Identification Code (SSIC). |
+| **Command Administration** | **OPNAVINST 3120.32D**  | Serves as the Standard Organization and Regulations Manual (SORM) of the U.S. Navy, outlining command responsibilities, unit organization, watchstanding, and reporting regulations. |
+## Contractual and Accreditation Mapping for the askSage Platform
+The operational legitimacy of the askSage platform within SRF-JRMC depends on its compliance with Department of Defense cloud security standards and established contracting vehicles.
+The platform operates under a valid Authority to Operate (ATO) at Impact Level 5 (IL5) and Impact Level 6 (IL6), allowing it to process Controlled Unclassified Information and classified data within accredited enclaves. It is hosted securely within the Army’s cArmy Cloud environment and implements label-based access control (LBAC) to enforce strict Zero Trust data segregation.
+To comply with departmental documentation standards, the instruction must cite the primary acquisition vehicle and its verified usage across Navy activities:
+| Contract Attribute | Authoritative Contracting Data | Operational Relevance for SRF-JRMC |
+|---|---|---|
+| **Primary IDIQ Vehicle** | **W9128Z25DA001** (SBIR Phase III IDIQ)  | Awarded to Ask Sage, Inc. (UEI W9X4EWLUBAW1) in February 2025 by the Army Rapid Capabilities and Critical Technologies Office (RCCTO). Features a $49 million ceiling and a five-year ordering period ending on February 2, 2030. |
+| **Navy Task Order (NRL)** | **N0017326F0400** (Naval Research Laboratory)  | Awarded in March 2026 by the NRL, obligating $24,750 for askSage tokens to support Organization 6300 (Material Science and Technology) with an end date of June 30, 2030. Directly demonstrates active naval contract use. |
+| **DoD Task Order (ACC)** | **FA489025F0102** (Air Combat Command)  | Awarded in September 2025 by ACC AMIC, obligating $49,500 for an askSage annual subscription and 100M tokens/month enterprise pack to support ACC A5/8/9. |
+| **Army Task Order (ASA)** | **W9128Z25FA004** (Acquisition Support Center)  | Awarded in March 2025, obligating up to $81,120 for an annual subscription in support of ASA(ALT) HQ. |
+The connection between the askSage platform and the Navy’s Flank Speed tenant is authorized under security parameters managed by PEO Digital. Because Flank Speed operates as a zero trust environment, authentication is federated via Naval Identity Services (NIS) and Azure Virtual Desktop (AVD/Nautilus), ensuring that data transfers do not bypass the Navy's established network boundaries.
+## Command Billet and System Authority Mapping
+To integrate askSage into the command's administrative structure without creating redundant oversight bodies, the instruction must map system-related responsibilities directly to the roles defined in the command's Standard Organization and Regulations Manual (SORM), OPNAVINST 3120.32D.
+```
+                    
+                  (Overall Legal Accountability)
+                                │
+                   
+             (Delegated Execution & Governance)
+                                │
+         ┌──────────────────────┼──────────────────────┐
+         ▼                      ▼                      ▼
+               
+ (Good Order, Training,  (Technical Warrant,    (Platform Custody,
+    and Unit Bills)         DFS, and TWH)        Halt & Revocation)
+         │                      │                      │
+         │                      └──────────┬───────────┘
+         ▼                                 ▼
+ ──────────► [ Authoritative Evaluators ]
+ (Repository Control,              (Out-of-Bound Verification,
+  Plan Implementation)               and Prompt Validation)
+
+```
+The table below outlines the precise delegation of authorities and technical roles required to finalize Section 6 and Section 8 of the command instruction:
+| SORM Billet / Role | Delegated Authority / Billet Assignment | Core Platform Responsibility |
+|---|---|---|
+| **Commanding Officer (CO)** | Commanding Officer, SRF-JRMC | Retains ultimate legal accountability for all command-directed outcomes, including the safety, compliance, and quality of AI-supported maintenance. |
+| **Executive Director (ED)** | Executive Director, SRF-JRMC  | Receives delegated authority from the CO to oversee day-to-day administrative governance, maintain the command-wide AI use-case inventory, and chair the quarterly Department Heads governance review forum. |
+| **Executive Officer (XO)** | Executive Officer, SRF-JRMC  | Coordinates command-wide training (Section 13) and ensures that immediate manual reversion plans (Section 12) are integrated into unit bills per Chapter 6 of the SORM. |
+| **Chief Engineer (CHENG)** | Waterfront Technical Warrant Holder (NSA CHENG)  | Holds exclusive technical warrant authority under the Joint Fleet Maintenance Manual. Must formally concur on any AI use case touching technical specifications, tag-outs, or hull integrity, and owns the technical human-in-the-loop review process. |
+| **Information System Security Manager (ISSM)** | ISSM / Command Duty IT Watch  | Acts as the platform custodian. Holds the absolute authority to immediately halt and revoke an active AI agent's access in the event of erratic behavior, anomalous loops, or suspected security compromise. |
+| **Department Heads (Codes 100–1200)** | Department Heads | Own, maintain, and control access to their respective SharePoint document repositories. Responsible for proposing use cases, implementing local governance plans, and certifying quarterly manual reversion capabilities. |
+| **Authoritative AI Content Evaluator** | Designated Subject Matter Experts (SMEs) | Appointed in writing by Department Heads. Responsible for performing out-of-band verification of AI-generated technical text against official technical libraries (e.g., SUBMEPP, JFMM, NAVSEA Standard Items) before official release. |
+## The Enterprise Compliance Paradox and Cattle Drive Risk
+A major administrative challenge for the instruction is the potential conflict with the joint ASN(RD&A) and DON CIO memorandum issued on January 28, 2026. This memorandum formally designated GenAI.mil as the mandated enterprise generative AI platform for Controlled Unclassified Information (CUI) and Impact Level 5 (IL5) workloads.
+Crucially, the directive ordered all Navy commands and activities to transition their generative AI operations to GenAI.mil **no later than April 30, 2026**. Furthermore, it initiated the consolidation of redundant software environments under the Navy's **Cattle Drive Initiative**.
+Because the April 30, 2026 transition deadline has passed, the command’s ongoing operation of askSage represents a potential compliance exception. To defend this posture against Cattle Drive audits, the command must document a clear "agentic" capability justification.
+While GenAI.mil currently provides a robust conversational chat interface, secure file uploads (PDF, DOCX, TXT, PPTX), and basic Retrieval Augmented Generation (RAG), it lacks the advanced agentic autonomy required for complex, multi-step shipyard planning.
+The askSage platform excels in these specific workflows, offering label-based access control, multi-model flexibility (utilizing Azure Gov OpenAI, Mistral, Google Gemini, and AWS Bedrock), and the ability to operate across geographically redundant environments.
+To maintain compliance, the CIO must register the askSage use case with the DON CIO GenAI Task Force, citing this technical gap as the justification for a temporary waiver. The command's long-term plan must be to transfer these agentic workflows to GenAI.mil once the enterprise platform matures to support equivalent autonomous capabilities.
+## Technical Tensions in Controlled Data Enclaves
+Evaluating the data boundaries in the draft instruction reveals two technical developments that require updating the policy's restrictions.
+### Reconciling the PHI/PII Restriction
+The draft instruction establishes a strict carve-out prohibiting Personally Identifiable Information (PII) and Protected Health Information (PHI) from being processed by askSage, aligning with GenAI.mil enterprise constraints.
+However, on December 9, 2025, Ask Sage signed an enterprise-wide agreement with the Defense Health Agency (DHA) to deploy generative AI capabilities across clinical, administrative, and operational workflows. Under this agreement, Ask Sage became the first and only generative AI platform to receive an Impact Level 5 (IL5) authorization to process Protected Health Information (PHI).
+Additionally, its approved federal Privacy Impact Assessment (PIA) outlines the secure collection of limited user PII (names, email addresses, and login timestamps) to support authentication, usage monitoring, and auditing.
+The working group must update Section 4.b to clarify that the prohibition of PHI and PII is a localized command risk-tolerance decision—driven by a desire to prevent compilation and aggregation risks on industrial ship repair networks—rather than a platform-level security limitation of askSage itself.
+### Upgrading the Naval Nuclear Propulsion Information Boundary
+Historically, Naval Nuclear Propulsion Information (NNPI) has been strictly isolated on dedicated, physically separated servers. Consequently, Section 4.b of the draft instruction implements a blanket prohibition on processing NNPI.
+However, in late 2024, PEO Digital and NAVSEA 08 successfully deployed Microsoft Purview Information Protection (MPIP) sensitivity labels and object-level security controls within the Flank Speed tenant. This security update allows authorized users within the NNPI Community of Interest (COI) to migrate, store, and collaboratively process Unclassified NNPI (U-NNPI) directly within the secure Flank Speed cloud.
+By maintaining an absolute ban on NNPI, the draft instruction prevents the command from leveraging agentic AI to automate and optimize nuclear ship and submarine maintenance.
+The working group should modify Section 4.b to permit the ingestion of U-NNPI into askSage, provided that:
+ 1. The specific askSage instance is fully integrated with Flank Speed's MPIP sensitivity labeling system.
+ 2. The workflow complies with the data migration and user requirements managed by the local NNPI Champions and the U-NNPI Knowledge Center.
+## Electronic Spillage Incident Handling and Emergency Records Destruction
+A major compliance issue in the draft instruction is the conflict between security spillage remediation and federal records retention laws.
+Under standard operating procedures, all automated prompts, agentic chain-of-thought sequences, and interaction logs represent federal records. These logs serve as decision-support artifacts that must be permanently retained for compliance and potential investigations (such as JAGMAN or safety mishap reviews) in accordance with SECNAV M-5210.1 and SECNAVINST 5239.19A.
+However, if a user accidentally enters classified national security information or NNPI into an unclassified askSage session, this action constitutes an electronic spillage. The spilled material immediately contaminates the IL5 environment, creating a severe cybersecurity violation.
+Under OPNAVSTAFFINST 5510.168, the ISSM must immediately isolate the session logs and suspend the user's account pending a Preliminary Inquiry (PI) by the Facility Security Officer (FSO), with the violation formally recorded in the Defense Counterintelligence and Security System (DISS).
+This creates a conflict: records management laws require preserving the logs, while cybersecurity and information security program directives (SECNAVINST 5510.36B) mandate the immediate destruction of the spilled classified data to eliminate the security threat.
+To resolve this conflict, the instruction must leverage the legal authority of **36 CFR § 1229.10** (emergency destruction of records posing a continuing menace) and the emergency destruction provisions of **SECNAV M-5210.1 (Part I, Section 5)**.
+By declaring the contaminated unclassified database index a "continuing menace to property or national security," the Commanding Officer is authorized to bypass normal retention timelines and execute immediate destruction of the spilled data.
+The command must execute this dual-track incident response workflow:
+```
+
+                 │
+                 ├──► 1. User halts the active session immediately.
+                 │       (CRITICAL: User must NOT delete the prompt locally ).
+                 │
+                 ├──► 2. User immediately notifies the Security Manager and ISSM.
+                 │
+                 [span_45](start_span)[span_45](end_span)[span_49](start_span)[span_49](end_span)├──► 3. ISSM isolates the session and preserves logs for forensics.[span_139](start_span)[span_139](end_span)[span_140](start_span)[span_140](end_span)
+                 │
+                 ├──► 4. FSO initiates a Preliminary Inquiry (PI) and records in DISS.[span_141](start_span)[span_141](end_span)[span_142](start_span)[span_142](end_span)
+                 │
+                 ├──► 5. CO & ISSM declare the spilled record a "continuing menace".
+                 │       (Legal authority: 36 CFR 1229.10 / SECNAV M-5210.1 Part I, Sec 5 )
+              [span_136](start_span)[span_136](end_span)[span_138](start_span)[span_138](end_span)   │
+                 ├──► 6. Execute immediate destruction of affected database indexes.[span_143](start_span)[span_143](end_span)
+                 │
+                 └──► 7. SAORM submits a joint emergency disposal report to NARA within 6 months.
+
+```
+## Localized NIST-Aligned Departmental Information-Governance Template
+To satisfy the requirements of Section 15 of the instruction, each code must complete and submit a Departmental Information-Governance Plan before being granted access to the askSage platform. This plan implements the core functions of the NIST AI Risk Management Framework (Govern, Map, Measure, Manage) to establish a localized, defensible risk posture.
+### askSage Departmental Information-Governance Plan
+**Department Name & Code**: _______________
+**Department Head**: _______________
+**Date of Submission**: _______________
+The department must complete and submit this plan to the CIO and ISSM. No askSage accounts will be provisioned for departmental personnel until this plan is approved by the Command Governance Forum.
+```
+┌─────────────────────────────────────────────────────────────┐
+│                       NIST AI RMF                           │
+├───────────────┬───────────────┬───────────────┬─────────────┤
+│    GOVERN     │      MAP      │    MEASURE    │   MANAGE    │
+│ Establish Roles│ Context & Risk│ Quantify &    │ Treat Risk  │
+│  & Appoint    │ Ingestion map │ Validate      │ & Fallback  │
+│  Evaluators   │  (No PII/PHI) │ (Verify $R_E$)│    (DDIL)   │
+└───────────────┴───────────────┴───────────────┴─────────────┘
+
+```
+The table below outlines the specific implementation controls, quantitative metrics, and verification schedules required for departmental validation:
+| NIST AI RMF Core Function  | Local Implementation Controls and Departmental Requirements | Verification Billet & Cadence |
+|---|---|---|
+| **GOVERN**  | **Accountability and Evaluators**: Identify the designated primary and alternate Authoritative AI Content Evaluators who will review and sign off on all departmental AI drafts.
+• *Primary Evaluator*: _______________
+• *Alternate Evaluator*: _______________. | **Department Head**
+Annually and upon billet turnover. |
+| **MAP**  | **Approved Use Cases and Risk Matrix**: Document the specific maintenance, logistical, or planning use cases approved for this department. List the calculated Risk Exposure Score (R_E) for each. High-risk use cases (R_E \ge 15.0) must include a documented mitigation plan. | **Department Head & CIO**
+Quarterly review in Governance Forum. |
+| **MAP** | **Data Boundaries and Repository Map**: Identify the specific SharePoint folder or network share to be connected as the department's askSage repository.
+• *Authorized Folder URL*: _______________
+• Confirm that no PII, PHI, or classified data exists on this share. | **Department Records Officer**
+Monthly audit. |
+| **MEASURE** | **Evaluation and Verification Log**: Establish an out-of-band verification procedure. All AI-generated technical references must be logged and cross-checked against the official technical library (e.g., SUBMEPP). Drafts cannot be integrated into official work packages without this physical sign-off. | **Authoritative Evaluator**
+Continuous; per-task basis. |
+| **MEASURE** | **Outcome and Time-Savings Reporting**: Mandate that all personnel track baseline versus AI-assisted task completion times. Departmental representatives must compile this data and submit it to the DON CIO via the official AI Time Savings Survey portal. | **Departmental AI Champion**
+Monthly submission. |
+| **MANAGE** | **Operational Fallback (DDIL Plan)**: Document the department’s immediate manual reversion procedure. Detail how the department will maintain full production capability if connectivity to the askSage cloud is lost. Maintain physical or offline master templates of all automated scripts. | **Waterfront Project Manager**
+Quarterly manual reversion test. |
+| **MANAGE** | **Training and Access Gating**: Maintain a registry of department personnel. Verify that each user has completed the mandatory "Responsible AI and Use" training, which includes demonstrating an active AI hallucination to inoculate against automation bias. | **Department Training Coordinator**
+Prior to initial login; annually. |
+### Quantitative Implementation Metrics
+To support the NIST "Measure" function, the command must utilize two mathematical models to evaluate risk exposure and financial efficiency:
+#### Risk Exposure Score (R_E)
+To classify the risk level of proposed use cases, the department must calculate the Risk Exposure Score:
+Where:
+ * L represents the likelihood of an AI failure, erroneous generation, or hallucination (rated from 1.0 to 5.0).
+ * I_{max} represents the maximum potential impact of that failure on shipyard operations, human safety, or ship seaworthiness (rated from 1.0 to 5.0).
+*Any use case returning a Risk Exposure Score R_E \ge 15.0 is classified as High-Risk, requiring a real-time, human-in-the-loop structured approval gate for all actions.*
+#### Token Efficiency Ratio (\eta_T)
+To evaluate the financial efficiency of agentic workflows and prevent compute waste, the department must track the Token Efficiency Ratio:
+Where:
+ * T_{base} is the human labor hours required to perform the task manually.
+ * T_{assisted} is the human labor hours expended utilizing the askSage agent (including prompt engineering and out-of-band verification).
+ * C_{token} is the financial cost of the askSage tokens consumed during the multi-step execution cycle.
+*If the Token Efficiency Ratio falls below the established baseline (\eta_T < 1.0), the department must suspend the use case to remediate model drift or prompt inefficiency.*
+## Practical Implementation and Training Strategies
+To transition this instruction into an active command capability, the command should focus on two key areas: prompt engineering standards and outcome measurement.
+### Prompt Engineering Standards
+To optimize token consumption and ensure high-quality outputs, user training must mandate the 5-part prompt model developed by military public affairs and engineering teams :
+```
+┌────────────────────────────────────────────────────────┐
+│        [span_104](start_span)[span_104](end_span)       5-PART PROMPT MODEL                      │
+├───────────────┬────────────────────────────────────────┤
+│ PERSONA       │ Define role (e.g., NAVSEA planner)     │
+├───────────────┼────────────────────────────────────────┤
+│ CONTEXT       │ Provide detailed background parameters │
+├───────────────┼────────────────────────────────────────┤
+│ THE ASK       │ State the exact product to generate    │
+├───────────────┼────────────────────────────────────────┤
+│ CONSTRAINTS   │ Establish style, formatting limitations│
+├───────────────┼────────────────────────────────────────┤
+│ VALIDATION    │ Verify against official references     │
+└───────────────┴────────────────────────────────────────┘
+
+```
+This model ensures that the model outputs are structured and focused, reducing the number of follow-up interactions and conserving the command’s askSage token allocations.
+### Outcome Measurement
+Consistent with the March 16, 2026 DON CIO mandate, the command must actively measure and report time savings. Department Heads must establish baseline times for routine tasks when performed without AI assistance.
+Once the askSage agentic workflows are implemented, personnel must record their assisted task completion times and log these metrics through the official DON AI Time Savings Survey portal (https://forms.osi.apps.mil/r/FQjbJxu2y0).
+The resulting data supports the Navy’s broader "Cattle Drive" initiative and helps qualify high-performing teams for recognition under the DON AI Efficiency Challenge.
