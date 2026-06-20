@@ -217,6 +217,12 @@ implications for the §2 authority-basis `[CONFIRM]`:
     training gate (§13). §8.e updated (Department Heads develop/maintain the plan). A
     `[MAP TO COMMAND]` flags a one-page departmental-plan template (offered as a companion
     artifact). Instruction **v0.9**; routing package + cover sheet rebuilt.
+22. **Built the departmental-plan template** (`03_instruction/departmental-governance-plan-template.md`
+    + `Departmental-AI-Governance-Plan-TEMPLATE.docx`). A one-page fill-in form mapped to the six
+    §15.b expectation areas (accountability/evaluator, use-cases/risk, data boundaries, repository/
+    access, human-in-the-loop, monitoring/records) with a header, use-case table, acknowledgments,
+    and a Department Head approval block. Draft for working-group adoption (cover-sheet item 10 now
+    points to it). The §15.c instruction marker stays open (the WG formally adopts the template).
 
 ## Still open — Section B/C, deferred to the working group
 

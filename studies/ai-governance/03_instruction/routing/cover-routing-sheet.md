@@ -72,8 +72,9 @@ flags inline as **"Working group to resolve"** (also listed here):
 8. Align the spillage flow with the command's actual spillage and records-destruction
    procedures (§11.a).
 9. Verify the data-residency and encryption posture with the cognizant authority (§14.d).
-10. Provide a one-page departmental information-governance plan template so the codes' plans
-    are consistent (§15.c).
+10. Adopt/finalize the one-page departmental information-governance plan template (§15.c). **A
+    draft template is provided** (`Departmental-AI-Governance-Plan-TEMPLATE.docx`); the working
+    group reviews and adopts it so the codes' plans are consistent.
 
 Beyond these, flag anything that conflicts with existing command process, is not feasible
 as written, or is missing.

@@ -188,3 +188,8 @@ studies/ai-governance/
   access — a department-level gate alongside individual training (§13). §8.e updated; a
   `[MAP TO COMMAND]` flags a one-page departmental-plan template. `instruction-v0.9.md`; routing
   rebuilt; `_decisions.md` item 21.
+- **2026-06-20 (template)** — Built the departmental-plan template
+  (`03_instruction/departmental-governance-plan-template.md` + `Departmental-AI-Governance-Plan-TEMPLATE.docx`):
+  a one-page fill-in form mapped to the six §15.b expectation areas, with a use-case table,
+  acknowledgments, and a Department Head approval block. Draft for working-group adoption; cover
+  sheet item 10 + routing docx refreshed to point to it. `_decisions.md` item 22.

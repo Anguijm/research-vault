@@ -105,8 +105,9 @@ Key facts to carry forward:
   each department must develop its own AI-use/information-governance plan (common high-level
   expectations grounded in NIST AI RMF + DoD AI Ethical Principles) BEFORE its personnel get
   askSage access (department-level gate alongside §13 individual training). §8.e updated.
-  `[MAP TO COMMAND]` for a one-page departmental-plan template (companion artifact, can build on
-  request). `_decisions.md` item 21.
+  `[MAP TO COMMAND]` for a one-page departmental-plan template — **BUILT 2026-06-20**:
+  `03_instruction/departmental-governance-plan-template.md` + `Departmental-AI-Governance-Plan-TEMPLATE.docx`
+  (fill-in form on the six §15.b areas; draft for WG adoption). `_decisions.md` items 21–22.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as
