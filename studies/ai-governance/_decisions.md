@@ -242,6 +242,26 @@ implications for the §2 authority-basis `[CONFIRM]`:
     Level-I/critical categories, item 16) and the "Token Efficiency Ratio." Contract data (the Army
     SBIR Phase III IDIQ + task orders) verified accurate against USASpending.
 
+## 2026-06-21 — verified references folded; billets → WG; time-savings (instruction v0.10)
+
+24. **Folded the verified references into v0.10** (operator: "fold in the references"). Removed the
+    [verify] markers and added the command-cognizant refs: (k) SECNAVINST 5239.19A, (l) SECNAVINST
+    5510.36B + SECNAV M-5510.36, (m) SECNAV M-5210.1, (n) OPNAVINST 3120.32D (the SORM). Resolved
+    the §5.a/§10 SORM markers (cite (n)+(m)) and the §11.a records-destruction marker (36 CFR
+    1229.10 + (m); cyber-incident reporting per (k)). **Did NOT cite OPNAVSTAFFINST 5510.168** (the
+    reconciliation found it's the wrong instrument). Left a light [CONFIRM] for the command's LOCAL
+    SORM/spillage SOP + the exact March-2026 DON memo date.
+25. **Billet delegations → working-group-to-confirm task** (operator: leave to the WG). §8.a now
+    carries a WG-confirm marker for the specific delegations (ED chairs forum/owns inventory; XO
+    training + reversion bills; CHENG = TWH; ISSM = halt/revoke) rather than asserting them.
+26. **Per-project time-savings tracking added** (§9.e), exercised in the pilot (§14.b), per the
+    March-2026 DON CIO direction (operator: "requirement for each project to track their own time
+    savings"; "probably part of the Pilot").
+27. **HELD for discussion:** the NIST Govern/Map/Measure/Manage enrichment — operator wants to
+    understand GMMM first. (Note: GMMM is already lightly referenced in §14.c and §15.b from
+    earlier versions; flagged for the discussion, not removed.) **Declined:** Gemini's invented
+    Risk-Exposure-Score and Token-Efficiency math.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

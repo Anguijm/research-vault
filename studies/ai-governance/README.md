@@ -193,3 +193,13 @@ studies/ai-governance/
   a one-page fill-in form mapped to the six §15.b expectation areas, with a use-case table,
   acknowledgments, and a Department Head approval block. Draft for working-group adoption; cover
   sheet item 10 + routing docx refreshed to point to it. `_decisions.md` item 22.
+- **2026-06-21 (Gemini advisory + v0.10)** — Pulled a Gemini advisory from the operator's Drive
+  (`01_sources/gemini-advisory-2026-06-finalizing-askSage-framework.txt`), reconciled it
+  (`02_synthesis/gemini-advisory-reconciliation.md`): **PII/PHI and NNPI reopenings rejected**
+  (operator, firm). Verified its references via web + USASpending and folded them into
+  **`instruction-v0.10.md`** (added SECNAVINST 5239.19A/5510.36B, SECNAV M-5210.1, OPNAVINST
+  3120.32D=SORM; resolved §5.a/§10 SORM + §11.a 36 CFR 1229.10 markers). Billet delegations →
+  working-group-to-confirm (§8.a); per-project time-savings tracking added (§9.e/§14.b). NIST
+  Govern/Map/Measure/Manage enrichment HELD for operator discussion; Gemini's invented risk/token
+  math declined. Routing package rebuilt; `_decisions.md` items 23–27. (Cattle Drive = the DON CIO
+  IT-consolidation initiative behind the GenAI.mil mandate.)

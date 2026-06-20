@@ -108,6 +108,15 @@ Key facts to carry forward:
   `[MAP TO COMMAND]` for a one-page departmental-plan template — **BUILT 2026-06-20**:
   `03_instruction/departmental-governance-plan-template.md` + `Departmental-AI-Governance-Plan-TEMPLATE.docx`
   (fill-in form on the six §15.b areas; draft for WG adoption). `_decisions.md` items 21–22.
+- **Gemini advisory + instruction v0.10 (2026-06-21):** operator's Drive (folder
+  1ezx8DV3SsSDS6KHgr5lyIFAo0ffgvsnP, SRFSG subfolder) held a Gemini advisory ("Finalizing the
+  askSage Framework"); pulled via gdown, reconciled (`02_synthesis/gemini-advisory-reconciliation.md`).
+  **PII/PHI + NNPI reopenings REJECTED (operator firm).** Verified refs (web + USASpending) folded
+  into v0.10: SECNAVINST 5239.19A/5510.36B, SECNAV M-5210.1, OPNAVINST 3120.32D (SORM), 36 CFR
+  1229.10/.12; §11.a emergency-destruction authority resolved. Billet delegations → WG-confirm (§8.a);
+  per-project time-savings tracking added (§9.e/§14.b). NIST Govern/Map/Measure/Manage enrichment
+  HELD pending operator discussion (operator doesn't know GMMM yet). Gemini's invented R_E/token math
+  declined. `_decisions.md` items 23–27. Cattle Drive = DON CIO IT-consolidation initiative (verified).
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

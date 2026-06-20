@@ -1,9 +1,49 @@
+---
+type: instruction-draft
+study: ai-governance-landscape
+title: SRF-JRMC askSage governance instruction — rewrite v0.10
+status: draft v0.10 (verified references folded in; billet delegations = working-group task; per-project time-savings tracking added)
+classification: internal
+created: 2026-06-19
+revised: 2026-06-21
+derives_from: 02_synthesis/gap-analysis.md (Part F) + _decisions.md + _open-items.md + 01_sources/asksage-genai-mil-adoption.md + 02_synthesis/gemini-advisory-reconciliation.md
+red_team: 03_instruction/instruction-red-team.md
+prior_version: 03_instruction/instruction-v0.9.md
+glossary: _glossary.md
+v0.10_change: per operator (2026-06-21), from the Gemini-advisory reconciliation. (1) Folded in the VERIFIED references — removed the [verify] markers on DoDI 5400.19 / CDAO memo / 36 CFR 1229 and the DON CIO GenAI.mil memos, and added the command-cognizant references (SECNAVINST 5239.19A cyber-incident; SECNAVINST 5510.36B + SECNAV M-5510.36 info-security; SECNAV M-5210.1 records; OPNAVINST 3120.32D = the SORM). §5.a/§10 SORM and §11.a records-destruction markers resolved (36 CFR 1229.10 + SECNAV M-5210.1). (2) Billet delegations (ED chairs the forum, XO owns training, etc.) NOT asserted — added as a working-group-to-confirm task in §8. (3) Added a per-project time-savings tracking requirement (§9.e), exercised in the pilot (§14.b), per the March-2026 DON CIO direction. NOT folded: the NIST Govern/Map/Measure/Manage enrichment (held for operator discussion) and Gemini's invented risk/token math (declined). PII/PHI and NNPI remain prohibited (rejected Gemini's reopenings).
+v0.9_change: per operator — added Section 15, Departmental information-governance plans. Each department must develop its own departmental AI-use/information-governance plan (reflecting common high-level expectations grounded in the NIST AI RMF + the DoD AI Ethical Principles) before its personnel receive askSage access — a department-level access gate complementing the individual training gate (§13). §8.e updated; a [MAP TO COMMAND] flags a one-page departmental-plan template.
+v0.8_change: per operator — removed the specific contract PIID from §2. A command instruction should not embed a contract number that ends/renews/changes (it would force instruction updates). §2 now states the durable mechanism (askSage is separately IL5-authorized and acquired through a Department contract vehicle, e.g. the Army-managed Ask Sage IDIQ that other Navy activities use); the specific current ATO and acquisition instrument are kept in the command's cybersecurity and contracting records, not restated here. The §2 [CONFIRM] now asks the cognizant authorities to confirm those remain current, not to embed a PIID. (The specific PIIDs remain in the research source pack / decision log, which are dated records.)
+v0.7_change: per operator — folded the concrete askSage authority/acquisition basis into §2, from the USASpending check: GenAI.mil is the enterprise default (not an exclusive bar); askSage holds its own IL5 authorization and is acquired DoD-wide as decentralized task orders against the Army's Ask Sage IDIQ (PIID W9128Z25DA001). The §2 [CONFIRM] marker now asks the working group to record the command's own task-order PIID + the IL5 ATO + the Flank Speed connection authority.
+v0.6_change: per operator — (1) the command uses BOTH askSage and GenAI.mil (not standalone); §2 reframed with the recommended split (GenAI.mil for general questions; askSage for agentic work; GenAI.mil to prototype agents/prompts before spending askSage tokens). Instruction stays askSage-specific; GenAI.mil runs under its DoD enterprise governance. (2) Deleted the entire §2 "Explicitly out of scope" block as wordy/redundant — prohibited data stays in §4, the "AI output is always a draft / not an authority" principle stays in §3.a and §6.a; digital supervision dropped (residual MLA/SOFA concern still covered by least-privilege, §7.c). Added a "prototype on GenAI.mil to save askSage tokens" note to Annex A.
+v0.5_change: per operator — embedded the real SRF-JRMC department structure (Codes 100–1200; no 400/800/1000) as the evaluation-domain map; DELETED the overbearing "technical bar is highest / route everything to CHENG" language (the AI does not change existing processes; responsibility falls along established command lines); flipped §5 to a FEDERATED knowledge base (each department owns/feeds/controls access to its own repository; 200 owns the technical library + derivative classifier; CIO/ISSM is platform custodian with a connection registry, not the content owner); generalized records/directives to "in accordance with the command SORM" rather than granular Code-1100 mechanics. Added §3 capstone: this instruction changes no existing authority or line of responsibility.
+v0.4_change: per operator — generalized Section 6 from "technical adjudication → CHENG" to "authoritative evaluation by the cognizant DOMAIN authority" (technical→CHENG chain, IT/security→CIO, business/strategic→BSPO, other→cognizant functional authority), and added the requirement that EACH DEPARTMENT designate, in writing, an authoritative AI content evaluator (who routes anything technical to the CHENG chain). Updated §8.e and the §7.b cross-reference.
+v0.3_change: folds in the operator's Section-A answers (2026-06-19) — standalone askSage instance (not GenAI.mil); Impact Level IL5; maturity target best-in-class (added framework alignment + annual review cadence); data residency treated as covered by existing accreditation (working-group confirm); governance forum = Department Heads, quarterly; manual fallback = immediate; aggregation agent-scoping DROPPED. Section B (confirmations) and C (command-specific code/role mappings) remain for the working group. Later same day: folded in the operator's standalone rationale (askSage is ATO'd at IL5 and connects to Flank Speed; GenAI.mil not yet mature enough for convergence; processes transferable to GenAI.mil when warranted), corrected the ATO framing (command operates UNDER askSage's IL5 ATO, not owns one), and tied data residency to the Flank Speed + askSage ATO boundaries.
+v0.2.1_change: per operator command-context — (1) NOFORN already barred from the SRF-JRMC share + all technical direction screened by a derivative classifier before reaching the share; §5.c/§7.c refined to INHERIT that control (index only the screened authoritative corpus; no un-screened uploads) instead of a new AI access-segmentation mechanism. (2) Aggregation/classification-by-compilation is NOT a new AI risk (a human with the same access could compile manually; the SCG already governs it); §4.e reframed to inherit the SCG + spillage procedure, the only AI delta being likelihood/inadvertence handled via training + user recognition; the agent-scoping control demoted to an optional defense-in-depth COMMAND DECISION.
+changelog: v0.2 folds in the 9 logic/consistency findings from the Gemini red-team — reordered Knowledge Base up; out-of-band verification; ingress DLP for PII/PHI; resolved the records-vs-spillage deadlock; access-segmented index (cross-caveat synthesis bar); CHENG concurrence over Dept-Head proposals; single accountable authority (CO) with distributed responsibilities; quarterly manual-reversion drill; mission-critical compute override.
+note: Study work-product, not a promulgated instruction. [COMMAND DECISION] / [CONFIRM] / [MAP TO COMMAND] mark items only the command resolves. Reference identifiers must be verified before promulgation.
+---
+
+# Reader's note (not part of the instruction)
+
+The command uses **askSage and GenAI.mil** together — GenAI.mil for general questions,
+**askSage for agentic work** at Impact Level 5 — built to a **best-in-class** maturity
+target. This instruction governs askSage. v0.5 embeds the command's real department structure
+(Section 6.a) and is built on one organizing principle: **askSage changes no existing
+command process** — it governs AI use within the established lines of authority, quality,
+security, and records. The knowledge base is **federated** (each department owns and feeds
+its own repository; the CIO/ISSM is custodian of the platform, not the content). Remaining
+`[CONFIRM]` and `[MAP TO COMMAND]` markers are deliberate working-group items (reference
+identifiers, the SORM/records and spillage authorities, the Security Classification Guide,
+systems of record, and a few named authorities). Acronyms expanded on first use.
+
+---
+
 # DEPARTMENT OF THE NAVY
 **U.S. NAVAL SHIP REPAIR FACILITY AND JAPAN REGIONAL MAINTENANCE CENTER**
 **PSC 473 BOX 8**
 **FPO AP 96349-0008**
 
-**SRF-JRMC INSTRUCTION 5239.1 [DRAFT — FOR WORKING-GROUP REVIEW]**
+**SRF-JRMC INSTRUCTION 5239.1 [DRAFT — REWRITE v0.10]**
 
 **From:** Commanding Officer, U.S. Naval Ship Repair Facility and Japan Regional Maintenance Center
 **Subj:** GOVERNANCE, SECURITY, AND USE OF THE ASKSAGE ARTIFICIAL INTELLIGENCE PLATFORM
@@ -24,7 +64,10 @@
 - (m) SECNAV M-5210.1, Department of the Navy Records Management Manual
 - (n) OPNAVINST 3120.32D, Standard Organization and Regulations of the U.S. Navy (the SORM)
 
-> **Working group to resolve:** references (e)–(n) are verified against the issuances (2026-06-21); substitute the command's local references where they exist (its command SORM derived from (n), and its local cybersecurity-incident / spillage SOP), and confirm the exact date of the March-2026 DON CIO memo in (g).
+*Reference identifiers (e)–(n) verified against the issuances 2026-06-21. [CONFIRM — substitute
+the command's local references where they exist (its command SORM derived from (n), and its
+local cybersecurity-incident / spillage standard operating procedure); confirm the exact date of
+the March-2026 DON CIO memo in (g).]*
 
 ---
 
@@ -55,22 +98,22 @@ prompts before expending askSage tokens. GenAI.mil is not yet mature enough to h
 command's agentic work, so askSage carries that load for now; the command intends to
 transfer agentic work to GenAI.mil when it can support it. **This instruction governs the
 command's use of askSage**; GenAI.mil is used under its DoD enterprise governance. askSage
-operates under its Authority-to-Operate (ATO) at Impact Level 5 (IL5), connected to the
-Navy's Flank Speed shares, and the command owns the askSage governance layer — use-case
-approval, data controls, monitoring configuration, and the controls in this instruction —
-within the platform's accredited capabilities.
+operates under its Authority-to-Operate (ATO) at Impact Level 5, connected to the Navy's
+Flank Speed shares, and the command owns the askSage governance layer — use-case approval,
+data controls, monitoring configuration, and the controls in this instruction — within the
+platform's accredited capabilities.
 
 **Authority and acquisition basis.** Running askSage alongside GenAI.mil is consistent with
 Department direction: GenAI.mil is the enterprise *default*, not an exclusive bar, and service
-guidance permits separately-authorized tools. askSage is separately authorized at IL5 and is
-acquired through a Department contract vehicle for askSage — for example, decentralized task
-orders against the Army-managed Ask Sage Indefinite-Delivery/Indefinite-Quantity (IDIQ) vehicle
-that other Navy activities already use. The specific current authorization (the IL5 ATO) and
-acquisition instrument are kept in the command's cybersecurity and contracting records, not
-restated in this instruction, so a contract renewal or replacement does not require changing
-this instruction.
-
-> **Working group to resolve:** the cognizant cybersecurity and contracting authorities confirm askSage's IL5 authorization and the command's acquisition instrument are current and valid (held in command records, not in this instruction).
+guidance permits separately-authorized tools. askSage is separately authorized at Impact Level
+5 and is acquired through a Department contract vehicle for askSage — for example, decentralized
+task orders against the Army-managed Ask Sage Indefinite-Delivery/Indefinite-Quantity (IDIQ)
+vehicle that other Navy activities already use. The specific current authorization (the IL5
+ATO) and acquisition instrument are kept in the command's cybersecurity and contracting
+records, not restated in this instruction, so a contract renewal or replacement does not
+require changing this instruction. *[CONFIRM — the cognizant cybersecurity and contracting
+authorities confirm askSage's IL5 authorization and the command's acquisition instrument are
+current and valid.]*
 
 ## 3. Policy
 
@@ -111,7 +154,7 @@ b. **Prohibited — shall not be entered into askSage under any circumstances:**
 
    PII and PHI are categories of CUI, but they carry independent legal regimes (the
    Privacy Act for PII, HIPAA for PHI) and are the worst case for the aggregation risk
-   in paragraph (e). They are carved out of the otherwise-authorized CUI, matching the
+   in paragraph (d). They are carved out of the otherwise-authorized CUI, matching the
    DoD enterprise (GenAI.mil) line. Personnel, manpower, and medical-readiness workflows
    are not askSage use cases.
 
@@ -138,9 +181,10 @@ The controls are therefore: (1) **user recognition** — personnel apply the sam
 judgment to AI output that they apply to their own analysis, per the SCG; (2) **training**
 (Section 13) covers classification by compilation in an AI context; and (3) a
 compiled-classified output is handled under the existing **spillage procedure**
-(Section 11.a).
-
-> **Working group to resolve:** name the cognizant Security Classification Guide(s).
+(Section 11.a). The optional agent-scoping defense-in-depth measure considered in an
+earlier draft was deliberately not adopted: it adds friction without reducing the
+underlying risk, since a user with the same access could compile manually regardless.
+*[MAP TO COMMAND — name the cognizant SCG(s).]*
 
 f. **Marking.** AI does not reliably apply CUI markings. Personnel portion-mark any
 AI-generated product containing CUI per reference (a) before storing or transmitting it.
@@ -213,8 +257,7 @@ against the controlling document through a non-AI authoritative source (the offi
 technical library / source of record), confirming the specific paragraph wording and
 current change number. **The AI's own retrieved snippet is not a sufficient verification
 source** — relying on it re-introduces the hallucination it is meant to catch.
-
-> **Working group to resolve:** name the authoritative source-of-record system (the non-AI technical library used for verification).
+*[MAP TO COMMAND — name the authoritative source-of-record system.]*
 
 e. **Structured approval (fight confirmation fatigue).** Where a human approval is required
 (this section and Section 7), the approval presents what is being approved — intent, the
@@ -249,18 +292,20 @@ use cases require closer human control and CHENG-chain concurrence (Section 8).
 
 e. **Separation and containment.** Where an agent generates and then executes work,
 generation and execution are separated by an approval gate. A means to halt an agent and
-revoke its access exists and is exercisable by a designated authority.
-
-> **Working group to resolve:** name the halt/revoke authority (for example the ISSM or the command duty IT watch).
+revoke its access exists and is exercisable by [the ISSM / the command duty IT watch —
+MAP TO COMMAND].
 
 ## 8. Roles, responsibilities, and governance
 
 a. **Accountability.** The **Commanding Officer** retains overall accountability for
 AI-augmented command outcomes, as for all command activity. Responsibilities are
 distributed across the existing roles below; this is a deliberate combination of
-authorities, not a single new owner and not a new board.
-
-> **Working group to confirm:** the specific billet delegations against the command SORM — for example, the Executive Director to chair the Department Heads governance forum (Section 8.g) and maintain the AI use-case inventory; the Executive Officer to coordinate command training (Section 13) and the manual-reversion bills (Section 12); the CHENG as the cognizant Technical Warrant Holder; the ISSM as the halt/revoke authority (Section 7.e).
+authorities, not a single new owner and not a new board. *[WORKING GROUP TO CONFIRM the
+specific billet delegations against the command SORM — for example: the Executive Director to
+chair the Department Heads governance forum (Section 8.g) and maintain the AI use-case
+inventory; the Executive Officer to coordinate command training (Section 13) and the
+manual-reversion bills (Section 12); the CHENG as the cognizant Technical Warrant Holder; the
+ISSM as the halt/revoke authority (Section 7.e).]*
 
 b. **Command Information Officer (CIO) and Information System Security Manager (ISSM).**
 Custodians of the platform, not of department content (Section 5): platform administration,
@@ -328,10 +373,10 @@ decision-support artifacts and potential evidence in a Judge Advocate General Ma
 records obligations. They are not ephemeral chat.
 
 b. **Retention and hold.** AI interaction logs are retained per the applicable records
-schedule, with a legal-hold capability, and are managed in accordance with the records program
-(reference (m)) and the SORM (reference (n)). Using AI does not waive any records, FOIA, or
-privacy obligation. **Legal concurs** on retention and hold. (For the spillage exception to
-ordinary retention, see Section 11.a.)
+schedule, with a legal-hold capability, and are managed in accordance with the records
+program (reference (m)) and the SORM (reference (n)). Using AI does not waive any records,
+FOIA, or privacy obligation. **Legal concurs** on retention and hold. (For the spillage
+exception to ordinary retention, see Section 11.a.)
 
 ## 11. Incident reporting
 
@@ -349,9 +394,8 @@ provisions of the records program (references (j) and (m)); cyber-incident repor
 reference (k). This is the deliberate exception to ordinary records retention (Section 10): a
 spilled classified record is not preserved as a permanent record inside the CUI/IL5 store.
 Report through security channels, including the Naval Criminal Investigative Service (NCIS) as
-required.
-
-> **Working group to resolve:** align this flow with the command's own spillage standard operating procedure.
+required. *[CONFIRM — align this flow with the command's own spillage standard operating
+procedure.]*
 
 b. **Safety mishap (hallucination-driven).** If an AI error contributes to a safety or
 quality mishap, it is reported and investigated through the command's safety and JAGMAN
@@ -409,9 +453,16 @@ or a change in governing policy). The CIO, with the CHENG and Legal, owns the re
 d. **Data residency.** Source data resides in the Navy's Flank Speed environment, which
 askSage connects to, and AI processing occurs within askSage's IL5 ATO boundary — both
 accredited — so residency and host-nation cryptographic requirements are expected to be
-covered by those existing accreditations.
+covered by those existing accreditations. *[CONFIRM — working group verifies with the
+cognizant authority that the askSage ATO boundary and the Flank Speed connection satisfy
+the data-residency and encryption posture.]*
 
-> **Working group to resolve:** verify with the cognizant authority that the askSage ATO boundary and the Flank Speed connection satisfy the command's data-residency and encryption posture.
+e. **Working-group items.** The remaining items carried as `[CONFIRM]` and
+`[MAP TO COMMAND]` markers — verifying reference identifiers, the SORM / records reference,
+the spillage and records-destruction authority, the cognizant Security Classification
+Guide(s), the systems of record, and named authorities (the halt authority and any
+accountability delegation) — are resolved during working-group review, before promulgation.
+The department structure is now embedded (Section 6.a).
 
 ---
 
@@ -430,24 +481,23 @@ b. **High-level expectations the plan reflects.** The plan is the department's l
 implementation of this instruction, grounded in industry best practice (the NIST AI Risk
 Management Framework — Govern, Map, Measure, Manage) and Department practice (the DoD AI
 Ethical Principles). At a minimum it addresses:
-
-- **Accountability and evaluation** — the department's accountable owner and its designated
-  authoritative AI content evaluator (Section 6.b).
-- **Use cases and risk** — the department's approved askSage use cases, each classified by risk
-  (Section 7.d) and entered in the command inventory (Section 8.g).
-- **Data boundaries** — the authorized data its use cases touch, and the prohibited-data line
-  (Section 4).
-- **Repository and access** — the department's repository, what it feeds into it, and who may
-  access it (Section 5).
-- **Human-in-the-loop** — how the department applies authoritative evaluation and structured
-  approval to its AI output (Section 6).
-- **Monitoring and records** — how the department supports continuous monitoring (Section 9)
-  and meets records and retention obligations (Section 10).
+   - **Accountability and evaluation** — the department's accountable owner and its designated
+     authoritative AI content evaluator (Section 6.b).
+   - **Use cases and risk** — the department's approved askSage use cases, each classified by
+     risk (Section 7.d) and entered in the command inventory (Section 8.g).
+   - **Data boundaries** — the authorized data its use cases touch, and the prohibited-data
+     line (Section 4).
+   - **Repository and access** — the department's repository, what it feeds into it, and who
+     may access it (Section 5).
+   - **Human-in-the-loop** — how the department applies authoritative evaluation and structured
+     approval to its AI output (Section 6).
+   - **Monitoring and records** — how the department supports continuous monitoring (Section 9)
+     and meets records and retention obligations (Section 10).
 
 c. **Living document.** The plan is maintained as the department's use cases change and is
-reviewed alongside the use-case inventory in the governance forum (Section 8.g).
-
-> **Working group to resolve:** provide a one-page departmental information-governance plan template so the plans are consistent across codes.
+reviewed alongside the use-case inventory in the governance forum (Section 8.g). *[MAP TO
+COMMAND — provide a one-page departmental information-governance plan template so the plans are
+consistent across codes.]*
 
 ---
 
@@ -470,3 +520,9 @@ ration mission work.
   shared, vetted prompt library reduce waste. Develop and test agents and agentic-workflow
   prompts on GenAI.mil first, then run the finished workflow on askSage, to conserve askSage
   tokens (Section 2).
+
+---
+
+*End of draft v0.10. Prior versions retained at instruction-v0.1.md … v0.9.md;
+logic-pass record at instruction-red-team.md; department glossary at _glossary.md. Clean
+working-group routing package at routing/ (rebuilt from this version).*

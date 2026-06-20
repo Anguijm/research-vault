@@ -47,6 +47,9 @@ Management Framework so it is defensible on its face.
 - **Each department stands up its own information-governance plan before askSage access** (§15)
   — common high-level expectations (grounded in the NIST AI RMF + the DoD AI Ethical Principles),
   tailored by each code; a department-level access gate alongside individual training.
+- **Per-project time-savings tracking** (§9.e): each approved use case tracks its own baseline-
+  vs-AI-assisted time and reports it, per the March-2026 DON CIO direction; the pilot establishes
+  the baselines and method.
 - **Other settled calls:** immediate manual fallback (DDIL); token/compute control demoted
   to an administrative annex with a mission-critical override; aggregation handled through
   the existing Security Classification Guide and spillage procedures.
@@ -56,21 +59,25 @@ Management Framework so it is defensible on its face.
 Substantive review on feasibility and correctness, and resolution of the items the draft
 flags inline as **"Working group to resolve"** (also listed here):
 
-1. Verify the reference identifiers (refs e, f, g, j) and add the command's cognizant
-   cybersecurity, records-management, and security-spillage references.
+1. References (e)–(n) are now **verified and folded in** (incl. SECNAVINST 5239.19A, SECNAVINST
+   5510.36B / SECNAV M-5510.36, SECNAV M-5210.1, OPNAVINST 3120.32D = the SORM). Working group:
+   substitute the command's *local* references (its command SORM and local spillage SOP) and
+   confirm the exact date of the March-2026 DON CIO memo in (g).
 2. Confirm askSage's IL5 authorization (ATO) and the command's acquisition instrument are
    current and valid — held in the command's cybersecurity and contracting records, not in the
    instruction — and confirm the Flank Speed connection authority (§2).
-3. Name the governing SORM / records-management reference (§5.a) and the cognizant Security
-   Classification Guide(s) (§4.e).
+3. Name the cognizant Security Classification Guide(s) (§4.e). *(The SORM/records references
+   are now cited — OPNAVINST 3120.32D and SECNAV M-5210.1; substitute the local command SORM.)*
 4. Each department names its authoritative AI content evaluator; confirm the Technical
    Warrant Holder billets within Code 200 (§6). *(The Code 100–1200 structure is already
    embedded in §6.a.)*
 5. Name the authoritative source-of-record system used for out-of-band verification (§6.d).
 6. Name the halt/revoke authority for a rogue agent (§7.e).
-7. Confirm any delegation of accountability (e.g., to the Executive Director) (§8.a).
-8. Align the spillage flow with the command's actual spillage and records-destruction
-   procedures (§11.a).
+7. **Confirm the specific billet delegations against the command SORM** (§8.a) — e.g., Executive
+   Director to chair the governance forum + own the inventory; XO for training + manual-reversion
+   bills; CHENG as Technical Warrant Holder; ISSM as halt/revoke authority.
+8. Align the spillage flow with the command's own spillage SOP (§11.a). *(The legal authority —
+   36 CFR 1229.10 + SECNAV M-5210.1 emergency destruction — is now cited.)*
 9. Verify the data-residency and encryption posture with the cognizant authority (§14.d).
 10. Adopt/finalize the one-page departmental information-governance plan template (§15.c). **A
     draft template is provided** (`Departmental-AI-Governance-Plan-TEMPLATE.docx`); the working
