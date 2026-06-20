@@ -205,6 +205,19 @@ implications for the §2 authority-basis `[CONFIRM]`:
     `01_sources/asksage-genai-mil-adoption.md` (Part 4) and item 19 above — those are dated
     records, correctly. Instruction **v0.8**; routing package + cover sheet rebuilt.
 
+## 2026-06-20 — departmental information-governance plans (instruction v0.9)
+
+21. **Added §15 — each department must stand up its own information-governance plan before
+    askSage access.** Operator: provide each code high-level information-governance expectations
+    (best practices from industry + DoW) and direct them to generate their own governance
+    documents before getting access. §15 sets common high-level expectations grounded in the
+    **NIST AI Risk Management Framework** + the **DoD AI Ethical Principles** (accountability/
+    evaluator, use-cases/risk, data boundaries, repository/access, human-in-the-loop, monitoring/
+    records), and makes a department-level plan a **pre-access gate** complementing the individual
+    training gate (§13). §8.e updated (Department Heads develop/maintain the plan). A
+    `[MAP TO COMMAND]` flags a one-page departmental-plan template (offered as a companion
+    artifact). Instruction **v0.9**; routing package + cover sheet rebuilt.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

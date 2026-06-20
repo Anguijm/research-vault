@@ -101,6 +101,12 @@ Key facts to carry forward:
   acquired via a Department contract vehicle, e.g. the Army-managed Ask Sage IDIQ); specifics live
   in the command's cybersecurity/contracting records. PIIDs stay only in the dated research/decision
   records. `_decisions.md` item 20. **Apply this principle to all future vault instructions.**
+- **Instruction v0.9 (2026-06-20):** added §15, Departmental information-governance plans —
+  each department must develop its own AI-use/information-governance plan (common high-level
+  expectations grounded in NIST AI RMF + DoD AI Ethical Principles) BEFORE its personnel get
+  askSage access (department-level gate alongside §13 individual training). §8.e updated.
+  `[MAP TO COMMAND]` for a one-page departmental-plan template (companion artifact, can build on
+  request). `_decisions.md` item 21.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

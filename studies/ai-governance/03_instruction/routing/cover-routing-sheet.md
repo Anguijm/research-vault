@@ -44,6 +44,9 @@ Management Framework so it is defensible on its face.
 - **Governance is run through existing structures:** Legal concurs on records; **Department
   Heads are the governance forum, reviewing the use-case inventory quarterly.** No new board.
   Records and directives are managed per the command SORM.
+- **Each department stands up its own information-governance plan before askSage access** (§15)
+  — common high-level expectations (grounded in the NIST AI RMF + the DoD AI Ethical Principles),
+  tailored by each code; a department-level access gate alongside individual training.
 - **Other settled calls:** immediate manual fallback (DDIL); token/compute control demoted
   to an administrative annex with a mission-critical override; aggregation handled through
   the existing Security Classification Guide and spillage procedures.
@@ -69,6 +72,8 @@ flags inline as **"Working group to resolve"** (also listed here):
 8. Align the spillage flow with the command's actual spillage and records-destruction
    procedures (§11.a).
 9. Verify the data-residency and encryption posture with the cognizant authority (§14.d).
+10. Provide a one-page departmental information-governance plan template so the codes' plans
+    are consistent (§15.c).
 
 Beyond these, flag anything that conflicts with existing command process, is not feasible
 as written, or is missing.

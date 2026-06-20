@@ -182,3 +182,9 @@ studies/ai-governance/
   e.g. the Army-managed Ask Sage IDIQ), with specifics held in command cybersecurity/contracting
   records. PIIDs remain only in the dated research/decision records. `instruction-v0.8.md`;
   routing rebuilt; `_decisions.md` item 20.
+- **2026-06-20 (v0.9)** — Added §15, Departmental information-governance plans: each department
+  must develop its own AI-use/information-governance plan (common high-level expectations
+  grounded in the NIST AI RMF + the DoD AI Ethical Principles) before its personnel get askSage
+  access — a department-level gate alongside individual training (§13). §8.e updated; a
+  `[MAP TO COMMAND]` flags a one-page departmental-plan template. `instruction-v0.9.md`; routing
+  rebuilt; `_decisions.md` item 21.
