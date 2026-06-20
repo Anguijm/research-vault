@@ -257,10 +257,12 @@ implications for the §2 authority-basis `[CONFIRM]`:
 26. **Per-project time-savings tracking added** (§9.e), exercised in the pilot (§14.b), per the
     March-2026 DON CIO direction (operator: "requirement for each project to track their own time
     savings"; "probably part of the Pilot").
-27. **HELD for discussion:** the NIST Govern/Map/Measure/Manage enrichment — operator wants to
-    understand GMMM first. (Note: GMMM is already lightly referenced in §14.c and §15.b from
-    earlier versions; flagged for the discussion, not removed.) **Declined:** Gemini's invented
-    Risk-Exposure-Score and Token-Efficiency math.
+27. **NIST Govern/Map/Measure/Manage — RESOLVED 2026-06-21: keep the light references as-is.**
+    After an explanation of GMMM (the four NIST AI RMF functions), the operator chose to keep the
+    existing light name-drops (§14.c, §15.b) for defensibility and **not** re-skin the departmental
+    template around the four functions (avoids jargon; the six plain-English §15.b areas already
+    implement GMMM substantively) and **not** strip them. No instruction change. **Declined:**
+    Gemini's invented Risk-Exposure-Score and Token-Efficiency math.
 
 ## Still open — Section B/C, deferred to the working group
 

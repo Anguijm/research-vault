@@ -115,8 +115,10 @@ Key facts to carry forward:
   into v0.10: SECNAVINST 5239.19A/5510.36B, SECNAV M-5210.1, OPNAVINST 3120.32D (SORM), 36 CFR
   1229.10/.12; §11.a emergency-destruction authority resolved. Billet delegations → WG-confirm (§8.a);
   per-project time-savings tracking added (§9.e/§14.b). NIST Govern/Map/Measure/Manage enrichment
-  HELD pending operator discussion (operator doesn't know GMMM yet). Gemini's invented R_E/token math
-  declined. `_decisions.md` items 23–27. Cattle Drive = DON CIO IT-consolidation initiative (verified).
+  RESOLVED 2026-06-21: operator kept the light GMMM references (§14.c/§15.b) as-is — no re-skin, no
+  strip (GMMM = the four NIST AI RMF functions; the six plain-English §15.b areas already implement
+  it). Gemini's invented R_E/token math declined. `_decisions.md` items 23–27. Cattle Drive = DON CIO
+  IT-consolidation initiative (verified).
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as
