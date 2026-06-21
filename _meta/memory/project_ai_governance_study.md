@@ -119,6 +119,12 @@ Key facts to carry forward:
   strip (GMMM = the four NIST AI RMF functions; the six plain-English §15.b areas already implement
   it). Gemini's invented R_E/token math declined. `_decisions.md` items 23–27. Cattle Drive = DON CIO
   IT-consolidation initiative (verified).
+- **Pilot memo (2026-06-22):** `03_instruction/pilot-memo.md` + `SRF-JRMC-askSage-Pilot-Memo-DRAFT.docx`
+  — CO memorandum authorizing a limited READ-ONLY askSage pilot UNDER the draft instruction (validate
+  before promulgation), departments/use cases [FILL IN], 90-day default, full governance applies,
+  per-use-case time-savings tracking, decision gate to promulgate + expand. `_decisions.md` item 28.
+  Study artifact set is now: landscape report + gap analysis + instruction (v0.10) + routing package
+  (cover+instruction docx) + departmental-plan template + pilot memo.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as

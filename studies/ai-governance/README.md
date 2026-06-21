@@ -203,3 +203,8 @@ studies/ai-governance/
   Govern/Map/Measure/Manage enrichment HELD for operator discussion; Gemini's invented risk/token
   math declined. Routing package rebuilt; `_decisions.md` items 23–27. (Cattle Drive = the DON CIO
   IT-consolidation initiative behind the GenAI.mil mandate.)
+- **2026-06-22 (pilot memo)** — Drafted the askSage pilot authorization memo
+  (`03_instruction/pilot-memo.md` + `SRF-JRMC-askSage-Pilot-Memo-DRAFT.docx`): a CO memorandum
+  authorizing a limited, read-only pilot UNDER the draft instruction to validate the framework
+  before promulgation and generate time-savings data. Departments/use cases [FILL IN]; governance
+  applies in full; 90-day default; decision gate to promulgate + expand. `_decisions.md` item 28.

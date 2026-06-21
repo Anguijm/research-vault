@@ -264,6 +264,19 @@ implications for the §2 authority-basis `[CONFIRM]`:
     implement GMMM substantively) and **not** strip them. No instruction change. **Declined:**
     Gemini's invented Risk-Exposure-Score and Token-Efficiency math.
 
+## 2026-06-22 — pilot authorization memo (new companion artifact)
+
+28. **Drafted the askSage pilot authorization memo** (`03_instruction/pilot-memo.md` +
+    `SRF-JRMC-askSage-Pilot-Memo-DRAFT.docx`). Operator decisions (via grill-me): the memo
+    **validates the draft instruction before promulgation** (the pilot runs UNDER reference (a)'s
+    controls by CO authority), and **departments/use cases are left as [FILL IN]**. Standard Navy
+    CO memorandum; low-risk/high-value/**read-only** scope; 90-day default period (fill-in);
+    governance applies in full (pre-access gates §13/§15, data boundaries §4 — no classified/NNPI/
+    PII/PHI, human-in-the-loop §6, manual fallback §12, monitoring/records/incidents §§9–11);
+    per-use-case time-savings tracking (§9.e + ref (c)); interim + final report with a decision
+    gate (promulgate + expand). Ties the pilot's results to the Cattle-Drive/GenAI.mil
+    justification.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific
