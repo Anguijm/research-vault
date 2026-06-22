@@ -12,9 +12,9 @@ askSage Artificial Intelligence Platform*
 
 A working draft of the command instruction governing how SRF-JRMC uses askSage. It is
 **for review and markup**, not yet for signature. Please read the attached draft, mark it
-with track-changes and comments, and return by the date above. The draft is built to a
-**best-in-class** posture and maps to the DoD AI Ethical Principles and the NIST AI Risk
-Management Framework so it is defensible on its face.
+with track-changes and comments, and return by the date above. The draft maps to recognized
+frameworks — the DoD AI Ethical Principles and the NIST AI Risk Management Framework — so it is
+defensible on its face.
 
 ## What is already decided (please do not relitigate without a substantive reason)
 
@@ -50,9 +50,13 @@ Management Framework so it is defensible on its face.
 - **Per-project time-savings tracking** (§9.e): each approved use case tracks its own baseline-
   vs-AI-assisted time and reports it, per the March-2026 DON CIO direction; the pilot establishes
   the baselines and method.
-- **Other settled calls:** immediate manual fallback (DDIL); token/compute control demoted
-  to an administrative annex with a mission-critical override; aggregation handled through
-  the existing Security Classification Guide and spillage procedures.
+- **Local National access** (§7.c) is subject to existing Foreign Disclosure and export-control
+  (ITAR/EAR, deemed-export) processes; no use case circumvents the Technology Control Plans.
+- **AI output is not engineering justification for a Departure from Specification** (§6); the
+  technical authority adjudicates independently.
+- **Other settled calls:** immediate manual fallback (DDIL), documented in each department's plan;
+  token/compute control demoted to an administrative annex with a mission-critical override;
+  aggregation handled through the existing Security Classification Guide and spillage procedures.
 
 ## What we need from the working group
 
@@ -82,6 +86,11 @@ flags inline as **"Working group to resolve"** (also listed here):
 10. Adopt/finalize the one-page departmental information-governance plan template (§15.c). **A
     draft template is provided** (`Departmental-AI-Governance-Plan-TEMPLATE.docx`); the working
     group reviews and adopts it so the codes' plans are consistent.
+11. **Assign the instruction's SSIC and number** (Code 1100 directives control). "5239" (Navy
+    cybersecurity) is a placeholder; an AI-use instruction may fit SSIC 5230 (IT management).
+12. **Name the Foreign Disclosure / export-control authority** for the §7.c Local-National clause.
+13. **Resource the training (§13)** per the training plan — confirm the Tier-1 sourced courses and
+    assign the Tier-2 command-module developer/owner.
 
 Beyond these, flag anything that conflicts with existing command process, is not feasible
 as written, or is missing.

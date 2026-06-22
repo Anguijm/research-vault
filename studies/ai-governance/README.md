@@ -208,3 +208,12 @@ studies/ai-governance/
   authorizing a limited, read-only pilot UNDER the draft instruction to validate the framework
   before promulgation and generate time-savings data. Departments/use cases [FILL IN]; governance
   applies in full; 90-day default; decision gate to promulgate + expand. `_decisions.md` item 28.
+- **2026-06-22 (final review + v0.11 + package)** — 2-round whole-package Gemini red-team
+  (`02_synthesis/final-review-and-recommendations.md`); operator approved. **Instruction v0.11**
+  folds the 8 edits (export-control/FDO §7.c; TA-not-DFS §6; manual-fallback documented §12/§15;
+  prompt-injection §11.c; §2 trim; dropped "best-in-class"; §4.f CUI-marking) and flags the number
+  as Code-1100-assigned (5239 placeholder; 5230 may fit). Built the **training plan**
+  (`training-plan.md`: Tier-1 sourced + Tier-2 command module, the §13 gate) and a **comprehensive
+  routing package** in `03_instruction/routing/` (00 index + cover, 01 background brief, 02
+  landscape, 03 instruction, 04 pilot memo, 05 dept template, 06 training — all .docx). PII/PHI +
+  NNPI remain prohibited. `_decisions.md` items 29–32.

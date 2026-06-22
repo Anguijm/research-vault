@@ -277,6 +277,27 @@ implications for the §2 authority-basis `[CONFIRM]`:
     gate (promulgate + expand). Ties the pilot's results to the Cattle-Drive/GenAI.mil
     justification.
 
+## 2026-06-22 — final edits (v0.11), training plan, comprehensive routing package
+
+29. **Approved final-review edits folded into instruction v0.11.** §7.c export-control/Foreign-
+    Disclosure clause (LN access); §6 TA-not-DFS-justification backstop; §12/§15 manual fallback
+    documented in the dept plan; §11.c prompt-injection reporting; §2 trimmed (generic contract
+    vehicle); §14/reader-note dropped the "best-in-class" superlative (kept NIST/DoD-RAI mapping +
+    annual review); §4.f reinforced user-as-authorized-holder CUI marking (NOT "derivative
+    classifier"). Mirrored to the clean routing version.
+30. **Instruction number is no longer asserted.** Header now reads "SRF-JRMC INSTRUCTION
+    5239.[__]" with a note that Code 1100 assigns the SSIC + number (5239 cyber placeholder; 5230
+    IT-management may fit an AI-use instruction better). Cover-sheet WG item 11 added.
+31. **Training plan built** (`03_instruction/training-plan.md`): Tier 1 sourced from existing
+    DON/DoD courses (per the Mar-2026 DON CIO memo), Tier 2 a command-specific module on the
+    instruction's rules + the required "show a real hallucination" exercise; completion is the
+    §13 access gate. Cover-sheet WG item 13 added (resource/assign the training).
+32. **Comprehensive routing package assembled** in `03_instruction/routing/` per operator ("all
+    things... including landscape and background"): 00 package index + 00 cover/comment sheet,
+    01 background brief, 02 landscape report, 03 instruction (v0.11), 04 pilot memo, 05
+    departmental template, 06 training plan — all as Word docs. Background brief + package index
+    are new.
+
 ## Still open — Section B/C, deferred to the working group
 
 Per operator: the remaining items (Section B confirmations + Section C command-specific

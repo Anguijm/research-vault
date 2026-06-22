@@ -55,7 +55,9 @@ askSage governance and is in working-group review. A limited pilot under that dr
 lets the command prove the controls, measure the benefit, and refine the instruction before it
 is signed.
 
-3. **Scope.** The pilot is restricted to **low-risk, high-value, read-only** use cases. No
+3. **Scope.** The pilot is restricted to **low-risk, high-value, read-only** use cases. The
+agentic "write-action" capabilities defined in reference (a), Section 7, are **prohibited for
+the duration of this pilot**; the pilot validates read-only decision support only. No
 write-enabled, autonomous, or higher-risk use is authorized during the pilot.
    a. Participating departments (codes): [FILL IN].
    b. Pilot use cases (one or two per participating code): [FILL IN].

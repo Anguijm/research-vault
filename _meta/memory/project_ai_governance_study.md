@@ -125,6 +125,16 @@ Key facts to carry forward:
   per-use-case time-savings tracking, decision gate to promulgate + expand. `_decisions.md` item 28.
   Study artifact set is now: landscape report + gap analysis + instruction (v0.10) + routing package
   (cover+instruction docx) + departmental-plan template + pilot memo.
+- **Final review + v0.11 + comprehensive package (2026-06-22):** whole-package Gemini red-team
+  (2 rounds, `02_synthesis/final-review-and-recommendations.md`), operator-approved. Instruction
+  **v0.11** = final-review edits (export-control/FDO §7.c; AI-not-DFS-justification §6;
+  manual-fallback documented §12/§15; prompt-injection §11.c; trimmed §2; dropped "best-in-class";
+  §4.f CUI-marking-not-derivative-classification). **Instruction number no longer asserted** —
+  header "5239.[__]", Code 1100 assigns SSIC (5239 cyber placeholder; 5230 IT-mgmt may fit).
+  **Training plan** built (Tier-1 sourced from DON/DoD; Tier-2 command module; §13 gate).
+  **Comprehensive routing package** in `03_instruction/routing/` (00 index+cover, 01 background,
+  02 landscape, 03 instruction, 04 pilot, 05 template, 06 training; all .docx) per operator "all
+  things incl. landscape + background." `_decisions.md` items 29–32. PII/PHI + NNPI still out.
 - **Still pending — deferred to the working group:** Section B confirmations (reference
   identifiers, spillage/records authority, screening process) + Section C command-specific
   mappings (eng/QA codes, SCG names, systems of record, named authorities) — remain as
