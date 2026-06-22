@@ -102,6 +102,60 @@ ballpark estimate that already arrived with it and multiply. Same method, riding
 already have at induction. In AIM's own language this multiplier is the **Performance Factor for
 Closed Work (PfCw)** — recovered per bin, even from bundles.
 
+## Making it concrete: SWBS bins, the multiplier, and the two conversions
+
+Three refinements from the operator (2026-06-23) sharpen the method — and the binning one actually
+*simplifies* it.
+
+**Bin at the SWBS 3-digit level (~100 bins), and solve for a multiplier, not man-days.** The
+natural bin is the Ship Work Breakdown Structure (SWBS) group — the first three digits of the
+SWLIN — about a hundred of them. A hundred bins sounds like a lot to pin down, but it isn't, if
+each bin only has to produce **one number: its performance multiplier** (actual labor ÷ estimated
+labor — AIM's Performance Factor for Closed Work). The multiplier is **size-independent** — a big
+job and a small job in the same SWBS share it — so the **Class F (ballpark) estimate carries the
+size** and the bin carries the bias. That's why ~100 bins is plenty and you don't need separate
+size bands.
+
+**Same-SWBS bundles then need no disentangling.** The bundles mostly group within a SWBS. If every
+JCN in a bundle is the same bin, the whole regression collapses to arithmetic: the bundle's
+**total actual labor ÷ its total Class F estimate = that bin's multiplier**. Average that across
+all bundles of the bin and you're done — no splitting required. The full regression is only needed
+for the minority of bundles that **mix** SWBS groups (there, total actual = the sum over groups of
+multiplier_g × that group's total Class F — a handful of linear equations solved together, exactly
+as before). So "still a hundred bundles" is smaller than it looks: most are single-bin and
+self-solve.
+
+**Thin bins borrow strength from their parent.** With ~100 bins, some will have too few jobs to
+trust. For those, shrink toward the 1-digit SWBS parent group (or a global multiplier) until the
+bin has enough history to stand on its own. The confidence number from the fit tells you which
+bins need it.
+
+**Then the two conversions, stated explicitly** — this is the part that was under-specified:
+
+- **Conversion 1 — estimate → expected actual labor.** The Class F estimate that rides in with a
+  JCN is only an estimate. Multiply it by the bin's multiplier to get **expected actual man-days**.
+  (The "man-day performance" step.)
+- **Conversion 2 — labor → span.** Expected man-days is still effort, not elapsed time, and you
+  **cannot** get span by dividing by crew alone, because a large slice of span is **non-labor** —
+  cure time, NDT waits, test phases — that doesn't shrink when you add people. So learn a per-bin
+  **span model** from the clean one-JCN Cycle Time history: roughly, span ≈ a **fixed wait** for
+  that kind of work (cure/test/hold) **plus** the labor part (man-days ÷ crew ÷ shifts-per-day).
+  The fixed wait and the effective crew/shift are properties of the bin, read off the clean jobs.
+
+Put together, the screen's time estimate for a fresh JCN is:
+**span ≈ fixed_wait(bin) + [ Class F × multiplier(bin) ] ÷ (crew × shifts/day)** — then sort it
+against the window. Conversion 1 corrects the estimate's bias; conversion 2 turns corrected effort
+into elapsed time and adds the waits that effort can't predict.
+
+**One shortcut where data allows:** for any bin with enough clean one-JCN jobs, skip the labor
+middleman and model its Cycle Time (span) directly from those clean jobs. The labor route above is
+the fallback for bins where clean span data is thin but bundled labor data is rich — you borrow the
+labor→span relationship from the data-rich bins.
+
+**The assumption to validate:** that the multiplier is roughly constant within a SWBS group
+(big and small jobs of the same kind run at about the same actual-to-estimate ratio). If big jobs
+in a group behave differently, split that group by size; the confidence numbers will flag it.
+
 ## One caveat to design around: standalone vs. bundled
 Jobs get bundled *for a reason* — related work, same system, same tag-out — and a JCN done inside
 a bundle has a **shorter** span than it would alone, because it's sharing the access and the

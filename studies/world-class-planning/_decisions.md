@@ -33,12 +33,25 @@ project — "decisions" here are direction, not commitments.
 7. **Predict standalone span for the screen** (conservative); calibrate the span conversion on
    clean one-JCN history; use bundled history only for labor.
 8. **OSI-clean.** All sources are Distribution A.
+9. **Bin at SWBS 3-digit (~100 bins); solve for a multiplier, not man-days.** Operator: the bundles
+   live at the Ship Work Breakdown Structure (SWBS) level — the first three digits of the SWLIN,
+   ~100 groups. Solve each bin for its **performance multiplier** (actual ÷ estimated labor =
+   PfCw), which is size-independent, so the Class F estimate carries the size and ~100 bins is
+   enough. Same-SWBS bundles then self-solve (total actual ÷ total Class F = the multiplier);
+   regression is only for cross-SWBS bundles. Thin bins shrink toward the 1-digit SWBS parent.
+10. **Two explicit conversions** (the gap the operator flagged): (1) estimate → expected actual
+    labor = Class F × bin multiplier; (2) labor → span = a per-bin span model from clean one-JCN
+    Cycle Time ≈ fixed wait (cure/test) + labor ÷ (crew × shifts/day). Span has a big non-labor
+    component, so dividing labor by crew is not enough. Shortcut: where a bin has rich clean
+    one-JCN span data, model Cycle Time directly and skip the labor middleman.
+11. **Validate:** the multiplier is roughly constant within a SWBS group (split by size if not).
 
 ## Open questions (operator's to resolve)
 - **Data reach:** can Cycle Time and AQWP actually be queried by SWLIN / work type out of AIM-NT or
   the HIT Kit? Everything rests on this.
-- **JCN ↔ SWLIN in bundles:** mostly one-to-one (so most labor direct-attributes) or do JCNs
-  routinely share a SWLIN (so lean harder on allocation/regression)?
+- **Bundle level:** answered — bundles are at SWBS 3-digit (item 9). Remaining: does the
+  per-SWBS multiplier hold across sizes, or do big jobs in a group run at a different ratio
+  (→ split that group by size)?
 - **"96 hours":** define it (elapsed clock hours vs. work-shifts), and find its source (JFMM /
   TYCOM REDLINES / local) — or decide to drop it.
 - **Where the screen runs:** fold into the existing Shop Screening Process (§9), or stand it up
