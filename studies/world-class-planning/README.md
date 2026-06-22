@@ -50,6 +50,12 @@ straight into how SRF packages work. The project is about answering the three qu
   doesn't)**, and there's a clean way to recover per-JCN labor from bundled history. See
   [the attribution note](02_synthesis/estimate-attribution.md) — including the plain-English
   walk-through of the method.
+- **The bundling worry mostly dissolves in the tool.** Bin at the SWBS 3-digit level (~100 bins)
+  and solve each for a size-independent **multiplier** (actual ÷ estimated labor); then
+  `Σ(actual) ÷ Σ(estimate)` by SWBS needs **no per-JCN splitting at all**, because both sides sum
+  to SWBS on their own. Two explicit conversions follow (estimate → labor → span). What fields to
+  pull and how to crunch them in Excel/QlikView is in
+  [the data & tooling note](03_build/data-fields-and-tooling.md).
 
 ## Files
 - `01_sources/aim-ng-grounding.md` — what the AIM-NG manuals and 4700.1F actually say, distilled.

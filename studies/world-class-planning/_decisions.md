@@ -45,6 +45,18 @@ project — "decisions" here are direction, not commitments.
     component, so dividing labor by crew is not enough. Shortcut: where a bin has rich clean
     one-JCN span data, model Cycle Time directly and skip the labor middleman.
 11. **Validate:** the multiplier is roughly constant within a SWBS group (split by size if not).
+12. **The SWBS Σ/Σ trick — no per-JCN attribution needed for the multiplier.** Multiplier =
+    Σ(actual labor, AQWP) ÷ Σ(estimate) by SWBS; both sides sum to SWBS independently (CU Phases
+    carry the SWLIN), so bundles never have to be pulled apart in the tool. Per-JCN attribution
+    only returns for cross-SWBS sprawl or if per-JCN detail is wanted.
+13. **Pull at the CU-Phase / Key-Op grain.** A fact table (one row per CU Phase) joined to a JCN
+    dimension table on JCN. Calibrate on **closed (certified) work only**; basis = actual ÷ Class F
+    where Class F is retained, else actual ÷ QAC (note the planning-refinement gap). Span model
+    fit from **single-JCN summaries only**. Full field list in
+    `03_build/data-fields-and-tooling.md`.
+14. **Tooling:** Excel (Power Query to pull/join/derive; Power Pivot Data Model for the multiplier
+    measure; pivot by SWBS with the count + shrink-to-parent) or QlikView (associative model; set
+    analysis for closed work). Excel to lock the model; QlikView to explore.
 
 ## Open questions (operator's to resolve)
 - **Data reach:** can Cycle Time and AQWP actually be queried by SWLIN / work type out of AIM-NT or
