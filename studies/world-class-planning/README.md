@@ -56,6 +56,8 @@ straight into how SRF packages work. The project is about answering the three qu
 - `source-ledger.md` — the 13 Distribution-A source documents and where they live.
 - `02_synthesis/early-jcn-screen.md` — the screen design: super-early at JCN induction.
 - `02_synthesis/estimate-attribution.md` — the bundled-JCN attribution problem and the method.
+- `03_build/data-fields-and-tooling.md` — what fields to pull from AIM and how to crunch them in
+  Excel (Power Query + Power Pivot) or QlikView; the SWBS Σ/Σ trick that sidesteps the bundling.
 - `_decisions.md` — direction and open questions.
 
 ## Notes on how this project runs
