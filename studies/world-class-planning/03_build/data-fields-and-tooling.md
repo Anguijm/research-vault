@@ -65,6 +65,62 @@ what you'll have at induction. If Class F isn't reliably retained in history, fa
 `actual ÷ QAC` and accept that your screen input (Class F) and your calibration base (QAC) differ
 by the planning-refinement gap — note it, don't hide it.
 
+## Reconciled against the operator's real Qlik environment (2026-06-23)
+
+The operator pulled the actual AIM QVD layer and ran a build session with Gemini (the work AI).
+That work — a production load script, an 1,181-row data dictionary, and the Gemini transcript —
+pins down the real field names and surfaces the one thing that blocked the session.
+
+**The blocker, and the fix: actual labor is in the COST schema, not AIM.** The AIM QVDs carry only
+*estimates* — `MANHOUR_QY` (CU-phase est), `Task Manhours` = `MANHOUR_EST_QY` (task est — note the
+"_EST_"), `EST_MAN_DAYS_QY` (JCN est man-days). **There is no actual-expended-labor field in the
+AIM layer.** Actual expended labor lives in the separate **COST schema (the STARS cost system)** —
+`COST_FJ40.qvd` holds `JO Straight Time Lbr ... Hours`, `JO Overtime Labor Hours`, `JO Holiday
+Labor Hours` by Job Order; `COST_FE75.qvd` holds `KeyOp Closed to Labor Date` and `KeyOp Final
+Manhour Allowance`. **This is exactly why the Gemini multiplier came out 1.0 — it aliased the same
+AIM estimate field as both estimate and actual.** To get a real multiplier you must **join AIM
+(estimate) to COST/STARS (actual) on Job Order / Key Op**, sum the expended labor hours (straight +
+OT + holiday), and convert to man-days.
+
+**Real field map (use these names):**
+- **Estimate, JCN grain (induction-grade):** `AIM_JB_JCN.qvd` → `EST_MAN_DAYS_QY` with `SWLIN_LI_ID`.
+  (`JB_JCN` looks like the *brokered* JCN record — i.e., the induction estimate plus the SWLIN for
+  SWBS, at JCN grain. Confirm.)
+- **Estimate, CU-phase grain:** `AIM_CuPhase.qvd` → `MANHOUR_QY`, `Cu Phase Duration QY` (planned
+  shifts), `ICN`, `KO`, `ICN_KO`, `WORK_TYPE_CD`, `CU_swlin_sys_id`.
+- **Actual span:** `AIM_CuPhase.qvd` → `ACTUAL_START_DATE` (ACS_DT), `ACTUAL_COMPLETION_DATE`
+  (ACC_DT), with `..._EMPTY` flags to drop incomplete rows. Cycle Time = ACC − ACS. No NET_NODE
+  join needed in the published layer.
+- **Actual labor:** `COST_FJ40.qvd` (straight + OT + holiday hours by Job Order → ÷8 → man-days);
+  `COST_FE75.qvd` (KeyOp closed-to-labor date, final manhour allowance).
+- **Closed-work filter:** `AIM_CuPhase_Hist.qvd` → `Approval Status CD` = 'CRT' and `Current Flag
+  Cd` = 'Y'.
+- **SWLIN → SWBS:** `AIM_SWLIN.qvd` → `SWLIN Line Item` (`SWLIN_LI_ID`); SWBS = first 3 digits.
+- **Drydock cut / availability type:** `AIM_Project.qvd` → `DRYDOCK_FLAG_CD`, `PROJECT_TYPE_CD`.
+- **Crew:** `AIM_Task.qvd` → `Crew Size`, `Shop/TSD`.
+- **JCN ↔ CU-Phase link:** `JCN_CU_PHASE.qvd` (raw `JCN_SA_ID` ↔ `CU_PHASE_SA_ID`). The published
+  `%CuPhase_Key` is `HASH128(ACTIVITY_SA_ID,'-',CU_PHASE_SA_ID)` — join the bridge on the raw
+  `CU_PHASE_SA_ID`, **not** the hash (the hash mismatch is what the Gemini run kept breaking).
+- **History cohort:** the operator's MRQT dashboard already splits **Benchmark** (CA00 actual in
+  the past = completed availability) vs **Active** — the Benchmark cohort is the completed history
+  to calibrate the multiplier on.
+
+**NNPI is already masked** in the published AIM layer (`IF NUC_FLAG_CD='Y' THEN 'NNPI Data'`), and
+the operator's filter is DDG/LCC (non-nuclear surface) — so this analysis is clear of NNPI by
+construction.
+
+**A shortcut the data makes possible.** The screen maps an *estimate* (available at induction:
+`EST_MAN_DAYS_QY`) to an *actual span* (the AIM dates, also available). You can fit, per SWBS,
+`actual span ≈ f(estimate man-days)` **directly from completed single-JCN summaries — without ever
+touching the COST actual-labor field.** Bringing in COST actuals lets you separate effort-bias from
+calendar and validate, but it is **not on the critical path** for a first working screen. So the
+missing-actuals blocker that stalled the Gemini run need not block you.
+
+**Two cautions from the session:** Gemini fabricated a "Qlik Script Linter" (Qlik has none) and one
+of its invented "linter" fixes broke the JCN join — treat any "the linter says" framing as a guess.
+And the session never applied the closed-work / work-type filters or produced a working span model —
+both still to do.
+
 ## Doing it in Excel (one workbook, the right way)
 Don't build this out of VLOOKUPs across giant sheets — it won't scale and it won't refresh. Use the
 two engines already in Excel:

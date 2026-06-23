@@ -57,10 +57,22 @@ project — "decisions" here are direction, not commitments.
 14. **Tooling:** Excel (Power Query to pull/join/derive; Power Pivot Data Model for the multiplier
     measure; pivot by SWBS with the count + shrink-to-parent) or QlikView (associative model; set
     analysis for closed work). Excel to lock the model; QlikView to explore.
+15. **Actuals are in the COST/STARS schema, not AIM (2026-06-23, from the operator's Qlik pull).**
+    AIM_* carries only estimates (`MANHOUR_QY`, `MANHOUR_EST_QY`, `EST_MAN_DAYS_QY`); actual
+    expended labor is `COST_FJ40` (straight+OT+holiday hours by Job Order) / `COST_FE75` (keyop
+    closed-to-labor). The multiplier therefore needs an **AIM↔COST join on Job Order / Key Op**
+    (this is what defeated the Gemini session — it reused one AIM estimate field as both sides →
+    multiplier 1.0). Actual *span* is in AIM (`ACTUAL_START_DATE`/`ACTUAL_COMPLETION_DATE`).
+    **Shortcut:** fit `actual span ≈ f(EST_MAN_DAYS_QY)` per SWBS from completed single-JCN
+    summaries — no COST actual-labor needed for a first cut. Real field map + join in
+    `03_build/data-fields-and-tooling.md`. NNPI is masked in the published AIM layer.
 
 ## Open questions (operator's to resolve)
-- **Data reach:** can Cycle Time and AQWP actually be queried by SWLIN / work type out of AIM-NT or
-  the HIT Kit? Everything rests on this.
+- **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
+  (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
+  reachable in the operator's Qlik QVDs. The one piece needing work: the **AIM↔COST/STARS join on
+  Job Order/Key Op** to pull actual labor — and confirm the keyop join lines up across the two
+  systems.
 - **Bundle level:** answered — bundles are at SWBS 3-digit (item 9). Remaining: does the
   per-SWBS multiplier hold across sizes, or do big jobs in a group run at a different ratio
   (→ split that group by size)?

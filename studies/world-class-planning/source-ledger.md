@@ -30,3 +30,18 @@ then `pdftotext -layout` each PDF.
 | AIM-NG Chapter 10A — PMC (Performance Measurement & Control) | The earned-value data dictionary; QAC/AQWP, Cost/Schedule Performance, PfCw; the Reference Availability Model. |
 | AIM-NG Chapter 11A — PCO (Project Close-Out) | Departure Report return-cost loop; HIT Kit historical store; deferral/incomplete-work disposition. |
 | C200 Process Guide (Rev 3) | SRF-JRMC Code 200 (Engineering & Planning) process guide (232 pp). The planning shop's own process: estimate classes (Class F ±40%, Class C ±15%), work breakdown, CU-Phase purity rules, the EM/CM/CMAV breakdown examples. |
+
+## Operator's Qlik work artifacts (2026-06-23, in the same Drive folder)
+
+Four files the operator added — their own AIM/Qlik environment and a build session with Gemini.
+Distilled into [the data & tooling note](03_build/data-fields-and-tooling.md); **the raw files are
+NOT copied into this git-backed vault** (it pushes to GitHub, and these are live internal AIM
+data-model artifacts — a classification/handling call the operator should make before they go
+off-machine). They remain in the Drive `AIM NG` folder.
+
+| File | What it is |
+|------|-----------|
+| KATS data pull load script.txt | The production QlikView load script (the real AIM QVD table/field model, project filter A53, Yokosuka). |
+| QLIK Data Dictionary.xlsx | 1,181-field data dictionary (QVD field → source field → definition). The authoritative field reference; shows the published AIM layer **masks NNPI** (`IF NUC_FLAG_CD='Y' THEN 'NNPI Data'`). |
+| QLIK data.txt | Field lists of the published `AIM_*.qvd` layer + the operator's MRQT material-readiness dashboard script (Benchmark/Active cohorting). |
+| WCP attempt.txt | The operator's conversation with Gemini building the multiplier in Qlik (~3,450 lines). Method held; session blocked on the missing actual-labor field (it's in the COST schema, not AIM). |
