@@ -63,7 +63,12 @@ straight into how SRF packages work. The project is about answering the three qu
 - `02_synthesis/early-jcn-screen.md` — the screen design: super-early at JCN induction.
 - `02_synthesis/estimate-attribution.md` — the bundled-JCN attribution problem and the method.
 - `03_build/data-fields-and-tooling.md` — what fields to pull from AIM and how to crunch them in
-  Excel (Power Query + Power Pivot) or QlikView; the SWBS Σ/Σ trick that sidesteps the bundling.
+  Excel (Power Query + Power Pivot) or QlikView; the SWBS Σ/Σ trick that sidesteps the bundling;
+  the real field map from the operator's Qlik environment (actuals live in COST/STARS, not AIM).
+- `03_build/span-screen-qlik.md` — the first-cut screen as a runnable QlikView script (span fit
+  per SWBS; no COST join needed).
+- `01_sources/qlik/` — the operator's raw Qlik artifacts (load script, data dictionary, field
+  dump, Gemini build session).
 - `_decisions.md` — direction and open questions.
 
 ## Notes on how this project runs

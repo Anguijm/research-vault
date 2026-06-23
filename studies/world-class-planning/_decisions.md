@@ -67,6 +67,13 @@ project — "decisions" here are direction, not commitments.
     summaries — no COST actual-labor needed for a first cut. Real field map + join in
     `03_build/data-fields-and-tooling.md`. NNPI is masked in the published AIM layer.
 
+16. **First-cut screen written as a QlikView script (2026-06-23):** `03_build/span-screen-qlik.md` —
+    the span-fit-per-SWBS shortcut (no COST join). Fits `span ≈ Intercept + Slope × EstManDays` per
+    SWBS from completed single-JCN history (LINEST_M/B, shrink thin bins to the 1-digit parent),
+    scores candidates, three-bin sort. Carries a [CONFIRM] list for the inferred keys/fields/units.
+    Operator cleared the raw Qlik artifacts for the vault — now in `01_sources/qlik/`. Next:
+    drydock override, then the AIM↔COST multiplier.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all

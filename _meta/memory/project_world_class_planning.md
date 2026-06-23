@@ -44,7 +44,9 @@ all reachable. **KEY FINDING: actual labor is NOT in AIM — it's in the COST/ST
 reused an AIM estimate field as both sides). **Shortcut:** fit span ≈ f(EST_MAN_DAYS_QY) per SWBS
 from completed single-JCN summaries — no COST actuals needed for a first cut. NNPI is masked in the
 published AIM layer. Raw Qlik scripts kept OUT of the git vault (operator's classification call;
-vault pushes to GitHub). Gemini fabricated a "Qlik linter" — disregard. Still open: define "96
-hours" (clock vs shifts; not in 4700.1F). See `studies/world-class-planning/` ([[project-ai-governance-study]]
+vault pushes to GitHub). Gemini fabricated a "Qlik linter" — disregard. **First-cut screen written as a QlikView script
+(`03_build/span-screen-qlik.md` — span fit per SWBS, LINEST per SWBS, no COST join); raw Qlik
+artifacts now in `01_sources/qlik/` (operator cleared for vault/GitHub).** Still open: define "96
+hours" (clock vs shifts; not in 4700.1F); add the drydock override; then the AIM↔COST multiplier. See `studies/world-class-planning/` ([[project-ai-governance-study]]
 is the sibling study track). Related operator context: [[project_uss_rmc_vs_usns_msc]],
 [[reference_srf_jrmc_department_structure]].

@@ -1,0 +1,1302 @@
+Main:
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;-$#,##0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='MM-DD-YYYY';
+SET TimestampFormat='MM-DD-YYYY h:mm:ss[.fff]';
+SET FirstWeekDay=0;
+SET BrokenWeeks=1;
+SET ReferenceDay=1;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+SET NullDisplay='';
+//NullAsValue ACC, ACS;
+//set NullValue='<NULL>';
+SEARCH EXCLUDE [*desc_tx, Description];
+//SET vProjects='A51','A52';
+SET vProject='A53';
+
+TRACE vProjects = $(vProjects);
+TRACE vProject = '$(vProject)';
+NullAsValue *;
+Set NullValue = '';
+
+
+Mapping Tables:
+// Create table to map ACTIVITY_SA_ID to Shipyard names //
+
+Map_Shipyards:
+Mapping
+Load * Inline
+[
+	1, PHNSY
+ 	2, PNSY
+ 	3, NNSY
+ 	4, PSNSY
+ 	5, MARMC
+ 	6, SERMC
+ 	7, SWRMC
+ 	8, JRMC
+ 	9, FDRMC
+ 	10, FDROT
+ 	11, FDBAH
+];
+
+// Create mapping table for Color code and ApplyMap() in CU Phase //
+
+Map_Color:
+Mapping
+Load * Inline
+[
+	0, W
+    1, R
+ 	2, Y
+ 	3, G
+ 	4, B
+];
+
+// Create mapping table for Float and ApplyMap() in CU Phase //
+Map_Float:
+Mapping
+LOAD
+	NET_NODE_ID,
+	TOTAL_FLOAT_QY 
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_FLOAT.qvd]
+(qvd)
+Where FLOAT_TYPE_CD = 'ST';
+
+Map_KE_Name:
+Mapping
+LOAD
+    KE_ID,
+    KE_NM
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/KEY_EVENT_REF.qvd]
+(qvd);
+
+Map_KE_Desc:
+Mapping
+LOAD
+    KE_ID,
+    KEY_EVENT_TX
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/KEY_EVENT_REF.qvd]
+(qvd);
+
+Map_ICNKO:
+Mapping
+Load 
+	CU_PHASE_SA_ID,
+    ICN & KO as ICN_KO
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_BAIM.qvd] (qvd)
+Where Match(PROJ_ID, '$(vProject)')
+;
+
+
+Ship:
+// Load Ship table //
+
+Ships:
+LOAD
+	SHIP_TYPE_CD & HULL_NUM_ID as %Ship_Key,
+	HULL_NUM_ID,
+    SHIP_CLASS_ID,
+    SHIP_TYPE_CD,
+    PLAN_YD_CD,
+    NATIONALITY_NM,
+    UNIT_ID_CD,
+    TYPE_COMM_NM,
+    SHIP_ADDR_ONE_TX,
+    SHIP_ADDR_TWO_TX,
+    SHIP_NM,
+    SHIP_HOME_NM,
+    MOD_DT
+//    ACTIVITY_SA_ID,
+//    LAST_DML_SA_ID,
+//    SRC_DB_OPERATION,
+//    SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/SHIP.qvd] (qvd)
+where Match(SHIP_HOME_NM,'YOKOSUKA');
+
+Project:
+// Load Project table //
+
+Qualify *;
+Unqualify %Ship_Key, PROJ_ID;
+
+Project:
+LOAD
+	SHIP_TYPE_CD & HULL_NUM_ID as %Ship_Key,
+    PROJ_ID,
+    PROJ_TYPE_CD,
+    HULL_NUM_ID,
+    SHIP_TYPE_CD,
+    PROJ_NM,
+    DRYDOCK_FLAG_CD,
+    SALES_EST_AM,
+    LOCATION_NM,
+    PROJ_STATUS_CD,
+    SHYD_RISK_QY,
+    REMARKS_TX,
+    PROJ_RISK_QY,
+    TIME_FACTOR_QY,
+    TRANSACT_CD,
+    EXC_YRD_CD,
+    PLAN_YRD_CD,
+    DEF_CALENDAR_ID,
+    AIM_PROJ_FLAG_CD,
+    DEL_FLAG_CD,
+    CORPORATE_FLAG_CD,
+    ALT_PROGRESS_CD,
+    ALT_PROG_USER_SA_ID,
+    ALT_PROGRESS_SET_DT,
+    TOC_CD,
+    TOC_SET_USER_SA_ID,
+    TOC_SET_DT,
+    TOC_STOP_USER_SA_ID,
+    TOC_STOP_DT,
+    TOC_ORIG_BASELINE_CD,
+    TOC_REV_BASELINE_CD,
+    TOC_LAST_MSP_EXPORT_DT,
+    COMPLETE_ON_APP_CD,
+    JOB_SUPV_FLAG_CD,
+    REUSE_CD,
+    REFRESH_INTERVAL_ID,
+    REFRESH_OVERRIDE_CD,
+    FINMET_FLAG_CD,
+    FIN_PROCESS_NBR,
+    FINMET_ERROR_TX,
+    WEIGHTS_MANUALLY_CD,
+    WEIGHTS_MANUALLY_AUDIT_CD,
+    RANK_ID,
+    FRE_LOCKED_FLAG,
+    MOD_DT,
+    ACTIVITY_SA_ID,
+    LAST_DML_SA_ID,
+    ETWD_CD,
+    SRC_DB_OPERATION,
+    SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/PROJECT_BAIM.qvd] (qvd)
+//Where SHIP_TYPE_CD = 'CVN' and HULL_NUM_ID = '73';
+Where Match(PROJ_ID, '$(vProject)')
+// Where PROJ_ID = '$(vProject)'
+;
+
+Unqualify *;
+
+Events:
+// Events
+
+KEMS:
+LOAD
+//    IF("Event Type" = 'KE',ApplyMap('Map_KE_Desc',"Event ID"),"Event Desc") as Event_Desc,
+	"Event Desc" as Event_Desc,
+	"Event Actual Date" as KEMS_Actual_DT,
+    "Event Desired Date" as KEMS_Desired_DT,
+    "Event Type" as Type,
+    "Event Activity ID",
+    "Event ID" as KEMS_ID,
+    "Event Proj ID" as KEMS_PROJ_ID,
+    "Event Status",
+     If("Event Type" = 'KE',ApplyMap('Map_KE_Name',"Event ID",'UN'),"Event Name") as Event_NM
+FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd)
+Where Exists(PROJ_ID,"Event Proj ID")
+;
+
+
+JobSummary:
+// Load JobSummary table
+
+
+
+Job_Summary:
+LOAD
+	SWLIN_SYS_ID & FUND_ACT_CD & SWLIN_SERIAL_ID & SSI_SERIAL_ID as JSID,
+    SWLIN_SYS_ID & FUND_ACT_CD & SWLIN_SERIAL_ID as SWLIN_ID,
+    JOB_SUMM_SA_ID,
+    FUND_ACT_CD,
+    WORK_CAT_CD,
+    MOD_DT as JS_Mod_DT,
+    TITLE_TX as JS_Title,
+    MOD_USER_SA_ID,
+    SHIPS_FORCE_FLAG_CD,
+    PROJ_ID,
+    STATUS_CD,
+    WORK_NUM_ID,
+    PE_USER_SA_ID,
+    LBR_RISK_QY,
+    LBR_RISK_TX,
+    MATL_RISK_TX,
+    MATL_RISK_QY,
+    GROUPING_SA_ID,
+    DESC_TX,
+    ORG_CD,
+    ORG_EXTENSION_CD,
+    VALID_USER_SA_ID,
+    VALID_DT,
+    VALID_FLAG_CD,
+    ENGINEERING_NOTES_TX,
+    WORK_SCOPE_TX,
+    CTRL_NUM_CHARGE_CD,
+    CONF_FACT_FLAG_CD,
+    ICN,
+    APPROVAL_USER_SA_ID,
+    APPROVAL_DT,
+    LAST_STATUS_USER_SA_ID,
+    LAST_STATUS_DT,
+    JCN_GENERATED_CD,
+    REPAIR_ACTIVITY_UIC_ID,
+    TITLE_WORK_SCOPE_MOD_DT,
+    ACTIVITY_SA_ID,
+//    LAST_DML_SA_ID,
+    If(Left(ORG_CD,1) = '2','P','S') as Prod_Flag
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JOB_SUMMARY_BAIM.qvd] (qvd)
+Where Exists(PROJ_ID,PROJ_ID);
+
+
+//  Get the Prepared by User name
+JSPrepUser:
+LOAD
+    USER_SA_ID as PE_USER_SA_ID,
+    LAST_NM & ', ' & FIRST_NM as Prep_Name,
+    ORG_CD as Prep_Org_CD
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/PERSONNEL_BAIM.qvd] (qvd)
+Where Exists(PE_USER_SA_ID,USER_SA_ID);
+
+CuPhase:
+// Load CuPhase Table //
+
+
+TEMP_CU: ///// LOADING TEMP CU PHASE/////
+LOAD
+    CU_PHASE_SA_ID,
+    PHASE_REPEAT_QY,
+    WORK_TYPE_CD,  //
+    STD_PHASE_CD,
+    KEY_TASK_SERIAL_ID,
+    REWORK_CAT_CD,
+    PARENT_CU_PHASE_SA_ID,
+    MOD_DT,
+    TITLE_TX,  //
+    DURATION_QY,
+    VERSION_ID,
+    MAX_CREW_SIZE_QY,
+    DESC_TX,
+    CU_SA_ID,
+    PROJ_ID,
+    WORK_CAT_CD,
+    SWLIN_SYS_ID,
+    SSI_SERIAL_ID,
+    CU_PHASE_SERIAL_ID,
+    APS_USER_SA_ID,
+    SCHEDULER_CD,
+    PROGRESS_RT,
+    MANHOUR_QY,
+    TGI_RESPONSIBLE_CD,
+    CHILD_SERIAL_ID,
+    PDMSS_CHANGE_DT,
+    SYMIS_CHANGE_CD,
+    SIG_REQUIRED_CD,
+    KO,  //
+    ICN,  //
+    MOD_USER_SA_ID,
+    CREATE_USER_SA_ID,  //
+    CREATE_DT,
+    PACKAGE_SA_ID,
+    AOR_SA_ID,  //
+    COMP_NM,
+    COMP_TYPE_CD,
+    ARCMIS_TRAN_CD,
+    TEST_CUPH_MAPPED_DT,
+    SUB_WORK_TYPE_CD,
+    SCHEDULE_INCLUSION_FLAG,
+    PRIMARY_ZONE,
+    TEST_ID,
+    DOC_REVIEW_CD,
+    KEY_EVENT_ID,
+    MILESTONE_EVENT_ID,
+    TEST_EVENT_ID,
+    EXPORT_DT,
+    MATL_SENT_FLAG_CD,
+    COPY_SOURCE_TX,
+    COPY_DT,
+    COLOR_STATUS_CD,
+    DISTANCE_QY,
+    FORWARD_RANK_ID,
+    GROUP_CD,
+    NTF_QY,
+    RDU_QY,
+    RDU_CHANGE_DT,
+    AUTO_PROG_CD,
+    REMARKS_TX,
+    CRIT_PATH_CD,
+    WS_REASON_CD,
+    WS_REASON_SET_DT,
+    EST_RESOLUTION_DT,
+    COG_CD,
+    SIF_CD,
+    JCN_GENERATED_CD,
+    JOB_ORDER_SA_ID,
+    SYMIS_FLAG_CD,
+    AOR_CD,
+    HOT_LIST_CD,
+    PEID_CD,
+    PREPARED_BY_DT,
+    PREPARED_BY_USER_SA_ID,
+    SCHED_GRP_KEY_EVENT_SA_ID,
+    COMMENTS_TX,
+    JO_SERIAL_ID,
+    ACTIVITY_SA_ID,
+    LAST_DML_SA_ID,
+    M_CD,
+    T_CD,
+    W_CD,
+    R_CD,
+    P_CD,
+    SSSR_REVIEWED_CD,
+    WPC_NOTES_TX,
+    SRC_DB_OPERATION,
+    SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_BAIM.qvd] (qvd)
+Where Exists(ICN, ICN) and Isnull(PARENT_CU_PHASE_SA_ID)
+;
+
+/////LOAD NET NODE DATE AND FILTER IT WITH ACS TO GET ACTUAL START DATE/////
+LEFT JOIN (TEMP_CU)
+ACS:
+LOAD
+    NET_NODE_ID AS CU_PHASE_SA_ID,
+    Date(NET_NODE_DT,'MM-DD-YYYY') AS ACS
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_DATE.qvd] (qvd)
+Where DATE_TYPE_CD = 'ACS' and Exists(CU_PHASE_SA_ID,NET_NODE_ID) /////THIS INDICATES ACTUAL START DATE/////
+;
+
+/////LOAD NET NODE DATE AND FILTER IT WITH STS TO GET CURRENT START DATE/////
+LEFT JOIN (TEMP_CU)
+STS:
+LOAD
+    NET_NODE_ID AS CU_PHASE_SA_ID,
+    Date(NET_NODE_DT,'MM-DD-YYYY') AS STS
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_DATE.qvd] (qvd)
+Where DATE_TYPE_CD = 'STS' and Exists(CU_PHASE_SA_ID,NET_NODE_ID) /////THIS INDICATES CURRENT START DATE/////
+;
+
+/////LOAD NET NODE DATE AND FILTER IT WITH ACC TO GET ACTUAL COMPLETION DATE/////
+LEFT JOIN (TEMP_CU)
+ACC:
+LOAD
+    NET_NODE_ID AS CU_PHASE_SA_ID,
+    Date(NET_NODE_DT,'MM-DD-YYYY') AS ACC
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_DATE.qvd] (qvd)
+Where DATE_TYPE_CD = 'ACC' and Exists(CU_PHASE_SA_ID,NET_NODE_ID) /////THIS INDICATES ACTUAL COMPLETION DATE/////
+;
+
+/////LOAD NET NODE DATE AND FILTER IT WITH STC TO GET CURRENT COMPLETION DATE/////
+LEFT JOIN (TEMP_CU)
+STC:
+LOAD
+    NET_NODE_ID AS CU_PHASE_SA_ID,
+    Date(NET_NODE_DT,'MM-DD-YYYY') AS STC
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_DATE.qvd] (qvd)
+Where DATE_TYPE_CD = 'STC' and Exists(CU_PHASE_SA_ID,NET_NODE_ID) /////THIS INDICATES CURRENT COMPLETION DATE/////
+;
+
+//// lOAD THE CALENDAR_ID FROM THE NET_NODE TABLE  /////
+LEFT JOIN (TEMP_CU)
+CAL:
+LOAD
+    NET_NODE_ID as CU_PHASE_SA_ID,
+    CALENDAR_ID
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE.qvd] (qvd)
+Where NET_NODE_TYPE_CD = 'CP' and ExistS(CU_PHASE_SA_ID,NET_NODE_ID);  //// THIS IS THE CALENDAR CODE /////
+
+/////LOAD JOINED TEMP_CU TO GET ACS, STS, ACC, STC DATES AND CALENDAR_ID/////
+NoConcatenate ///// NEED NOCONCATENATE TO PREVENT QLIK TO AUTOMATICALLY CONCATENATES THIS TABLE TO TEMP_CU
+CU_Phase:
+LOAD
+	ApplyMap('Map_Float', CU_PHASE_SA_ID, 0) AS TOTAL_FLOAT_QY,
+    ApplyMap('Map_Color', COLOR_STATUS_CD, '') AS COLOR_CD,
+    CU_PHASE_SA_ID,
+    CU_PHASE_SA_ID as Cup_ID,
+    PARENT_CU_PHASE_SA_ID,
+    PROJ_ID as CuP_Proj_ID,
+    ICN & KO as ICN_KO,
+    ICN,
+    CU_SA_ID,
+    COMP_NM,
+    COMP_TYPE_CD,
+    TITLE_TX,
+    WORK_TYPE_CD,
+    SUB_WORK_TYPE_CD,
+    DESC_TX as Descripton,
+    KEY_EVENT_ID,
+    MILESTONE_EVENT_ID,
+    CALENDAR_ID,    
+    DURATION_QY,
+    PROGRESS_RT,    
+    MANHOUR_QY,
+    MOD_DT as CuP_MOD_DT,
+    TGI_RESPONSIBLE_CD,
+    COLOR_STATUS_CD,
+    REMARKS_TX,
+    AOR_SA_ID,
+    CRIT_PATH_CD,
+    WS_REASON_CD,
+    WS_REASON_SET_DT,
+    EST_RESOLUTION_DT,
+    COG_CD,
+    SIF_CD,  
+    RDU_QY,
+    RDU_CHANGE_DT,
+    STS,
+    STC,
+	ACS,
+    ACC,
+    WeekStart(STC) as STC_Wk,
+    WeekStart(ACC) as ACC_Wk,
+	1 as Cntr
+RESIDENT TEMP_CU;
+//FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_BAIM.qvd] (qvd)
+//Where ISNULL(PARENT_CU_PHASE_SA_ID); // and Match(PROJ_ID, '$(vProject)');
+
+DROP TABLE TEMP_CU; ///// NEED TO DROP THE TEMP TABLE AS IT WILL CREATE UNNCESSARY CONNECTION WITH OTHER TABLES IF NOT/////
+
+// load latest CuPhase status values.
+CuP_Status:
+LOAD
+	CU_PHASE_SA_ID,
+    STATUS_SET_DT,
+    if(APPROVAL_STATUS_CD = 'CRT', WeekStart(STATUS_SET_DT),Null()) as Status_Wk,
+    CURRENT_FLAG_CD,
+    CHANGE_CD,
+    APPROVAL_STATUS_CD,
+    WORKING_STATUS_CD
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_HIST_BAIM.qvd] (qvd)
+WHERE CURRENT_FLAG_CD = 'Y' and Exists(CU_PHASE_SA_ID,CU_PHASE_SA_ID);
+
+// NNI:
+// LOAD
+//     DATE_TYPE_CD,
+//     NET_NODE_ID as CU_PHASE_SA_ID,
+//     NET_NODE_DT
+// FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_DATE.qvd] (qvd)
+// WHERE Exists(CU_PHASE_SA_ID,CU_PHASE_SA_ID)
+// ;
+
+
+PredSucc:
+// Load the PredSucc table
+
+PredSucc:
+LOAD
+    RELATION_TYPE_CD,
+    PREC_NET_NODE_ID,
+    NET_NODE_ID,
+    ApplyMap('Map_ICNKO',PREC_NET_NODE_ID,'UN') as Pred_ICNKO,
+    ApplyMap('Map_ICNKO',NET_NODE_ID,'UN') as Succ_ICNKO    
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/NET_NODE_PRECEDENCE.qvd] (qvd)
+Where Exists(CU_PHASE_SA_ID,PREC_NET_NODE_ID) OR Exists(CU_PHASE_SA_ID,NET_NODE_ID)
+;
+
+Components:
+CU:
+LOAD
+    COMP_SA_ID as CU_SA_ID,
+    COMP_SA_ID as NAY_SA_ID,
+//    COMP_NM,
+//    COMP_TYPE_CD,
+    DESC_TX as Comp_Desc_TX,
+    SPACE_CD
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/COMPONENT.qvd] (qvd)
+Where  Exists(CU_SA_ID,COMP_SA_ID)
+;
+
+
+AOR:
+// AOR table
+
+
+AOR:
+LOAD
+    AOR_SA_ID,
+    PROJ_ID as AOR_Proj_ID,
+//     AOR_NM,
+    APS_USER_SA_ID
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/AOR_BAIM.qvd] (qvd)
+Where Exists(PROJ_ID, PROJ_ID);
+
+Left Join(AOR)
+Pers:
+LOAD
+     USER_SA_ID as APS_USER_SA_ID,
+//     JOB_TITLE_TX,
+//     USER_ID,
+	LAST_NM & ', ' & FIRST_NM AS ZM_Name
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/PERSONNEL_BAIM.qvd] (qvd)
+Where Exists(APS_USER_SA_ID,USER_SA_ID);
+
+
+// Get the name of the assigned job supervisor
+Supervisor:
+LOAD
+    CU_PHASE_SA_ID,
+    CURRENT_FLAG_CD as CFLAG_CD,
+    USER_SA_ID
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_SUPV_HIST.qvd] (qvd)
+Where Exists(CU_PHASE_SA_ID,CU_PHASE_SA_ID) and CURRENT_FLAG_CD = 'Y';
+
+Left Join(Supervisor)
+PrepUser:
+LOAD
+    USER_SA_ID,
+    LAST_NM & ', ' & FIRST_NM as Supv_Name
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/PERSONNEL_BAIM.qvd] (qvd)
+Where Exists(USER_SA_ID,USER_SA_ID);
+
+JCNREF:
+//  Load JCN data and the JCN to CuPhase ref table
+
+JCNData:
+LOAD
+    JCN_SA_ID,
+    SHIP_BOARD_WRK_CTR_CD,
+    JOB_SEQUENCE_NUM_ID,
+    CSMP_NM,
+    EQUIP_SERIAL_NUM_ID,
+    EQUIP_NOUN_NM,
+    LOCATION_ID,
+    PROJ_ID as JCN_Proj_ID,
+    AVAIL_ID,
+    REMARKS_DESC_TX
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JCN_BAIM.qvd] (qvd)
+Where Match(PROJ_ID, '$(vProject)')
+;
+
+
+JCNREF:
+LOAD
+    JCN_SA_ID,
+    CU_PHASE_SA_ID
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JCN_CU_PHASE.qvd] (qvd)
+Where exists(JCN_SA_ID,JCN_SA_ID)
+;
+
+MSM:
+MSM:
+LOAD
+//    ACTIVITY_SA_ID,
+    MSMSHOP_KEY,
+    NIIN,
+//    SMIC,
+    SHOP,
+    SHOP_LOC
+//    CATEGORY_CD,
+//     TYPE_ACCT_CD,
+//     COG,
+//     ACQUISITION_ADV_CD,
+//     FSC,
+//     UNIT_OF_ISSUE_MSM,
+//     UNIT_OF_ISSUE_STD,
+//     ROUTING_INDICATOR,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/DIMMSMSHOP.qvd] (qvd)
+Where SHOP_LOC <> 'S' and ACTIVITY_SA_ID = '8'
+;
+
+
+
+Left Join(MSM)
+MSMFACT:
+LOAD
+//     ACTIVITY_SA_ID,
+//     MSMTRF_KEY,
+    MSMSHOP_KEY,
+//     JULIAN_DATE_KEY,
+//     MSMMISC_KEY,
+//     MSMCODES_KEY,
+//     CONVERSION_FACTOR,
+    QTY_RFI
+//     QTY_FRFI,
+//     QTY_REJ,
+//     QTY_NRFI,
+//     QTY_SIP,
+//     MSM_UNIT_PRICE,
+//     QTY_ORDER,
+//     QTY_DUE,
+//     QTY_JML_CUM,
+//     QTY_REORDER_POINT,
+//     AGE_FACTOR,
+//     QTY_STD_PKG,
+//     QTY_STORAGE_LIMIT,
+//     QTY_MINIMUM_ORDER,
+//     HOLD_TIME,
+//     LEADTIME_FORECAST,
+//     LEADTIME_DEVIATION,
+//     MONTH_DEMAND_DEVIATION,
+//     LEADTIME_DEMAND_FORECAST,
+//     MONTH_DEMAND_FORECAST,
+//     LEADTIME_DEMAND_DEVIATION,
+//     MONTH_ISSUE_FREQUENCY,
+//     VALUE_OF_SALES,
+//     VALUE_OF_RECEIPTS,
+//     ISS_CNT_SALES,
+//     ISS_CNT_LAST_INV,
+//     QTY_OH_BEGINNING,
+//     ISSUES_CURRENT_YEAR,
+//     REPL_DMD_YTD,
+//     CURRENT_ISSUE_COUNT,
+//     CUR_REPL_DMD,
+//     FIRST_PRIOR_ISSUE_COUNT,
+//     FIRST_PRIOR_REPL_DMD,
+//     SECOND_PRIOR_ISSUE_COUNT,
+//     SECOND_PRIOR_REPL_DMD,
+//     THIRD_PRIOR_ISSUE_COUNT,
+//     THIRD_PRIOR_REPL_DMD,
+//     FOURTH_PRIOR_ISSUE_COUNT,
+//     FOURTH_PRIOR_REPL_DMD,
+//     FIFTH_PRIOR_ISSUE_COUNT,
+//     FIFTH_PRIOR_REPL_DMD,
+//     SIXTH_PRIOR_ISSUE_COUNT,
+//     SIXTH_PRIOR_REPL_DMD,
+//     SEVENTH_PRIOR_ISSUE_COUNT,
+//     SEVENTH_PRIOR_REPL_DMD,
+//     EIGHTH_PRIOR_ISSUE_COUNT,
+//     EIGHTH_PRIOR_REPL_DMD,
+//     NINTH_PRIOR_ISSUE_COUNT,
+//     NINTH_PRIOR_REPL_DMD,
+//     TENTH_PRIOR_ISSUE_COUNT,
+//     TENTH_PRIOR_REPL_DMD,
+//     ELEVENTH_PRIOR_ISSUE_COUNT,
+//     ELEVENTH_PRIOR_REPL_DMD,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/MSMFACT.qvd] (qvd)
+Where Match(MSMSHOP_KEY,MSMSHOP_KEY) and QTY_RFI > 0
+;
+
+MRQT:
+///  MRQT
+
+LOAD
+    MATL_SA_ID,
+    CU_PHASE_SA_ID
+//    PROJ_ID,
+//    MATL_PROJ_LINE_ID,
+//    SOURCE_CD,
+//    ACTUAL_USED_COST_AM,
+//     ACTUAL_USED_QY,
+//     ACTUAL_USED_UI_CD,
+//     ADDITIONAL_INFO_TX,
+//     DESCRIPTION_TX,
+//     KEYOP_ITEM_ID,
+//     MAND_CONT_FLAG_CD,
+//     NEED_DT,
+//     NEED_ESTIMATE_FLAG_CD,
+//     ACTUAL_QY,
+//     JCN_UNIT_ID_CD,
+//     JCN_SHIP_BOARD_WRK_CTR_CD,
+//     JCN_JOB_SEQUENCE_NUM_ID,
+//     NON_STAND_DOC_NO,
+//     TRACK,
+//     ICP_ACTUAL_QY,
+//     ATTACHMENT_FLAG_CD,
+//     SSR_PRE_TITLE_TX,
+//     SSR_PRE_ICN,
+//     SSR_PRE_KO,
+//     MATCH_CD,
+//     MM_NIIN_CD,
+//     MM_ACT_UI,
+//     MM_ACT_QY,
+//     MANDATORY_MATL_SA_ID,
+//     MAT_JML_CD,
+//     NUCLEAR_CD,
+//     NOTE_FLAG_CD,
+//     STAMP_FLAG_CD,
+//     MOD_DT,
+//     CONT_MOD_DT,
+//     STAMP_MOD_DT,
+//     COMPLETE_ON_APP_CD,
+//     AUTO_ACTIVATE_CD,
+//     NEW_WORK_CD,
+//     ACTIVITY_SA_ID,
+//     LAST_DML_SA_ID,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JML_HEADER.qvd] (qvd)
+where Exists(CU_PHASE_SA_ID,CU_PHASE_SA_ID);
+;
+
+
+
+LOAD
+    NOUN_NM,
+    NIIN_ID,
+    DOCNO_ID,
+    MATL_SA_ID
+//     ACTUAL_UI_CD,
+//     ACTUAL_UNIT_PRICE_AM,
+//     BULK_DOCNO_ID,
+//     COG_CD,
+//     DOC_IDENT_CD,
+//     FSC_ID,
+//     FUND_CD,
+//     JML_REV_ID,
+//     MATL_CONTROL_CD,
+//     MM_ORIG_ID,
+//     MM_TRANSACTION_CD,
+//     OPTIONAL_KEY1_ID,
+//     PROJECT_CD,
+//     REQN_ROUTE_ID,
+//     SHELF_LIFE_ACT_CD,
+//     SHELF_LIFE_CD,
+//     SMIC_CD,
+//     TRANSFER_DT,
+//     TRANSFER_STAT_CD,
+//     UNIT_ID_CD,
+//     WORK_AUTH_ID,
+//     WORK_AUTH_CD,
+//     XREF_DOCNO_CUT_ID,
+//     XREF_DOCNO_ID,
+//     SUPPLEMENTAL_UNIT_ID,
+//     SOURCE_CD,
+//     DOCNO_REVID,
+//     NUC_LEVEL_ONE_CD,
+//     IRPOD_CD,
+//     PLISN_ID,
+//     RPCCR_CD,
+//     RIMS_SENT_CD,
+//     CIIC_CD,
+//     DEMIL_CD,
+//     SSLOC,
+//     ACTIVITY_SA_ID,
+//     LAST_DML_SA_ID,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JML_EXPEDITOR.qvd] (qvd)
+where Exists(MATL_SA_ID,MATL_SA_ID)
+;
+
+LOAD
+    SIZE_TX,
+    MATL_SA_ID,
+    ALLOW_PARTS_LIST_ID,
+//     ASSY_DWG_ID,
+//     ASSY_DWG_PC_ID,
+//     ASSY_DWG_REV_ID,
+//     DESIGN_SPEC_TX,
+     DET_DWG_ID,
+     DET_DWG_PC_ID,
+     DET_DWG_REV_ID
+//     GENERIC_MATL_ID,
+//     MAINT_STANDARD,
+//     MATL_SPEC_TX,
+//     PLATING_SPEC_TX,
+//     REF_CAGE_ID,
+//     REF_PART_ID,
+//     STANDARD_ID,
+//     SOURCE_CD,
+//     ACTIVITY_SA_ID,
+//     LAST_DML_SA_ID,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JML_TECHNICAL.qvd] (qvd)
+where Exists(MATL_SA_ID,MATL_SA_ID)
+;
+
+LOAD
+    REQUIRED_QY,
+    REQUIRED_UI_CD,
+    MATL_SA_ID
+//     HM_BADGE_ID,
+//     LOCAL_MGT_CD,
+//     ORIGINATOR_NM,
+//     ORIGINATOR_ORG_ID,
+//     ORIGINATOR_PHONE_ID,
+//     PCN_ID,
+//     PID_ID,
+//     REVIEWER_USER_SA_ID,
+//     SCREEN_ONLY_FLAG_CD,
+//     SHOP_CD,
+//     TSD_CD,
+//     SOURCE_CD,
+//     SSR_PRE_CONVERSION_CD,
+//     ORIGINATOR_USER_SA_ID,
+//     MSDS_NUM_ID,
+//     ACTIVITY_SA_ID,
+//     LAST_DML_SA_ID,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JML_ADMINISTRATIVE.qvd] (qvd)
+where Exists(MATL_SA_ID,MATL_SA_ID)
+;
+
+LOAD
+    JML_DOCNO_IDN as DOCNO_ID,
+    QTY_RFI_QY,
+    QTY_NRFI_QY,
+    QTY_ORDERED_QY,
+    QTY_DUE_QY,
+    QTY_ISSUED_QY,
+    RECEIVED_DATE,
+	JML_DOCNO_IDN,
+    EST_TIME_DELV_DT
+
+// 	   DOC_CUT_IDN,
+//     VENDOR_NBR_IDN,
+//     X_REF_CUT_NBR_IDN,
+//     VALUE_DMI_AM,
+//     BULK_DOCUMENT_ID,
+//     BULK_CUT_ID,
+//     LAST_ACTION_DT,
+//     NEED_DT,
+//     REQUISITION_STATUS_TX,
+//     SOURCE_CD,
+//     ACTIVITY_SA_ID,
+//     LAST_DML_SA_ID,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/MATL_STATUS.qvd] (qvd)
+where Exists(DOCNO_ID,JML_DOCNO_IDN)
+;
+
+
+LOAD
+    MATL_SA_ID,
+    APPROVAL_STATUS_CD as App_Cd,
+    JML_STATUS_CD,
+    OWNER_POSITION_CD
+//     OWNER_USER_SA_ID,
+//     PROJ_ID,
+//     NIIN_ID,
+//     ICN,
+//     KO,
+//     ACTIVITY_SA_ID,
+//     LAST_DML_SA_ID,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JML_STATUS.qvd] (qvd)
+where Exists(MATL_SA_ID,MATL_SA_ID)
+;
+
+
+MAT:
+QUERY1:
+LOAD
+DISTINCT
+//     ACTIVITY_SA_ID,
+    MATREQ_KEY,
+    MATJOB_KEY,
+    JULIAN_DATE_KEY,
+    CODES_KEY,
+//     KEYOPSSD_KEY,
+//     KEYOPSCD_KEY,
+//     SYS_RUN_DATE,
+//     QUANTITY_RECEIVED,
+     QUANTITY_RFI,
+     QUANTITY_NRFI,
+     QUANTITY_ISSUED,
+//     QUANTITY_TOTAL_RESERVED,
+     QUANTITY_REQUISITIONED,
+     QUANTITY_DUE,
+//     QUANTITY_STATUS,
+//     VALUE_NSF_BUY_OUT,
+//     VALUE_OF_DMI,
+//     VALUE_OF_ORIG_COMMITMENT,
+//     VALUE_OF_COMMITMENT,
+//     SOURCE_CODE,
+//     SRC_DB_OPERATION,
+     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/MATFACT.qvd]
+(qvd);
+
+
+
+LEFT JOIN(QUERY1)
+MATJO:
+LOAD
+DISTINCT
+//     ACTIVITY_SA_ID,
+    MATJOB_KEY,
+    JOB_ORDER,
+//     WORK_CATEGORY,
+//     WORK_CENTER,
+    AVAIL,
+    KEY_OP,
+    KEY_OP_ITEM_NUMBER,
+//     PIECE_NUMBER,
+//     KEY_EVENT_NUMBER,
+    COAR,
+//     WORK_ID,
+//     IDN_REVISION,
+//     NUCLEAR_INDICATOR,
+//     DRAWING_REVISION_NUMBER,
+//     KEY_OP_REVISION,
+//     ORDER_SHOP,
+//     PE,
+//     JO_SERIAL_NBR,
+     DRAWING_NUMBER
+//     XREF_DOC_CUT_NR,
+//     OPT_KEY_NUMBER_ONE,
+//     PRE_UDM_JO,
+//     DETAIL_DRAWING_NUMBER,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/DIMMATJOBORDER.qvd]
+(qvd);
+
+
+
+LEFT JOIN(QUERY1)
+MATREQ:
+LOAD
+DISTINCT
+//     ACTIVITY_SA_ID,
+    MATREQ_KEY,
+    DOCUMENT_NUMBER,
+//     CUT_NUMBER,
+    STATUS,
+    NIIN,
+    RI_LOCATION,
+    UNIT_OF_ISSUE,
+//     COUNT_FOLLOW_UP,
+//     STAGING_BUILDING_NUMBER,
+//     BULK_ORDER_DOCUMENT_NUMBER,
+//     BULK_ORDER_CUT_NUMBER,
+    PIIN,
+//     PIIN_CALL_NUMBER,
+    FSC,
+//     COG,
+//     FSCM,
+//     MANU_PART_NUMBER,
+//     CLEAN_GRADE,
+//     ESSENTIAL_LEVEL,
+//     INSPECTION_PROCESS,
+    SHOP_DELIVERY_PT,
+//     SMIC,
+    DESCRIPTION_MESSAGE,
+    SHIP_PROJECT
+//     COMPONENT_IDENTIFIER,
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/DIMMATREQ.qvd]
+(qvd)
+;
+
+
+
+LEFT JOIN(QUERY1)
+JULIANDATE:
+LOAD
+DISTINCT
+//     ACTIVITY_SA_ID,
+    JULIAN_DATE_KEY,
+//     NIIN_SMIC_DOLA_5,
+//     NIIN_SMIC_DOLA,
+//     DATE_RECEIVED_5,
+     DATE_RECEIVED,
+//     DATE_RECEIVED_IN_PURCHASING_5,
+//     DATE_RECEIVED_IN_PURCHASING,
+//     DATE_REFERRAL_5,
+//     DATE_REFERRAL,
+//     DATE_OF_CONTRACT_5,
+     DATE_OF_CONTRACT,
+//     DATE_CONTRACT_MODIFIED_5,
+//     DATE_CONTRACT_MODIFIED,
+//     KEY_EVENT_START_DATE_5,
+//     KEY_EVENT_START_DATE,
+//     DATE_MATERIAL_REQ_5,
+     DATE_MATERIAL_REQ,
+//     DOLA_5,
+//     DOLA,
+//     DATE_OF_STATUS_5,
+    DATE_OF_STATUS,
+//     DATE_OF_FOLLOW_UP_5,
+//     DATE_OF_FOLLOW_UP,
+//     DATE_OF_EXPEDITER_ACTION_5,
+//     DATE_OF_EXPEDITER_ACTION,
+//     DATE_OF_ETD_5,
+     DATE_OF_ETD
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/DIMMATDATEJULIAN.qvd]
+(qvd);
+
+LEFT JOIN(QUERY1)
+MATCODES:
+LOAD
+    CODES_KEY,
+	COMMITMENT_CODE,
+    CRITICAL_JEOPARDY_CODE,
+    DATE_CODE,
+    HAZARD_MATERIAL_CODE,
+	PRIORITY_CODE    
+//    ACTIVITY_SA_ID,
+//     INSPECTION_CODE,
+//     USE_CODE,
+//     DEMAND_CODE,
+//     PROJECT_CODE,
+//     LIQUID_CODE,
+//     FOLLOW_UP_CODE,
+//     ADVICE_CODE,
+//     MCC_CODE,
+//     TYPE_STATUS_CODE,
+//     SUFFIX_CODE,
+//     EXPEDITER_ACTION_CODE,
+//     ORIGINATOR_CODE,
+//     CATEGORY_CODE,
+//     FUNDING_CODE,
+//     SERVICE_CODE,
+//     UNIT_ID_CODE,
+//     MEDIA_STATUS_CODE,
+//     SIGNAL_CODE,
+//     JOB_ORDER_STATUS_CODE,
+//     BUYERS_CODE,
+//     HARD_COPY_CONTRACT_CODE,
+//     LOCAL_CONTROL_CODE,
+//     NSF_CODE,
+//     FUNDS_ADMIN_CODE,
+//     LMI_CODE,
+//     APL_CODE,
+//     SHELF_LIFE_CODE,
+//     SHELF_LIFE_ACTION_CODE,
+//     PC_WORK_STATUS_CODE,
+//     PC_KEY_OP_AUTO_CL_CODE,
+//     PRE_STAGING_CODE,
+//     WEIGHT_CODE,
+//     SCREEN_SOURCE_CODE,
+//     DEFICIENCY_CODE
+//     SRC_DB_OPERATION,
+//     SRC_DB_COMMIT_DATETIME
+FROM [lib://QVD-JRMC-QDB/ALL_TABLES/DIMMATCODES.qvd]
+(qvd);
+
+/*
+NoConcatenate
+TEMP:
+LOAD
+*,
+PIIN & DOCUMENT_NUMBER AS PIINDOC_KF
+RESIDENT
+QUERY1
+
+;
+DROP TABLE QUERY1;
+*/
+
+Inner JOIN (QUERY1)
+QUERY2:
+LOAD
+	DOCUMENT_NUMBER,
+DATE(MAX(SRC_DB_COMMIT_DATETIME)) AS SRC_DB_COMMIT_DATETIME
+Resident
+QUERY1
+
+GROUP BY 
+DOCUMENT_NUMBER
+;
+
+
+///  Now load the MAT data for just the current project
+
+Qualify *;
+Unqualify ICN_KO, NIIN;
+NoConcatenate ///// NEED NOCONCATENATE TO PREVENT QLIK TO AUTOMATICALLY CONCATENATES THIS TABLE TO TEMP_CU
+MAT:
+LOAD
+    MATJOB_KEY,
+    JOB_ORDER & KEY_OP as ICN_KO,
+    JOB_ORDER,
+    AVAIL,
+    KEY_OP,
+	COAR,
+	COMMITMENT_CODE,
+    CRITICAL_JEOPARDY_CODE,
+    DATE_CODE,
+    KEY_OP_ITEM_NUMBER,
+    DRAWING_NUMBER,   
+    HAZARD_MATERIAL_CODE,
+	PRIORITY_CODE,    
+	DATE_MATERIAL_REQ,
+    DATE_OF_CONTRACT,
+    DATE_OF_STATUS,
+    DATE_RECEIVED,    
+    DATE_OF_ETD,    
+	DESCRIPTION_MESSAGE,
+    DOCUMENT_NUMBER,
+    FSC,
+    NIIN,
+    PIIN,
+    RI_LOCATION,
+    SHIP_PROJECT,
+    SHOP_DELIVERY_PT,
+    STATUS,
+    UNIT_OF_ISSUE,
+	QUANTITY_RFI,
+    QUANTITY_NRFI,
+    QUANTITY_ISSUED,
+    QUANTITY_DUE,
+    QUANTITY_REQUISITIONED
+RESIDENT QUERY1
+Where Match(AVAIL, '$(vProject)')
+;
+Unqualify *;
+
+
+/// Now load the DMI data
+Qualify *;
+NoConcatenate ///// NEED NOCONCATENATE TO PREVENT QLIK TO AUTOMATICALLY CONCATENATES THIS TABLE TO MAT
+DMI:
+LOAD
+     NIIN,
+     UNIT_OF_ISSUE,
+ 	 QUANTITY_RFI,
+     AVAIL,
+     STATUS,     
+     SHIP_PROJECT    
+//    MATJOB_KEY,
+//     JOB_ORDER,
+//     KEY_OP,
+// 	COAR,
+// 	COMMITMENT_CODE,
+//     CRITICAL_JEOPARDY_CODE,
+//     DATE_CODE,
+//     HAZARD_MATERIAL_CODE,
+// 	PRIORITY_CODE,    
+// 	DATE_MATERIAL_REQ,
+//     DATE_OF_CONTRACT,
+//     DATE_OF_STATUS,
+//     DATE_RECEIVED,    
+//     DATE_OF_ETD,    
+// 	DESCRIPTION_MESSAGE,
+//     DOCUMENT_NUMBER,
+//     FSC,
+//     PIIN,
+//     RI_LOCATION,
+//     SHOP_DELIVERY_PT,
+//     QUANTITY_NRFI,
+//     QUANTITY_ISSUED,
+//     QUANTITY_DUE,
+//     QUANTITY_REQUISITIONED
+RESIDENT QUERY1
+Where not Match(SHIP_PROJECT, 'USS GEORGE W') and QUANTITY_RFI > 0 and
+	WildMatch(STATUS,'*61*','*TMS*','*36*','*A69*') and not WildMatch(STATUS,'*XFERRED*','*SHELF-LIFE*')
+;
+Unqualify *;
+
+
+DROP TABLE QUERY1;
+
+
+
+QVD tables:
+for each File in filelist ('lib://QVD-JRMC-AIM/ALL_TABLES/*.qvd') //-change your path here
+
+QvdList:
+LOAD
+SubField('$(File)','/',-1) as Name,
+FileSize( '$(File)' ) as Size,
+FileTime('$(File)' ) as Modified,
+QvdNoOfRecords('$(File)') as RecCount
+autogenerate 1
+;
+
+next File
+;
+
+Master Calendar:
+//$(Must_Include=lib://AttachedFiles/master_calendar.txt);
+
+//** Creates master calendar table**//
+
+//** Retrieve Min and Max dates from STS field**//
+
+// To create the numerical values, to be used in date math
+
+Min_Max_Temp: 
+Load 
+    Floor(WeekStart(MIN(KEMS_Desired_DT)))-7 as MinDate,
+	Ceil(WeekStart(MAX(KEMS_Desired_DT)))+7 as MaxDate
+Resident KEMS
+Where Type = 'KE' and (KEMS_ID = 'SA00' or KEMS_ID = 'CA00');	
+
+//*** Generate Min and Max variables
+
+LET vMinDate = PEEK('MinDate', 0, Min_Max_Temp);
+LET vMaxDate = PEEK('MaxDate', 0, Min_Max_Temp);
+
+DROP Table Min_Max_Temp;
+
+TRACE vMinDate = $(vMinDate);
+TRACE vMaxDate = $(vMaxDate);
+
+
+MasterCalendarTemp:
+Load
+	Date($(vMinDate) + RowNo() -1) AS CanonicalDate
+	AutoGenerate $(vMaxDate) - $(vMinDate) +1;
+ 
+//**** Create the Master Calendar ****
+
+MasterCalendar:
+LOAD
+	CanonicalDate,
+	Week(CanonicalDate) AS Week,
+	Year(CanonicalDate) AS Year,
+	Month(CanonicalDate) AS Month,
+	Day(CanonicalDate) AS Day,
+	WeekDay(CanonicalDate) AS WeekDay,
+	Dual('Q' & Ceil(Month(CanonicalDate) / 3), Ceil(Month(CanonicalDate) / 3)) AS Quarter,
+	Date(MonthStart(CanonicalDate),'MMM-YYYY') as MonthYear,
+	Week(CanonicalDate) & '-' & If(Week(CanonicalDate)=1 AND Month(CanonicalDate)=12,Year (CanonicalDate)+1,
+		If(Match(Week(CanonicalDate), 52, 53) AND Month(CanonicalDate)=1, Year(CanonicalDate)-1, Year(CanonicalDate))) AS WeekYear,
+    If(Week(CanonicalDate)=1 AND Month(CanonicalDate)=12,Year (CanonicalDate)+1,
+		If(Match(Week(CanonicalDate), 52, 53) AND Month(CanonicalDate)=1, Year(CanonicalDate)-1, Year(CanonicalDate))) & '-' & Week(CanonicalDate) AS YearWeek,
+	InYearToDate(CanonicalDate, Today(), 0) * -1 AS CYTDFlag,
+	InYearToDate(CanonicalDate, Today(), -1) * -1 as LYTDFlag,
+	If(DayNumberOfYear(CanonicalDate) <= DayNumberOfYear(Today()), 1, 0) AS IsInYTD,
+	If(DayNumberOfQuarter(CanonicalDate) <= DayNumberOfQuarter (Today()), 1, 0) AS IsInQTD,
+	If(Day(CanonicalDate) <= Day(Today()), 1, 0) AS IsInMTD,
+	If(Month(CanonicalDate) = Month(Today()), 1, 0) AS IsCurrentMonth,
+	If(Month(AddMonths(CanonicalDate,1)) = Month(Today()), 1, 0) AS IsLastMonth,
+    WeekStart(CanonicalDate) as WK_Start
+RESIDENT MasterCalendarTemp
+Order by CanonicalDate ASC;
+
+DROP Table MasterCalendarTemp;
+
+// Create the DateBridge table for the various Schedule dates
+DateBridge:
+Load
+	CU_PHASE_SA_ID,
+    ACC_Wk as CanonicalDate,
+    'ACC' as DateType
+Resident CU_Phase
+Where ACC_Wk >= Date($(vMinDate));
+
+Load
+	CU_PHASE_SA_ID,
+    STC_Wk as CanonicalDate,
+    'STC' as DateType
+Resident CU_Phase
+Where STC_Wk >= Date($(vMinDate)) and STC_Wk <= Date($(vMaxDate));
+
+Load
+	CU_PHASE_SA_ID,
+    Status_Wk as CanonicalDate,
+    'CRT' as DateType
+Resident CuP_Status
+Where Status_Wk >= Date($(vMinDate));
+
+
+
+
+
+

@@ -1,0 +1,650 @@
+RAW QVD fields
+
+
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;-$#,##0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+LOAD
+    "Job Summary Title",
+    "Job Summary Activity ID",
+    "Engineering Notes",
+    "Job Summary Status",
+    "Material Management Reserve Desc",
+    "Labor Management Reserve Desc",
+    %JobSumm_CuPhase_Key,
+    job_summary.mod_dt
+FROM [lib://QVD-JRMC-AIM/AIM_JobSummary_CuPhase.qvd]
+(qvd);
+
+LOAD
+    %JO_CuPhase_Key,
+    %CuPhase_Key,
+    %Cu_Phase_MAT_Key,
+    %CuPhase_Component_Key,
+    %Act_Proj_Key,
+    %JobSumm_CuPhase_Key,
+    %Package_Key,
+    "Cu Phase Actual Completion Date",
+    "Cu Phase Actual Start Date",
+    "Cu Phase Scheduled Completion Date",
+    "Cu Phase Scheduled Start Date",
+    CU_PHASE.COMP_NM,
+    CU_PHASE_SA_ID,
+    "CU Phase Serial",
+    CU_SA_ID,
+    "Cu Phase Duration QY",
+    "Cu Phase Est Resolution Date",
+    EST_RESOLUTION_DT,
+    "Cu Phase Group CD",
+    ICN,
+    JO_SERIAL_ID,
+    KEY_TASK_SERIAL_ID,
+    KO,
+    ICN_KO,
+    MANHOUR_QY,
+    cu_phase.mod_dt,
+    PROGRESS_RT,
+    "Cu Phase Project ID",
+    "Cu Phase Prepared by Date",
+    PHASE_REPEAT_QY,
+    RDU_CHANGE_DT,
+    RDU_QY,
+    CU_PHASE_REMARKS,
+    CU_swlin_sys_id,
+    "TGI Code",
+    "Cu Phase Title",
+    CU_WORK_CAT_CD,
+    WORK_TYPE_CD,
+    WPC_NOTES_TX,
+    WS_REASON_CD,
+    "Float Type Cd",
+    "Total Float Qty",
+    "Job Order Title",
+    COAR,
+    "Job Order #",
+    job_order.mod_dt
+FROM [lib://QVD-JRMC-AIM/AIM_CuPhase.qvd]
+(qvd);
+
+LOAD
+    PLANNING_GROUP_ID,
+    "JCN Status CD",
+    %JCN_Key,
+    "JCN Activity ID",
+    "Job Control Number",
+    JC2,
+    "CSMP Summary",
+    "Received Date",
+    "Remarks Desc Text",
+    "Tycom Remarks Text",
+    "JCN Availability",
+    "Work Flow Cd",
+    "JCN PEID",
+    EQUIP_SERIAL_NUM_ID,
+    EQUIP_NOUN_NM,
+    APL_AEL_CD,
+    EQUIP_ID_CD,
+    %CuPhase_Key,
+    "JCN Deferral Date",
+    "JCN Deadline Date",
+    "JCN Rate CD",
+    CASREP_SERIAL_ID,
+    SECOND_CONTACT_MAN,
+    TYPE_AVAILABLE_CD,
+    "JCN Job Order Nr",
+    "Management Remarks",
+    "JCN Hist WorkFlow CD",
+    "JCN Hist Mod Reason",
+    "JCN Hist Mod DT",
+    "JCN Hist Type CD",
+    "JCN Hist Avail",
+    REPAIR_ACTIVITY_UIC_ID,
+    "JCN Status Type",
+    "JCN Status",
+    PLANNING_GROUP_NM
+FROM [lib://QVD-JRMC-AIM/AIM_JCN.qvd]
+(qvd);
+
+LOAD
+    "JCN Status CD",
+    %JCN_Key,
+    "JCN Hist WorkFlow CD",
+    "JCN Hist Mod Reason",
+    "JCN Hist Mod DT",
+    "JCN Hist Type CD",
+    "JCN Hist Avail",
+    REPAIR_ACTIVITY_UIC_ID,
+    "JCN Status Type",
+    "JCN Status"
+FROM [lib://QVD-JRMC-AIM/AIM_JCN_Hist.qvd]
+(qvd);
+
+LOAD
+    %CuPhase_Key,
+    "Approval Status CD",
+    "Cu Phase Hist Activity ID",
+    "Change CD",
+    "Current Flag Cd",
+    CU_PHASE_HIST_SA_ID,
+    "Status Change Date",
+    "Status Set Date",
+    "Cu Hist User SA ID",
+    "Working Status CD"
+FROM [lib://QVD-JRMC-AIM/AIM_CuPhase_Hist.qvd]
+(qvd);
+
+LOAD
+    %JCN_Key,
+    "JCN Deferral Date",
+    "JCN Deadline Date",
+    "JCN Rate CD",
+    CASREP_SERIAL_ID,
+    SECOND_CONTACT_MAN,
+    TYPE_AVAILABLE_CD,
+    "Management Remarks"
+FROM [lib://QVD-JRMC-AIM/AIM_JCN_Addition.qvd]
+(qvd);
+
+LOAD
+    %SWLIN_LI_CU_Phase_Key,
+    %SWLIN_LI_KEY,
+    %JobSumm_SWLIN_Key,
+    %FCN_SWLIN_Key,
+    "Action Type",
+    "SWLIN Activity ID",
+    FAC,
+    "SWLIN ID",
+    "SWLIN Sys ID",
+    "Serial ID",
+    SWLIN_PROJ_RISK_QY,
+    SSI,
+    "SWLIN Title",
+    "New Work",
+    "SWLIN Line Item",
+    "Authorized Assignment",
+    %CuPhase_Key,
+    "SWLIN Labor Rate",
+    "SWLIN Material Rate"
+FROM [lib://QVD-JRMC-AIM/AIM_SWLIN.qvd]
+(qvd);
+
+LOAD
+    PROJECT_TYPE_CD,
+    PROJECT_STATUS_CD,
+    %Act_Proj_Key,
+    %Proj_Ship_Key,
+    "Activity Name",
+    "Project Activity ID",
+    AIM_PROJ_FLAG_CD,
+    ALT_PROGRESS_CD,
+    ALT_PROGRESS_SET_DT,
+    COMPLETE_ON_APP_CD,
+    CORPORATE_FLAG_CD,
+    DEF_CALENDAR_ID,
+    DEL_FLAG_CD,
+    DRYDOCK_FLAG_CD,
+    ETWD_CD,
+    EXC_YRD_CD,
+    FINMET_ERROR_TX,
+    FINMET_FLAG_CD,
+    FIN_PROCESS_NBR,
+    FRE_LOCKED_FLAG,
+    JOB_SUPV_FLAG_CD,
+    LAST_DML_SA_ID,
+    LOCATION_NM,
+    project.mod_dt,
+    PLAN_YRD_CD,
+    "Project ID",
+    "Project Name",
+    PROJ_RISK_QY,
+    RANK_ID,
+    REFRESH_INTERVAL_ID,
+    REFRESH_OVERRIDE_CD,
+    REMARKS_TX,
+    REUSE_CD,
+    SALES_EST_AM,
+    SHYD_RISK_QY,
+    TIME_FACTOR_QY,
+    TOC_CD,
+    TOC_LAST_MSP_EXPORT_DT,
+    TOC_ORIG_BASELINE_CD,
+    TOC_REV_BASELINE_CD,
+    TOC_SET_DT,
+    TOC_SET_USER_SA_ID,
+    TOC_STOP_DT,
+    TOC_STOP_USER_SA_ID,
+    TRANSACT_CD,
+    WEIGHTS_MANUALLY_AUDIT_CD,
+    WEIGHTS_MANUALLY_CD,
+    AOR,
+    "AOR Activity ID",
+    AOR.aps_user_sa_id,
+    AOR.aps_user_sa_id2,
+    Zone_Manager,
+    aor.mod_dt,
+    USER_SA_ID,
+    CONTACT_TYPE_CD,
+    POSITION_SA_ID,
+    "Work Number",
+    Name,
+    FIRST_NM,
+    LAST_NM,
+    MIDDLE_NM,
+    "Personnel Activity ID",
+    "Beeper Number",
+    ORG_CD,
+    Personnel.Shop_Cd,
+    "Supervisor CD",
+    "Badge Number",
+    personnel.mod_dt,
+    PROJ_STATUS_NM,
+    PROJ_TYPE_NM
+FROM [lib://QVD-JRMC-AIM/AIM_Project.qvd]
+(qvd);
+
+LOAD
+    "Best Std Manhour Qty",
+    "Task Hist Cur Flag",
+    "Task Hist Activity ID",
+    %CuPh_TaskSerial_Key,
+    "Task Manhours",
+    task_hist.mod_dt
+FROM [lib://QVD-JRMC-AIM/AIM_Task_Hist.qvd]
+(qvd);
+
+LOAD
+    "Shop Code",
+    "Crew Size",
+    "Task Activity ID",
+    %CuPhase_Key,
+    %CuPh_TaskSerial_Key,
+    "High RAD Hrs Qty",
+    "Prorate Flag Cd",
+    "Resource Qty",
+    "Ship Board Wrk Ctr Cd",
+    TAI_ID,
+    "Task #",
+    "Task Serial ID",
+    "Task Subwork Type Cd",
+    "Task Text",
+    "Task Work Type Cd",
+    "TSD Cd",
+    "Shop/TSD",
+    "TS Cd",
+    "Shop Title"
+FROM [lib://QVD-JRMC-AIM/AIM_Task.qvd]
+(qvd);
+
+LOAD
+    CU_PHASE_SAID,
+    JOB_SEQ_NUM,
+    SHIPBOARD_WRKCTR_CD,
+    UIC,
+    CSMP_NM,
+    EQUIP_CD,
+    STATUS,
+    ACTIVITY_SA_ID,
+    SRC_DB_COMMIT_DATETIME,
+    SRC_DB_OPERATION
+FROM [lib://QVD-JRMC-NWPS/ALL_TABLES/JCN_NWPS.qvd]
+(qvd);
+
+LOAD
+    SWLIN_SAID,
+    SWLIN_CD,
+    ACTION_TYPE_CD,
+    DESC_TX,
+    TITLE_TX,
+    PROJ_RISK_QY,
+    SHIP_ALT,
+    ACTIVITY_SA_ID,
+    SRC_DB_COMMIT_DATETIME,
+    SRC_DB_OPERATION
+FROM [lib://QVD-JRMC-NWPS/ALL_TABLES/SWLIN_NWPS.qvd]
+(qvd);
+
+LOAD
+    PROJECTS_SAID,
+    PROJECT_TYPE,
+    PMC_TRACKING_CD,
+    PMC_ROLLUP_PROJECT_CD,
+    PMC_FBS_EXCL_CD,
+    PMC_ROLLOUT_EXCL_CD,
+    PMC_TOTAL_CD,
+    PMC_DISP_CD,
+    PMC_CURR_DISP_CD,
+    PMC_STEALTH_CD,
+    PMC_ORDER_CD,
+    QPS_TRACKING_CD,
+    QPS_TOTAL_CD,
+    QPS_SHIPYARD_CD,
+    QPS_DISP_CD,
+    QPS_CURR_DISP_CD,
+    QPS_ORDER_CD,
+    SPF_FLG,
+    SPF_HISTORY_FLG,
+    SPF_WARR_TYPE_CD,
+    SPF_RPT_SIGN,
+    SPF_PLAN_STAT_CD,
+    SPF_ORIG_PROJECTS_SAID,
+    SPF_EST_PRORATE_PROJECTS_SAID,
+    SPF_PROFILE_PROJECTS_SAID,
+    SPF_EST_PRORATE_CURVE_SAID,
+    SPF_PROFILE_CURVE_SAID,
+    SPF_OFFSITE_SITE_CD,
+    RPD_TYPE,
+    PROJ_STUDY_CD,
+    DEL_FLG,
+    DATA_DT,
+    QPS_DATA_DT,
+    LOC,
+    PROJ_ID,
+    HULL_TYPE_CD,
+    HULL_ID,
+    TYPE_AVAIL_CD,
+    TITLE,
+    START_DT,
+    COMP_DT,
+    STARTLOAD_PROD_DT,
+    STARTLOAD_SUPP_DT,
+    ENDLOAD_DT,
+    GRAPH_START_DT,
+    GRAPH_COMP_DT,
+    ICP_MDS,
+    ICP_COST,
+    FIX_MDS,
+    FIX_COST,
+    PROD_EST_RD,
+    SUPP_EST_RD,
+    TDL_EST_RD,
+    FIX_TYPE,
+    FIX_NAME,
+    MANAGER_NM,
+    REMARKS,
+    PMC_MAX_FUT_SCHED_DT,
+    PMC_MAX_KEYOP_COMP_DT,
+    KEYOP_PROGRESS_CD,
+    SPF_GRAPH_START_DT,
+    SPF_GRAPH_COMP_DT,
+    CVN_METRICS_EXTRACT_CD,
+    TSD_POOL_FLG,
+    PMCEXEC_CD,
+    SPF_OT_GROUP_CD,
+    AVAIL,
+    UIC,
+    ACTIVITY_SA_ID,
+    SRC_DB_COMMIT_DATETIME,
+    SRC_DB_OPERATION
+FROM [lib://QVD-JRMC-NWPS/ALL_TABLES/PROJECTS.qvd]
+(qvd);
+
+
+
+
+
+
+
+
+
+
+kind of a successful one for Material status.
+
+// =========================================================================================
+// QLIKVIEW MRQT DASHBOARD - FINAL PRODUCTION SCRIPT (VERSION 19.35)
+// =========================================================================================
+// Maintenance Notes & Recent Updates:
+//   - V19.35: Redirected BridgeTable to use MAT_Materials.qvd (MAT_Materials2_0.qvd deprecated).
+//   - V19.34: Replaced Bookends with Canonical Date Model (Bridge Table + Master Calendar)
+//             to prevent Synthetic Keys while providing a unified [Master Relative Week] axis.
+//   - V19.33: Added ROTN (Riding On Time Now) logic: Past-due EADs default to Today().
+//   - V19.30: MSM/FUM Order Date proxy logic applied to Received items.
+// =========================================================================================
+
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyFormat='$#,##0.00;-$#,##0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FYStartMonth = 10;
+
+LET vCurrentFY = IF(Month(Today()) >= $(FYStartMonth), Year(Today()) + 1, Year(Today()));
+LET vCurrentYearLastDigit = Num(Right(Year(Today()), 1));
+LET vCenturyAndDecade = Num(Left(Year(Today()), 3) & '0');
+
+// -----------------------------------------------------------------------------------------
+// SECTION 1.5: EARLY MILESTONE MAPPING (SA00 & CA00)
+// -----------------------------------------------------------------------------------------
+Map_CA00_Actual: MAPPING LOAD [Event Proj ID], Date([Event Actual Date]) FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd) WHERE [Event ID] = 'CA00' AND Len(Trim([Event Actual Date])) > 0;
+Map_CA00_Desired: MAPPING LOAD [Event Proj ID], Date([Event Desired Date]) FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd) WHERE [Event ID] = 'CA00' AND Len(Trim([Event Desired Date])) > 0;
+Map_SA00_Desired: MAPPING LOAD [Event Proj ID], Date([Event Desired Date]) FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd) WHERE [Event ID] = 'SA00' AND Len(Trim([Event Desired Date])) > 0;
+Map_SA00_Actual: MAPPING LOAD [Event Proj ID], Date([Event Actual Date]) FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd) WHERE [Event ID] = 'SA00' AND Len(Trim([Event Actual Date])) > 0;
+
+// -----------------------------------------------------------------------------------------
+// SECTION 2: LOAD SOURCE DATA AND PREPARE LOOKUP TABLES
+// -----------------------------------------------------------------------------------------
+Ships: LOAD %Proj_Ship_Key AS [%ShipKey] FROM [lib://QVD-JRMC-AIM/AIM_Ship.qvd] (qvd) WHERE [Ship Home] = 'YOKOSUKA' AND Match([Ship Type], 'DDG','LCC');
+
+Raw_Projects_Temp:
+LOAD 
+    %Act_Proj_Key, 
+    [Project ID] AS PROJ_ID,
+    [Project Name],
+    ApplyMap('Map_CA00_Actual', [Project ID], 0) AS CA00_Actual,
+    ApplyMap('Map_CA00_Desired', [Project ID], 0) AS CA00_Desired,
+    ApplyMap('Map_SA00_Desired', [Project ID], 0) AS SA00_Desired,
+    ApplyMap('Map_SA00_Actual', [Project ID], 0) AS SA00_Actual,
+    IF(WildMatch([Project ID] & [Project Name], '*SIA*'), 'SIA', 'SRA/DSRA/SRA(d)') AS [Project Type]
+FROM [lib://QVD-JRMC-AIM/AIM_Project.qvd] (qvd) 
+WHERE Exists([%ShipKey], [%Proj_Ship_Key]) AND NOT WildMatch(Upper([Project Name]), '*CM*', '*CMAV*', '*EM*', '*WOO*');
+
+Diagnostic_Project_Audit:
+LOAD *,
+    IF(Alt(CA00_Actual, 0) > 0 AND Alt(CA00_Actual, 0) <= Today(), 'Benchmark', 'Active') AS [Cohort Type],
+    IF(Alt(CA00_Actual, 0) > 0 AND Alt(CA00_Actual, 0) <= Today(), Null(), PROJ_ID & ' - ' & Trim(Replace([Project Name], 'YO -', ''))) AS [Preview_Active_Project_Filter],
+    IF(Parsed_FY >= 2022, 1, 0) AS [Is_FY22_Plus],
+    IF(Parsed_FY < 2022 OR IsNull(Parsed_FY), 'DROPPED: Pre-FY22',
+        IF(Alt(CA00_Actual, 0) > 0 AND Alt(CA00_Actual, 0) <= Today(), 'KEPT: Benchmark',
+        IF(Alt(SA00_Desired, 0) > 0 AND Alt(SA00_Actual, 0) = 0 AND Alt(CA00_Actual, 0) = 0, 'KEPT: Active',
+        IF(Alt(SA00_Actual, 0) > 0 AND Alt(CA00_Actual, 0) = 0, 'KEPT: Active', 'DROPPED')))) AS [Audit_Status];
+LOAD *, Num('20' & Mid([Project Name], Index([Project Name], 'FY') + 2, 2)) AS Parsed_FY RESIDENT Raw_Projects_Temp;
+
+DROP TABLE Raw_Projects_Temp;
+
+Projects: LOAD %Act_Proj_Key, PROJ_ID, [Project Name], [Project Type], [Cohort Type], CA00_Actual, SA00_Desired, SA00_Actual RESIDENT Diagnostic_Project_Audit WHERE WildMatch([Audit_Status], 'KEPT:*');
+DROP TABLE Diagnostic_Project_Audit; 
+
+ProjectName_Map: MAPPING LOAD PROJ_ID, [Project Name] RESIDENT Projects;
+ProjectCohort_Map: MAPPING LOAD PROJ_ID, [Cohort Type] RESIDENT Projects;
+ProjectType_Map: MAPPING LOAD PROJ_ID, [Project Type] RESIDENT Projects;
+
+JcnSystemLink: LOAD JCN_SA_ID, EQUIP_NOUN_NM AS [System] FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JCN_BAIM.qvd] (qvd);
+PhaseKeyEventLink: LOAD CU_PHASE_SA_ID, KEY_EVENT_ID AS [Key Event] FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_BAIM.qvd] (qvd);
+[EXSA_Material_Map]: MAPPING LOAD DISTINCT SubField([%CuPhase_Key], '-', 2) AS CU_PHASE_SA_ID, 'Modernization' FROM [lib://QVD-JRMC-AIM/AIM_JCN.qvd] (qvd) WHERE WildMatch([Job Control Number], '*EXSA*') > 0;
+[Job_Summary_Map]: MAPPING LOAD DISTINCT SubField([%CuPhase_Key], '-', 2) AS CU_PHASE_SA_ID, [CSMP Summary] FROM [lib://QVD-JRMC-AIM/AIM_JCN.qvd] (qvd) WHERE Len(Trim([CSMP Summary])) > 0;
+
+JcnPhaseBridge: LOAD CU_PHASE_SA_ID, JCN_SA_ID, ApplyMap('EXSA_Material_Map', CU_PHASE_SA_ID, 'Repair') AS [Material Type], ApplyMap('Job_Summary_Map', CU_PHASE_SA_ID, 'N/A') AS [Job Summary Title] FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JCN_CU_PHASE.qvd] (qvd);
+LEFT JOIN (JcnPhaseBridge) LOAD JCN_SA_ID, [System] RESIDENT JcnSystemLink; DROP TABLE JcnSystemLink;
+LEFT JOIN (JcnPhaseBridge) LOAD CU_PHASE_SA_ID, [Key Event] RESIDENT PhaseKeyEventLink; DROP TABLE PhaseKeyEventLink;
+
+MAT_All_History: LOAD [Document Number], Status AS [MaterielStatus], [Due Quantity], [Need by Date], Date([Status Date]) AS [StatusDate], [Unit of Issue] FROM [lib://QVD-JRMC-MAT/MAT_Materials.qvd] (qvd);
+MAT_Latest_Status: NOCONCATENATE LOAD [Document Number], FirstSortedValue([Due Quantity], -[StatusDate]) AS [QTY Due], FirstSortedValue([Need by Date], -[StatusDate]) AS [NEED Date], FirstSortedValue([Unit of Issue], -[StatusDate]) AS [Unit of Issue], Max([StatusDate]) AS [Actual Status Date] RESIDENT MAT_All_History GROUP BY [Document Number];
+DROP TABLE MAT_All_History;
+
+COG_MAP: MAPPING LOAD X_M230_NIIN AS [NIIN or Part Number], M230_COG AS [COG Code] FROM [lib://QVD-JRMC-MAT/ALL_TABLES/M230_STOCK_NR.qvd] (qvd);
+
+// -----------------------------------------------------------------------------------------
+// SECTION 3: KEY EVENT DATA
+// -----------------------------------------------------------------------------------------
+[KeyEvent_Date_Map]: MAPPING LOAD [Event Proj ID] & '-' & [Event ID] AS CompositeKeyEvent, Date([Event Desired Date]) FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd);
+[KeyEvent_Name_Map]: MAPPING LOAD [Event Proj ID] & '-' & [Event ID] AS CompositeKeyEvent, [Event Name] FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd);
+[Temp_DU_Agg]: LOAD Left(ICN_KO, 10) AS ICN, Sum([Cu Phase Duration QY]) AS [Total DU] FROM [lib://QVD-JRMC-AIM/AIM_CuPhase.qvd] (qvd) GROUP BY Left(ICN_KO, 10);
+[Total_DU_Map]: MAPPING LOAD ICN, [Total DU] RESIDENT [Temp_DU_Agg]; DROP TABLE [Temp_DU_Agg];
+[KE_Map]: MAPPING LOAD CU_PHASE_SA_ID, KE_ID FROM [lib://QVD-JRMC-AIM/ALL_TABLES/EVENT_READINESS.qvd] (qvd) WHERE Len(Trim(KE_ID)) > 0;
+[KEY_EVENT_Map]: MAPPING LOAD CU_PHASE_SA_ID, KEY_EVENT_ID FROM [lib://QVD-JRMC-AIM/ALL_TABLES/CU_PHASE_BAIM.qvd] (qvd) WHERE Len(Trim(KEY_EVENT_ID)) > 0;
+
+[Phase_Event]: NOCONCATENATE LOAD [Cu Phase Project ID] AS PROJ_ID, ICN_KO, Date([Cu Phase Scheduled Start Date]) AS [SKED Start], CU_PHASE_SA_ID, ApplyMap('Total_DU_Map', Left(ICN_KO, 10), 0) AS [Total DU], ApplyMap('KE_Map', CU_PHASE_SA_ID, ApplyMap('KEY_EVENT_Map', CU_PHASE_SA_ID, 'SA00')) AS [Resolved Key Event ID] FROM [lib://QVD-JRMC-AIM/AIM_CuPhase.qvd] (qvd) WHERE Exists(PROJ_ID, [Cu Phase Project ID]);
+[Phase_Event_Agg]: NOCONCATENATE LOAD *, ApplyMap('KeyEvent_Name_Map', PROJ_ID & '-' & [Resolved Key Event ID], NULL()) as [Event Name], ApplyMap('KeyEvent_Date_Map', PROJ_ID & '-' & [Resolved Key Event ID], NULL()) as [KEY EVENT Date], Autonumber(PROJ_ID & '|' & ICN_KO) AS [ProjectID ICNKO Key] RESIDENT [Phase_Event];
+DROP TABLE [Phase_Event];
+
+SA00_Date_Temp: LOAD DISTINCT PROJ_ID, [KEY EVENT Date] AS [SA00 Date] RESIDENT Phase_Event_Agg WHERE [Resolved Key Event ID] = 'SA00';
+
+// -----------------------------------------------------------------------------------------
+// SECTION 4 AND 5: ASSEMBLE FINAL TABLES
+// -----------------------------------------------------------------------------------------
+FinalReportData_Keys: LOAD DISTINCT [JML Document Number] AS [Document Number] FROM [lib://QVD-JRMC-AIM/MRQT.qvd] (qvd) WHERE Exists(PROJ_ID, PROJ_ID) AND (Len(Trim([JML Document Number])) > 0 OR (JML_STATUS_CD = 'ACT' AND Match(OWNER_POSITION_CD, 'YCSB', 'YAPM', 'YPCD')));
+DocNumMap: MAPPING LOAD [Document Number], 1 RESIDENT FinalReportData_Keys; DROP TABLE FinalReportData_Keys;
+
+// FIX APPLIED HERE: Replaced MAT_Materials2_0.qvd with MAT_Materials.qvd
+BridgeTable: LOAD DISTINCT [Document Number], Text([Document Cut Number]) AS [Document Cut Number] FROM [lib://QVD-JRMC-MAT/MAT_Materials.qvd] (qvd) WHERE ApplyMap('DocNumMap', [Document Number], 0) = 1;
+
+DocCutNumMap: MAPPING LOAD DISTINCT [Document Cut Number], 1 RESIDENT BridgeTable;
+
+DocDesc_Temp: LOAD Text(M10_DOC_CUT_NR) AS [Document Cut Number], M102_TECH_DESC AS [Status] FROM [lib://QVD-JRMC-MAT/ALL_VIEWS/DOC_DESC_COMBINED.qvd] (qvd) WHERE ApplyMap('DocCutNumMap', Text(M10_DOC_CUT_NR), 0) = 1;
+DocDesc_Consolidated: NOCONCATENATE LOAD [Document Cut Number], [Status], IF(Index(Upper([Status]), 'CANCELLED') > 0 OR Index(Upper([Status]), 'MILCANC') > 0 OR Index(Upper([Status]), 'DISPOSED') > 0, 'Cancelled', IF(Index(Upper([Status]), 'MSM') > 0, 'Received (MSM)', IF(Index(Upper([Status]), 'FUM FOR 50Y') > 0 OR Index(Upper([Status]), 'DELIVERED TO A61') > 0 OR Index(Upper([Status]), 'RCVD') > 0 OR Index(Upper([Status]), 'DELIVERED TO TRAVIS') > 0, 'Received', IF(Index(Upper([Status]), 'SOURCED TO FUM') > 0 OR Index(Upper([Status]), 'FUM IS AVAILABLE') > 0, 'Received (FUM)', 'Outstanding')))) AS [Parsed Status Block], IF(Index([Status], 'ESD:') > 0, Date(Date#(Trim(PurgeChar(Mid([Status], Index([Status], 'ESD:') + 4, 8), '.,;*')), 'MM/DD/YY')), Null()) AS [Parsed ESD], IF(Index([Status], 'ORDER FOR ') > 0, TextBetween([Status] & ',', 'ORDER FOR ', ','), IF(Index([Status], 'ORDERED FOR ') > 0, TextBetween([Status] & ',', 'ORDERED FOR ', ','), Null())) AS [Parsed KTR];
+LOAD [Document Cut Number], FirstValue([Status]) AS [Status] RESIDENT DocDesc_Temp GROUP BY [Document Cut Number]; DROP TABLE DocDesc_Temp;
+
+FinalReportData:
+LOAD PROJ_ID, JML_STATUS_CD, OWNER_POSITION_CD, ApplyMap('ProjectName_Map', PROJ_ID, PROJ_ID) AS [Project Name], [ICN/Key Op Link] AS [ICN KO], IF(Len(Trim([JML Document Number])) = 0, 'PENDING_ACT_' & MATL_SA_ID, [JML Document Number]) AS [JML Doc #], [JML NIIN] AS [NIIN or Part Number], [JML Noun Name] AS [Part Name], Date([Matl Status - ETD]) AS [EDD], ApplyMap('COG_MAP', [JML NIIN], 'N/A') AS [COG Code], Autonumber(PROJ_ID & '|' & [ICN/Key Op Link]) AS [ProjectID ICNKO Key] FROM [lib://QVD-JRMC-AIM/MRQT.qvd] (qvd) WHERE Exists(PROJ_ID, PROJ_ID) AND (Len(Trim([JML Document Number])) > 0 OR (JML_STATUS_CD = 'ACT' AND Match(OWNER_POSITION_CD, 'YCSB', 'YAPM', 'YPCD'))) AND NOT WildMatch(Upper([JML Noun Name]), '*E-MALL*', '*EMALL*', '*RENTAL*', '*RENT,*', 'ANODIZE COATING', 'ANODIZED COATING');
+
+LEFT JOIN (FinalReportData) LOAD [ProjectID ICNKO Key], [SKED Start], [Total DU], [Resolved Key Event ID], [Event Name], [KEY EVENT Date], CU_PHASE_SA_ID RESIDENT [Phase_Event_Agg]; DROP TABLE [Phase_Event_Agg];
+LEFT JOIN (FinalReportData) LOAD CU_PHASE_SA_ID, [System], [Material Type], [Key Event], [Job Summary Title] RESIDENT JcnPhaseBridge; DROP TABLE JcnPhaseBridge;
+LEFT JOIN (FinalReportData) LOAD DISTINCT PROJ_ID, [SA00 Date] RESIDENT SA00_Date_Temp; DROP TABLE SA00_Date_Temp;
+LEFT JOIN (FinalReportData) LOAD [Document Number] AS [JML Doc #], [QTY Due], [NEED Date], [Unit of Issue], [Actual Status Date] RESIDENT MAT_Latest_Status; DROP TABLE MAT_Latest_Status;
+LEFT JOIN (FinalReportData) LOAD [Document Number] AS [JML Doc #], [Document Cut Number] RESIDENT BridgeTable; DROP TABLE BridgeTable;
+LEFT JOIN (FinalReportData) LOAD [Document Cut Number], [Status], [Parsed Status Block], [Parsed ESD], [Parsed KTR] RESIDENT DocDesc_Consolidated; DROP TABLE DocDesc_Consolidated;
+
+DROP TABLE Projects;
+
+// -----------------------------------------------------------------------------------------
+// EXPLICIT LOAD AND FINAL DATA MODELING
+// -----------------------------------------------------------------------------------------
+Final_Table:
+LOAD 
+    PROJ_ID, JML_STATUS_CD, OWNER_POSITION_CD, [Project Name], [Project Display Name], [Active Project Filter], [Project Type], [Cohort Type],
+    [ICN KO], [JML Doc #], [NIIN or Part Number], [Part Name], [EDD], [COG Code], [ProjectID ICNKO Key], [SKED Start], [Total DU], [Resolved Key Event ID], [Event Name], [KEY EVENT Date], CU_PHASE_SA_ID, [System], [Material Type], [Key Event], [Job Summary Title],
+    [SA00 Date], [CA00 Date], [A-600 Date], [QTY Due], [NEED Date], [Unit of Issue], [Document Cut Number], [Status], [Parsed Status Block], [Parsed ESD], [Parsed KTR], [Actual Status Date], 
+    
+    [Unified Action Date], 
+    [Receipt_EAD Relative Days from A-600],
+    RangeMax(0, Ceil(([Receipt_EAD Relative Days from A-600]) / 7)) AS [Receipt_EAD Relative Week from A-600],
+    
+    IF([Report Status] = 'Outstanding' AND IsNum([SA00 Date]) AND [Estimated Arrival Date] > [SA00 Date], 1, 0) AS [Late to SA00 Flag],
+    IF([Report Status] = 'Outstanding' AND IsNum([A-30 Date]) AND [Estimated Arrival Date] > [A-30 Date], 1, 0) AS [Late to A-30 Flag],
+    IF([Report Status] = 'Outstanding' AND IsNum([Project Need Date]) AND [Estimated Arrival Date] > [Project Need Date], 1, 0) AS [Late to PND Flag],
+    IF([Report Status] = 'Outstanding' AND NOT ([Estimated Arrival Date] > [SA00 Date] OR [Estimated Arrival Date] > [A-30 Date] OR [Estimated Arrival Date] > [Project Need Date]), 'On Track', Null()) AS [Remarks],
+    IF(IsNum([Order Date]) AND IsNum([SA00 Date]) AND [Order Date] <= [SA00 Date], 1, 0) AS [Ordered Pre-SA00 Flag],
+    IF(IsNum([Order Date]) AND IsNum([CA00 Date]) AND [Order Date] <= [CA00 Date], 1, 0) AS [Ordered Pre-CA00 Flag],
+    IF(JML_STATUS_CD = 'ACT' AND Match(OWNER_POSITION_CD, 'YCSB', 'YAPM', 'YPCD') AND WildMatch([JML Doc #], 'PENDING_ACT_*'), 1, 0) AS [Is In Process ACT Flag],
+
+    [Order Date], [Days from A-600], [Relative Week from A-600], [Report Status], [A-30 Date], [Project Need Date], [Estimated Arrival Date];
+
+// PRECEDING LOAD
+LOAD 
+    *,
+    // ROTN LOGIC (Riding On Time Now) applied directly to the Unified timeline
+    IF(Index(Upper([Status]), 'CANCEL') > 0 OR Index(Upper([Status]), 'REJECTED') > 0 OR [Parsed Status Block] = 'Cancelled', Null(), 
+        IF(Left([Parsed Status Block], 8) = 'Received', 
+            IF(Match([Parsed Status Block], 'Received (MSM)', 'Received (FUM)'), [Order Date], [Actual Status Date]),
+            RangeMax(Today(), [Estimated Arrival Date]) // Forces past-due items to Today
+        )
+    ) AS [Unified Action Date],
+
+    (IF(Index(Upper([Status]), 'CANCEL') > 0 OR Index(Upper([Status]), 'REJECTED') > 0 OR [Parsed Status Block] = 'Cancelled', Null(), 
+        IF(Left([Parsed Status Block], 8) = 'Received', 
+            IF(Match([Parsed Status Block], 'Received (MSM)', 'Received (FUM)'), [Order Date], [Actual Status Date]),
+            RangeMax(Today(), [Estimated Arrival Date])
+        )
+    )) - Date([SA00 Date] - 600) AS [Receipt_EAD Relative Days from A-600];
+
+// DOUBLE PRECEDING LOAD
+LOAD 
+    PROJ_ID, JML_STATUS_CD, OWNER_POSITION_CD, [Project Name],
+    PROJ_ID & ' - ' & Trim(Replace([Project Name], 'YO -', '')) AS [Project Display Name],
+    IF(ApplyMap('ProjectCohort_Map', PROJ_ID, 'Unknown') = 'Active', PROJ_ID & ' - ' & Trim(Replace([Project Name], 'YO -', '')), Null()) AS [Active Project Filter],
+    ApplyMap('ProjectType_Map', PROJ_ID, 'Unknown') AS [Project Type],
+    ApplyMap('ProjectCohort_Map', PROJ_ID, 'Unknown') AS [Cohort Type],
+    ApplyMap('Map_CA00_Actual', PROJ_ID, Null()) AS [CA00 Date],
+    [ICN KO], [JML Doc #], [NIIN or Part Number], [Part Name], [EDD], [COG Code], [ProjectID ICNKO Key], [SKED Start], [Total DU], [Resolved Key Event ID], [Event Name], [KEY EVENT Date], CU_PHASE_SA_ID, [System], [Material Type], [Key Event], [Job Summary Title], [SA00 Date],
+    Date([SA00 Date] - 600) AS [A-600 Date], 
+    [QTY Due], [NEED Date], [Unit of Issue], [Document Cut Number], [Status], [Parsed Status Block], [Parsed ESD], [Parsed KTR], [Actual Status Date], 
+    
+    Date(MakeDate( IF(Num(Left([JML Doc #], 1)) > $(vCurrentYearLastDigit), $(vCenturyAndDecade) - 10, $(vCenturyAndDecade)) + Num(Left([JML Doc #], 1)) , 1, 1) + Num(Mid([JML Doc #], 2, 3)) - 1) AS [Order Date], 
+    Date(MakeDate( IF(Num(Left([JML Doc #], 1)) > $(vCurrentYearLastDigit), $(vCenturyAndDecade) - 10, $(vCenturyAndDecade)) + Num(Left([JML Doc #], 1)) , 1, 1) + Num(Mid([JML Doc #], 2, 3)) - 1) - Date([SA00 Date] - 600) AS [Days from A-600],
+    RangeMax(0, Ceil((Date(MakeDate( IF(Num(Left([JML Doc #], 1)) > $(vCurrentYearLastDigit), $(vCenturyAndDecade) - 10, $(vCenturyAndDecade)) + Num(Left([JML Doc #], 1)) , 1, 1) + Num(Mid([JML Doc #], 2, 3)) - 1) - Date([SA00 Date] - 600)) / 7)) AS [Relative Week from A-600],
+    
+    IF(Index(Upper([Status]), 'CANCEL') > 0 OR Index(Upper([Status]), 'REJECTED') > 0 OR [Parsed Status Block] = 'Cancelled', 'Cancelled', 
+        IF(Left([Parsed Status Block], 8) = 'Received', 'Received', 
+            IF(WildMatch([JML Doc #], 'PENDING_ACT_*'), 'In Process', 
+                IF(Len(Trim([QTY Due])) = 0, 'Outstanding', IF([QTY Due] <= 0, 'Received', 'Outstanding'))))) AS [Report Status], 
+    
+    Date([SA00 Date] - 30) AS [A-30 Date], 
+    IF(IsNum([SKED Start]),
+        IF(IsNum([SA00 Date]), IF([SKED Start] > [SA00 Date], Date([SKED Start] - 14), Date([SA00 Date])), Date([SKED Start] - 14)),
+        IF(IsNum([KEY EVENT Date]) AND IsNum([Total DU]), Date( ([KEY EVENT Date] - 14) - (Floor([Total DU] / 6) * 7) - Mod([Total DU], 6) - IF(WeekDay([KEY EVENT Date] - 14) - Mod([Total DU], 6) < 0, 1, 0) ), Date([KEY EVENT Date] - 14))
+    ) AS [Project Need Date],
+    Coalesce(IF(NOT (Index(Upper([Status]), 'CANCEL') > 0 OR Index(Upper([Status]), 'REJECTED') > 0 OR Left([Parsed Status Block], 8) = 'Received'), Date([EDD] + 14)), IF(IsNum([Parsed ESD]), Date([Parsed ESD] + 14))) AS [Estimated Arrival Date]
+RESIDENT FinalReportData WHERE NOT Index(Upper([Status]), 'XFERRED') > 0;
+
+DROP TABLE FinalReportData;
+
+// =========================================================================================
+// CANONICAL DATE MODEL & MASTER CALENDAR
+// =========================================================================================
+
+Canonical_Link:
+// 1. Link Orders to the Master Timeline
+LOAD 
+    [JML Doc #], 
+    [Order Date] AS [Master Date], 
+    [Relative Week from A-600] AS [Master Relative Week],
+    'Order' AS [Date Type] 
+RESIDENT Final_Table 
+WHERE IsNum([Order Date]);
+
+// 2. Link Actual Receipts & Projections (EADs) to the Master Timeline
+CONCATENATE(Canonical_Link)
+LOAD 
+    [JML Doc #], 
+    [Unified Action Date] AS [Master Date], 
+    [Receipt_EAD Relative Week from A-600] AS [Master Relative Week],
+    'Action' AS [Date Type] 
+RESIDENT Final_Table 
+WHERE IsNum([Unified Action Date]);
+
+// -----------------------------------------------------------------------------------------
+// MASTER CALENDAR GENERATION
+// -----------------------------------------------------------------------------------------
+Temp_Bounds:
+LOAD 
+    Min([Master Relative Week]) AS MinWeek, 
+    Max([Master Relative Week]) AS MaxWeek 
+RESIDENT Canonical_Link;
+
+LET vMinWeek = Peek('MinWeek', 0, 'Temp_Bounds');
+LET vMaxWeek = Peek('MaxWeek', 0, 'Temp_Bounds');
+
+DROP TABLE Temp_Bounds;
+
+Master_Relative_Calendar:
+LOAD
+    ($(vMinWeek) + RowNo() - 1) AS [Master Relative Week]
+AUTOGENERATE ($(vMaxWeek) - $(vMinWeek) + 1);

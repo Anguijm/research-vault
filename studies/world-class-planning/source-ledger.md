@@ -34,10 +34,9 @@ then `pdftotext -layout` each PDF.
 ## Operator's Qlik work artifacts (2026-06-23, in the same Drive folder)
 
 Four files the operator added — their own AIM/Qlik environment and a build session with Gemini.
-Distilled into [the data & tooling note](03_build/data-fields-and-tooling.md); **the raw files are
-NOT copied into this git-backed vault** (it pushes to GitHub, and these are live internal AIM
-data-model artifacts — a classification/handling call the operator should make before they go
-off-machine). They remain in the Drive `AIM NG` folder.
+Distilled into [the data & tooling note](03_build/data-fields-and-tooling.md). The operator cleared
+them for the vault (2026-06-23), so the raw files are now kept in **`01_sources/qlik/`** (and on
+GitHub) as well as the Drive `AIM NG` folder.
 
 | File | What it is |
 |------|-----------|
