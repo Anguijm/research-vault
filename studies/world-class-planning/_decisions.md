@@ -76,6 +76,10 @@ project — "decisions" here are direction, not commitments.
     CMAV + CM + EM + WOO) per operator — the CNO-only filter from the example MRQT script was
     removed; "completed" is enforced at the CU-phase level (certified + actual dates), not by a
     CNO-specific CA00 cohort.
+17. **Test harness written (2026-06-23):** `03_build/span-screen-tests.md` — a diagnostic TRACE
+    block (stage counts + data-quality flags to the reload log), six validation sheet objects
+    (incl. the per-SWBS scatter to choose linear-fit vs median), and acceptance criteria that map
+    each red number back to the right [CONFIRM]. Operator to run the fit next.
 
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
