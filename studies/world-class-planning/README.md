@@ -72,6 +72,8 @@ straight into how SRF packages work. The project is about answering the three qu
   criteria mapped to the [CONFIRM] items.
 - `01_sources/qlik/` — the operator's raw Qlik artifacts (load script, data dictionary, field
   dump, Gemini build session).
+- `future-state.md` — deployment to-dos: the Power App screening calculator (the fit's coefficient
+  table is the only thing the app needs) plus the open analytical follow-ons.
 - `_decisions.md` — direction and open questions.
 
 ## Notes on how this project runs

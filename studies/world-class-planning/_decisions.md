@@ -80,6 +80,12 @@ project — "decisions" here are direction, not commitments.
     block (stage counts + data-quality flags to the reload log), six validation sheet objects
     (incl. the per-SWBS scatter to choose linear-fit vs median), and acceptance criteria that map
     each red number back to the right [CONFIRM]. Operator to run the fit next.
+18. **Future-state captured (2026-06-24):** `future-state.md` — a **Power App** screening
+    calculator where a user pastes JCN/SWLIN/est-man-days and gets a span + verdict. Design
+    principle: **decouple** — the Qlik fit exports a small per-SWBS coefficient table (SWBS →
+    Slope/Intercept/n + parent/global + thresholds) to SharePoint/Dataverse; the app is a thin
+    paste-and-predict calculator over it, re-fit on a cadence. Depends on a validated fit + the
+    drydock input + the "96 hours" definition. (Excel/Power BI are lighter alternatives.)
 
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
