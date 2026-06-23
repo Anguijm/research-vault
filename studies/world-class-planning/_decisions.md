@@ -72,7 +72,10 @@ project — "decisions" here are direction, not commitments.
     SWBS from completed single-JCN history (LINEST_M/B, shrink thin bins to the 1-digit parent),
     scores candidates, three-bin sort. Carries a [CONFIRM] list for the inferred keys/fields/units.
     Operator cleared the raw Qlik artifacts for the vault — now in `01_sources/qlik/`. Next:
-    drydock override, then the AIM↔COST multiplier.
+    drydock override, then the AIM↔COST multiplier. **History pools ALL availability types** (CNO +
+    CMAV + CM + EM + WOO) per operator — the CNO-only filter from the example MRQT script was
+    removed; "completed" is enforced at the CU-phase level (certified + actual dates), not by a
+    CNO-specific CA00 cohort.
 
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates

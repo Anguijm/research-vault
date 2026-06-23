@@ -45,18 +45,18 @@ These are inferred from your data dictionary / dump; confirm against the live mo
 
 // ---------- Parameters ----------
 SET vHomeport   = 'YOKOSUKA';
-LET vToday      = Num(Today());
 SET v96Days     = 4;     // [CONFIRM] "96 hours" as calendar days
 SET vCMAVDays   = 42;    // 6-week CMAV upper bound, calendar days
 SET vMarginPct  = 1.25;  // marginal band = up to 1.25× the CMAV threshold
 SET vMinN       = 8;     // min completed jobs to trust a SWBS's own fit; else shrink to parent
 
-// ---------- 1. Cohort: completed (Benchmark) CNO availabilities, Yokosuka DDG/LCC ----------
-Map_CA00_Actual:
-MAPPING LOAD [Event Proj ID], Num(Date([Event Actual Date]))
-FROM [lib://QVD-JRMC-AIM/AIM_Key_Event_And_Milestones.qvd] (qvd)
-WHERE [Event ID]='CA00' AND Len(Trim([Event Actual Date]))>0;
-
+// ---------- 1. Scope: Yokosuka DDG/LCC, ALL availability types ----------
+// No availability-type or completion filter here, on purpose - we want EVERY
+// availability (CNO, CMAV, CM, EM, WOO). "Completed" is enforced at the CU-phase
+// level below (certified flag + non-empty actual start/finish dates), which works
+// the same regardless of availability type. Broaden the scope by relaxing the
+// Match()/[Ship Home] below. (Optionally carry PROJECT_TYPE_CD if you later want to
+// segment the fit by availability type.)
 Ships_T:
 LOAD %Proj_Ship_Key AS [%ShipKey]
 FROM [lib://QVD-JRMC-AIM/AIM_Ship.qvd] (qvd)
@@ -65,10 +65,7 @@ WHERE [Ship Home]='$(vHomeport)' AND Match([Ship Type],'DDG','LCC');
 CohortProjects:
 LOAD [Project ID] AS PROJ_ID
 FROM [lib://QVD-JRMC-AIM/AIM_Project.qvd] (qvd)
-WHERE Exists([%ShipKey],[%Proj_Ship_Key])
-  AND ApplyMap('Map_CA00_Actual',[Project ID],0) > 0               // has an actual completion
-  AND ApplyMap('Map_CA00_Actual',[Project ID],0) <= $(vToday)      // and it's in the past = completed
-  AND NOT WildMatch(Upper([Project Name]),'*CM*','*CMAV*','*EM*','*WOO*'); // CNO availabilities only
+WHERE Exists([%ShipKey],[%Proj_Ship_Key]);
 Map_Cohort: MAPPING LOAD PROJ_ID, 1 RESIDENT CohortProjects;
 
 // ---------- 2. Certified (closed) CU phases ----------
