@@ -44,3 +44,9 @@ trip-reports/*/audio/*.log
 
 # HBR PDFs are licensed personal copies — keep local/vault only, do not push to the cloud backup
 studies/ai-governance/01_sources/hbr/*.pdf
+
+# ── Private, non-OSI reading area ───────────────────────────────────────
+# Proprietary or otherwise non-open-source material that the vault reasons
+# FROM but never cites. Nothing here may be pushed. See _private/README.md
+# for the crossing rule.
+_private/

@@ -86,6 +86,24 @@ project — "decisions" here are direction, not commitments.
     Slope/Intercept/n + parent/global + thresholds) to SharePoint/Dataverse; the app is a thin
     paste-and-predict calculator over it, re-fit on a cadence. Depends on a validated fit + the
     drydock input + the "96 hours" definition. (Excel/Power BI are lighter alternatives.)
+19. **Who authors and maintains AIM-NG is an open question, and it bears on end state
+    (2026-07-26).** The study has treated the AIM-NG process manual as a given: a stable
+    Distribution A framework to build a screen inside. It has never asked who wrote those eleven
+    chapters, who maintains the shipyard metric suite that accompanies them, or who delivers the
+    project-management training built on them. That matters, because SRF-JRMC is an AIM user that
+    is **not** one of the four public naval shipyards the manual was written around. If the process
+    framework, its metrics, and its training are authored and sustained by an identifiable party
+    under a NAVSEA sponsor, then a schedule-driven early work screen at SRF-JRMC is not only an
+    SRF-internal improvement; it is an **extension of an existing process framework to a
+    forward-deployed repair facility**, which is a different and more specific end state than the
+    three the project-intent question currently offers. **Nothing is settled here.** The next step
+    is cheap: check the front matter, record-of-changes, and title pages of the AIM-NG chapter PDFs
+    already in the Drive `AIM NG` folder for a preparer or support-contractor credit, and check
+    USAspending for maintenance-and-process support obligations under the relevant NAVSEA sponsor
+    (`lib/usaspending.py`). Both are open sources and would settle it either way. *(This question
+    was prompted by non-OSI material held in `_private/`, which is not citable and has not been
+    relied on for anything above. If the open-source check comes back empty, the question stays
+    open rather than being answered from the private material.)*
 
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
@@ -101,4 +119,11 @@ project — "decisions" here are direction, not commitments.
 - **Where the screen runs:** fold into the existing Shop Screening Process (§9), or stand it up
   separately?
 - **Project intent:** is the end state a thinking memo, a method/spec SRF could implement, or a
-  brief to present? (Drives whether this stays a thinking track or grows a build.)
+  brief to present? (Drives whether this stays a thinking track or grows a build.) **Item 19 adds
+  a fourth candidate** — a demonstration that the AIM-NG framework extends to a forward-deployed
+  repair facility — but that one only becomes available if the authorship question closes on open
+  sources, and it carries an organizational-conflict-of-interest question that
+  `_meta/oci-primer.md` would have to test first.
+- **AIM-NG authorship and maintenance (new 2026-07-26, item 19):** who wrote the chapters, who
+  sustains the metric suite, who teaches the associated course. Two cheap open-source checks named
+  in item 19. Until one of them lands, the fourth end-state option above is not on the table.
