@@ -34,3 +34,4 @@
 - [AI governance study](project_ai_governance_study.md) — new studies/ track; landscape research on AI governance to inform operator's SRF-JRMC askSage instruction; gap-analysis pass still pending
 - [SRF-JRMC department structure](reference_srf_jrmc_department_structure.md) — command codes 100–1200 (no 400/800/1000) and their functions; operator-confirmed org
 - [World-class planning](project_world_class_planning.md) — thinking project; SAIV early work-screening in AIM; bundled-JCN attribution solved by attributing labor not span (regression disaggregation)
+- [Private non-OSI area](project_private_non_osi_area.md) — gitignored `_private/` reasons-from-but-never-cites; the crossing rule and the named-entity gap the audits can't catch

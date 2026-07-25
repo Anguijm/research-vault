@@ -1,8 +1,10 @@
 ---
 name: project-world-class-planning
 description: thinking project on schedule-as-independent-variable early work screening in AIM; the bundled-JCN attribution problem and the labor-vs-span method
-metadata:
+metadata: 
+  node_type: memory
   type: project
+  originSessionId: f85e879c-0691-46b5-a1af-9c6f26ff57cd
 ---
 
 New `studies/world-class-planning/` track (created 2026-06-23) — a **thinking project**, not a
@@ -50,6 +52,17 @@ artifacts now in `01_sources/qlik/` (operator cleared for vault/GitHub).** Still
 hours" (clock vs shifts; not in 4700.1F); add the drydock override; then the AIM↔COST multiplier.
 **Future state (`future-state.md`):** a Power App where users paste JCN/SWLIN/est-man-days → span +
 verdict; the Qlik fit exports a small per-SWBS coefficient table (the model) that the app consumes
-— decoupled, re-fit on a cadence. See `studies/world-class-planning/` ([[project-ai-governance-study]]
+— decoupled, re-fit on a cadence. **New open question (2026-07-26, decision-log item 19):** the
+study has always treated the AIM-NG process manual as a given and never asked **who authors and
+maintains it** (the eleven chapters, the shipyard metric suite, the associated project-management
+course). It matters because SRF-JRMC is an AIM user **outside** the four public naval shipyards the
+manual was written around, so if that framework is authored/sustained under a NAVSEA sponsor, the
+SAIV screen becomes an **extension of an existing framework to a forward-deployed repair facility**
+— a fourth candidate end state beyond memo/spec/brief, and one that would trip the OCI question in
+`_meta/oci-primer.md`. Two cheap OSI checks named: AIM-NG chapter front matter / record-of-changes
+for a preparer credit, and USAspending for process-support obligations under the NAVSEA sponsor.
+Nothing asserted until one lands. (Question was prompted by non-OSI material; see
+[[project_private_non_osi_area]] for why it cannot be answered from that material.)
+See `studies/world-class-planning/` ([[project-ai-governance-study]]
 is the sibling study track). Related operator context: [[project_uss_rmc_vs_usns_msc]],
 [[reference_srf_jrmc_department_structure]].
