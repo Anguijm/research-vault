@@ -48,8 +48,15 @@ from completed single-JCN summaries — no COST actuals needed for a first cut. 
 published AIM layer. Raw Qlik scripts kept OUT of the git vault (operator's classification call;
 vault pushes to GitHub). Gemini fabricated a "Qlik linter" — disregard. **First-cut screen written as a QlikView script
 (`03_build/span-screen-qlik.md` — span fit per SWBS, LINEST per SWBS, no COST join); raw Qlik
-artifacts now in `01_sources/qlik/` (operator cleared for vault/GitHub).** Still open: define "96
-hours" (clock vs shifts; not in 4700.1F); add the drydock override; then the AIM↔COST multiplier.
+artifacts now in `01_sources/qlik/` (operator cleared for vault/GitHub).** **"96 hours" DEFINED (operator, 2026-07-26, item 21): 96 ELAPSED
+clock hours = 4 calendar days**, not work-shifts; clock runs through nights/weekends; local SRF
+definition (not in 4700.1F). Closes the `v96Days=4` [CONFIRM] — AIM Cycle Time and the span fit are
+both calendar arithmetic, so history and threshold share one clock, no conversion. Two consequences:
+the 96-hr bin is governed by the per-SWBS **Intercept** (fixed-wait floor), not Slope, so it's mostly
+a property of the **work type** not the job; and an elapsed clock makes the test **start-day
+sensitive** (Friday start eats a weekend) which is unknown at induction, so require a **margin**
+below 4 days rather than the bare central fit. Still open: add the drydock override; then the
+AIM↔COST multiplier.
 **Future state (`future-state.md`):** a Power App where users paste JCN/SWLIN/est-man-days → span +
 verdict; the Qlik fit exports a small per-SWBS coefficient table (the model) that the app consumes
 — decoupled, re-fit on a cadence. **New open question (2026-07-26, decision-log item 19):** the
