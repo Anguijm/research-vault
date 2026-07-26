@@ -140,6 +140,29 @@ project — "decisions" here are direction, not commitments.
       USAspending by NAISC/PSC under the SEA 04X sponsor rather than by keyword, or SMPG's own
       published materials if any exist.
 
+21. **"96 hours" defined: elapsed clock hours (operator, 2026-07-26).** Not work-shifts. Ninety-six
+    elapsed hours is **four calendar days**, with the clock running through nights, weekends, and
+    holidays. Since the threshold appears nowhere in 4700.1F, this is a **local SRF definition**
+    and the operator is its source. Consequences, worked through in
+    [early-jcn-screen](02_synthesis/early-jcn-screen.md) under "The unit definition, settled":
+    - **No conversion needed, and the `[CONFIRM]` on `v96Days` is closed.** AIM Cycle Time is
+      claimed actual start to claimed actual finish, and the fit uses
+      `Max(ACTUAL_COMPLETION) − Min(ACTUAL_START)`, so both the history and the threshold are on
+      the same elapsed clock. Weekend and holiday effects are already inside the fitted history.
+      `v96Days = 4` in `03_build/span-screen-qlik.md` is now confirmed rather than a placeholder.
+    - **Assessment: the 96-hour bin is governed by the per-SWBS Intercept, not the Slope.** The
+      intercept is the fixed-wait floor for a work type. Where it alone exceeds four days, nothing
+      in that SWBS group can pass at any size and the estimate stops mattering. So the first
+      question is better read as *which SWBS groups are 96-hour-capable at all*, with the per-job
+      estimate discriminating only inside those groups. This also gives the validation scatter in
+      `03_build/span-screen-tests.md` a sharper job: the intercept per bin is now a headline
+      output, not a fitting by-product.
+    - **Assessment: the test is start-day sensitive, and the start day is unknown at induction.**
+      A four-day elapsed window starting Friday eats a weekend; starting Monday it does not. Since
+      decision 3 puts this screen at Job Control Number induction, the sort should require a margin
+      below four days rather than comparing against the central fit, or the "96-hour capable" bin
+      will over-promise on jobs that land badly in the week.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
@@ -149,8 +172,12 @@ project — "decisions" here are direction, not commitments.
 - **Bundle level:** answered — bundles are at SWBS 3-digit (item 9). Remaining: does the
   per-SWBS multiplier hold across sizes, or do big jobs in a group run at a different ratio
   (→ split that group by size)?
-- **"96 hours":** define it (elapsed clock hours vs. work-shifts), and find its source (JFMM /
-  TYCOM REDLINES / local) — or decide to drop it.
+- ~~**"96 hours":** define it (elapsed clock hours vs. work-shifts).~~ **ANSWERED 2026-07-26
+  (item 21): elapsed clock hours, four calendar days, local SRF definition.** What remains is a
+  design choice rather than a definition: how much margin below four days the "96-hour capable"
+  bin should require, given that the start day is unknown at induction. Item 21 recommends a
+  margin; the size of it is the operator's call and is best set after the fit is run and the
+  per-SWBS intercepts are visible.
 - **Where the screen runs:** fold into the existing Shop Screening Process (§9), or stand it up
   separately?
 - **Project intent:** is the end state a thinking memo, a method/spec SRF could implement, or a

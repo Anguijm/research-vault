@@ -55,11 +55,35 @@ Two honest limits of going this early shape the design:
   drydock-dependent → "must-do" CNO package; marginal → flag for a firmer look once the CU-Phase
   estimate exists.** A three-bin sort honors the data's precision; a hard yes/no over-claims it.
 
-## A unit definition to settle first
-Before testing anything against "96 hours," define what it means — 96 elapsed clock hours (four
-days) or work-shifts? AIM measures span in 8-hour shifts on a one-shift / five-day calendar, so
-the two don't line up until the definition is fixed. (And since "96 hours" isn't in 4700.1F at
-all, SRF is defining it from scratch regardless.)
+## The unit definition, settled
+**96 hours means 96 elapsed clock hours, not 96 hours of work-shifts** (operator decision,
+2026-07-26). That is four calendar days, and the clock runs through nights, weekends, and
+holidays. Since "96 hours" appears nowhere in 4700.1F, this is a local SRF definition and the
+operator is its source.
+
+Three things follow, and they are convenient in one way and awkward in another.
+
+The convenient part: **the units already match, so no conversion is needed.** AIM's Cycle Time is
+claimed actual start to claimed actual finish, and the span model is fit as
+`Max(ACTUAL_COMPLETION) − Min(ACTUAL_START)`, which is calendar-day arithmetic. Elapsed-clock
+history is therefore being compared against an elapsed-clock threshold. Weekend and holiday
+effects are already baked into the fitted history rather than needing to be modeled on top.
+
+The first awkward part, and an **Assessment**: for the 96-hour question the binding term is the
+per-SWBS **Intercept**, not the Slope. The intercept is the fixed-wait floor for that work type,
+so if a SWBS group's intercept alone exceeds four days, no job in that group can pass the 96-hour
+test at any size, and the estimate stops mattering entirely. That makes "96-hour capable" mostly a
+property of **the kind of work**, not of the individual job. Practical consequence: the fit should
+be read as producing a *list of 96-hour-capable SWBS groups* first, with the per-job estimate only
+discriminating inside those groups.
+
+The second awkward part, also an **Assessment**: because the clock runs continuously, the same job
+passes or fails depending on **which day of the week it starts**. A four-day window starting
+Friday consumes a weekend; starting Monday it does not. At Job Control Number induction, which is
+where decision 3 puts this screen, the start day is not yet known. So a predicted span near the
+threshold is genuinely uncertain, and the sort should treat the 96-hour bin conservatively rather
+than reading the central fit as a verdict. Using a lower percentile of the fitted distribution, or
+simply requiring a margin below four days, would be more honest than a bare `PredSpan <= 4`.
 
 ## The shape of the screen, end to end
 1. **Drydock?** Yes → must-do (docking CNO availability). No → continue.

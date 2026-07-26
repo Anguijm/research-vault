@@ -30,9 +30,15 @@ These are inferred from your data dictionary / dump; confirm against the live mo
 3. **`%JobSumm_CuPhase_Key`** rolls a CU phase to its Job Summary (it's on `AIM_CuPhase`).
 4. **Candidate source** (Section 8): that `AIM_JB_JCN` holds `EST_MAN_DAYS_QY` + `SWLIN_LI_ID` +
    the Job Control Number for open/active JCNs, and how to filter to "incoming/not-yet-done."
-5. **Window units:** span here is **calendar days** (ACC − ACS). `v96Days=4` and `vCMAVDays=42`
-   assume 96 hours = 4 calendar days and a 6-week CMAV = 42 calendar days. Switch to working days
-   if that's your convention. (And "96 hours" still isn't defined in 4700.1F — this is a placeholder.)
+5. ~~**Window units.**~~ **RESOLVED 2026-07-26 (operator).** "96 hours" is **96 elapsed clock
+   hours**, not work-shifts, so `v96Days = 4` calendar days is correct and no working-day
+   conversion is needed. Span here is calendar days (ACC − ACS), which is the same clock, so
+   history and threshold agree by construction. `vCMAVDays = 42` (6 weeks) likewise stays calendar.
+   Still a local SRF definition, since "96 hours" is not in 4700.1F. **Caveat carried into the
+   scoring step:** an elapsed clock runs through weekends, so a job near the four-day line passes
+   or fails on its start day, which is unknown at induction. Prefer a margin below the threshold
+   over a bare comparison. See "The unit definition, settled" in
+   [early-jcn-screen](../02_synthesis/early-jcn-screen.md).
 
 ## The script
 
@@ -45,7 +51,7 @@ These are inferred from your data dictionary / dump; confirm against the live mo
 
 // ---------- Parameters ----------
 SET vHomeport   = 'YOKOSUKA';
-SET v96Days     = 4;     // [CONFIRM] "96 hours" as calendar days
+SET v96Days     = 4;     // CONFIRMED 2026-07-26: 96 ELAPSED clock hours = 4 calendar days
 SET vCMAVDays   = 42;    // 6-week CMAV upper bound, calendar days
 SET vMarginPct  = 1.25;  // marginal band = up to 1.25× the CMAV threshold
 SET vMinN       = 8;     // min completed jobs to trust a SWBS's own fit; else shrink to parent
