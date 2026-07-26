@@ -1,0 +1,82 @@
+Started loading data
+Ships_T << AIM_Ship
+ Lines fetched: 13
+CohortProjects << AIM_Project
+ Lines fetched: 58,717
+Map_Cohort << CohortProjects
+Lines fetched: 58,717
+Map_Certified << AIM_CuPhase_Hist
+Lines fetched: 367,450
+CuPhase_T << AIM_CuPhase
+Lines fetched: 528,183
+JcnBridge << JCN_CU_PHASE
+ (QVD (row-based) optimized)
+ Lines fetched: 186,378
+JcnBridge
+ Lines fetched: 186,378
+JS_Count << CuPhase_T
+ Lines fetched: 28,483
+Map_JCNsInJS << JS_Count
+ Lines fetched: 28,483
+JS_SWBS_Counts << CuPhase_T
+ Lines fetched: 28,483
+Map_Dominant_SWBS << JS_SWBS_Counts
+ Lines fetched: 28,483
+JS_History << CuPhase_T
+ Lines fetched: 23,646
+JS_Clean << JS_History
+ Lines fetched: 17,829
+SWBS_Fit << JS_Clean
+ Lines fetched: 233
+Parent_Fit << JS_Clean
+ Lines fetched: 9
+Global_Fit << JS_Clean
+ Lines fetched: 1
+Map_S << SWBS_Fit
+ Lines fetched: 233
+Map_I << SWBS_Fit
+ Lines fetched: 233
+Map_PS << Parent_Fit
+ Lines fetched: 9
+Map_PI << Parent_Fit
+ Lines fetched: 9
+Candidates << AIM_JB_JCN
+ Lines fetched: 3,708
+Scored << Candidates
+ Lines fetched: 3,708
+Screen << Scored
+ Lines fetched: 3,708
+============================================================
+
+[counts] projects=58717  cuphases=752375  singleJCNjobs=17829  SWBSbins=233  candidates=3708
+DIAG_CuP_DQ << CuPhase_T
+ Lines fetched: 1
+[cuphase DQ] of 752375: badSWBS=0  blankACS=0  blankACC=0  negSpan=72
+DIAG_BundleDist << CuPhase_T
+ Lines fetched: 63
+[bundles] see DIAG_BundleDist (1=clean single-JCN, 2+=bundled)
+
+DIAG_HistRange << JS_Clean
+ Lines fetched: 1
+[history] span days min/med/max = 
+
+
+DIAG_FitDQ:
+LOAD
+    Count(1)                          AS Bins,
+    Sum(If(n>=8,1,0))          AS Trusted,
+    Sum(If(Intercept<0,1,0))          AS NegIntercept,
+    Sum(If(Slope<0,1,0))              AS NegSlope
+RESIDENT SWBS_Fit
+
+[fit] bins=  trusted(n>=8)=  negIntercept=  negSlope=
+
+DIAG_BinDist << Screen
+ Lines fetched: 1
+[screen] candidate bins -> see DIAG_BinDist
+
+===================== END DIAGNOSTICS =====================
+App saved
+Finished successfully
+0 forced error(s)
+0 synthetic key(s)
