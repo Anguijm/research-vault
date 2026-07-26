@@ -105,6 +105,41 @@ project — "decisions" here are direction, not commitments.
     relied on for anything above. If the open-source check comes back empty, the question stays
     open rather than being answered from the private material.)*
 
+20. **Item 19 checked, and it splits (2026-07-26).** Both open-source checks were run. Result: the
+    *governance* half is confirmed and the *contractor-attribution* half is not.
+    - **FACT (AIM-NG Chapter 1A, §1.1 "Purpose and Scope," Rev 7 — already in the source ledger,
+      Distribution A).** The AIM-NG Process Manual is developed "under the sponsorship of Naval Sea
+      Systems Command, Industrial Operations Directorate (SEA 04X)," by the **Ship Maintenance
+      Performance Group (SMPG)** together with the **Project Management National Value Stream
+      (PM NVS)**. The same section names SMPG "as Champion for the AIM-NG Process, training, and
+      software functional requirements," and states that all chapters except Resource Allocation
+      are "developed and managed by the PM NVS." So the framework, its training, and its software
+      requirements have a single identifiable owner under a NAVSEA sponsor. This was sitting in a
+      document the study has cited since day one; it was simply never asked.
+    - **NOT ESTABLISHED.** Who staffs or supports SMPG. Chapter 1A names no contractor (its only
+      "contractor" references are to ship-repair contractors as a work category). USAspending
+      returns **zero** awards on "Ship Maintenance Performance Group," "AIM-NG," "Project
+      Management National Value Stream," or "naval shipyard project management process." Queries
+      were run on process vocabulary only, deliberately not on any company name, since seeding a
+      name and then calling the matches organic is the contamination pattern the vault's
+      entity-provenance rules forbid.
+    - **Incidental OSI finding, worth keeping.** "Advanced Industrial Management" does return a
+      cluster of Navy awards, but they are a *different work-type*: planning-yard marine design and
+      engineering task orders to prepare AIM planning and technical work documents and staff
+      project trouble desks, at Pearl Harbor Naval Shipyard and Puget Sound Naval Shipyard and IMF.
+      Recipients surfaced organically by that query were Life Cycle Engineering, Gryphon Marine,
+      and HII Fleet Support Group. **Assessment:** there are two distinguishable layers around AIM,
+      an *authorship/governance* layer (SMPG / PM NVS under SEA 04X) and a *work-document
+      production* layer (planning-yard task orders at individual shipyards). Conflating them would
+      be an analytical error. The second layer is visible in procurement data; the first is not.
+    - **Consequence for the fourth end state.** It is still available but still unresolved. The
+      framework demonstrably has an owner and a sponsor, which is what the "extension to a
+      forward-deployed repair facility" framing needs. Who would actually perform such an extension
+      remains unsourced, and per the crossing rule in `_private/README.md` it does not get filled in
+      from non-OSI material. Next open-source avenue if the operator wants it pursued: FPDS or
+      USAspending by NAISC/PSC under the SEA 04X sponsor rather than by keyword, or SMPG's own
+      published materials if any exist.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
