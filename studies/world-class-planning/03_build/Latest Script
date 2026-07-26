@@ -1,0 +1,234 @@
+// ===========================================================================
+// WCP FIRST SCREEN — Span fit per SWBS (no COST/STARS join needed)
+// Model: per SWBS, span_days ≈ Intercept + Slope × EstManDays, fit from
+//        completed SINGLE-JCN history (clean standalone span).
+// ===========================================================================
+
+// ---------- Parameters ----------
+SET vHomeport   = 'YOKOSUKA';
+SET v96Days     = 4;     // "96 hours" as calendar days
+SET vCMAVDays   = 42;    // 6-week CMAV upper bound, calendar days
+SET vMarginPct  = 1.25;  // marginal band = up to 1.25× the CMAV threshold
+SET vMinN       = 8;     // min completed jobs to trust a SWBS's own fit; else shrink to parent
+
+// ---------- 1. Scope: Yokosuka DDG/LCC, ALL availability types ----------
+Ships_T:
+LOAD %Proj_Ship_Key AS [%ShipKey]
+FROM [lib://QVD-JRMC-AIM/AIM_Ship.qvd] (qvd)
+WHERE [Ship Home]='$(vHomeport)' AND Match([Ship Type],'DDG','LCC');
+
+CohortProjects:
+LOAD [Project ID] AS PROJ_ID
+FROM [lib://QVD-JRMC-AIM/AIM_Project.qvd] (qvd)
+WHERE Exists([%ShipKey],[%Proj_Ship_Key]);
+
+Map_Cohort: MAPPING LOAD PROJ_ID, 1 RESIDENT CohortProjects;
+
+// ---------- 2. Certified (closed) CU phases ----------
+Map_Certified:
+MAPPING LOAD %CuPhase_Key, 1
+FROM [lib://QVD-JRMC-AIM/AIM_CuPhase_Hist.qvd] (qvd)
+WHERE [Approval Status CD]='CRT' AND [Current Flag Cd]='Y';
+
+// ---------- 3. (REMOVED) Map_SWLIN no longer needed ----------
+
+// ---------- 4. CU-phase facts: cohort + certified, with span ----------
+CuPhase_T:
+LOAD
+    CU_PHASE_SA_ID,
+    %JobSumm_CuPhase_Key                         AS JS_Key,
+    MANHOUR_QY                                   AS Est_MH,        
+    Num([Cu Phase Actual Start Date])            AS ACS,           
+    Num([Cu Phase Actual Completion Date])       AS ACC,           
+    Mid(ICN, 6, 3)                               AS SWBS // Extracted directly from ICN
+FROM [lib://QVD-JRMC-AIM/AIM_CuPhase.qvd] (qvd)
+WHERE ApplyMap('Map_Cohort',[Cu Phase Project ID],0)=1
+  AND ApplyMap('Map_Certified',%CuPhase_Key,0)=1
+  AND IsNum(Num([Cu Phase Actual Start Date])) 
+  AND IsNum(Num([Cu Phase Actual Completion Date]));  
+
+// ---------- 5. JCN count per Job Summary ----------
+JcnBridge:
+LOAD CU_PHASE_SA_ID, JCN_SA_ID
+FROM [lib://QVD-JRMC-AIM/ALL_TABLES/JCN_CU_PHASE.qvd] (qvd)
+WHERE Exists(CU_PHASE_SA_ID, CU_PHASE_SA_ID);            
+
+LEFT JOIN (CuPhase_T) LOAD CU_PHASE_SA_ID, JCN_SA_ID RESIDENT JcnBridge;
+DROP TABLE JcnBridge;
+
+JS_Count:
+LOAD JS_Key, Count(DISTINCT JCN_SA_ID) AS JCNsInJS
+RESIDENT CuPhase_T GROUP BY JS_Key;
+
+Map_JCNsInJS: MAPPING LOAD JS_Key, JCNsInJS RESIDENT JS_Count;
+DROP TABLE JS_Count;
+
+// ---------- 6. Roll up: standalone span + estimate (single-JCN only) ----------
+JS_SWBS_Counts:
+LOAD
+    JS_Key,
+    SWBS,
+    Count(CU_PHASE_SA_ID) AS SWBS_Count
+RESIDENT CuPhase_T
+GROUP BY JS_Key, SWBS;
+
+Map_Dominant_SWBS:
+MAPPING LOAD
+    JS_Key,
+    FirstSortedValue(SWBS, -SWBS_Count - SWBS/10000) AS Dominant_SWBS
+RESIDENT JS_SWBS_Counts
+GROUP BY JS_Key;
+
+DROP TABLE JS_SWBS_Counts;
+
+JS_History:
+LOAD
+    JS_Key                                        AS Train_JS_Key,
+    ApplyMap('Map_Dominant_SWBS', JS_Key, Null()) AS Train_SWBS,
+    (Max(ACC) - Min(ACS))                         AS Span_Days,       
+    Sum(Est_MH)/8                                 AS Train_Est_MD           
+RESIDENT CuPhase_T
+WHERE ApplyMap('Map_JCNsInJS', JS_Key, 99) = 1                        
+GROUP BY JS_Key;
+
+JS_Clean:
+NOCONCATENATE LOAD 
+    Train_JS_Key,
+    Train_SWBS,
+    Span_Days,
+    Train_Est_MD
+RESIDENT JS_History
+WHERE Span_Days > 0 AND Train_Est_MD > 0;
+
+DROP TABLE JS_History;
+
+// ---------- 7. The per-SWBS span fit ----------
+SWBS_Fit:
+LOAD
+    Train_SWBS                     AS SWBS,
+    Count(1)                       AS n,
+    Median(Span_Days)              AS MedianSpan,
+    LINEST_M(Span_Days, Train_Est_MD) AS Slope,        
+    LINEST_B(Span_Days, Train_Est_MD) AS Intercept     
+RESIDENT JS_Clean 
+WHERE Len(Trim(Train_SWBS)) = 3
+GROUP BY Train_SWBS;
+
+Parent_Fit:
+LOAD
+    Left(Train_SWBS,1)             AS SWBS1,
+    Count(1)                       AS n1,
+    LINEST_M(Span_Days, Train_Est_MD) AS Slope1,
+    LINEST_B(Span_Days, Train_Est_MD) AS Intercept1
+RESIDENT JS_Clean 
+WHERE Len(Trim(Train_SWBS)) > 0
+GROUP BY Left(Train_SWBS,1);
+
+Global_Fit:
+LOAD LINEST_M(Span_Days, Train_Est_MD) AS gS, LINEST_B(Span_Days, Train_Est_MD) AS gI RESIDENT JS_Clean;
+
+// Handle edge case if global fits are empty
+LET vgSlope = Alt(Peek('gS',0,'Global_Fit'), 0.5);
+LET vgInt   = Alt(Peek('gI',0,'Global_Fit'), 1);
+DROP TABLE Global_Fit;
+
+// Build shrinkage maps
+Map_S:  MAPPING LOAD SWBS,  If(n  >= $(vMinN), Slope)     RESIDENT SWBS_Fit;
+Map_I:  MAPPING LOAD SWBS,  If(n  >= $(vMinN), Intercept) RESIDENT SWBS_Fit;
+Map_PS: MAPPING LOAD SWBS1, If(n1 >= $(vMinN), Slope1)    RESIDENT Parent_Fit;
+Map_PI: MAPPING LOAD SWBS1, If(n1 >= $(vMinN), Intercept1)RESIDENT Parent_Fit;
+
+// ---------- 8. Score candidate (incoming/open) JCNs ----------
+Candidates:
+LOAD
+    [JB_JCN SWLIN LI ID]         AS JCN,            
+    [JB_JCN Est Man Days Qy]     AS Est_MD,
+    Left([SWLIN_SYS_ID], 3)      AS SWBS
+FROM [lib://QVD-JRMC-AIM/AIM_JB_JCN.qvd] (qvd)
+WHERE [JB_JCN Est Man Days Qy] > 0;                              
+
+Scored:
+LOAD *,
+    RangeMax(0.5, Intercept_eff + Slope_eff * Est_MD) AS PredSpan_Days
+;
+LOAD
+    JCN, SWBS, Est_MD,
+    Alt(ApplyMap('Map_S', SWBS, Null()),  ApplyMap('Map_PS', Left(SWBS,1), Null()), $(vgSlope)) AS Slope_eff,
+    Alt(ApplyMap('Map_I', SWBS, Null()),  ApplyMap('Map_PI', Left(SWBS,1), Null()), $(vgInt))   AS Intercept_eff
+RESIDENT Candidates;
+
+// ---------- 9. The three-bin verdict ----------
+Screen:
+LOAD *,
+    If(PredSpan_Days <= $(v96Days),                 'MAYBE - 96hr-capable',
+      If(PredSpan_Days <= $(vCMAVDays),             'MAYBE - CMAV-capable',
+        If(PredSpan_Days <= $(vCMAVDays)*$(vMarginPct), 'MARGINAL - verify at planning',
+                                                    'MUST-DO - exceeds CMAV'))) AS Screen_Bin
+RESIDENT Scored;
+DROP TABLE Scored;
+
+// ===================== WCP SCREEN — RELOAD DIAGNOSTICS =====================
+TRACE ============================================================;
+
+LET vNProj = NoOfRows('CohortProjects');
+LET vNCuP  = NoOfRows('CuPhase_T');
+LET vNHist = NoOfRows('JS_Clean');
+LET vNFit  = NoOfRows('SWBS_Fit');
+LET vNCand = NoOfRows('Screen');
+TRACE [counts] projects=$(vNProj)  cuphases=$(vNCuP)  singleJCNjobs=$(vNHist)  SWBSbins=$(vNFit)  candidates=$(vNCand);
+
+// --- CU-phase data quality ---
+DIAG_CuP_DQ:
+LOAD
+    Count(1)                                     AS Tot,
+    Sum(If(Len(Trim(SWBS))<>3,1,0))              AS BadSWBS,
+    Sum(If(IsNull(ACS) or ACS=0,1,0))            AS BlankACS,
+    Sum(If(IsNull(ACC) or ACC=0,1,0))            AS BlankACC,
+    Sum(If(ACC<ACS,1,0))                         AS NegSpan
+RESIDENT CuPhase_T;
+
+LET vTot=Peek('Tot',0,'DIAG_CuP_DQ'); LET vBad=Peek('BadSWBS',0,'DIAG_CuP_DQ');
+LET vBacs=Peek('BlankACS',0,'DIAG_CuP_DQ'); LET vBacc=Peek('BlankACC',0,'DIAG_CuP_DQ'); LET vNeg=Peek('NegSpan',0,'DIAG_CuP_DQ');
+TRACE [cuphase DQ] of $(vTot): badSWBS=$(vBad)  blankACS=$(vBacs)  blankACC=$(vBacc)  negSpan=$(vNeg);
+
+// --- Bundle distribution ---
+DIAG_BundleDist:
+LOAD JCNsInJS, Count(JS_Key) AS Summaries
+GROUP BY JCNsInJS;
+LOAD JS_Key, Count(DISTINCT JCN_SA_ID) AS JCNsInJS
+RESIDENT CuPhase_T
+GROUP BY JS_Key;
+TRACE [bundles] see DIAG_BundleDist (1=clean single-JCN, 2+=bundled);
+
+// --- History value ranges ---
+DIAG_HistRange:
+LOAD
+    Min(Span_Days) AS SpanMin, Median(Span_Days) AS SpanMed, Max(Span_Days) AS SpanMax,
+    Min(Train_Est_MD) AS EstMin,  Median(Train_Est_MD) AS EstMed,  Max(Train_Est_MD) AS EstMax
+RESIDENT JS_Clean;
+TRACE [history] span days min/med/max = $(=Peek('SpanMin',0,'DIAG_HistRange'))/$(=Peek('SpanMed',0,'DIAG_HistRange'))/$(=Peek('SpanMax',0,'DIAG_HistRange'));
+
+// --- Fit sanity ---
+DIAG_FitDQ:
+LOAD
+    Count(1)                          AS Bins,
+    Sum(If(n>=$(vMinN),1,0))          AS Trusted,
+    Sum(If(Intercept<0,1,0))          AS NegIntercept,
+    Sum(If(Slope<0,1,0))              AS NegSlope
+RESIDENT SWBS_Fit;
+TRACE [fit] bins=$(=Peek('Bins',0,'DIAG_FitDQ'))  trusted(n>=$(vMinN))=$(=Peek('Trusted',0,'DIAG_FitDQ'))  negIntercept=$(=Peek('NegIntercept',0,'DIAG_FitDQ'))  negSlope=$(=Peek('NegSlope',0,'DIAG_FitDQ'));
+
+// --- Candidate bin distribution ---
+DIAG_BinDist:
+LOAD Screen_Bin, Count(1) AS Candidates
+RESIDENT Screen GROUP BY Screen_Bin;
+TRACE [screen] candidate bins -> see DIAG_BinDist;
+
+// --- Safe Cleanup Loop ---
+FOR EACH vTable in 'DIAG_CuP_DQ', 'DIAG_HistRange', 'DIAG_FitDQ', 'JS_Clean', 'SWBS_Fit', 'Parent_Fit', 'CuPhase_T', 'Candidates', 'Ships_T', 'CohortProjects'
+    IF Not IsNull(TableNumber('$(vTable)')) THEN
+        DROP TABLE [$(vTable)];
+    END IF
+NEXT vTable
+
+TRACE ===================== END DIAGNOSTICS =====================;
