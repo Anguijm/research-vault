@@ -63,7 +63,7 @@ script prints all three derivations side by side so you can see whether they agr
 
 SET vHomeport   = 'YOKOSUKA';
 SET vSampleICNs = 8;          // how many example ICNs to dump phase-by-phase
-SET vPlanKO     = 'S01';      // suspected PLANNING key ops; edit after reading [ko-profile]
+SET vPlanKO     ='''S01''';      // suspected PLANNING key ops; edit after reading [ko-profile]
                               // multiple: 'S01','S02'
 
 // ---------- Cohort ----------
