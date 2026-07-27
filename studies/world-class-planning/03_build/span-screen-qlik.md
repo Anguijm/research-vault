@@ -19,17 +19,33 @@ its actual standalone span (Cycle Time = Actual Completion − Actual Start); fi
 Slope × EstManDays` per SWBS (3-digit); then score a new JCN's estimate against that fit and bin it
 deferrable / CMAV-capable / must-do.
 
+> **STOP — read this before reusing the script below (2026-07-26).** The operator ran this against
+> the live model. It reloads cleanly and produces output, and **the output is not usable**: all
+> 2,699 candidates landed in `MUST-DO`, because the fitted intercept is roughly **366 days**. The
+> cause is not syntax. `Span_Days` as written is not measuring a job's execution window. See
+> decision-log item 22 for the full diagnosis and the three things that must change before this is
+> re-run. The `[CONFIRM]` list below is updated with the real field names the run established.
+
 ## Verify before trusting (the [CONFIRM] list)
-These are inferred from your data dictionary / dump; confirm against the live model:
-1. **Actual-date field names** on `AIM_CuPhase`: dictionary shows `ACTUAL_START_DATE` /
-   `ACTUAL_COMPLETION_DATE` (+ `..._EMPTY` flags); your field dump showed friendly aliases
-   `Cu Phase Actual Start Date` / `...Completion Date`. Use whichever your app exposes.
-2. **`AIM_SWLIN` → CU-phase link** on `%CuPhase_Key`, and that **`SWLIN Line Item` (`SWLIN_LI_ID`)
-   first 3 digits = the SWBS group.** If the SWBS lives in a different slice of the SWLIN, change
-   the `Left(...,3)`.
-3. **`%JobSumm_CuPhase_Key`** rolls a CU phase to its Job Summary (it's on `AIM_CuPhase`).
-4. **Candidate source** (Section 8): that `AIM_JB_JCN` holds `EST_MAN_DAYS_QY` + `SWLIN_LI_ID` +
-   the Job Control Number for open/active JCNs, and how to filter to "incoming/not-yet-done."
+Items 1–4 were **confirmed against the live model on 2026-07-26** by a schema-dump reload; the real
+field names are recorded here so this never has to be guessed again.
+1. ~~**Actual-date field names.**~~ **CONFIRMED.** `AIM_CuPhase` exposes the friendly aliases
+   **`Cu Phase Actual Start Date`** and **`Cu Phase Actual Completion Date`**. The
+   `ACTUAL_*_DATE` raw names and the `..._EMPTY` flag fields **do not exist** in the published
+   layer, so filter on the date fields directly rather than on empty-flags.
+2. **`AIM_SWLIN` → CU-phase link on `%CuPhase_Key`: NOT CONFIRMED, and currently the main
+   defect.** The join produces blanks for most CU phases, which starves every per-SWBS bin. Note
+   the contrast: the candidate side maps SWBS fine from `JB_JCN SWLIN LI ID`, so SWLIN data exists
+   at JCN grain. It is the CU-phase-keyed lookup that is not resolving. Diagnose this before
+   anything else — the whole design premise is per-SWBS fits.
+3. ~~**`%JobSumm_CuPhase_Key`**~~ **CONFIRMED** present on `AIM_CuPhase` and rolls a CU phase to its
+   Job Summary. Related confirmed names: `CU_PHASE_SA_ID`, `MANHOUR_QY`, `Cu Phase Project ID`.
+   The JCN bridge is `ALL_TABLES/JCN_CU_PHASE.qvd` on `CU_PHASE_SA_ID` / `JCN_SA_ID`.
+4. ~~**Candidate source.**~~ **CONFIRMED.** `AIM_JB_JCN` exposes **`JB_JCN Est Man Days Qy`** and
+   **`JB_JCN SWLIN LI ID`**; the JCN identifier is **`%JCN_Key`** (there is no `Job Control Number`
+   field). `EST_MAN_DAYS_QY` / `SWLIN_LI_ID` are the dictionary names, not the app names.
+   Still open: how to filter to "incoming / not-yet-done" (the run used only `> 0`, which scores
+   the entire backlog rather than incoming work).
 5. ~~**Window units.**~~ **RESOLVED 2026-07-26 (operator).** "96 hours" is **96 elapsed clock
    hours**, not work-shifts, so `v96Days = 4` calendar days is correct and no working-day
    conversion is needed. Span here is calendar days (ACC − ACS), which is the same clock, so

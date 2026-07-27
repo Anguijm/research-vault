@@ -163,6 +163,57 @@ project — "decisions" here are direction, not commitments.
       below four days rather than comparing against the central fit, or the "96-hour capable" bin
       will over-promise on jobs that land badly in the week.
 
+22. **First live run: the screen reloads cleanly and the output is unusable (2026-07-26).** The
+    operator ran the span screen against the live Qlik model, debugging field names with Gemini
+    along the way (transcript and output in `03_build/`: `Recent Gemini`,
+    `SWBS Sample Output.xlsx`). Real progress was made and the schema is now pinned down (see the
+    updated `[CONFIRM]` list in `03_build/span-screen-qlik.md`). But the result must not be treated
+    as a fit.
+    - **What the output says.** 2,699 candidate JCNs scored, **100% in `MUST-DO - exceeds CMAV`**.
+      Zero reached the 96-hour or CMAV bins. Predicted spans run 366.4 to 733.3 days, with 98.4%
+      between 360 and 372, against estimates from 1 to 9,361 man-days. A screen that puts every job
+      in one bin is not screening.
+    - **Diagnosis.** The fit did run; this is not a null artifact. It learned an **intercept of
+      about 366 days and a slope near 0.04 days per man-day**, so the fixed term swamps the
+      estimate entirely and a 1-man-day job and a 9,361-man-day job are predicted within days of
+      each other. The intercept is a year because `Span_Days = Max(ACC) − Min(ACS)` over all CU
+      phases on a Job Summary is **not the job's execution window**. It is the distance from the
+      earliest actual start to the latest actual completion across phases that evidently stretch
+      over the availability lifecycle, planning included. **Assessment:** the model is measuring the
+      wrong interval, correctly. That is why it reloads with zero errors and still tells you
+      nothing.
+    - **Three defects to fix before re-running, in priority order.**
+      1. **SWBS is not mapping on the history side.** `Left(ApplyMap('Map_SWLIN', %CuPhase_Key, ''), 3)`
+         returns blank for most CU phases. The first run failed loudly on this (`JS_Clean` loaded
+         **0 rows**, which emptied all three fit tables). The fix applied in the session **relaxed
+         the filter to let blank-SWBS rows through**, which does not repair the mapping, it hides
+         it: blanks now train the global model while the per-SWBS bins stay starved, and nearly
+         every candidate falls through to the global fit. **That relaxation should be reverted**,
+         and the CU-phase-to-SWLIN join diagnosed instead. The candidate side maps SWBS fine from
+         `JB_JCN SWLIN LI ID`, so the data exists; the CU-phase-keyed lookup is the broken link.
+      2. **`Span_Days > 0` silently deletes same-day jobs** — which is precisely the
+         96-hour-capable population that item 21 says the intercept governs. Every job that starts
+         and finishes on one day is dropped from training, biasing the intercept upward and making
+         the 96-hour bin under-populated by construction. Span should be an inclusive day count
+         (`ACC − ACS + 1`) or use `>= 0` with a floor. **This is our defect, present in the script
+         since it was written, not something the run introduced.**
+      3. **The estimate basis differs between training and scoring.** Training fits on
+         `Sum(MANHOUR_QY)/8`, a CU-phase planning estimate converted to man-days. Scoring uses
+         `JB_JCN Est Man Days Qy`, the JCN-grain induction estimate. Those are different estimates
+         at different grains, so the model is fit on one scale and applied to another.
+         `03_build/data-fields-and-tooling.md` already flags this hazard for the multiplier
+         ("your screen input (Class F) and your calibration base (QAC) differ"); the same hazard is
+         in the span script and was never resolved. **This one needs an operator decision**, since
+         the two options differ in effort: join history JCNs to their Class F estimate so training
+         and scoring share a basis, or accept the mismatch and document the bias.
+    - **Process note.** `03_build/span-screen-tests.md` was written for exactly this. Its TRACE
+      block prints `singleJCNjobs=` and a `badSWBS=` count, either of which would have shown the
+      0-row collapse and the SWBS mapping failure in one line. It was not run. **Run the harness
+      first next time, before reading any output.**
+    - **Also open:** the candidate filter is only `Est Man Days Qy > 0`, so the run scored the whole
+      backlog rather than incoming work; and the session reported 3 synthetic keys, since resolved
+      by renaming the training fields.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
@@ -172,6 +223,16 @@ project — "decisions" here are direction, not commitments.
 - **Bundle level:** answered — bundles are at SWBS 3-digit (item 9). Remaining: does the
   per-SWBS multiplier hold across sizes, or do big jobs in a group run at a different ratio
   (→ split that group by size)?
+- **What interval should `Span_Days` actually measure? (new 2026-07-26, item 22 — the blocker.)**
+  The first live run learned a ~366-day intercept because the current definition spans a Job
+  Summary's whole phase history rather than its execution window. Options: restrict to execution
+  CU phases only (needs a phase-type or work-category filter, `CU_WORK_CAT_CD` / `WORK_TYPE_CD`
+  are both present); use the longest single-phase span rather than the summary envelope; or keep
+  the envelope and accept it measures something else. This is a **method** decision, not a code
+  fix, and nothing downstream is trustworthy until it is made.
+- **Training/scoring estimate basis (new 2026-07-26, item 22).** Fit on CU-phase `MANHOUR_QY`/8 and
+  score on JCN `Est Man Days Qy`, or join history to Class F so both sides share a basis? Effort
+  differs materially; the second is more correct.
 - ~~**"96 hours":** define it (elapsed clock hours vs. work-shifts).~~ **ANSWERED 2026-07-26
   (item 21): elapsed clock hours, four calendar days, local SRF definition.** What remains is a
   design choice rather than a definition: how much margin below four days the "96-hour capable"
