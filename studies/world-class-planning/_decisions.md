@@ -259,6 +259,41 @@ project — "decisions" here are direction, not commitments.
     - **Recommended order:** print the span range, fix the JCN field, prove the SWBS code spaces
       match, then de-duplicate the bridge, then the same-day and basis questions.
 
+24. **The planning-phase hypothesis, and a proper field inventory (2026-07-27).** The operator's
+    read: the JCN is tied across an ICN's phases, and not all phases are production — `S01` is
+    typically the planning phase. **Assessment: this very likely explains the ~366-day intercept
+    outright.** An envelope from earliest phase start to latest phase finish begins at *planning*,
+    so items 22 and 23 were measuring planning-through-delivery and calling it execution span. It
+    is also a better hypothesis than the "longest single phase" variant in `span-screen-v3.md`,
+    because it preserves a genuine multi-phase production window instead of collapsing it to one
+    phase. Target definition is therefore probably **the production envelope per ICN**. Not
+    hard-coding `S01` on "usually": `03_build/phase-anatomy-diagnostic.md` prints every key
+    operation's behavioural fingerprint (count, median man-hours, median span, and median day
+    offset from its ICN's first start) plus a phase-by-phase dump of sample ICNs, so the planning
+    codes identify themselves before anything is excluded.
+    - **`03_build/qvd-field-inventory.md` now exists** — all 50 QVDs and 1,180 fields with source
+      and definition, generated from `01_sources/qlik/QLIK Data Dictionary.xlsx`, plus a
+      cross-reference of the 59 `%` association keys showing which tables each one links. This is
+      the "what can actually join to what" reference the build has been missing.
+    - **Better links found in that inventory, all three replacing something we were doing worse.**
+      (a) **`AIM_JCN` carries `%CuPhase_Key` and `%JCN_Key` together**, so it maps phases to job
+      control numbers directly; the `ALL_TABLES/JCN_CU_PHASE.qvd` bridge is what inflated the
+      CU-phase table by 42% (item 23). It also carries `JCN Status` and `JCN Availability`, which
+      is the open/active candidate filter still outstanding since item 22.
+      (b) **`CU_swlin_sys_id` sits directly on `AIM_CuPhase`**, defined as the SWLIN system
+      identifier — the same concept as `SWLIN_SYS_ID` on `AIM_JB_JCN`. Deriving SWBS from one field
+      on both sides makes the code spaces match by construction, which retires the item 23 risk
+      more cleanly than reconciling `Mid(ICN,6,3)` against `Left(SWLIN_SYS_ID,3)`.
+      (c) **`%ICNKOP_KEY` exists on `COST_FE05` and `COST_Overhead_JON_Ref`** — an ICN-plus-key-op
+      key on the COST side. AIM carries `ICN` and `KO`, so this is a candidate bridge for the
+      AIM↔COST join the multiplier work needs (item 15). Not chased yet, but recorded.
+    - **Incidental, and worth its own look later:** `Cu Phase Group CD` is defined as "the code that
+      denotes opportunity window group." The third screening question is whether work can be broken
+      across windows of opportunity, and there may already be a field carrying that grouping.
+    - **Sequencing decision.** The diagnostic runs *before* any more fitting. Two runs have now
+      produced clean reloads and unusable models because the span definition was wrong; a third
+      guess is worse value than one run that shows what the phases actually are.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
