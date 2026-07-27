@@ -57,6 +57,27 @@ a property of the **work type** not the job; and an elapsed clock makes the test
 sensitive** (Friday start eats a weekend) which is unknown at induction, so require a **margin**
 below 4 days rather than the bare central fit. Still open: add the drydock override; then the
 AIM↔COST multiplier.
+
+**TWO LIVE RUNS FAILED (2026-07-26/27, items 22–24).** Both reloaded with 0 errors and produced
+unusable models: fitted intercept ~366 days, so 100% of candidates binned MUST-DO. **Root cause
+(operator's diagnosis, very likely right): the span starts at the PLANNING phase.** A job's CU
+phases are distinguished by `KO` (key operation); `S01` is typically planning, so
+`Max(ACC)−Min(ACS)` measures planning-start→production-finish, not the execution window. Target
+definition is probably the **production envelope per ICN** (NOT "longest single phase" — that
+collapses genuine multi-phase production). Confirm before fitting again.
+**Key Qlik gotchas (each cost a reload):** `$(=Peek(...))` does NOT evaluate inside `TRACE` — use
+`LET` first; `FirstSortedValue` returns NULL on ties; single-arg `Exists()` matches its own table;
+`LEFT JOIN` to the JCN bridge fans out 528k→752k rows and inflates `Sum(MANHOUR_QY)`.
+**Better links found:** `AIM_JCN` carries `%CuPhase_Key`+`%JCN_Key` (direct phase→JCN, replaces the
+fan-out bridge, and has `JCN Status` for the open/active filter); `CU_swlin_sys_id` on AIM_CuPhase
+matches `SWLIN_SYS_ID` on AIM_JB_JCN (consistent SWBS both sides); `%ICNKOP_KEY` on `COST_FE05` is
+the candidate AIM↔COST bridge for the multiplier. `Cu Phase Group CD` = "opportunity window group"
+— may already answer screening question 3.
+**Build artifacts in `03_build/`:** `qvd-field-inventory.md` (all 50 QVDs / 1,180 fields / 59 join
+keys, generated from the dictionary xlsx), `phase-anatomy-diagnostic.md` (RUN THIS FIRST — fits
+nothing, prints KO fingerprints + sample ICNs + span comparison), `span-screen-v3.md` (the screen,
+three span definitions at once), `qlik-troubleshooting-handoff.md` (self-contained context for a
+fresh session). Claude cannot execute Qlik — all scripts are unverified syntax.
 **Future state (`future-state.md`):** a Power App where users paste JCN/SWLIN/est-man-days → span +
 verdict; the Qlik fit exports a small per-SWBS coefficient table (the model) that the app consumes
 — decoupled, re-fit on a cadence. **New open question (2026-07-26, decision-log item 19):** the
