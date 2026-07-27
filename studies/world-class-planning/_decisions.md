@@ -214,6 +214,51 @@ project — "decisions" here are direction, not commitments.
       backlog rather than incoming work; and the session reported 3 synthetic keys, since resolved
       by renaming the training fields.
 
+23. **Second live run (2026-07-27): real repairs, but the verdict number still did not print.**
+    Files: `03_build/Latest Script`, `03_build/latest output`, `03_build/QLIK_Tables`. This run is a
+    clear step forward and it is still not a trustworthy fit.
+    - **Genuinely fixed.** The SWBS mapping now works: `Map_SWLIN` was abandoned in favour of
+      pulling the code straight off the CU phase as `Mid(ICN, 6, 3)`, and the diagnostic confirms
+      **`badSWBS=0`** of 752,375 rows. `JS_Clean` went from 0 to **17,829** single-JCN summaries,
+      **233** SWBS bins fit, 9 parent bins, and the run finished with **0 synthetic keys**. The
+      relaxed blank-SWBS filter from run 1 is no longer doing the work, so item 22's first defect
+      is genuinely closed rather than hidden. The test harness from `span-screen-tests.md` was also
+      embedded and run this time, which is how we know any of this.
+    - **The blocking unknown.** `[history] span days min/med/max =` printed **blank**, as did the
+      whole `[fit] bins= trusted= negIntercept= negSlope=` line. Cause is known and harmless: the
+      `$(=Peek(...))` form does not evaluate inside `TRACE` on this Qlik build, which is the exact
+      caveat already written at the bottom of `span-screen-tests.md`. Replace those two lines with
+      `LET` assignments like the ones above them. **Until the span range prints, we cannot say
+      whether the ~366-day intercept from item 22 is fixed**, and that single number decides
+      whether anything else here matters. Do this first; it is a five-minute change.
+    - **New defect, and it is significant.** In section 8 the candidate identifier is loaded as
+      `[JB_JCN SWLIN LI ID] AS JCN`. That is the SWLIN line-item code, **not** the job control
+      number; run 1 correctly used `%JCN_Key`. As written, the output cannot be traced back to
+      individual jobs and distinct JCNs sharing a SWLIN collapse together. Revert to `%JCN_Key`.
+    - **New risk: the two sides may not speak the same SWBS.** Training derives SWBS as
+      `Mid(ICN, 6, 3)` from `AIM_CuPhase`; scoring derives it as `Left(SWLIN_SYS_ID, 3)` from
+      `AIM_JB_JCN`. Different fields, different tables, different derivations. If the two code
+      spaces do not coincide, every candidate lookup misses, everything falls through to the global
+      fit, and the screen reproduces run 1's flat behaviour for an entirely different reason.
+      **Assessment:** the bin count is mild evidence of trouble already, since 233 three-character
+      values is roughly double the ~100 SWBS groups decision 9 expects, which suggests
+      `Mid(ICN,6,3)` is picking up more than the SWBS. Diagnostic: list the distinct values on both
+      sides and count how many candidates hit a per-SWBS fit rather than falling through.
+    - **Probable inflation of the training estimate.** `CuPhase_T` loads 528,183 rows but the
+      diagnostic counts **752,375** after the `LEFT JOIN` to the JCN bridge, so CU phases with
+      multiple bridge rows are duplicated. `Sum(Est_MH)` then over-counts man-hours, which biases
+      the slope down and lets the intercept dominate. Check `Count(CU_PHASE_SA_ID)` against
+      `Count(DISTINCT CU_PHASE_SA_ID)` and de-duplicate before the roll-up.
+    - **Carried over from item 22, still unfixed.** `Span_Days > 0` still deletes same-day jobs, and
+      the cost is now measurable: `JS_History` 23,646 to `JS_Clean` 17,829, so **5,817 summaries,
+      about a quarter of the training set, are being discarded** between those two steps. The
+      same-day jobs among them are the 96-hour population item 21 identified. The
+      training-versus-scoring estimate-basis mismatch is also unchanged. And `negSpan=72` CU phases
+      complete before they start, which should be filtered explicitly rather than left to
+      `Max`/`Min`.
+    - **Recommended order:** print the span range, fix the JCN field, prove the SWBS code spaces
+      match, then de-duplicate the bridge, then the same-day and basis questions.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all

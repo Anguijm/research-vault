@@ -19,12 +19,20 @@ its actual standalone span (Cycle Time = Actual Completion − Actual Start); fi
 Slope × EstManDays` per SWBS (3-digit); then score a new JCN's estimate against that fit and bin it
 deferrable / CMAV-capable / must-do.
 
-> **STOP — read this before reusing the script below (2026-07-26).** The operator ran this against
-> the live model. It reloads cleanly and produces output, and **the output is not usable**: all
-> 2,699 candidates landed in `MUST-DO`, because the fitted intercept is roughly **366 days**. The
-> cause is not syntax. `Span_Days` as written is not measuring a job's execution window. See
-> decision-log item 22 for the full diagnosis and the three things that must change before this is
-> re-run. The `[CONFIRM]` list below is updated with the real field names the run established.
+> **STOP — this file is now the lineage copy, not the live script.** Two live runs have happened.
+> The current working version is `Latest Script` in this folder; this file is kept because the
+> vault keeps draft lineage, and because the `[CONFIRM]` list below is still the best record of the
+> real field names.
+>
+> **Run 1 (2026-07-26):** reloaded cleanly, output unusable. All 2,699 candidates landed in
+> `MUST-DO` because the fitted intercept was about **366 days** — `Span_Days` was measuring the
+> availability-lifecycle envelope, not a job's execution window. Decision-log item 22.
+>
+> **Run 2 (2026-07-27):** SWBS mapping repaired by reading the code off the CU phase
+> (`Mid(ICN,6,3)`, `badSWBS=0`), 17,829 training summaries, 233 bins, no synthetic keys. But the
+> span-range diagnostic printed blank, so **it is still unknown whether the 366-day problem is
+> fixed**, and a new defect loads the SWLIN code as the JCN identifier. Decision-log item 23 has
+> the full list and the recommended order of attack.
 
 ## Verify before trusting (the [CONFIRM] list)
 Items 1–4 were **confirmed against the live model on 2026-07-26** by a schema-dump reload; the real
