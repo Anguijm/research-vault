@@ -294,6 +294,57 @@ project — "decisions" here are direction, not commitments.
       produced clean reloads and unusable models because the span definition was wrong; a third
       guess is worse value than one run that shows what the phases actually are.
 
+25. **THE SCREEN WORKS (2026-07-28). First usable output, and it exposes the next real problem.**
+    The operator fixed the `vPlanKO` quoting (`'''S01'''`, so the `Match()` expansion resolves),
+    repaired the load errors, and ran v3 to completion. Output is `03_build/New table.xlsx`, 3,708
+    candidates scored. **The ~366-day intercept is gone.** Predictions now vary by job, 3,600 of
+    3,708 candidates score off their own SWBS fit rather than falling through to a parent or global
+    fit, and the bins genuinely discriminate. Items 22 and 23 are closed.
+    - **Bin distributions.** Envelope: 1% within 96 hours, 14% CMAV-capable, 45% marginal, 40%
+      must-do. Longest-phase: 0% / 73% / 11% / 16%. Sum-of-phases: 1% / 8% / 3% / 88%.
+    - **Drop the sum-of-phase-days definition.** It puts 88% in must-do and its maximum prediction
+      is 5,222 days. It double-counts phases that overlap in time, which is most of them. Dead end;
+      keep it only as a control.
+    - **Longest-phase currently looks the most usable**, median prediction 32 days against the
+      envelope's 50. But neither is validated yet, and the production-envelope definition (item 24)
+      is still not implemented, so the real comparison has not happened.
+26. **The model is effectively a SWBS lookup table (2026-07-28) — this is now the central problem.**
+    The operator's observation, that each SWBS holds many jobs with widely varying spans, is correct
+    and measurable in the output.
+    - **The estimate barely moves the prediction.** Correlation between estimated man-days and
+      predicted span is **0.22** for longest-phase, 0.28 for envelope. The interquartile range of
+      the envelope prediction is 49 to 64 days, so for most jobs the model says "about fifty days"
+      regardless of size.
+    - **For 64 of 162 SWBS groups, predictions vary by less than one day across every job in the
+      group**, including groups whose estimates range from 1 to 100 man-days. In those groups the
+      model is a constant.
+    - **One bin dominates.** SWBS 123 holds 1,566 of 3,708 candidates, 42% of the whole backlog.
+      Any accuracy claim about the screen is mostly a claim about that one group.
+    - **Assessment: size is not the missing variable, and adding more size-like precision will not
+      help.** Span is being driven by something the model cannot see. The candidates worth testing
+      are material lead time, work center, casualty-report urgency, and availability type.
+    - **Method warning: do not nest bins.** With 162 SWBS groups over ~17,800 training rows, and a
+      minimum of 8 jobs before a group's own fit is trusted, splitting SWBS by a second dimension
+      multiplicatively starves the cells. The right shape is a **global adjustment factor per
+      dimension**: fit `actual ÷ SWBS-median` across all SWBS at once, then apply the factors on top
+      of the SWBS prediction. Each factor then has thousands of observations behind it instead of a
+      handful.
+    - **Callback to decision 16.** History deliberately pools **all** availability types (CNO, CMAV,
+      CM, EM, WOO). A job executed inside a year-long CNO availability and the same job executed in
+      a 6-week CMAV have structurally different spans, so that pooling is a strong candidate for a
+      large share of the within-SWBS variance now visible. Segmenting or adjusting by
+      `TYPE_AVAILABLE_CD` may be the single highest-value change available.
+27. **The JCN column is not a JCN (2026-07-28).** Operator-reported and confirmed: the current
+    script loads `%JCN_Key AS JCN`, and the output column contains values like `8-130758`. Run 1
+    produced values like `AP40L467` from the same field name, so the association is resolving
+    differently now. **`%JCN_Key` is a Qlik surrogate key, not the readable Job Control Number.**
+    The readable field is `[Job Control Number]` on `AIM_JCN.qvd`, which also carries `%JCN_Key`, so
+    the fix is a lookup from the candidate table into `AIM_JCN` rather than displaying the key.
+    Before committing to that, print candidates: dump five rows showing `%JCN_Key`,
+    `[JB_JCN Job Seq Num]`, `JCN_DESC_TX` and the joined `[Job Control Number]` side by side and
+    pick the one that looks like a job control number. Without a real JCN the output cannot be
+    handed to a planner, so this blocks use even though it does not affect the model.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
