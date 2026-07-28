@@ -28,3 +28,10 @@ Every memory file (feedback, project, reference, user) must exist in **two locat
 - **Bias on conflict:** if the two diverge, treat the vault version as authoritative (operator may have edited it directly in Obsidian).
 
 This rule is binding on all memory writes. It does not apply to other Claude Code state (transcripts, task outputs, hook logs, etc.) — only to the persistent memory system documented in CLAUDE.md.
+
+**Do not chase cosmetic mirror diffs (checked 2026-07-29).** A plain `cmp` between the two
+locations reports ~14 of 38 files as differing, and it is a false positive every time. The harness
+post-processes the auto-memory copy after the vault copy is taken: it adds `originSessionId`,
+quotes the `description` value, and sometimes rewraps body lines. Compare **bodies with
+frontmatter stripped**, not whole files. On 2026-07-29 all 38 files carried identical knowledge by
+that test. Only re-mirror when the body text genuinely differs.
