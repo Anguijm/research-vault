@@ -36,3 +36,4 @@
 - [World-class planning](project_world_class_planning.md) — thinking project; SAIV early work-screening in AIM; bundled-JCN attribution solved by attributing labor not span (regression disaggregation)
 - [Private non-OSI area](project_private_non_osi_area.md) — gitignored `_private/` reasons-from-but-never-cites; the crossing rule and the named-entity gap the audits can't catch
 - [Check other tracks before declaring a source gap](feedback_check_other_tracks_for_sources.md) — trip reports and the brain vault routinely already hold the source an opportunity needs
+- [Wiki layer trial](project_wiki_layer_trial.md) — _meta/wiki/ compiled entity pages on trial, review due 2026-08-12; content_sha256 infrastructure keeps regardless
