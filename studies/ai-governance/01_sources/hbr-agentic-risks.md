@@ -12,6 +12,8 @@ captured: 2026-06-19
 source_tier: 1
 classification: internal
 verified: 2026-06-19 (full text read from operator-provided PDF)
+content_sha256: e72843e3231b9dc359bdf2a9f9f7f82e46dd6f9d1b751756cc2a7215304dccf6
+backfilled_hash: true
 ---
 
 # Organizations Aren't Ready for the Risks of Agentic AI (HBR, Blackman, 2025)

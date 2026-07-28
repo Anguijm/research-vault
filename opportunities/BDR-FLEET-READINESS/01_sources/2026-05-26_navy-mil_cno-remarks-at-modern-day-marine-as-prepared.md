@@ -11,6 +11,8 @@ source_tier: 1
 content_type: speech
 key_quotes_extracted: false
 verified: 2026-05-26
+content_sha256: 0b890f1687871873fc7d6577e53432e57223f7108919e915776711dfd002d618
+backfilled_hash: true
 ---
 
 ## Summary

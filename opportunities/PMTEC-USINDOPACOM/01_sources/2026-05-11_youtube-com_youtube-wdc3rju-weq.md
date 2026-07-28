@@ -11,6 +11,8 @@ source_tier: 4
 content_type: youtube
 key_quotes_extracted: false
 verified: 2026-05-11
+content_sha256: 4292a9b227247536ff4d40c1cc2f488c0957a26bf0d0116f5ff936b4f5ae4598
+backfilled_hash: true
 ---
 
 ## Summary

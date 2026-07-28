@@ -28,6 +28,8 @@ funding_subtier: Department of the Navy
 parent_award_piid: ""
 key_quotes_extracted: false
 verified: 2026-06-07
+content_sha256: 658979fe8f5c347ae1889fed80ebd24a5612911705b2a3493bcf613aba8942c2
+backfilled_hash: true
 ---
 
 ## Summary

@@ -28,6 +28,8 @@ funding_subtier: Missile Defense Agency
 parent_award_piid: ""
 key_quotes_extracted: false
 verified: 2026-05-26
+content_sha256: a0279e43aca33095dcb77b0e37bfbb494cafcb3e261bd877ec1aa4d100bd9d97
+backfilled_hash: true
 ---
 
 ## Summary

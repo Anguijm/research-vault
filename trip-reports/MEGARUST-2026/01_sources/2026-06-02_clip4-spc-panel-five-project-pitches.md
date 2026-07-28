@@ -13,6 +13,8 @@ classification: OSI — open conference proceedings
 transcription_method: faster-whisper medium.en, local CPU
 transcribed: 2026-06-03
 citation_slug: mr26-clip4-spc-panel-five-pitches-2026-06-02
+content_sha256: d066365486c7a20384a6265b538ce8c21f9714d41472f01236a415de1f29bb38
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — NSRP SPC Panel: Five back-half project pitches

@@ -15,6 +15,8 @@ transcribed: 2026-06-04 (in progress, started 03:53 local)
 citation_slug: mr26-clip8-diiulio-material-degradation-2026-06-03
 slide_folder: ../slides/2026-06-03_diiulio-material-degradation/
 slide_count: 12 (operator-captured)
+content_sha256: d00339e0b3157fd4dbf38eb183bf548a64e82cf94308b4dc564158f8423942cb
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — CAPT Richard Duldulao Day-2 keynote (Material Degradation)

@@ -11,6 +11,8 @@ source_tier: 2
 content_type: trade press
 key_quotes_extracted: true
 verified: 2026-07-28
+content_sha256: f60869aabb8c918073528d001127f727991d781eb039701394cfe0e7b43f3d60
+backfilled_hash: true
 ---
 
 ## Summary

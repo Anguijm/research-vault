@@ -13,6 +13,8 @@ source_tier: 1
 content_type: research report (product page)
 key_quotes_extracted: true
 verified: 2026-07-28
+content_sha256: 6137a3ab434126bdbf00926f02078ec01e52327f6e857bc4239e8248aa6fc873
+backfilled_hash: true
 ---
 
 ## Summary

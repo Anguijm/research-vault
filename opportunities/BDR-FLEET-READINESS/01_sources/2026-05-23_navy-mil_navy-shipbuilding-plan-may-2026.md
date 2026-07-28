@@ -13,6 +13,8 @@ content_type: report
 key_quotes_extracted: false
 verified: 2026-05-23
 binary_artifact: 2026-05-23_navy-mil_navy-shipbuilding-plan-may-2026.pdf
+content_sha256: 962e56c8c0a6c8943699c1424e2f829582c1b0f0a2b9fc2303e424ab978a76da
+backfilled_hash: true
 ---
 
 ## Summary

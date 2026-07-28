@@ -5,6 +5,8 @@ stream: Agentic-AI-specific governance
 captured: 2026-06-19
 method: web-research subagent (WebSearch + WebFetch), raw output preserved
 classification: internal
+content_sha256: f8685f3c024529b499247fc0075dff7ac0a8362d5e55d85d8ebe097fb69c7bda
+backfilled_hash: true
 ---
 
 # Stream 3 — Agentic-AI-specific governance (raw research pack)

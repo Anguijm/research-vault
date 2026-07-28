@@ -11,6 +11,8 @@ source_tier: 1
 content_type: pdf
 key_quotes_extracted: false
 verified: 2026-05-24
+content_sha256: b4557d89797a4dc422379877c21e70133448d2c9fdb47d154091dc7ce039480d
+backfilled_hash: true
 ---
 
 ## Summary

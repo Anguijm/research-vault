@@ -28,6 +28,8 @@ funding_subtier: Department of the Navy
 parent_award_piid: N4034524G0007
 key_quotes_extracted: false
 verified: 2026-06-07
+content_sha256: 4a5c952ad8643574abf152d2be7a6e6c77a20c87dae86d7a374d35928ec2a421
+backfilled_hash: true
 ---
 
 ## Summary

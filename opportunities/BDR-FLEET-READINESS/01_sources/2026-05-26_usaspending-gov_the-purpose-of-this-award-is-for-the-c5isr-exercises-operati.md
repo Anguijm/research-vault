@@ -28,6 +28,8 @@ funding_subtier: Immediate Office of the Secretary of Defense
 parent_award_piid: GS00Q14OADU127
 key_quotes_extracted: false
 verified: 2026-05-26
+content_sha256: 1868fc2e566b721cf90598dc4ee653355c487c292705c6656df5d0ceec9fd888
+backfilled_hash: true
 ---
 
 ## Summary

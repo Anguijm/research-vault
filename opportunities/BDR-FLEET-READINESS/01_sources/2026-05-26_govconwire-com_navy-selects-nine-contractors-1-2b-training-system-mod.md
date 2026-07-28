@@ -20,6 +20,8 @@ scope_note: |
   training-systems vehicle; do not treat it as evidence that the right-to-win
   is in this acquisition chain. See 00_research-file.md §1 and the
   2026-05-26 decision log entry for the controlling scope frame.
+content_sha256: 4311fd0b505fdd8cefe43493e098d51069ff713f54ce4cb6ce58a3af557323ea
+backfilled_hash: true
 ---
 
 ## Summary

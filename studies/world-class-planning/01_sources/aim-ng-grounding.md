@@ -5,6 +5,8 @@ title: What the AIM-NG manuals and 4700.1F actually say (distilled for the scree
 classification: internal
 created: 2026-06-23
 sources: 01A–11A AIM-NG + NAVSHIPREPFACINST 4700.1F + C200 Process Guide (all Distribution A)
+content_sha256: df63b068d439f11168fa912092c79e2281f43f52e8f884ff8ab2290521763edd
+backfilled_hash: true
 ---
 
 # AIM-NG grounding — the facts that bear on the screen

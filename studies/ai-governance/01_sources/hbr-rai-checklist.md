@@ -12,6 +12,8 @@ captured: 2026-06-19
 source_tier: 1
 classification: internal
 verified: 2026-06-19 (full text read from operator-provided PDF)
+content_sha256: fdf595c7171df257133f1d99f5a553265d38e2d3dc758aea6005dedeaa92a4d2
+backfilled_hash: true
 ---
 
 # Designing a Responsible AI Program? Start with this Checklist (HBR, Blackman & Vasiliu-Feltes, 2024)

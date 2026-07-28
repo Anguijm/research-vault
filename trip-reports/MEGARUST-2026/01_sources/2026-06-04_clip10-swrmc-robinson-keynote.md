@@ -18,6 +18,8 @@ sources_referenced:
   - 01_sources/2026-06-02_clip6-additive-manufacturing-composites-session.md (Foley)
   - 01_sources/2026-06-03_clip7-whats-new-in-coatings.md (Lattner, Ingle)
   - 01_sources/2026-06-03_clip8-diiulio-material-degradation.md (Tenopir)
+content_sha256: 744333713ef7ff6e60b55db47d99c9716698cbed3eefebb8794d42f4feb681b0
+backfilled_hash: true
 ---
 
 # Day-3 Keynote — John Robinson (SWRMC) on standing up SIMA San Diego

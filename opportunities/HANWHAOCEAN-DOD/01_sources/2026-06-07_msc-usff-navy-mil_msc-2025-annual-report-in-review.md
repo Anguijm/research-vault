@@ -11,6 +11,8 @@ captured_by: playwright
 content_type: pdf
 key_quotes_extracted: true
 verified: 2026-06-07
+content_sha256: 5733bcabe5e55ca72f87e10032ab2523eb8f0ad425c1787087a3b54433076d05
+backfilled_hash: true
 ---
 
 ## Summary

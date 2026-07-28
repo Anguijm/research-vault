@@ -13,6 +13,8 @@ classification: OSI — open conference proceedings
 transcription_method: faster-whisper medium.en, local CPU
 transcribed: 2026-06-04
 citation_slug: mr26-clip9-robotics-drones-application-tech-2026-06-03
+content_sha256: 27b8fd468fa859c9412a008b125a10b027cad7a2ee546f3c6b26c0e574255b1f
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — Day-2 afternoon Technical Track #4 (Robotics, Drones, Application Tech)

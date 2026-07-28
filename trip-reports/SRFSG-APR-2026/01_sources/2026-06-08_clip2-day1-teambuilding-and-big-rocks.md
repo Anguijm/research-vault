@@ -16,6 +16,8 @@ transcript: 2026-06-08_srfsg_clip2.transcript.md
 transcribed: 2026-06-08
 transcription_method: faster-whisper medium.en (GPU)
 sensitivity: unclassified — CACI↔SRF shareable (operator-cleared 2026-06-08); not for public release
+content_sha256: 8b07db8028ca4ecf870fdaabb486f9e96076e82c7e3218efe4e268a7202889cd
+backfilled_hash: true
 ---
 
 # Clip 2 — Day-1 MORNING (team-building + program/operational briefs)

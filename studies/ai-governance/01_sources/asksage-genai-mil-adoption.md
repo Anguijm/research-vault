@@ -6,6 +6,8 @@ captured: 2026-06-19
 method: web-research subagents (WebSearch + WebFetch), raw findings preserved + labeled
 classification: internal
 relevance: directly informs §2 of the instruction (the dual-platform / authority-basis rationale)
+content_sha256: df80efba7f8e265a1420e97737c0bde7a2669c47fcaebaaa2d3d48bf3b234739
+backfilled_hash: true
 ---
 
 # askSage vs GenAI.mil — authority basis, ownership, adopters

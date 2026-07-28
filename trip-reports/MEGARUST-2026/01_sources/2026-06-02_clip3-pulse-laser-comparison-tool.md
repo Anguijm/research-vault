@@ -13,6 +13,8 @@ classification: OSI — open conference proceedings
 transcription_method: faster-whisper medium.en, local CPU
 transcribed: 2026-06-03
 citation_slug: mr26-clip3-pulse-laser-comparison-2026-06-02
+content_sha256: 3e6aa1bc8f80adbc6949a23407f122ec41fa64d1eba866e6ce520a8800e50334
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — NSRP SPC Panel: Pulse Laser Comparison Tool (Near-Complete Project)

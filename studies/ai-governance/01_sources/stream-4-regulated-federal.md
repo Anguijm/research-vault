@@ -5,6 +5,8 @@ stream: Regulated-industry + federal-government + standards
 captured: 2026-06-19
 method: web-research subagent (WebSearch + WebFetch), raw output preserved
 classification: internal
+content_sha256: 88daba48a8305ca5946da0ac7c296d0f70eb295cf221930c08bed624137ff5cd
+backfilled_hash: true
 ---
 
 # Stream 4 — Regulated-industry + federal-government AI governance (raw research pack)

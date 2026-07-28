@@ -11,6 +11,8 @@ source_tier: 1
 content_type: press_release
 key_quotes_extracted: false
 verified: 2026-05-24
+content_sha256: a68cfa1ca0829ba52445d40474c81d9d38c40f90cdafd38acfcc4fe958011827
+backfilled_hash: true
 ---
 
 ## Summary

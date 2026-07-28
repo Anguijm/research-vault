@@ -165,6 +165,7 @@ def main() -> None:
         captured=captured_date,
         source_tier=tier,
         content_type=result.get("content_type", "article"),
+        content=content,
     )
 
     body = (

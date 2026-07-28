@@ -11,6 +11,8 @@ source_tier: 1
 content_type: article
 key_quotes_extracted: false
 verified: 2026-05-26
+content_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+backfilled_hash: true
 ---
 
 ## Summary

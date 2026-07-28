@@ -11,6 +11,8 @@ source_tier: 1   # government primary — the solicitation documents themselves
 content_type: docx
 key_quotes_extracted: false
 verified: 2026-06-11
+content_sha256: 1449735d64c2f27e24c837b4e13e04ad6376035671a4a012a66c40a67c78248f
+backfilled_hash: true
 ---
 
 ## Summary

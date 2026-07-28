@@ -13,6 +13,8 @@ classification: OSI — open conference proceedings
 transcription_method: faster-whisper medium.en, local CPU
 transcribed: 2026-06-03
 citation_slug: mr26-clip5-dod-corrosion-panel-2026-06-02
+content_sha256: adf35b12383462b9486d59db306d18cb2e0eea21bbd57565ccbac408ec275115
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — DOD Corrosion Programs Panel (afternoon plenary)

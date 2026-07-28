@@ -21,6 +21,8 @@ audio_clip: 9fa50ed7-Voice_260602_102216.m4a
 verbatim_transcript_path: ../audio/9fa50ed7-Voice_260602_102216.transcript.md
 transcribed: 2026-06-03
 transcription_method: faster-whisper, medium.en model, local CPU
+content_sha256: 3615787c636ab5dcc18f0eb01d534979d3048554c48e850d4a6d2311ba6c66ab
+backfilled_hash: true
 ---
 
 # NSRP SPC Panel — 1K Polysiloxane Oxal-Free Coatings Viability Study Presentation (clip 2)

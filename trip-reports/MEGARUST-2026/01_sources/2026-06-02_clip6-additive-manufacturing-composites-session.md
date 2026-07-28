@@ -13,6 +13,8 @@ classification: OSI — open conference proceedings
 transcription_method: faster-whisper medium.en, local CPU
 transcribed: 2026-06-03
 citation_slug: mr26-clip6-am-composites-session-2026-06-02
+content_sha256: d5d83ac344c3e7c1c6f5260b47711f25f55d84e33c271a6b3c59442d95c4da04
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — Session 1: Additive Manufacturing and Composites

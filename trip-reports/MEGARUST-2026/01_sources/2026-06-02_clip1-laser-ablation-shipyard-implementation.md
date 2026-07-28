@@ -22,6 +22,8 @@ audio_clip: 80b4803b-Voice_260602_101029.m4a
 verbatim_transcript_path: ../audio/80b4803b-Voice_260602_101029.transcript.md
 transcribed: 2026-06-03
 transcription_method: faster-whisper, medium.en model, local CPU
+content_sha256: fb6df2ad5b0714fad8b2ccb9e617c33c73ca8c9cc4b740da9bf0753aed754aae
+backfilled_hash: true
 ---
 
 # NSRP SPC Panel — Laser Ablation Shipyard Implementation Presentation (clip 1)

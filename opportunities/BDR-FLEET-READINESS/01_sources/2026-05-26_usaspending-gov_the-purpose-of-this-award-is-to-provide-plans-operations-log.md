@@ -28,6 +28,8 @@ funding_subtier: Department of the Army
 parent_award_piid: GS00Q14OADU121
 key_quotes_extracted: false
 verified: 2026-05-26
+content_sha256: 9289e231186a91c02306d2076ffdf3f56b59869d0f872788cff58945a6680b04
+backfilled_hash: true
 ---
 
 ## Summary

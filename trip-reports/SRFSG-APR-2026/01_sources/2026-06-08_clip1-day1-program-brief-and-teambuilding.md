@@ -15,6 +15,8 @@ transcript: 2026-06-08_srfsg_clip1.transcript.md
 transcribed: 2026-06-08
 transcription_method: faster-whisper medium.en (GPU)
 sensitivity: internal
+content_sha256: 223429e3e821093d23dd8c3ac2f5f73981638844a8b296cc75f9e1d47308ff8f
+backfilled_hash: true
 ---
 
 # Clip 1 — Day-1 program brief + team-building

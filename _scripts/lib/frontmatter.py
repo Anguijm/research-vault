@@ -1,5 +1,30 @@
 """YAML frontmatter builder for source files."""
 
+import hashlib
+import json
+
+
+def content_sha256(text: str) -> str:
+    """Stable hash of a source's captured content.
+
+    Used to detect that a source changed underneath a derived page. Whitespace
+    is normalised first so that a re-fetch producing cosmetically different
+    wrapping does not read as a substantive change.
+    """
+    normalised = "\n".join(line.rstrip() for line in (text or "").splitlines())
+    normalised = "\n".join(ln for ln in normalised.split("\n") if ln != "")
+    return hashlib.sha256(normalised.encode("utf-8")).hexdigest()
+
+
+def record_sha256(record: dict) -> str:
+    """Stable hash of a structured API record (SAM.gov notice, USAspending award).
+
+    Key order is normalised so an upstream reordering is not a false positive.
+    """
+    return hashlib.sha256(
+        json.dumps(record or {}, sort_keys=True, default=str).encode("utf-8")
+    ).hexdigest()
+
 
 def _yaml_str(value) -> str:
     """Quote strings that contain YAML-special characters."""
@@ -22,8 +47,14 @@ def build_frontmatter(
     captured: str,
     source_tier: int,
     content_type: str,
+    content: str = "",
 ) -> str:
-    """Return a YAML frontmatter string for a source file."""
+    """Return a YAML frontmatter string for a source file.
+
+    `content` is hashed into `content_sha256` so a later re-fetch can tell
+    whether the source actually changed. Pages compiled from this source
+    record the hash they were built against.
+    """
 
     lines = [
         "---",
@@ -39,6 +70,7 @@ def build_frontmatter(
         f"content_type: {content_type}",
         f"key_quotes_extracted: false",
         f"verified: {captured}",
+        f"content_sha256: {content_sha256(content)}",
         "---",
     ]
     return "\n".join(lines) + "\n"
@@ -103,6 +135,7 @@ def build_sam_frontmatter(opportunity: str, captured: str, candidate: dict) -> s
     lines += [
         "key_quotes_extracted: false",
         f"verified: {captured}",
+        f"content_sha256: {record_sha256(candidate)}",
         "---",
     ]
     return "\n".join(lines) + "\n"
@@ -158,6 +191,7 @@ def build_usaspending_frontmatter(opportunity: str, captured: str,
         f"parent_award_piid: {_yaml_str(parent.get('piid', ''))}",
         "key_quotes_extracted: false",
         f"verified: {captured}",
+        f"content_sha256: {record_sha256(detail or candidate)}",
         "---",
     ]
     return "\n".join(lines) + "\n"

@@ -5,6 +5,8 @@ stream: DoD / U.S. military AI governance
 captured: 2026-06-19
 method: web-research subagent (WebSearch + WebFetch), raw output preserved
 classification: internal
+content_sha256: 52c50aabfe1fd4a11f2c15aaca9291e614493fa74299a5e858d05e234e9155a0
+backfilled_hash: true
 ---
 
 # Stream 1 — DoD / U.S. military AI governance (raw research pack)

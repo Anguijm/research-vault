@@ -15,6 +15,8 @@ transcribed: 2026-06-04 (in progress)
 citation_slug: mr26-clip7-whats-new-in-coatings-2026-06-03
 slide_folder: ../slides/2026-06-03_whats-new-in-coatings/
 slide_count: 13 (operator-captured)
+content_sha256: ceba8a644d0f5ca3ae9931c9519b34ce258a87b870a13c85c82a5ce906439a78
+backfilled_hash: true
 ---
 
 # MegaRust 2026 — NAVSEA SEA 05P2 "What's New in Coatings?" (Day 2 morning)

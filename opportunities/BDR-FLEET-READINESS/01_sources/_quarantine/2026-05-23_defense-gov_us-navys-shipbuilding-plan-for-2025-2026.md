@@ -11,6 +11,8 @@ source_tier: 1
 content_type: transcript
 key_quotes_extracted: false
 verified: 2026-05-23
+content_sha256: 847842098bd158bd3860d9fbe016320b05ce1d6f9627a1fbc560190b71e05b4c
+backfilled_hash: true
 ---
 
 ## Summary

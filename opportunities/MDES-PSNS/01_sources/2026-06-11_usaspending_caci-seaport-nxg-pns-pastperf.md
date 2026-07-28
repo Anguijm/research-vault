@@ -11,6 +11,8 @@ source_tier: 1                  # federal award data — primary
 content_type: other             # structured award records
 key_quotes_extracted: false
 verified: 2026-06-11
+content_sha256: 4af378067d8fad004ffc7b7ed31008cee839db71020e8ed4c60b3888a809913b
+backfilled_hash: true
 ---
 
 ## Summary
