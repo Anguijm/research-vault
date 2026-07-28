@@ -955,10 +955,16 @@ def _update_ledger(ledger: dict, new_seeds: list[dict]) -> None:
     for item in new_seeds:
         fp = item["fingerprint"]
         if fp not in ledger["seeds"]:
+            # Record what actually happened to the candidate. This is called with
+            # every scored item, not just the surfaced ones, so hard-coding
+            # "in-inbox" here marked below-threshold candidates as if they were
+            # sitting in the triage queue. That drift reached ~1,100 entries
+            # before it was caught on 2026-07-29.
+            surfaced_now = item.get("status") in ("promote-eligible", "monitor-eligible")
             ledger["seeds"][fp] = {
                 "first_seen_utc": now,
                 "last_seen_utc": now,
-                "status": "in-inbox",
+                "status": "in-inbox" if surfaced_now else "below-threshold",
                 "url": item["candidate"].get("url", ""),
                 "title": item["candidate"].get("title", "")[:120],
                 "final_score": item["score"]["final_score"],
