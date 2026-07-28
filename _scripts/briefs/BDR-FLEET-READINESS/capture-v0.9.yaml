@@ -1,0 +1,64 @@
+# Capture brief v0.9 — corrects the "running the mission" over-claim (operator, 2026-07-28).
+# The sources support SWRMC building and pre-staging the capability and operating it into a
+# theater where SRF-JRMC is the Area Maintenance Commander. They do not establish an owner.
+# Asserting one also contradicted RAND, whose leading finding is that C2 here is ambiguous.
+
+source: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.8-draft.docx
+output: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.9-draft.docx
+
+text_replacements:
+- find: 'CAPTURE BRIEF v0.8 DRAFT
+
+
+    BDR-FLEET-READINESS
+
+
+    Five-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support
+
+
+    Draft date: 2026-07-28  |  For CACI executive review (open-source only).
+
+
+    Changes in v0.8: adds the RAND tabletop-exercise report on battle damage repair for Arleigh Burke destroyers (RR-A470-9, 27 May 2026) as new section 2.6. Its leading finding is ambiguous command and control, and two of its five Navy recommendations are training and exercise recommendations, which corroborates the coordination-seam argument from an independent direction. The bottom line and the caveat in section 8.5 are updated, and the study sponsor is added as a payer lead in section 7.
+
+    '
+  replace: 'CAPTURE BRIEF v0.9 DRAFT
+
+
+    BDR-FLEET-READINESS
+
+
+    Five-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support
+
+
+    Draft date: 2026-07-28  |  For CACI executive review (open-source only).
+
+
+    Changes in v0.9: corrects an over-claim. Earlier versions said SWRMC and SRF-JRMC were running the container mission. Public sources do not support that. They support SWRMC having built and pre-staged the capability and operating it into a theater where SRF-JRMC holds the Area Maintenance Commander role. Who owns the mission is not established, which is consistent with the RAND finding rather than in tension with it. Section 2.7 states what is not known. v0.8 added the RAND tabletop-exercise report on battle damage repair for Arleigh Burke destroyers (RR-A470-9, 27 May 2026) as new section 2.6. Its leading finding is ambiguous command and control, and two of its five Navy recommendations are training and exercise recommendations, which corroborates the coordination-seam argument from an independent direction. The bottom line and the caveat in section 8.5 are updated, and the study sponsor is added as a payer lead in section 7.
+
+    '
+- find: The strongest evidence in this brief came from the customer. On 4 June 2026 John Robinson, Executive Director of Southwest Regional Maintenance Center, gave the closing keynote at the MegaRust 2026 conference and described a Pacific battle damage repair program his command is running.
+  replace: The strongest evidence in this brief came from the customer. On 4 June 2026 John Robinson, Executive Director of Southwest Regional Maintenance Center, gave the closing keynote at the MegaRust 2026 conference and described a Pacific battle damage repair capability his command has built.
+- find: 'Assessment. Three things follow. The demand for wartime repair capability in the Pacific is no longer an inference drawn from budget testimony and journal articles, because a command has built a physical program and said so on the record. The customer set this brief already proposed turns out to be the customer set actually running the mission, which removes a step from the engagement plan. And the opening the product addresses is now visible: the division of work between SWRMC and SRF-JRMC on the container mission, and on the related battle damage exercises, was not described in the keynote and does not appear in any public source. Two commands are coordinating a wartime repair mission whose boundaries are undefined. Rehearsing those decisions before a shooting war is the product this brief proposes.'
+  replace: 'Assessment. Three things follow, and one thing deliberately does not. The demand for wartime repair capability in the Pacific is no longer an inference drawn from budget testimony and journal articles, because a command has built a physical capability and said so on the record. The customer set this brief already proposed contains the most visible executor, which shortens the engagement plan. And the opening the product addresses is visible: the division of work between SWRMC and SRF-JRMC on the container capability, and on the related battle damage exercises, was not described in the keynote and does not appear in any public source. What does not follow is that these two commands own the mission. See section 2.7.'
+- find: 'Consider positioning CACI as a candidate prime for the five-level progression. Initial entry through Level 1 or Level 2 pilot. Operational sponsor: SRF-JRMC. Contracting authority: PACFLT N7 or N4, or FLTFORCOM N7 or N4. Contracting vehicle: CACI NSS, LLC''s existing OASIS, CIO-SP3, or MAS holding, with no new Navy-specific vehicle required. Precondition: CACI legal and contracts must complete the Federal Acquisition Regulation (FAR) Subpart 9.5 Organizational Conflict of Interest (OCI) review described in section 8.4 before any engagement step under the Phase 1 engagement in section 7.2 begins. The OCI review is a hard gate, not a parallel workstream.'
+  replace: 'Consider positioning CACI as a candidate prime for the five-level progression. Initial entry through Level 1 or Level 2 pilot. Operational sponsor: to be established in Phase 1 rather than assumed. SWRMC is the most visible executor and SRF-JRMC holds the Area Maintenance Commander role, so both are entry points, but neither is confirmed as the mission owner and the first job of discovery is to find out who is. Contracting authority: PACFLT N7 or N4, or FLTFORCOM N7 or N4. Contracting vehicle: CACI NSS, LLC’s existing OASIS, CIO-SP3, or MAS holding, with no new Navy-specific vehicle required. Precondition: CACI legal and contracts must complete the Federal Acquisition Regulation (FAR) Subpart 9.5 Organizational Conflict of Interest (OCI) review described in section 8.4 before any engagement step under the Phase 1 engagement in section 7.2 begins. The OCI review is a hard gate, not a parallel workstream.'
+- find: The evidence improved again in this version and it still is not a buying signal. Public sources now establish the mission, the two commands running it, the fact that it is unfunded, and an independent federally sponsored assessment that names ambiguous command and control as the leading problem and recommends both expanded organic repair capability and personnel familiar with deploying it rapidly. Public sources still do not show a Navy procurement line for decision-rehearsal training, and no solicitation exists. What has changed is that the case no longer rests on this desk’s inference. It rests on a published recommendation the Navy has only half executed. It does not rest on the Navy asking for this product, because the Navy has not asked.
+  replace: The evidence improved again in this version and it still is not a buying signal. Public sources now establish the mission, the most visible executor of one part of it, the fact that it is unfunded, and an independent federally sponsored assessment that names ambiguous command and control as the leading problem and recommends both expanded organic repair capability and personnel familiar with deploying it rapidly. Public sources still do not show a Navy procurement line for decision-rehearsal training, and no solicitation exists. What has changed is that the case no longer rests on this desk’s inference. It rests on a published recommendation the Navy has only half executed. It does not rest on the Navy asking for this product, because the Navy has not asked.
+- find: 'End of capture brief v0.8 draft. Build date: 2026-07-28. The demand case rests on two sources: the RAND tabletop-exercise report of 27 May 2026, carried in section 2.6, and the SWRMC expeditionary maintenance container program described publicly on 4 June 2026, carried in section 2.5. Section 7 leads with identifying a payer, because the mission is unfunded. Section 8.6 carries that risk.'
+  replace: 'End of capture brief v0.9 draft. Build date: 2026-07-28. The demand case rests on two sources: the RAND tabletop-exercise report of 27 May 2026, carried in section 2.6, and the SWRMC expeditionary maintenance container program described publicly on 4 June 2026, carried in section 2.5. Section 7 leads with identifying a payer, because the mission is unfunded. Section 8.6 carries that risk.'
+insert_sections:
+- before_paragraph_starting_with: 3. Customer landscape
+  paragraphs:
+  - style: heading-2
+    text: '2.7 What the sources do not establish: who owns this mission'
+  - style: body
+    text: Earlier versions of this brief said SWRMC and SRF-JRMC were running the container mission. That went further than the evidence, and the correction matters because the over-claim quietly contradicted the argument the brief is built on.
+  - style: body
+    text: What the sources support. SWRMC built and pre-staged the containers. SWRMC sends project teams out for contract oversight. SWRMC works through SRF-JRMC, which Robinson identified as the Area Maintenance Commander in the Western Pacific. Pat McDermott drives the program and Robinson did not describe his organizational position. The mission is unfunded.
+  - style: body
+    text: 'What they do not support. That either command owns the mission. A command that builds a capability and deploys teams into another command’s area is a visible executor, not necessarily the owner. Several other organizations plausibly hold a piece and are absent from the public record on this: Commander, Navy Regional Maintenance Center as the parent of the RMCs, NAVSEA 04 at the systems-command level, the fleet commander who would own the readiness requirement, MARMC on the Atlantic side, and whoever owns the Expeditionary Mobile Repair Facility concept that RAND recommends. SWRMC is simply the piece that gave a public keynote.'
+  - style: body
+    text: Assessment, and this strengthens the case rather than weakening it. RAND’s leading finding is that command-and-control structures for battle damage repair are ambiguous. A brief that then names the owner would be contradicting its own central source. The honest reading is that the public record shows a capability being built, a theater command coordinating it, an unfunded mission, and no discernible owner. That is what ambiguous command and control looks like from the outside.
+  - style: body
+    text: Consequence for engagement. Phase 1 cannot open by pitching the mission owner, because nobody outside can identify one. It opens by establishing who owns the decisions, which is a question the customer will recognize as real and which the product exists to rehearse. If discovery finds a clear owner, the brief was too cautious and the engagement gets simpler. If it finds the seam RAND describes, that is the sale.

@@ -813,3 +813,40 @@ file.
 `capture-v0.8.yaml` and `exec-v0.9.yaml`. The drafting-tell scan returns clean on both.
 
 **Still not decided.** Gate remains `identify`; recommendation remains `tbd`.
+
+---
+
+### 2026-07-28 — Ownership over-claim corrected; capture v0.9 / exec v0.10
+
+The operator challenged a claim the briefs had been carrying since v0.8: that SWRMC is "running"
+the container mission. He was right, and the correction matters more than a wording fix.
+
+**What the sources actually support.** SWRMC built and pre-staged roughly 50 expeditionary
+maintenance containers. SWRMC sends project teams out for contract oversight. SWRMC works through
+SRF-JRMC, which Robinson identified as the Area Maintenance Commander in the Western Pacific. Pat
+McDermott drives the program, and Robinson did not describe his organizational position. The
+mission is unfunded.
+
+**What they do not support.** That either command owns the mission. A command that builds a
+capability and sends teams into another command's area is a visible executor, not necessarily the
+owner. Other organizations plausibly hold a piece and are simply absent from the public record here:
+CNRMC as parent of the RMCs, NAVSEA 04 at systems-command level, the fleet commander who owns the
+readiness requirement, MARMC on the Atlantic side, and whoever owns the Expeditionary Mobile Repair
+Facility concept RAND recommends. SWRMC is the piece that happened to give a public keynote.
+
+**Why the over-claim was worse than imprecise.** It contradicted the brief's own central source. The
+argument leans on RAND's leading finding that command-and-control structures for battle damage
+repair are ambiguous. A brief that then names the owner is arguing against itself. Removing the
+claim makes the case more coherent, not weaker: the public record shows a capability being built, a
+theater command coordinating it, an unfunded mission and no discernible owner, which is what
+ambiguous command and control looks like from outside.
+
+**Consequence for engagement, and it is a real change.** Phase 1 no longer opens by pitching the
+mission owner, because nobody outside can identify one. It opens by establishing who owns the
+decisions. That is a question the customer will recognize as real, and it is the question the
+product exists to rehearse. If discovery finds a clear owner, the brief was too cautious and the
+engagement simplifies. If it finds the seam RAND describes, that is the sale.
+
+**Artifacts.** New capture section 2.7 states what is not established and what follows from it.
+Five ownership assertions were removed across the two documents. Built from `capture-v0.9.yaml` and
+`exec-v0.10.yaml`; drafting-tell scan clean on both.
