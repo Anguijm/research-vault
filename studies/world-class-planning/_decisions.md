@@ -345,6 +345,52 @@ project — "decisions" here are direction, not commitments.
     pick the one that looks like a job control number. Without a real JCN the output cannot be
     handed to a planner, so this blocks use even though it does not affect the model.
 
+28. **CONFIRMED: planning phases were the whole problem (2026-07-28, phase anatomy diagnostic).**
+    The operator ran the diagnostic. The evidence is decisive and the span-definition question,
+    open since item 22, is now closed.
+    - **`[spancompare]`.** ICN all-phase median span **310.7 days** (p90 751). Excluding key
+      operation `S01` alone: **50 days** (p90 372). Excluding a wider planning set the operator
+      then identified by code and title: **32 days** (p90 214). A **six- to ten-fold** reduction
+      from one exclusion rule. **21,700 of 28,478 ICNs contain an S01 phase**, which is 76%.
+    - **`[ko-profile]` shows why.** `S01` is 86,791 phases across 21,700 ICNs, with median estimated
+      labour of **6 man-hours** and median span of **349.7 days**, starting at **offset 0**. It is a
+      near-zero-labour phase that opens the job and stays open for about a year. Since the envelope
+      takes the earliest start across all phases, S01 *was* the model for three quarters of the
+      history. `P01` (19,812 phases, 0 man-hours, 149-day span, offset 0) and `S02` (17,417 phases,
+      0 man-hours, 125-day span) behave the same way. The S-, P- and M-series together account for
+      **128,229 of 528,123 phases**.
+    - **Production phases look completely different**: `A01` 80 man-hours / 22-day span, `H01` 64 /
+      9, `R01` 60 / 6, `U01` 49 / 6, `F01` 44 / 9, `R02` 52 / 5, `E01` 20 / 4. Real labour, spans of
+      **4 to 22 days**. `T01` and `T02` are 1-day, 8-man-hour markers, likely test or turnover
+      milestones rather than production.
+    - **A finding that matters beyond the model.** Individual production phases run 4 to 22 days,
+      yet the *production envelope* median is 50 days. **Assessment: the gap is waiting between
+      production phases.** Roughly half the production window is not work. For a project whose whole
+      premise is schedule-as-independent-variable, that inter-phase wait is the compressible
+      quantity, and the screen now has a way to measure it per SWBS. Worth its own look.
+29. **Two structural questions answered as a side effect (2026-07-28).**
+    - **`[swbs]`: the two derivations agree on all 528,123 phases**, 263 distinct values each, zero
+      malformed under either. `Left(CU_swlin_sys_id,3)` and `Mid(ICN,6,3)` are interchangeable. The
+      item 23 code-space risk is retired; use either, and `[swbsmatch]` in v3 can be dropped.
+    - **`[cardinality]`: ICN and Job Summary are 1:1** — 28,478 of each across 528,123 phases. The
+      "should we regroup at ICN rather than Job Summary" question from item 24 is moot; they are the
+      same grain. No regrouping needed.
+    - **Data quality is good:** 528,829 raw phases, 528,123 kept. The date and negative-span filter
+      drops 0.13%.
+    - **But `[cardinality]` also reports `distinct JCN=1`.** The `AIM_JCN` lookup on `%CuPhase_Key`
+      returned blank for every phase, so `ICN_per_JCN` and `JCN_per_ICN` both loaded 0 rows. The
+      direct phase-to-JCN link proposed in item 24 **does not work as written** and the JCN fix in
+      item 27 rests on it. Diagnose before relying on it: check whether `AIM_JCN.%CuPhase_Key`
+      shares a format with `AIM_CuPhase.%CuPhase_Key`, and whether `[Job Control Number]` is
+      populated at all.
+    - **Recommended exclusion rule, and why it is not a hand-maintained list.** Rather than curating
+      KO codes or matching on titles, define non-production mechanically from the profile: **a key
+      operation whose cohort median estimated labour is <= 8 man-hours and whose median span is
+      >= 60 days**. That captures the S, P and M families, needs no maintenance as codes change,
+      and is reproducible. Caveat to document: the rule is derived from the same data it filters,
+      which is acceptable for a screening heuristic but should not be described as independent
+      validation.
+
 ## Open questions (operator's to resolve)
 - **Data reach:** largely answered (item 15). Cycle Time (AIM `ACTUAL_*_DATE`), estimates
   (`EST_MAN_DAYS_QY` / `MANHOUR_QY`), SWLIN, drydock, crew, and the certified filter are all
