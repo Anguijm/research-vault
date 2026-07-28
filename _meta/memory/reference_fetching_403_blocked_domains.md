@@ -1,14 +1,23 @@
 ---
 name: reference-fetching-403-blocked-domains
 description: How to fetch .mil/USNI and other 403-blocked sources — headed Playwright; USAspending via the API client
-metadata:
+metadata: 
+  node_type: memory
   type: reference
+  originSessionId: bd960e99-a70c-4a23-a471-0e5c1a315cf2
 ---
 
 Some source domains hard-block this environment with HTTP 403 (Akamai/Cloudflare
-bot defenses): `navy.mil`, `msc.usff.navy.mil`, `news.usni.org`, and likely other
-`.mil` sites. For these, `ingest.py` (including its headless-Playwright fallback),
-the `WebFetch` tool, and plain `curl` with a browser UA all fail.
+bot defenses): `navy.mil`, `msc.usff.navy.mil`, `news.usni.org`, **`rand.org`
+(confirmed 2026-07-28, both the product page and the `/content/dam/.../*.pdf`
+path)**, and likely other `.mil` sites. For these, `ingest.py` (including its
+headless-Playwright fallback), the `WebFetch` tool, and plain `curl` with a
+browser UA all fail.
+
+**`WebSearch` still works on these domains even when fetching does not** — use it
+with `allowed_domains` to find the exact report page and title first, then fetch
+with headed Playwright. That is how RAND RR-A470-9 was located and captured for
+BDR-FLEET-READINESS on 2026-07-28.
 
 **Working method (operator-endorsed 2026-06-07):** drive a **headed** Playwright
 Chromium against the real X display, not headless. Use the venv that already has
