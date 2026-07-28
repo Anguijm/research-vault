@@ -764,3 +764,52 @@ YAML parses them as part of that block.
 
 **Not decided here.** The gate is still `identify` and the recommendation field still reads `tbd`.
 Advancing either remains the operator's call.
+
+---
+
+### 2026-07-28 — RAND primary source ingested; briefs rebuilt to v0.8 / v0.9
+
+The operator flagged a RAND study sitting in the personal brain vault's waterfront brief. It turned
+out to be the most on-point public source in the opportunity, and it retires the last inference the
+capture brief was resting on.
+
+**The source.** RAND, *Battle Damage Repair for Arleigh Burke–Class Destroyers: Tabletop Exercise
+Results*, RR-A470-9, published 27 May 2026. Authors Martin, Shlapak, Yun, Carter, Trauger and Hoard.
+Sponsored by the Office of the Assistant Secretary of War for Sustainment, Product Support office.
+The exercise ran 13 and 14 August 2025 with United States and allied Indo-Pacific participants over
+four vignettes involving damaged destroyers.
+
+The brain vault carried it second-hand through Defense News. The primary source was retrieved
+directly, so the brief now cites RAND rather than coverage of RAND. rand.org returns HTTP 403 to
+WebFetch and to curl, so the capture used headed Playwright per the standing method; the quoted
+passages in `01_sources/2026-07-28_rand-org_battle-damage-repair-for-arleigh-burke-class-destroyers.md`
+are verbatim page text rather than a model summary. The full PDF was not pulled and the source file
+says so.
+
+**Why it changes the brief.** Three alignments, in descending order of strength.
+
+RAND's leading takeaway is that Navy battle-damage-repair systems carry outdated peacetime
+frameworks and ambiguous command-and-control structures into conflict, and its first Navy
+recommendation is to institutionalize command and control. The coordination-seam argument in section
+2.5 had been an inference drawn from what Robinson's keynote did not say. It is now a published
+finding from an exercise with allied participants in a federally sponsored report.
+
+RAND's second recommendation is a single sentence pairing two things: expand organic repair
+capability, and ensure all deployed personnel are familiar with rapidly deploying it. SWRMC has built
+the capability, in the form of roughly 50 pre-staged containers. The familiarity half is unaddressed
+and is exactly this product. The Navy is executing one half of a two-part recommendation, which is a
+far stronger frame than anything the brief had before.
+
+RAND's method was a two-day tabletop exercise. The most authoritative public treatment of this
+problem used the technique the brief proposes to sell, once, to discover the Navy is not ready.
+Discovery is not rehearsal, and the commands that would execute the mission were not in RAND's room.
+
+**Funding lead.** The study sponsor already paid for analysis of this exact problem, which makes it a
+more plausible Phase 1 call than the fleet commands given the container mission is unfunded. Whether
+that office buys training rather than analysis is unknown and is labeled speculation in the source
+file.
+
+**Artifacts.** Capture brief v0.8 (new section 2.6) and executive brief v0.9. Built from
+`capture-v0.8.yaml` and `exec-v0.9.yaml`. The drafting-tell scan returns clean on both.
+
+**Still not decided.** Gate remains `identify`; recommendation remains `tbd`.

@@ -1,0 +1,74 @@
+# Capture brief v0.8 — adds the RAND tabletop-exercise report (RR-A470-9, 27 May 2026)
+# as section 2.6. This retires the last inference in the brief: the coordination seam was
+# read out of what the SWRMC keynote did not say, and RAND now names ambiguous command and
+# control as the leading problem outright. It also supplies a payer lead, since the study
+# sponsor already funded analysis of this exact problem.
+
+source: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.7-draft.docx
+output: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.8-draft.docx
+
+text_replacements:
+- find: 'CAPTURE BRIEF v0.7 DRAFT
+
+
+    BDR-FLEET-READINESS
+
+
+    Five-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support
+
+
+    Draft date: 2026-07-28  |  For CACI executive review (open-source only).
+
+
+    Changes in v0.7: the demand case is rebuilt on a Navy operational mission described publicly by the executive director of Southwest Regional Maintenance Center on 4 June 2026. A new section 2.5 carries that evidence. The bottom line, the recommendation in section 7 and the caveat in section 8.5 are rewritten to match, and section 8.6 adds the funding risk the new evidence exposes.
+
+    '
+  replace: 'CAPTURE BRIEF v0.8 DRAFT
+
+
+    BDR-FLEET-READINESS
+
+
+    Five-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support
+
+
+    Draft date: 2026-07-28  |  For CACI executive review (open-source only).
+
+
+    Changes in v0.8: adds the RAND tabletop-exercise report on battle damage repair for Arleigh Burke destroyers (RR-A470-9, 27 May 2026) as new section 2.6. Its leading finding is ambiguous command and control, and two of its five Navy recommendations are training and exercise recommendations, which corroborates the coordination-seam argument from an independent direction. The bottom line and the caveat in section 8.5 are updated, and the study sponsor is added as a payer lead in section 7.
+
+    '
+- find: The U.S. Navy has no repair tenders for its surface fleet and no near-term plan to build any. Southwest Regional Maintenance Center (SWRMC) has assembled a substitute. It has pre-staged roughly 50 expeditionary maintenance containers across the Pacific for battle damage repair on surface ships, activated by sailors and civilians flown out from San Diego. The command's executive director described the program publicly on 4 June 2026. He identified Ship Repair Facility Japan Regional Maintenance Center (SRF-JRMC) as the Area Maintenance Commander coordinating the deployments, and he said the mission is unfunded. The materiel is being positioned across the theater. The decisions that would route a damaged ship to it have not been rehearsed, and the division of responsibility between the two commands running the mission has not been described in any public source. That seam is what this brief proposes to sell into.
+  replace: Two independent sources published seven weeks apart describe the same problem from opposite ends. In May 2026 RAND reported the results of a two-day tabletop exercise on repairing battle-damaged Arleigh Burke destroyers in a Pacific conflict, and its leading finding was that existing Navy battle-damage-repair systems are burdened by outdated peacetime frameworks and ambiguous command-and-control structures. In June 2026 the Executive Director of Southwest Regional Maintenance Center (SWRMC) told an industry conference that the Navy has no repair tenders for the surface fleet and no plan to build any, so his command has pre-staged roughly 50 expeditionary maintenance containers across the Pacific as the substitute. He identified Ship Repair Facility Japan Regional Maintenance Center (SRF-JRMC) as the Area Maintenance Commander coordinating the deployments, and he said the mission is unfunded. RAND recommends the Navy expand organic repair capability and ensure deployed personnel are familiar with rapidly deploying it. The Navy is visibly doing the first half. The materiel is being positioned across the theater, the decisions that would route a damaged ship to it have not been rehearsed, and the command relationship RAND says is ambiguous is the one SWRMC and SRF-JRMC are operating under. That is what this brief proposes to sell into.
+- find: 'Five signals point at the demand, and they are not equal. Four are context: senior Navy leadership is committing budget to wartime repair readiness, the Navy is running the relevant exercise type in the relevant venue, the professional community is arguing the gap is real, and the rest of the Department of Defense buys adjacent work at scale. The fifth is different in kind. A Navy command is executing a Pacific battle damage repair mission today and its executive director has described it in public. Section 2.5 carries that evidence and it does most of the work in this brief.'
+  replace: 'Six signals point at the demand, and they are not equal. Four are context: senior Navy leadership is committing budget to wartime repair readiness, the Navy is running the relevant exercise type in the relevant venue, the professional community is arguing the gap is real, and the rest of the Department of Defense buys adjacent work at scale. Two are different in kind. A federally sponsored RAND study ran the exercise and published what is missing, and a Navy command is executing part of the fix today and said so in public. Sections 2.5 and 2.6 carry those two, and together they do most of the work in this brief.'
+- find: The evidence improved in this version but it did not become a buying signal. Public sources now establish that the Navy is executing a Pacific battle damage repair mission, that two named commands coordinate it, and that it is unfunded. Public sources still do not show a Navy procurement line for decision-rehearsal training, and no solicitation exists. The case for entry rests on a documented operational mission with an undefined coordination seam, supported by adjacent procurement precedent at other DoD customers. It does not rest on the Navy asking for this product, because the Navy has not asked.
+  replace: The evidence improved again in this version and it still is not a buying signal. Public sources now establish the mission, the two commands running it, the fact that it is unfunded, and an independent federally sponsored assessment that names ambiguous command and control as the leading problem and recommends both expanded organic repair capability and personnel familiar with deploying it rapidly. Public sources still do not show a Navy procurement line for decision-rehearsal training, and no solicitation exists. What has changed is that the case no longer rests on this desk’s inference. It rests on a published recommendation the Navy has only half executed. It does not rest on the Navy asking for this product, because the Navy has not asked.
+- find: • Department of the Navy FY 2027 President's Budget Press Brief, 28 April 2026.
+  replace: '• Department of the Navy FY 2027 President''s Budget Press Brief, 28 April 2026.
+
+
+    • RAND Corporation, Battle Damage Repair for Arleigh Burke–Class Destroyers: Tabletop Exercise Results, RR-A470-9, 27 May 2026. Martin, Shlapak, Yun, Carter, Trauger, Hoard. Sponsored by the Office of the Assistant Secretary of War for Sustainment, Product Support office.'
+- find: 'End of capture brief v0.7 draft. Build date: 2026-07-28. The demand case in this version rests on the SWRMC expeditionary maintenance container program, described publicly by that command’s executive director on 4 June 2026 and carried in section 2.5. Section 7 now leads with identifying a payer, because the mission is unfunded. Section 8.6 carries that risk.'
+  replace: 'End of capture brief v0.8 draft. Build date: 2026-07-28. The demand case rests on two sources: the RAND tabletop-exercise report of 27 May 2026, carried in section 2.6, and the SWRMC expeditionary maintenance container program described publicly on 4 June 2026, carried in section 2.5. Section 7 leads with identifying a payer, because the mission is unfunded. Section 8.6 carries that risk.'
+insert_sections:
+- before_paragraph_starting_with: 3. Customer landscape
+  paragraphs:
+  - style: heading-2
+    text: 2.6 The RAND tabletop exercise on battle damage repair
+  - style: body
+    text: In May 2026 RAND published the results of a tabletop exercise on repairing battle-damaged Arleigh Burke destroyers in a Pacific conflict. It is the most directly on-point public source in this brief, and it was sponsored by the Office of the Assistant Secretary of War for Sustainment.
+  - style: body
+    text: FACT. RAND conducted the exercise on 13 and 14 August 2025 with participants from the United States and allied Indo-Pacific nations, split into four groups representing the stakeholders who would be involved in repairs. It ran four vignettes in which ships, including DDG-51s, were damaged and required repair, and it examined the capabilities required, the implied command-and-control arrangements, partner nations’ roles, and the organic capabilities the Navy could deploy. [RAND RR-A470-9, 27 May 2026]
+  - style: body
+    text: FACT. RAND’s leading takeaway is that existing U.S. Navy systems for battle-damage repair are burdened by outdated peacetime frameworks and ambiguous command-and-control structures during conflict. It also found that the Navy’s organic repair capabilities are sufficient only for limited repairs to combat systems and for repairs that allow ships to transit back to the United States. [RAND RR-A470-9, 27 May 2026]
+  - style: body
+    text: FACT. Two of RAND’s five recommendations to the Navy bear directly on this brief. The Navy should institutionalize command and control by clarifying authority, streamlining communications and defining approval chains during crisis and conflict. And the Navy should expand organic repair capabilities and ensure that all deployed personnel are familiar with rapidly deploying those capabilities. A third recommends anchoring exercises to strategic objectives. [RAND RR-A470-9, 27 May 2026]
+  - style: body
+    text: Assessment. The coordination-seam argument in section 2.5 was an inference drawn from what the SWRMC keynote did not say. It is no longer an inference. RAND names ambiguous command and control as the leading problem, from an exercise with allied participants, in a peer-reviewed report paid for by an office of the Secretariat.
+  - style: body
+    text: Assessment, and it is the sharpest point in this brief. RAND recommends expanding organic repair capability and ensuring deployed personnel are familiar with rapidly deploying it, in a single sentence. SWRMC has built the capability. Fifty containers are pre-staged across the theater. The familiarity half is unaddressed, and the familiarity half is this product. The Navy is executing one half of a two-part recommendation.
+  - style: body
+    text: Assessment on method. RAND reached its conclusions by running a two-day tabletop exercise. The most authoritative public treatment of this problem used the technique this brief proposes to sell, once, to discover that the Navy is not ready. Discovery is not rehearsal. The commands that would actually execute the mission were not the ones in RAND’s room, and a finding published in a report does not transfer to a wardroom that has never made the decision under time pressure.
+  - style: body
+    text: Assessment on funding, and it is a lead rather than a conclusion. The study sponsor is the Office of the Assistant Secretary of War for Sustainment, Product Support office. Since the container mission itself is unfunded, an office that already paid for analysis of this exact problem is a more plausible first call than the fleet commands. Whether it has money for training rather than analysis is unknown, and nothing here supports a guess either way. Section 7 carries it as a Phase 1 target.
