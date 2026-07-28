@@ -60,13 +60,22 @@ Post-Phase-4 work in progress (not yet enumerated as a numbered phase):
   `_scripts/approve_seeds.py`, plus the `sam_searches` block in
   `_meta/caci-discovery-config.yaml`. Routes SAM.gov queries via a slice
   list with per-slice quota tracking and pagination via
-  `lib/sam_gov.py::execute_query`. **Current state: the SAM.gov query
-  layer is partially broken** — empirical testing on 2026-05-31 confirmed
-  v2 search ignores `ncode`, `ccode`, and `q` parameters; only
-  `organizationName` filters meaningfully. Slice plan needs rewrite around
-  organizationName-anchored queries for Pacific Navy + Air Force
-  contracting offices. See `_meta/seeds-inbox.md` for triage state and
-  the 12 rounds of out-of-scope closure rules in `caci-discovery-config.yaml`.
+  `lib/sam_gov.py::execute_query`. **Current state: working, and scheduled.**
+  Empirical testing on 2026-05-31 confirmed SAM.gov v2 search ignores
+  `ncode`, `ccode`, and `q`; only `organizationName` filters meaningfully.
+  The slice plan was rewritten around that on 2026-06-01 and now runs six
+  organizationName-anchored slices covering NAVSUP Fleet Logistics Centers
+  at Yokosuka, Pearl Harbor, San Diego and Puget Sound plus Air Force
+  contracting at Yokota and Kadena. Verified end-to-end 2026-07-29.
+  Runs weekly via cron (Mondays 05:15) through
+  `_scripts/run_seed_finder.sh`, logging to `_meta/seeds-cron.log`.
+  See `_meta/seeds-inbox.md` for triage state and the 12 rounds of
+  out-of-scope closure rules in `caci-discovery-config.yaml`.
+  **Known bookkeeping drift:** the ledger marks ~1,100 seeds `in-inbox`
+  while `seeds-inbox.md` holds 8, a leftover from the first run being
+  pruned from the markdown without the ledger status following. Harmless
+  to discovery (dedup keys off the ledger) but it makes the status counts
+  meaningless until reconciled.
 - **CACI capability book** — `_meta/caci-capability-book/`. Seven capability
   areas with dual-language coverage (caci.com marketing + FY25 10-K
   investor language + FY26 Q3 10-Q current state), corporate overview,

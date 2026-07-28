@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_utc": "2026-06-10T12:29:40Z",
+  "last_run_utc": "2026-07-28T19:33:05Z",
   "seeds": {
     "COMPT:FY27_RDTE_TJS": {
       "first_seen_utc": "2026-05-29T19:28:54Z",
@@ -9395,6 +9395,294 @@
       "url": "https://sam.gov/workspace/contract/opp/b9cb97b0eb684cb2a43ee60c4d9d3d7c/view",
       "title": "CAIRS MIGRATION TO AIR FORCE STACK, BILLING, AND TRAINING AT YOKOTA AIR BASE, JAPAN",
       "final_score": 0.351
+    },
+    "SAM:261d647b73294e75bd69dc874a8467df": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/261d647b73294e75bd69dc874a8467df/view",
+      "title": "USS HOWARD (DDG-83) 7J1",
+      "final_score": 0.173
+    },
+    "SAM:9528c228aed44f21a179854894a1aa85": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/9528c228aed44f21a179854894a1aa85/view",
+      "title": "SOCIAL AND DIGITAL MEDIA SPECIALIST",
+      "final_score": 0.302
+    },
+    "SAM:e1d16950fbc1482aa84ecb806b5b4002": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/e1d16950fbc1482aa84ecb806b5b4002/view",
+      "title": "USS AMERICA (LHA-6) MATERIAL HANDLING EQUIPMENT (MHE) REFURBISHMENT",
+      "final_score": 0.203
+    },
+    "SAM:4e66fbcf3f4d48ea81ae2bf4e2664e06": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/4e66fbcf3f4d48ea81ae2bf4e2664e06/view",
+      "title": "Psychological Consultation Services",
+      "final_score": 0.143
+    },
+    "SAM:f506207eb4fc484d835304249802a10e": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/f506207eb4fc484d835304249802a10e/view",
+      "title": "Mercer Hall, Naval Base San Diego - Galley Grab-N-Go",
+      "final_score": 0.203
+    },
+    "SAM:02d2f90272994efca658f6de92ba5979": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/02d2f90272994efca658f6de92ba5979/view",
+      "title": "Particle and Droplet Size Analyzer",
+      "final_score": 0.143
+    },
+    "SAM:3b04706dee374c618c6468ba87cffce5": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/3b04706dee374c618c6468ba87cffce5/view",
+      "title": "SeaPort: Site Security Manager (SSM) Support Services for SMWDC",
+      "final_score": 0.333
+    },
+    "SAM:ba112fd90299493a9110b06993d698bf": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/ba112fd90299493a9110b06993d698bf/view",
+      "title": "Bard Air Conditioner Replacement W36HY-B09",
+      "final_score": 0.3
+    },
+    "SAM:9985040162e44d24814a2af9fd3c4511": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/9985040162e44d24814a2af9fd3c4511/view",
+      "title": "NOTICE OF INTENT TO AWARD A SOLE SOURCE CONTRACT - Quartermaster AI SmartMast EO/IR Cameras",
+      "final_score": 0.486
+    },
+    "SAM:f7ffe48241ce40709e5c6804c6518304": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/f7ffe48241ce40709e5c6804c6518304/view",
+      "title": "Naval Consolidated Brig Miramar (NCBM) Vocational Training Courses",
+      "final_score": 0.423
+    },
+    "SAM:f5263df541664188b4c9f4d030bbc582": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/f5263df541664188b4c9f4d030bbc582/view",
+      "title": "Galley Uniforms for USS THEODORE ROOSEVELT (CVN 71)",
+      "final_score": 0.203
+    },
+    "SAM:cc80ce6c782440f4a64d6d6059c47090": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/cc80ce6c782440f4a64d6d6059c47090/view",
+      "title": "NOTICE OF INTENT TO SOLE SOURCE - DXP Model 47 Fuel Filtration Unit",
+      "final_score": 0.203
+    },
+    "SAM:309ad610fcfb4ab3b326861b08c7684d": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/309ad610fcfb4ab3b326861b08c7684d/view",
+      "title": "Roofing Repair",
+      "final_score": 0.351
+    },
+    "SAM:7c1f8d87292b4eb4b54402c7cb755114": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/7c1f8d87292b4eb4b54402c7cb755114/view",
+      "title": "TREATMENT PROGRAM CONSULTATION",
+      "final_score": 0.203
+    },
+    "SAM:6612bd75473e4be8be28b1bcf7184b52": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/6612bd75473e4be8be28b1bcf7184b52/view",
+      "title": "Notice of Intent to Sole Source - CATV Services",
+      "final_score": 0.203
+    },
+    "SAM:55885a089d6f472a89461dfd8c1a9bd8": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/55885a089d6f472a89461dfd8c1a9bd8/view",
+      "title": "Notice of Intent to Award Sole Source - Testek Solutions",
+      "final_score": 0.203
+    },
+    "SAM:281b2d7e95094a0bb45b8642da96cf69": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/281b2d7e95094a0bb45b8642da96cf69/view",
+      "title": "NAVAL BASE VENTURA COUNTY (NBVC) PORT HUENEME - GALLEY GRAB AND GO",
+      "final_score": 0.203
+    },
+    "SAM:9d14be88c90a42539f58d700aafe3b99": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/9d14be88c90a42539f58d700aafe3b99/view",
+      "title": "Notice of Intent to Award a Brand Name Sole Source Contract to Quincy Compressor",
+      "final_score": 0.203
+    },
+    "SAM:73c0d39a6d84476396ff2fac2087b04d": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/73c0d39a6d84476396ff2fac2087b04d/view",
+      "title": "Intent to Sole Source CNAP Aviation Cost Evaluation System (ACES) Support",
+      "final_score": 0.328
+    },
+    "SAM:9bff6327bad9419e916916d91c07acb6": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/9bff6327bad9419e916916d91c07acb6/view",
+      "title": "CONNECTOR PLUG",
+      "final_score": 0.203
+    },
+    "SAM:4fb07914b61242c6a5353e56d61340b7": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/4fb07914b61242c6a5353e56d61340b7/view",
+      "title": "HEATER, FLUID, INDUSTRIAL",
+      "final_score": 0.143
+    },
+    "SAM:03c8564444e448e1a22de5148714d36f": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/03c8564444e448e1a22de5148714d36f/view",
+      "title": "INSULATION PIPE",
+      "final_score": 0.143
+    },
+    "SAM:73a254364be14d4c8d321f321cf41692": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/73a254364be14d4c8d321f321cf41692/view",
+      "title": "Brand Name OEM \"Leslie Controls Inc.\" - Stem Fluid Valve Part(s)",
+      "final_score": 0.203
+    },
+    "SAM:4b52d017499a42fe8ca4ad2ffe7aef17": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/4b52d017499a42fe8ca4ad2ffe7aef17/view",
+      "title": "Brand Name OEMs (Multiple) Procurement of - \"Standard Beds, Box Springs, Mattresses & Headboards\" Aboard Naval Vessel",
+      "final_score": 0.203
+    },
+    "SAM:3057fd0d804b40cfbb08683c2b2c806f": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/3057fd0d804b40cfbb08683c2b2c806f/view",
+      "title": "Brand Name OEM \"Jered, LLC\" - Helicopter Hangar Door Part(s)",
+      "final_score": 0.203
+    },
+    "SAM:84366ec43bf344689904c2e788a6b54f": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/84366ec43bf344689904c2e788a6b54f/view",
+      "title": "Replace Heating and Cooling Coil at Building No. 457, Camp Zama (CZ)",
+      "final_score": 0.143
+    },
+    "SAM:3348f35c70a448d8816bbff8c7e66fa5": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/3348f35c70a448d8816bbff8c7e66fa5/view",
+      "title": "Repair Fire Alarm System at Bldg.500, Camp Zama (CZ), U.S Army Garrison Japan",
+      "final_score": 0.351
+    },
+    "SAM:ba44dfa57abc498cb8ce1bcec90ecb55": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/ba44dfa57abc498cb8ce1bcec90ecb55/view",
+      "title": "Air Emission Monitoring of Boiler and Engine Generating Units on USAG Japan Installations in Kanto Plain",
+      "final_score": 0.351
+    },
+    "SAM:69c5a63748114520a36d818c85e1b65e": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/69c5a63748114520a36d818c85e1b65e/view",
+      "title": "Purchas of Refuse Truck at Camp Zama, Japan",
+      "final_score": 0.143
+    },
+    "SAM:4db952876bb44af79a03919af6664781": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/4db952876bb44af79a03919af6664781/view",
+      "title": "Bilateral Army exercise at Camp Higashi Chitose, Hokkaido, Japan",
+      "final_score": 0.423
+    },
+    "SAM:b1a13850933c463e9a3fc502b02635b5": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/b1a13850933c463e9a3fc502b02635b5/view",
+      "title": "Bilateral Army Exercise at Camp Asaka, Saitama Prefecture, Japan",
+      "final_score": 0.423
+    },
+    "SAM:36dc7d8041e248ba91fd17f98e2f63aa": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/36dc7d8041e248ba91fd17f98e2f63aa/view",
+      "title": "Source Sought - Simplified Acquisition Base Engineering Requirements (SABER)",
+      "final_score": 0.203
+    },
+    "SAM:09cbf92b18a342618ad98ac940b1268f": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/09cbf92b18a342618ad98ac940b1268f/view",
+      "title": "Sources Sought - Multiple Award Construction Contract (MACC) U.S. Army Installations within Honshu, Japan and Yokota Air",
+      "final_score": 0.477
+    },
+    "SAM:02884d1368734935a5f20cd6d7f5ab69": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/02884d1368734935a5f20cd6d7f5ab69/view",
+      "title": "Off-post Furniture for USARJ",
+      "final_score": 0.143
+    },
+    "SAM:1d610c7df07b4f46ae4413e5ee8d6cc9": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/1d610c7df07b4f46ae4413e5ee8d6cc9/view",
+      "title": "Rental Vehicles for YS and OS Exercise",
+      "final_score": 0.143
+    },
+    "SAM:d6c32355d7fc4c8ea607f73fae574b43": {
+      "first_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "status": "in-inbox",
+      "url": "https://sam.gov/workspace/contract/opp/d6c32355d7fc4c8ea607f73fae574b43/view",
+      "title": "Okinawa Industry Engagement: Progressive Design-Build & Accelerated Design-Build (Additional Information)",
+      "final_score": 0.203
     }
   }
 }

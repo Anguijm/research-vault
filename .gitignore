@@ -15,6 +15,7 @@ _scripts/.venv/
 # ── Runtime state files (regenerated each run) ──────────────────────────
 _scripts/.find-sources.lock
 _meta/sam-quota.json
+_meta/seeds-cron.log
 _meta/usaspending-quota.json
 
 # ── Obsidian per-machine state ──────────────────────────────────────────
