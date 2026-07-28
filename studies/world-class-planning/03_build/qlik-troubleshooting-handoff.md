@@ -256,7 +256,7 @@ Fits nothing, screens nothing. It exists purely to answer "which phases are prod
 **Expected if the theory is right:** all-phase median in the hundreds of days, production-only
 median in the tens or less, and one or more `KO` codes sitting at offset ~0 with low man-hours.
 
-### Step 2 — `span-screen-v3.md`
+### Step 2 — `_lineage/span-screen-v3.md`
 The actual screen. Computes three span definitions at once (full envelope, longest single phase, sum
 of phase-days), fits each per SWBS in both linear and median form, and prints the bin distribution
 under each. Once step 1 identifies the planning codes, this gains a fourth definition (production

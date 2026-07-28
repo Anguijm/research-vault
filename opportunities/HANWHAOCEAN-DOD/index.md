@@ -14,9 +14,9 @@ capability_tags:
   - shipbuilding
 sensitivity: shareable
 opened: 2026-06-07
-last_updated: 2026-06-10
-next_action: Play 1 (government-side foreign-yard assurance) drafted at ideation — answer its top gate (will the Navy contract foreign-yard assurance, or keep it organic?) via the MSC N7 internal line; settle sell-to-Hanwha as government-side-only (the OCI firewall)
-next_action_due: 2026-06-21
+last_updated: 2026-06-11   # real last work; do not bump for housekeeping edits
+next_action: "Stale since 2026-06-10. Confirm whether the USNS/MSC track is still being worked. Note this is the corporate relationship lane, distinct from the USS/RMC execute lane, so it may be intentionally dormant rather than stalled."
+next_action_due: 2026-08-08
 focus_month: 2026-06-01
 auto_find: false
 last_find_run:

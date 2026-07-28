@@ -47,7 +47,7 @@ reused an AIM estimate field as both sides). **Shortcut:** fit span ≈ f(EST_MA
 from completed single-JCN summaries — no COST actuals needed for a first cut. NNPI is masked in the
 published AIM layer. Raw Qlik scripts kept OUT of the git vault (operator's classification call;
 vault pushes to GitHub). Gemini fabricated a "Qlik linter" — disregard. **First-cut screen written as a QlikView script
-(`03_build/span-screen-qlik.md` — span fit per SWBS, LINEST per SWBS, no COST join); raw Qlik
+(`03_build/_lineage/span-screen-v1.md` — span fit per SWBS, LINEST per SWBS, no COST join); raw Qlik
 artifacts now in `01_sources/qlik/` (operator cleared for vault/GitHub).** **"96 hours" DEFINED (operator, 2026-07-26, item 21): 96 ELAPSED
 clock hours = 4 calendar days**, not work-shifts; clock runs through nights/weekends; local SRF
 definition (not in 4700.1F). Closes the `v96Days=4` [CONFIRM] — AIM Cycle Time and the span fit are
@@ -75,8 +75,8 @@ the candidate AIM↔COST bridge for the multiplier. `Cu Phase Group CD` = "oppor
 — may already answer screening question 3.
 **Build artifacts in `03_build/`:** `qvd-field-inventory.md` (all 50 QVDs / 1,180 fields / 59 join
 keys, generated from the dictionary xlsx), `phase-anatomy-diagnostic.md` (RUN THIS FIRST — fits
-nothing, prints KO fingerprints + sample ICNs + span comparison), `span-screen-v3.md` (the screen,
-three span definitions at once), `qlik-troubleshooting-handoff.md` (self-contained context for a
+nothing, prints KO fingerprints + sample ICNs + span comparison), `span-screen-v4.md` (the CURRENT screen,
+production-only spans; v3 with its three span definitions is superseded, in `_lineage/`), `qlik-troubleshooting-handoff.md` (self-contained context for a
 fresh session). Claude cannot execute Qlik — all scripts are unverified syntax.
 **Future state (`future-state.md`):** a Power App where users paste JCN/SWLIN/est-man-days → span +
 verdict; the Qlik fit exports a small per-SWBS coefficient table (the model) that the app consumes

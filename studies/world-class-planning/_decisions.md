@@ -67,7 +67,7 @@ project — "decisions" here are direction, not commitments.
     summaries — no COST actual-labor needed for a first cut. Real field map + join in
     `03_build/data-fields-and-tooling.md`. NNPI is masked in the published AIM layer.
 
-16. **First-cut screen written as a QlikView script (2026-06-23):** `03_build/span-screen-qlik.md` —
+16. **First-cut screen written as a QlikView script (2026-06-23):** `03_build/_lineage/span-screen-v1.md` —
     the span-fit-per-SWBS shortcut (no COST join). Fits `span ≈ Intercept + Slope × EstManDays` per
     SWBS from completed single-JCN history (LINEST_M/B, shrink thin bins to the 1-digit parent),
     scores candidates, three-bin sort. Carries a [CONFIRM] list for the inferred keys/fields/units.
@@ -76,7 +76,7 @@ project — "decisions" here are direction, not commitments.
     CMAV + CM + EM + WOO) per operator — the CNO-only filter from the example MRQT script was
     removed; "completed" is enforced at the CU-phase level (certified + actual dates), not by a
     CNO-specific CA00 cohort.
-17. **Test harness written (2026-06-23):** `03_build/span-screen-tests.md` — a diagnostic TRACE
+17. **Test harness written (2026-06-23):** `03_build/_lineage/span-screen-test-harness.md` — a diagnostic TRACE
     block (stage counts + data-quality flags to the reload log), six validation sheet objects
     (incl. the per-SWBS scatter to choose linear-fit vs median), and acceptance criteria that map
     each red number back to the right [CONFIRM]. Operator to run the fit next.
@@ -149,13 +149,13 @@ project — "decisions" here are direction, not commitments.
       claimed actual start to claimed actual finish, and the fit uses
       `Max(ACTUAL_COMPLETION) − Min(ACTUAL_START)`, so both the history and the threshold are on
       the same elapsed clock. Weekend and holiday effects are already inside the fitted history.
-      `v96Days = 4` in `03_build/span-screen-qlik.md` is now confirmed rather than a placeholder.
+      `v96Days = 4` in `03_build/_lineage/span-screen-v1.md` is now confirmed rather than a placeholder.
     - **Assessment: the 96-hour bin is governed by the per-SWBS Intercept, not the Slope.** The
       intercept is the fixed-wait floor for a work type. Where it alone exceeds four days, nothing
       in that SWBS group can pass at any size and the estimate stops mattering. So the first
       question is better read as *which SWBS groups are 96-hour-capable at all*, with the per-job
       estimate discriminating only inside those groups. This also gives the validation scatter in
-      `03_build/span-screen-tests.md` a sharper job: the intercept per bin is now a headline
+      `03_build/_lineage/span-screen-test-harness.md` a sharper job: the intercept per bin is now a headline
       output, not a fitting by-product.
     - **Assessment: the test is start-day sensitive, and the start day is unknown at induction.**
       A four-day elapsed window starting Friday eats a weekend; starting Monday it does not. Since
@@ -165,9 +165,9 @@ project — "decisions" here are direction, not commitments.
 
 22. **First live run: the screen reloads cleanly and the output is unusable (2026-07-26).** The
     operator ran the span screen against the live Qlik model, debugging field names with Gemini
-    along the way (transcript and output in `03_build/`: `Recent Gemini`,
-    `SWBS Sample Output.xlsx`). Real progress was made and the schema is now pinned down (see the
-    updated `[CONFIRM]` list in `03_build/span-screen-qlik.md`). But the result must not be treated
+    along the way (transcript and output in `03_build/`: `_runs/2026-07-26_gemini-debug-session.md`,
+    `_runs/2026-07-26_run1-output-all-must-do.xlsx`). Real progress was made and the schema is now pinned down (see the
+    updated `[CONFIRM]` list in `03_build/_lineage/span-screen-v1.md`). But the result must not be treated
     as a fit.
     - **What the output says.** 2,699 candidate JCNs scored, **100% in `MUST-DO - exceeds CMAV`**.
       Zero reached the 96-hour or CMAV bins. Predicted spans run 366.4 to 733.3 days, with 98.4%
@@ -206,7 +206,7 @@ project — "decisions" here are direction, not commitments.
          in the span script and was never resolved. **This one needs an operator decision**, since
          the two options differ in effort: join history JCNs to their Class F estimate so training
          and scoring share a basis, or accept the mismatch and document the bias.
-    - **Process note.** `03_build/span-screen-tests.md` was written for exactly this. Its TRACE
+    - **Process note.** `03_build/_lineage/span-screen-test-harness.md` was written for exactly this. Its TRACE
       block prints `singleJCNjobs=` and a `badSWBS=` count, either of which would have shown the
       0-row collapse and the SWBS mapping failure in one line. It was not run. **Run the harness
       first next time, before reading any output.**
@@ -222,12 +222,12 @@ project — "decisions" here are direction, not commitments.
       **`badSWBS=0`** of 752,375 rows. `JS_Clean` went from 0 to **17,829** single-JCN summaries,
       **233** SWBS bins fit, 9 parent bins, and the run finished with **0 synthetic keys**. The
       relaxed blank-SWBS filter from run 1 is no longer doing the work, so item 22's first defect
-      is genuinely closed rather than hidden. The test harness from `span-screen-tests.md` was also
+      is genuinely closed rather than hidden. The test harness from `_lineage/span-screen-test-harness.md` was also
       embedded and run this time, which is how we know any of this.
     - **The blocking unknown.** `[history] span days min/med/max =` printed **blank**, as did the
       whole `[fit] bins= trusted= negIntercept= negSlope=` line. Cause is known and harmless: the
       `$(=Peek(...))` form does not evaluate inside `TRACE` on this Qlik build, which is the exact
-      caveat already written at the bottom of `span-screen-tests.md`. Replace those two lines with
+      caveat already written at the bottom of `_lineage/span-screen-test-harness.md`. Replace those two lines with
       `LET` assignments like the ones above them. **Until the span range prints, we cannot say
       whether the ~366-day intercept from item 22 is fixed**, and that single number decides
       whether anything else here matters. Do this first; it is a five-minute change.
@@ -264,7 +264,7 @@ project — "decisions" here are direction, not commitments.
     typically the planning phase. **Assessment: this very likely explains the ~366-day intercept
     outright.** An envelope from earliest phase start to latest phase finish begins at *planning*,
     so items 22 and 23 were measuring planning-through-delivery and calling it execution span. It
-    is also a better hypothesis than the "longest single phase" variant in `span-screen-v3.md`,
+    is also a better hypothesis than the "longest single phase" variant in `_lineage/span-screen-v3.md`,
     because it preserves a genuine multi-phase production window instead of collapsing it to one
     phase. Target definition is therefore probably **the production envelope per ICN**. Not
     hard-coding `S01` on "usually": `03_build/phase-anatomy-diagnostic.md` prints every key
@@ -296,7 +296,7 @@ project — "decisions" here are direction, not commitments.
 
 25. **THE SCREEN WORKS (2026-07-28). First usable output, and it exposes the next real problem.**
     The operator fixed the `vPlanKO` quoting (`'''S01'''`, so the `Match()` expansion resolves),
-    repaired the load errors, and ran v3 to completion. Output is `03_build/New table.xlsx`, 3,708
+    repaired the load errors, and ran v3 to completion. Output is `03_build/_runs/2026-07-28_run3-output-working-screen.xlsx`, 3,708
     candidates scored. **The ~366-day intercept is gone.** Predictions now vary by job, 3,600 of
     3,708 candidates score off their own SWBS fit rather than falling through to a parent or global
     fit, and the bins genuinely discriminate. Items 22 and 23 are closed.

@@ -295,7 +295,7 @@ different from what we assumed and needs revisiting.
 
 ## What happens next
 
-Once `vPlanKO` is settled, `span-screen-v3.md` gets a fourth span definition (production envelope
+Once `vPlanKO` is settled, `_lineage/span-screen-v3.md` gets a fourth span definition (production envelope
 per ICN) and the other three become the control group. I would then expect the fit to be worth
 running for the first time, because the intercept will finally represent a fixed wait inside a
 production window rather than the distance from planning to delivery.

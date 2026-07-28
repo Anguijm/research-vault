@@ -18,12 +18,12 @@ capability_tags:
   - C-UAS
 sensitivity: internal
 opened: 2026-05-08
-last_updated: 2026-05-14
+last_updated: 2026-05-21   # real last work; do not bump for housekeeping edits
 last_verification_pass: 2026-05-12
 last_red_team_pass: 2026-05-14
 brief_version: v0.3.1-draft
-next_action: Operator decisions A-E in _decisions-pending-2026-05-14.md (call Brent Parker + Stridiron office)
-next_action_due: 2026-05-21
+next_action: "Stale since 2026-05-14. Confirm whether this track is still live: briefs sit at capture v0.3.1 / exec v0.3.1 and status reads review. BDR now carries the Navy battle-damage-repair thread with stronger sourcing, so PMTEC may be superseded, mergeable, or worth a gate call to close."
+next_action_due: 2026-08-08
 focus_month: 2026-05-01
 auto_find: true
 last_find_run: 2026-05-12T05:02:58

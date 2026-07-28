@@ -1,6 +1,6 @@
 # Defense Research Vault — Dashboard
 
-**Last updated:** 2026-06-16
+**Last updated:** 2026-07-28
 **Operator:** John Anguiano (anguijm)
 **SOP:** [[_meta/sop]]  |  **Verification rules:** [[_meta/verification-rules]]
 

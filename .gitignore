@@ -50,3 +50,4 @@ studies/ai-governance/01_sources/hbr/*.pdf
 # FROM but never cites. Nothing here may be pushed. See _private/README.md
 # for the crossing rule.
 _private/
+*.bak[0-9]

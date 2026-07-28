@@ -20,7 +20,7 @@ Slope × EstManDays` per SWBS (3-digit); then score a new JCN's estimate against
 deferrable / CMAV-capable / must-do.
 
 > **STOP — this file is now the lineage copy, not the live script.** Two live runs have happened.
-> The current working version is `Latest Script` in this folder; this file is kept because the
+> The current working version is `../span-screen-v4.md`; this file is kept because the
 > vault keeps draft lineage, and because the `[CONFIRM]` list below is still the best record of the
 > real field names.
 >

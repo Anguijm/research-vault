@@ -65,9 +65,9 @@ straight into how SRF packages work. The project is about answering the three qu
 - `03_build/data-fields-and-tooling.md` — what fields to pull from AIM and how to crunch them in
   Excel (Power Query + Power Pivot) or QlikView; the SWBS Σ/Σ trick that sidesteps the bundling;
   the real field map from the operator's Qlik environment (actuals live in COST/STARS, not AIM).
-- `03_build/span-screen-qlik.md` — the first-cut screen as a runnable QlikView script (span fit
+- `03_build/_lineage/span-screen-v1.md` — the first-cut screen as a runnable QlikView script (span fit
   per SWBS; no COST join needed).
-- `03_build/span-screen-tests.md` — test harness for that script: in-script TRACE diagnostics
+- `03_build/_lineage/span-screen-test-harness.md` — test harness for that script: in-script TRACE diagnostics
   (pass/fail counts to the reload log), the sheet objects to eyeball the fit, and acceptance
   criteria mapped to the [CONFIRM] items.
 - `01_sources/qlik/` — the operator's raw Qlik artifacts (load script, data dictionary, field
