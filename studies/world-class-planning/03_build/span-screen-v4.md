@@ -177,6 +177,22 @@ WHERE NProdPhases > 0 AND T_EstMD > 0 AND SpanProd > 0;
 
 DROP TABLE ICN_Hist;
 
+// Separate the two reasons a job is excluded, so the reload log says which.
+// Bundling is not random: a large structural job is likelier to be packaged
+// with other JCNs into one ICN than a small inspection is, so a high bundle
+// rate means training is biased toward simple work.
+DIAG_Drop:
+LOAD Count(1)                                        AS Tot,
+     Sum(If(Len(Trim(T_SWBS))<>3,1,0))               AS NoSWBS,
+     Sum(If(JCNsInICN > 1 AND JCNsInICN < 99,1,0))   AS Bundled,
+     Sum(If(JCNsInICN = 99,1,0))                     AS NoBridge,
+     Sum(If(JCNsInICN > 1 AND JCNsInICN < 99, JCNsInICN, 0)) AS JcnsInBundles
+RESIDENT Train;
+LET vDTot=Peek('Tot',0,'DIAG_Drop');   LET vDNoSW=Peek('NoSWBS',0,'DIAG_Drop');
+LET vDBund=Peek('Bundled',0,'DIAG_Drop'); LET vDNoBr=Peek('NoBridge',0,'DIAG_Drop');
+LET vDJcns=Peek('JcnsInBundles',0,'DIAG_Drop');
+DROP TABLE DIAG_Drop;
+
 Train_Clean:
 NOCONCATENATE LOAD * RESIDENT Train
 WHERE Len(Trim(T_SWBS)) = 3 AND JCNsInICN = 1;      // single-JCN jobs only
@@ -261,6 +277,8 @@ DROP TABLE Candidates;
 TRACE ============== WCP SCREEN v4 ==============;
 TRACE [rows] rawPhases=$(vRaw)  keptPhases=$(vKept)  jobs(ICN)=$(vNICN);
 TRACE [train] usable jobs=$(vTrainAll)  after SWBS+singleJCN filter=$(vTrain);
+TRACE [bundling] of $(vDTot) jobs: blankSWBS=$(vDNoSW)  BUNDLED(>1 JCN)=$(vDBund)  notInBridge=$(vDNoBr);
+TRACE [bundling] JCNs sitting inside those bundles=$(vDJcns)   <-- if this is large, training is biased toward simple work;
 TRACE [fit] bins=$(vBins) (parent=$(vNPar))  trusted(n>=$(vMinN))=$(vTrust)  negIntercept=$(vNegI)  negSlope=$(vNegS);
 
 // --- which KOs were classified as paperwork? ---
