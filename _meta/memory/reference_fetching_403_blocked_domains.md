@@ -44,3 +44,10 @@ exact PIIDs, obligations, dates, and contracting offices.
 Relates to [[feedback_named_contractor_discipline]] (entities still must surface
 organically) and the CLAUDE.md "no web access" note, which is outdated — web/
 search tools and headed Playwright are available in-session.
+
+**Headed Playwright is no longer sufficient for navsea.navy.mil (2026-07-29).** A fetch of
+`https://www.navsea.navy.mil/Home/RMC/CNRMC/` returned a bare Akamai error reference
+(`errors.edgesuite.net`) rather than page content, with the full stealth setup and a real display.
+So the escalation ladder now ends there for that host: search still works against it, and
+`rand.org` still yields to headed Playwright, but NAVSEA pages may need the operator to open them
+in a normal browser and paste. Do not burn time retrying.
