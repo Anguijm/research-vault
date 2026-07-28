@@ -3851,3 +3851,2597 @@ NEXT vT
 You have successfully taken a broken model, diagnosed the hidden data quality issue (the 0-hour planning phases), built a bulletproof title-screening exclusion list, and fixed the scoring engine.
 
 The Qlik application is now ready to properly triage incoming work for the planning department!
+
+Started loading data
+Ships_T << AIM_Ship
+ Lines fetched: 13
+CohortProjects << AIM_Project
+ Lines fetched: 58,717
+Map_Cohort << CohortProjects
+ Lines fetched: 58,717
+Map_Certified << AIM_CuPhase_Hist
+Lines fetched: 367,450
+Map_CuP_JCN << AIM_JCN
+Lines fetched: 666,515
+CuPhase_Raw << AIM_CuPhase
+Lines fetched: 528,829
+CuPhase_T << CuPhase_Raw
+ Lines fetched: 528,123
+============ PHASE ANATOMY DIAGNOSTIC ============
+
+[rows] rawPhases=528829  keptPhases=528123
+DIAG_Card << CuPhase_T
+ Lines fetched: 1
+[cardinality] phases=528123  distinct ICN=28478  distinct JCN=1  distinct JobSummary=28478
+ICN_per_JCN << CuPhase_T
+ Lines fetched: 0
+DIAG_IPJ << ICN_per_JCN
+ Lines fetched: 0
+[cardinality] ICNs per JCN: median= max=  JCNs spanning >1 ICN= of
+JCN_per_ICN << CuPhase_T
+ Lines fetched: 0
+DIAG_JPI << JCN_per_ICN
+ Lines fetched: 0
+[cardinality] JCNs per ICN: median= max=  ICNs with >1 JCN= of
+ICN_Start << CuPhase_T
+ Lines fetched: 28,478
+Map_ICNStart << ICN_Start
+ Lines fetched: 28,478
+KO_Profile << CuPhase_T
+ Lines fetched: 1,208
+[ko-profile] KO | phases | ICNs | medManhours | medPhaseSpan | medDaysAfterICNstart
+
+[ko-profile] P01 | 19812 | 4953 | 0 | 149 | 0
+
+[ko-profile] T01 | 21980 | 5495 | 8 | 1 | 321.66666666666
+
+[ko-profile] R01 | 33096 | 8274 | 60 | 6 | 307
+
+[ko-profile] F02 | 2728 | 682 | 56 | 11 | 290
+
+[ko-profile] U03 | 5476 | 1369 | 48 | 6 | 304.66666666666
+
+[ko-profile] A01 | 54238 | 13561 | 80 | 22 | 236.66666666666
+
+[ko-profile] I03 | 3652 | 913 | 18 | 8 | 10
+
+[ko-profile] A02 | 14210 | 3554 | 90 | 15 | 332.66666666666
+
+[ko-profile] H03 | 1932 | 483 | 68 | 13 | 323.66666666666
+
+[ko-profile] S01 | 86791 | 21700 | 6 | 349.66666666666 | 0
+
+[ko-profile] S02 | 17417 | 4355 | 0 | 125 | 253.83333333334
+
+[ko-profile] E01 | 11132 | 2783 | 20 | 4 | 348
+
+[ko-profile] I11 | 184 | 46 | 14 | 7.5 | 11.333333333332
+
+[ko-profile] A05 | 2092 | 523 | 93.75 | 12 | 375.5
+
+[ko-profile] A03 | 5989 | 1498 | 88 | 13 | 366
+
+[ko-profile] T02 | 5712 | 1428 | 8 | 1 | 390.33333333333
+
+[ko-profile] A11 | 388 | 97 | 94 | 17 | 362.66666666666
+
+[ko-profile] A12 | 340 | 85 | 99.5 | 18 | 358
+
+[ko-profile] I01 | 15951 | 3990 | 25 | 9 | 176
+
+[ko-profile] D01 | 4684 | 1171 | 64 | 5 | 336
+
+[ko-profile] T05 | 784 | 196 | 8 | 1 | 446.25
+
+[ko-profile] R03 | 6168 | 1542 | 56 | 6 | 359.66666666666
+
+[ko-profile] U02 | 10540 | 2635 | 44 | 5 | 280
+
+[ko-profile] U01 | 28892 | 7223 | 49 | 6 | 256
+
+[ko-profile] R07 | 1580 | 395 | 58 | 8 | 379.66666666666
+
+[ko-profile] R06 | 2048 | 512 | 56 | 7 | 373.16666666666
+
+[ko-profile] U06 | 1748 | 437 | 48 | 7 | 318.66666666666
+
+[ko-profile] R05 | 2684 | 671 | 63 | 7 | 382
+
+[ko-profile] H01 | 28297 | 7075 | 64 | 9 | 217
+
+[ko-profile] T03 | 2412 | 603 | 8 | 1 | 390.5
+
+[ko-profile] F01 | 15384 | 3846 | 44 | 9 | 257.66666666666
+
+[ko-profile] I05 | 2388 | 597 | 20 | 8 | 3
+
+[ko-profile] T06 | 548 | 137 | 8 | 1 | 459.5
+
+[ko-profile] P02 | 3068 | 767 | 14 | 9 | 407.5
+
+[ko-profile] R02 | 11976 | 2994 | 52 | 5 | 328.66666666666
+
+[ko-profile] U04 | 3640 | 910 | 48 | 7 | 311.66666666666
+
+[ko-profile] A04 | 3356 | 839 | 103.5 | 13 | 371
+
+[ko-profile] K01 | 2696 | 674 | 151 | 5 | 360.66666666666
+
+[ko-profile] H02 | 5421 | 1356 | 62.75 | 12 | 290
+
+[ko-profile] I02 | 5513 | 1379 | 20 | 8 | 79.666666666664
+
+[ko-profile] R04 | 4048 | 1012 | 56 | 7 | 362.83333333333
+
+[ko-profile] S09 | 420 | 105 | 1195.5 | 31.665972222225 | 243
+
+[ko-profile] S07 | 528 | 132 | 659 | 31.665972222225 | 184
+
+[ko-profile] P03 | 1012 | 253 | 28 | 9 | 442.66666666666
+
+[ko-profile] S11 | 312 | 78 | 1884.5 | 31.499652777777 | 304
+
+[ko-profile] S16 | 220 | 55 | 2650 | 31 | 456.5
+
+[ko-profile] D04 | 244 | 61 | 68 | 4 | 340
+
+[ko-profile] S15 | 232 | 58 | 2433.5 | 32 | 426
+
+[ko-profile] T08 | 264 | 66 | 8 | 1.6666666666642 | 416.5
+
+[ko-profile] S10 | 348 | 87 | 2003.4 | 32 | 274
+
+[ko-profile] S13 | 252 | 63 | 2727.5 | 32 | 364.83333333334
+
+[ko-profile] S12 | 284 | 71 | 2344.5 | 31.665972222225 | 335
+
+[ko-profile] S14 | 248 | 62 | 1949 | 31.665972222225 | 395
+
+[ko-profile] S20 | 168 | 42 | 1123 | 31.665972222225 | 567.16666666667
+
+[ko-profile] U10 | 640 | 160 | 49 | 8 | 367.33333333333
+
+[ko-profile] R10 | 820 | 205 | 62.5 | 7 | 433.5
+
+[ko-profile] R12 | 548 | 137 | 64 | 9 | 456
+
+[ko-profile] E18 | 12 | 3 | 29 | 6 | 705
+
+[ko-profile] E17 | 8 | 2 | 18 | 5 | 559.75
+
+[ko-profile] E16 | 4 | 1 | 12 | 6 | 415.5
+
+[ko-profile] S03 | 3312 | 828 | 0 | 85 | 263
+
+[ko-profile] H24 | 20 | 5 | 15 | 3 | 235
+
+[ko-profile] R19 | 216 | 54 | 64 | 8.5 | 416.08333333333
+
+[ko-profile] T04 | 1248 | 312 | 8 | 1 | 422.5
+
+[ko-profile] E57 | 4 | 1 | 36 | 9 | 408.5
+
+[ko-profile] D03 | 532 | 133 | 72 | 4 | 307
+
+[ko-profile] U05 | 2380 | 595 | 50 | 7 | 317.66666666666
+[ko-profile] I19 | 48 | 12 | 0 | 7.6666666666642 | 15
+
+[ko-profile] R08 | 1260 | 315 | 62.5 | 9 | 398.66666666666
+
+[ko-profile] R09 | 988 | 247 | 56 | 8 | 421
+
+[ko-profile] U07 | 1316 | 329 | 48 | 7 | 325.66666666666
+
+[ko-profile] E50 | 4 | 1 | 22 | 4 | 404.5
+
+[ko-profile] I06 | 700 | 175 | 21 | 6 | 10
+
+[ko-profile] S04 | 1436 | 359 | 8 | 50 | 191
+
+[ko-profile] U12 | 436 | 109 | 63.5 | 8 | 360.66666666666
+
+[ko-profile] H40 | 8 | 2 | 32 | 25.5 | 191.25
+
+[ko-profile] M01 | 2544 | 636 | 0 | 26.166666666664 | 235.5
+
+[ko-profile] I21 | 36 | 9 | 0 | 5 | 13
+
+[ko-profile] I26 | 16 | 4 | 0 | 10.416666666668 | 113.25
+
+[ko-profile] I24 | 24 | 6 | 0 | 17 | 42.25
+
+[ko-profile] I25 | 16 | 4 | 0 | 12.5 | 113.75
+
+[ko-profile] S06 | 636 | 159 | 82.25 | 32 | 153
+
+[ko-profile] A13 | 288 | 72 | 102 | 21 | 356
+
+[ko-profile] U51 | 8 | 2 | 82.5 | 22.5 | 375.5
+
+[ko-profile] A08 | 756 | 189 | 127.75 | 19 | 356
+
+[ko-profile] R13 | 452 | 113 | 64 | 8 | 447.5
+
+[ko-profile] U13 | 344 | 86 | 60 | 6 | 368
+
+[ko-profile] C01 | 1476 | 369 | 50.5 | 31.833333333336 | 97
+
+[ko-profile] E33 | 4 | 1 | 24 | 5 | 401.5
+
+[ko-profile] U08 | 1016 | 254 | 52 | 8 | 340.33333333333
+
+[ko-profile] E04 | 500 | 125 | 16 | 4 | 447.66666666666
+
+[ko-profile] E02 | 2748 | 687 | 18 | 4 | 404.5
+
+[ko-profile] H05 | 540 | 135 | 72 | 15 | 331
+
+[ko-profile] H04 | 944 | 236 | 97.5 | 19.5 | 332.83333333333
+
+[ko-profile] S21 | 144 | 36 | 1261.5 | 31.166666666664 | 592.16666666667
+
+[ko-profile] S19 | 152 | 38 | 1628.25 | 31.665972222225 | 546
+
+[ko-profile] S18 | 188 | 47 | 1393 | 31 | 514.5
+
+[ko-profile] S17 | 204 | 51 | 2449.25 | 32 | 485
+
+[ko-profile] D02 | 1444 | 361 | 61.75 | 5 | 335.5
+
+[ko-profile] E35 | 4 | 1 | 28 | 10 | 404.5
+
+[ko-profile] T07 | 400 | 100 | 8 | 1 | 472.33333333333
+
+[ko-profile] S22 | 120 | 30 | 1050.5 | 32 | 609
+
+[ko-profile] D07 | 100 | 25 | 86 | 5 | 363
+
+[ko-profile] D08 | 68 | 17 | 62 | 5 | 366
+
+[ko-profile] S05 | 872 | 218 | 50.5 | 32 | 169
+
+[ko-profile] H06 | 384 | 96 | 75 | 13.5 | 321
+
+[ko-profile] U19 | 128 | 32 | 48 | 6.5 | 364.83333333333
+
+[ko-profile] S23 | 116 | 29 | 869.75 | 32 | 640
+
+[ko-profile] S24 | 96 | 24 | 815 | 31 | 637.5
+
+[ko-profile] S25 | 104 | 26 | 536.5 | 32 | 662.83333333333
+
+[ko-profile] S30 | 61 | 16 | 254 | 32 | 483
+
+[ko-profile] S29 | 72 | 18 | 484.25 | 31.832986111112 | 511.5
+
+[ko-profile] S31 | 48 | 12 | 394 | 206.5 | 353.83333333333
+
+[ko-profile] S32 | 52 | 13 | 540.25 | 29 | 483
+
+[ko-profile] S28 | 80 | 20 | 870.5 | 31 | 617.75
+
+[ko-profile] S27 | 80 | 20 | 1129 | 31.832986111112 | 571.5
+
+[ko-profile] S26 | 92 | 23 | 918.5 | 31 | 629.5
+
+[ko-profile] D05 | 172 | 43 | 75.5 | 5 | 337
+
+[ko-profile] S43 | 20 | 5 | 0 | 552.66666666666 | 12
+
+[ko-profile] P04 | 508 | 127 | 38 | 9 | 420.5
+
+[ko-profile] I04 | 2676 | 669 | 20 | 8 | 4
+
+[ko-profile] R17 | 276 | 69 | 86.5 | 9 | 409.5
+
+[ko-profile] T10 | 200 | 50 | 13.5 | 2 | 420.5
+
+[ko-profile] R30 | 56 | 14 | 46 | 5 | 439.16666666666
+
+[ko-profile] U30 | 48 | 12 | 39 | 5 | 454.25
+
+[ko-profile] A07 | 1024 | 256 | 76 | 14 | 363.33333333333
+
+[ko-profile] U16 | 248 | 62 | 52 | 9 | 352.08333333333
+
+[ko-profile] U31 | 44 | 11 | 34 | 5 | 511.5
+
+[ko-profile] R48 | 16 | 4 | 89 | 8 | 483
+
+[ko-profile] H43 | 8 | 2 | 46 | 15 | 191.25
+
+[ko-profile] U49 | 8 | 2 | 48 | 25 | 384.5
+
+[ko-profile] R39 | 32 | 8 | 66 | 11 | 550.25
+
+[ko-profile] U55 | 8 | 2 | 121 | 14 | 380.5
+
+[ko-profile] I23 | 24 | 6 | 0 | 12.416666666668 | 1.25
+
+[ko-profile] U11 | 564 | 141 | 52.5 | 9 | 367
+
+[ko-profile] R11 | 660 | 165 | 64 | 7 | 437
+
+[ko-profile] E30 | 4 | 1 | 24 | 3 | 413.5
+
+[ko-profile] R34 | 40 | 10 | 37 | 7.5 | 440.08333333333
+
+[ko-profile] E31 | 8 | 2 | 30 | 6.5 | 558.75
+
+[ko-profile] A06 | 1476 | 369 | 96 | 10 | 375.5
+
+[ko-profile] U24 | 60 | 15 | 45 | 4 | 310
+
+[ko-profile] F99 | 4 | 1 | 88 | 12 | 472.5
+
+[ko-profile] R46 | 20 | 5 | 32 | 9 | 630
+
+[ko-profile] E03 | 896 | 224 | 16 | 4 | 421.33333333333
+
+[ko-profile] F91 | 4 | 1 | 72 | 55 | 464.5
+
+[ko-profile] E22 | 8 | 2 | 15.5 | 4 | 365.58333333333
+
+[ko-profile] H38 | 8 | 2 | 27 | 11 | 190.25
+
+[ko-profile] H26 | 16 | 4 | 58.5 | 15 | 255.75
+
+[ko-profile] E11 | 28 | 7 | 16 | 5 | 390.5
+
+[ko-profile] E27 | 8 | 2 | 16.5 | 7 | 550.75
+
+[ko-profile] E36 | 4 | 1 | 40 | 13 | 401.5
+
+[ko-profile] U38 | 28 | 7 | 78 | 5 | 466.5
+
+[ko-profile] R37 | 32 | 8 | 60 | 10 | 550.75
+
+[ko-profile] I12 | 144 | 36 | 20 | 6 | 7.5
+
+[ko-profile] U43 | 20 | 5 | 84 | 15 | 451
+
+[ko-profile] R42 | 20 | 5 | 63.5 | 8 | 500
+
+[ko-profile] F38 | 4 | 1 | 8 | 1 | 486.5
+
+[ko-profile] I07 | 468 | 117 | 20 | 7 | 8
+
+[ko-profile] T09 | 208 | 52 | 8 | 2 | 445
+
+[ko-profile] R28 | 84 | 21 | 50 | 7 | 422
+
+[ko-profile] E55 | 4 | 1 | 40 | 7 | 413.5
+
+[ko-profile] E13 | 12 | 3 | 26 | 5 | 406.5
+
+[ko-profile] H39 | 8 | 2 | 30 | 9 | 190.25
+
+[ko-profile] U09 | 796 | 199 | 55 | 8 | 360.5
+
+[ko-profile] H34 | 12 | 3 | 32 | 4 | 310.5
+
+[ko-profile] I08 | 388 | 97 | 20 | 8 | 12
+
+[ko-profile] U41 | 24 | 6 | 92 | 9.5 | 456.5
+
+[ko-profile] U46 | 12 | 3 | 72 | 20 | 493.5
+
+[ko-profile] A09 | 572 | 143 | 128 | 17 | 365.5
+
+[ko-profile] E23 | 8 | 2 | 10 | 4 | 365.58333333333
+
+[ko-profile] U27 | 68 | 17 | 58 | 3 | 380.66666666666
+
+[ko-profile] U39 | 28 | 7 | 56 | 8 | 465.5
+
+[ko-profile] R38 | 32 | 8 | 72 | 11 | 556.25
+
+[ko-profile] R26 | 100 | 25 | 24 | 5 | 439.66666666666
+
+[ko-profile] U47 | 8 | 2 | 56 | 10.5 | 376
+
+[ko-profile] R47 | 20 | 5 | 42 | 8 | 579.5
+
+[ko-profile] R55 | 16 | 4 | 146 | 8.5 | 477.58333333333
+
+[ko-profile] E32 | 8 | 2 | 36 | 4 | 544.25
+
+[ko-profile] U42 | 24 | 6 | 50 | 7 | 461
+
+[ko-profile] F04 | 504 | 126 | 58 | 17 | 336.16666666666
+
+[ko-profile] F16 | 36 | 9 | 32 | 5 | 326
+
+[ko-profile] F06 | 212 | 53 | 48 | 16 | 323
+
+[ko-profile] H42 | 8 | 2 | 45.5 | 21.5 | 169.75
+
+[ko-profile] R41 | 20 | 5 | 78 | 7 | 587.5
+
+[ko-profile] H41 | 8 | 2 | 71 | 20 | 183.25
+
+[ko-profile] E09 | 40 | 10 | 11 | 8.5 | 416.33333333333
+
+[ko-profile] H37 | 12 | 3 | 14 | 3 | 257
+
+[ko-profile] U14 | 296 | 74 | 58 | 7.6666666666642 | 364.5
+
+[ko-profile] E37 | 8 | 2 | 18 | 3.5 | 560.75
+
+[ko-profile] M02 | 484 | 121 | 10 | 25 | 275
+
+[ko-profile] A30 | 48 | 12 | 150 | 26.5 | 302
+
+[ko-profile] E07 | 116 | 29 | 16 | 6 | 452
+
+[ko-profile] E29 | 4 | 1 | 16 | 7 | 414.5
+
+[ko-profile] K02 | 668 | 167 | 118 | 6 | 381.66666666666
+
+[ko-profile] E20 | 12 | 3 | 20 | 2 | 394.5
+
+[ko-profile] R20 | 208 | 52 | 45.25 | 9 | 402.5
+
+[ko-profile] U20 | 120 | 30 | 56 | 7 | 364.58333333333
+
+[ko-profile] R24 | 136 | 34 | 31.5 | 6 | 460.33333333333
+
+[ko-profile] E38 | 4 | 1 | 28 | 4 | 412.5
+
+[ko-profile] H20 | 32 | 8 | 88 | 10 | 293.5
+
+[ko-profile] H19 | 28 | 7 | 84 | 19 | 291
+
+[ko-profile] E44 | 4 | 1 | 20 | 6 | 401.5
+
+[ko-profile] F05 | 304 | 76 | 77 | 16 | 324
+
+[ko-profile] E28 | 4 | 1 | 12 | 7 | 414.5
+
+[ko-profile] E56 | 4 | 1 | 27 | 7 | 414.5
+
+[ko-profile] E06 | 204 | 51 | 16 | 5 | 453.5
+
+[ko-profile] I09 | 324 | 81 | 24 | 7 | 10
+
+[ko-profile] R16 | 324 | 81 | 61 | 6 | 412
+
+[ko-profile] R14 | 408 | 102 | 74 | 9 | 417.5
+
+[ko-profile] U52 | 8 | 2 | 121 | 11.5 | 384.5
+
+[ko-profile] U25 | 64 | 16 | 55 | 8 | 361.33333333333
+
+[ko-profile] U29 | 44 | 11 | 47 | 5 | 392.66666666666
+
+[ko-profile] H11 | 88 | 22 | 81.25 | 12 | 341.83333333333
+
+[ko-profile] H10 | 116 | 29 | 38 | 16 | 347
+
+[ko-profile] H12 | 72 | 18 | 79.25 | 14.5 | 378
+
+[ko-profile] R52 | 16 | 4 | 96 | 12.5 | 440
+
+[ko-profile] U26 | 64 | 16 | 58.5 | 6 | 387.33333333333
+
+[ko-profile] R40 | 24 | 6 | 18 | 11.5 | 475.25
+
+[ko-profile] H25 | 20 | 5 | 24 | 6 | 250
+
+[ko-profile] E59 | 4 | 1 | 15 | 6 | 415.5
+
+[ko-profile] H46 | 8 | 2 | 19.5 | 24 | 194.25
+
+[ko-profile] U48 | 8 | 2 | 41.5 | 22.5 | 399.5
+
+[ko-profile] E53 | 4 | 1 | 4 | 3 | 404.5
+
+[ko-profile] E52 | 4 | 1 | 4 | 3 | 404.5
+
+[ko-profile] T13 | 108 | 27 | 12 | 3 | 261
+
+[ko-profile] A14 | 268 | 67 | 125 | 23 | 334.5
+
+[ko-profile] E41 | 4 | 1 | 32 | 8 | 405.5
+
+[ko-profile] E05 | 292 | 73 | 16 | 5 | 425
+
+[ko-profile] R29 | 64 | 16 | 35 | 6 | 449.83333333333
+
+[ko-profile] R43 | 20 | 5 | 72 | 11 | 587.5
+
+[ko-profile] H09 | 136 | 34 | 55.5 | 11.5 | 340.83333333333
+
+[ko-profile] H08 | 192 | 48 | 71.5 | 12.5 | 335.83333333333
+
+[ko-profile] H07 | 248 | 62 | 72 | 11.5 | 345
+
+[ko-profile] E47 | 4 | 1 | 18 | 7 | 415.5
+
+[ko-profile] P05 | 328 | 82 | 45 | 10 | 428.5
+
+[ko-profile] A10 | 452 | 113 | 104 | 17 | 358.66666666666
+
+[ko-profile] D06 | 120 | 30 | 122 | 5 | 364.33333333333
+
+[ko-profile] A20 | 108 | 27 | 232 | 25 | 286.66666666666
+
+[ko-profile] F03 | 984 | 246 | 68.5 | 13 | 293.66666666666
+
+[ko-profile] U22 | 104 | 26 | 52.5 | 7 | 366.16666666666
+
+[ko-profile] R22 | 176 | 44 | 58 | 5 | 442.83333333333
+
+[ko-profile] U15 | 256 | 64 | 63.5 | 8 | 362.16666666666
+
+[ko-profile] A15 | 232 | 58 | 148 | 22 | 345.5
+
+[ko-profile] U17 | 196 | 49 | 46 | 9 | 334
+
+[ko-profile] I10 | 276 | 69 | 18 | 7.3333333333285 | 6
+
+[ko-profile] S08 | 448 | 112 | 960.5 | 32 | 214
+
+[ko-profile] P08 | 104 | 26 | 48 | 10 | 434.58333333333
+
+[ko-profile] A16 | 197 | 50 | 147 | 19 | 349.66666666666
+
+[ko-profile] R27 | 96 | 24 | 26 | 5 | 438.66666666666
+
+[ko-profile] H15 | 40 | 10 | 86.5 | 13 | 357.75
+
+[ko-profile] R62 | 12 | 3 | 68 | 13 | 614.5
+
+[ko-profile] R15 | 364 | 91 | 63.5 | 7 | 433
+
+[ko-profile] S59 | 20 | 5 |  | 372.66666666666 | 225.66666666666
+
+[ko-profile] S56 | 24 | 6 |  | 197.33333333333 | 354.33333333333
+
+[ko-profile] S58 | 20 | 5 |  | 326.66666666666 | 225.66666666666
+
+[ko-profile] S61 | 20 | 5 |  | 62 | 225.66666666666
+
+[ko-profile] S60 | 24 | 6 |  | 151.33333333333 | 384
+
+[ko-profile] S62 | 12 | 3 |  | 123 | 533
+
+[ko-profile] S63 | 24 | 6 |  | 191.33333333333 | 122.83333333333
+
+[ko-profile] S57 | 20 | 5 |  | 326.66666666666 | 483
+
+[ko-profile] R18 | 248 | 62 | 53.5 | 7.5 | 413.5
+
+[ko-profile] T16 | 84 | 21 | 10 | 2 | 214
+
+[ko-profile] H13 | 60 | 15 | 70.75 | 13 | 280.5
+
+[ko-profile] S52 | 24 | 6 |  | 313.83333333333 | 122.83333333333
+
+[ko-profile] S49 | 12 | 3 |  | 409 | 483
+
+[ko-profile] S48 | 24 | 6 |  | 386.83333333333 | 16
+
+[ko-profile] S50 | 24 | 6 |  | 480.83333333333 | 6
+
+[ko-profile] S51 | 16 | 4 |  | 337.33333333333 | 118.83333333333
+
+[ko-profile] S47 | 20 | 5 |  | 552.66666666666 | 12
+
+[ko-profile] S46 | 16 | 4 |  | 549.5 | 10
+
+[ko-profile] S45 | 16 | 4 |  | 378.33333333333 | 10
+
+[ko-profile] S53 | 16 | 4 |  | 367.83333333333 | 188
+
+[ko-profile] S54 | 28 | 7 |  | 326.66666666666 | 225.66666666666
+
+[ko-profile] S35 | 45 | 12 | 191.5 | 32 | 540
+
+[ko-profile] S36 | 41 | 11 | 811.25 | 32 | 52
+
+[ko-profile] S37 | 41 | 11 | 514.5 | 31 | 483
+
+[ko-profile] S34 | 49 | 13 | 211.25 | 30 | 483
+
+[ko-profile] S40 | 29 | 8 | 504.5 | 553.66666666666 | 12
+
+[ko-profile] S42 | 28 | 7 | 0 | 409 | 12
+
+[ko-profile] S41 | 25 | 7 | 0 | 447 | 20
+
+[ko-profile] S44 | 24 | 6 |  | 481.33333333333 | 6
+
+[ko-profile] S39 | 33 | 9 | 287.5 | 375.66666666666 | 52
+
+[ko-profile] S38 | 41 | 11 | 896 | 381 | 20
+
+[ko-profile] S33 | 52 | 13 | 203.25 | 39.666666666664 | 416
+
+[ko-profile] R21 | 188 | 47 | 48 | 6 | 444.66666666666
+
+[ko-profile] H45 | 8 | 2 | 35 | 17.5 | 194.25
+
+[ko-profile] H14 | 56 | 14 | 61 | 20.5 | 340.25
+
+[ko-profile] R51 | 16 | 4 | 75 | 10 | 466
+
+[ko-profile] R35 | 40 | 10 | 32 | 5 | 448.58333333333
+
+[ko-profile] H30 | 16 | 4 | 62 | 25.5 | 254.25
+
+[ko-profile] U32 | 36 | 9 | 58 | 6 | 437
+
+[ko-profile] R49 | 16 | 4 | 80 | 8 | 472
+
+[ko-profile] A17 | 176 | 44 | 70.5 | 13 | 352.33333333333
+
+[ko-profile] U40 | 24 | 6 | 32 | 6.5 | 443.75
+
+[ko-profile] R32 | 52 | 13 | 68 | 15 | 439.66666666666
+
+[ko-profile] U44 | 16 | 4 | 104.75 | 18 | 610.25
+
+[ko-profile] U21 | 112 | 28 | 46 | 8.8333333333321 | 365.33333333333
+
+[ko-profile] P09 | 72 | 18 | 208 | 9.5 | 417.08333333333
+
+[ko-profile] P10 | 52 | 13 |  | 8 | 543
+
+[ko-profile] A25 | 76 | 19 | 160 | 17 | 427
+
+[ko-profile] H28 | 16 | 4 | 31.5 | 4.5 | 272.25
+
+[ko-profile] K04 | 116 | 29 | 0 | 5 | 386.5
+
+[ko-profile] U18 | 156 | 39 | 48.25 | 6 | 371.66666666666
+
+[ko-profile] R50 | 16 | 4 | 84 | 8 | 466
+
+[ko-profile] R56 | 12 | 3 | 82 | 6 | 639.5
+
+[ko-profile] U36 | 32 | 8 | 38 | 9 | 448.75
+
+[ko-profile] R70 | 4 | 1 | 72 | 9 | 633.5
+
+[ko-profile] F57 | 4 | 1 | 68 | 12 | 549.5
+
+[ko-profile] A18 | 140 | 35 | 132 | 22 | 323.5
+
+[ko-profile] F87 | 4 | 1 | 72 | 20 | 474.5
+
+[ko-profile] F89 | 4 | 1 | 80 | 55 | 464.5
+
+[ko-profile] F45 | 4 | 1 | 76 | 94 | 459.5
+
+[ko-profile] F86 | 4 | 1 | 84 | 13 | 471.5
+
+[ko-profile] U68 | 4 | 1 | 64 | 10 | 513.5
+
+[ko-profile] T11 | 160 | 40 | 8 | 2 | 380.75
+
+[ko-profile] R36 | 36 | 9 | 28 | 10 | 500.5
+
+[ko-profile] U62 | 4 | 1 | 82 | 10 | 501.5
+
+[ko-profile] R60 | 8 | 2 | 79 | 32 | 683
+
+[ko-profile] F17 | 28 | 7 | 16 | 5 | 326
+
+[ko-profile] F15 | 40 | 10 | 24 | 5.5 | 405.33333333333
+
+[ko-profile] A26 | 68 | 17 | 104 | 17 | 430.5
+
+[ko-profile] F07 | 164 | 41 | 62.5 | 19 | 334
+
+[ko-profile] P18 | 12 | 3 |  | 8 | 596
+
+[ko-profile] U67 | 4 | 1 | 203 | 10 | 513.5
+
+[ko-profile] F84 | 4 | 1 | 84 | 20 | 474.5
+
+[ko-profile] P06 | 240 | 60 | 112 | 9 | 444
+
+[ko-profile] U28 | 56 | 14 | 56 | 4.5 | 448.08333333333
+
+[ko-profile] P07 | 140 | 35 | 36 | 11 | 440.5
+
+[ko-profile] F90 | 4 | 1 | 87 | 13 | 471.5
+
+[ko-profile] F52 | 4 | 1 | 72 | 12 | 546.5
+
+[ko-profile] M03 | 128 | 32 | 10 | 30.333333333328 | 343.5
+
+[ko-profile] F08 | 108 | 27 | 128 | 14 | 385
+
+[ko-profile] F77 | 4 | 1 | 74 | 12 | 549.5
+
+[ko-profile] P11 | 40 | 10 |  | 8.5 | 514.25
+
+[ko-profile] F11 | 72 | 18 | 57 | 15.5 | 381.75
+
+[ko-profile] F10 | 72 | 18 | 59.5 | 9.5 | 358.58333333333
+
+[ko-profile] F65 | 4 | 1 | 66 | 86 | 467.5
+
+[ko-profile] F47 | 4 | 1 | 70 | 16 | 542.5
+
+[ko-profile] F81 | 4 | 1 | 67 | 10 | 551.5
+
+[ko-profile] F83 | 4 | 1 | 88 | 17 | 467.5
+
+[ko-profile] FAB | 4 | 1 | 100 | 20 | 464.5
+
+[ko-profile] FAA | 4 | 1 | 60 | 18 | 501.5
+
+[ko-profile] R61 | 12 | 3 | 48 | 17 | 614.5
+
+[ko-profile] F51 | 4 | 1 | 84 | 94 | 459.5
+
+[ko-profile] H16 | 36 | 9 | 59 | 9 | 264
+
+[ko-profile] F97 | 4 | 1 | 84 | 27 | 467.5
+
+[ko-profile] F96 | 4 | 1 | 64 | 18 | 501.5
+
+[ko-profile] F98 | 4 | 1 | 77 | 20 | 464.5
+
+[ko-profile] F80 | 4 | 1 | 82 | 12 | 549.5
+
+[ko-profile] K03 | 224 | 56 | 152 | 6 | 390.66666666666
+
+[ko-profile] R23 | 128 | 32 | 30 | 5 | 456.5
+
+[ko-profile] H44 | 8 | 2 | 42 | 17.5 | 194.25
+
+[ko-profile] H32 | 16 | 4 | 96 | 4 | 280.25
+
+[ko-profile] R33 | 52 | 13 | 44 | 6 | 486.5
+
+[ko-profile] H29 | 16 | 4 | 26 | 14.5 | 248.25
+
+[ko-profile] R45 | 16 | 4 | 273.5 | 10.5 | 484.5
+
+[ko-profile] A27 | 64 | 16 | 112 | 26.5 | 443.75
+
+[ko-profile] U60 | 4 | 1 | 110 | 35 | 503.5
+
+[ko-profile] F20 | 20 | 5 | 16 | 4 | 326
+
+[ko-profile] F14 | 44 | 11 | 38 | 6 | 328
+
+[ko-profile] E49 | 4 | 1 | 24 | 8 | 412.5
+
+[ko-profile] I27 | 20 | 5 | 0 | 8 | 115
+
+[ko-profile] F54 | 4 | 1 | 88 | 94 | 459.5
+
+[ko-profile] R31 | 48 | 12 | 28 | 7 | 432.66666666666
+
+[ko-profile] I16 | 68 | 17 | 0 | 8 | 14
+
+[ko-profile] R53 | 16 | 4 | 110 | 11.5 | 490.5
+
+[ko-profile] I20 | 36 | 9 | 0 | 8 | 3
+
+[ko-profile] E54 | 4 | 1 | 20 | 2 | 419.5
+
+[ko-profile] T12 | 132 | 33 | 8 | 2 | 351
+
+[ko-profile] I18 | 48 | 12 | 0 | 7.1666666666642 | 7
+
+[ko-profile] F82 | 4 | 1 | 93 | 23 | 461.5
+
+[ko-profile] E39 | 4 | 1 | 52 | 6 | 415.5
+
+[ko-profile] E25 | 4 | 1 | 26 | 7 | 414.5
+
+[ko-profile] E43 | 4 | 1 | 27 | 6 | 401.5
+
+[ko-profile] E12 | 12 | 3 | 12 | 4 | 390.5
+
+[ko-profile] E21 | 8 | 2 | 18 | 5.5 | 364.08333333333
+
+[ko-profile] H18 | 28 | 7 | 64 | 33 | 292
+
+[ko-profile] H17 | 28 | 7 | 52 | 20 | 291
+
+[ko-profile] E14 | 8 | 2 | 19 | 6 | 577
+
+[ko-profile] E15 | 4 | 1 | 50 | 7 | 406.5
+
+[ko-profile] E61 | 4 | 1 | 40 | 8 | 405.5
+
+[ko-profile] H36 | 8 | 2 | 60.5 | 13.5 | 273.75
+
+[ko-profile] F50 | 4 | 1 | 74 | 94 | 459.5
+
+[ko-profile] I14 | 88 | 22 | 10 | 5.5 | 6
+
+[ko-profile] I15 | 88 | 22 | 4 | 8 | 13.5
+
+[ko-profile] U54 | 8 | 2 | 146 | 14.5 | 395.5
+
+[ko-profile] R25 | 116 | 29 | 54.8 | 7 | 435
+
+[ko-profile] E46 | 4 | 1 | 36 | 12 | 414.5
+
+[ko-profile] T15 | 96 | 24 | 24 | 3 | 192
+
+[ko-profile] I17 | 64 | 16 | 8 | 8 | 14
+
+[ko-profile] U33 | 32 | 8 | 50 | 3.5 | 461.75
+
+[ko-profile] T14 | 92 | 23 | 8 | 2 | 196.66666666666
+
+[ko-profile] E26 | 4 | 1 | 36 | 7 | 414.5
+
+[ko-profile] E40 | 4 | 1 | 40 | 2 | 419.5
+
+[ko-profile] U53 | 8 | 2 | 175 | 22 | 384.5
+
+[ko-profile] H31 | 20 | 5 | 24 | 4 | 248
+
+[ko-profile] F72 | 4 | 1 | 60 | 82 | 471.5
+
+[ko-profile] F56 | 4 | 1 | 58 | 12 | 549.5
+
+[ko-profile] F64 | 4 | 1 | 69 | 15 | 546.5
+
+[ko-profile] E10 | 48 | 12 | 14 | 4.5 | 424.75
+
+[ko-profile] E34 | 4 | 1 | 32 | 8 | 405.5
+
+[ko-profile] E51 | 4 | 1 | 8 | 5 | 408.5
+
+[ko-profile] R54 | 16 | 4 | 123 | 8.5 | 515
+
+[ko-profile] F28 | 4 | 1 | 8 | 2 | 481.5
+
+[ko-profile] F21 | 20 | 5 | 16 | 3 | 328
+
+[ko-profile] U66 | 4 | 1 | 56 | 12 | 511.5
+
+[ko-profile] E08 | 72 | 18 | 10 | 5.5 | 407.58333333333
+
+[ko-profile] R67 | 4 | 1 | 226 | 57 | 628.5
+
+[ko-profile] U50 | 8 | 2 | 74 | 22.5 | 375.5
+
+[ko-profile] U58 | 4 | 1 | 132 | 32 | 506.5
+
+[ko-profile] U61 | 4 | 1 | 102 | 15 | 496.5
+
+[ko-profile] U63 | 4 | 1 | 210 | 39 | 496.5
+
+[ko-profile] E58 | 4 | 1 | 44 | 6 | 421.5
+
+[ko-profile] E45 | 4 | 1 | 24 | 6 | 401.5
+
+[ko-profile] E60 | 4 | 1 | 13 | 6 | 415.5
+
+[ko-profile] E19 | 8 | 2 | 11 | 6.5 | 560.25
+
+[ko-profile] U57 | 8 | 2 | 90.5 | 17 | 442
+
+[ko-profile] R44 | 20 | 5 | 74 | 10 | 667.5
+
+[ko-profile] E42 | 4 | 1 | 16 | 6 | 401.5
+
+[ko-profile] E48 | 4 | 1 | 28 | 6 | 416.5
+
+[ko-profile] U56 | 4 | 1 | 129 | 23 | 507.5
+
+[ko-profile] I29 | 16 | 4 | 0 | 17.5 | 169.5
+
+[ko-profile] I28 | 16 | 4 | 0 | 16 | 169.5
+
+[ko-profile] H33 | 12 | 3 | 35 | 10 | 259.5
+
+[ko-profile] H35 | 8 | 2 | 76 | 28 | 253.25
+
+[ko-profile] H21 | 28 | 7 | 71 | 9 | 291
+
+[ko-profile] U23 | 80 | 20 | 32 | 7 | 388
+
+[ko-profile] H22 | 28 | 7 | 15 | 4 | 310.5
+
+[ko-profile] U37 | 24 | 6 | 62 | 4 | 472.5
+
+[ko-profile] U35 | 32 | 8 | 73 | 5.5 | 472.5
+
+[ko-profile] H27 | 12 | 3 | 9 | 3 | 235
+
+[ko-profile] H23 | 20 | 5 | 8 | 3 | 234
+
+[ko-profile] U45 | 20 | 5 | 70 | 5 | 480
+
+[ko-profile] U34 | 32 | 8 | 74.5 | 5 | 485.25
+
+[ko-profile] S68 | 12 | 3 |  | 326.66666666666 | 225.66666666666
+
+[ko-profile] S70 | 8 | 2 |  | 374.83333333333 | 241.5
+
+[ko-profile] S71 | 12 | 3 |  | 409 | 21
+
+[ko-profile] S65 | 16 | 4 |  | 164.33333333333 | 112.83333333333
+
+[ko-profile] S64 | 16 | 4 |  | 164.33333333333 | 354.33333333333
+
+[ko-profile] S73 | 8 | 2 |  | 367.83333333333 | 241.5
+
+[ko-profile] S72 | 4 | 1 |  | 326.66666666666 | 0
+
+[ko-profile] S55 | 16 | 4 |  | 217.33333333333 | 354.33333333333
+
+[ko-profile] P16 | 12 | 3 |  | 11 | 583
+
+[ko-profile] A21 | 100 | 25 | 147 | 16 | 297
+
+[ko-profile] F13 | 60 | 15 | 24 | 4 | 405
+
+[ko-profile] C02 | 292 | 73 | 26.4 | 5 | 554
+
+[ko-profile] F09 | 88 | 22 | 57.5 | 14 | 331.5
+
+[ko-profile] A31 | 40 | 10 | 115 | 26.5 | 275.5
+
+[ko-profile] F12 | 68 | 17 | 56 | 16 | 376.5
+
+[ko-profile] A19 | 120 | 30 | 65 | 14.5 | 307.83333333333
+
+[ko-profile] S69 | 12 | 3 |  | 409 | 225.66666666666
+
+[ko-profile] A24 | 72 | 18 | 164.75 | 6.5 | 361
+
+[ko-profile] A22 | 84 | 21 | 124 | 20 | 353
+
+[ko-profile] S67 | 12 | 3 |  | 2 | 483
+
+[ko-profile] S66 | 12 | 3 |  | 2 | 483
+
+[ko-profile] K05 | 76 | 19 | 0 | 7 | 412.5
+
+[ko-profile] P12 | 24 | 6 |  | 11 | 554.25
+
+[ko-profile] S82 | 12 | 3 |  | 211 | 203
+
+[ko-profile] S81 | 8 | 2 |  | 272.33333333333 | 387.5
+
+[ko-profile] S79 | 8 | 2 |  | 238.83333333333 | 387.5
+
+[ko-profile] S78 | 12 | 3 |  | 331 | 21
+
+[ko-profile] S77 | 8 | 2 |  | 246.33333333333 | 387.5
+
+[ko-profile] A23 | 76 | 19 | 199 | 22 | 371
+
+[ko-profile] K08 | 28 | 7 | 0 | 4 | 336
+
+[ko-profile] P30 | 4 | 1 |  | 2 | 545.5
+
+[ko-profile] I22 | 20 | 5 | 0 | 17.833333333336 | 0.5
+
+[ko-profile] H47 | 4 | 1 | 60 | 3 | 378.5
+
+[ko-profile] P32 | 4 | 1 |  | 2 | 487.5
+
+[ko-profile] P33 | 4 | 1 |  | 4 | 529.5
+
+[ko-profile] P34 | 4 | 1 |  | 1 | 541.5
+
+[ko-profile] P35 | 4 | 1 |  | 1 | 486.5
+
+[ko-profile] K06 | 48 | 12 | 0 | 4 | 355.16666666666
+
+[ko-profile] I13 | 104 | 26 | 20 | 7 | 9
+
+[ko-profile] D09 | 56 | 14 | 82 | 5 | 357
+
+[ko-profile] K09 | 20 | 5 | 282 | 5 | 336.66666666666
+
+[ko-profile] F22 | 20 | 5 | 16 | 8 | 328
+
+[ko-profile] F18 | 28 | 7 | 16 | 6 | 326
+
+[ko-profile] K07 | 32 | 8 | 0 | 4 | 367.33333333333
+
+[ko-profile] M05 | 20 | 5 | 0 | 110 | 484
+
+[ko-profile] M04 | 44 | 11 | 12 | 43.333333333328 | 285
+
+[ko-profile] M06 | 16 | 4 | 0 | 76.666666666664 | 403.5
+
+[ko-profile] F19 | 20 | 5 | 15 | 10 | 326
+
+[ko-profile] S85 | 12 | 3 |  | 156 | 365
+
+[ko-profile] S84 | 12 | 3 |  | 141 | 365
+
+[ko-profile] S83 | 12 | 3 |  | 141 | 365
+
+[ko-profile] T25 | 68 | 17 | 0 | 2 | 146
+
+[ko-profile] T24 | 56 | 14 | 0 | 2 | 184.5
+
+[ko-profile] T23 | 64 | 16 | 5.5 | 2 | 171
+
+[ko-profile] T17 | 84 | 21 | 10.5 | 2 | 287
+
+[ko-profile] T20 | 72 | 18 | 2 | 2.5 | 208
+
+[ko-profile] T22 | 72 | 18 | 2 | 3 | 219.5
+
+[ko-profile] T21 | 60 | 15 | 8 | 3 | 260
+
+[ko-profile] T18 | 76 | 19 | 8 | 3 | 273
+
+[ko-profile] T19 | 72 | 18 | 8 | 2 | 309.5
+
+[ko-profile] F24 | 16 | 4 | 14 | 3 | 406.75
+
+[ko-profile] I31 | 12 | 3 | 0 | 30 | 2
+
+[ko-profile] U71 | 4 | 1 | 32 | 6 | 488.5
+
+[ko-profile] R71 | 4 | 1 | 32 | 6 | 678.5
+
+[ko-profile] F70 | 4 | 1 | 78 | 12 | 549.5
+
+[ko-profile] F68 | 4 | 1 | 82 | 86 | 467.5
+
+[ko-profile] F69 | 4 | 1 | 65 | 12 | 549.5
+
+[ko-profile] F67 | 4 | 1 | 68 | 15 | 546.5
+
+[ko-profile] F34 | 4 | 1 | 14 | 2 | 472.5
+
+[ko-profile] F76 | 4 | 1 | 68 | 12 | 549.5
+
+[ko-profile] F75 | 4 | 1 | 80 | 87 | 471.5
+
+[ko-profile] F63 | 4 | 1 | 103 | 28 | 546.5
+
+[ko-profile] F71 | 4 | 1 | 86 | 20 | 464.5
+
+[ko-profile] F73 | 4 | 1 | 80 | 87 | 471.5
+
+[ko-profile] F74 | 4 | 1 | 84 | 87 | 471.5
+
+[ko-profile] S75 | 8 | 2 |  | 319.33333333333 | 290
+
+[ko-profile] S74 | 12 | 3 |  | 409 | 21
+
+[ko-profile] F48 | 4 | 1 | 54 | 26 | 532.5
+
+[ko-profile] R66 | 4 | 1 | 78 | 11 | 573.5
+
+[ko-profile] F35 | 4 | 1 | 16 | 2 | 472.5
+
+[ko-profile] F37 | 4 | 1 | 16 | 2 | 486.5
+
+[ko-profile] F39 | 4 | 1 | 16 | 2 | 485.5
+
+[ko-profile] F55 | 4 | 1 | 70 | 9 | 549.5
+
+[ko-profile] F61 | 4 | 1 | 88 | 30 | 464.5
+
+[ko-profile] U59 | 4 | 1 | 85 | 35 | 503.5
+
+[ko-profile] F92 | 4 | 1 | 86 | 20 | 464.5
+
+[ko-profile] F93 | 4 | 1 | 68 | 18 | 501.5
+
+[ko-profile] U65 | 4 | 1 | 56 | 13 | 511.5
+
+[ko-profile] F41 | 4 | 1 | 16 | 1 | 486.5
+
+[ko-profile] F33 | 4 | 1 | 13 | 2 | 472.5
+
+[ko-profile] F44 | 4 | 1 | 70 | 16 | 537.5
+
+[ko-profile] R58 | 8 | 2 | 84 | 16.5 | 659.25
+
+[ko-profile] R65 | 8 | 2 | 48.5 | 13 | 445.75
+
+[ko-profile] F23 | 16 | 4 | 12 | 3.5 | 404.75
+
+[ko-profile] F60 | 4 | 1 | 70 | 10 | 551.5
+
+[ko-profile] F58 | 4 | 1 | 78 | 89 | 464.5
+
+[ko-profile] F59 | 4 | 1 | 68 | 10 | 551.5
+
+[ko-profile] F32 | 4 | 1 | 32 | 52 | 478.5
+
+[ko-profile] F29 | 4 | 1 | 16 | 1 | 482.5
+
+[ko-profile] F43 | 4 | 1 | 16 | 5 | 482.5
+
+[ko-profile] F62 | 4 | 1 | 75 | 94 | 464.5
+
+[ko-profile] R57 | 8 | 2 | 100 | 16.5 | 655
+
+[ko-profile] F53 | 4 | 1 | 74 | 12 | 546.5
+
+[ko-profile] F42 | 4 | 1 | 8 | 2 | 486.5
+
+[ko-profile] F88 | 4 | 1 | 88 | 58 | 461.5
+
+[ko-profile] F94 | 4 | 1 | 76 | 18 | 501.5
+
+[ko-profile] F31 | 4 | 1 | 16 | 5 | 478.5
+
+[ko-profile] F40 | 4 | 1 | 16 | 1 | 486.5
+
+[ko-profile] I30 | 12 | 3 | 10 | 32 | 0
+
+[ko-profile] F25 | 8 | 2 | 14 | 3 | 339.75
+
+[ko-profile] F27 | 4 | 1 | 16 | 2 | 485.5
+
+[ko-profile] F95 | 4 | 1 | 94 | 13 | 471.5
+
+[ko-profile] F36 | 4 | 1 | 16 | 2 | 472.5
+
+[ko-profile] R59 | 8 | 2 | 36 | 39.5 | 655
+
+[ko-profile] F66 | 4 | 1 | 66 | 15 | 546.5
+
+[ko-profile] F49 | 4 | 1 | 64 | 13 | 545.5
+
+[ko-profile] F26 | 4 | 1 | 32 | 49 | 481.5
+
+[ko-profile] R63 | 12 | 3 | 88 | 15 | 614.5
+
+[ko-profile] U70 | 4 | 1 | 92 | 4 | 511.5
+
+[ko-profile] F79 | 4 | 1 | 64 | 12 | 549.5
+
+[ko-profile] F78 | 4 | 1 | 87 | 87 | 471.5
+
+[ko-profile] R68 | 4 | 1 | 164 | 17 | 628.5
+
+[ko-profile] F30 | 4 | 1 | 16 | 4 | 478.5
+
+[ko-profile] F46 | 4 | 1 | 68 | 101 | 457.5
+
+[ko-profile] F85 | 4 | 1 | 88 | 17 | 467.5
+
+[ko-profile] P29 | 4 | 1 |  | 2 | 529.5
+
+[ko-profile] P15 | 12 | 3 |  | 2 | 560.5
+
+[ko-profile] P22 | 4 | 1 |  | 23 | 501.5
+
+[ko-profile] P23 | 4 | 1 |  | 14 | 595.5
+
+[ko-profile] P25 | 4 | 1 |  | 1 | 571.5
+
+[ko-profile] P24 | 4 | 1 |  | 7 | 602.5
+
+[ko-profile] P14 | 12 | 3 |  | 8 | 529.5
+
+[ko-profile] P13 | 16 | 4 |  | 8.5 | 549.25
+
+[ko-profile] P19 | 8 | 2 |  | 13 | 564.75
+
+[ko-profile] P20 | 8 | 2 |  | 15.5 | 578.75
+
+[ko-profile] P21 | 8 | 2 |  | 14 | 581
+
+[ko-profile] P17 | 8 | 2 |  | 15.5 | 530.25
+
+[ko-profile] P26 | 4 | 1 |  | 8 | 522.5
+
+[ko-profile] K11 | 8 | 2 |  | 4 | 507.33333333333
+
+[ko-profile] K12 | 4 | 1 |  | 6 | 684
+
+[ko-profile] K10 | 16 | 4 | 161 | 7.5 | 417.58333333333
+
+[ko-profile] A28 | 56 | 14 | 64 | 13.5 | 417.25
+
+[ko-profile] D13 | 32 | 8 | 310 | 7 | 271.5
+
+[ko-profile] D10 | 40 | 10 | 94.5 | 7 | 323
+
+[ko-profile] D11 | 36 | 9 | 145 | 8 | 272
+
+[ko-profile] D16 | 24 | 6 | 247 | 9.5 | 254.5
+
+[ko-profile] D17 | 20 | 5 |  | 12 | 283
+
+[ko-profile] A29 | 52 | 13 | 20 | 19 | 464.5
+
+[ko-profile] C04 | 20 | 5 | 12 | 4 | 680.5
+
+[ko-profile] C03 | 24 | 6 | 40 | 3 | 671
+
+[ko-profile] S76 | 8 | 2 |  | 319.33333333333 | 290
+
+[ko-profile] D12 | 28 | 7 | 106.5 | 5 | 236
+
+[ko-profile] D18 | 24 | 6 | 118 | 6.5 | 262.5
+
+[ko-profile] D15 | 28 | 7 | 127 | 8 | 252
+
+[ko-profile] D14 | 28 | 7 | 26 | 4 | 263
+
+[ko-profile] M22 | 4 | 1 | 0 | 74 | 402
+
+[ko-profile] M20 | 4 | 1 | 0 | 74 | 402
+
+[ko-profile] M21 | 4 | 1 | 0 | 77 | 399
+
+[ko-profile] S87 | 12 | 3 |  | 85 | 365
+
+[ko-profile] S86 | 12 | 3 |  | 92 | 365
+
+[ko-profile] C06 | 8 | 2 | 31 | 2.5 | 954.5
+
+[ko-profile] C05 | 8 | 2 | 44 | 11 | 926.25
+
+[ko-profile] S80 | 4 | 1 |  | 169 | 775
+
+[ko-profile] A36 | 32 | 8 | 90 | 39 | 338
+
+[ko-profile] S90 | 8 | 2 |  | 70.833333333332 | 292
+
+[ko-profile] S88 | 8 | 2 |  | 82.833333333332 | 287.5
+
+[ko-profile] S92 | 4 | 1 |  | 124.66666666666 | 215
+
+[ko-profile] S91 | 4 | 1 |  | 160.66666666666 | 215
+
+[ko-profile] S89 | 8 | 2 |  | 80.333333333332 | 290
+
+[ko-profile] M09 | 8 | 2 | 0 | 83.666666666664 | 353.5
+
+[ko-profile] T55 | 32 | 8 | 0 | 2 | 157
+
+[ko-profile] A34 | 36 | 9 | 158 | 22 | 220
+
+[ko-profile] A35 | 32 | 8 | 24 | 37.5 | 290
+
+[ko-profile] A48 | 16 | 4 | 0 | 47.5 | 379
+
+[ko-profile] A41 | 16 | 4 |  | 40 | 198
+
+[ko-profile] A40 | 20 | 5 | 0 | 31 | 352
+
+[ko-profile] A39 | 24 | 6 | 0 | 19 | 338
+
+[ko-profile] A44 | 20 | 5 | 0 | 13 | 352
+
+[ko-profile] A38 | 24 | 6 | 0 | 22 | 177
+
+[ko-profile] A32 | 40 | 10 | 550 | 26 | 374
+
+[ko-profile] A45 | 24 | 6 | 0 | 13 | 414
+
+[ko-profile] A46 | 20 | 5 | 2 | 41 | 352
+
+[ko-profile] M08 | 8 | 2 | 0 | 97.666666666664 | 284
+
+[ko-profile] A33 | 36 | 9 | 214.25 | 30 | 293
+
+[ko-profile] P36 | 4 | 1 |  | 2 | 538.5
+
+[ko-profile] A43 | 20 | 5 |  | 31 | 352
+
+[ko-profile] A42 | 20 | 5 | 0 | 22 | 363
+
+[ko-profile] A47 | 20 | 5 | 0 | 7 | 352
+
+[ko-profile] A37 | 32 | 8 | 14 | 51.5 | 331
+
+[ko-profile] A49 | 8 | 2 | 2 | 3 | 487.83333333333
+
+[ko-profile] A50 | 16 | 4 | 0 | 3 | 466.5
+
+[ko-profile] TDJ | 8 | 2 |  | 13.5 | 569.5
+
+[ko-profile] TEF | 12 | 3 | 0 | 2 | 335
+
+[ko-profile] T32 | 60 | 15 | 1 | 3 | 114
+
+[ko-profile] TEG | 12 | 3 | 11 | 6 | 364
+
+[ko-profile] TEH | 8 | 2 |  | 4 | 494
+
+[ko-profile] TED | 12 | 3 | 0 | 4 | 364
+
+[ko-profile] TCI | 20 | 5 | 0 | 2 | 228
+
+[ko-profile] TDS | 4 | 1 | 28 | 1 | 338
+
+[ko-profile] TDP | 8 | 2 | 24 | 3.5 | 243.5
+
+[ko-profile] TCV | 12 | 3 | 0 | 1 | 365
+
+[ko-profile] TDZ | 16 | 4 | 24 | 2.5 | 301
+
+[ko-profile] TEB | 12 | 3 | 12 | 2 | 253
+
+[ko-profile] TEA | 12 | 3 | 24 | 2 | 253
+
+[ko-profile] T98 | 24 | 6 | 24 | 2 | 252.5
+
+[ko-profile] T45 | 32 | 8 | 16 | 2 | 165.5
+
+[ko-profile] TCN | 16 | 4 | 0 | 2 | 299
+
+[ko-profile] TCO | 16 | 4 | 22 | 2 | 285.5
+
+[ko-profile] T31 | 44 | 11 | 0.5 | 4 | 153
+
+[ko-profile] T35 | 48 | 12 | 16 | 2 | 141
+
+[ko-profile] TET | 4 | 1 | 94 | 9 | 337
+
+[ko-profile] TAR | 16 | 4 | 24 | 4 | 102
+
+[ko-profile] TAH | 20 | 5 | 12 | 2 | 130
+
+[ko-profile] TBE | 24 | 6 | 33 | 2.5 | 207.5
+
+[ko-profile] D25 | 8 | 2 | 99 | 26 | 300.5
+
+[ko-profile] D24 | 8 | 2 | 70.5 | 26.5 | 298
+
+[ko-profile] T73 | 28 | 7 | 24 | 2 | 165
+
+[ko-profile] T74 | 20 | 5 | 0 | 2 | 167
+
+[ko-profile] TAK | 28 | 7 | 0 | 4 | 235
+
+[ko-profile] TAI | 20 | 5 | 12 | 2 | 198
+
+[ko-profile] TAJ | 20 | 5 | 24 | 2 | 143
+
+[ko-profile] TAU | 24 | 6 | 25 | 2 | 159
+
+[ko-profile] T72 | 24 | 6 | 0 | 1 | 146
+
+[ko-profile] TBI | 20 | 5 | 0 | 2 | 169
+
+[ko-profile] TBA | 20 | 5 | 24 | 2 | 171
+
+[ko-profile] TAZ | 20 | 5 | 18 | 2 | 225
+
+[ko-profile] TAF | 24 | 6 | 0 | 1.5 | 177.5
+
+[ko-profile] T27 | 52 | 13 | 4 | 5 | 145
+
+[ko-profile] ACX | 4 | 1 |  | 22 | 126
+
+[ko-profile] TAC | 8 | 2 | 32 | 2.5 | 292.5
+
+[ko-profile] TAD | 16 | 4 | 0 | 1 | 164.5
+
+[ko-profile] TAE | 16 | 4 | 0 | 1.5 | 128.5
+
+[ko-profile] ACZ | 4 | 1 |  | 22 | 18
+
+[ko-profile] ADH | 4 | 1 |  | 1 | 135
+
+[ko-profile] ADG | 4 | 1 |  | 12 | 32
+
+[ko-profile] ACW | 4 | 1 |  | 8 | 112
+
+[ko-profile] ACV | 4 | 1 |  | 22 | 18
+
+[ko-profile] ACY | 4 | 1 |  | 22 | 126
+
+[ko-profile] ADE | 4 | 1 |  | 41 | 199
+
+[ko-profile] ADA | 4 | 1 |  | 9 | 199
+
+[ko-profile] ADF | 4 | 1 |  | 12 | 32
+
+[ko-profile] TDO | 12 | 3 | 90.5 | 3 | 175
+
+[ko-profile] TBK | 28 | 7 | 8 | 2 | 210
+
+[ko-profile] T33 | 60 | 15 | 3.75 | 2 | 178
+
+[ko-profile] ADD | 4 | 1 |  | 22 | 22
+
+[ko-profile] ADB | 4 | 1 |  | 1 | 410
+
+[ko-profile] ADC | 4 | 1 |  | 12 | 32
+
+[ko-profile] TBZ | 12 | 3 | 23 | 3 | 163
+
+[ko-profile] TBM | 28 | 7 | 24 | 2 | 225
+
+[ko-profile] ABH | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABE | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABF | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABG | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABI | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABJ | 4 | 1 |  | 22 | 18
+
+[ko-profile] T28 | 40 | 10 | 11.75 | 7.5 | 181.5
+
+[ko-profile] T37 | 44 | 11 | 4.5 | 2 | 145
+
+[ko-profile] T51 | 28 | 7 | 24 | 2 | 148
+
+[ko-profile] T59 | 20 | 5 | 24 | 2 | 218
+
+[ko-profile] T34 | 52 | 13 | 8 | 3 | 138
+
+[ko-profile] TCM | 16 | 4 | 24 | 1.5 | 167
+
+[ko-profile] TCL | 20 | 5 | 32 | 4 | 236
+
+[ko-profile] TBD | 24 | 6 | 24 | 2 | 207.5
+
+[ko-profile] TBF | 20 | 5 | 36 | 2 | 147
+
+[ko-profile] T60 | 20 | 5 | 12 | 1 | 150
+
+[ko-profile] T91 | 16 | 4 | 24 | 2.5 | 220
+
+[ko-profile] T57 | 36 | 9 | 11.5 | 2 | 130
+
+[ko-profile] T63 | 24 | 6 | 12 | 1.5 | 168.5
+
+[ko-profile] T62 | 28 | 7 | 0 | 3 | 192
+
+[ko-profile] T61 | 24 | 6 | 24 | 1 | 200.5
+
+[ko-profile] T83 | 20 | 5 | 24 | 2 | 224
+
+[ko-profile] T50 | 32 | 8 | 12 | 2 | 136
+
+[ko-profile] T90 | 16 | 4 | 24 | 1.5 | 180.5
+
+[ko-profile] T49 | 36 | 9 | 1 | 1 | 74
+
+[ko-profile] T88 | 24 | 6 | 8 | 1.5 | 192
+
+[ko-profile] T99 | 24 | 6 | 0 | 2 | 112.5
+
+[ko-profile] TBO | 20 | 5 | 24 | 15 | 232
+
+[ko-profile] TCF | 20 | 5 | 20 | 5 | 168
+
+[ko-profile] TKL | 4 | 1 | 0 | 2 | 502
+
+[ko-profile] TKM | 4 | 1 | 0 | 2 | 502
+
+[ko-profile] TBV | 24 | 6 | 24 | 1.5 | 185.5
+
+[ko-profile] T30 | 48 | 12 | 0 | 3 | 144.5
+
+[ko-profile] THY | 4 | 1 |  | 3 | 469
+
+[ko-profile] TDI | 16 | 4 | 19 | 2 | 291
+
+[ko-profile] D19 | 16 | 4 | 106 | 6.5 | 311
+
+[ko-profile] D20 | 16 | 4 | 87.5 | 5 | 320
+
+[ko-profile] D22 | 12 | 3 | 100 | 5 | 238
+
+[ko-profile] D21 | 12 | 3 | 137 | 2 | 251
+
+[ko-profile] TDW | 12 | 3 | 24 | 2 | 236
+
+[ko-profile] TDV | 12 | 3 | 45 | 2 | 384
+
+[ko-profile] TKA | 4 | 1 | 24 | 2 | 653
+
+[ko-profile] TJV | 4 | 1 |  | 1 | 409
+
+[ko-profile] TDU | 8 | 2 | 12 | 2 | 391
+
+[ko-profile] TDL | 8 | 2 | 8 | 3.5 | 467
+
+[ko-profile] TJZ | 4 | 1 | 292.5 | 6 | 687
+
+[ko-profile] TJY | 4 | 1 | 216 | 2 | 989
+
+[ko-profile] TJW | 4 | 1 | 24 | 2 | 610
+
+[ko-profile] TAV | 16 | 4 | 12 | 3.5 | 306.5
+
+[ko-profile] T65 | 24 | 6 | 0 | 3 | 190.5
+
+[ko-profile] T69 | 20 | 5 | 3 | 2 | 169
+
+[ko-profile] T84 | 20 | 5 | 0 | 2 | 174
+
+[ko-profile] T75 | 24 | 6 | 0 | 1 | 139.5
+
+[ko-profile] T29 | 48 | 12 | 0 | 3 | 158
+
+[ko-profile] TDY | 8 | 2 | 26 | 3.5 | 428.5
+
+[ko-profile] T66 | 20 | 5 | 0 | 17 | 150
+
+[ko-profile] TDX | 8 | 2 | 26 | 10.5 | 420.5
+
+[ko-profile] TCP | 12 | 3 | 0 | 5 | 236
+
+[ko-profile] TCR | 12 | 3 | 0 | 2 | 399
+
+[ko-profile] TEE | 12 | 3 | 0 | 2 | 335
+
+[ko-profile] TBL | 28 | 7 | 42 | 2 | 201
+
+[ko-profile] TCJ | 12 | 3 | 0 | 2 | 228
+
+[ko-profile] TBU | 20 | 5 | 0 | 2 | 132
+
+[ko-profile] TFL | 8 | 2 | 20 | 4.5 | 501.5
+
+[ko-profile] T87 | 20 | 5 | 8 | 2 | 155
+
+[ko-profile] T97 | 24 | 6 | 28 | 1.5 | 167.5
+
+[ko-profile] T68 | 28 | 7 | 16 | 2 | 169
+
+[ko-profile] A97 | 4 | 1 |  | 57 | 275
+
+[ko-profile] T42 | 44 | 11 | 5 | 2 | 167
+
+[ko-profile] TCU | 8 | 2 | 173 | 1.5 | 419
+
+[ko-profile] TAN | 20 | 5 | 0 | 5 | 274
+
+[ko-profile] T40 | 48 | 12 | 7.5 | 1.5 | 164.5
+
+[ko-profile] TCZ | 12 | 3 | 10 | 4 | 150
+
+[ko-profile] TCS | 16 | 4 | 17.5 | 7 | 267.5
+
+[ko-profile] TAB | 20 | 5 | 0 | 2 | 274
+
+[ko-profile] TBX | 24 | 6 | 25 | 1 | 218.5
+
+[ko-profile] A51 | 12 | 3 | 0 | 8 | 435
+
+[ko-profile] T89 | 20 | 5 | 24 | 2 | 155
+
+[ko-profile] T86 | 16 | 4 | 23 | 1 | 175
+
+[ko-profile] TGD | 4 | 1 |  | 4 | 660
+
+[ko-profile] TGE | 4 | 1 |  | 1 | 775
+
+[ko-profile] TGF | 4 | 1 |  | 4 | 660
+
+[ko-profile] TGG | 4 | 1 |  | 1 | 761
+
+[ko-profile] T64 | 28 | 7 | 15.5 | 2 | 204
+
+[ko-profile] T82 | 16 | 4 | 24 | 1 | 147.5
+
+[ko-profile] TFP | 8 | 2 | 25.5 | 3 | 465.5
+
+[ko-profile] TFQ | 5 | 2 | 78 | 117 | 625
+
+[ko-profile] T76 | 24 | 6 | 24 | 8.5 | 192.5
+
+[ko-profile] T77 | 20 | 5 | 36 | 27 | 160
+
+[ko-profile] T44 | 40 | 10 | 22 | 2.5 | 150
+
+[ko-profile] T46 | 44 | 11 | 8 | 2 | 167
+
+[ko-profile] T39 | 52 | 13 | 3 | 2 | 168
+
+[ko-profile] T41 | 48 | 12 | 3 | 2 | 183.5
+
+[ko-profile] T43 | 48 | 12 | 2 | 1.5 | 153
+
+[ko-profile] TJX | 4 | 1 | 34 | 2 | 428
+
+[ko-profile] TDM | 12 | 3 | 3 | 2 | 386
+
+[ko-profile] T38 | 44 | 11 | 2 | 2 | 127
+
+[ko-profile] TDK | 12 | 3 | 24 | 2 | 401
+
+[ko-profile] TDG | 16 | 4 | 0 | 10 | 278
+
+[ko-profile] TDF | 8 | 2 | 0 | 4.5 | 524.5
+
+[ko-profile] TDN | 12 | 3 | 62.5 | 3 | 175
+
+[ko-profile] TDC | 16 | 4 | 0 | 1.5 | 184
+
+[ko-profile] ACU | 4 | 1 |  | 22 | 18
+
+[ko-profile] ACT | 4 | 1 |  | 22 | 18
+
+[ko-profile] ACI | 4 | 1 |  | 17 | 23
+
+[ko-profile] ACJ | 4 | 1 |  | 17 | 23
+
+[ko-profile] ACK | 4 | 1 |  | 17 | 23
+
+[ko-profile] ACL | 4 | 1 |  | 17 | 23
+
+[ko-profile] TBT | 20 | 5 | 8 | 3 | 150
+
+[ko-profile] ACM | 4 | 1 |  | 17 | 23
+
+[ko-profile] ACQ | 4 | 1 |  | 86 | 22
+
+[ko-profile] ACR | 4 | 1 |  | 50 | 155
+
+[ko-profile] ACP | 4 | 1 |  | 1 | 163
+
+[ko-profile] ACN | 4 | 1 |  | 28 | 177
+
+[ko-profile] ACO | 4 | 1 |  | 14 | 205
+
+[ko-profile] A98 | 4 | 1 |  | 57 | 275
+
+[ko-profile] A99 | 4 | 1 |  | 57 | 275
+
+[ko-profile] AAB | 4 | 1 |  | 57 | 275
+
+[ko-profile] A53 | 8 | 2 | 0 | 2 | 460.5
+
+[ko-profile] A52 | 8 | 2 | 0 | 1.5 | 448
+
+[ko-profile] A54 | 4 | 1 |  | 1 | 135
+
+[ko-profile] AAX | 4 | 1 |  | 13 | 25
+
+[ko-profile] AAU | 4 | 1 |  | 28 | 44
+
+[ko-profile] AAV | 4 | 1 |  | 28 | 44
+
+[ko-profile] AAW | 4 | 1 |  | 8 | 275
+
+[ko-profile] AAY | 4 | 1 |  | 22 | 18
+
+[ko-profile] TBG | 20 | 5 | 20 | 1 | 169
+
+[ko-profile] TBJ | 28 | 7 | 24 | 3 | 214
+
+[ko-profile] TBH | 24 | 6 | 0 | 2 | 210
+
+[ko-profile] TDH | 8 | 2 | 0 | 2 | 411.5
+
+[ko-profile] TDA | 8 | 2 | 0 | 1 | 120.5
+
+[ko-profile] TBC | 28 | 7 | 12 | 2 | 219
+
+[ko-profile] TBB | 28 | 7 | 24 | 3 | 171
+
+[ko-profile] TAY | 12 | 3 | 36 | 2 | 210
+
+[ko-profile] TAW | 16 | 4 | 10 | 2 | 306
+
+[ko-profile] TAX | 20 | 5 | 28 | 2 | 232
+
+[ko-profile] TDT | 8 | 2 | 27 | 2 | 437.5
+
+[ko-profile] T36 | 52 | 13 | 0 | 3 | 177
+
+[ko-profile] T26 | 52 | 13 | 0 | 2 | 143
+
+[ko-profile] T47 | 28 | 7 | 11 | 2 | 197
+
+[ko-profile] T48 | 36 | 9 | 3 | 1 | 147
+
+[ko-profile] AEJ | 4 | 1 |  | 1 | 98
+
+[ko-profile] AEI | 4 | 1 |  | 1 | 98
+
+[ko-profile] AEK | 4 | 1 |  | 1 | 98
+
+[ko-profile] AEL | 4 | 1 |  | 22 | 22
+
+[ko-profile] AEH | 4 | 1 |  | 2 | 437
+
+[ko-profile] AEG | 4 | 1 |  | 1 | 98
+
+[ko-profile] AEF | 4 | 1 |  | 41 | 108
+
+[ko-profile] AEM | 4 | 1 |  | 2 | 437
+
+[ko-profile] AEB | 4 | 1 |  | 22 | 22
+
+[ko-profile] AED | 4 | 1 |  | 22 | 22
+
+[ko-profile] AEE | 4 | 1 |  | 77 | 108
+
+[ko-profile] TEP | 8 | 2 | 33 | 2 | 477
+
+[ko-profile] AET | 4 | 1 |  | 22 | 22
+
+[ko-profile] AEU | 4 | 1 |  | 22 | 22
+
+[ko-profile] AEV | 4 | 1 |  | 1 | 204
+
+[ko-profile] AFF | 4 | 1 |  | 23 | 246
+
+[ko-profile] AFC | 4 | 1 |  | 28 | 44
+
+[ko-profile] AFA | 4 | 1 |  | 17 | 23
+
+[ko-profile] AEZ | 4 | 1 |  | 18 | 204
+
+[ko-profile] AFB | 4 | 1 |  | 17 | 23
+
+[ko-profile] AEY | 4 | 1 |  | 17 | 23
+
+[ko-profile] AEW | 4 | 1 |  | 90 | 199
+
+[ko-profile] AEX | 4 | 1 |  | 1 | 421
+
+[ko-profile] AFE | 4 | 1 |  | 8 | 112
+
+[ko-profile] AFD | 4 | 1 |  | 43 | 378
+
+[ko-profile] AEO | 4 | 1 |  | 28 | 44
+
+[ko-profile] AEP | 4 | 1 |  | 8 | 119
+
+[ko-profile] AER | 4 | 1 |  | 17 | 23
+
+[ko-profile] AES | 4 | 1 |  | 22 | 22
+
+[ko-profile] AEQ | 4 | 1 |  | 12 | 210
+
+[ko-profile] TBW | 20 | 5 | 24 | 1 | 153
+
+[ko-profile] TBP | 24 | 6 | 20 | 2 | 200.5
+
+[ko-profile] ADM | 4 | 1 |  | 22 | 18
+
+[ko-profile] ADN | 4 | 1 |  | 51 | 44
+
+[ko-profile] TCY | 8 | 2 | 24 | 2 | 316.5
+
+[ko-profile] TCX | 12 | 3 | 16 | 4 | 373
+
+[ko-profile] TCW | 16 | 4 | 0 | 3.5 | 278.5
+
+[ko-profile] TDB | 12 | 3 | 0 | 2 | 359
+
+[ko-profile] TCE | 20 | 5 | 12 | 2 | 225
+
+[ko-profile] ADZ | 4 | 1 |  | 74 | 266
+
+[ko-profile] ADX | 4 | 1 |  | 12 | 35
+
+[ko-profile] ADW | 4 | 1 |  | 11 | 35
+
+[ko-profile] ADY | 4 | 1 |  | 15 | 23
+
+[ko-profile] ADV | 4 | 1 |  | 43 | 199
+
+[ko-profile] AEA | 4 | 1 |  | 28 | 44
+
+[ko-profile] ADP | 4 | 1 |  | 22 | 18
+
+[ko-profile] ADJ | 4 | 1 |  | 20 | 44
+
+[ko-profile] ADQ | 4 | 1 |  | 22 | 18
+
+[ko-profile] ADK | 4 | 1 |  | 22 | 22
+
+[ko-profile] ADL | 4 | 1 |  | 22 | 18
+
+[ko-profile] ADR | 4 | 1 |  | 22 | 18
+
+[ko-profile] ADU | 4 | 1 |  | 49 | 170
+
+[ko-profile] ADT | 4 | 1 |  | 90 | 115
+
+[ko-profile] ADS | 4 | 1 |  | 22 | 18
+
+[ko-profile] TAS | 12 | 3 | 106.5 | 14 | 232
+
+[ko-profile] AAZ | 4 | 1 |  | 21 | 18
+
+[ko-profile] ABB | 4 | 1 |  | 21 | 18
+
+[ko-profile] TBN | 16 | 4 | 8 | 2.5 | 288
+
+[ko-profile] TBY | 16 | 4 | 32 | 31.5 | 318.5
+
+[ko-profile] ABD | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABC | 4 | 1 |  | 22 | 18
+
+[ko-profile] TBQ | 28 | 7 | 16 | 2 | 235
+
+[ko-profile] TCK | 12 | 3 | 0 | 2 | 236
+
+[ko-profile] TBR | 20 | 5 | 0 | 4 | 236
+
+[ko-profile] TEC | 12 | 3 | 11.5 | 3 | 372
+
+[ko-profile] T52 | 20 | 5 | 24 | 2 | 128
+
+[ko-profile] TFG | 8 | 2 |  | 2.5 | 516.5
+
+[ko-profile] TES | 8 | 2 | 24 | 3.5 | 580
+
+[ko-profile] TER | 8 | 2 |  | 3.5 | 599
+
+[ko-profile] TEY | 4 | 1 | 16 | 1 | 355
+
+[ko-profile] TEZ | 8 | 2 | 16 | 1.5 | 276
+
+[ko-profile] T92 | 20 | 5 | 8 | 2 | 194
+
+[ko-profile] T93 | 20 | 5 | 24 | 2 | 223
+
+[ko-profile] T56 | 28 | 7 | 0 | 2 | 135
+
+[ko-profile] T58 | 28 | 7 | 14 | 4 | 120
+
+[ko-profile] TFA | 8 | 2 | 19.5 | 16 | 498
+
+[ko-profile] TCT | 4 | 1 |  | 7 | 66
+
+[ko-profile] TFC | 8 | 2 | 0 | 22 | 565.5
+
+[ko-profile] TEJ | 8 | 2 | 88.25 | 68.5 | 522
+
+[ko-profile] TJB | 4 | 1 | 36 | 2 | 630
+
+[ko-profile] TIP | 4 | 1 |  | 1 | 770
+
+[ko-profile] TIO | 4 | 1 |  | 5 | 646
+
+[ko-profile] TIH | 4 | 1 |  | 5 | 486
+
+[ko-profile] TIB | 4 | 1 |  | 1 | 588
+
+[ko-profile] TIC | 4 | 1 | 41 | 2 | 420
+
+[ko-profile] D23 | 8 | 2 | 135 | 3.5 | 325
+
+[ko-profile] TFB | 8 | 2 |  | 6 | 433.5
+
+[ko-profile] TFN | 8 | 2 | 34 | 10 | 399.5
+
+[ko-profile] TFO | 5 | 2 | 24 | 1 | 652
+
+[ko-profile] TEV | 4 | 1 | 0 | 9 | 384
+
+[ko-profile] TEW | 8 | 2 | 41 | 1 | 597
+
+[ko-profile] TEX | 8 | 2 | 24 | 1.5 | 566
+
+[ko-profile] TEO | 4 | 1 | 24 | 36 | 337
+
+[ko-profile] TEN | 8 | 2 | 30 | 3.5 | 626
+
+[ko-profile] TFH | 8 | 2 | 16 | 1.5 | 503.5
+
+[ko-profile] TFI | 8 | 2 | 16 | 1.5 | 517
+
+[ko-profile] A80 | 4 | 1 |  | 41 | 199
+
+[ko-profile] A82 | 4 | 1 |  | 38 | 204
+
+[ko-profile] A81 | 4 | 1 |  | 38 | 204
+
+[ko-profile] A83 | 4 | 1 |  | 38 | 204
+
+[ko-profile] A79 | 4 | 1 |  | 41 | 199
+
+[ko-profile] ACS | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABV | 4 | 1 |  | 16 | 3
+
+[ko-profile] ABU | 4 | 1 |  | 16 | 3
+
+[ko-profile] ABX | 4 | 1 |  | 16 | 3
+
+[ko-profile] ABT | 4 | 1 |  | 16 | 3
+
+[ko-profile] ABR | 4 | 1 |  | 16 | 3
+
+[ko-profile] ABQ | 4 | 1 |  | 16 | 3
+
+[ko-profile] ABS | 4 | 1 |  | 17 | 23
+
+[ko-profile] ACA | 4 | 1 |  | 22 | 18
+
+[ko-profile] ACC | 4 | 1 |  | 8 | 112
+
+[ko-profile] ACB | 4 | 1 |  | 22 | 18
+
+[ko-profile] ACD | 4 | 1 |  | 12 | 210
+
+[ko-profile] ABY | 4 | 1 |  | 57 | 360
+
+[ko-profile] ABZ | 4 | 1 |  | 16 | 3
+
+[ko-profile] TDD | 16 | 4 | 24.5 | 4 | 295.5
+
+[ko-profile] ACE | 4 | 1 |  | 17 | 23
+
+[ko-profile] ACF | 4 | 1 |  | 11 | 231
+
+[ko-profile] ACG | 4 | 1 |  | 8 | 119
+
+[ko-profile] TAT | 8 | 2 |  | 9 | 483
+
+[ko-profile] ABO | 4 | 1 |  | 6 | 32
+
+[ko-profile] A65 | 4 | 1 |  | 22 | 22
+
+[ko-profile] ABP | 4 | 1 |  | 6 | 32
+
+[ko-profile] A74 | 4 | 1 |  | 35 | 170
+
+[ko-profile] A72 | 4 | 1 |  | 35 | 170
+
+[ko-profile] A70 | 4 | 1 |  | 24 | 147
+
+[ko-profile] A71 | 4 | 1 |  | 24 | 147
+
+[ko-profile] A68 | 4 | 1 |  | 28 | 44
+
+[ko-profile] A66 | 4 | 1 |  | 24 | 140
+
+[ko-profile] A69 | 4 | 1 |  | 28 | 44
+
+[ko-profile] A73 | 4 | 1 |  | 35 | 170
+
+[ko-profile] TCC | 16 | 4 | 0 | 3 | 180.5
+
+[ko-profile] TCD | 16 | 4 | 24 | 1 | 311.5
+
+[ko-profile] TJE | 4 | 1 |  | 2 | 680
+
+[ko-profile] THZ | 4 | 1 |  | 2 | 475
+
+[ko-profile] TCQ | 20 | 5 | 10 | 2 | 236
+
+[ko-profile] TAP | 28 | 7 | 24 | 2 | 219
+
+[ko-profile] TAQ | 28 | 7 | 12 | 5 | 160
+
+[ko-profile] A63 | 4 | 1 |  | 22 | 126
+
+[ko-profile] A62 | 4 | 1 |  | 28 | 44
+
+[ko-profile] TCH | 12 | 3 | 0 | 2 | 384
+
+[ko-profile] TCG | 12 | 3 | 8 | 4 | 156
+
+[ko-profile] TCB | 12 | 3 | 0 | 1 | 145
+
+[ko-profile] TCA | 12 | 3 | 24 | 2 | 196
+
+[ko-profile] TAO | 12 | 3 | 0 | 7 | 321
+
+[ko-profile] A64 | 4 | 1 |  | 22 | 126
+
+[ko-profile] A78 | 4 | 1 |  | 11 | 231
+
+[ko-profile] A77 | 4 | 1 |  | 15 | 204
+
+[ko-profile] A76 | 4 | 1 |  | 41 | 199
+
+[ko-profile] A75 | 4 | 1 |  | 35 | 170
+
+[ko-profile] A56 | 4 | 1 |  | 1 | 116
+
+[ko-profile] A58 | 4 | 1 |  | 22 | 22
+
+[ko-profile] A57 | 4 | 1 |  | 1 | 116
+
+[ko-profile] A59 | 4 | 1 |  | 22 | 22
+
+[ko-profile] A60 | 4 | 1 |  | 1 | 311
+
+[ko-profile] A55 | 4 | 1 |  | 49 | 44
+
+[ko-profile] ABK | 4 | 1 |  | 6 | 32
+
+[ko-profile] ABL | 4 | 1 |  | 22 | 18
+
+[ko-profile] ABM | 4 | 1 |  | 17 | 23
+
+[ko-profile] ABN | 4 | 1 |  | 22 | 18
+
+[ko-profile] A61 | 4 | 1 |  | 1 | 410
+
+[ko-profile] T70 | 24 | 6 | 13.5 | 3.5 | 230
+
+[ko-profile] T71 | 28 | 7 | 2 | 2 | 202
+
+[ko-profile] TAM | 16 | 4 | 0 | 2 | 255
+
+[ko-profile] TAL | 16 | 4 | 36 | 2.5 | 297.5
+
+[ko-profile] TIN | 4 | 1 |  | 2 | 575
+
+[ko-profile] TIF | 4 | 1 |  | 2 | 651
+
+[ko-profile] TID | 4 | 1 |  | 2 | 651
+
+[ko-profile] TIE | 4 | 1 |  | 2 | 384
+
+[ko-profile] TIJ | 4 | 1 |  | 1 | 664
+
+[ko-profile] TII | 4 | 1 |  | 1 | 779
+
+[ko-profile] TIR | 4 | 1 | 24 | 2 | 755
+
+[ko-profile] TIQ | 4 | 1 |  | 1 | 673
+
+[ko-profile] TIZ | 4 | 1 | 36 | 2 | 630
+
+[ko-profile] TIX | 4 | 1 | 59 | 3 | 657
+
+[ko-profile] TIY | 4 | 1 | 16 | 2 | 541
+
+[ko-profile] TBS | 20 | 5 | 0 | 1 | 167
+
+[ko-profile] T67 | 20 | 5 | 24 | 3 | 131
+
+[ko-profile] T78 | 8 | 2 | 0 | 2.5 | 166
+
+[ko-profile] T79 | 16 | 4 | 0 | 1.5 | 132
+
+[ko-profile] T80 | 20 | 5 | 24 | 2 | 150
+
+[ko-profile] TAA | 16 | 4 | 20 | 4.5 | 323
+
+[ko-profile] TGK | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] TGJ | 4 | 1 | 48 | 9 | 873
+
+[ko-profile] T95 | 12 | 3 | 0 | 2 | 203
+
+[ko-profile] T94 | 20 | 5 | 8 | 2 | 98
+
+[ko-profile] TFJ | 8 | 2 | 91.5 | 1.5 | 523.5
+
+[ko-profile] T85 | 12 | 3 | 0 | 2 | 116
+
+[ko-profile] TGU | 4 | 1 | 16 | 5 | 698
+
+[ko-profile] U00 | 4 | 1 | 73.5 | 11 | 373
+
+[ko-profile] TGO | 4 | 1 |  | 3 | 756
+
+[ko-profile] TGP | 4 | 1 |  | 1 | 735
+
+[ko-profile] TGN | 4 | 1 |  | 1 | 794
+
+[ko-profile] TFS | 4 | 1 | 26 | 7 | 625
+
+[ko-profile] TFM | 4 | 1 | 40 | 2 | 422
+
+[ko-profile] TKE | 4 | 1 | 42 | 2 | 772
+
+[ko-profile] TIT | 4 | 1 |  | 1 | 779
+
+[ko-profile] TIG | 4 | 1 | 24 | 2 | 708
+
+[ko-profile] THX | 4 | 1 | 86 | 17 | 755
+
+[ko-profile] TJC | 4 | 1 | 24 | 4 | 702
+
+[ko-profile] T53 | 24 | 6 | 12 | 2.5 | 176.5
+
+[ko-profile] TEU | 4 | 1 |  | 6 | 364
+
+[ko-profile] TFF | 4 | 1 |  | 1 | 772
+
+[ko-profile] TFE | 4 | 1 |  | 1 | 656
+
+[ko-profile] TFD | 4 | 1 |  | 1 | 765
+
+[ko-profile] T96 | 16 | 4 | 28 | 1.5 | 194.5
+
+[ko-profile] TFX | 4 | 1 |  | 3 | 496
+
+[ko-profile] T54 | 20 | 5 | 24 | 2 | 158
+
+[ko-profile] TFK | 4 | 1 |  | 1 | 765
+
+[ko-profile] TEI | 4 | 1 |  | 2 | 680
+
+[ko-profile] T81 | 8 | 2 | 12 | 2 | 391
+
+[ko-profile] AAS | 4 | 1 |  | 10 | 28
+
+[ko-profile] AAQ | 4 | 1 |  | 34 | 206
+
+[ko-profile] AAR | 4 | 1 |  | 22 | 126
+
+[ko-profile] AAT | 4 | 1 |  | 28 | 44
+
+[ko-profile] I44 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I45 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I36 | 8 | 2 | 8 | 55.5 | 0
+
+[ko-profile] I42 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I43 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I47 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I46 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I41 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I40 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I38 | 8 | 2 | 0 | 51.5 | 49
+
+[ko-profile] I39 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I35 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I34 | 8 | 2 | 10 | 36 | 0
+
+[ko-profile] I56 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I57 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I55 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I54 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I50 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I49 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I48 | 4 | 1 | 0 | 32 | 0
+
+[ko-profile] I53 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I52 | 4 | 1 | 0 | 71 | 0
+
+[ko-profile] I37 | 8 | 2 | 0 | 31 | 57.5
+
+[ko-profile] I32 | 8 | 2 | 0 | 31 | 57.5
+
+[ko-profile] I33 | 8 | 2 | 0 | 50.5 | 57.5
+
+[ko-profile] TEL | 4 | 1 | 24 | 10 | 393
+
+[ko-profile] A89 | 4 | 1 |  | 35 | 170
+
+[ko-profile] TKC | 4 | 1 |  | 2 | 631
+
+[ko-profile] TKB | 4 | 1 |  | 2 | 631
+
+[ko-profile] AAH | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAJ | 4 | 1 |  | 40 | 0
+
+[ko-profile] AAI | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAK | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAL | 4 | 1 |  | 1 | 268
+
+[ko-profile] AAF | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAG | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAO | 4 | 1 |  | 1 | 268
+
+[ko-profile] AAM | 4 | 1 |  | 1 | 268
+
+[ko-profile] AAN | 4 | 1 |  | 2 | 437
+
+[ko-profile] TDQ | 8 | 2 |  | 2.5 | 360
+
+[ko-profile] AAE | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAD | 4 | 1 |  | 17 | 23
+
+[ko-profile] AAC | 4 | 1 |  | 57 | 275
+
+[ko-profile] A86 | 4 | 1 |  | 1 | 410
+
+[ko-profile] A84 | 4 | 1 |  | 24 | 218
+
+[ko-profile] A85 | 4 | 1 |  | 1 | 218
+
+[ko-profile] A96 | 4 | 1 |  | 2 | 350
+
+[ko-profile] A95 | 4 | 1 |  | 2 | 350
+
+[ko-profile] A88 | 4 | 1 |  | 1 | 410
+
+[ko-profile] A87 | 4 | 1 |  | 1 | 410
+
+[ko-profile] A90 | 4 | 1 |  | 13 | 25
+
+[ko-profile] A93 | 4 | 1 |  | 12 | 32
+
+[ko-profile] A92 | 4 | 1 |  | 4 | 35
+
+[ko-profile] A94 | 4 | 1 |  | 2 | 350
+
+[ko-profile] A91 | 4 | 1 |  | 36 | 3
+
+[ko-profile] TLS | 4 | 1 | 36 | 3 | 815
+
+[ko-profile] TLU | 4 | 1 |  | 1 | 779
+
+[ko-profile] TLT | 4 | 1 | 24 | 2 | 715
+
+[ko-profile] TME | 4 | 1 |  | 2 | 769
+
+[ko-profile] TMB | 4 | 1 | 32 | 138 | 744
+
+[ko-profile] TLV | 4 | 1 | 255 | 2 | 734
+
+[ko-profile] TMK | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] TMO | 4 | 1 | 24 | 2 | 854
+
+[ko-profile] TMI | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] TMM | 4 | 1 | 24 | 1 | 860
+
+[ko-profile] TML | 4 | 1 | 24 | 2 | 825
+
+[ko-profile] TMH | 4 | 1 | 24 | 1 | 859
+
+[ko-profile] TMG | 4 | 1 | 24 | 1 | 833
+
+[ko-profile] TMD | 4 | 1 |  | 1 | 770
+
+[ko-profile] TMA | 4 | 1 | 62 | 6 | 745
+
+[ko-profile] TLY | 4 | 1 | 24 | 1 | 833
+
+[ko-profile] TLW | 4 | 1 | 57 | 418 | 786
+
+[ko-profile] TMN | 4 | 1 |  | 2 | 830
+
+[ko-profile] TMT | 4 | 1 | 24 | 3 | 857
+
+[ko-profile] TLZ | 4 | 1 | 49 | 2 | 730
+
+[ko-profile] TMC | 4 | 1 |  | 1 | 769
+
+[ko-profile] TKX | 4 | 1 | 24 | 2 | 728
+
+[ko-profile] TKW | 4 | 1 |  | 5 | 563
+
+[ko-profile] TKV | 4 | 1 |  | 4 | 569
+
+[ko-profile] TKR | 4 | 1 |  | 3 | 568
+
+[ko-profile] TKI | 4 | 1 |  | 4 | 553
+
+[ko-profile] TKQ | 4 | 1 |  | 2 | 559
+
+[ko-profile] TKJ | 4 | 1 | 24 | 3 | 857
+
+[ko-profile] TMF | 4 | 1 | 24 | 2 | 791
+
+[ko-profile] TKO | 4 | 1 |  | 4 | 569
+
+[ko-profile] TKP | 4 | 1 |  | 4 | 569
+
+[ko-profile] TKH | 4 | 1 | 40 | 1 | 622
+
+[ko-profile] TKK | 4 | 1 |  | 1 | 568
+
+[ko-profile] TKF | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] TKG | 4 | 1 |  | 1 | 832
+
+[ko-profile] TLR | 4 | 1 | 37 | 1 | 843
+
+[ko-profile] TLJ | 4 | 1 | 144 | 1 | 843
+
+[ko-profile] TLL | 4 | 1 |  | 1 | 775
+[ko-profile] TKZ | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] TLC | 4 | 1 | 29 | 2 | 643
+
+[ko-profile] TLM | 4 | 1 |  | 1 | 834
+
+[ko-profile] TLN | 4 | 1 |  | 2 | 757
+
+[ko-profile] TLO | 4 | 1 | 26 | 2 | 709
+
+[ko-profile] TLQ | 4 | 1 | 60 | 8 | 714
+
+[ko-profile] TLP | 4 | 1 | 33.5 | 2 | 706
+
+[ko-profile] TLG | 4 | 1 |  | 1 | 860
+
+[ko-profile] TLI | 4 | 1 |  | 2 | 757
+
+[ko-profile] TLH | 4 | 1 |  | 1 | 860
+
+[ko-profile] TLB | 4 | 1 | 24 | 2 | 756
+
+[ko-profile] TLA | 4 | 1 | 24 | 2 | 756
+
+[ko-profile] TKY | 4 | 1 |  | 2 | 665
+
+[ko-profile] M13 | 4 | 1 | 0 | 235 | 322
+
+[ko-profile] M14 | 4 | 1 | 0 | 235 | 322
+
+[ko-profile] M07 | 4 | 1 | 0 | 151 | 325
+
+[ko-profile] M11 | 4 | 1 | 0 | 148 | 325
+
+[ko-profile] M19 | 4 | 1 | 0 | 115 | 362
+
+[ko-profile] M16 | 4 | 1 | 0 | 113 | 364
+
+[ko-profile] M17 | 4 | 1 | 0 | 113 | 364
+
+[ko-profile] M18 | 4 | 1 | 0 | 113 | 364
+
+[ko-profile] M15 | 4 | 1 | 0 | 113 | 364
+
+[ko-profile] TMU | 4 | 1 | 36 | 13 | 861
+
+[ko-profile] TMJ | 4 | 1 | 52 | 5 | 866
+
+[ko-profile] TMQ | 4 | 1 | 24 | 3 | 857
+
+[ko-profile] TMP | 4 | 1 | 24 | 3 | 857
+
+[ko-profile] TMR | 4 | 1 | 24 | 8 | 873
+
+[ko-profile] TMV | 4 | 1 | 24 | 1 | 889
+
+[ko-profile] TMY | 4 | 1 | 30 | 1 | 833
+
+[ko-profile] TMX | 4 | 1 | 30 | 1 | 833
+
+[ko-profile] TMW | 4 | 1 | 30 | 1 | 833
+
+[ko-profile] M12 | 4 | 1 | 0 | 155 | 322
+
+[ko-profile] M10 | 4 | 1 | 0 | 154 | 322
+
+[ko-profile] R64 | 4 | 1 | 0 | 38 | 391
+
+[ko-profile] THD | 4 | 1 |  | 1 | 702
+
+[ko-profile] THH | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] THM | 4 | 1 |  | 1 | 673
+
+[ko-profile] THN | 4 | 1 |  | 1 | 673
+
+[ko-profile] THT | 4 | 1 | 40 | 1 | 833
+
+[ko-profile] THU | 4 | 1 | 156 | 8 | 866
+
+[ko-profile] TDE | 8 | 2 | 34 | 4 | 271
+
+[ko-profile] TJD | 4 | 1 |  | 1 | 435
+
+[ko-profile] TJU | 4 | 1 |  | 1 | 778
+
+[ko-profile] TJT | 4 | 1 |  | 1 | 779
+
+[ko-profile] THE | 4 | 1 | 36 | 7 | 519
+
+[ko-profile] THO | 4 | 1 |  | 1 | 436
+
+[ko-profile] THP | 4 | 1 |  | 1 | 832
+
+[ko-profile] THS | 4 | 1 |  | 3 | 566
+
+[ko-profile] TGY | 4 | 1 | 0 | 2 | 873
+
+[ko-profile] TFT | 4 | 1 | 28 | 2 | 380
+
+[ko-profile] TGW | 4 | 1 |  | 5 | 520
+
+[ko-profile] TGX | 4 | 1 |  | 5 | 520
+
+[ko-profile] THQ | 4 | 1 | 24 | 2 | 569
+
+[ko-profile] THB | 4 | 1 |  | 1 | 778
+
+[ko-profile] TGV | 4 | 1 |  | 1 | 566
+
+[ko-profile] THA | 4 | 1 |  | 5 | 493
+
+[ko-profile] THL | 4 | 1 | 28 | 2 | 519
+
+[ko-profile] THK | 4 | 1 | 44 | 2 | 519
+
+[ko-profile] TGS | 4 | 1 | 33 | 2 | 366
+
+[ko-profile] TGR | 4 | 1 | 40 | 2 | 280
+
+[ko-profile] TGQ | 4 | 1 |  | 1 | 210
+
+[ko-profile] TDR | 4 | 1 | 0 | 3 | 138
+
+[ko-profile] TJH | 4 | 1 |  | 4 | 551
+
+[ko-profile] TJI | 4 | 1 |  | 4 | 551
+
+[ko-profile] TJK | 4 | 1 |  | 5 | 568
+
+[ko-profile] TJJ | 4 | 1 |  | 2 | 653
+
+[ko-profile] TJS | 4 | 1 | 36 | 2 | 757
+
+[ko-profile] TGC | 4 | 1 |  | 1 | 638
+
+[ko-profile] TGB | 4 | 1 |  | 1 | 664
+
+[ko-profile] TJO | 4 | 1 |  | 1 | 778
+
+[ko-profile] TJN | 4 | 1 |  | 1 | 778
+
+[ko-profile] TJL | 4 | 1 |  | 1 | 769
+
+[ko-profile] TJM | 4 | 1 |  | 1 | 778
+
+[ko-profile] TAG | 8 | 2 | 81.25 | 54 | 119.5
+
+[ko-profile] THI | 4 | 1 | 24 | 2 | 621
+
+[ko-profile] THJ | 4 | 1 | 16 | 2 | 370
+ICN_Size << CuPhase_T
+ Lines fetched: 28,478
+ICN_Sample << ICN_Size
+ Lines fetched: 13,982
+ICN_Keep << ICN_Sample
+ Lines fetched: 8
+Sample_Phases << CuPhase_T
+ Lines fetched: 52
+[sample] ICN | KO | start | end | spanDays | manhours | title
+
+[sample] 38BEN42706 | S01 | 2023-07-05 | 2023-07-15 | 10.666666666664 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38BEN42706 | S01 | 2023-07-05 | 2023-07-15 | 10.666666666664 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38BEN42706 | S01 | 2023-07-05 | 2023-07-15 | 10.666666666664 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38BEN42706 | S01 | 2023-07-05 | 2023-07-15 | 10.666666666664 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38BEN42706 | A01 | 2023-07-12 | 2023-07-13 | 2 | 16 | *(C3) PROVIDE CRANE, CRANE RGNG, AND RGN
+
+[sample] 38BEN42706 | A01 | 2023-07-12 | 2023-07-13 | 2 | 16 | *(C3) PROVIDE CRANE, CRANE RGNG, AND RGN
+
+[sample] 38BEN42706 | A01 | 2023-07-12 | 2023-07-13 | 2 | 16 | *(C3) PROVIDE CRANE, CRANE RGNG, AND RGN
+
+[sample] 38BEN42706 | A01 | 2023-07-12 | 2023-07-13 | 2 | 16 | *(C3) PROVIDE CRANE, CRANE RGNG, AND RGN
+
+[sample] 38BEN44128 | S01 | 2020-07-16 | 2020-09-22 | 68.833333333336 |  | TRACKING ONLY
+
+[sample] 38BEN44128 | S01 | 2020-07-16 | 2020-09-22 | 68.833333333336 |  | TRACKING ONLY
+
+[sample] 38BEN44128 | S01 | 2020-07-16 | 2020-09-22 | 68.833333333336 |  | TRACKING ONLY
+
+[sample] 38BEN44128 | S01 | 2020-07-16 | 2020-09-22 | 68.833333333336 |  | TRACKING ONLY
+
+[sample] 38BEN44128 | H01 | 2020-08-12 | 2020-09-21 | 41 | 362 | *OVERHAUL AN/URT-23D RADIO TRANSMITTING 
+
+[sample] 38BEN44128 | H01 | 2020-08-12 | 2020-09-21 | 41 | 362 | *OVERHAUL AN/URT-23D RADIO TRANSMITTING 
+
+[sample] 38BEN44128 | H01 | 2020-08-12 | 2020-09-21 | 41 | 362 | *OVERHAUL AN/URT-23D RADIO TRANSMITTING 
+
+[sample] 38BEN44128 | H01 | 2020-08-12 | 2020-09-21 | 41 | 362 | *OVERHAUL AN/URT-23D RADIO TRANSMITTING 
+
+[sample] 38HIG66403 | S01 | 2022-04-12 | 2022-07-26 | 105.83333333334 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38HIG66403 | S01 | 2022-04-12 | 2022-07-26 | 105.83333333334 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38HIG66403 | S01 | 2022-04-12 | 2022-07-26 | 105.83333333334 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38HIG66403 | S01 | 2022-04-12 | 2022-07-26 | 105.83333333334 | 0 | DSS AND PLANNING CHARGES
+
+[sample] 38HIG66403 | H01 | 2022-05-09 | 2022-05-09 | 1 | 16 | *(C3) SHOP TEST FOR THE FILL HOSE RELIEF
+
+[sample] 38HIG66403 | H01 | 2022-05-09 | 2022-05-09 | 1 | 16 | *(C3) SHOP TEST FOR THE FILL HOSE RELIEF
+
+[sample] 38HIG66403 | H01 | 2022-05-09 | 2022-05-09 | 1 | 16 | *(C3) SHOP TEST FOR THE FILL HOSE RELIEF
+
+[sample] 38HIG66403 | H01 | 2022-05-09 | 2022-05-09 | 1 | 16 | *(C3) SHOP TEST FOR THE FILL HOSE RELIEF
+
+[sample] 38RP967201 | A01 | 2022-08-24 | 2022-09-09 | 17 | 0 | (FO~SIN) Nonskid Deck Covering on 0.5-18
+
+[sample] 38RP967201 | A01 | 2022-08-24 | 2022-09-09 | 17 | 0 | (FO~SIN) Nonskid Deck Covering on 0.5-18
+
+[sample] 38RP967201 | A01 | 2022-08-24 | 2022-09-09 | 17 | 0 | (FO~SIN) Nonskid Deck Covering on 0.5-18
+
+[sample] 38RP967201 | A01 | 2022-08-24 | 2022-09-09 | 17 | 0 | (FO~SIN) Nonskid Deck Covering on 0.5-18
+
+[sample] 3869C26201 | S01 | 2021-02-24 | 2022-08-18 | 541.33333333334 |  | TRACKING ONLY
+
+[sample] 3869C26201 | S01 | 2021-02-24 | 2022-08-18 | 541.33333333334 |  | TRACKING ONLY
+
+[sample] 3869C26201 | S01 | 2021-02-24 | 2022-08-18 | 541.33333333334 |  | TRACKING ONLY
+
+[sample] 3869C26201 | S01 | 2021-02-24 | 2022-08-18 | 541.33333333334 |  | TRACKING ONLY
+
+[sample] 3869C26201 | A01 | 2022-07-14 | 2022-07-22 | 9 | 56 | *INSTALL CLAMP SUPPORT OF LO HOSE RESILI
+
+[sample] 3869C26201 | A01 | 2022-07-14 | 2022-07-22 | 9 | 56 | *INSTALL CLAMP SUPPORT OF LO HOSE RESILI
+
+[sample] 3869C26201 | A01 | 2022-07-14 | 2022-07-22 | 9 | 56 | *INSTALL CLAMP SUPPORT OF LO HOSE RESILI
+
+[sample] 3869C26201 | A01 | 2022-07-14 | 2022-07-22 | 9 | 56 | *INSTALL CLAMP SUPPORT OF LO HOSE RESILI
+
+[sample] 3869C90001 | S01 | 2021-02-24 | 2023-05-22 | 818 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90001 | S01 | 2021-02-24 | 2023-05-22 | 818 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90001 | S01 | 2021-02-24 | 2023-05-22 | 818 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90001 | S01 | 2021-02-24 | 2023-05-22 | 818 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90002 | S01 | 2022-05-12 | 2023-05-22 | 376 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90002 | S01 | 2022-05-12 | 2023-05-22 | 376 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90002 | S01 | 2022-05-12 | 2023-05-22 | 376 |  | MLC LABOR ACCRUAL
+
+[sample] 3869C90002 | S01 | 2022-05-12 | 2023-05-22 | 376 |  | MLC LABOR ACCRUAL
+
+[sample] 3876Y75203 | S01 | 2022-04-06 | 2023-07-31 | 481.5 |  | TRACKING ONLY
+
+[sample] 3876Y75203 | S01 | 2022-04-06 | 2023-07-31 | 481.5 |  | TRACKING ONLY
+
+[sample] 3876Y75203 | S01 | 2022-04-06 | 2023-07-31 | 481.5 |  | TRACKING ONLY
+
+[sample] 3876Y75203 | S01 | 2022-04-06 | 2023-07-31 | 481.5 |  | TRACKING ONLY
+
+[sample] 3876Y75203 | H01 | 2022-12-23 | 2023-02-01 | 41 | 24 | *ACCOMPLISH IN-SHOP LOAD TEST OF MK 18 M
+
+[sample] 3876Y75203 | H01 | 2022-12-23 | 2023-02-01 | 41 | 24 | *ACCOMPLISH IN-SHOP LOAD TEST OF MK 18 M
+
+[sample] 3876Y75203 | H01 | 2022-12-23 | 2023-02-01 | 41 | 24 | *ACCOMPLISH IN-SHOP LOAD TEST OF MK 18 M
+
+[sample] 3876Y75203 | H01 | 2022-12-23 | 2023-02-01 | 41 | 24 | *ACCOMPLISH IN-SHOP LOAD TEST OF MK 18 M
+ICN_Span << CuPhase_T
+Lines fetched: 28,478
+JS_Span << CuPhase_T
+ Lines fetched: 28,478
+DIAG_SpanCmp << ICN_Span
+ Lines fetched: 1
+DIAG_JS << JS_Span
+ Lines fetched: 1
+[spancompare] ICN all-phase   median/p90 = 310.66666666666 / 751.15
+
+[spancompare] ICN production  median/p90 = 39 / 298   (excluding known planning Titles)
+
+[spancompare] JobSummary      median/p90 = 310.66666666666 / 751.15   (the old v3 definition)
+
+[spancompare] ICNs containing a suspected planning phase = 22738 of 28478
+DIAG_SWBS << CuPhase_T
+ Lines fetched: 1
+[swbs] distinct values: fromSWLIN=263  fromICN=263
+
+[swbs] of 528123 phases: the two derivations agree on 528123
+
+[swbs] malformed (not 3 chars): fromSWLIN=0  fromICN=0
+
+============ END DIAGNOSTIC ============
+App saved
+Finished successfully
+0 forced error(s)
+0 synthetic key(s)
