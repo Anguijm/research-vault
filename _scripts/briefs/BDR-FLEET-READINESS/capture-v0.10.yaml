@@ -1,0 +1,80 @@
+# Capture brief v0.10 — the command ambiguity runs above the theater (operator, 2026-07-28).
+# Adds the PAE restructuring and the comprehensive systems-command study as section 2.8, the
+# reorganization risk as 8.7, and corrects the acquisition target away from NAVSEA 04.
+
+source: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.9-draft.docx
+output: opportunities/BDR-FLEET-READINESS/04_artifacts/capture-brief-v0.10-draft.docx
+
+text_replacements:
+- find: 'CAPTURE BRIEF v0.9 DRAFT
+
+
+    BDR-FLEET-READINESS
+
+
+    Five-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support
+
+
+    Draft date: 2026-07-28  |  For CACI executive review (open-source only).
+
+
+    Changes in v0.9: corrects an over-claim. Earlier versions said SWRMC and SRF-JRMC were running the container mission. Public sources do not support that. They support SWRMC having built and pre-staged the capability and operating it into a theater where SRF-JRMC holds the Area Maintenance Commander role. Who owns the mission is not established, which is consistent with the RAND finding rather than in tension with it. Section 2.7 states what is not known. v0.8 added the RAND tabletop-exercise report on battle damage repair for Arleigh Burke destroyers (RR-A470-9, 27 May 2026) as new section 2.6. Its leading finding is ambiguous command and control, and two of its five Navy recommendations are training and exercise recommendations, which corroborates the coordination-seam argument from an independent direction. The bottom line and the caveat in section 8.5 are updated, and the study sponsor is added as a payer lead in section 7.
+
+    '
+  replace: 'CAPTURE BRIEF v0.10 DRAFT
+
+
+    BDR-FLEET-READINESS
+
+
+    Five-level analog-first progression of gamified decision-rehearsal scenarios for U.S. Navy Battle Damage Assessment and Repair (BDAR) teams and the fleet commanders they support
+
+
+    Draft date: 2026-07-28  |  For CACI executive review (open-source only).
+
+
+    Changes in v0.10: the command ambiguity runs higher than the theater. New section 2.8 records the Portfolio Acquisition Executive restructuring and the comprehensive systems-command study now underway, which is why no public source can name a mission owner. It also corrects the acquisition target, since maintenance and the public shipyards have moved to PAE Industrial Operations. Changes in v0.9: corrected an over-claim. Earlier versions said SWRMC and SRF-JRMC were running the container mission. Public sources do not support that. They support SWRMC having built and pre-staged the capability and operating it into a theater where SRF-JRMC holds the Area Maintenance Commander role. Who owns the mission is not established, which is consistent with the RAND finding rather than in tension with it. Section 2.7 states what is not known. v0.8 added the RAND tabletop-exercise report on battle damage repair for Arleigh Burke destroyers (RR-A470-9, 27 May 2026) as new section 2.6. Its leading finding is ambiguous command and control, and two of its five Navy recommendations are training and exercise recommendations, which corroborates the coordination-seam argument from an independent direction. The bottom line and the caveat in section 8.5 are updated, and the study sponsor is added as a payer lead in section 7.
+
+    '
+- find: 'Consider positioning CACI as a candidate prime for the five-level progression. Initial entry through Level 1 or Level 2 pilot. Operational sponsor: to be established in Phase 1 rather than assumed. SWRMC is the most visible executor and SRF-JRMC holds the Area Maintenance Commander role, so both are entry points, but neither is confirmed as the mission owner and the first job of discovery is to find out who is. Contracting authority: PACFLT N7 or N4, or FLTFORCOM N7 or N4. Contracting vehicle: CACI NSS, LLC’s existing OASIS, CIO-SP3, or MAS holding, with no new Navy-specific vehicle required. Precondition: CACI legal and contracts must complete the Federal Acquisition Regulation (FAR) Subpart 9.5 Organizational Conflict of Interest (OCI) review described in section 8.4 before any engagement step under the Phase 1 engagement in section 7.2 begins. The OCI review is a hard gate, not a parallel workstream.'
+  replace: 'Consider positioning CACI as a candidate prime for the five-level progression. Initial entry through Level 1 or Level 2 pilot. Operational sponsor: to be established in Phase 1 rather than assumed. SWRMC is the most visible executor and SRF-JRMC holds the Area Maintenance Commander role, so both are entry points, but neither is confirmed as the mission owner and the first job of discovery is to find out who is. Contracting authority: PACFLT N7 or N4, or FLTFORCOM N7 or N4 on the fleet side. On the acquisition side the target has moved: maintenance and the public shipyards now sit under PAE Industrial Operations, and PAE Maritime carries a Ship Readiness portfolio covering maintenance for combatants and training systems in the same portfolio. Section 2.8 explains why NAVSEA 04 should no longer be named as the buying authority without qualification. Contracting vehicle: CACI NSS, LLC’s existing OASIS, CIO-SP3, or MAS holding, with no new Navy-specific vehicle required. Precondition: CACI legal and contracts must complete the Federal Acquisition Regulation (FAR) Subpart 9.5 Organizational Conflict of Interest (OCI) review described in section 8.4 before any engagement step under the Phase 1 engagement in section 7.2 begins. The OCI review is a hard gate, not a parallel workstream.'
+- find: 'End of capture brief v0.9 draft. Build date: 2026-07-28. The demand case rests on two sources: the RAND tabletop-exercise report of 27 May 2026, carried in section 2.6, and the SWRMC expeditionary maintenance container program described publicly on 4 June 2026, carried in section 2.5. Section 7 leads with identifying a payer, because the mission is unfunded. Section 8.6 carries that risk.'
+  replace: 'End of capture brief v0.10 draft. Build date: 2026-07-28. The demand case rests on two sources: the RAND tabletop-exercise report of 27 May 2026, carried in section 2.6, and the SWRMC expeditionary maintenance container program described publicly on 4 June 2026, carried in section 2.5. Section 7 leads with identifying a payer, because the mission is unfunded. Section 8.6 carries that risk.'
+- find: '• Department of the Navy FY 2027 President''s Budget Press Brief, 28 April 2026.
+
+
+    • RAND Corporation, Battle Damage Repair for Arleigh Burke–Class Destroyers: Tabletop Exercise Results, RR-A470-9, 27 May 2026. Martin, Shlapak, Yun, Carter, Trauger, Hoard. Sponsored by the Office of the Assistant Secretary of War for Sustainment, Product Support office.'
+  replace: '• Department of the Navy FY 2027 President''s Budget Press Brief, 28 April 2026.
+
+
+    • RAND Corporation, Battle Damage Repair for Arleigh Burke–Class Destroyers: Tabletop Exercise Results, RR-A470-9, 27 May 2026. Martin, Shlapak, Yun, Carter, Trauger, Hoard. Sponsored by the Office of the Assistant Secretary of War for Sustainment, Product Support office.
+
+
+    • USNI News, "New Navy PAE Maritime Shipbuilding Office Reaches IOC," 20 July 2026.'
+insert_sections:
+- before_paragraph_starting_with: 3. Customer landscape
+  paragraphs:
+  - style: heading-2
+    text: '2.8 The ambiguity runs higher than the theater: the PAE restructuring and the systems-command study'
+  - style: body
+    text: Section 2.7 says no public source establishes who owns the Pacific container mission. That is not an oversight in the reporting. The organization that would hold industrial ownership of battle damage repair is being taken apart and rebuilt right now.
+  - style: body
+    text: FACT. The Navy is moving functions and workforce out of its systems commands into new Portfolio Acquisition Executives. The principal military deputy to the Assistant Secretary of the Navy for Research, Development and Acquisition said in March 2026 that about 70 percent of the functions and the workforce at systems commands like NAVSEA will transfer to the PAEs, with the systems command continuing in engineering, technical expertise and infrastructure while a large portion of the workforce and the mission authorities realign under the PAEs. [USNI News, 20 July 2026]
+  - style: body
+    text: FACT. PAE Industrial Operations is led by Vice Adm. Jim Downey, who also heads NAVSEA, and oversees maintenance and the public shipyards. PAE Maritime reached initial operating capability on a 16 July 2026 memo under Chris Miller and runs five deputy portfolios, one of which is Ship Readiness, led by Rear Adm. Andy Biehn with Lisa Bonacic-Doric, covering maintenance for combatants, the Arleigh Burke–class DDG 2.0 modification, training systems and international support. [USNI News, 20 July 2026]
+  - style: body
+    text: FACT. A spokesperson for the Assistant Secretary of the Navy for Research, Development and Acquisition told USNI News that a comprehensive Navy Systems Command study is underway and that the study will inform the future roles and compositions of the systems commands. [USNI News, 20 July 2026]
+  - style: body
+    text: Assessment. RAND found command and control for battle damage repair ambiguous inside a wartime exercise. This is the peacetime organization above it, and it is unsettled on the record, with a study running to decide what the systems commands become. Read together, the two say the same thing at different altitudes. This brief is not describing a gap that someone simply has not gotten to. It is describing a period in which ownership is genuinely undetermined.
+  - style: body
+    text: Assessment, and it corrects this brief. Earlier versions named NAVSEA 04 as a systems-command contracting authority. Maintenance and the public shipyards now sit under PAE Industrial Operations. NAVSEA continues to hold engineering and technical expertise, so NAVSEA 05 remains the right reference for the data-bridge question in section 5.3, but NAVSEA 04 should not be presented as the buying authority without qualification.
+  - style: body
+    text: Assessment, and it is the most actionable line in this section. PAE Maritime’s Ship Readiness portfolio holds maintenance for combatants and training systems together. That is the intersection this product occupies, it has named leadership, and it is new enough that its processes and vehicles are being set now rather than defended. It belongs on the Phase 1 call list alongside the study sponsor named in section 2.6.
+  - style: body
+    text: 'Assessment on timing, and it cuts both ways. Selling into an organization mid-reorganization is hard in a specific way: reporting lines move, budgets are re-pointed, and the office briefed today may not hold the decision tomorrow. Against that, a new organization has to decide how it buys, and a defined product arriving while those decisions are being made can land better than one arriving after they harden. Section 8.7 carries the risk side.'
+- before_paragraph_starting_with: 9. Business Development team next actions
+  paragraphs:
+  - style: heading-2
+    text: 8.7 The acquisition organization is being rebuilt mid-pursuit
+  - style: body
+    text: About 70 percent of the functions and workforce at systems commands like NAVSEA are moving to the Portfolio Acquisition Executives, maintenance and the public shipyards have moved to PAE Industrial Operations, and a comprehensive systems-command study is underway that will inform the future roles and compositions of the systems commands. Any engagement plan written now is aimed at a moving target. The specific failure mode is briefing an office that loses the decision authority before a task order can be written, which burns the relationship and the calendar. Mitigation is to confirm at each Phase 1 meeting who will hold the decision after the study concludes, and to treat any answer given today as provisional. This is also an argument for keeping Phase 1 cheap, since the cost of a wasted meeting is low and the cost of a wasted proposal is not.

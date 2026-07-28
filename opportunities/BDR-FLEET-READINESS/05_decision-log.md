@@ -850,3 +850,46 @@ engagement simplifies. If it finds the seam RAND describes, that is the sale.
 **Artifacts.** New capture section 2.7 states what is not established and what follows from it.
 Five ownership assertions were removed across the two documents. Built from `capture-v0.9.yaml` and
 `exec-v0.10.yaml`; drafting-tell scan clean on both.
+
+---
+
+### 2026-07-28 — SYSCOM-level ambiguity added; capture v0.10 / exec v0.11
+
+The operator raised a second layer of ambiguity: the systems-command level, driven by the move to
+Portfolio Acquisition Executives and an ongoing systems-command study. It turns out to be the more
+consequential half, because it explains why section 2.7 could not name a mission owner.
+
+**What the source establishes** (USNI News, 20 July 2026, staged in the operator's second-brain
+vault; `news.usni.org` blocks the fetch tooling, and the source file records that). Roughly 70
+percent of the functions and workforce at systems commands like NAVSEA are transferring to the
+Portfolio Acquisition Executives, per the principal military deputy to ASN (RDA) in March 2026, with
+the systems command continuing in engineering, technical expertise and infrastructure. PAE
+Industrial Operations, under Vice Adm. Jim Downey who also heads NAVSEA, oversees maintenance and
+the public shipyards. PAE Maritime reached initial operating capability on a 16 July 2026 memo and
+runs five deputy portfolios. And a comprehensive Navy Systems Command study is underway that will
+inform the future roles and compositions of the systems commands.
+
+**Why it matters more than a risk note.** RAND found command and control for battle damage repair
+ambiguous inside a wartime exercise. This is the peacetime organization above it, unsettled on the
+record, with a study running to decide what the systems commands become. The two say the same thing
+at different altitudes. The brief is not describing a gap nobody has gotten to; it is describing a
+period in which ownership is genuinely undetermined. That is a materially better answer to the
+question the operator raised about who is actually running the mission.
+
+**It corrects the brief.** Earlier versions named NAVSEA 04 as a systems-command contracting
+authority. Maintenance and the public shipyards have moved to PAE Industrial Operations. NAVSEA 05
+remains correct as the technical authority for the data-bridge question, but NAVSEA 04 is no longer
+presented as the buying authority without qualification.
+
+**The most actionable find.** PAE Maritime's Ship Readiness portfolio, led by Rear Adm. Andy Biehn
+with Lisa Bonacic-Doric, covers maintenance for combatants and training systems in the same
+portfolio. That is the intersection this product occupies, the leadership is named, and the
+organization is new enough that its processes and vehicles are being set rather than defended. It is
+now a Phase 1 target alongside the RAND study sponsor.
+
+**New risk 8.7.** Any engagement plan written now aims at a moving target. The specific failure mode
+is briefing an office that loses decision authority before a task order can be written. Mitigation
+is to confirm at each Phase 1 meeting who holds the decision after the study concludes, and to treat
+today's answer as provisional. It is also a further argument for keeping Phase 1 cheap.
+
+**Artifacts.** Capture v0.10 (new sections 2.8 and 8.7) and executive v0.11. Tell scan clean on both.
