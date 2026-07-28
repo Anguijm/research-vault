@@ -21,9 +21,9 @@ capability_tags:
   - fleet-readiness
 sensitivity: internal
 opened: 2026-05-21
-last_updated: 2026-06-01
-next_action: Triage the second-pass inbox (87 new candidates added 2026-05-23). Highest-value 9/10 cluster includes Admiral Caudle's HASC testimony on FY27 Navy budget (14 May 2026), the Navy Shipbuilding Plan May 2026 PDF at a working URL, and C3F RIMPAC 2026 final planning. See 05_decision-log.md 2026-05-23 entry for the recommended approve list.
-next_action_due: 2026-05-28
+last_updated: 2026-07-28
+next_action: "Gate call. Capture v0.7 and exec v0.8 are rebuilt on the SWRMC Pacific container program (public keynote, 4 June 2026). Demand is now source-grounded; the mission is unfunded, so the open question is who would pay. OCI review under FAR 9.5 is a hard gate ahead of any engagement."
+next_action_due: 2026-08-08
 focus_month: 2026-05-01
 auto_find: true    # resumed 2026-05-22 after readability + workflow improvements landed
 last_find_run: 2026-05-26T09:51:44

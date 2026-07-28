@@ -714,3 +714,53 @@ The three scenarios cover the RMC-wardroom-receiving-side decision moments — f
 
 The work was authored on the `bdr-demo` branch and fast-forward merged into `main` on the same date. The branch is preserved at `origin/bdr-demo` as a record of the workspace; deletion is at the operator's discretion.
 
+
+---
+
+### 2026-07-28 — Briefs recut on the SWRMC container program; voice pass applied
+
+Two artifacts were rebuilt: capture brief v0.7 and executive brief v0.8. The trigger was the
+operator's knowledge that Southwest Regional Maintenance Center had pitched something similar
+inside the Navy. That knowledge is not citable and has not entered either brief. What it did was
+point at material already in the vault: the MegaRust 2026 trip report, which captured SWRMC
+Executive Director John Robinson's 4 June 2026 keynote describing a Pacific battle damage repair
+program. That is a public conference keynote by the customer's own executive, and it is citable.
+
+**What changed in substance.** Both briefs previously argued from budget testimony, journal
+articles and adjacent Department of Defense procurement precedent, and both conceded in a
+source-grounding caveat that no confirmed Navy demand signal existed. That concession is now
+obsolete. The Navy has no repair tenders for the surface fleet and no plan to build any, and SWRMC
+has pre-staged roughly 50 expeditionary maintenance containers across the Pacific as the
+substitute. Robinson named SRF-JRMC as the Area Maintenance Commander coordinating the
+deployments and Pat McDermott as the officer driving the program.
+
+The opportunity moved with the evidence. It is no longer "training assumptions understate wartime
+damage," which was an inference. It is a live mission whose materiel is being positioned, whose
+decisions have not been rehearsed, and whose division of responsibility between two named commands
+is not described in any public source. New section 2.5 of the capture brief carries that evidence.
+
+**What changed against the opportunity.** Robinson said the mission is unfunded. That is recorded
+rather than buried: new capture section 8.6 states that the organization most likely to want this
+product is the one least able to buy it, and the recommendation now leads with identifying a payer
+before designing anything. If Phase 1 discovery cannot name a plausible budget, the brief says to
+stop.
+
+The conflict-of-interest entry was also sharpened rather than softened. SRF-JRMC is now named in
+the public record as the coordinating command for the mission this product would serve, which makes
+the FAR Subpart 9.5 review harder, not easier. It remains a hard gate ahead of any engagement.
+
+**Voice pass.** The operator asked for the drafting tells to be removed before issue. Fifty-two
+replacements were applied to the capture brief and sixteen to the executive brief, covering the
+em-dash used as a default connector (53 instances in the capture brief alone), stacked hyphenated
+compound nouns, section-symbol shorthand in prose, and internal synthesis vocabulary that had leaked
+into customer-facing text, including the phrase "Gemini-convergent edits" sitting on the cover page
+and in the closing block. A scan for twenty-one drafting tells now returns clean on both documents.
+
+**Build.** `_scripts/briefs/BDR-FLEET-READINESS/capture-v0.7.yaml` and `exec-v0.8.yaml`, run through
+`build_brief.py`. Two lessons for future configs are recorded in the config comments: the driver
+applies at most one replacement per paragraph, so edits to different parts of the same paragraph
+must be merged into a single operation; and appended blocks must sit above `insert_sections:` or
+YAML parses them as part of that block.
+
+**Not decided here.** The gate is still `identify` and the recommendation field still reads `tbd`.
+Advancing either remains the operator's call.
