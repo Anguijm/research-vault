@@ -95,8 +95,8 @@ remain so. Practical rules:
   does not obviously belong to an existing opportunity, ask rather than parking it in the nearest
   active track.
 
-**Discrepancy to be aware of (2026-07-29):** this memory says promotion to  is
-operator-only, but  rule 2 currently instructs the assistant to promote keepers
+**Discrepancy to be aware of (2026-07-29):** this memory says promotion to `20_curated/` is
+operator-only, but `brain/CLAUDE.md` rule 2 currently instructs the assistant to promote keepers
 itself. They conflict. The in-repo CLAUDE.md is the authority for work done inside that vault, but
-given  publishes publicly, default to staging and flag anything questionable rather
+given `20_curated/` publishes publicly, default to staging and flag anything questionable rather
 than promoting it.
