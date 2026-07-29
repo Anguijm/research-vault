@@ -39,3 +39,9 @@ vault; the opportunity folders only see what was deliberately ingested into them
   content from a trip report into a business-development artifact is a different use than the trip
   report itself, so surface it to the operator rather than assuming. Relates to
   [[project_private_non_osi_area]].
+
+**Scope correction (operator, 2026-07-29).** Proactive searching applies to tracks *inside the
+research vault*: `trip-reports/`, `studies/`, other `opportunities/`. **Do not go digging in
+`/home/johnanguiano/brain` on your own** — as a research session, ignore it unless the operator
+directs you there. The RAND find that prompted this memory happened because he pointed at it. The
+pattern is: he points, you look.

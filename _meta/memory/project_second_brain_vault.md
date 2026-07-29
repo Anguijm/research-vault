@@ -90,13 +90,16 @@ remain so. Practical rules:
 - **Do not push the brain repo from a research-vault session.** Committing locally when work
   genuinely belongs there is fine; pushing is the operator's call, and the vault feeds a public
   site. Asked and declined on 2026-07-29.
-- **Route by subject, not by convenience.** NAMPIE 2026 (advanced manufacturing, CNRMC) was first
-  filed into BDR-FLEET-READINESS and the operator corrected it to the brain vault. When something
-  does not obviously belong to an existing opportunity, ask rather than parking it in the nearest
-  active track.
+- **Route by subject, not by convenience.** NAMPIE 2026 (advanced manufacturing, CNRMC) briefly
+  landed in BDR-FLEET-READINESS before moving to the brain vault. The operator has said the
+  misroute was his, not the assistant's, so do not over-correct into querying every source's
+  destination. Flagging routing as unresolved in the frontmatter, which is what happened, was the
+  right handling.
 
-**Discrepancy to be aware of (2026-07-29):** this memory says promotion to `20_curated/` is
-operator-only, but `brain/CLAUDE.md` rule 2 currently instructs the assistant to promote keepers
-itself. They conflict. The in-repo CLAUDE.md is the authority for work done inside that vault, but
-given `20_curated/` publishes publicly, default to staging and flag anything questionable rather
-than promoting it.
+**The two promotion models are both correct (operator, 2026-07-29).** This is by design, not a
+conflict. The research vault never promotes on the operator's behalf, because promotion there is a
+gate decision he owns. The brain vault is supposed to promote on its own, because it serves a
+different purpose. Do not "reconcile" them.
+
+**As a research-vault session, ignore the brain vault unless directed.** The operator will say when
+to go look. There is no real opportunity for confusion if that line is held.
