@@ -80,3 +80,23 @@ unattended/remote runs never block. No paid solver service.
 
 Relates to [[feedback_avoid_em_dash_tell]], [[feedback_keep_draft_versions]], and
 [[project_sync_architecture_decision]].
+
+**Keep them separate (operator, 2026-07-29).** The two vaults are separate and should generally
+remain so. Practical rules:
+
+- **Read across, do not write across.** Searching the brain vault to find a source the research
+  vault needs is correct and has paid off (see [[feedback_check_other_tracks_for_sources]]). Copying
+  material between them, or unifying them, is not.
+- **Do not push the brain repo from a research-vault session.** Committing locally when work
+  genuinely belongs there is fine; pushing is the operator's call, and the vault feeds a public
+  site. Asked and declined on 2026-07-29.
+- **Route by subject, not by convenience.** NAMPIE 2026 (advanced manufacturing, CNRMC) was first
+  filed into BDR-FLEET-READINESS and the operator corrected it to the brain vault. When something
+  does not obviously belong to an existing opportunity, ask rather than parking it in the nearest
+  active track.
+
+**Discrepancy to be aware of (2026-07-29):** this memory says promotion to  is
+operator-only, but  rule 2 currently instructs the assistant to promote keepers
+itself. They conflict. The in-repo CLAUDE.md is the authority for work done inside that vault, but
+given  publishes publicly, default to staging and flag anything questionable rather
+than promoting it.
