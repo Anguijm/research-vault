@@ -403,6 +403,45 @@ sam_searches:
   # sought) surface under r/s/p. Reversion path: restore k in the ptype
   # value if real-signal recall drops too far.
 
+  # ── 2026-08-09 slice-retargeting probe (operator: focus on offices that
+  #    solicit SERVICES; customer intel is instrumental, to anticipate
+  #    solicitations before they appear) ──────────────────────────────────
+  #
+  # Seven candidate offices probed, 90-day window, one request each. All seven
+  # names were already surfaced in vault sources; none were invented.
+  #
+  #   NSWC PHILADELPHIA .............. 21 records, GENUINELY SERVICES.
+  #       "Advanced Electrical Power Systems Services", "CVN and Submarine
+  #       Power Systems Engineering Services", "DMS Tech Manual Updates".
+  #       Office string: NAVSEA.NAVSEA WARFARE CENTER.NSWC...
+  #       VERDICT: add. This is the first confirmed services-buying slice.
+  #
+  #   NAVSUP WEAPON SYSTEMS SUPPORT .. 532 records, ALL NSN PARTS.
+  #       "GEARBOX ASSEMBLY", "SWITCH,ROTARY", "PIPE, 8IN".
+  #       VERDICT: reject. High volume, zero services value. Adding it would
+  #       flood the pipeline with precisely the noise this retarget is meant
+  #       to escape.
+  #
+  #   NAWCTSD / CNRMC / NSWC CARDEROCK / SURFMEPP ... 0 records each.
+  #
+  # THE LESSON, and it generalises the 2026-06-02 SRF-JRMC finding:
+  # `organizationName` matches SAM.gov's own OFFICE-HIERARCHY STRING, not the
+  # name the Navy uses for the organisation. NSWC Philadelphia works because
+  # its hierarchy string contains that text; NSWC Carderock returns 0 because
+  # SAM spells it differently. CNRMC returns 0 for the same reason SRF-JRMC
+  # did: it is a customer activity, and its procurements are coded under
+  # whichever contracting office executes them.
+  #
+  # EFFICIENT NEXT STEP (do not guess more names): run ONE broad query, e.g.
+  # organizationName="NAVSEA WARFARE CENTER", and harvest the distinct office
+  # strings from the returned records. That converts name-guessing into name-
+  # reading and costs one request instead of one per guess.
+  #
+  # Existing six slices are retained until replacements are confirmed. They
+  # are NAVSUP Fleet Logistics Centers and Air Force base contracting, which
+  # buy parts, facilities and base support — 16 of 45 candidates since July
+  # were base support, 3 were parts, and exactly 2 were services-shaped.
+
   - name: nav_yokosuka
     description: "NAVSUP FLC YOKOSUKA — operator-team's primary customer contracting office. EMPIRICALLY CONFIRMED 2026-05-31: 29 records over 56 days."
     params:

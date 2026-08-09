@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_run_utc": "2026-07-28T19:33:05Z",
+  "last_run_utc": "2026-08-02T20:24:14Z",
   "seeds": {
     "COMPT:FY27_RDTE_TJS": {
       "first_seen_utc": "2026-05-29T19:28:54Z",
@@ -11560,7 +11560,7 @@
     },
     "SAM:e1d16950fbc1482aa84ecb806b5b4002": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/e1d16950fbc1482aa84ecb806b5b4002/view",
       "title": "USS AMERICA (LHA-6) MATERIAL HANDLING EQUIPMENT (MHE) REFURBISHMENT",
@@ -11570,7 +11570,7 @@
     },
     "SAM:4e66fbcf3f4d48ea81ae2bf4e2664e06": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/4e66fbcf3f4d48ea81ae2bf4e2664e06/view",
       "title": "Psychological Consultation Services",
@@ -11580,7 +11580,7 @@
     },
     "SAM:f506207eb4fc484d835304249802a10e": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/f506207eb4fc484d835304249802a10e/view",
       "title": "Mercer Hall, Naval Base San Diego - Galley Grab-N-Go",
@@ -11590,7 +11590,7 @@
     },
     "SAM:02d2f90272994efca658f6de92ba5979": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/02d2f90272994efca658f6de92ba5979/view",
       "title": "Particle and Droplet Size Analyzer",
@@ -11600,7 +11600,7 @@
     },
     "SAM:3b04706dee374c618c6468ba87cffce5": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/3b04706dee374c618c6468ba87cffce5/view",
       "title": "SeaPort: Site Security Manager (SSM) Support Services for SMWDC",
@@ -11610,7 +11610,7 @@
     },
     "SAM:ba112fd90299493a9110b06993d698bf": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/ba112fd90299493a9110b06993d698bf/view",
       "title": "Bard Air Conditioner Replacement W36HY-B09",
@@ -11620,7 +11620,7 @@
     },
     "SAM:9985040162e44d24814a2af9fd3c4511": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/9985040162e44d24814a2af9fd3c4511/view",
       "title": "NOTICE OF INTENT TO AWARD A SOLE SOURCE CONTRACT - Quartermaster AI SmartMast EO/IR Cameras",
@@ -11630,7 +11630,7 @@
     },
     "SAM:f7ffe48241ce40709e5c6804c6518304": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/f7ffe48241ce40709e5c6804c6518304/view",
       "title": "Naval Consolidated Brig Miramar (NCBM) Vocational Training Courses",
@@ -11640,7 +11640,7 @@
     },
     "SAM:f5263df541664188b4c9f4d030bbc582": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/f5263df541664188b4c9f4d030bbc582/view",
       "title": "Galley Uniforms for USS THEODORE ROOSEVELT (CVN 71)",
@@ -11650,7 +11650,7 @@
     },
     "SAM:cc80ce6c782440f4a64d6d6059c47090": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/cc80ce6c782440f4a64d6d6059c47090/view",
       "title": "NOTICE OF INTENT TO SOLE SOURCE - DXP Model 47 Fuel Filtration Unit",
@@ -11730,7 +11730,7 @@
     },
     "SAM:9bff6327bad9419e916916d91c07acb6": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/9bff6327bad9419e916916d91c07acb6/view",
       "title": "CONNECTOR PLUG",
@@ -11740,7 +11740,7 @@
     },
     "SAM:4fb07914b61242c6a5353e56d61340b7": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/4fb07914b61242c6a5353e56d61340b7/view",
       "title": "HEATER, FLUID, INDUSTRIAL",
@@ -11750,7 +11750,7 @@
     },
     "SAM:03c8564444e448e1a22de5148714d36f": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/03c8564444e448e1a22de5148714d36f/view",
       "title": "INSULATION PIPE",
@@ -11790,7 +11790,7 @@
     },
     "SAM:84366ec43bf344689904c2e788a6b54f": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/84366ec43bf344689904c2e788a6b54f/view",
       "title": "Replace Heating and Cooling Coil at Building No. 457, Camp Zama (CZ)",
@@ -11800,7 +11800,7 @@
     },
     "SAM:3348f35c70a448d8816bbff8c7e66fa5": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/3348f35c70a448d8816bbff8c7e66fa5/view",
       "title": "Repair Fire Alarm System at Bldg.500, Camp Zama (CZ), U.S Army Garrison Japan",
@@ -11810,7 +11810,7 @@
     },
     "SAM:ba44dfa57abc498cb8ce1bcec90ecb55": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/ba44dfa57abc498cb8ce1bcec90ecb55/view",
       "title": "Air Emission Monitoring of Boiler and Engine Generating Units on USAG Japan Installations in Kanto Plain",
@@ -11820,7 +11820,7 @@
     },
     "SAM:69c5a63748114520a36d818c85e1b65e": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/69c5a63748114520a36d818c85e1b65e/view",
       "title": "Purchas of Refuse Truck at Camp Zama, Japan",
@@ -11830,7 +11830,7 @@
     },
     "SAM:4db952876bb44af79a03919af6664781": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/4db952876bb44af79a03919af6664781/view",
       "title": "Bilateral Army exercise at Camp Higashi Chitose, Hokkaido, Japan",
@@ -11840,7 +11840,7 @@
     },
     "SAM:b1a13850933c463e9a3fc502b02635b5": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/b1a13850933c463e9a3fc502b02635b5/view",
       "title": "Bilateral Army Exercise at Camp Asaka, Saitama Prefecture, Japan",
@@ -11870,7 +11870,7 @@
     },
     "SAM:02884d1368734935a5f20cd6d7f5ab69": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/02884d1368734935a5f20cd6d7f5ab69/view",
       "title": "Off-post Furniture for USARJ",
@@ -11890,13 +11890,85 @@
     },
     "SAM:d6c32355d7fc4c8ea607f73fae574b43": {
       "first_seen_utc": "2026-07-28T19:33:05Z",
-      "last_seen_utc": "2026-07-28T19:33:05Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
       "status": "below-threshold",
       "url": "https://sam.gov/workspace/contract/opp/d6c32355d7fc4c8ea607f73fae574b43/view",
       "title": "Okinawa Industry Engagement: Progressive Design-Build & Accelerated Design-Build (Additional Information)",
       "final_score": 0.203,
       "status_updated_utc": "2026-07-28T20:02:02Z",
       "status_reason": "reconciled 2026-07-29: ledger said in-inbox but seed was not in seeds-inbox.md"
+    },
+    "SAM:8c460e9de461489e83fd3af3df30b74d": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/8c460e9de461489e83fd3af3df30b74d/view",
+      "title": "USNS CODY (EPF 14) MID-TERM AVAILABILITY (MTA)",
+      "final_score": 0.436
+    },
+    "SAM:a4f3c72f2c57484c88b28d769289c688": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/a4f3c72f2c57484c88b28d769289c688/view",
+      "title": "USS LEWIS B PULLER (ESB-3) MIDTERM AVAILABILITY (MTA)",
+      "final_score": 0.387
+    },
+    "SAM:7ec59ed8be274f7486df3fb927dad35d": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/7ec59ed8be274f7486df3fb927dad35d/view",
+      "title": "Notice of Intent to Sole Source to Hana-Tunista LLC",
+      "final_score": 0.203
+    },
+    "SAM:090a623a400043a9a16c8be329a7c590": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/090a623a400043a9a16c8be329a7c590/view",
+      "title": "Maintenance Service on AVTRON H211 Hydraulic Test Stand",
+      "final_score": 0.423
+    },
+    "SAM:b28d13d08413414cb136e0bf6a771085": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/b28d13d08413414cb136e0bf6a771085/view",
+      "title": "GPR Surveillance, Camp Zama, Japan",
+      "final_score": 0.286
+    },
+    "SAM:ee01d8be829542ff8a7f612dfc7fce8f": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/ee01d8be829542ff8a7f612dfc7fce8f/view",
+      "title": "Sources Sought - Multiple Award Construction Contract (MACC) U.S. Army Installations within Honshu, Japan and Yokota Air",
+      "final_score": 0.477
+    },
+    "SAM:bbb4de4b7f11413c9718a14b580a4c31": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/bbb4de4b7f11413c9718a14b580a4c31/view",
+      "title": "Source Sought - Simplified Acquisition Base Engineering Requirements (SABER)",
+      "final_score": 0.203
+    },
+    "SAM:44f22125bfc443e988d5502a8253f424": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/44f22125bfc443e988d5502a8253f424/view",
+      "title": "OSI Furniture at Yokota AB, Japan",
+      "final_score": 0.143
+    },
+    "SAM:2c82bde9270845acbcd5f0abba8bf0fe": {
+      "first_seen_utc": "2026-08-02T20:24:14Z",
+      "last_seen_utc": "2026-08-02T20:24:14Z",
+      "status": "below-threshold",
+      "url": "https://sam.gov/workspace/contract/opp/2c82bde9270845acbcd5f0abba8bf0fe/view",
+      "title": "Purchase Church Organ for USAG Japan Religious Support Office",
+      "final_score": 0.143
     }
   }
 }
