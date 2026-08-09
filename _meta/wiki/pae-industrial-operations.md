@@ -3,14 +3,17 @@ type: wiki-entity
 id: pae-industrial-operations
 title: PAE Industrial Operations, and the Navy Portfolio Acquisition Executive restructuring
 aliases: [PAE Industrial Operations, PAE-IO, PAE Maritime, Portfolio Acquisition Executive]
-compiled_utc: 2026-07-29T05:05:00Z
+compiled_utc: 2026-08-09T15:45:00Z
 compiled_by: claude-opus-4-8
 status: current
-claims: 6
+claims: 7
 compiled_from:
   - source_id: opportunities/BDR-FLEET-READINESS/01_sources/2026-07-28_news-usni-org_new-navy-pae-maritime-shipbuilding-office-reaches-ioc.md
     sha256: f60869aabb8c918073528d001127f727991d781eb039701394cfe0e7b43f3d60
     captured: 2026-07-28
+  - source_id: opportunities/BDR-FLEET-READINESS/01_sources/2026-08-09_seapowermagazine-org_weeks-relieves-downey-as-pae-industrial-operations.md
+    sha256: 0155ada0c20e87b84b3dc5ead1dd30909cf3f44d5e6c297d82aed749a557cd50
+    captured: 2026-08-09
 ---
 
 # PAE Industrial Operations and the Portfolio Acquisition Executive restructuring
@@ -29,8 +32,15 @@ reporters in March 2026. The systems command continues in engineering, technical
 infrastructure, while a large portion of the workforce and the mission authorities realign under the
 PAEs. [s.usni-pae]
 
-**FACT.** PAE Industrial Operations is led by Vice Adm. Jim Downey, who also heads NAVSEA, and
-oversees maintenance and the public shipyards. [s.usni-pae]
+**FACT (superseded 2026-08-09, kept for the record).** As of 20 July 2026, PAE Industrial Operations
+was led by Vice Adm. Jim Downey, who also headed NAVSEA, and oversees maintenance and the public
+shipyards. [s.usni-pae]
+
+**FACT (current).** On 6 August 2026 Rear Adm. Todd Weeks relieved Downey as **interim** Portfolio
+Acquisition Executive Industrial Operations, and Rear Adm. Pete Small took command of NAVSEA. **The
+dual-hat was separated**: these are now distinct positions held by different officers. Downey is
+slated to retire after 40 years. PAE Industrial Operations still oversees maintenance and the public
+shipyards. [s.seapower-weeks]
 
 **FACT.** PAE Maritime reached initial operating capability on a 16 July 2026 memo, led by Chris
 Miller, running five deputy portfolios and overseeing the Supervisor of Shipbuilding offices at Bath
@@ -65,9 +75,11 @@ and vehicles are being set rather than defended.
 
 ## Watch items
 
-This page will go stale faster than anything else in the wiki. The systems-command study has not
-concluded, and its output changes the roles and compositions of the SYSCOMs. Re-check on any news of
-the study concluding, and treat every organizational claim here as provisional until then.
+This page will go stale faster than anything else in the wiki, and it already has once: the
+leadership claim was invalidated eleven days after compilation, caught by the first run of
+`_meta/standing-watch/`. The systems-command study still has not concluded, and its output changes
+the roles and compositions of the SYSCOMs. Treat every organisational claim here as provisional, and
+note that an **interim** PAE IO is itself a signal the structure is unsettled.
 
 Provenance caveat: `news.usni.org` blocks the vault's fetch tooling. The source file was taken from
 a copy staged in the operator's second-brain vault, and says so. Re-verify against the article before
@@ -75,6 +87,10 @@ any customer-facing use.
 
 ## Sources
 
+- `s.seapower-weeks` — Seapower Magazine, "Weeks Relieves Downey as Portfolio Acquisition Executive
+  Industrial Operations", 6 August 2026. Same event also reported by navsea.navy.mil, navy.mil,
+  DVIDS, Inside Defense and Ocean News.
+  `opportunities/BDR-FLEET-READINESS/01_sources/2026-08-09_seapowermagazine-org_weeks-relieves-downey-as-pae-industrial-operations.md`
 - `s.usni-pae` — USNI News, "New Navy PAE Maritime Shipbuilding Office Reaches IOC", 20 July 2026.
   `opportunities/BDR-FLEET-READINESS/01_sources/2026-07-28_news-usni-org_new-navy-pae-maritime-shipbuilding-office-reaches-ioc.md`
 
