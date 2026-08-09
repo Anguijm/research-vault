@@ -1,0 +1,68 @@
+# Standing watch — news and press-release monitoring for the Navy maintenance
+# enterprise, independent of any single opportunity.
+#
+# WHY THIS EXISTS (operator, 2026-08-09). The opportunity scanner reads SAM.gov,
+# which only tells you a requirement exists once it is already a solicitation.
+# By then the shape is set. This config watches the events that come BEFORE a
+# solicitation, so a pursuit can be positioned rather than discovered late.
+#
+# Evidence for the approach: the two most valuable finds of the last month came
+# from a conference keynote and a LinkedIn post, not from SAM.
+#
+# EVERY QUERY IS GROUPED BY ITS TRIGGER LOGIC, not by topic. When reviewing,
+# ask "does this still have a plausible trigger?" and delete it if not. A
+# standing watch that only grows is a standing watch nobody reads.
+#
+# All named organisations and programmes below are already surfaced in vault
+# sources. Nothing here is pre-loaded speculation. One candidate — a recurring
+# CNRMC mid-July leadership summit — was deliberately EXCLUDED because it was
+# found via web search rather than an ingested source.
+#
+# CADENCE: monthly, not weekly. These triggers move on quarters, and AI searches
+# cost per query. Run with:
+#   _scripts/.venv/bin/python _scripts/find_sources.py --watch-dir _meta/standing-watch
+
+ai_searches:
+
+  # ── A. Organisations standing up → a new contracting footprint appears ──
+  # A brand-new organisation has to decide how it buys. That decision window is
+  # the cheapest moment to be known to it. The MegaRust trip report explicitly
+  # flagged the SIMA contracting office as "worth tracking once named."
+  - "SIMA San Diego Shore Intermediate Maintenance Activity contracting office solicitation 2026"
+  - "SIMA Norfolk intermediate maintenance activity advanced manufacturing capability stand-up"
+  - "Navy Portfolio Acquisition Executive Maritime Ship Readiness portfolio contracting 2026"
+
+  # The single highest-value trigger on this list: when the SYSCOM study reports,
+  # it redraws who owns ship maintenance, which changes who the buyer is.
+  - "Navy Systems Command study SYSCOM future roles composition NAVSEA realignment results"
+
+  # ── B. Unfunded programmes finding money → funding converts to solicitation ──
+  # SWRMC's container programme was described publicly as unfunded. Funding is
+  # the event that turns it into contracts.
+  - "SWRMC expeditionary maintenance container Pacific battle damage repair funding"
+  - "Navy Anti-Rust Program corrosion contracting vehicle award"
+
+  # ── C. Statutory mandates with deadlines → mandates become programmes ──
+  - "NDAA Section 345 implementation Navy advanced surface ship maintenance technology drone inspection"
+
+  # ── D. Studies whose recommendations become programmes ──
+  # RAND RR-A470-9 made five recommendations to the Navy. NAMPIE already looks
+  # like action on the parts one. Watch for uptake of the rest.
+  - "RAND battle damage repair Arleigh Burke destroyers Navy implementation response"
+  - "GAO report Navy ship depot maintenance backlog readiness 2026"
+
+  # ── E. Recurring venues where requirements are discussed before they are written ──
+  - "Fleet Maintenance and Modernization Symposium FMMS 2026 Navy requirements"
+  - "SWARMEX Ship Wartime Repair and Maintenance Exercise Seventh Fleet 2026"
+  - "CNRMC Navy Regional Maintenance Center industry day 2026"
+
+  # ── F. Industrial-base programmes with Pacific expansion ──
+  - "Shipyard Infrastructure Optimization Program SIOP Pacific drydock contract award 2026"
+  - "SURFMEPP Surface Maintenance Engineering Planning Program Pacific expansion"
+  - "Surface Team One Navy surface maintenance engineering support contract"
+
+# No sam_searches or usa_searches here on purpose. SAM and USAspending discovery
+# is the opportunity scanner's job (_meta/caci-discovery-config.yaml, run weekly
+# by _scripts/run_seed_finder.sh). This config is the pre-solicitation layer and
+# should stay that way; if it starts duplicating the scanner, one of them is
+# redundant.

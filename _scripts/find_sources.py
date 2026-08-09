@@ -387,6 +387,12 @@ def _run_usaspending_search(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Find new source candidates via AI search.")
     parser.add_argument("--opportunity", metavar="ID", help="Process a single opportunity.")
+    parser.add_argument("--watch-dir", metavar="PATH", default=None,
+                        help="Process an arbitrary track-shaped directory instead of an "
+                             "opportunity (e.g. _meta/standing-watch). The directory needs a "
+                             "_search-config.yaml, an index.md and a 01_sources/ folder; every "
+                             "path this script touches is directory-relative, so the whole "
+                             "pipeline works unchanged.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Print candidates to stdout; do not write files.")
     args = parser.parse_args()
@@ -400,7 +406,16 @@ def main() -> None:
         sys.exit(0)
 
     try:
-        opps = _discover_opportunities(args.opportunity)
+        if args.watch_dir:
+            wd = Path(args.watch_dir)
+            if not wd.is_absolute():
+                wd = VAULT_ROOT / wd
+            if not (wd / "_search-config.yaml").exists():
+                print(f"ERROR: no _search-config.yaml in {wd}")
+                sys.exit(1)
+            opps = [wd]
+        else:
+            opps = _discover_opportunities(args.opportunity)
         if not opps:
             print("No opportunities to process.")
             return
